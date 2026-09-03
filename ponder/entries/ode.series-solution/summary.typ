@@ -1,0 +1,1 @@
+A series solution expands $y(x) = sum_(n=0)^oo a_n (x - x_0)^n$ when closed forms are unavailable: substituting into the ODE and equating coefficients of each power of $x$ produces a recurrence relation for the coefficients.

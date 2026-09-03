@@ -1,0 +1,21 @@
+id: algebra.root-multiplicity
+kind: definition
+title: Multiplicity of a root
+aliases:
+  - root multiplicity
+  - multiplicity of a root
+tags:
+  - polynomials
+  - roots
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-root-multiplicity
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - algebra.fundamental-theorem-of-algebra
+  - linear-algebra.algebraic-multiplicity

@@ -1,0 +1,13 @@
+id: ode.slope-field
+kind: definition
+title: Slope Field
+wikidataQID: Q2336508
+aliases: [slope field, direction field, gradient field]
+tags: [differential equations, ordinary differential equations, graphical methods]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: slope-field, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: slope-field}
+related: [ode.isocline, ode.ordinary-differential-equation, ode.equilibrium-point]

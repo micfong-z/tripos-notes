@@ -1,0 +1,15 @@
+id: calculus.monotonicity-implies-integrability
+kind: proposition
+title: Monotonicity implies Integrability
+aliases: [monotone functions are Riemann integrable]
+tags: [integration, riemann integration]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: monotone-implies-integrable, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: monotone-implies-integrable}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.monotone-function, calculus.riemann-integrability-criteria, calculus.riemann-integrable-function, calculus.continuity-implies-integrability]

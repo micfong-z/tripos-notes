@@ -1,0 +1,1 @@
+A predator-prey model couples a prey population $x(t)$ and a predator population $y(t)$, in the form $dot(x) = alpha x - beta x^2 - gamma x y$ and $dot(y) = epsilon x y - delta y$ for positive constants $alpha, beta, gamma, delta, epsilon$; the fixed points and their linearised stability classify the dynamics.

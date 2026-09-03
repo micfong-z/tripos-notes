@@ -1,0 +1,15 @@
+id: probability.outcomes-and-events
+kind: definition
+title: Outcomes and Events
+aliases: [outcome, outcomes, event, events]
+tags: [probability, events]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-1.typ, label: def-outcomes-events, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-1.typ, label: def-outcomes-events}
+  - title: Probabilities live on events
+    kind: remark
+    supplemental: remark.typ
+related: [probability.probability-space, set-theory.power-set]

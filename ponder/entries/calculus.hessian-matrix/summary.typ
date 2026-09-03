@@ -1,0 +1,1 @@
+The Hessian matrix of $f(x, y)$ is $matbold(H) = bold(nabla) bold(nabla) f = mat(f_(x x), f_(x y); f_(y x), f_(y y))$, a symmetric matrix since $f_(x y) = f_(y x)$; it supplies the quadratic term $(1/2) (delta bold(x))^tp matbold(H) (delta bold(x))$ of the multivariate Taylor expansion.

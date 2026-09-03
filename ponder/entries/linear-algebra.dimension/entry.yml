@@ -1,0 +1,28 @@
+id: linear-algebra.dimension
+kind: definition
+title: Dimension
+aliases:
+  - dimensions
+  - invariance of dimension
+tags:
+  - bases
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: dimension
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+      label: dimension
+      kind: theorem
+  - title: Exchange properties
+    kind: proposition
+    supplemental: exchange.typ
+related:
+  - linear-algebra.basis
+  - linear-algebra.spanning-set
+  - linear-algebra.linear-independence

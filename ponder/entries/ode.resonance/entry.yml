@@ -1,0 +1,15 @@
+id: ode.resonance
+kind: example
+title: Resonance
+aliases: [resonant, resonance case, resonant forcing]
+tags: [ordinary differential equations, forcing, oscillations]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: ex-resonance, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: ex-resonance}
+  - title: General rule
+    kind: remark
+    supplemental: general-rule.typ
+related: [ode.particular-integral, ode.homogeneous-differential-equation, ode.linear-differential-equation]

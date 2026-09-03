@@ -1,0 +1,5 @@
+course: analysis-i
+title: Part IA Analysis I
+document: part-ia/analysis-i/main.typ
+sourceBase: /notes/ia-analysis/content
+outputName: ia-analysis.html

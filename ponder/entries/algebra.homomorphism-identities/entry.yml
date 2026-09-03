@@ -1,0 +1,15 @@
+id: algebra.homomorphism-identities
+kind: lemma
+title: Homomorphism Identities
+aliases: [homomorphism preserves identity and inverses]
+tags: [groups, homomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: hom-lemma-1, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: hom-lemma-1}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.homomorphism, algebra.group, algebra.inverse-element]

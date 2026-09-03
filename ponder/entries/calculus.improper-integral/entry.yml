@@ -1,0 +1,18 @@
+id: calculus.improper-integral
+kind: definition
+title: Improper Integral
+aliases: [improper integrals]
+tags: [integration, convergence, limits]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: improper-integral-unbounded-domain, kind: definition}
+sections:
+  - title: Unbounded domain
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: improper-integral-unbounded-domain}
+  - title: Isolated singularity
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: improper-integral-isolated-singularity}
+  - title: Two-sided limits
+    kind: warning
+    supplemental: two-sided.typ
+related: [calculus.comparison-test-for-integrals, calculus.ratio-test-for-integrals, calculus.integration-by-substitution, calculus.riemann-integrable-function, analysis.series]

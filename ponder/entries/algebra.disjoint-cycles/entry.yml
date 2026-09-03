@@ -1,0 +1,12 @@
+id: algebra.disjoint-cycles
+kind: definition
+title: Disjoint Cycles
+aliases: [disjoint cycles]
+tags: [permutations, cycle notation, commutativity]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: disjoint-cycles, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: disjoint-cycles}
+related: [algebra.cycle, algebra.disjoint-cycle-decomposition, algebra.permutation]

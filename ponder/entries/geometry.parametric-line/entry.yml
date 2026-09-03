@@ -1,0 +1,20 @@
+id: geometry.parametric-line
+kind: proposition
+title: Parametric form of a line
+aliases:
+  - vector equation of a line
+tags:
+  - geometry
+  - lines
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: parametric-line
+  kind: proposition
+sections:
+  - title: Intersection with a plane
+    kind: example
+    supplemental: intersection.typ
+related:
+  - geometry.parametric-plane
+  - linear-algebra.cross-product

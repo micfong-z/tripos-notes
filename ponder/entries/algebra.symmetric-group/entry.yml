@@ -1,0 +1,18 @@
+id: algebra.symmetric-group
+kind: definition
+title: Symmetric Group
+aliases: [symmetric group]
+tags: [groups, permutations, symmetries]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: def-symmetric-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: def-symmetric-group}
+  - title: Group Structure
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: sym-group-is-group}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

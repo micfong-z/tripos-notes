@@ -1,0 +1,1 @@
+A particle of mass $M$ at $bold(x_0)$ attracts a particle of mass $m$ at $bold(x)$ through the potential $V = -(G M m)/(abs(bold(x) - bold(x_0)))$, giving the inverse square law $bold(F) = - (G M m)/(r^2) hat(bold(r))$ for $bold(r) = bold(x) - bold(x_0)$, with $G$ approximately $6.67 times 10^(-11)$ $"m"^3 "kg"^(-1) "s"^(-2)$.

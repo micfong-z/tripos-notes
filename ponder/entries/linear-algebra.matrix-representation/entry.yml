@@ -1,0 +1,35 @@
+id: linear-algebra.matrix-representation
+kind: definition
+title: Matrix of a Linear Map
+aliases:
+  - matrix representation
+  - representing matrix
+  - matrix of a map
+tags:
+  - matrices
+  - bases
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-matrix-representation
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Linear combinations of matrices
+    kind: remark
+    supplemental: combinations.typ
+  - title: Products represent compositions
+    kind: proposition
+    supplemental: products.typ
+  - title: Example
+    kind: example
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+      label: ex-matrix-representation
+      kind: example
+related:
+  - linear-algebra.linear-map
+  - linear-algebra.basis
+  - algebra.function-composition

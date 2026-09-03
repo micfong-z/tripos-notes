@@ -1,0 +1,15 @@
+id: probability.strong-law-of-large-numbers
+kind: theorem
+title: Strong Law of Large Numbers
+aliases: [strong law of large numbers, SLLN]
+tags: [probability, limit theorems, convergence]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-strong-law-of-large-numbers, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-strong-law-of-large-numbers}
+  - title: Proof under a fourth moment
+    kind: proof
+    supplemental: proof.typ
+related: [probability.weak-law-of-large-numbers, probability.convergence-almost-surely, probability.independence-of-random-variables, probability.expectation]

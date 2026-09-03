@@ -1,0 +1,15 @@
+id: probability.probability-mass-function
+kind: definition
+title: Probability Mass Function
+aliases: [pmf, probability mass functions, mass function]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-probability-mass-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-probability-mass-function}
+  - title: Also called the distribution
+    kind: remark
+    supplemental: distribution.typ
+related: [probability.discrete-random-variable, probability.discrete-distribution, probability.distribution-function, probability.probability-generating-function]

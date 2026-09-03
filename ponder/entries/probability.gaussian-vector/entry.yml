@@ -1,0 +1,27 @@
+id: probability.gaussian-vector
+kind: definition
+title: Gaussian Vector
+aliases: [Gaussian vectors, Gaussian random vector, multivariate Gaussian, jointly Gaussian]
+tags: [probability, gaussian, vectors]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-gaussian-vector, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-gaussian-vector}
+  - title: Linear images of Gaussian vectors
+    kind: proposition
+    supplemental: linear-images.typ
+  - title: Mean, covariance matrix, and MGF
+    kind: proposition
+    supplemental: mean-covariance.typ
+  - title: Construction from standard normals
+    kind: lemma
+    supplemental: construction.typ
+  - title: Density in the positive definite case
+    kind: proposition
+    supplemental: density.typ
+  - title: Uncorrelated components are independent
+    kind: theorem
+    supplemental: diagonal-independence.typ
+related: [probability.normal-distribution, probability.covariance, probability.moment-generating-function, probability.bivariate-gaussian, probability.independence-of-random-variables, linear-algebra.matrix-definiteness]

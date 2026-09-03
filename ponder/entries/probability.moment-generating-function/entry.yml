@@ -1,0 +1,33 @@
+id: probability.moment-generating-function
+kind: definition
+title: Moment Generating Function
+aliases: [mgf, moment generating functions, mgfs]
+tags: [probability, generating functions, moments]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-moment-generating-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-moment-generating-function}
+  - title: Uniqueness
+    kind: theorem
+    source:
+      document: part-ia/probability/chapters/chapter-4.typ
+      label: thm-mgf-uniqueness
+      referenceTarget: true
+  - title: Moments by differentiation
+    kind: theorem
+    supplemental: moments.typ
+  - title: Sums of independent random variables
+    kind: proposition
+    supplemental: sums.typ
+  - title: The MGF of a normal distribution
+    kind: example
+    supplemental: normal.typ
+  - title: Multivariate moment generating functions
+    kind: definition
+    supplemental: multivariate.typ
+  - title: "Counterexample: the Cauchy distribution"
+    kind: warning
+    supplemental: cauchy.typ
+related: [probability.probability-generating-function, probability.moment, probability.expectation, probability.gamma-distribution, probability.normal-distribution, probability.gaussian-vector]

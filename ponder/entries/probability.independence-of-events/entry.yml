@@ -1,0 +1,18 @@
+id: probability.independence-of-events
+kind: definition
+title: Independence of Events
+aliases: [independent events, independence, mutual independence, pairwise independence]
+tags: [probability, independence]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-independence-of-events, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-independence-of-events}
+  - title: Pairwise does not imply mutual
+    kind: warning
+    supplemental: pairwise.typ
+  - title: Independence from complements
+    kind: corollary
+    supplemental: complements.typ
+related: [probability.probability-space, probability.conditional-probability]

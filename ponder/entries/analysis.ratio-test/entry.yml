@@ -1,0 +1,15 @@
+id: analysis.ratio-test
+kind: proposition
+title: Ratio test
+aliases: []
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: ratio-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: ratio-test}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.root-test, analysis.series, calculus.lhopitals-rule]

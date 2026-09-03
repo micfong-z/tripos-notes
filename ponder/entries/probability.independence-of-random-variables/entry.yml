@@ -1,0 +1,33 @@
+id: probability.independence-of-random-variables
+kind: definition
+title: Independence of Random Variables
+aliases: [independent random variables, independent discrete random variables]
+tags: [probability, independence]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-independence-of-random-variables, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-independence-of-random-variables}
+  - title: Subcollections are independent
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-independence-subset}
+  - title: Proof of subcollection independence
+    kind: proof
+    supplemental: subset-proof.typ
+  - title: Expectations factorise
+    kind: lemma
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: lem-independent-factorisation}
+  - title: Proof of factorisation
+    kind: proof
+    supplemental: factorisation-proof.typ
+  - title: Factorisation criterion for densities
+    kind: theorem
+    source:
+      document: part-ia/probability/chapters/chapter-4.typ
+      label: thm-independence-multivariate-density
+      referenceTarget: true
+  - title: Proof of the density factorisation criterion
+    kind: proof
+    supplemental: density-factorisation-proof.typ
+related: [probability.independence-of-events, probability.random-variable, probability.covariance, probability.conditional-expectation, probability.multivariate-density-function]

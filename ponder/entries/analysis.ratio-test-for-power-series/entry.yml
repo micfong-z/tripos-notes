@@ -1,0 +1,12 @@
+id: analysis.ratio-test-for-power-series
+kind: proposition
+title: Ratio Test for Power Series
+aliases: []
+tags: [analysis, power series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: ratio-test-for-power-series, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: ratio-test-for-power-series}
+related: [analysis.ratio-test, analysis.root-test-for-power-series, analysis.radius-of-convergence]

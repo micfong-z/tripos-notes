@@ -1,0 +1,1 @@
+The trivial homomorphism sends every element of $G$ to $e_H$. If $H <= G$, the inclusion map $H -> G$ is a homomorphism. The determinant map $det: G L_2(RR) -> (RR^*, times)$ is a homomorphism because $det(A B) = det(A) det(B)$.

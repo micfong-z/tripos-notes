@@ -1,0 +1,1 @@
+For any $b in ZZ$, $plus.minus 1$ and $plus.minus b$ are always factors of $b$; all other factors are called *proper factors*. Thus a natural number $n >= 2$ is composite precisely when it factors as $n = a b$ with $1 < a, b < n$.

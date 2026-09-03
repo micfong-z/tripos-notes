@@ -1,0 +1,15 @@
+id: algebra.polarisation-identity
+kind: lemma
+title: Polarisation Identity
+aliases: [polarisation identity]
+tags: [linear algebra, inner products, norms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: polarisation-identity, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: polarisation-identity}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.orthogonal-group]

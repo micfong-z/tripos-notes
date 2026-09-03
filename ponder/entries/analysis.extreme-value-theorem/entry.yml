@@ -1,0 +1,15 @@
+id: analysis.extreme-value-theorem
+kind: theorem
+title: Extreme Value Theorem
+aliases: [EVT, Weierstrass extreme value theorem]
+tags: [analysis, continuity, optimisation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: extreme-value-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: extreme-value-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.intermediate-value-theorem, analysis.continuity-preserves-closedness-boundedness, analysis.least-upper-bound, analysis.closed-set]

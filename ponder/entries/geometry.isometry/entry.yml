@@ -1,0 +1,12 @@
+id: geometry.isometry
+kind: definition
+title: Isometry
+aliases: [isometry]
+tags: [geometry, distance, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: isometry, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: isometry}
+related: []

@@ -1,0 +1,1 @@
+Relating two students when they were born in the same month is an equivalence relation, and it divides the set of students into subsets consisting of related elements. Among relations on $NN$, sharing the same final digit is an equivalence relation. On $ZZ times NN$, defining $(a, b) R (c, d)$ when $a d = b c$ also yields an equivalence relation.

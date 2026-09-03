@@ -1,0 +1,1 @@
+For an action $G arrow.cw.half X$, define $t_g(x) = g x$. The inverse of $t_g$ is $t_(g^(-1))$, and $t_g compose t_h = t_(g dot h)$, so $g |-> t_g$ is a homomorphism $G -> sym(X)$. Conversely, a homomorphism $phi: G -> sym(X)$ defines an action by $g x := phi(g)(x)$; the identity and associativity axioms follow from the homomorphism identities.

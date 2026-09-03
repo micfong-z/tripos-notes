@@ -1,0 +1,22 @@
+id: set-theory.peano-axioms
+kind: definition
+title: "Peano axioms"
+aliases:
+  - "Peano's axioms"
+  - "axioms for the natural numbers"
+tags:
+  - "axioms"
+  - "natural-numbers"
+  - "induction"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "peano-axioms", kind: definition}
+sections:
+  - title: "Definition"
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "peano-axioms"}
+  - title: "Arithmetic from the axioms"
+    kind: remark
+    supplemental: arithmetic.typ
+related:
+  - set-theory.well-ordering-principle
+  - set-theory.strong-weak-induction-equivalence

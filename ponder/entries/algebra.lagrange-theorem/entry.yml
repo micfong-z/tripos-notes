@@ -1,0 +1,18 @@
+id: algebra.lagrange-theorem
+kind: theorem
+title: Lagrange's Theorem
+aliases: [Lagrange theorem, Lagrange's theorem]
+tags: [groups, subgroups, cosets, counting, finite groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: lagranges-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: lagranges-theorem}
+  - title: Consequences
+    kind: corollary
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: cor-lagrange-1}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.coset, algebra.coset-partition, algebra.coset-cardinality, algebra.subgroup-index, algebra.group-order]

@@ -1,0 +1,15 @@
+id: probability.convergence-in-distribution
+kind: definition
+title: Convergence in Distribution
+aliases: [converges in distribution]
+tags: [probability, convergence, limit theorems]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: def-convergence-in-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: def-convergence-in-distribution}
+  - title: Convergence in probability implies convergence in distribution
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: prop-in-probability-implies-in-distribution}
+related: [probability.distribution-function, probability.convergence-in-probability, probability.central-limit-theorem, probability.mgf-continuity-property]

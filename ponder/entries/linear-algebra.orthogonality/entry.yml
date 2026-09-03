@@ -1,0 +1,24 @@
+id: linear-algebra.orthogonality
+kind: definition
+title: Orthogonality
+aliases:
+  - orthogonal
+  - perpendicular
+  - perpendicularity
+tags:
+  - vectors
+  - geometry
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: orthogonality
+  kind: definition
+sections:
+  - title: Independence of orthogonal vectors
+    kind: proposition
+    supplemental: independence.typ
+related:
+  - linear-algebra.dot-product
+  - linear-algebra.inner-product
+  - linear-algebra.orthonormal
+  - linear-algebra.linear-independence

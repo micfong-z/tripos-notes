@@ -1,0 +1,15 @@
+id: probability.continuous-random-variable
+kind: definition
+title: Continuous Random Variable
+aliases: [continuous random variables, continuous distribution, continuously distributed]
+tags: [probability, random variables, continuous distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-continuous-random-variable, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-continuous-random-variable}
+  - title: Absolutely continuous random variables
+    kind: remark
+    supplemental: absolutely-continuous.typ
+related: [probability.random-variable, probability.discrete-random-variable, probability.distribution-function, probability.probability-density-function]

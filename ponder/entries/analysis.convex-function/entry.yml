@@ -1,0 +1,15 @@
+id: analysis.convex-function
+kind: definition
+title: Convex Function
+aliases: [convex, convexity, convex functions]
+tags: [analysis, inequalities, convexity]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-convex-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-convex-function}
+  - title: Supporting lines
+    kind: lemma
+    supplemental: supporting-lines.typ
+related: [probability.jensens-inequality, probability.expectation]

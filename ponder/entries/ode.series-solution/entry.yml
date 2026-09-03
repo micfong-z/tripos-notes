@@ -1,0 +1,15 @@
+id: ode.series-solution
+kind: definition
+title: Series Solution
+aliases: [series solutions, series solution method]
+tags: [ordinary differential equations, series solutions]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: ex-series-solutions-about-ordinary-point, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: ex-series-solutions-about-ordinary-point}
+  - title: Working method
+    kind: remark
+    supplemental: method.typ
+related: [calculus.taylor-series, ode.ordinary-differential-equation, ode.singular-point, ode.fuchs-theorem]

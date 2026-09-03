@@ -1,0 +1,29 @@
+id: analysis.limit-of-sequence
+kind: definition
+title: Limit of a sequence
+aliases:
+  - sequence limit
+tags:
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-limit-of-sequence
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Uniqueness
+    kind: proposition
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+      label: prop-unique-limits
+
+  - title: Proof
+    kind: proof
+    supplemental: uniqueness-proof.typ
+
+related:
+  - analysis.sequence
+  - analysis.sequence-convergence

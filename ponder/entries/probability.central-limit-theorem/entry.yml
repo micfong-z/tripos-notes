@@ -1,0 +1,21 @@
+id: probability.central-limit-theorem
+kind: theorem
+title: Central Limit Theorem
+aliases: [central limit theorem, CLT]
+tags: [probability, limit theorems, normal distribution]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-central-limit-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-central-limit-theorem}
+  - title: Proof via moment generating functions
+    kind: proof
+    supplemental: proof.typ
+  - title: Normal approximation for sums
+    kind: corollary
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: cor-clt-normal-approximation}
+  - title: Examples
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: example-clt-approximations}
+related: [probability.normal-distribution, probability.convergence-in-distribution, probability.mgf-continuity-property, probability.moment-generating-function, probability.strong-law-of-large-numbers]

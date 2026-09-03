@@ -1,0 +1,1 @@
+When the forcing term already appears in the complementary function, the trial particular integral diverges as $omega -> omega_0$; for $dot.double(y) + omega_0^2 y = sin(omega_0 x)$ the resonant limit is $y_p = -(x)/(2 omega_0) cos(omega_0 x)$.

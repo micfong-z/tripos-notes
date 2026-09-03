@@ -1,0 +1,30 @@
+id: dynamics.friction
+kind: definition
+title: Friction
+aliases: [drag, linear drag, quadratic drag, coefficients of friction]
+tags: [mechanics, forces, dissipation]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: def-friction, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: def-friction}
+  - title: Properties
+    kind: remark
+    supplemental: properties.typ
+  - title: Linear and quadratic drag
+    kind: remark
+    supplemental: drag.typ
+  - title: Stokes' law
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-stokes-law}
+  - title: Reynolds number
+    kind: remark
+    supplemental: reynolds.typ
+  - title: Terminal velocity
+    kind: example
+    supplemental: terminal-velocity.typ
+  - title: Damping
+    kind: example
+    supplemental: damping.typ
+related: [dynamics.conservative-force, dynamics.dimensional-analysis]

@@ -1,0 +1,1 @@
+A set $V$ over $RR$ or $CC$ with operations of vector addition and scalar multiplication such that $(V, +)$ is an Abelian group and scalar multiplication distributes over addition, associates, and has identity $1 bold(v) = bold(v)$.

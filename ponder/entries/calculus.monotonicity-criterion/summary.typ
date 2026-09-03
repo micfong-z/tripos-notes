@@ -1,0 +1,1 @@
+On an interval, the sign of the derivative decides monotonicity: $f' >= 0$ makes $f$ increasing, $f' <= 0$ makes $f$ decreasing, and $f' = 0$ makes $f$ constant; strict inequalities give strict conclusions.

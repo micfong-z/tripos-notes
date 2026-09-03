@@ -1,0 +1,12 @@
+id: linear-algebra.linearly-independent-functions
+kind: definition
+title: Linearly Independent Functions
+aliases: [linearly independent, linear independence]
+tags: [linear algebra, functions]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: linearly-independent-functions, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: linearly-independent-functions}
+related: [linear-algebra.linearly-dependent-functions, linear-algebra.wronskian]

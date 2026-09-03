@@ -1,0 +1,30 @@
+id: linear-algebra.vector-triple-product
+kind: definition
+title: Vector triple product
+aliases:
+  - vector triple products
+tags:
+  - products
+  - identities
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: vector-triple-product
+  kind: definition
+sections:
+  - title: Expansion identity
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+      label: prop-vec-triple-product
+      referenceTarget: true
+  - title: Proof by index notation
+    kind: proof
+    supplemental: proof.typ
+  - title: Non-associativity
+    kind: warning
+    supplemental: nonassociativity.typ
+related:
+  - linear-algebra.cross-product
+  - linear-algebra.scalar-triple-product
+  - linear-algebra.einstein-summation-convention

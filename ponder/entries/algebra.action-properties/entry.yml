@@ -1,0 +1,12 @@
+id: algebra.action-properties
+kind: definition
+title: Transitive and Faithful Actions
+aliases: [transitive action, faithful action, transitivity, faithfulness]
+tags: [groups, actions, homomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: action-properties, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: action-properties}
+related: [algebra.group-action, algebra.orbit-stabiliser-definitions, algebra.action-homomorphism, algebra.homomorphism-bijectivity]

@@ -1,0 +1,18 @@
+id: dynamics.newtons-second-law
+kind: definition
+title: Newton's second law
+aliases: [Newton's 2nd law, second law of motion]
+tags: [mechanics, forces, momentum]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: law-newtons-second-law}
+sections:
+  - title: Law
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: law-newtons-second-law}
+  - title: Determinism
+    kind: corollary
+    supplemental: determinism.typ
+  - title: Scope of validity
+    kind: important
+    supplemental: validity.typ
+related: [dynamics.inertial-frame, dynamics.conservative-force]

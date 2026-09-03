@@ -1,0 +1,1 @@
+A Platonic solid is a convex polyhedron $X subset.eq RR^3$ whose faces are regular $n$-gons, whose isometry group acts transitively on its faces, and whose face-centre stabilisers are dihedral groups.

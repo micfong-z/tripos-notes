@@ -1,0 +1,12 @@
+id: algebra.element-order
+kind: definition
+title: Order of an Element
+aliases: [element order, order of a group element]
+tags: [groups, cyclic groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: element-order, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: element-order}
+related: [algebra.cyclic-group, algebra.group-order]

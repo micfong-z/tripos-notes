@@ -1,0 +1,21 @@
+id: probability.inclusion-exclusion-formula
+kind: proposition
+title: Inclusion-Exclusion Formula
+aliases: [inclusion-exclusion formula]
+tags: [probability, unions, intersections]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-inclusion-exclusion-formula, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-inclusion-exclusion-formula}
+  - title: Combinatorial form
+    kind: remark
+    supplemental: combinatorial.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Alternative proof via indicators and expectation
+    kind: proof
+    supplemental: indicators.typ
+related: [combinatorics.inclusion-exclusion-principle, probability.probability-measure-properties, probability.countable-subadditivity, probability.bonferroni-inequalities]

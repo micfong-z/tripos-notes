@@ -1,0 +1,15 @@
+id: analysis.completeness-of-reals
+kind: theorem
+title: Completeness of R and C
+aliases: [Cauchy completeness, completeness of the real numbers, every Cauchy sequence converges]
+tags: [analysis, completeness, sequences]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: completeness-real-complex, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: completeness-real-complex}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.cauchy-sequence, analysis.bolzano-weierstrass-theorem, analysis.real-numbers, analysis.componentwise-convergence]

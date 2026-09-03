@@ -1,0 +1,1 @@
+An ordered pair can be defined set-theoretically as $(a, b) = {{a}, {a, b}}$. The product extends to ordered triples and beyond: for instance $RR^3 = RR times RR times RR = {(x, y, z): x, y, z in RR}$.

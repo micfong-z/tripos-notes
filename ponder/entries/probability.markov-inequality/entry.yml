@@ -1,0 +1,15 @@
+id: probability.markov-inequality
+kind: proposition
+title: Markov's Inequality
+aliases: [Markov inequality]
+tags: [probability, inequalities]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-markov-inequality, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-markov-inequality}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.expectation, probability.chebyshevs-inequality]

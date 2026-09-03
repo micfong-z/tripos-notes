@@ -1,0 +1,15 @@
+id: probability.inverse-transform-sampling
+kind: example
+title: Inverse Transform Sampling
+aliases: [inverse transform method]
+tags: [probability, simulation, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: example-inverse-transform-sampling, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: example-inverse-transform-sampling}
+  - title: The generalised inverse is a right inverse
+    kind: proof
+    supplemental: proof.typ
+related: [probability.uniform-distribution, probability.distribution-function, probability.random-variable]

@@ -1,0 +1,18 @@
+id: number-theory.bezouts-theorem
+kind: theorem
+title: "Bézout's Theorem"
+aliases: ["Bézout's identity", "Bezout's identity", "Bezout's theorem"]
+tags: ["number theory", "linear combinations"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-bezout, kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-bezout}
+  - title: "Proof via Euclid's algorithm"
+    kind: proof
+    supplemental: proof-euclid.typ
+  - title: "Proof via least positive combination"
+    kind: proof
+    supplemental: proof-least-combination.typ
+related: [number-theory.euclids-algorithm, number-theory.highest-common-factor, number-theory.unit-modulo-n, number-theory.linear-diophantine-equation, algebra.chinese-remainder-theorem]

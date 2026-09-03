@@ -1,0 +1,5 @@
+course: numbers-and-sets
+title: Part IA Numbers and Sets
+document: part-ia/numbers-and-sets/main.typ
+sourceBase: /notes/ia-ns/content
+outputName: ia-ns.html

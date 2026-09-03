@@ -1,0 +1,12 @@
+id: calculus.taylor-polynomial
+kind: definition
+title: Taylor Polynomial
+aliases: [Taylor approximation]
+tags: [differential equations, differentiation, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: taylor-polynomial, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: taylor-polynomial}
+related: [calculus.taylor-series, calculus.taylors-theorem]

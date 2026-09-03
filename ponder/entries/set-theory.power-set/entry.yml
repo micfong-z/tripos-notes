@@ -1,0 +1,23 @@
+id: set-theory.power-set
+kind: definition
+title: Power Set
+aliases:
+  - power set
+tags:
+  - sets
+  - foundations
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-power-set, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-power-set}
+  - title: Example
+    kind: example
+    supplemental: example.typ
+  - title: No universal set
+    kind: warning
+    supplemental: no-universal-set.typ
+related:
+  - set-theory.subset
+  - set-theory.set

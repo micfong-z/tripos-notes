@@ -1,0 +1,24 @@
+id: analysis.radius-of-convergence
+kind: definition
+title: Radius of Convergence
+aliases: []
+tags: [analysis, power series, convergence]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: definition-radius-of-convergence, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: definition-radius-of-convergence}
+  - title: Existence
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-radius-of-convergence-existence}
+  - title: Convergence within the radius
+    kind: lemma
+    source:
+      document: part-ia/analysis-i/chapters/chapter-5.typ
+      label: lemma-convergence-within-radius
+      referenceTarget: true
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.power-series, analysis.root-test-for-power-series, analysis.ratio-test-for-power-series]

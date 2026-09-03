@@ -1,0 +1,15 @@
+id: probability.poisson-distribution
+kind: definition
+title: Poisson Distribution
+aliases: [Poisson distribution]
+tags: [probability, distributions, limits]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-poisson-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-poisson-distribution}
+  - title: Limit of binomial probabilities
+    kind: proof
+    supplemental: limit.typ
+related: [probability.discrete-distribution, probability.binomial-distribution]

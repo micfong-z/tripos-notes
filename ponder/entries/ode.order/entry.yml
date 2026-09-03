@@ -1,0 +1,13 @@
+id: ode.order
+kind: definition
+title: Order of a Differential Equation
+wikidataQID: Q98667776
+aliases: [nth order, first-order, first order]
+tags: [differential equations, ordinary differential equations]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: nth-order-differential-equation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: nth-order-differential-equation}
+related: [ode.linear-differential-equation, ode.ordinary-differential-equation]

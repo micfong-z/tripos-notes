@@ -1,0 +1,21 @@
+id: algebra.orbit-stabiliser
+kind: theorem
+title: Orbit-Stabiliser Theorem
+aliases: [orbit-stabiliser theorem, orbit stabilizer theorem]
+tags: [actions, counting]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: orbit-stabiliser, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: orbit-stabiliser}
+  - title: Counting form
+    kind: corollary
+    supplemental: body.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.group-action, algebra.orbit-stabiliser-definitions, algebra.coset, algebra.lagrange-theorem]

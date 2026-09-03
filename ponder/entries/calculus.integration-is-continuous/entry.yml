@@ -1,0 +1,15 @@
+id: calculus.integration-is-continuous
+kind: proposition
+title: Integration is Continuous
+aliases: [continuity of the integral function]
+tags: [integration, continuity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: integration-is-continuous, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: integration-is-continuous}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.fundamental-theorem-of-calculus, calculus.riemann-integrable-function]

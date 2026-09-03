@@ -1,0 +1,12 @@
+id: algebra.direct-product
+kind: definition
+title: Direct Product
+aliases: [direct product]
+tags: [groups, products, operations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-6.typ, label: direct-product, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-6.typ, label: direct-product}
+related: [algebra.group, algebra.binary-operation, algebra.direct-product-theorem]

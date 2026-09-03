@@ -1,0 +1,1 @@
+The dihedral homomorphism construction gives a homomorphism $phi: D_(2n) -> G$ sending $r |-> a$ and $s |-> b$. Since $a$ and $b$ generate $G$, $phi$ is surjective. Both groups have order $2n$, so $phi$ is bijective and therefore an isomorphism.

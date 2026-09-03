@@ -1,0 +1,12 @@
+id: algebra.quaternion-group
+kind: definition
+title: Quaternion Group
+aliases: [quaternion group, Q8]
+tags: [groups, finite groups, non-abelian groups, matrix groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-6.typ, label: quaternion-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-6.typ, label: quaternion-group}
+related: [algebra.group, algebra.abelian-group, algebra.element-order, algebra.group-order]

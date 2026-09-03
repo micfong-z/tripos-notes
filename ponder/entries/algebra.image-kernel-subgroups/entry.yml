@@ -1,0 +1,15 @@
+id: algebra.image-kernel-subgroups
+kind: proposition
+title: Image and Kernel Are Subgroups
+aliases: [image subgroup, kernel subgroup]
+tags: [groups, homomorphisms, subgroups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: image-kernel-subgroups, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: image-kernel-subgroups}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.image-kernel, algebra.subgroup, algebra.homomorphism-identities]

@@ -1,0 +1,15 @@
+id: algebra.mobius-generators
+kind: proposition
+title: Generators of the Möbius Group
+aliases: [Möbius group generators, generating set]
+tags: [groups, generators, transformations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-generators, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-generators}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.mobius-group, algebra.mobius-transformation, algebra.generated-subgroup, algebra.mobius-three-point-lemma]

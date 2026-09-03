@@ -1,0 +1,28 @@
+id: set-theory.image-preimage
+kind: definition
+title: Domain, Range, Image and Preimage
+aliases:
+  - image
+  - preimage
+  - inverse image
+  - domain
+  - range
+  - codomain
+tags:
+  - functions
+  - sets
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-image-preimage, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-image-preimage}
+  - title: Example
+    kind: example
+    supplemental: example.typ
+  - title: Image notation
+    kind: remark
+    supplemental: image-notation.typ
+related:
+  - set-theory.function
+  - set-theory.injection-surjection

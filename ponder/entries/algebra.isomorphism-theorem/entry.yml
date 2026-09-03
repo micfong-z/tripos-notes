@@ -1,0 +1,18 @@
+id: algebra.isomorphism-theorem
+kind: theorem
+title: Isomorphism Theorem
+aliases: [isomorphism theorem]
+tags: [groups, homomorphisms, quotient groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-7.typ, label: isomorphism-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-7.typ, label: isomorphism-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.homomorphism, algebra.image-kernel, algebra.normal-subgroup, algebra.quotient-group, algebra.isomorphism]

@@ -1,0 +1,18 @@
+id: analysis.root-test
+kind: proposition
+title: Root test
+aliases: [nth root test]
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: root-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: root-test}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.ratio-test, analysis.comparison-test, analysis.nth-term-test, analysis.series]

@@ -1,0 +1,1 @@
+A normal subgroup of $A_5$ is a union of conjugacy classes containing the identity. The conjugacy-class sizes are $1$, $20$, $15$, $12$, and $12$. Of the sums containing $1$, only $1$ and $60$ divide $60$. By Lagrange's theorem, a normal subgroup therefore has order $1$ or $60$, so it is either ${e}$ or $A_5$.

@@ -1,0 +1,1 @@
+Set intersection is commutative, and $times$ is distributive over $+$ on $RR$. Composition of functions need not be commutative: for $f: RR -> RR$ with $x |-> 2x$ and $g: RR -> RR$ with $x |-> x + 1$, $g compose f$ sends $x$ to $2x + 1$ while $f compose g$ sends $x$ to $2(x+1)$. Composition is associative, so its brackets may be dropped without ambiguity.

@@ -1,0 +1,21 @@
+id: analysis.alternating-series-test
+kind: proposition
+title: Alternating series test
+aliases: []
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: alternating-series-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: alternating-series-test}
+  - title: Example
+    kind: example
+    source:
+      document: part-ia/analysis-i/chapters/chapter-1.typ
+      label: ex-alternating-series-test
+      referenceTarget: true
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.series, analysis.monotone-convergence-theorem, analysis.subsequence, analysis.dirichlet-test, analysis.absolute-convergence]

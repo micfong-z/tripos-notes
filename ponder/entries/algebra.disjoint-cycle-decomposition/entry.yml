@@ -1,0 +1,15 @@
+id: algebra.disjoint-cycle-decomposition
+kind: theorem
+title: Disjoint-Cycle Decomposition
+aliases: [disjoint cycle decomposition]
+tags: [permutations, cycles, decomposition, uniqueness]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: disjoint-cycle-decomposition, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: disjoint-cycle-decomposition}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.permutation, algebra.cycle, algebra.disjoint-cycles, algebra.group-action, algebra.orbit-stabiliser-definitions]

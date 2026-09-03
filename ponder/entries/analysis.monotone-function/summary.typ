@@ -1,0 +1,1 @@
+$f: [a, b] -> RR$ is *monotone* when it is increasing, $a <= x_1 <= x_2 <= b => f(x_1) <= f(x_2)$, or decreasing, $a <= x_1 <= x_2 <= b => f(x_1) >= f(x_2)$; with the inequalities strict in each case, $f$ is *strictly monotone*.

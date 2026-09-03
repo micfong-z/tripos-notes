@@ -1,0 +1,15 @@
+id: algebra.fermat-euler-theorem
+kind: theorem
+title: Fermat-Euler Theorem
+aliases: [Euler's theorem modulo n, Fermat-Euler theorem]
+tags: [number theory, modular arithmetic, finite groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: fermat-euler-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: fermat-euler-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.euler-totient-function, algebra.finite-group-power, algebra.lagrange-theorem]

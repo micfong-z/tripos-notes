@@ -1,0 +1,12 @@
+id: algebra.conjugacy-class
+kind: definition
+title: Conjugacy Class
+aliases: [conjugacy class]
+tags: [groups, actions, conjugation]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: def-conjugacy-class, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: def-conjugacy-class}
+related: [algebra.conjugation, algebra.orbit-stabiliser-definitions, algebra.centraliser]

@@ -1,0 +1,18 @@
+id: number-theory.euclids-lemma
+kind: proposition
+title: "Euclid's Lemma"
+aliases: []
+tags: ["number theory", "primes", "divisibility"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-euclid-lemma, kind: proposition}
+sections:
+  - title: "Statement"
+    kind: proposition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-euclid-lemma}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "Generalisation and sharpness"
+    kind: remark
+    supplemental: generalisation.typ
+related: [number-theory.bezouts-theorem, number-theory.fundamental-theorem-of-arithmetic, number-theory.prime-composite-numbers]

@@ -1,0 +1,22 @@
+id: linear-algebra.basis
+kind: definition
+title: Basis
+aliases:
+  - bases
+tags:
+  - vectors
+  - bases
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: basis
+  kind: definition
+sections:
+  - title: Components and exchange
+    kind: remark
+    supplemental: components.typ
+related:
+  - linear-algebra.spanning-set
+  - linear-algebra.linear-independence
+  - linear-algebra.dimension

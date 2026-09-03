@@ -1,0 +1,18 @@
+id: calculus.algebra-of-integrals
+kind: lemma
+title: Basic Properties of Integrals
+aliases: [algebra of integrals, properties of the integral]
+tags: [integration, riemann integration]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: lemma-integral-properties, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: lemma-integral-properties}
+  - title: Suprema and infima of functions on intervals
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: sup-inf-interval-properties}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.riemann-integrable-function, calculus.upper-lower-riemann-sums, calculus.integral-additivity, linear-algebra.triangle-inequality]

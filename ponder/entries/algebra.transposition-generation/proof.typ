@@ -1,0 +1,1 @@
+Induct on $n$. The claim is immediate for $S_2$. Suppose transpositions generate $S_(n-1)$ and take $sigma in S_n$. If $sigma(n) = n$, then $sigma in S_(n-1)$. Otherwise, for $tau = mat(n, sigma(n))$, the permutation $tau sigma$ fixes $n$ and lies in $S_(n-1)$. Thus $tau sigma$ is a product of transpositions, and so is $sigma = tau(tau sigma)$.

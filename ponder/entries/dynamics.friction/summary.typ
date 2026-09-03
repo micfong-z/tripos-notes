@@ -1,0 +1,1 @@
+A macroscopic force that keeps track of the momentum lost to a medium through complicated microscopic effects; typically $bold(F) = -k_1 bold(v)$ (linear drag) or $bold(F) = -k_2 abs(bold(v)) bold(v)$ (quadratic drag).

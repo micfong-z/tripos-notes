@@ -1,0 +1,12 @@
+id: analysis.sequential-characterisation-of-limits
+kind: lemma
+title: Sequential characterisation of limits
+aliases: [sequential criterion for limits]
+tags: [analysis, limits, sequences]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: sequential-characterisation-of-limits, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: sequential-characterisation-of-limits}
+related: [analysis.limit-of-function, analysis.sequence-convergence, analysis.sequential-continuity]

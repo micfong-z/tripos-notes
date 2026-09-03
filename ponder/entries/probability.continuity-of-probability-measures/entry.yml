@@ -1,0 +1,18 @@
+id: probability.continuity-of-probability-measures
+kind: proposition
+title: Continuity of Probability Measures
+aliases: []
+tags: [probability, measures, convergence]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-continuity-probability-measure-1, kind: proposition}
+sections:
+  - title: Increasing sequences
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-continuity-probability-measure-1}
+  - title: Decreasing sequences
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-continuity-probability-measure-2}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.probability-space, probability.countable-subadditivity, analysis.sequence-convergence]

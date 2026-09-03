@@ -1,0 +1,1 @@
+The arguments of $z$ form the set ${arg(z) + 2 ppi n | n in ZZ}$, and its logarithms form ${log z + 2 ppi n ii : n in ZZ}$: both multivalued structures arise because $ee^z = 1$ precisely when $z = 2 ppi n ii$.

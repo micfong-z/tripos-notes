@@ -1,0 +1,15 @@
+id: analysis.nested-interval-property
+kind: proposition
+title: Nested interval property
+aliases: [nested intervals, intersection of nested closed intervals]
+tags: [analysis, real numbers]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: nested-interval-property, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: nested-interval-property}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.monotone-convergence-theorem, analysis.bolzano-weierstrass-theorem, analysis.limit-of-sequence]

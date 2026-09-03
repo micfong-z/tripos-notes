@@ -1,0 +1,1 @@
+There are four products to check: $r^k r^l$, $r^k r^l s$, $r^k s r^l$, and $r^k s r^l s$. The relation $a b = b a^(-1)$ gives $b a^l = a^(-l) b$, and $b^2 = e$ then gives the required images for all four products.

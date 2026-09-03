@@ -1,0 +1,12 @@
+id: algebra.mobius-composition
+kind: proposition
+title: Composition of Möbius Transformations
+aliases: [Möbius transformation composition formula]
+tags: [transformations, composition, complex analysis]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-composition, kind: proposition}
+sections:
+  - title: Formula
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-composition}
+related: [algebra.mobius-transformation, algebra.function-composition, algebra.mobius-group]

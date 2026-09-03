@@ -1,0 +1,20 @@
+id: set-theory.partition
+kind: definition
+title: Partition
+aliases:
+  - partitions
+tags:
+  - sets
+  - relations
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-2.typ
+  label: def-partition
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - set-theory.equivalence-class
+  - set-theory.equivalence-partition-theorem

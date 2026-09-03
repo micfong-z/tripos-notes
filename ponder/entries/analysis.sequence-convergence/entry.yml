@@ -1,0 +1,24 @@
+id: analysis.sequence-convergence
+kind: definition
+title: Sequence convergence
+aliases:
+  - convergent sequence
+  - divergent sequence
+tags:
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-sequence-convergence
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+
+related:
+  - analysis.limit-of-sequence
+  - analysis.convergent-sequence-bounded

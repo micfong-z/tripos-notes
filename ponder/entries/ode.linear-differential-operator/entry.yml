@@ -1,0 +1,15 @@
+id: ode.linear-differential-operator
+kind: definition
+title: Linear Differential Operator
+aliases: [linear differential operators, principle of superposition]
+tags: [differential equations, linear operators, ordinary differential equations]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: linear-differential-operator, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: linear-differential-operator}
+  - title: Solving by superposition
+    kind: remark
+    supplemental: superposition.typ
+related: [ode.linear-differential-equation, ode.homogeneous-differential-equation, ode.particular-integral]

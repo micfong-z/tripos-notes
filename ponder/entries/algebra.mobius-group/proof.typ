@@ -1,0 +1,1 @@
+Composition of functions is associative. The identity map $id(z) = z$ is a Möbius transformation. If $mu(z) = (a z + b)/(c z + d)$, then $nu(z) = (d z - b)/(-c z + a)$ is its inverse, so every Möbius transformation has an inverse in the same set.

@@ -1,0 +1,25 @@
+id: number-theory.e-irrational
+kind: proposition
+title: Euler's number is irrational
+aliases:
+  - e is irrational
+tags:
+  - number-theory
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: prop-e-irrational
+  kind: proposition
+sections:
+  - title: Statement
+    kind: proposition
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+
+related:
+  - analysis.series
+  - analysis.irrational-number
+  - number-theory.liouville-number

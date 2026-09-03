@@ -1,0 +1,12 @@
+id: calculus.little-o
+kind: definition
+title: Little O
+aliases: [little o notation]
+tags: [differential equations, asymptotics, limits]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: little-o, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: little-o}
+related: [calculus.big-o, calculus.taylor-series]

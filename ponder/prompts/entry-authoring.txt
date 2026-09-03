@@ -1,0 +1,31 @@
+Create Ponder concepts and entry content using only information supported by the supplied chapter. You may summarize, reword, and reorganize that material to improve clarity, but do not introduce mathematical claims, conventions, examples, or notation that the chapter does not support.
+
+Write the entry as part of the notes themselves. State mathematical facts directly; never refer to "the notes," "the source," "the chapter," or the act of asking, showing, stating, giving, or writing something. Do not use meta-commentary about where a fact came from.
+
+Use the course's notation and language. Preserve verbatim wording when it is already the clearest expression.
+
+Do not append a liveness block or artificial `@label`/`#link(<label>)` references to keep source labels live for web export. Unused-label warnings caused by omitting such references are acceptable.
+
+SUMMARY
+
+Write a short, self-contained Typst summary. Prefer a defining equation or map when it expresses the concept more directly than prose.
+
+For Orbit-Stabiliser, a suitable summary is:
+
+The map $g stab_G(x) attach(|->, t: Phi) g x$ is a well-defined bijection $G \/ stab_G(x) -> G x$.
+
+For Lagrange's theorem, a suitable summary is:
+
+$abs(G) = [G : H] abs(H)$ if $H <= G$ and $abs(G) < oo$.
+
+SECTIONS
+
+Use a native labeled Typst block as the primary section. Definitions, theorems, propositions, lemmas, corollaries, and examples are citable primary sources. An example is suitable when it is mainly about a genuinely individual durable concept, rather than a passing illustration, and the concept is useful or referred to again later. Never use a motivation heading, ordinary prose, notation block, remark, exercise, or proof as a primary source; when no suitable labeled block exists, reuse a broader existing citable concept only when the mapping is unambiguous. If the chapter proves the result, include a proof section grounded in that proof. If the chapter contains useful examples, include an example section grounded in those examples. Omit proof or example sections when the chapter does not provide them. Do not manufacture completeness.
+
+NESTED PONDER
+
+Concepts mentioned inside a Ponder entry may themselves be Ponder targets, enabling nested navigation. Never place one #ponder wrapper syntactically inside or across another #ponder wrapper; overlapping or nested wrappers are invalid.
+
+WIKIDATA
+
+wikidataQID is optional. Include it only after verifying the exact concept on Wikidata. Do not guess from a similar name. For example, the algebraic concept "group" is Q83478. If lookup is unavailable or the match is uncertain, omit the field for human review.

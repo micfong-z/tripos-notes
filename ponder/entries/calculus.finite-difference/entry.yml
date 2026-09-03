@@ -1,0 +1,16 @@
+id: calculus.finite-difference
+kind: example
+title: Finite Difference Approximation
+wikidataQID: Q2068418
+aliases: [finite differences, discretisation]
+tags: [numerical approximation, discretisation, ordinary differential equations]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-7.typ, label: ex-finite-difference, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-7.typ, label: ex-finite-difference}
+  - title: From derivatives to shifts
+    kind: remark
+    supplemental: body.typ
+related: [ode.ordinary-differential-equation, ode.first-order-discrete-equation]

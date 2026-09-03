@@ -1,0 +1,18 @@
+id: number-theory.fundamental-theorem-of-arithmetic
+kind: theorem
+title: "Fundamental Theorem of Arithmetic"
+aliases: ["unique factorisation", "unique prime factorisation"]
+tags: ["number theory", "primes"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-fundamental-arithmetic, kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-fundamental-arithmetic}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "Failure in other arithmetic systems"
+    kind: warning
+    supplemental: failure-warning.typ
+related: [number-theory.euclids-lemma, number-theory.prime-factorisation-existence, number-theory.prime-composite-numbers]

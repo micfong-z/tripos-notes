@@ -1,0 +1,35 @@
+id: set-theory.products-of-countable-sets
+kind: theorem
+title: Products of countable sets
+aliases:
+  - nn times nn is countable
+  - zz times zz is countable
+  - countable cartesian products
+tags:
+  - sets
+  - counting
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: thm-nn-times-nn-countable
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: thm-nn-times-nn-countable
+  - title: Diagonal listing
+    kind: proof
+    supplemental: diagonal-listing.typ
+  - title: Prime factorisation injection
+    kind: proof
+    supplemental: prime-injection.typ
+  - title: Integer lattices
+    kind: corollary
+    supplemental: integer-lattices.typ
+related:
+  - set-theory.cartesian-product
+  - set-theory.countable-set
+  - set-theory.countable-unions-countable
+  - number-theory.fundamental-theorem-of-arithmetic

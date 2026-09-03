@@ -1,0 +1,12 @@
+id: algebra.bijection
+kind: definition
+title: Bijection
+aliases: [bijective map]
+tags: [functions, sets]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: bijection, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: bijection}
+related: []

@@ -1,0 +1,1 @@
+On a countable sample space $Omega = {omega_1, omega_2, ...}$ with $cal(F) = cal(P)(Omega)$, knowing $PP({omega_i})$ for all $i$ determines everything: the values $p_i = PP({omega_i})$ form a discrete probability distribution, and $PP(A) = sum_(omega_i in A) p_i$ for every $A subset.eq Omega$.

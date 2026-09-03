@@ -1,0 +1,1 @@
+A left inverse alone does not make a function invertible. Let $f: NN -> NN$ take $x |-> x + 1$ and $g: NN -> NN$ take $x |-> cases(x - 1 quad &x != 1, 1 quad &x = 1)$. Then $g compose f = id_NN$, but $f compose g != id_NN$ since $f compose g(1) = 2$. Both composites are required.

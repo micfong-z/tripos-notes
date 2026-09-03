@@ -1,0 +1,29 @@
+id: linear-algebra.hermitian-diagonalisation
+kind: theorem
+title: Diagonalisation of Hermitian matrices
+aliases:
+  - spectral theorem for Hermitian matrices
+tags:
+  - Hermitian matrices
+  - diagonalisation
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: thm-hermitian-diagonalisation
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Unitary and orthogonal forms
+    kind: remark
+    supplemental: unitary-orthogonal.typ
+  - title: Orthonormal construction
+    kind: proof
+    supplemental: construction.typ
+related:
+  - linear-algebra.hermitian-matrix
+  - linear-algebra.hermitian-eigenvalues
+  - linear-algebra.diagonalisable-matrix
+  - linear-algebra.unitary-matrix
+  - linear-algebra.orthonormal

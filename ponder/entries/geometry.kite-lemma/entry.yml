@@ -1,0 +1,15 @@
+id: geometry.kite-lemma
+kind: lemma
+title: Kite Lemma
+aliases: [kite lemma]
+tags: [geometry, isometries]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: kite-lemma, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: kite-lemma}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

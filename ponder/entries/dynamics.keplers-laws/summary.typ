@@ -1,0 +1,1 @@
+Planets move in ellipses with the Sun at one focus, the line between planet and Sun sweeps out equal areas in equal times with $dot(A) = (l)/(2)$, and the period of the orbit is proportional to $"radius"^((3)/(2))$.

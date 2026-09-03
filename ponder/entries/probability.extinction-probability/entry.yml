@@ -1,0 +1,33 @@
+id: probability.extinction-probability
+kind: theorem
+title: Extinction Probability
+aliases: [extinction probability, probability of extinction]
+tags: [probability, branching processes, generating functions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-extinction-probability, kind: proposition}
+sections:
+  - title: Fixed point equation
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-extinction-probability}
+  - title: Proof of the fixed point equation
+    kind: proof
+    supplemental: fixed-point-proof.typ
+  - title: Means of the generations
+    kind: theorem
+    source:
+      document: part-ia/probability/chapters/chapter-3.typ
+      label: prop-mean-branching-process
+      referenceTarget: true
+  - title: Proof of the mean formula
+    kind: proof
+    supplemental: mean-proof.typ
+  - title: Generating functions across generations
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: thm-branching-generating-functions}
+  - title: Minimal solution characterisation
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: thm-extinction-probability}
+  - title: Proof of the characterisation
+    kind: proof
+    supplemental: proof.typ
+related: [probability.probability-generating-function, probability.random-sum, probability.continuity-of-probability-measures, probability.conditional-expectation]

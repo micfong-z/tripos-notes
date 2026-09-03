@@ -1,0 +1,15 @@
+id: algebra.inverse-of-product
+kind: proposition
+title: Inverse of a Product
+aliases: [inverse of a product]
+tags: [groups, inverses]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: inverse-of-product, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: inverse-of-product}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

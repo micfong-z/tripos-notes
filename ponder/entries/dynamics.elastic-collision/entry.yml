@@ -1,0 +1,18 @@
+id: dynamics.elastic-collision
+kind: definition
+title: Elastic collision
+aliases: [elastic collisions]
+tags: [mechanics, collisions]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: def-elastic-collision, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: def-elastic-collision}
+  - title: Reflection from a massive wall
+    kind: proposition
+    supplemental: reflection.typ
+  - title: Impulse
+    kind: remark
+    supplemental: impulse.typ
+related: [dynamics.conservation-of-energy]

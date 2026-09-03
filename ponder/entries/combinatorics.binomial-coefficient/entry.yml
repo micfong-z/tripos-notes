@@ -1,0 +1,30 @@
+id: combinatorics.binomial-coefficient
+kind: definition
+title: "Binomial coefficient"
+aliases:
+  - "n choose k"
+  - "binomial coefficients"
+tags:
+  - "counting"
+  - "combinatorics"
+  - "subsets"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "def-binomial-coefficient", kind: definition}
+sections:
+  - title: "Definition"
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "def-binomial-coefficient"}
+  - title: "Basic values and total count"
+    kind: remark
+    supplemental: basics.typ
+  - title: "Symmetry"
+    kind: corollary
+    supplemental: symmetry.typ
+  - title: "Pascal's rule"
+    kind: corollary
+    supplemental: pascal.typ
+related:
+  - set-theory.subset
+  - combinatorics.power-set-cardinality
+  - combinatorics.binomial-coefficient-formula
+  - combinatorics.binomial-theorem

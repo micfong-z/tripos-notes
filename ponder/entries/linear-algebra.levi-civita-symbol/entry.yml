@@ -1,0 +1,23 @@
+id: linear-algebra.levi-civita-symbol
+kind: definition
+title: Levi-Civita symbol
+aliases:
+  - Levi-Civita epsilon
+tags:
+  - index notation
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: def-levi-civita
+  kind: definition
+sections:
+  - title: Properties
+    kind: proposition
+    supplemental: properties.typ
+  - title: Contraction identities
+    kind: lemma
+    supplemental: identities.typ
+related:
+  - linear-algebra.kronecker-delta
+  - linear-algebra.einstein-summation-convention
+  - algebra.permutation-parity

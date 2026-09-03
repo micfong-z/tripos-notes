@@ -1,0 +1,21 @@
+id: dynamics.centre-of-mass
+kind: definition
+title: Centre of mass
+aliases: [center of mass, CoM]
+tags: [mechanics, systems-of-particles]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-4.typ, label: def-centre-of-mass, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-4.typ, label: def-centre-of-mass}
+  - title: Motion of the centre of mass
+    kind: theorem
+    supplemental: motion.typ
+  - title: Kinetic energy decomposition
+    kind: proposition
+    supplemental: kinetic-energy.typ
+  - title: The two body problem
+    kind: corollary
+    supplemental: two-body.typ
+related: [dynamics.newtons-second-law, dynamics.newtons-third-law, dynamics.conservation-of-energy]

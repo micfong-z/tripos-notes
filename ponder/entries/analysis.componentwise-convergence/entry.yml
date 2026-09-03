@@ -1,0 +1,20 @@
+id: analysis.componentwise-convergence
+kind: lemma
+title: Componentwise convergence of complex sequences
+aliases: [real and imaginary parts converge, componentwise Cauchy criterion]
+tags: [analysis, sequences, complex numbers]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: componentwise-convergence, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: componentwise-convergence}
+  - title: Same criterion for Cauchy sequences
+    kind: lemma
+    source:
+      document: part-ia/analysis-i/chapters/chapter-1.typ
+      label: cauchy-componentwise
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.sequence-convergence, analysis.cauchy-sequence, analysis.completeness-of-reals]

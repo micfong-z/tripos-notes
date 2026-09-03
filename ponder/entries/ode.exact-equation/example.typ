@@ -1,0 +1,1 @@
+For $(2 x - 3 y^2) dif x + 6 y (y - x) dif y = 0$, one has $(∂ P)/(∂ y) = -6 y = (∂ Q)/(∂ x)$. Integrating $P = (∂ f)/(∂ x)$ and matching $Q = (∂ f)/(∂ y)$ yields the implicit solution $x^2 - 3 x y^2 + 2 y^3 = A$.

@@ -1,0 +1,12 @@
+id: number-theory.pseudoprime
+kind: definition
+title: "Pseudoprime"
+aliases: []
+tags: ["number theory", "primes", "cryptography"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-fermats-criterion, kind: proposition}
+sections:
+  - title: "Definition"
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-fermats-criterion}
+related: [number-theory.fermats-little-theorem, number-theory.prime-composite-numbers]

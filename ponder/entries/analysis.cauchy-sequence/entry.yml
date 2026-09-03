@@ -1,0 +1,33 @@
+id: analysis.cauchy-sequence
+kind: definition
+title: Cauchy sequence
+aliases: [Cauchy sequences, Cauchy criterion]
+tags: [analysis, sequences]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: cauchy-sequence, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: cauchy-sequence}
+  - title: Examples
+    kind: example
+    source:
+      document: part-ia/analysis-i/chapters/chapter-1.typ
+      label: cauchy-sequence-examples
+      referenceTarget: true
+  - title: Cauchy sequences are bounded
+    kind: lemma
+    source:
+      document: part-ia/analysis-i/chapters/chapter-1.typ
+      label: cauchy-sequence-bounded
+      referenceTarget: true
+  - title: Proof of boundedness
+    kind: proof
+    supplemental: bounded-proof.typ
+  - title: Convergence implies Cauchy
+    kind: lemma
+    source:
+      document: part-ia/analysis-i/chapters/chapter-1.typ
+      label: convergence-implies-cauchy
+      referenceTarget: true
+related: [analysis.sequence-convergence, analysis.completeness-of-reals, analysis.componentwise-convergence, analysis.convergent-sequence-bounded]

@@ -1,0 +1,15 @@
+id: dynamics.rolling-without-slipping
+kind: definition
+title: Rolling without slipping
+aliases: [no-slip rolling, no-slip condition, rolling ball]
+tags: [mechanics, rigid-bodies, rolling]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: ex-rolling-ball, kind: example}
+sections:
+  - title: Rolling ball
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: ex-rolling-ball}
+  - title: Friction does no work
+    kind: important
+    supplemental: no-work.typ
+related: [dynamics.friction, dynamics.moment-of-inertia, dynamics.conservation-of-energy]

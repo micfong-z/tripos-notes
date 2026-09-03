@@ -1,0 +1,37 @@
+id: set-theory.reals-uncountable
+kind: theorem
+title: Uncountability of the reals
+aliases:
+  - the reals are uncountable
+  - rr is uncountable
+tags:
+  - analysis
+  - sets
+  - cardinality
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: thm-rr-uncountable
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: thm-rr-uncountable
+  - title: Cantor's diagonal argument
+    kind: proof
+    supplemental: diagonal-proof.typ
+  - title: Power set of the naturals
+    kind: theorem
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: thm-pnn-uncountable
+  - title: Consequences
+    kind: corollary
+    supplemental: consequences.typ
+related:
+  - set-theory.uncountable-set
+  - analysis.real-numbers
+  - set-theory.cantors-theorem
+  - number-theory.transcendentals-uncountable

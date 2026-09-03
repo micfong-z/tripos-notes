@@ -1,0 +1,24 @@
+id: combinatorics.binomial-theorem
+kind: theorem
+title: "Binomial theorem"
+aliases:
+  - "binomial expansion"
+tags:
+  - "counting"
+  - "algebra"
+  - "expansion"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "thm-binomial-theorem", kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "thm-binomial-theorem"}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "A useful expansion"
+    kind: example
+    supplemental: expansion.typ
+related:
+  - combinatorics.binomial-coefficient
+  - combinatorics.binomial-coefficient-formula

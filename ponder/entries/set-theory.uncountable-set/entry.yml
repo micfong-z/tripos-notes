@@ -1,0 +1,31 @@
+id: set-theory.uncountable-set
+kind: definition
+title: Uncountable set
+aliases:
+  - uncountable
+  - uncountability
+tags:
+  - sets
+  - counting
+  - cardinality
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: def-uncountable
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: def-uncountable
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+  - title: Showing uncountability
+    kind: remark
+    supplemental: showing-uncountability.typ
+related:
+  - set-theory.countable-set
+  - set-theory.reals-uncountable
+  - set-theory.cantors-theorem

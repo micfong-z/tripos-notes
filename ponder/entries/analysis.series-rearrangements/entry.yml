@@ -1,0 +1,18 @@
+id: analysis.series-rearrangements
+kind: proposition
+title: Rearrangements of absolutely convergent series
+aliases: [rearrangement theorem]
+tags: [analysis, series]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: rearrangements-absolutely-convergent-series, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: rearrangements-absolutely-convergent-series}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Conditional rearrangements can change the sum
+    kind: example
+    supplemental: counterexample.typ
+related: [analysis.absolute-convergence, analysis.series]

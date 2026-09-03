@@ -1,0 +1,1 @@
+Differentiability implies continuity of the function itself. Iterating this, if $f$ is $k$-times differentiable then $f^(i)$ is continuous for all $i < k$: each $f^(i)$ for $1 <= i < k$ is differentiable, hence continuous.

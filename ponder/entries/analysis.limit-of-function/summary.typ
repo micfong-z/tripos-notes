@@ -1,0 +1,1 @@
+For $f: X subset.eq CC -> CC$ and an accumulation point $a$ of $X$, $y$ is the *limit* of $f$ as $z -> a$ when $forall epsilon > 0, exists delta > 0, forall z in X: 0 < |z - a| < delta => abs(f(z) - y) < epsilon$.

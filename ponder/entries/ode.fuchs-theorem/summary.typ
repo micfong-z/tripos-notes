@@ -1,0 +1,1 @@
+If $x_0$ is an ordinary point of $p(x) y'' + q(x) y' + r(x) y = 0$, there are two linearly independent solutions $y(x) = sum_(n=0)^oo a_n (x - x_0)^n$. If $x_0$ is a regular singular point, there is at least one solution $y(x) = sum_(n=0)^oo a_n (x - x_0)^(n+sigma)$ with $a_0 != 0$, converging in some neighborhood of $x_0$.

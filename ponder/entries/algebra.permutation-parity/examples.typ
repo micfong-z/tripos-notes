@@ -1,0 +1,1 @@
+A $k$-cycle is even if and only if $k$ is odd. More generally, a permutation of cycle type $(k_1, ..., k_l)$ is even if and only if an even number of the $k_i$ are even. For example, $mat(1,2)mat(3,4)$ is even, while $mat(1,2)mat(3,4)mat(5,6)$ is odd.

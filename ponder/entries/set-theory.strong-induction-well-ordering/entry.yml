@@ -1,0 +1,24 @@
+id: set-theory.strong-induction-well-ordering
+kind: theorem
+title: "Strong induction implies well-ordering"
+aliases:
+  - "SPI implies WOP"
+tags:
+  - "induction"
+  - "orderings"
+  - "least-elements"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "thm-spi-wop", kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "thm-spi-wop"}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "The converse fails"
+    kind: warning
+    supplemental: converse.typ
+related:
+  - set-theory.well-ordering-principle
+  - set-theory.strong-weak-induction-equivalence

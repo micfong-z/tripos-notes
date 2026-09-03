@@ -1,0 +1,1 @@
+Rewrite each identity between sets into a statement about an arbitrary element joined by inclusion and logical connectives, and settle the connectives with a truth table. Usually one shows both $"LHS" subset.eq "RHS"$ and $"RHS" subset.eq "LHS"$.

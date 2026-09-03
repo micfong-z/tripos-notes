@@ -1,0 +1,12 @@
+id: algebra.binary-operation
+kind: definition
+title: Binary Operation
+aliases: [binary operation]
+tags: [groups, operations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: binary-operation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: binary-operation}
+related: []

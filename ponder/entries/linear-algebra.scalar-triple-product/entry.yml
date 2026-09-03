@@ -1,0 +1,27 @@
+id: linear-algebra.scalar-triple-product
+kind: definition
+title: Scalar triple product
+aliases:
+  - scalar triple products
+tags:
+  - products
+  - volume
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: scalar-triple-product
+  kind: definition
+sections:
+  - title: Cyclic properties
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+      label: prop-triple-product
+      referenceTarget: true
+  - title: Signed volume
+    kind: remark
+    supplemental: volume.typ
+related:
+  - linear-algebra.cross-product
+  - linear-algebra.vector-triple-product
+  - linear-algebra.linear-independence

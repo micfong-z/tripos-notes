@@ -1,0 +1,15 @@
+id: probability.bonferroni-inequalities
+kind: lemma
+title: Bonferroni Inequalities
+aliases: [Bonferroni inequalities]
+tags: [probability, inequalities]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: lem-bonferroni-inequalities, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: lem-bonferroni-inequalities}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.inclusion-exclusion-formula, probability.countable-subadditivity]

@@ -1,0 +1,15 @@
+id: number-theory.division-algorithm
+kind: proposition
+title: "Division Algorithm"
+aliases: []
+tags: ["number theory", "induction"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-division-algorithm, kind: proposition}
+sections:
+  - title: "Statement"
+    kind: proposition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-division-algorithm}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+related: [number-theory.euclids-algorithm, number-theory.highest-common-factor]

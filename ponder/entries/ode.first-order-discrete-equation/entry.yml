@@ -1,0 +1,12 @@
+id: ode.first-order-discrete-equation
+kind: definition
+title: First-Order Discrete Equation
+aliases: [first-order discrete equation, first order discrete equation, recurrence relation]
+tags: [discrete dynamical systems, recurrence]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: first-order-discrete-equation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: first-order-discrete-equation}
+related: [ode.discrete-fixed-point, ode.autonomous-system, ode.logistic-map]

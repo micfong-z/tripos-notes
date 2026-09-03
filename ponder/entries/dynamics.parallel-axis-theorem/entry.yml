@@ -1,0 +1,21 @@
+id: dynamics.parallel-axis-theorem
+kind: theorem
+title: Parallel axis theorem
+aliases: []
+tags: [mechanics, rigid-bodies, rotation]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: thm-parallel-axis-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: thm-parallel-axis-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: The centre-of-mass axis is minimal
+    kind: corollary
+    supplemental: com-minimal.typ
+  - title: Disc about an edge
+    kind: example
+    supplemental: disc-edge.typ
+related: [dynamics.moment-of-inertia, dynamics.perpendicular-axis-theorem, dynamics.centre-of-mass]

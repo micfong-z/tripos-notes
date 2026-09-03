@@ -1,0 +1,15 @@
+id: dynamics.escape-velocity
+kind: definition
+title: Escape velocity
+aliases: [escape speed]
+tags: [mechanics, gravity, energy]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-escape-velocity, kind: example}
+sections:
+  - title: Derivation
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-escape-velocity}
+  - title: Independence of mass
+    kind: remark
+    supplemental: mass-cancellation.typ
+related: [dynamics.conservation-of-energy, dynamics.gravitational-force]

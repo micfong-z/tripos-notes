@@ -1,0 +1,11 @@
+course: probability
+title: Part IA Probability
+document: part-ia/probability/main.typ
+sourceBase: /notes/ia-prob/content
+outputName: ia-prob.html
+budgets:
+  # The full course ships more entries than the shared default assumes
+  # (limit theorems plus simulation closed the course), so raise the
+  # per-course tooltip index ceiling here instead of starving entries.
+  tooltipIndexGzip: 215040
+

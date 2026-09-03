@@ -1,0 +1,18 @@
+id: calculus.ratio-test-for-integrals
+kind: proposition
+title: Ratio Test for Integrals
+aliases: [limit comparison test for integrals]
+tags: [integration, convergence, comparison tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: ratio-test-integrals, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: ratio-test-integrals}
+  - title: Limiting cases
+    kind: remark
+    supplemental: limiting-cases.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [calculus.comparison-test-for-integrals, analysis.ratio-test, calculus.improper-integral]

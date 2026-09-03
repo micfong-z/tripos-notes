@@ -1,0 +1,26 @@
+id: linear-algebra.jordan-normal-form
+kind: theorem
+title: Jordan normal form
+aliases:
+  - Jordan normal form theorem
+  - Jordan blocks
+tags:
+  - matrices
+  - classification
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: thm-jordan-normal-form
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Two-dimensional case
+    kind: proposition
+    supplemental: two-dim.typ
+related:
+  - linear-algebra.similar-matrices
+  - linear-algebra.diagonalisable-matrix
+  - linear-algebra.cayley-hamilton-theorem
+  - linear-algebra.defect

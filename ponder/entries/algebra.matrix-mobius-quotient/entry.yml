@@ -1,0 +1,15 @@
+id: algebra.matrix-mobius-quotient
+kind: proposition
+title: Möbius Transformations from Matrices
+aliases: [matrix representation of Möbius transformations]
+tags: [matrices, Möbius transformations, quotient groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: matrix-mobius-quotient, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: matrix-mobius-quotient}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.mobius-transformation, algebra.homomorphism, algebra.image-kernel, algebra.quotient-group, algebra.isomorphism-theorem]

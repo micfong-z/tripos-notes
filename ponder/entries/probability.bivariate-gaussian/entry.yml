@@ -1,0 +1,18 @@
+id: probability.bivariate-gaussian
+kind: definition
+title: Bivariate Gaussian Distribution
+aliases: [bivariate Gaussian vector, bivariate Gaussian, bivariate normal distribution]
+tags: [probability, gaussian, bivariate]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-bivariate-gaussian, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-bivariate-gaussian}
+  - title: The correlation lies in [-1, 1]
+    kind: proposition
+    supplemental: correlation-range.typ
+  - title: Conditional expectation is affine
+    kind: proposition
+    supplemental: conditional-expectation.typ
+related: [probability.gaussian-vector, probability.covariance, probability.conditional-expectation]

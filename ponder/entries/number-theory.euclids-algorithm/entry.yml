@@ -1,0 +1,18 @@
+id: number-theory.euclids-algorithm
+kind: theorem
+title: "Euclid's Algorithm"
+aliases: ["Euclidean algorithm"]
+tags: ["number theory", "algorithms"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-euclid-algorithm, kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-euclid-algorithm}
+  - title: "Termination"
+    kind: remark
+    supplemental: termination.typ
+  - title: "Example"
+    kind: example
+    supplemental: example.typ
+related: [number-theory.division-algorithm, number-theory.highest-common-factor, number-theory.bezouts-theorem]

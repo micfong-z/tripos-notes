@@ -1,0 +1,18 @@
+id: linear-algebra.matrix-definiteness
+kind: definition
+title: Definiteness of a Matrix
+aliases: [positive definite, positive definite matrix, negative definite, indefinite matrix, positive semi-definite]
+tags: [linear algebra, symmetric matrices, quadratic forms]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: matrix-definiteness, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: matrix-definiteness}
+  - title: Definiteness and eigenvalues
+    kind: proposition
+    supplemental: eigenvalues.typ
+  - title: Stationary points and contours
+    kind: corollary
+    supplemental: stationary-points.typ
+related: [calculus.hessian-matrix, linear-algebra.signature, linear-algebra.sylvester-criterion]

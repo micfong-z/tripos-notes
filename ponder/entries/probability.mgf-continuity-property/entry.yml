@@ -1,0 +1,15 @@
+id: probability.mgf-continuity-property
+kind: theorem
+title: Continuity Property for MGFs
+aliases: [continuity property for moment generating functions]
+tags: [probability, moment generating functions, convergence]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-mgf-continuity-property, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-mgf-continuity-property}
+  - title: Using the property
+    kind: remark
+    supplemental: remark.typ
+related: [probability.moment-generating-function, probability.convergence-in-distribution, probability.central-limit-theorem]

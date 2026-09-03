@@ -1,0 +1,15 @@
+id: algebra.homomorphism-bijectivity
+kind: proposition
+title: Homomorphism Injectivity and Surjectivity
+aliases: [injective homomorphism, surjective homomorphism]
+tags: [groups, homomorphisms, maps]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: hom-prop-2, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: hom-prop-2}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.homomorphism, algebra.image-kernel, algebra.isomorphism]

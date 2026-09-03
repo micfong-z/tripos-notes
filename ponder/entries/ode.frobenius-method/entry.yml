@@ -1,0 +1,19 @@
+id: ode.frobenius-method
+kind: definition
+title: Frobenius Method
+wikidataQID: Q1340153
+aliases: [method of Frobenius, Frobenius series, Frobenius series solution]
+tags: [ordinary differential equations, series solutions, regular singular points]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: ex-series-solutions-about-regular-singular-point, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: ex-series-solutions-about-regular-singular-point}
+  - title: Form
+    kind: definition
+    supplemental: form.typ
+  - title: Second solutions
+    kind: remark
+    supplemental: second-solutions.typ
+related: [ode.fuchs-theorem, ode.singular-point, calculus.taylor-series, ode.series-solution]

@@ -1,0 +1,12 @@
+id: dynamics.gravitational-force
+kind: definition
+title: Gravitational force
+aliases: [inverse square law, Newtonian gravity, gravitation, gravitational potential energy]
+tags: [mechanics, gravity]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-gravitational-force, kind: example}
+sections:
+  - title: Gravitational force
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-gravitational-force}
+related: [dynamics.conservative-force, dynamics.escape-velocity]

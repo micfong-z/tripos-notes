@@ -1,0 +1,1 @@
+A force is conservative if it can be written as $bold(F) = - bold(nabla) V(bold(x))$ for some potential $V$; equivalently, the work $W = integral_C bold(F) dot dif bold(x)$ done along a trajectory depends only on its endpoints, not on the path itself.

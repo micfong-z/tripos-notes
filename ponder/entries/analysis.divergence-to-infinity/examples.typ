@@ -1,0 +1,1 @@
+$x_n = ii n$ diverges to infinity, since $(x_n)/(ii) = n > L$ for all $n >= 1 + ceil(L)$. Divergence to infinity is not the negation of convergence: $x_n = (-1)^n$ neither diverges to $oo$ nor converges.

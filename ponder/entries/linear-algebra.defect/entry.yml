@@ -1,0 +1,21 @@
+id: linear-algebra.defect
+kind: definition
+title: Defect
+aliases:
+  - defect of an eigenvalue
+tags:
+  - matrices
+  - eigenvalues
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-defect
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - linear-algebra.algebraic-multiplicity
+  - linear-algebra.geometric-multiplicity
+  - linear-algebra.diagonalisable-matrix

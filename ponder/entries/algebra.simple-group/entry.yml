@@ -1,0 +1,15 @@
+id: algebra.simple-group
+kind: definition
+title: Simple Group
+aliases: [simple group]
+tags: [groups, normal subgroups, homomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-7.typ, label: simple-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-7.typ, label: simple-group}
+  - title: Example
+    kind: example
+    supplemental: examples.typ
+related: [algebra.group, algebra.normal-subgroup, algebra.homomorphism, algebra.homomorphism-bijectivity, algebra.trivial-group, algebra.cyclic-group]

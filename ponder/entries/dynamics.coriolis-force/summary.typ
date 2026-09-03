@@ -1,0 +1,1 @@
+For a particle with velocity $bold(v)$ in a frame rotating with angular velocity $bold(omega)$, the Coriolis force $bold(F_"cor") = -2 m bold(omega) times bold(v)$ acts like a Lorentz force with $bold(B) -> bold(omega)$, so moving particles turn in circles.

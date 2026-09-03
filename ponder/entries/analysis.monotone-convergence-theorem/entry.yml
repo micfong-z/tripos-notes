@@ -1,0 +1,24 @@
+id: analysis.monotone-convergence-theorem
+kind: theorem
+title: Monotonic convergence theorem
+aliases:
+  - monotone convergence theorem
+tags:
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: monotonic-convergence-theorem
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+
+related:
+  - analysis.monotonic-sequence
+  - analysis.least-upper-bound
+  - analysis.series

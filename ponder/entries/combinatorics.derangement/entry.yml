@@ -1,0 +1,12 @@
+id: combinatorics.derangement
+kind: example
+title: Derangements
+aliases: [derangement, derangements]
+tags: [counting, permutations]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: exm-derangements, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: exm-derangements}
+related: [algebra.permutation, algebra.fixed-point, combinatorics.inclusion-exclusion-principle]

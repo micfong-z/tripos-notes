@@ -1,0 +1,18 @@
+id: calculus.analytic-function
+kind: definition
+title: Analytic functions
+aliases: [analytic, analyticity, real analytic]
+tags: [analysis, taylor series, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: analytic-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: analytic-function}
+  - title: Example
+    kind: example
+    supplemental: example.typ
+  - title: Vanishing remainders versus convergence
+    kind: warning
+    supplemental: warning.typ
+related: [calculus.taylor-series, calculus.smooth-function, calculus.lagrange-remainder, calculus.cauchy-remainder]

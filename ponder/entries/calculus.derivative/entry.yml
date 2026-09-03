@@ -1,0 +1,12 @@
+id: calculus.derivative
+kind: definition
+title: Derivative
+aliases: [differentiation]
+tags: [differential equations, differentiation, limits]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: derivative, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: derivative}
+related: [calculus.big-o, calculus.taylor-series, calculus.partial-derivative]

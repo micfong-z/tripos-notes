@@ -1,0 +1,36 @@
+id: set-theory.countable-set
+kind: definition
+title: Countable set
+aliases:
+  - countable
+  - countably infinite
+  - countability
+tags:
+  - sets
+  - counting
+  - cardinality
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: def-countable-set
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: def-countable-set
+  - title: Listing the elements
+    kind: remark
+    supplemental: listing.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+  - title: Size interpretation
+    kind: warning
+    supplemental: size.typ
+related:
+  - set-theory.finite-set
+  - set-theory.cardinality
+  - set-theory.countability-characterisations
+  - set-theory.subsets-of-countable-sets

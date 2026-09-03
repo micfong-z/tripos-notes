@@ -1,0 +1,12 @@
+id: calculus.chain-rule
+kind: theorem
+title: Chain Rule
+aliases: [chain rule]
+tags: [differential equations, differentiation, composition]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: chain-rule, kind: theorem}
+sections:
+  - title: Theorem
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: chain-rule}
+related: [calculus.derivative, calculus.product-rule, calculus.multivariate-chain-rule]

@@ -1,0 +1,5 @@
+course: dynamics-and-relativity
+title: Part IA Dynamics and Relativity
+document: part-ia/dynamics-and-relativity/main.typ
+sourceBase: /notes/ia-dr/content
+outputName: ia-dr.html

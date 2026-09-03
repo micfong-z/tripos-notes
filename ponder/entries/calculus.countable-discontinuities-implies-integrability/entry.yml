@@ -1,0 +1,15 @@
+id: calculus.countable-discontinuities-implies-integrability
+kind: proposition
+title: Countable Discontinuities implies Integrability
+aliases: [integrability with finitely or countably many discontinuities]
+tags: [integration, discontinuity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: prop-countable-discontinuities-implies-integrability, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: prop-countable-discontinuities-implies-integrability}
+  - title: Strength and limits of the criterion
+    kind: remark
+    supplemental: comparison.typ
+related: [calculus.piecewise-continuity-implies-integrability, analysis.thomae-function, analysis.dirichlet-function, set-theory.countable-set]

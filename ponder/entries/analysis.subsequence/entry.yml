@@ -1,0 +1,20 @@
+id: analysis.subsequence
+kind: definition
+title: Subsequence
+aliases: [subsequences]
+tags: [analysis, sequences]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: subsequence, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: subsequence}
+  - title: Limits along subsequences
+    kind: lemma
+    source:
+      document: part-ia/analysis-i/chapters/chapter-1.typ
+      label: subsequence-limit
+  - title: Proof
+    kind: proof
+    supplemental: subsequence-limits.typ
+related: [analysis.bolzano-weierstrass-theorem, analysis.sequence-convergence]

@@ -1,0 +1,30 @@
+id: analysis.archimedean-property
+kind: proposition
+title: Axiom of Archimedes
+aliases:
+  - archimedean property
+tags:
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: axiom-of-archimedes
+  kind: proposition
+sections:
+  - title: Statement
+    kind: proposition
+    source: *a1
+  - title: Corollary
+    kind: corollary
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+      label: cor-archimedes
+      referenceTarget: true
+
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+
+related:
+  - analysis.density-of-rationals
+  - analysis.least-upper-bound

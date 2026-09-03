@@ -1,0 +1,15 @@
+id: calculus.lhopitals-rule
+kind: theorem
+title: L'Hôpital's Rule
+aliases: [L'Hopital's rule, indeterminate forms]
+tags: [differential equations, differentiation, limits]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: lhopitals-rule, kind: theorem}
+sections:
+  - title: Theorem
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: lhopitals-rule}
+  - title: Proof
+    kind: proof
+    supplemental: body.typ
+related: [calculus.derivative, calculus.taylors-theorem]

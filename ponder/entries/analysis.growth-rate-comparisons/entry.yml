@@ -1,0 +1,15 @@
+id: analysis.growth-rate-comparisons
+kind: proposition
+title: Growth rate comparisons
+aliases: [Exponentials, Powers and Logarithms]
+tags: [analysis, asymptotics, growth]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-growth-comparisons, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-growth-comparisons}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.exponential-function, analysis.natural-logarithm, analysis.real-powers]

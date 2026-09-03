@@ -1,0 +1,28 @@
+id: relativity.lorentz-group
+kind: definition
+title: Lorentz group
+aliases:
+  - Lorentz transformations
+  - Lorentz transformation
+tags:
+  - relativity
+  - transformation groups
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-lorentz-group
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: General form
+    kind: remark
+    supplemental: general-form.typ
+  - title: Physical interpretation of boosts
+    kind: remark
+    supplemental: boosts.typ
+related:
+  - relativity.minkowski-space
+  - algebra.orthogonal-group
+  - algebra.special-orthogonal-group

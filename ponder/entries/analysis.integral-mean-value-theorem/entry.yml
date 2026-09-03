@@ -1,0 +1,12 @@
+id: analysis.integral-mean-value-theorem
+kind: theorem
+title: Integral Mean-Value Theorem
+aliases: [mean-value theorem for integrals, MRT]
+tags: [integration, continuity]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: integral-mean-value-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: integral-mean-value-theorem}
+related: [calculus.riemann-integral, calculus.fundamental-theorem-of-calculus, calculus.leibniz-integral-rule]

@@ -1,0 +1,23 @@
+id: linear-algebra.unit-vector
+kind: definition
+title: Unit vector
+aliases:
+  - unit vectors
+tags:
+  - vectors
+  - length
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: unit-vector
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+      label: unit-vector
+      kind: definition
+related:
+  - linear-algebra.norm
+  - linear-algebra.orthonormal

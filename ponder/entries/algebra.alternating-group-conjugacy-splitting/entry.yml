@@ -1,0 +1,18 @@
+id: algebra.alternating-group-conjugacy-splitting
+kind: lemma
+title: Conjugacy-Class Splitting in the Alternating Group
+aliases: [conjugacy classes in A_n, alternating group conjugacy splitting]
+tags: [alternating groups, conjugacy, centralisers, parity]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: lemma-conjugacy-classes-an-sn, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: lemma-conjugacy-classes-an-sn}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.alternating-group, algebra.symmetric-group-conjugacy, algebra.conjugacy-class, algebra.centraliser, algebra.orbit-stabiliser, algebra.permutation-parity]

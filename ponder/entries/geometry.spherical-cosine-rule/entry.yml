@@ -1,0 +1,21 @@
+id: geometry.spherical-cosine-rule
+kind: proposition
+title: Spherical cosine rule
+aliases:
+  - spherical trigonometry
+  - cosine rule for spherical triangles
+tags:
+  - geometry
+  - spheres
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: spherical-cosine-rule
+  kind: proposition
+sections:
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - linear-algebra.cross-product
+  - linear-algebra.vector-triple-product

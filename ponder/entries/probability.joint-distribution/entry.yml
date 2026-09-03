@@ -1,0 +1,12 @@
+id: probability.joint-distribution
+kind: definition
+title: Joint Distribution
+aliases: [joint distribution, joint distributions, marginal distribution, marginal distributions, joint probability distribution]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-joint-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-joint-distribution}
+related: [probability.discrete-random-variable, probability.conditional-distribution, probability.multidimensional-random-variable, probability.independence-of-random-variables]

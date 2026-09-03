@@ -1,0 +1,27 @@
+id: linear-algebra.dot-product
+kind: definition
+title: Dot product
+aliases:
+  - scalar product
+  - scalar products
+  - dot products
+tags:
+  - products
+  - geometry
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: rn-scalar-product
+  kind: definition
+sections:
+  - title: Coordinate form
+    kind: definition
+    supplemental: coordinate.typ
+  - title: Well-definedness
+    kind: remark
+    supplemental: well-definedness.typ
+related:
+  - linear-algebra.inner-product
+  - linear-algebra.norm
+  - linear-algebra.cauchy-schwarz-inequality
+  - linear-algebra.orthogonality

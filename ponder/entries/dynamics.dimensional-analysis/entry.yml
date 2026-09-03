@@ -1,0 +1,18 @@
+id: dynamics.dimensional-analysis
+kind: definition
+title: Dimensional analysis
+aliases: []
+tags: [dimensional analysis, units, estimation]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-pendulum-dimensions, kind: example}
+sections:
+  - title: Pendulum period by dimensions
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-pendulum-dimensions}
+  - title: Pendulum period by rescaling
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: ex-pendulum-rescaling}
+  - title: Basic dimensions and principles
+    kind: remark
+    supplemental: principles.typ
+related: [dynamics.friction]

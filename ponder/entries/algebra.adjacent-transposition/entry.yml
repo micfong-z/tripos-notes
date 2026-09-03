@@ -1,0 +1,12 @@
+id: algebra.adjacent-transposition
+kind: definition
+title: Adjacent Transposition
+aliases: [adjacent transposition]
+tags: [permutations, transpositions, generators]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: adjacent-transposition, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: adjacent-transposition}
+related: [algebra.transposition, algebra.adjacent-transposition-factorisation, algebra.transposition-generation]

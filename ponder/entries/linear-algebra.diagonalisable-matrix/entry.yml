@@ -1,0 +1,37 @@
+id: linear-algebra.diagonalisable-matrix
+kind: definition
+title: Diagonalisable matrix
+aliases:
+  - diagonalisable
+  - diagonalizable
+  - diagonalisation
+  - diagonalization
+tags:
+  - matrices
+  - eigenvalues
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-diagonalisable
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Statement
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+      label: prop-diagonalisable
+      referenceTarget: true
+  - title: Criteria for diagonalisability
+    kind: remark
+    supplemental: criteria.typ
+related:
+  - linear-algebra.eigenvalue-eigenvector
+  - linear-algebra.independent-eigenvectors
+  - linear-algebra.algebraic-multiplicity
+  - linear-algebra.geometric-multiplicity
+  - linear-algebra.similar-matrices
+  - linear-algebra.hermitian-diagonalisation
+  - linear-algebra.jordan-normal-form

@@ -1,0 +1,18 @@
+id: dynamics.galilean-relativity-principle
+kind: proposition
+title: Galilean relativity principle
+aliases: [Galilean relativity, Galilean invariance]
+tags: [mechanics, frames]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-1.typ, label: law-galilean-relativity}
+sections:
+  - title: Principle
+    kind: proposition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-1.typ, label: law-galilean-relativity}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+  - title: Consequences
+    kind: remark
+    supplemental: body.typ
+related: [dynamics.inertial-frame, dynamics.galilean-transformation]

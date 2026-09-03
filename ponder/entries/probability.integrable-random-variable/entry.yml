@@ -1,0 +1,12 @@
+id: probability.integrable-random-variable
+kind: definition
+title: Integrable Random Variable
+aliases: [integrable random variables, integrable]
+tags: [probability, expectation]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-integrable-random-variable, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-integrable-random-variable}
+related: [probability.expectation]

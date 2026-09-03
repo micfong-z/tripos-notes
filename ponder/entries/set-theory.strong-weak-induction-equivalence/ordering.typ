@@ -1,0 +1,1 @@
+Ordering enters because proving $P(n+1)$ requires $P(k)$ for all $k < n+1$ — effectively every earlier case at once — rather than only the single predecessor statement $P(n)$. This is why SPI is based on the ordering of $NN$ while WPI needs only the successor structure.

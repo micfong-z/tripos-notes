@@ -1,0 +1,12 @@
+id: geometry.platonic-solid
+kind: definition
+title: Platonic Solid
+aliases: [Platonic solid, Platonic solids]
+tags: [geometry, polyhedra, symmetry]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-10.typ, label: platonic-solid, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-10.typ, label: platonic-solid}
+related: [geometry.isometry, algebra.isometry-group, algebra.group-action, algebra.action-properties, algebra.orbit-stabiliser-definitions, algebra.dihedral-group]

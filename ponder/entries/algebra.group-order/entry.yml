@@ -1,0 +1,15 @@
+id: algebra.group-order
+kind: definition
+title: Order of a Group
+aliases: [group order, finite group]
+tags: [groups, counting, finite groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: group-order, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: group-order}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: []

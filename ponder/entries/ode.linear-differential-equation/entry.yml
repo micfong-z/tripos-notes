@@ -1,0 +1,13 @@
+id: ode.linear-differential-equation
+kind: definition
+title: Linear Differential Equation
+wikidataQID: Q1129902
+aliases: [linear ODE, linear]
+tags: [differential equations, ordinary differential equations, linearity]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: linear-differential-equation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: linear-differential-equation}
+related: [ode.order, ode.ordinary-differential-equation, ode.homogeneous-differential-equation, ode.constant-coefficients]

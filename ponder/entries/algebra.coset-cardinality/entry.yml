@@ -1,0 +1,15 @@
+id: algebra.coset-cardinality
+kind: lemma
+title: Equal Cardinality of Cosets
+aliases: [equal size of cosets, coset cardinality]
+tags: [groups, subgroups, cosets, counting]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: coset-cardinality, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: coset-cardinality}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.coset, algebra.bijection, algebra.subgroup]

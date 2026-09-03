@@ -1,0 +1,1 @@
+Take $X = G$ and use the left regular action. The corresponding homomorphism $phi: G -> sym(X)$ has trivial kernel: if $phi(g) = id_X$, then $g gamma = gamma$ for every $gamma in G$, and in particular $g e = e$, so $g = e$. Thus $phi$ is an isomorphism from $G$ onto its image, a subgroup of $sym(X)$. If $G$ is finite, then $X$ is finite.

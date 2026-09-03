@@ -1,0 +1,12 @@
+id: algebra.special-orthogonal-group
+kind: definition
+title: Special Orthogonal Group
+aliases: [special orthogonal group]
+tags: [linear algebra, matrices, geometry, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: special-orthogonal-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: special-orthogonal-group}
+related: [algebra.orthogonal-group, algebra.special-linear-group, algebra.subgroup, geometry.reflection]

@@ -1,0 +1,15 @@
+id: probability.law-of-total-expectation
+kind: proposition
+title: Law of Total Expectation
+aliases: [law of total expectation, total expectation]
+tags: [probability, expectation, conditioning, partitions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-law-of-total-expectation, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-law-of-total-expectation}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.conditional-expectation, probability.law-of-total-probability, set-theory.partition]

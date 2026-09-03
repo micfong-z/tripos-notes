@@ -1,0 +1,1 @@
+$x^q$ for $q in QQ$ is analytic on $(0, 2)$: expanding about $1$, the remainder estimate from the Cauchy form shows $R_(n, f, 1)(x) -> 0$ for every $abs(x) < 1$, that is $(1+x)^q$ agrees with its Taylor series throughout $(-1, 1)$.

@@ -1,0 +1,22 @@
+id: set-theory.proof
+kind: definition
+title: Proof
+aliases: []
+tags:
+  - logic
+  - foundations
+  - proofs
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-1.typ
+  label: def-proof
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Disproof and contradiction
+    kind: remark
+    supplemental: body.typ
+related:
+  - set-theory.statement

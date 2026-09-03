@@ -1,0 +1,1 @@
+A hypersurface $Q(bold(x)) = bold(x)^tp matbold(A) bold(x) + 2 bold(b)^tp bold(x) + c = 0$ in $RR^n$ with real symmetric $matbold(A)$; up to isometries of $RR^n$, its shape is fixed by the eigenvalues of $matbold(A)$ together with the constant $k$.

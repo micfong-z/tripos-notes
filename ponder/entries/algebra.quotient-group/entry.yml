@@ -1,0 +1,18 @@
+id: algebra.quotient-group
+kind: definition
+title: Quotient Group
+aliases: [quotient, quotient group]
+tags: [groups, quotient groups, cosets]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-7.typ, label: quotient-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-7.typ, label: quotient-group}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+  - title: Warning
+    kind: warning
+    supplemental: warning.typ
+related: [algebra.normal-subgroup, algebra.normal-subgroup-cosets, algebra.quotient-group-theorem, algebra.coset, algebra.isomorphism, algebra.direct-product]

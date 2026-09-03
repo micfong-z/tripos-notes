@@ -1,0 +1,25 @@
+id: dynamics.impact-parameter
+kind: definition
+title: Impact parameter
+aliases: [distance of closest approach]
+tags: [mechanics, scattering, orbits]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-3.typ, label: def-impact-parameter, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-3.typ, label: def-impact-parameter}
+  - title: Relation to angular momentum
+    kind: proposition
+    source:
+      document: part-ia/dynamics-and-relativity/chapters/chapter-3.typ
+      label: prop-impact-parameter
+      kind: proposition
+      referenceTarget: true
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Scattering angle
+    kind: example
+    supplemental: scattering.typ
+related: [geometry.conic, dynamics.gravitational-force]

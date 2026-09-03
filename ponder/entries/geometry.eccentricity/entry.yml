@@ -1,0 +1,27 @@
+id: geometry.eccentricity
+kind: definition
+title: Eccentricity
+aliases:
+  - focus-directrix property
+  - eccentricity of a conic
+tags:
+  - conics
+  - curves
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-eccentricity
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Focus-directrix property
+    kind: remark
+    supplemental: focus-directrix.typ
+  - title: Polar form about a focus
+    kind: remark
+    supplemental: polar.typ
+related:
+  - geometry.conic
+  - geometry.quadric

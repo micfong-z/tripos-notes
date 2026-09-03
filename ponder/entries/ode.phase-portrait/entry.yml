@@ -1,0 +1,19 @@
+id: ode.phase-portrait
+kind: definition
+title: Phase Portrait
+wikidataQID: Q2532943
+aliases: [phase portraits]
+tags: [ordinary differential equations, dynamical systems, geometric methods]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: phase-portrait, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: phase-portrait}
+  - title: Non-degenerate classification for $n = 2$
+    kind: proposition
+    supplemental: classification.typ
+  - title: Sketching an overall portrait
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: predator-prey-model}
+related: [ode.phase-space, ode.autonomous-system, ode.equilibrium-point, ode.predator-prey-model]

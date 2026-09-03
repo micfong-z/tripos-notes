@@ -1,0 +1,15 @@
+id: algebra.orthogonal-dot-product
+kind: lemma
+title: Orthogonal Group and the Dot Product
+aliases: [orthogonal transformations preserve dot products]
+tags: [linear algebra, matrices, orthogonal groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: on-and-the-dot-product, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: on-and-the-dot-product}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.orthogonal-group, algebra.polarisation-identity]

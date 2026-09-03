@@ -1,0 +1,1 @@
+Suppose there were only countably many transcendental numbers. Since the set of algebraic numbers is countable, $RR$ would then be a countable union of countable sets, and hence countable. This contradicts the uncountability of $RR$.

@@ -1,0 +1,1 @@
+$integral_a^oo f(x) dif x$ is the limit of $integral_a^R f(x) dif x$ as $R -> oo$; at an isolated singularity $a$, it is the limit of $integral_(a+delta)^b f(x) dif x$ as $delta -> 0$. Otherwise it diverges.

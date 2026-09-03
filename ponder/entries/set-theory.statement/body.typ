@@ -1,0 +1,1 @@
+Statements may be combined or negated while remaining statements: if $A$ and $B$ are assertions, so are $A and B$, $A or B$, and $not A$, as well as the implication $A => B$, read "if $A$ then $B$". A statement may also include quantifiers, especially $forall$ "for all" and $exists$ "there exists", as in $forall x, A(x)$.

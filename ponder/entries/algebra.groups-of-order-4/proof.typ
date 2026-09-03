@@ -1,0 +1,1 @@
+Lagrange's theorem gives element orders $1$, $2$, or $4$. An element of order $4$ generates $C_4$. Otherwise choose distinct non-trivial elements $a$ and $b$; their generated subgroups intersect trivially, have commuting elements, and their product is the whole group. The direct product theorem gives $G teq C_2 times C_2 = K_4$.

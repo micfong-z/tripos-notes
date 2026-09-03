@@ -1,0 +1,25 @@
+id: linear-algebra.cofactor
+kind: definition
+title: Cofactor
+aliases:
+  - cofactors
+  - cofactor matrix
+tags:
+  - matrices
+  - determinants
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-cofactor
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Expansion along rows and columns
+    kind: proposition
+    supplemental: expansion.typ
+related:
+  - linear-algebra.minor
+  - linear-algebra.laplace-expansion
+  - linear-algebra.adjugate

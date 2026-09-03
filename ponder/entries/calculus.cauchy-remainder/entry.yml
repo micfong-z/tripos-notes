@@ -1,0 +1,18 @@
+id: calculus.cauchy-remainder
+kind: theorem
+title: Taylor's theorem with Cauchy remainder
+aliases: [Cauchy remainder, Cauchy form of the Taylor remainder]
+tags: [analysis, differentiation, taylor theorem, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: taylor-cauchy-remainder, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: taylor-cauchy-remainder}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Comparison with the Lagrange form
+    kind: example
+    supplemental: comparison.typ
+related: [calculus.lagrange-remainder, calculus.taylor-polynomial, calculus.taylors-theorem]

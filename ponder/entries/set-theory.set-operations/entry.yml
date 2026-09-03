@@ -1,0 +1,24 @@
+id: set-theory.set-operations
+kind: definition
+title: Union, Intersection and Difference
+aliases:
+  - union
+  - intersection
+  - difference
+  - disjoint sets
+tags:
+  - sets
+  - operations
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-set-operations, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-set-operations}
+  - title: Indexed families
+    kind: remark
+    supplemental: indexed-families.typ
+related:
+  - set-theory.subset
+  - set-theory.union-intersection-properties
+  - set-theory.de-morgans-laws

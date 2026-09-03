@@ -1,0 +1,21 @@
+id: set-theory.equivalence-class
+kind: definition
+title: Equivalence Class
+aliases:
+  - classes
+tags:
+  - relations
+  - sets
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-equivalence-class, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-equivalence-class}
+  - title: Classes as rational numbers
+    kind: example
+    supplemental: rationals.typ
+related:
+  - set-theory.equivalence-relation
+  - set-theory.partition
+  - set-theory.quotient

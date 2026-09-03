@@ -1,0 +1,16 @@
+id: ode.phase-space
+kind: definition
+title: Phase Space
+wikidataQID: Q62542
+aliases: [phase spaces]
+tags: [ordinary differential equations, dynamical systems, geometric methods]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: phase-space, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: phase-space}
+  - title: Trajectories and direction of motion
+    kind: remark
+    supplemental: trajectories.typ
+related: [ode.phase-portrait, ode.autonomous-system, ode.equilibrium-point, ode.slope-field]

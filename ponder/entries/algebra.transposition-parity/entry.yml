@@ -1,0 +1,15 @@
+id: algebra.transposition-parity
+kind: lemma
+title: Parity of Transposition Factorisations
+aliases: [transposition factorisation parity]
+tags: [permutations, transpositions, parity, inversions]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: transposition-parity, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: transposition-parity}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.transposition, algebra.adjacent-transposition-factorisation, algebra.sign-homomorphism, algebra.permutation-parity]

@@ -1,0 +1,26 @@
+id: set-theory.injection-surjection
+kind: definition
+title: Injection and Surjection
+aliases:
+  - injective
+  - one-to-one
+  - surjective
+  - onto
+  - injection
+  - surjection
+tags:
+  - functions
+  - sets
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-injection-surjection, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-injection-surjection}
+  - title: Observations on finite sets
+    kind: proposition
+    supplemental: observations-on-finite-sets.typ
+related:
+  - algebra.bijection
+  - set-theory.function
+  - set-theory.image-preimage

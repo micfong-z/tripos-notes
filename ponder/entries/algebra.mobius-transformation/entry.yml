@@ -1,0 +1,12 @@
+id: algebra.mobius-transformation
+kind: definition
+title: Möbius Transformation
+aliases: [Möbius transformation, fractional linear transformation]
+tags: [transformations, complex analysis, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-transformation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-transformation}
+related: [geometry.riemann-sphere, algebra.mobius-group, algebra.fixed-point]

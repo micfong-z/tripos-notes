@@ -1,0 +1,22 @@
+id: linear-algebra.orthonormal
+kind: definition
+title: Orthonormal vectors
+aliases:
+  - orthonormal
+  - orthonormality
+tags:
+  - vectors
+  - bases
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: orthonormal
+  kind: definition
+sections:
+  - title: Orthonormal bases
+    kind: example
+    supplemental: bases.typ
+related:
+  - linear-algebra.orthogonality
+  - linear-algebra.unit-vector
+  - linear-algebra.kronecker-delta

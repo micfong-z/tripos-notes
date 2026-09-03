@@ -1,0 +1,1 @@
+Squaring the conservation equation for a creation process and applying the bound to each cross term shows that the energy of each incoming particle obeys $E_1 >= (m + (1\/2) M) c^2$: the kinetic energy of each incoming particle must be at least half the rest mass energy $M c^2$ of the created particle.

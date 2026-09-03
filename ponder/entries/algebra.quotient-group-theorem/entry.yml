@@ -1,0 +1,15 @@
+id: algebra.quotient-group-theorem
+kind: theorem
+title: Quotient Group Is a Group
+aliases: [quotient group theorem]
+tags: [groups, quotient groups, cosets]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-7.typ, label: theorem-quotient-group-is-a-group, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-7.typ, label: theorem-quotient-group-is-a-group}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.normal-subgroup, algebra.quotient-group, algebra.coset, algebra.group, algebra.group-identities]

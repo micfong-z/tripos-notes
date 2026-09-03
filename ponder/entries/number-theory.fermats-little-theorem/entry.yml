@@ -1,0 +1,15 @@
+id: number-theory.fermats-little-theorem
+kind: theorem
+title: "Fermat's Little Theorem"
+aliases: []
+tags: ["number theory", "modular arithmetic", "primes"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: fermat-little-theorem, kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: fermat-little-theorem}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+related: [number-theory.unit-modulo-n, algebra.fermat-euler-theorem, number-theory.wilsons-theorem, number-theory.minus-one-quadratic-residue, number-theory.pseudoprime]

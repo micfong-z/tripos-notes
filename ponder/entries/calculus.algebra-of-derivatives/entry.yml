@@ -1,0 +1,15 @@
+id: calculus.algebra-of-derivatives
+kind: lemma
+title: Algebra of derivatives
+aliases: [sum rule for derivatives, product rule for derivatives, reciprocal rule]
+tags: [analysis, differentiation, limits]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: algebra-of-derivatives, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: algebra-of-derivatives}
+  - title: Proof idea
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.derivative, calculus.product-rule, calculus.quotient-rule, analysis.algebra-of-limits]

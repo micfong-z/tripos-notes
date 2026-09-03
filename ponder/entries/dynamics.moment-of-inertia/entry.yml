@@ -1,0 +1,21 @@
+id: dynamics.moment-of-inertia
+kind: definition
+title: Moment of inertia
+aliases: [moments of inertia, rotational mass]
+tags: [mechanics, rigid-bodies, rotation]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: ex-moment-inertia-uniform-density, kind: example}
+sections:
+  - title: Examples with uniform density
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: ex-moment-inertia-uniform-density}
+  - title: Definition
+    kind: definition
+    supplemental: definition.typ
+  - title: Angular momentum and torque along the axis
+    kind: proposition
+    supplemental: angular-momentum.typ
+  - title: Dependence on the axis
+    kind: remark
+    supplemental: axis-dependence.typ
+related: [dynamics.rigid-body, dynamics.perpendicular-axis-theorem, dynamics.parallel-axis-theorem]

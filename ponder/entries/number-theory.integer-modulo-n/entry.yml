@@ -1,0 +1,21 @@
+id: number-theory.integer-modulo-n
+kind: definition
+title: "Integer Modulo n"
+aliases: ["integers modulo n", "modular arithmetic", "congruence modulo n", "congruent modulo n"]
+tags: ["number theory", "modular arithmetic"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: def-integers-modulo-n, kind: definition}
+sections:
+  - title: "Definition"
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: def-integers-modulo-n}
+  - title: "Arithmetic"
+    kind: remark
+    supplemental: arithmetic.typ
+  - title: "Example"
+    kind: example
+    supplemental: example.typ
+  - title: "Solving when the gcd exceeds one"
+    kind: proposition
+    supplemental: solving-gcd-greater-than-one.typ
+related: [number-theory.unit-modulo-n, number-theory.fermats-little-theorem, algebra.chinese-remainder-theorem]

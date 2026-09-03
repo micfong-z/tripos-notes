@@ -1,0 +1,15 @@
+id: analysis.thomae-function
+kind: definition
+title: Thomae Function
+aliases: [Thomae's function]
+tags: [integration, counterexample]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: thomae-function, kind: example}
+sections:
+  - title: Definition and integrability
+    kind: example
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: thomae-function}
+  - title: Contrast with the Dirichlet function
+    kind: remark
+    supplemental: comparison.typ
+related: [analysis.dirichlet-function, calculus.countable-discontinuities-implies-integrability, calculus.riemann-integrability-criteria, calculus.upper-lower-integral]

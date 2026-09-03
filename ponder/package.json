@@ -1,0 +1,25 @@
+{
+  "name": "micfong-notes-ponder",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "ponder:validate": "node --import tsx scripts/cli.ts validate",
+    "ponder:validate:all": "node --import tsx scripts/cli.ts validate --all",
+    "ponder:export": "node --import tsx scripts/cli.ts export",
+    "ponder:batch": "node --import tsx scripts/cli.ts batch",
+    "ponder:test": "node --import tsx --test tests/*.test.ts",
+    "ponder:check": "pnpm ponder:validate:all && pnpm ponder:test"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "1.7.4",
+    "parse5": "8.0.0",
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.17.2",
+    "esbuild": "0.25.9",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2"
+  }
+}

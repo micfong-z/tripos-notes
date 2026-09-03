@@ -1,0 +1,15 @@
+id: analysis.divergence-to-infinity
+kind: definition
+title: Divergence to infinity
+aliases: [diverges to infinity, divergence to positive infinity]
+tags: [analysis, sequences]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: divergence-to-infinity, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: divergence-to-infinity}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.sequence-convergence]

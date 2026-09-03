@@ -1,0 +1,27 @@
+id: number-theory.transcendentals-uncountable
+kind: corollary
+title: Uncountably many transcendentals
+aliases:
+  - there are uncountably many transcendental numbers
+tags:
+  - numbers
+  - polynomials
+  - counting
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: cor-transcendentals-uncountable
+  kind: corollary
+sections:
+  - title: Statement
+    kind: corollary
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: cor-transcendentals-uncountable
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - number-theory.transcendental-number
+  - number-theory.algebraic-numbers-countable
+  - set-theory.reals-uncountable

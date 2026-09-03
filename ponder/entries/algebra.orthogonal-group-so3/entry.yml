@@ -1,0 +1,15 @@
+id: algebra.orthogonal-group-so3
+kind: lemma
+title: Elements of SO(3)
+aliases: [rotations in SO(3)]
+tags: [linear algebra, matrices, orthogonal groups, rotations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: orthogonal-group-so3, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: orthogonal-group-so3}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.orthogonal-group, algebra.special-orthogonal-group, algebra.reflections-generate, geometry.rotation]

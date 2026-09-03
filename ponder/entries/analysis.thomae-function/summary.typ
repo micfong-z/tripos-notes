@@ -1,0 +1,1 @@
+$f(p/q) = 1/q$ in lowest terms and $f(x) = 0$ at irrationals; lower sums vanish and upper sums can be made arbitrarily small, so $f$ is integrable on $[0, 1]$ despite being discontinuous at infinitely many points.

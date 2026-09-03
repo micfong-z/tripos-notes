@@ -1,0 +1,18 @@
+id: calculus.mean-value-theorem
+kind: theorem
+title: Mean Value Theorem
+aliases: [MVT]
+tags: [analysis, differentiation, mean value theorems]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: mean-value-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: mean-value-theorem}
+  - title: Reformulation
+    kind: remark
+    supplemental: reformulation.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.rolles-theorem, calculus.cauchy-mean-value-theorem, calculus.monotonicity-criterion, analysis.extreme-value-theorem]

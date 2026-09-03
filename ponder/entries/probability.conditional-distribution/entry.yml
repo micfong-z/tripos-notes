@@ -1,0 +1,12 @@
+id: probability.conditional-distribution
+kind: definition
+title: Conditional Distribution
+aliases: [conditional distributions]
+tags: [probability, distributions, conditioning]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-conditional-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-conditional-distribution}
+related: [probability.conditional-probability, probability.joint-distribution, probability.law-of-total-probability, probability.conditional-expectation]

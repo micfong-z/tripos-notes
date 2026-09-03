@@ -1,0 +1,21 @@
+id: analysis.continuity
+kind: definition
+title: Continuity of a function
+aliases: [continuous function, continuous]
+tags: [analysis, continuity, functions]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: continuity, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: continuity}
+  - title: Algebraic operations
+    kind: lemma
+    supplemental: algebra.typ
+  - title: Composition
+    kind: lemma
+    supplemental: composition.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.limit-of-function, analysis.sequential-continuity, analysis.extreme-value-theorem, analysis.intermediate-value-theorem]

@@ -1,0 +1,21 @@
+id: linear-algebra.algebraic-multiplicity
+kind: definition
+title: Algebraic multiplicity
+aliases:
+  - algebraic multiplicities
+tags:
+  - matrices
+  - eigenvalues
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-algebraic-multiplicity
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - algebra.root-multiplicity
+  - linear-algebra.geometric-multiplicity
+  - algebra.fundamental-theorem-of-algebra

@@ -1,0 +1,15 @@
+id: algebra.element-order-divisibility
+kind: corollary
+title: Element Order Divides Group Order
+aliases: [order divisibility]
+tags: [groups, finite groups, element order, counting]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: cor-lagrange-1, kind: corollary}
+sections:
+  - title: Statement
+    kind: corollary
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: cor-lagrange-1}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.element-order, algebra.group-order, algebra.lagrange-theorem]

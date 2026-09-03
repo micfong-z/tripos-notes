@@ -1,0 +1,27 @@
+id: linear-algebra.similar-matrices
+kind: definition
+title: Similar matrices
+aliases:
+  - similarity of matrices
+  - similar
+tags:
+  - matrices
+  - invariants
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-similar-matrices
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Invariants under similarity
+    kind: proposition
+    supplemental: invariants.typ
+related:
+  - algebra.matrix-change-of-basis
+  - linear-algebra.trace
+  - linear-algebra.determinant
+  - linear-algebra.diagonalisable-matrix
+  - linear-algebra.jordan-normal-form

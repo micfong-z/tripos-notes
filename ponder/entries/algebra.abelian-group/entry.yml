@@ -1,0 +1,12 @@
+id: algebra.abelian-group
+kind: definition
+title: Abelian Group
+aliases: [abelian group]
+tags: [groups, commutativity]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: abelian-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: abelian-group}
+related: []

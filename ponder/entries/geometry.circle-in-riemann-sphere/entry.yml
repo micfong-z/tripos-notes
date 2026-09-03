@@ -1,0 +1,12 @@
+id: geometry.circle-in-riemann-sphere
+kind: definition
+title: Circle in the Riemann Sphere
+aliases: [circle in CC_oo, generalized circle]
+tags: [geometry, complex analysis, transformations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: circle-in-riemann-sphere, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: circle-in-riemann-sphere}
+related: [geometry.riemann-sphere, algebra.mobius-circle-preservation, geometry.cross-ratio-circle-criterion]

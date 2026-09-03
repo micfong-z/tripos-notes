@@ -1,0 +1,5 @@
+course: groups
+title: Part IA Groups
+document: part-ia/groups/main.typ
+sourceBase: /notes/ia-groups/content
+outputName: ia-groups.html

@@ -1,0 +1,1 @@
+For a discrete random variable taking values in a countable set $S$, the collection $(p_x)_(x in S)$ with $p_x = PP(X = x)$ is also called simply the *distribution* of $X$: knowing $p_x$ for every $x in S$ determines $PP(X in A) = sum_(x in A) p_x$ for all $A subset.eq S$.

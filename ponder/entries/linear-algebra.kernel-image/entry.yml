@@ -1,0 +1,31 @@
+id: linear-algebra.kernel-image
+kind: definition
+title: Image, kernel, rank and nullity
+aliases:
+  - image
+  - kernel
+  - rank
+  - nullity
+tags:
+  - linear maps
+  - subspaces
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-kernel-image
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Rank and nullity
+    kind: remark
+    supplemental: rank-nullity.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - algebra.image-kernel
+  - linear-algebra.linear-map
+  - linear-algebra.subspace
+  - linear-algebra.matrix-image-kernel

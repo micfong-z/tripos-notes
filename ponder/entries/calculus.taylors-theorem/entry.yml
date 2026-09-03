@@ -1,0 +1,15 @@
+id: calculus.taylors-theorem
+kind: theorem
+title: Taylor's Theorem
+aliases: [Taylor theorem]
+tags: [differential equations, differentiation, approximation, remainder]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: taylors-theorem, kind: theorem}
+sections:
+  - title: Theorem
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: taylors-theorem}
+  - title: Stronger version
+    kind: corollary
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: stronger-taylor-theorem}
+related: [calculus.taylor-polynomial, calculus.big-o, calculus.little-o, calculus.multivariate-chain-rule]

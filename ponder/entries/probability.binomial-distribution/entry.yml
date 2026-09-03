@@ -1,0 +1,12 @@
+id: probability.binomial-distribution
+kind: definition
+title: Binomial Distribution
+aliases: [binomial distribution]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-binomial-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-binomial-distribution}
+related: [probability.discrete-distribution, probability.bernoulli-distribution, probability.multinomial-distribution, probability.poisson-distribution, combinatorics.binomial-coefficient]

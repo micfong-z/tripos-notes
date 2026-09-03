@@ -1,0 +1,15 @@
+# Shared by every course profile in this directory. A profile only needs to
+# state what differs; anything here can still be overridden per course.
+locale: en-US
+canonicalBase: /en-US/notes/ponder
+typstVersion: 0.14.2
+siteDirectory: _notes/IA
+budgets:
+  tooltipIndexGzip: 184320
+  clientJavaScriptGzip: 35840
+  baseDocumentGrowthPercent: 5
+  # Soft budget for the merged cross-course index; exceeding it warns.
+  tooltipIndexMergedGzip: 2097152
+
+# Colour scheme the website expects from the HTML export.
+htmlTheme: dark

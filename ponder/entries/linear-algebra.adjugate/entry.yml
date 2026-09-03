@@ -1,0 +1,26 @@
+id: linear-algebra.adjugate
+kind: definition
+title: Adjugate matrix
+aliases:
+  - adjugate
+  - adjoint matrix
+tags:
+  - matrices
+  - determinants
+  - inverses
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-adjugate
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Inverse from the adjugate
+    kind: corollary
+    supplemental: inverse.typ
+related:
+  - linear-algebra.cofactor
+  - linear-algebra.determinant
+  - algebra.matrix-invertibility

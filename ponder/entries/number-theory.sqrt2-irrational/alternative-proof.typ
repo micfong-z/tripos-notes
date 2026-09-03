@@ -1,0 +1,3 @@
+Suppose $x^2 = 2$ with $x = (a)/(b)$ and $a, b in ZZ^+$. Every number of the form $c x + d$ with integers $c, d$ equals $(e)/(b)$ for some $e in ZZ$, so if it is positive it is at least $(1)/(b)$. But $0 < x - 1 < 1$, so for large $n$ we have $0 < (x - 1)^n < (1)/(b)$; replacing even powers of $x$ by powers of $2$, each $(x - 1)^n$ has the form $c x + d$, a contradiction.
+
+The gap this exposes motivates the real numbers: the set of positive rationals with square less than $2$ has no largest element, since $q = p - (p^2 - 2)/(p + 2)$ lies in the set and exceeds $p$ for every member $p$, and no rational least upper bound exists.

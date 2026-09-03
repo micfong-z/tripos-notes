@@ -1,0 +1,25 @@
+id: linear-algebra.trace
+kind: definition
+title: Trace
+aliases:
+  - traceless
+tags:
+  - matrices
+  - invariants
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-trace
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Properties of the trace
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+      label: prop-trace-properties
+      kind: proposition
+related:
+  - linear-algebra.symmetric-matrix

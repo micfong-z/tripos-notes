@@ -1,0 +1,15 @@
+id: ode.discrete-fixed-point
+kind: definition
+title: Discrete Fixed Point
+aliases: [fixed point of a discrete equation]
+tags: [discrete dynamical systems, stability]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: discrete-fixed-point, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: discrete-fixed-point}
+  - title: Stability
+    kind: remark
+    supplemental: stability.typ
+related: [ode.first-order-discrete-equation, ode.equilibrium-stability, ode.logistic-map]

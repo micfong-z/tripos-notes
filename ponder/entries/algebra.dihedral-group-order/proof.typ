@@ -1,0 +1,1 @@
+$r$ and $s$ are isometries preserving $X_n$. Every element of $D_(2n)$ sends three chosen vertices to a configuration obtained from a power of $r$ or a power of $r$ followed by $s$. The three-point lemma then identifies the element. Finally, the listed elements are distinct, so their number is $2n$.

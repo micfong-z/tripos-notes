@@ -1,0 +1,23 @@
+id: set-theory.equivalence-partition-theorem
+kind: theorem
+title: Equivalence Classes Form a Partition
+aliases: []
+tags:
+  - relations
+  - sets
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: thm-equivalence-partition, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: thm-equivalence-partition}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Converse
+    kind: remark
+    supplemental: converse.typ
+related:
+  - set-theory.equivalence-class
+  - set-theory.partition
+  - set-theory.equivalence-relation

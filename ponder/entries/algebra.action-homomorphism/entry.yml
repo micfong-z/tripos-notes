@@ -1,0 +1,15 @@
+id: algebra.action-homomorphism
+kind: theorem
+title: Actions and Homomorphisms
+aliases: [group actions as homomorphisms]
+tags: [groups, actions, homomorphisms, symmetric groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: action-homomorphism, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: action-homomorphism}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.group-action, algebra.homomorphism, algebra.symmetric-group]

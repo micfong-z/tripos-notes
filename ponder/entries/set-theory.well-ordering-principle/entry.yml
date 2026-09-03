@@ -1,0 +1,23 @@
+id: set-theory.well-ordering-principle
+kind: definition
+title: "Well-ordering principle"
+aliases:
+  - "WOP"
+  - "well-ordering of the naturals"
+tags:
+  - "orderings"
+  - "induction"
+  - "least-elements"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "well-ordering-principle", kind: definition}
+sections:
+  - title: "Definition"
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "well-ordering-principle"}
+  - title: "Least-element argument"
+    kind: example
+    supplemental: primes.typ
+related:
+  - set-theory.peano-axioms
+  - set-theory.strong-induction-well-ordering
+  - set-theory.strong-weak-induction-equivalence

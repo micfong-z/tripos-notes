@@ -1,0 +1,26 @@
+id: algebra.complex-logarithm
+kind: definition
+title: Complex Logarithm
+aliases:
+  - complex log
+tags:
+  - complex numbers
+  - logarithm
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-1.typ
+  label: complex-logarithm
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Principal value
+    kind: remark
+    supplemental: principal-value.typ
+  - title: Example
+    kind: example
+    supplemental: examples.typ
+related:
+  - algebra.multivalued-complex-logarithm
+  - calculus.exponential-function

@@ -1,0 +1,1 @@
+A finite set admits no bijection onto any proper subset of itself. Conversely, a set $X$ has size $n$ exactly when there is a bijection ${1, 2, ..., n} -> X$, mapping $i |-> a_i$ for some listing $X = {a_1, a_2, ..., a_n}$.

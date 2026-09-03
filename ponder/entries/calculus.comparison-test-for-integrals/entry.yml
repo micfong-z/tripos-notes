@@ -1,0 +1,18 @@
+id: calculus.comparison-test-for-integrals
+kind: proposition
+title: Comparison Test for Integrals
+aliases: [comparison test for improper integrals]
+tags: [integration, convergence, comparison tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: comparison-test-integrals, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: comparison-test-integrals}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Example
+    kind: example
+    supplemental: examples.typ
+related: [calculus.improper-integral, analysis.comparison-test, analysis.monotone-convergence-theorem, analysis.least-upper-bound]

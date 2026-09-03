@@ -1,0 +1,18 @@
+id: calculus.lagrange-remainder
+kind: theorem
+title: Taylor's theorem with Lagrange remainder
+aliases: [Lagrange remainder, Lagrange form of the Taylor remainder]
+tags: [analysis, differentiation, taylor theorem, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: taylor-lagrange-remainder, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: taylor-lagrange-remainder}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Order bound
+    kind: remark
+    supplemental: order-bound.typ
+related: [calculus.cauchy-remainder, calculus.taylor-polynomial, calculus.taylors-theorem, calculus.mean-value-theorem, calculus.big-o]

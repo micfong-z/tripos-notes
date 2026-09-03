@@ -1,0 +1,13 @@
+id: analysis.simply-connected-domain
+kind: definition
+title: Simply Connected Domain
+wikidataQID: Q912058
+aliases: [simply connected, simply connected domain]
+tags: [topology, domains]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: simply-connected-domain, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: simply-connected-domain}
+related: [analysis.path-connectedness, ode.exactness-criterion]

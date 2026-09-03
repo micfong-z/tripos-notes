@@ -1,0 +1,15 @@
+id: geometry.reflection-properties
+kind: lemma
+title: Properties of a Reflection
+aliases: [reflection is an orthogonal involution]
+tags: [geometry, linear algebra, reflections]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: reflection-properties, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: reflection-properties}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [geometry.reflection, algebra.orthogonal-group, algebra.inverse-element]

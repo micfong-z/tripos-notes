@@ -1,0 +1,15 @@
+id: algebra.finite-group-power
+kind: corollary
+title: Finite-Group Power Consequence
+aliases: [power by the group order]
+tags: [groups, finite groups, element order]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: cor-lagrange-2, kind: corollary}
+sections:
+  - title: Statement
+    kind: corollary
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: cor-lagrange-2}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.lagrange-theorem, algebra.element-order-divisibility]

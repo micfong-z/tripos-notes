@@ -1,0 +1,18 @@
+id: dynamics.rigid-body
+kind: definition
+title: Rigid body
+aliases: [rigid bodies]
+tags: [mechanics, rigid-bodies, systems-of-particles]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: def-rigid-body, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: def-rigid-body}
+  - title: Translations and rotations
+    kind: remark
+    supplemental: motions.typ
+  - title: Rotation preserves distances
+    kind: proposition
+    supplemental: distances.typ
+related: [dynamics.centre-of-mass, dynamics.moment-of-inertia]

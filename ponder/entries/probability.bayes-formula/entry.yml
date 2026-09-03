@@ -1,0 +1,18 @@
+id: probability.bayes-formula
+kind: proposition
+title: Bayes' Formula
+aliases: [Bayes' formula]
+tags: [probability, conditioning, inversion]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-bayes-formula, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-bayes-formula}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: False positives for a rare condition
+    kind: example
+    supplemental: examples.typ
+related: [probability.law-of-total-probability, probability.conditional-probability]

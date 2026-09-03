@@ -1,0 +1,22 @@
+id: algebra.de-moivres-theorem
+kind: theorem
+title: De Moivre's Theorem
+aliases:
+  - de Moivre's formula
+tags:
+  - complex numbers
+  - trigonometry
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-1.typ
+  label: de-moivres-theorem
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - calculus.complex-trigonometric-functions

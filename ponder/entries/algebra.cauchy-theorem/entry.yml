@@ -1,0 +1,15 @@
+id: algebra.cauchy-theorem
+kind: theorem
+title: Cauchy's Theorem
+aliases: [Cauchy theorem]
+tags: [groups, finite groups, element order, actions]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: cauchys-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: cauchys-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.orbit-stabiliser, algebra.lagrange-theorem, algebra.element-order, algebra.group-order]

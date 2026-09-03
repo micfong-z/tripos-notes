@@ -1,0 +1,12 @@
+id: probability.bernoulli-distribution
+kind: definition
+title: Bernoulli Distribution
+aliases: [Bernoulli distribution, Bernoulli trial, Bernoulli trials]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-bernoulli-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-bernoulli-distribution}
+related: [probability.discrete-distribution, probability.binomial-distribution, probability.geometric-distribution]

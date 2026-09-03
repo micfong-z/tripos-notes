@@ -1,0 +1,15 @@
+id: analysis.sequential-continuity
+kind: definition
+title: Sequential continuity
+aliases: [sequentially continuous]
+tags: [analysis, continuity, sequences]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: sequential-continuity, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: sequential-continuity}
+  - title: Characterisation of continuity
+    kind: theorem
+    supplemental: characterisation.typ
+related: [analysis.continuity, analysis.sequence-convergence, analysis.sequential-characterisation-of-limits]

@@ -1,0 +1,18 @@
+id: calculus.riemann-integrability-criteria
+kind: proposition
+title: Riemann Integrability Criteria
+aliases: [Riemann integrability criterion, epsilon criterion for integrability, sequential criterion for integrability]
+tags: [integration, riemann integration, characterisation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: prop-riemann-integrability-criteria, kind: proposition}
+sections:
+  - title: Criterion
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: prop-riemann-integrability-criteria}
+  - title: Sequential criterion
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: prop-riemann-integrability-sequential-criteria, referenceTarget: true}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.upper-lower-integral, calculus.riemann-integrable-function, calculus.partition-refinement, calculus.upper-lower-riemann-sums]

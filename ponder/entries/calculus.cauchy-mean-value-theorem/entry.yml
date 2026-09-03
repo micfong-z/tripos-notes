@@ -1,0 +1,15 @@
+id: calculus.cauchy-mean-value-theorem
+kind: proposition
+title: Cauchy Mean Value Theorem
+aliases: [Cauchy MVT, generalized mean value theorem]
+tags: [analysis, differentiation, mean value theorems]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: cauchy-mean-value-theorem, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: cauchy-mean-value-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.mean-value-theorem, calculus.rolles-theorem, calculus.lhopitals-rule]

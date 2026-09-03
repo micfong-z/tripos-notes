@@ -1,0 +1,1 @@
+A way to obtain information about solutions to equations without solving them: rescale variables to remove constants, or associate dimensions and require $["LHS"] = ["RHS"]$ with dimensionless arguments. For example, a pendulum period has the form $T = f(theta_0) sqrt((l)/(g))$.

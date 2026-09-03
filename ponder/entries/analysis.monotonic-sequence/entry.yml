@@ -1,0 +1,19 @@
+id: analysis.monotonic-sequence
+kind: definition
+title: Monotonic sequence
+aliases:
+  - monotone sequence
+tags:
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-monotonic-sequence
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - analysis.monotone-convergence-theorem
+  - analysis.bounded-sequence

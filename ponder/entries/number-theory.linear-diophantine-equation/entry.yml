@@ -1,0 +1,18 @@
+id: number-theory.linear-diophantine-equation
+kind: corollary
+title: "Linear Diophantine Equations"
+aliases: ["diophantine equations"]
+tags: ["number theory", "equations"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: cor-bezout-solvability, kind: corollary}
+sections:
+  - title: "Statement"
+    kind: corollary
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: cor-bezout-solvability}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "Example"
+    kind: example
+    supplemental: example.typ
+related: [number-theory.bezouts-theorem, number-theory.highest-common-factor]

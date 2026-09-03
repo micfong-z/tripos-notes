@@ -1,0 +1,1 @@
+For subsets $A, B$ of $X$: $indicator_A = indicator_B <=> A = B$, $indicator_(A inter B) = indicator_A indicator_B$, $indicator_(X \\ A) = 1 - indicator_A$, and $indicator_(A union B) = indicator_A + indicator_B - indicator_(A inter B)$.

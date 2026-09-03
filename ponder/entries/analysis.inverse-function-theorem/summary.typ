@@ -1,0 +1,1 @@
+If $f: [a, b] -> RR$ is continuous and strictly monotone, then $f: [a, b] -> [c, d]$ with $c = min{f(a), f(b)}$, $d = max{f(a), f(b)}$ is a bijection, and $f^(-1): [c, d] -> [a, b]$ is continuous and strictly monotone.

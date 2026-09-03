@@ -1,0 +1,12 @@
+id: combinatorics.counting-surjections
+kind: example
+title: Counting Surjections
+aliases: [counting surjections, number of surjections]
+tags: [counting, surjections, inclusion-exclusion]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: exm-counting-surjections, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: exm-counting-surjections}
+related: [set-theory.injection-surjection, combinatorics.inclusion-exclusion-principle, combinatorics.binomial-coefficient]

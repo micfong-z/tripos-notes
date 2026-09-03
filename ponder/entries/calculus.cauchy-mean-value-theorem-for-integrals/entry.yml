@@ -1,0 +1,15 @@
+id: calculus.cauchy-mean-value-theorem-for-integrals
+kind: proposition
+title: Cauchy Mean Value Theorem for Integrals
+aliases: []
+tags: [integration, mean value theorems]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: cauchy-mean-value-theorem-integrals, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: cauchy-mean-value-theorem-integrals}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.cauchy-mean-value-theorem, analysis.integral-mean-value-theorem, calculus.integral-remainder]

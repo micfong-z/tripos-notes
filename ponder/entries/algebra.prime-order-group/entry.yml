@@ -1,0 +1,15 @@
+id: algebra.prime-order-group
+kind: corollary
+title: Groups of Prime Order
+aliases: [prime-order group]
+tags: [groups, finite groups, cyclic groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: prime-order-group, kind: corollary}
+sections:
+  - title: Statement
+    kind: corollary
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: prime-order-group}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.lagrange-theorem, algebra.cyclic-group, algebra.group-order]

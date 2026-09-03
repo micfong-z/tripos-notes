@@ -1,0 +1,15 @@
+id: ode.constant-coefficient-homogeneous-solutions
+kind: proposition
+title: Constant-Coefficient Homogeneous Solutions
+aliases: [exponential solutions of constant-coefficient ODEs]
+tags: [differential equations, ordinary differential equations, exponential]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: constant-coefficient-homogeneous-solutions, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: constant-coefficient-homogeneous-solutions}
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: ex-homo-ode}
+related: [ode.constant-coefficients, ode.homogeneous-differential-equation, ode.linear-differential-equation, calculus.exponential-function, ode.eigenfunction]

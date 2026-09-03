@@ -1,0 +1,12 @@
+id: algebra.orbit-stabiliser-definitions
+kind: definition
+title: Orbits and Stabilisers
+aliases: [orbit, stabiliser, stabilizer, orbit of a point, stabiliser of a point]
+tags: [groups, actions, sets, subgroups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: orbit-stabiliser-definitions, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: orbit-stabiliser-definitions}
+related: [algebra.group-action, algebra.orbit-stabiliser, algebra.action-orbit-properties]

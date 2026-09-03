@@ -1,0 +1,1 @@
+If $R_(n, f, a)(h) arrow.not 0$ as $n -> oo$, the Taylor series of $f$ at $a$ may still converge; what fails is that it represents $f$ near $a$. Analyticity is exactly the statement that the series converges to $f$, not merely to something.

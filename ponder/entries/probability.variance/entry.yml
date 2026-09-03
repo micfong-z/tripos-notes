@@ -1,0 +1,24 @@
+id: probability.variance
+kind: definition
+title: Variance
+aliases: [variances]
+tags: [probability, dispersion, moments]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-variance, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-variance}
+  - title: Standard deviation
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-standard-deviation}
+  - title: Properties
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-variance-properties}
+  - title: Proof of the computational formula and the minimum property
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [probability.expectation, probability.moment, probability.covariance, probability.chebyshevs-inequality]

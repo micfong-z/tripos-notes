@@ -1,0 +1,15 @@
+id: algebra.cycle
+kind: definition
+title: Cycle
+aliases: [cycle, k-cycle]
+tags: [permutations, cycle notation]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: cycle, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: cycle}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.permutation, algebra.disjoint-cycles, algebra.cycle-type, algebra.transposition]

@@ -1,0 +1,18 @@
+id: dynamics.newtons-third-law
+kind: definition
+title: Newton's third law
+aliases: [Newton's 3rd law, N3]
+tags: [mechanics, forces]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-4.typ, label: law-newtons-third-law, kind: definition}
+sections:
+  - title: Law
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-4.typ, label: law-newtons-third-law}
+  - title: Internal forces cancel in pairs
+    kind: corollary
+    supplemental: pairs.typ
+  - title: Rocket thrust
+    kind: example
+    supplemental: thrust.typ
+related: [dynamics.newtons-second-law, dynamics.centre-of-mass]

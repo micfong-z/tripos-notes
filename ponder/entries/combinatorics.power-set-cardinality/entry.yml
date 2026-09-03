@@ -1,0 +1,24 @@
+id: combinatorics.power-set-cardinality
+kind: proposition
+title: "Number of subsets of a finite set"
+aliases:
+  - "power set cardinality"
+  - "2^n subsets"
+tags:
+  - "counting"
+  - "power-set"
+  - "subsets"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "prop-power-set-size", kind: proposition}
+sections:
+  - title: "Statement"
+    kind: proposition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "prop-power-set-size"}
+  - title: "Proof by induction"
+    kind: proof
+    supplemental: proof.typ
+related:
+  - set-theory.power-set
+  - set-theory.finite-set
+  - set-theory.cardinality
+  - combinatorics.binomial-coefficient

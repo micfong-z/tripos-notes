@@ -1,0 +1,18 @@
+id: number-theory.highest-common-factor
+kind: definition
+title: "Highest Common Factor"
+aliases: ["greatest common divisor", "gcd", "hcf"]
+tags: ["number theory", "divisibility"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: def-hcf, kind: definition}
+sections:
+  - title: "Definition"
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: def-hcf}
+  - title: "Example"
+    kind: example
+    supplemental: examples.typ
+  - title: "From prime factorisations"
+    kind: proposition
+    supplemental: from-factorisations.typ
+related: [number-theory.euclids-algorithm, number-theory.division-algorithm, number-theory.bezouts-theorem, number-theory.linear-diophantine-equation]

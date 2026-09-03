@@ -1,0 +1,16 @@
+id: calculus.partial-derivative
+kind: definition
+title: Partial Derivative
+wikidataQID: Q186475
+aliases: [partial derivatives, partial differentiation]
+tags: [differential equations, differentiation, multivariable]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: partial-derivative, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: partial-derivative}
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: partial-diff-ex}
+related: [calculus.derivative, calculus.multivariate-chain-rule]

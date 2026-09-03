@@ -1,0 +1,12 @@
+id: algebra.centre
+kind: definition
+title: Centre
+aliases: [center, centre of a group]
+tags: [groups, conjugation, centralisers]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: centre, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: centre}
+related: [algebra.conjugation, algebra.centraliser, algebra.abelian-group]

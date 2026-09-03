@@ -1,0 +1,18 @@
+id: analysis.periodicity-of-trigonometric-functions
+kind: proposition
+title: Periodicity of Trigonometric Functions
+aliases: [period of sine and cosine]
+tags: [analysis, trigonometry, periodicity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-periodicity-of-trigonometric-functions, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-periodicity-of-trigonometric-functions}
+  - title: Pi and the unit circle
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: lemma-unit-circle-perimeter}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.complex-trigonometric-functions, calculus.exponential-periodicity, analysis.intermediate-value-theorem]

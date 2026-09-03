@@ -1,0 +1,15 @@
+id: ode.singular-point
+kind: definition
+title: Ordinary Point and Singular Point
+aliases: [ordinary point, singular point, regular singular point, irregular singular point]
+tags: [ordinary differential equations, series solutions, classification]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: singular-point, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: singular-point}
+  - title: Regularity relative to equidimensional equations
+    kind: remark
+    supplemental: regularity.typ
+related: [ode.equidimensional-ode, ode.fuchs-theorem]

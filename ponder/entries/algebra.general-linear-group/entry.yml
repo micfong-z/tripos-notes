@@ -1,0 +1,12 @@
+id: algebra.general-linear-group
+kind: definition
+title: General Linear Group
+aliases: [general linear group]
+tags: [linear algebra, matrices, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: general-linear-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: general-linear-group}
+related: [algebra.group, algebra.matrix-invertibility, algebra.special-linear-group]

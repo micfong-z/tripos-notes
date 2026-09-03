@@ -1,0 +1,18 @@
+id: dynamics.galilean-transformation
+kind: definition
+title: Galilean transformation
+aliases: [Galilean transformations]
+tags: [mechanics, frames, transformations]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-1.typ, label: def-galilean-transformation}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-1.typ, label: def-galilean-transformation}
+  - title: Preservation of inertial frames
+    kind: remark
+    supplemental: body.typ
+  - title: Galilean group
+    kind: remark
+    supplemental: group.typ
+related: [dynamics.inertial-frame, dynamics.galilean-relativity-principle, algebra.orthogonal-group]

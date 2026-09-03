@@ -1,0 +1,15 @@
+id: algebra.a5-simplicity
+kind: theorem
+title: Simplicity of A5
+aliases: [A5 is simple, simplicity of A5]
+tags: [alternating groups, simple groups, normal subgroups, conjugacy]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: a5-simplicity, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: a5-simplicity}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.alternating-group, algebra.simple-group, algebra.normal-subgroup, algebra.alternating-group-conjugacy-splitting, algebra.lagrange-theorem]

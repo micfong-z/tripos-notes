@@ -1,0 +1,19 @@
+id: calculus.directional-derivative
+kind: definition
+title: Directional Derivative
+wikidataQID: Q383851
+aliases: [directional derivatives, derivative in a direction]
+tags: [multivariable calculus, differentiation, gradient]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: directional-derivative, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: directional-derivative}
+  - title: Properties of the gradient vector
+    kind: proposition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: gradient-vector-properties}
+  - title: Geometric characterisation
+    kind: remark
+    supplemental: geometry.typ
+related: [calculus.gradient, calculus.derivative, calculus.partial-derivative]

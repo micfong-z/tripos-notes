@@ -1,0 +1,12 @@
+id: algebra.isomorphism-criterion
+kind: proposition
+title: Isomorphism Criterion
+aliases: [homomorphism isomorphism criterion]
+tags: [groups, homomorphisms, isomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: isomorphism-criterion, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: isomorphism-criterion}
+related: [algebra.isomorphism, algebra.homomorphism-bijectivity, algebra.image-kernel]

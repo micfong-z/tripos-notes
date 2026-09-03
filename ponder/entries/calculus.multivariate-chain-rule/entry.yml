@@ -1,0 +1,23 @@
+id: calculus.multivariate-chain-rule
+kind: theorem
+title: Multivariate Chain Rule
+wikidataQID: Q2513399
+aliases: [chain rule for partial derivatives, generalized chain rule, multivariable chain rule]
+tags: [differential equations, differentiation, multivariable]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: multivariate-chain-rule, kind: theorem}
+sections:
+  - title: Differential form
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: multivariate-chain-rule}
+  - title: Integral form
+    kind: theorem
+    source:
+      document: part-ia/differential-equations/chapters/chapter-3.typ
+      label: multivariate-chain-rule-integral
+      kind: theorem
+      referenceTarget: true
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.chain-rule, calculus.partial-derivative, calculus.taylors-theorem, calculus.little-o]

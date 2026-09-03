@@ -1,0 +1,1 @@
+If $f$ and $g$ are differentiable at $a$, then $f + g$, $f g$, and $(1)/(f)$ (when $f(z) != 0$ throughout) are differentiable at $a$, with $(f g)'(a) = f'(a) g(a) + f(a) g'(a)$ and $((1)/(f))'(a) = -(f'(a))/([f(a)]^2)$.

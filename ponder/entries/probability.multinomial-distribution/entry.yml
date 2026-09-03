@@ -1,0 +1,12 @@
+id: probability.multinomial-distribution
+kind: definition
+title: Multinomial Distribution
+aliases: [multinomial distribution]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-multinomial-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-multinomial-distribution}
+related: [probability.discrete-distribution, probability.binomial-distribution]

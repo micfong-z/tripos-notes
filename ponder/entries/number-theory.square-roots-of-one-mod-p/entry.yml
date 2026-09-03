@@ -1,0 +1,21 @@
+id: number-theory.square-roots-of-one-mod-p
+kind: lemma
+title: "Square Roots of One Modulo p"
+aliases: []
+tags: ["number theory", "modular arithmetic", "primes"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: lem-quad-residue, kind: lemma}
+sections:
+  - title: "Statement"
+    kind: lemma
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: lem-quad-residue}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "Primality is necessary"
+    kind: warning
+    supplemental: necessity-warning.typ
+  - title: "Bound on polynomial roots"
+    kind: remark
+    supplemental: roots-bound.typ
+related: [number-theory.wilsons-theorem, number-theory.prime-composite-numbers]

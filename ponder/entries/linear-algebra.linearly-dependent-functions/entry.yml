@@ -1,0 +1,15 @@
+id: linear-algebra.linearly-dependent-functions
+kind: definition
+title: Linearly Dependent Functions
+aliases: [linearly dependent, linear dependence]
+tags: [linear algebra, functions]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: linearly-dependent-functions, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: linearly-dependent-functions}
+  - title: Linear combinations
+    kind: remark
+    supplemental: equivalence.typ
+related: [linear-algebra.linearly-independent-functions]

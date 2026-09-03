@@ -1,0 +1,15 @@
+id: probability.probability-space
+kind: definition
+title: Probability Space
+aliases: [sigma-algebra, probability measure, countable additivity]
+tags: [probability, sigma-algebras, measures]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-1.typ, label: def-probability-space, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-1.typ, label: def-probability-space}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [probability.outcomes-and-events, probability.probability-measure-properties]

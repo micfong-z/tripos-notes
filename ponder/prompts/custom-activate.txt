@@ -1,0 +1,59 @@
+Migrate part-ia/differential-equations/chapters/chapter-5.typ to the Ponder system. This is an
+implementation task: inspect, edit, validate, and export the result. Work only
+on this chapter and the Ponder registry/artifacts required by its concepts.
+
+Before editing, read completely:
+
+- AGENTS.md
+- ponder/ENTRY_FORMAT.md
+- ponder/prompts/annotation.txt
+- ponder/prompts/entry-authoring.txt
+- scripts/validate.ts and scripts/export.ts
+
+Treat the existing directories under ponder/entries as the canonical registry.
+Use algebra.orbit-stabiliser as the quality and structure example.
+
+For the target chapter:
+
+1. Identify every unambiguous, durable mathematical concept worth pondering.
+2. Reuse an existing global ID whenever the registry already represents it.
+3. Create a new entry on the go when no registry entry represents the concept.
+4. Annotate every unambiguous prose occurrence, including repeated occurrences.
+5. Preserve the source wording exactly inside each #ponder wrapper.
+6. Add a stable Typst label only when a new entry needs a primary source and
+    the authoritative native block does not already have one.
+
+Hard constraints:
+
+- Never wrap or modify an existing @label reference.
+- Never annotate inside math, raw code, comments, or another #ponder wrapper.
+- Never create overlapping or syntactically nested wrappers.
+- Do not annotate ordinary grammatical adjectives merely because they are
+adjectives. Annotate durable mathematical properties when independently
+meaningful and unambiguous.
+- Do not wrap source content in another theorem, definition, proof, corollary,
+or similar block.
+- Use the native labeled Typst block as the primary section.
+- Suppress redundant section titles for primary sources through the existing
+entry model; do not alter the native source block for presentation reasons.
+- Ground summaries, aliases, tags, proof sections, examples, related entries,
+and variants entirely in these notes.
+- Include proofs and examples only when the notes support them.
+- Omit wikidataQID unless the exact QID can be verified reliably.
+- Do not create relations to IDs that do not exist by the end of this pass.
+- Do not change unrelated prose, notation, references, formatting, or chapters.
+- Preserve all pre-existing user changes in the dirty worktree.
+
+For every new concept, create a complete valid entry directory containing at
+least entry.yml and summary.typ. Add grounded supplemental proof/example files
+where the chapter provides useful material.
+
+Do not migrate another chapter. Finish by reporting:
+
+- concepts reused;
+- concepts created;
+- number of annotations inserted;
+- ambiguous candidates deliberately skipped;
+- labels added;
+- validation/export/PDF/TypeScript results;
+- any decisions that require human review.

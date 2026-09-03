@@ -1,0 +1,3 @@
+WLOG assume $a >= 0$. By the Axiom of Archimedes there exists $n in NN$ with $(1)/(n) < b - a$. Consider the set of natural numbers $k$ with $k slash n >= b$. It is non-empty, since some natural number exceeds $b$, and so it has a least element $m$: this is where the Well-Ordering Principle enters. Then $(m - 1) \/ n < b$, while if $(m - 1) \/ n <= a$ we would get $m \/ n < a + (b - a) = b$, contradicting minimality. Hence the rational $(m - 1) \/ n$ lies strictly between $a$ and $b$.
+
+The irrationals are dense as well: choosing a positive rational $c$ with $a sqrt(2) < c < b sqrt(2)$, the number $c slash sqrt(2)$ is irrational and satisfies $a < c slash sqrt(2) < b$.

@@ -1,0 +1,1 @@
+The homomorphism $phi: ZZ -> CC^*_times$ given by $phi(k) = ee^((2 ppi ii k) / n)$ has image $C_n$ and kernel $n ZZ$, so $ZZ \/ n ZZ teq C_n$. The homomorphism $phi: RR -> CC^*_times$ given by $phi(t) = ee^(2ppi ii t)$ has image $U(1)$ and kernel $ZZ$, so $RR \/ ZZ teq U(1)$.

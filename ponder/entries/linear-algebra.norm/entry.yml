@@ -1,0 +1,22 @@
+id: linear-algebra.norm
+kind: definition
+title: Norm
+aliases:
+  - norms
+  - length of a vector
+tags:
+  - inner products
+  - length
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: norm
+  kind: definition
+sections:
+  - title: Norm in $CC^n$
+    kind: definition
+    supplemental: complex.typ
+related:
+  - linear-algebra.inner-product
+  - linear-algebra.triangle-inequality
+  - linear-algebra.unit-vector

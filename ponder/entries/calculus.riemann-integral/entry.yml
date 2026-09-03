@@ -1,0 +1,12 @@
+id: calculus.riemann-integral
+kind: definition
+title: Riemann Integral
+aliases: [integral, integral as a Riemann sum]
+tags: [integration, limits]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: def-int-riemann, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: def-int-riemann}
+related: [calculus.riemann-integrable-function, analysis.integral-mean-value-theorem, calculus.fundamental-theorem-of-calculus]

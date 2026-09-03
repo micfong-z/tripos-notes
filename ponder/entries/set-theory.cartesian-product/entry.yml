@@ -1,0 +1,19 @@
+id: set-theory.cartesian-product
+kind: definition
+title: Cartesian Product
+aliases:
+  - ordered pairs
+tags:
+  - sets
+  - functions
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-cartesian-product, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-cartesian-product}
+  - title: Ordered pairs and tuples
+    kind: remark
+    supplemental: ordered-pairs-and-tuples.typ
+related:
+  - set-theory.function

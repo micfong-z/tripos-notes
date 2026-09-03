@@ -1,0 +1,12 @@
+id: calculus.product-rule
+kind: theorem
+title: Product Rule
+aliases: [product rule]
+tags: [differential equations, differentiation]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: product-rule, kind: theorem}
+sections:
+  - title: Theorem
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: product-rule}
+related: [calculus.derivative, calculus.leibniz-rule]

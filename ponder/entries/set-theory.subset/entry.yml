@@ -1,0 +1,22 @@
+id: set-theory.subset
+kind: definition
+title: Subset
+aliases:
+  - subsets
+  - proper subset
+  - contained in
+tags:
+  - sets
+  - foundations
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-subset, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-subset}
+  - title: Equality from inclusion
+    kind: remark
+    supplemental: equality-from-inclusion.typ
+related:
+  - set-theory.set
+  - set-theory.set-operations

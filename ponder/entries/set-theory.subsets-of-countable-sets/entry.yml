@@ -1,0 +1,32 @@
+id: set-theory.subsets-of-countable-sets
+kind: corollary
+title: Subsets of countable sets
+aliases:
+  - subset of a countable set is countable
+  - subsets of nn are countable
+tags:
+  - sets
+  - counting
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: cor-subsets-countable
+  kind: corollary
+sections:
+  - title: Statement
+    kind: corollary
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: cor-subsets-countable
+  - title: Subsets of the naturals
+    kind: lemma
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: lemma-subsets-nn-countable
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - set-theory.countable-set
+  - set-theory.countability-characterisations
+  - set-theory.well-ordering-principle

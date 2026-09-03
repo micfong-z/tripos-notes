@@ -1,0 +1,16 @@
+id: calculus.exponential-function
+kind: definition
+title: Exponential Function
+wikidataQID: Q168698
+aliases: [exponential, exp]
+tags: [differential equations, series, calculus]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: exponential-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: exponential-function}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [calculus.derivative, calculus.exponential-addition-formula, ode.eigenfunction, ode.constant-coefficient-homogeneous-solutions]

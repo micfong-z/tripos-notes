@@ -1,0 +1,15 @@
+id: linear-algebra.signature
+kind: definition
+title: Signature of a Symmetric Matrix
+aliases: [signature, signs of leading principal minors, leading principal minors]
+tags: [linear algebra, symmetric matrices, determinants]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: signature, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: signature}
+  - title: Leading principal minors
+    kind: example
+    supplemental: minors.typ
+related: [linear-algebra.matrix-definiteness, linear-algebra.sylvester-criterion]

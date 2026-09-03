@@ -1,0 +1,12 @@
+id: linear-algebra.fundamental-matrix
+kind: definition
+title: Fundamental Matrix
+aliases: [fundamental matrices]
+tags: [linear algebra, ordinary differential equations, matrices]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: fundamental-matrix, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: fundamental-matrix}
+related: [linear-algebra.wronskian, linear-algebra.linearly-independent-functions]

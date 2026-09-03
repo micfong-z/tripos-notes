@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.391104mm"
+   height="21.391119mm"
+   viewBox="0 0 21.391104 21.391119"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ns4="http://www.iki.fi/pav/software/textext/">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker15"
+       refX="-2"
+       refY="0"
+       orient="auto"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path15" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-140.26253,-167.80668)">
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path10"
+       cx="150.95808"
+       cy="178.50224"
+       r="10.563054" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-dashoffset:0;marker-start:url(#marker15);marker-end:url(#ConcaveTriangle)"
+       d="m 150.86895,178.68111 6.41927,-8.63508"
+       id="path16" />
+    <g
+       id="g2873"
+       transform="matrix(0.352778,0,0,0.352778,109.185,154.47)"
+       ns4:version="1.12.0"
+       ns4:texconverter="typst"
+       ns4:pdfconverter="inkscape"
+       ns4:text="$r$"
+       ns4:scale="1.0"
+       ns4:alignment="middle center"
+       ns4:inkscapeversion="1.4.2"
+       ns4:jacobian_sqrt="0.352778"
+       style="fill:#000000">
+      <g
+         id="g6282"
+         style="fill:#000000">
+        <g
+           transform="translate(70.8661,78.3791)"
+           id="g7353"
+           style="fill:#000000">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g9253"
+             style="fill:#000000">
+            <g
+               id="g4393"
+               style="fill:#000000">
+              <path
+                 d="m 53.817342,25.939659 c 0,0.462 -0.451,0.748 -0.935,0.748 -0.539,0 -0.99,-0.253 -1.364,-0.77 -0.11,0.429 -0.484,0.77 -1.001,0.77 -0.451,0 -0.781,-0.352 -1.012,-1.067 -0.11,-0.363 -0.165,-0.572 -0.165,-0.638 0,-0.099 0.055,-0.154 0.176,-0.154 0.055,0 0.088,0.011 0.121,0.033 0.055,0.099 0.088,0.176 0.099,0.253 0.198,0.836 0.451,1.254 0.748,1.254 0.187,0 0.286,-0.154 0.286,-0.462 0,-0.143 -0.055,-0.44 -0.165,-0.891 l -0.627,-2.497 c -0.033,-0.143 -0.099,-0.429 -0.099,-0.484 0,-0.22 0.121,-0.33 0.352,-0.33 0.22,0 0.363,0.11 0.44,0.33 l 0.209,0.792 c 0.121,0.473 0.198,0.781 0.231,0.924 l 0.341,1.408 c 0.022,0.088 0.11,0.231 0.253,0.44 0.297,0.418 0.638,0.77 1.177,0.77 0.132,0 0.242,-0.022 0.341,-0.077 -0.33,-0.099 -0.495,-0.308 -0.495,-0.605 0,-0.286 0.154,-0.429 0.451,-0.429 0.363,0 0.638,0.319 0.638,0.682 z"
+                 id="path4077"
+                 style="fill:#000000" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <defs
+         id="defs1027" />
+    </g>
+  </g>
+</svg>

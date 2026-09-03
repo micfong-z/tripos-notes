@@ -1,0 +1,15 @@
+id: analysis.cauchy-condensation-test
+kind: proposition
+title: Cauchy condensation test
+aliases: [condensation test]
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: cauchy-condensation-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: cauchy-condensation-test}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.integral-test, analysis.series]

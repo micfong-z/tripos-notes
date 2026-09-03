@@ -1,0 +1,12 @@
+id: algebra.orthogonal-group
+kind: definition
+title: Orthogonal Group
+aliases: [orthogonal group, orthogonal transformation]
+tags: [linear algebra, matrices, geometry, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: orthogonal-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: orthogonal-group}
+related: [algebra.general-linear-group, algebra.subgroup, algebra.special-orthogonal-group, geometry.reflection]

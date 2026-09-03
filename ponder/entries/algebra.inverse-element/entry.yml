@@ -1,0 +1,12 @@
+id: algebra.inverse-element
+kind: definition
+title: Inverse Element
+aliases: [inverse, group inverse]
+tags: [groups, axioms, notation]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: inverse-inverse, kind: corollary}
+sections:
+  - title: Inverse of an Inverse
+    kind: corollary
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: inverse-inverse}
+related: []

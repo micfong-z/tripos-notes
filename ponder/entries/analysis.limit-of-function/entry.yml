@@ -1,0 +1,18 @@
+id: analysis.limit-of-function
+kind: definition
+title: Limit of a function
+aliases: [function limits, limit of functions]
+tags: [analysis, limits, functions]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: limit-of-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: limit-of-function}
+  - title: Uniqueness
+    kind: proposition
+    supplemental: uniqueness.typ
+  - title: Example
+    kind: example
+    supplemental: examples.typ
+related: [analysis.accumulation-point, analysis.limit-of-sequence, analysis.sequential-characterisation-of-limits, analysis.continuity]

@@ -1,0 +1,1 @@
+For events $A_1, ..., A_n$ in $cal(F)$ and any $r <= n$, the truncated inclusion-exclusion sums bound $PP(union.big_(i=1)^n A_i)$ from above when $r$ is odd and from below when $r$ is even; in particular $PP(A union B) <= PP(A) + PP(B)$.

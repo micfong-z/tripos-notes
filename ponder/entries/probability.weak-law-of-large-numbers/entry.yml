@@ -1,0 +1,15 @@
+id: probability.weak-law-of-large-numbers
+kind: theorem
+title: Weak Law of Large Numbers
+aliases: [weak law of large numbers, WLLN]
+tags: [probability, limit theorems, convergence]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-weak-law-of-large-numbers, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: thm-weak-law-of-large-numbers}
+  - title: Proof under finite variance
+    kind: proof
+    supplemental: proof.typ
+related: [probability.convergence-in-probability, probability.chebyshevs-inequality, probability.variance, probability.strong-law-of-large-numbers]

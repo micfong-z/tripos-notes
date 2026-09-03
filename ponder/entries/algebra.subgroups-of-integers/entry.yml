@@ -1,0 +1,15 @@
+id: algebra.subgroups-of-integers
+kind: proposition
+title: Subgroups of the Integers
+aliases: [subgroups of Z]
+tags: [groups, subgroups, integers]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: subgroups-of-integers, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: subgroups-of-integers}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

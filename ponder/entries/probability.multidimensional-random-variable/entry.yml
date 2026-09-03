@@ -1,0 +1,12 @@
+id: probability.multidimensional-random-variable
+kind: definition
+title: Multidimensional Random Variable
+aliases: [random vector, multidimensional random variables, random variables in R^n]
+tags: [probability, random variables, vectors]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-multidimensional-random-variable, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-multidimensional-random-variable}
+related: [probability.random-variable, probability.joint-distribution]

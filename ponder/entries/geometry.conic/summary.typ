@@ -1,0 +1,1 @@
+A quadric in $RR^2$; in principal-axis form $lambda_1 (x'_1)^2 + lambda_2 (x'_2)^2 = k$ gives ellipses, hyperbolas, points, lines, or pairs of lines according to the signs of $lambda_1, lambda_2$ and $k$.

@@ -1,0 +1,12 @@
+id: probability.distribution-function
+kind: definition
+title: Probability Distribution Function
+aliases: [distribution function, cumulative distribution function, CDF]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-probability-distribution-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-probability-distribution-function}
+related: [probability.random-variable, probability.probability-mass-function, probability.discrete-random-variable]

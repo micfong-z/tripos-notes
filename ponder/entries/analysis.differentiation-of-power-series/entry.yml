@@ -1,0 +1,15 @@
+id: analysis.differentiation-of-power-series
+kind: proposition
+title: Differentiation of Power Series
+aliases: [term-by-term differentiation]
+tags: [analysis, power series, differentiation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-differentiation-of-power-series, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-differentiation-of-power-series}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.continuity-of-power-series, analysis.integration-of-power-series, calculus.fundamental-theorem-of-calculus]

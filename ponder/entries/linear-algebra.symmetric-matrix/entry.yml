@@ -1,0 +1,26 @@
+id: linear-algebra.symmetric-matrix
+kind: definition
+title: Symmetric and antisymmetric matrices
+aliases:
+  - symmetric matrix
+  - antisymmetric matrix
+  - symmetric part
+  - antisymmetric part
+tags:
+  - matrices
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-symmetric-antisymmetric-matrices
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Decomposition into parts
+    kind: remark
+    supplemental: decomposition.typ
+related:
+  - linear-algebra.transpose
+  - linear-algebra.trace

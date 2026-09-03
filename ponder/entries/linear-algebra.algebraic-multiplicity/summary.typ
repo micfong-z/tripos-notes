@@ -1,0 +1,1 @@
+$M_lambda$ is the multiplicity of the eigenvalue $lambda$ as a root of the characteristic polynomial $chi_matbold(A)$; over an algebraically closed field the algebraic multiplicities of an $n times n$ matrix sum to $n$.

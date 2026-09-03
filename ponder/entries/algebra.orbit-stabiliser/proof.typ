@@ -1,0 +1,1 @@
+Let $S = stab_G(x)$ and define $Phi(g S) = g x$. If $g_1 S = g_2 S$, then $g_1 = g_2 s$ for some $s in S$, so $g_1 x = g_2(s x) = g_2 x$; hence $Phi$ is well-defined. It is surjective by the definition of $G x$. If $g_1 x = g_2 x$, then $g_2^(-1) g_1 in S$, so $g_1 S = g_2 S$ and $Phi$ is injective.

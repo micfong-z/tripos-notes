@@ -1,0 +1,15 @@
+id: calculus.fundamental-theorem-of-calculus
+kind: theorem
+title: Fundamental Theorem of Calculus
+aliases: [FTC]
+tags: [integration, differentiation]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: fundamental-theorem-of-calculus, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: fundamental-theorem-of-calculus}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.derivative, calculus.riemann-integral, calculus.riemann-integrable-function, analysis.integral-mean-value-theorem, calculus.leibniz-integral-rule]

@@ -1,0 +1,19 @@
+id: calculus.hessian-matrix
+kind: definition
+title: Hessian Matrix
+wikidataQID: Q620495
+aliases: [Hessian, Hesse matrix]
+tags: [multivariable calculus, matrices, stationary points]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: hessian-matrix, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: hessian-matrix}
+  - title: Role in the multivariate Taylor expansion
+    kind: remark
+    supplemental: taylor.typ
+  - title: Degenerate stationary point
+    kind: example
+    supplemental: example.typ
+related: [calculus.partial-derivative, calculus.taylor-series, linear-algebra.matrix-definiteness]

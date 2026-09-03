@@ -1,0 +1,18 @@
+id: probability.conditional-probability
+kind: definition
+title: Conditional Probability
+aliases: [conditional probability]
+tags: [probability, conditioning]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-conditional-probability, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-conditional-probability}
+  - title: Countable additivity for conditional probability
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-cond-countable-additivity}
+  - title: Proof of countable additivity
+    kind: proof
+    supplemental: proof.typ
+related: [probability.probability-space, probability.independence-of-events, probability.law-of-total-probability, probability.bayes-formula]

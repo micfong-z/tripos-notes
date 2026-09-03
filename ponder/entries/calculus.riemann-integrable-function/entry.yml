@@ -1,0 +1,12 @@
+id: calculus.riemann-integrable-function
+kind: definition
+title: Riemann-Integrable Function
+aliases: [Riemann integrable]
+tags: [integration, limits]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: riemann-integrable, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-2.typ, label: riemann-integrable}
+related: [calculus.riemann-integral, calculus.fundamental-theorem-of-calculus]

@@ -1,0 +1,36 @@
+id: probability.probability-generating-function
+kind: definition
+title: Probability Generating Function
+aliases: [PGF, probability generating functions, generating function]
+tags: [probability, generating functions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-probability-generating-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-probability-generating-function}
+  - title: Convergence
+    kind: remark
+    supplemental: convergence.typ
+  - title: The PGF determines the distribution
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: thm-pgf-uniqueness}
+  - title: Proof of uniqueness
+    kind: proof
+    supplemental: uniqueness-proof.typ
+  - title: Sums of independent random variables
+    kind: remark
+    supplemental: sums.typ
+  - title: Derivative at one gives the expectation
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: thm-pgf-derivative}
+  - title: Proof of the derivative formula
+    kind: proof
+    supplemental: derivative-proof.typ
+  - title: Higher derivatives and moments
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: thm-pgf-moments}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [probability.probability-mass-function, probability.moment, probability.expectation, probability.variance, probability.random-sum, probability.binomial-distribution, probability.poisson-distribution, probability.geometric-distribution]

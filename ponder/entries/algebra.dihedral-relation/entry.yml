@@ -1,0 +1,15 @@
+id: algebra.dihedral-relation
+kind: lemma
+title: Dihedral Relation
+aliases: [dihedral relation]
+tags: [groups, symmetries]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: dihedral-relation, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: dihedral-relation}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

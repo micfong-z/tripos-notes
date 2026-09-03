@@ -1,0 +1,24 @@
+id: linear-algebra.inner-product
+kind: definition
+title: Inner product
+aliases:
+  - inner products
+  - real inner product
+  - Hermitian inner product
+tags:
+  - inner products
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: inner-product
+  kind: definition
+sections:
+  - title: Inner products in $CC^n$
+    kind: definition
+    supplemental: complex.typ
+related:
+  - linear-algebra.dot-product
+  - linear-algebra.norm
+  - linear-algebra.cauchy-schwarz-inequality
+  - linear-algebra.orthogonality

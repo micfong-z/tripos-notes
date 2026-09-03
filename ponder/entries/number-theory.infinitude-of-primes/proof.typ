@@ -1,0 +1,1 @@
+Suppose there are finitely many primes, say $p_1, ..., p_k$, and consider $N = p_1 p_2 ... p_k + 1$. Then $p_1 divides.not N$, otherwise $p_1$ would divide $1$. Likewise none of $p_2, ..., p_k$ divide $N$. So either $N$ is itself prime, or it has a prime factor outside the list $p_1, ..., p_k$; either case contradicts the assumption that the list contained all primes.

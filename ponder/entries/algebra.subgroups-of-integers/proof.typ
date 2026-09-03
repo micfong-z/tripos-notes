@@ -1,0 +1,1 @@
+The zero subgroup is $0 ZZ$. Otherwise choose the smallest positive $n in H$. Closure gives $n ZZ <= H$. For $x in H$, division with remainder gives $x = n q + r$ with $0 <= r < n$; if $r > 0$, then $r in H$ contradicts the choice of $n$. Hence $H = n ZZ$.

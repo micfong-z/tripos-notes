@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="72.836723mm"
+   height="73.27211mm"
+   viewBox="0 0 72.836723 73.27211"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-27.142535,-159.71883)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path17"
+       d="m 36.125009,313.40226 -162.572739,0 81.286373,-140.79211 z"
+       transform="matrix(0.352778,0,0,0.352778,79.492833,102.5684)" />
+    <path
+       style="opacity:0.25;fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0"
+       d="m 63.5609,163.46147 v 58.97675"
+       id="path18" />
+    <path
+       style="opacity:0.25;fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0"
+       d="M 34.884858,213.12983 91.828841,180.2532"
+       id="path19" />
+    <path
+       style="opacity:0.25;fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0"
+       d="M 92.236942,213.12983 35.054626,180.1156"
+       id="path20" />
+    <path
+       style="opacity:0.25;fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ConcaveTriangle)"
+       id="path21"
+       d="M 93.284727,217.3854 A 36.286091,36.286091 0 0 1 63.560902,232.85865 36.286091,36.286091 0 0 1 33.837076,217.3854" />
+    <path
+       style="opacity:0.25;fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ConcaveTriangle)"
+       id="path21-9"
+       d="M 30.674536,211.90772 A 36.286091,36.286091 0 0 1 32.136225,178.42951 36.286091,36.286091 0 0 1 60.39836,160.42454" />
+    <path
+       style="opacity:0.25;fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#ConcaveTriangle)"
+       id="path21-9-3"
+       d="m 66.723441,160.42454 a 36.286091,36.286091 0 0 1 28.262137,18.00497 36.286091,36.286091 0 0 1 1.46169,33.47821" />
+  </g>
+</svg>

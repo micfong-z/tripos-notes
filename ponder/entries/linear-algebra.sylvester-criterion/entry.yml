@@ -1,0 +1,15 @@
+id: linear-algebra.sylvester-criterion
+kind: proposition
+title: Sylvester's Criterion
+aliases: [Sylvester criterion]
+tags: [linear algebra, symmetric matrices, positive definite matrices]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: sylvesters-criterion, kind: proposition}
+sections:
+  - title: Criterion
+    kind: proposition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: sylvesters-criterion}
+  - title: Application to stationary points
+    kind: example
+    supplemental: application.typ
+related: [linear-algebra.matrix-definiteness, linear-algebra.signature]

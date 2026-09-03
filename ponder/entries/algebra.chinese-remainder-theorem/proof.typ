@@ -1,0 +1,1 @@
+Let $C_(m n) = lr(chevron.l g chevron.r)$ and set $H_1 = lr(chevron.l g^n chevron.r)$ and $H_2 = lr(chevron.l g^m chevron.r)$. The coprimality condition gives $H_1 inter H_2 = {e}$, the cyclic group is abelian, and the subgroup sizes multiply to $abs(C_(m n))$. The direct product theorem then gives $C_m times C_n teq C_(m n)$.

@@ -1,0 +1,21 @@
+id: probability.gamma-distribution
+kind: definition
+title: Gamma Distribution
+aliases: [gamma distribution, Gamma]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: example-gamma-distribution, kind: example}
+sections:
+  - title: Definition
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: example-gamma-distribution}
+  - title: Moment generating function
+    kind: remark
+    supplemental: mgf.typ
+  - title: Sums of gamma random variables
+    kind: proposition
+    supplemental: sums.typ
+  - title: General shape parameter
+    kind: remark
+    supplemental: generalisation.typ
+related: [probability.exponential-distribution, probability.moment-generating-function, probability.continuous-random-variable]

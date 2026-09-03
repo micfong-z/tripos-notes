@@ -1,0 +1,1 @@
+Every polynomial $p(z) = c_n z^n + dots + c_0$ with $c_i in CC$ and $c_n != 0$ factors as $p(z) = c_n (z - alpha_1)(z - alpha_2)dots(z - alpha_n)$ with $alpha_i in CC$, so $p(z) = 0$ has $n$ roots counted with multiplicity.

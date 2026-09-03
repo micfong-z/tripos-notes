@@ -1,0 +1,19 @@
+id: number-theory.fibonacci-sequence
+kind: example
+title: Fibonacci Sequence
+wikidataQID: Q47577
+aliases: [Fibonacci numbers]
+tags: [integer sequences, recurrences, discrete equations]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-7.typ, label: ex-fibonacci-sequence, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-7.typ, label: ex-fibonacci-sequence}
+  - title: Closed form
+    kind: proposition
+    supplemental: body.typ
+  - title: Growth rate
+    kind: corollary
+    supplemental: growth.typ
+related: [ode.first-order-discrete-equation, ode.constant-coefficient-homogeneous-solutions, ode.eigenfunction]

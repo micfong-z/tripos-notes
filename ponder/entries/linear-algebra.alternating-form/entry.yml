@@ -1,0 +1,38 @@
+id: linear-algebra.alternating-form
+kind: definition
+title: Alternating form
+aliases:
+  - alternating forms
+  - multilinear alternating form
+tags:
+  - forms
+  - determinants
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-alternating-form
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Properties of alternating forms
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+      label: prop-alternating-form-properties
+      kind: proposition
+  - title: Nondegeneracy
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+      label: prop-alternating-independence
+      kind: proposition
+  - title: Proof of nondegeneracy
+    kind: proof
+    supplemental: proof.typ
+related:
+  - linear-algebra.levi-civita-symbol
+  - algebra.permutation-parity
+  - linear-algebra.linear-independence
+  - linear-algebra.determinant

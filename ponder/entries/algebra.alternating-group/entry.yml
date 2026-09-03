@@ -1,0 +1,15 @@
+id: algebra.alternating-group
+kind: definition
+title: Alternating Group
+aliases: [alternating group]
+tags: [groups, permutations, parity, kernels]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: alternating-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: alternating-group}
+  - title: Example
+    kind: example
+    supplemental: examples.typ
+related: [algebra.symmetric-group, algebra.sign-homomorphism, algebra.permutation-parity, algebra.normal-subgroup, algebra.alternating-group-conjugacy-splitting]

@@ -1,0 +1,25 @@
+id: linear-algebra.spanning-set
+kind: definition
+title: Spanning set
+aliases:
+  - spanning sets
+  - spans
+tags:
+  - vectors
+  - span
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: spanning-set
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+      label: spanning-set
+      kind: definition
+related:
+  - linear-algebra.span
+  - linear-algebra.basis
+  - linear-algebra.dimension

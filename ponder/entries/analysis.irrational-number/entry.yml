@@ -1,0 +1,24 @@
+id: analysis.irrational-number
+kind: definition
+title: Irrational number
+aliases:
+  - irrational
+tags:
+  - number-theory
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-irrational-number
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Examples
+    kind: example
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+      label: ex-irrational-examples
+
+related:
+  - number-theory.sqrt2-irrational

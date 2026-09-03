@@ -1,0 +1,12 @@
+id: algebra.matrix-invertibility
+kind: lemma
+title: Invertible Matrix Criterion
+aliases: [matrix invertibility criterion]
+tags: [linear algebra, matrices, determinants]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: matrix-invertibility, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: matrix-invertibility}
+related: [algebra.general-linear-group, algebra.determinant-multiplicativity]

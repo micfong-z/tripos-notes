@@ -1,0 +1,19 @@
+id: linear-algebra.subspace
+kind: definition
+title: Subspace
+aliases:
+  - subspaces
+tags:
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: subspace
+  kind: definition
+sections:
+  - title: Criterion and trivial subspaces
+    kind: remark
+    supplemental: criterion.typ
+related:
+  - linear-algebra.vector-space
+  - linear-algebra.span

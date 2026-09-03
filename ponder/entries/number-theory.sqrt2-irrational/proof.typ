@@ -1,0 +1,1 @@
+Suppose $x^2 = 2$ with $x = (a)/(b)$ and $a, b in ZZ^+$. Then $a^2 = 2 b^2$. The exponent of the prime $2$ in the prime factorisation of a square is even, while in $2 b^2$ it is odd, contradicting uniqueness of prime factorisation. The same argument shows that if $x in QQ$ satisfies $x^2 = n$ for a natural number $n$, then $n$ must be a perfect square.

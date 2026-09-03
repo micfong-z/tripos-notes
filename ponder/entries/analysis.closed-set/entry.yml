@@ -1,0 +1,15 @@
+id: analysis.closed-set
+kind: definition
+title: Closed set
+aliases: [closed sets, closed]
+tags: [analysis, topology, sets]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: closed-set, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: closed-set}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.bounded-set, analysis.continuity-preserves-closedness-boundedness, analysis.sequence-convergence]

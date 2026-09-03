@@ -1,0 +1,23 @@
+id: linear-algebra.eigenspace
+kind: definition
+title: Eigenspace
+aliases:
+  - eigenspaces
+tags:
+  - matrices
+  - eigenvalues
+  - subspaces
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-eigenspace
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - linear-algebra.eigenvalue-eigenvector
+  - linear-algebra.kernel-image
+  - linear-algebra.geometric-multiplicity
+  - linear-algebra.defect

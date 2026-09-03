@@ -1,0 +1,15 @@
+id: dynamics.keplers-laws
+kind: proposition
+title: Kepler's laws
+aliases: [laws of planetary motion, Kepler's laws of planetary motion]
+tags: [mechanics, gravity, orbits]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-3.typ, label: prop-keplers-laws, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-3.typ, label: prop-keplers-laws}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [dynamics.gravitational-force, dynamics.dimensional-analysis, dynamics.newtons-second-law, geometry.conic]

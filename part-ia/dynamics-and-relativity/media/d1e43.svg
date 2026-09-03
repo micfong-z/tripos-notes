@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32.68095mm"
+   height="33.436356mm"
+   viewBox="0 0 32.68095 33.436356"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ns4="http://www.iki.fi/pav/software/textext/">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch213">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop213" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="marker14"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M -1.4,-2.8 6.3,0 -1.4,2.8 C 0,1.169 0,-1.162 -1.4,-2.8 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none;stroke-width:0.7"
+         id="path14" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-1424.15,-57.945262)">
+    <g
+       id="g4174-9-0-7-3"
+       transform="matrix(0.352778,0,0,0.352778,1416.7103,34.140483)"
+       ns4:version="1.12.0"
+       ns4:texconverter="typst"
+       ns4:pdfconverter="inkscape"
+       ns4:text="$bold(T)$"
+       ns4:scale="1.0"
+       ns4:alignment="middle center"
+       ns4:inkscapeversion="1.4.2"
+       ns4:jacobian_sqrt="0.352778"
+       style="fill:#3584e4;stroke-width:0">
+      <g
+         id="g5321-0"
+         style="fill:#3584e4;stroke-width:0">
+        <g
+           transform="translate(70.8661,78.3791)"
+           id="g6169-9"
+           style="fill:#3584e4;stroke-width:0">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g3608-0"
+             style="fill:#3584e4;stroke-width:0">
+            <g
+               id="g8898-7"
+               style="fill:#3584e4;stroke-width:0">
+              <path
+                 d="m 8.492,7.205 c 0,0.22 -0.154,0.22 -0.374,0.22 H 1.441 c -0.253,0 -0.319,0 -0.396,-0.22 C 0.792,6.457 0.528,5.72 0.275,4.972 c 0,-0.198 0.209,-0.198 0.264,-0.198 0.187,0 0.209,0.055 0.29699997,0.275 C 1.408,6.6549997 1.793,6.908 3.355,6.908 c 0.33,0 0.352,0 0.572,-0.011 L 2.354,0.572 C 2.288,0.561 2.002,0.517 1.441,0.517 H 0.979 c -0.209,0 -0.396,0 -0.396,-0.30800001 C 0.583,0 0.77,0 0.847,0 1.188,0 1.54,0.022 1.892,0.022 L 2.981,0.033 4.103,0.022 C 4.455,0.022 4.807,0 5.159,0 5.291,0 5.5,0 5.5,0.319 5.5,0.517 5.313,0.517 5.126,0.517 H 4.675 c -0.264,0 -0.528,0 -0.792,0.033 l 1.54,6.16 C 5.467,6.886 5.478,6.897 5.687,6.908 H 6.149 C 7.205,6.908 7.744,6.853 7.744,5.929 7.744,5.643 7.711,5.445 7.667,5.1809998 7.667,5.115 7.645,4.983 7.645,4.983 c 0,-0.209 0.198,-0.209 0.264,-0.209 0.209,0 0.242,0.088 0.275,0.308 z"
+                 id="path6754-6"
+                 style="fill:#3584e4;stroke-width:0" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <defs
+         id="defs3877-8"
+         style="fill:#3584e4;stroke-width:0" />
+    </g>
+    <g
+       id="g737-1-70"
+       transform="matrix(0.352778,0,0,0.352778,1425.1354,44.52994)"
+       ns4:version="1.12.0"
+       ns4:texconverter="typst"
+       ns4:pdfconverter="inkscape"
+       ns4:text="$bold(hat(r))$"
+       ns4:scale="1.0"
+       ns4:alignment="middle center"
+       ns4:inkscapeversion="1.4.2"
+       ns4:jacobian_sqrt="0.352778"
+       style="fill:#000000;stroke-width:0">
+      <g
+         id="g7271-9"
+         style="fill:#000000;stroke-width:0">
+        <g
+           transform="translate(71.2181,78.3571)"
+           id="g287-5"
+           style="fill:#000000;stroke-width:0">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g2650-7"
+             style="fill:#000000;stroke-width:0">
+            <g
+               id="g2775-2"
+               style="fill:#000000;stroke-width:0">
+              <path
+                 d="M 4.246,5.665 4.433,5.863 2.75,7.634 1.067,5.863 1.254,5.665 2.75,6.798 Z"
+                 id="path7541-9"
+                 style="fill:#000000;stroke-width:0" />
+            </g>
+          </g>
+        </g>
+        <g
+           transform="translate(70.8661,78.3791)"
+           id="g3929-7"
+           style="fill:#000000;stroke-width:0">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g7613-6"
+             style="fill:#000000;stroke-width:0">
+            <g
+               id="g288-8"
+               style="fill:#000000;stroke-width:0">
+              <path
+                 d="M 5.555,4.015 C 5.555,4.521 5.159,4.972 4.4769998,4.972 3.861,4.972 3.3439999,4.664 3.014,4.312 2.75,4.818 2.123,4.972 1.727,4.972 1.3199999,4.972 1.012,4.741 0.77,4.345 0.506,3.916 0.352,3.322 0.352,3.256 c 0,-0.154 0.165,-0.154 0.264,-0.154 0.121,0 0.165,0 0.21999997,0.055 0.022,0.022 0.022,0.044 0.088,0.319 C 1.133,4.312 1.375,4.576 1.6719999,4.576 1.837,4.576 1.925,4.466 1.925,4.18 1.925,3.9819999 1.892,3.861 1.771,3.3439999 1.595,2.651 1.408,1.958 1.243,1.254 1.177,0.968 1.045,0.473 1.045,0.396 c 0,-0.23100001 0.176,-0.484 0.517,-0.484 0.22,0 0.605,0.132 0.726,0.583 l 0.77,3.091 c 0.044,0.165 0.044,0.187 0.187,0.352 0.253,0.319 0.66,0.638 1.21,0.638 0.275,0 0.396,-0.121 0.429,-0.154 C 4.279,4.301 4.213,3.762 4.213,3.652 4.213,3.41 4.4,3.146 4.763,3.146 c 0.374,0 0.792,0.308 0.792,0.869 z"
+                 id="path2577-2"
+                 style="fill:#000000;stroke-width:0" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <defs
+         id="defs5386-9"
+         style="fill:#000000;stroke-width:0" />
+    </g>
+    <g
+       id="g737-1-7-1"
+       transform="matrix(0.352778,0,0,0.352778,1409.6729,44.543289)"
+       ns4:version="1.12.0"
+       ns4:texconverter="typst"
+       ns4:pdfconverter="inkscape"
+       ns4:text="$bold(hat(theta))$"
+       ns4:scale="1.0"
+       ns4:alignment="middle center"
+       ns4:inkscapeversion="1.4.2"
+       ns4:jacobian_sqrt="0.352778"
+       style="fill:#000000;stroke-width:0">
+      <g
+         id="g4597-5"
+         style="fill:#000000;stroke-width:0">
+        <g
+           transform="translate(71.8891,75.6071)"
+           id="g4390-9"
+           style="fill:#000000;stroke-width:0">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g3692-1"
+             style="fill:#000000;stroke-width:0">
+            <g
+               id="g3298-3"
+               style="fill:#000000;stroke-width:0">
+              <path
+                 d="M 4.246,5.665 4.433,5.863 2.75,7.634 1.067,5.863 1.254,5.665 2.75,6.798 Z"
+                 id="path7468-8"
+                 style="fill:#000000;stroke-width:0" />
+            </g>
+          </g>
+        </g>
+        <g
+           transform="translate(70.8661,78.3791)"
+           id="g3982-8"
+           style="fill:#000000;stroke-width:0">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g292-9"
+             style="fill:#000000;stroke-width:0">
+            <g
+               id="g291-4"
+               style="fill:#000000;stroke-width:0">
+              <path
+                 d="M 6.017,5.39 C 6.017,7.3259997 4.873,7.722 4.202,7.722 3.333,7.722 2.233,7.15 1.408,5.654 0.847,4.62 0.506,3.124 0.506,2.233 c 0,-1.595 0.836,-2.321 1.826,-2.321 0.737,0 1.705,0.429 2.464,1.5509999 C 5.72,2.816 6.017,4.565 6.017,5.39 Z M 4.84,6.193 C 4.84,5.5 4.598,4.5429997 4.4769998,4.081 H 2.178 C 2.332,4.719 2.618,5.72 2.948,6.292 3.201,6.743 3.652,7.3259997 4.18,7.3259997 4.642,7.3259997 4.84,6.842 4.84,6.193 Z M 4.345,3.553 C 3.6629999,0.605 2.739,0.308 2.354,0.308 2.2,0.308 1.969,0.352 1.8149999,0.693 1.683,0.99 1.683,1.43 1.683,1.43 c 0,0.627 0.242,1.65 0.363,2.123 z"
+                 id="path2688-3"
+                 style="fill:#000000;stroke-width:0" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <defs
+         id="defs1060-9"
+         style="fill:#000000;stroke-width:0" />
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0"
+       d="M 1424.2397,91.255635 1456.831,61.194962"
+       id="path306" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:1.05833, 1.05833;stroke-dashoffset:0"
+       d="m 1439.2676,91.352877 7.4291,-33.378875"
+       id="path313" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker14)"
+       d="m 1443.2094,73.642443 2.7673,-12.43339"
+       id="path314" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker14)"
+       d="m 1443.2094,73.642441 -5.7309,-6.370195"
+       id="path327" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker14)"
+       d="m 1443.2094,73.642441 6.7783,-6.13556"
+       id="path339" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 1443.7995,70.991017 c 0.6032,-0.0756 0.9653,0.446366 1.3308,0.912699"
+       id="path342" />
+    <g
+       id="g9571-9-5-4-3-9"
+       transform="matrix(0.352778,0,0,0.352778,1420.3836,40.650558)"
+       ns4:version="1.12.0"
+       ns4:texconverter="typst"
+       ns4:pdfconverter="inkscape"
+       ns4:text="$phi$"
+       ns4:scale="1.0"
+       ns4:alignment="middle center"
+       ns4:inkscapeversion="1.4.2"
+       ns4:jacobian_sqrt="0.352778"
+       style="fill:#000000;stroke-width:0">
+      <g
+         id="g2027-6"
+         style="fill:#000000;stroke-width:0">
+        <g
+           transform="translate(70.8661,78.3791)"
+           id="g1181-5"
+           style="fill:#000000;stroke-width:0">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g1931-1"
+             style="fill:#000000;stroke-width:0">
+            <g
+               id="g3863-3"
+               style="fill:#000000;stroke-width:0">
+              <path
+                 d="M 5.533,4.862 C 5.346,4.862 5.1809998,4.829 5.016,4.774 4.323,4.5429997 3.839,3.861 3.564,3.234 3.102,2.211 2.97,1.793 2.629,0.638 1.496,0.869 0.924,1.386 0.924,2.2 c 0,0.737 0.517,1.804 0.88,2.222 0.066,0.077 0.099,0.132 0.099,0.165 0,0.099 -0.055,0.154 -0.176,0.154 C 1.54,4.741 1.298,4.422 1.001,3.784 0.704,3.146 0.55,2.574 0.55,2.079 0.55,0.935 1.419,0.20899999 2.42,-0.033 L 1.859,-1.8149999 C 1.8149999,-1.936 1.793,-2.013 1.793,-2.046 c 0,-0.231 0.121,-0.352 0.363,-0.352 0.209,0 0.352,0.11 0.44,0.319 l 0.374,1.947 c 0.121,-0.011 0.22,-0.011 0.319,-0.011 0.902,0 1.705,0.35199999 2.431,1.056 0.726,0.704 1.089,1.507 1.089,2.409 0,0.858 -0.451,1.54 -1.276,1.54 z M 6.413,3.08 C 6.413,2.387 6.083,1.782 5.412,1.265 4.785,0.803 4.114,0.572 3.388,0.572 c -0.066,0 -0.132,0 -0.187,0.011 -0.066,0 -0.099,0 -0.099,-0.011 0.165,0.869 0.264,1.386 0.308,1.54 0.2529999,0.869 1.001,2.035 2.013,2.035 0.616,0 0.99,-0.44 0.99,-1.067 z"
+                 id="path268-2"
+                 style="fill:#000000;stroke-width:0" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <defs
+         id="defs7600-6"
+         style="fill:#000000;stroke-width:0" />
+    </g>
+    <g
+       id="g9571-9-5-4-3-9-6"
+       transform="matrix(0.352778,0,0,0.352778,1413.1595,53.416226)"
+       ns4:version="1.12.0"
+       ns4:texconverter="typst"
+       ns4:pdfconverter="inkscape"
+       ns4:text="$phi$"
+       ns4:scale="1.0"
+       ns4:alignment="middle center"
+       ns4:inkscapeversion="1.4.2"
+       ns4:jacobian_sqrt="0.352778"
+       style="fill:#000000;stroke-width:0">
+      <g
+         id="g2027-6-1"
+         style="fill:#000000;stroke-width:0">
+        <g
+           transform="translate(70.8661,78.3791)"
+           id="g1181-5-7"
+           style="fill:#000000;stroke-width:0">
+          <g
+             class="typst-text"
+             transform="scale(1,-1)"
+             id="g1931-1-3"
+             style="fill:#000000;stroke-width:0">
+            <g
+               id="g3863-3-8"
+               style="fill:#000000;stroke-width:0">
+              <path
+                 d="M 5.533,4.862 C 5.346,4.862 5.1809998,4.829 5.016,4.774 4.323,4.5429997 3.839,3.861 3.564,3.234 3.102,2.211 2.97,1.793 2.629,0.638 1.496,0.869 0.924,1.386 0.924,2.2 c 0,0.737 0.517,1.804 0.88,2.222 0.066,0.077 0.099,0.132 0.099,0.165 0,0.099 -0.055,0.154 -0.176,0.154 C 1.54,4.741 1.298,4.422 1.001,3.784 0.704,3.146 0.55,2.574 0.55,2.079 0.55,0.935 1.419,0.20899999 2.42,-0.033 L 1.859,-1.8149999 C 1.8149999,-1.936 1.793,-2.013 1.793,-2.046 c 0,-0.231 0.121,-0.352 0.363,-0.352 0.209,0 0.352,0.11 0.44,0.319 l 0.374,1.947 c 0.121,-0.011 0.22,-0.011 0.319,-0.011 0.902,0 1.705,0.35199999 2.431,1.056 0.726,0.704 1.089,1.507 1.089,2.409 0,0.858 -0.451,1.54 -1.276,1.54 z M 6.413,3.08 C 6.413,2.387 6.083,1.782 5.412,1.265 4.785,0.803 4.114,0.572 3.388,0.572 c -0.066,0 -0.132,0 -0.187,0.011 -0.066,0 -0.099,0 -0.099,-0.011 0.165,0.869 0.264,1.386 0.308,1.54 0.2529999,0.869 1.001,2.035 2.013,2.035 0.616,0 0.99,-0.44 0.99,-1.067 z"
+                 id="path268-2-7"
+                 style="fill:#000000;stroke-width:0" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <defs
+         id="defs7600-6-0"
+         style="fill:#000000;stroke-width:0" />
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 1440.5353,76.225298 c 0.1873,0.706123 1.2208,1.392224 1.8312,1.204109"
+       id="path345" />
+  </g>
+</svg>

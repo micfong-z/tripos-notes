@@ -1,0 +1,12 @@
+id: statistics.simpsons-paradox
+kind: example
+title: Simpson's Paradox
+aliases: [Simpson's paradox]
+tags: [statistics, confounding, aggregation]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: exm-simpsons-paradox, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: exm-simpsons-paradox}
+related: [probability.conditional-probability]

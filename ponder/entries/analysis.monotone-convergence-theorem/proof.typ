@@ -1,0 +1,3 @@
+Suppose $(a_n)_(n=1)^oo$ is monotonic increasing and bounded. The set ${a_n : n >= 1}$ is non-empty and bounded above, so by the least upper bound axiom it has a supremum $l$. Given $epsilon > 0$, the number $l - epsilon$ is not an upper bound, so some $a_N > l - epsilon$; since the sequence is increasing, $l - epsilon < a_n <= l$ for all $n >= N$, giving $abs(a_n - l) < epsilon$ and hence $a_n -> l$. The decreasing case is similar.
+
+For an increasing sequence, boundedness above alone suffices. Boundedness as such cannot be dropped: $a_n = n$ increases without bound and diverges. The theorem is in fact equivalent to the least upper bound axiom, and every sequence has a monotonic subsequence.

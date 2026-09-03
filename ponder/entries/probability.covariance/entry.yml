@@ -1,0 +1,27 @@
+id: probability.covariance
+kind: definition
+title: Covariance
+aliases: [covariances]
+tags: [probability, dependence]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-covariance, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-covariance}
+  - title: Properties
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-covariance-properties}
+  - title: Proof of the product formula and the variance of a sum
+    kind: proof
+    supplemental: proof.typ
+  - title: Independence implies zero covariance
+    kind: lemma
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: lem-independent-uncorrelated}
+  - title: Zero covariance does not imply independence
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: exm-uncorrelated-dependent}
+  - title: Variance of a sum of independent random variables
+    kind: corollary
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: cor-variance-sum-independent}
+related: [probability.variance, probability.independence-of-random-variables, probability.expectation]

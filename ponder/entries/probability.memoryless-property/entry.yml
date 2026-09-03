@@ -1,0 +1,15 @@
+id: probability.memoryless-property
+kind: definition
+title: Memoryless Property
+aliases: [memoryless, memorylessness, memoryless property of the exponential distribution]
+tags: [probability, exponential distribution, characterisation]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: prop-memoryless-exponential, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: prop-memoryless-exponential}
+  - title: Characterisation of the exponential distribution
+    kind: theorem
+    supplemental: characterisation.typ
+related: [probability.exponential-distribution, probability.conditional-probability]

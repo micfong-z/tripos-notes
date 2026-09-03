@@ -1,0 +1,12 @@
+id: algebra.special-linear-group
+kind: definition
+title: Special Linear Group
+aliases: [special linear group]
+tags: [linear algebra, matrices, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: special-linear-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: special-linear-group}
+related: [algebra.general-linear-group, algebra.subgroup, algebra.homomorphism, algebra.isomorphism-theorem]

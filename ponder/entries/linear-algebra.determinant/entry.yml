@@ -1,0 +1,36 @@
+id: linear-algebra.determinant
+kind: definition
+title: Determinant
+aliases:
+  - determinants
+  - det
+tags:
+  - matrices
+  - determinants
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-determinant
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Determinants in low dimensions
+    kind: example
+    supplemental: low-dimensions.typ
+  - title: Properties of the determinant
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+      label: prop-determinant-properties
+      kind: proposition
+  - title: Proof of selected properties
+    kind: proof
+    supplemental: proof.typ
+related:
+  - linear-algebra.alternating-form
+  - linear-algebra.scalar-triple-product
+  - algebra.determinant-multiplicativity
+  - linear-algebra.laplace-expansion
+  - algebra.matrix-invertibility

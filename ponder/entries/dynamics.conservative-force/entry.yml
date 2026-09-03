@@ -1,0 +1,25 @@
+id: dynamics.conservative-force
+kind: definition
+title: Conservative force
+aliases: [conservative forces]
+tags: [mechanics, forces, energy]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: def-conservative-force, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: def-conservative-force}
+  - title: Path independence of work
+    kind: proposition
+    source:
+      document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ
+      label: prop-work-endpoints
+      kind: proposition
+      referenceTarget: true
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Proof (Direct)
+    kind: proof
+    supplemental: proof-direct.typ
+related: [dynamics.conservation-of-energy, dynamics.gravitational-force, dynamics.newtons-second-law]

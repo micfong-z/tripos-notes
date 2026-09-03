@@ -1,0 +1,25 @@
+id: set-theory.strong-weak-induction-equivalence
+kind: proposition
+title: "Equivalence of strong and weak induction"
+aliases:
+  - "SPI iff WPI"
+  - "strong and weak induction"
+tags:
+  - "induction"
+  - "proof-techniques"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "prop-spi-wpi", kind: proposition}
+sections:
+  - title: "Statement"
+    kind: proposition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "prop-spi-wpi"}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "Why ordering is needed"
+    kind: remark
+    supplemental: ordering.typ
+related:
+  - set-theory.peano-axioms
+  - set-theory.well-ordering-principle
+  - set-theory.strong-induction-well-ordering

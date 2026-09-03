@@ -1,0 +1,12 @@
+id: algebra.transposition
+kind: definition
+title: Transposition
+aliases: [transposition, 2-cycle]
+tags: [permutations, cycles]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: transposition, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: transposition}
+related: [algebra.cycle, algebra.permutation, algebra.transposition-generation, algebra.adjacent-transposition]

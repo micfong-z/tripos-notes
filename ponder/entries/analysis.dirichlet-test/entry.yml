@@ -1,0 +1,12 @@
+id: analysis.dirichlet-test
+kind: proposition
+title: Dirichlet test
+aliases: []
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: dirichlet-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: dirichlet-test}
+related: [analysis.alternating-series-test, analysis.series]

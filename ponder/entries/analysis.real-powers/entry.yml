@@ -1,0 +1,18 @@
+id: analysis.real-powers
+kind: definition
+title: Real Powers
+aliases: [general powers, real exponentiation]
+tags: [analysis, exponentiation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: lemma-general-powers, kind: lemma}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: lemma-general-powers}
+  - title: Rational powers
+    kind: corollary
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: corollary-rational-powers}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.exponential-function, analysis.natural-logarithm, analysis.growth-rate-comparisons]

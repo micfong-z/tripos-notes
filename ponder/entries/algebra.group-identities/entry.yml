@@ -1,0 +1,15 @@
+id: algebra.group-identities
+kind: proposition
+title: Basic Group Identities
+aliases: [uniqueness of inverses, uniqueness of identity]
+tags: [groups, identities]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: prop-group1, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: prop-group1}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

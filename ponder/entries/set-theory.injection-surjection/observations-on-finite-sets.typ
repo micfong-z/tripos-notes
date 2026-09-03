@@ -1,0 +1,1 @@
+$f$ is surjective if and only if $f(A) = B$. For finite sets $A$ and $B$: if $|B| > |A|$ there is no surjective function from $A$ to $B$; if $|A| > |B|$ there is no injection from $A$ to $B$; and for $f: A -> A$ with $A$ finite, $f$ is injective if and only if it is surjective.

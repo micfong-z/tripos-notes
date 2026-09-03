@@ -1,0 +1,1 @@
+The trivial subgroup and the whole group are normal in any group. Every subgroup of an abelian group is normal. In the dihedral group, $lr(chevron.l r chevron.r) nsub D_(2n)$, while $lr(chevron.l s chevron.r)$ is not normal. The kernel of a group homomorphism is normal.

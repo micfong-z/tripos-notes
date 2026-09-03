@@ -1,0 +1,12 @@
+id: probability.stochastic-process
+kind: definition
+title: Stochastic Process
+aliases: [random process, stochastic processes, random processes]
+tags: [probability, stochastic processes]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-stochastic-process, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-stochastic-process}
+related: [probability.random-variable, probability.random-walk]

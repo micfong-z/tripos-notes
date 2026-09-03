@@ -1,0 +1,15 @@
+id: probability.moment
+kind: definition
+title: Moment
+aliases: [moments, r-th moment, second moment]
+tags: [probability, moments]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-moment, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-moment}
+  - title: Moments and the variance
+    kind: remark
+    supplemental: variance.typ
+related: [probability.expectation, probability.variance, probability.probability-generating-function]

@@ -1,0 +1,15 @@
+id: probability.marginal-density-function
+kind: definition
+title: Marginal Density Function
+aliases: [marginal density function, marginal density, marginal densities]
+tags: [probability, distributions, vectors]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-marginal-density-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-marginal-density-function}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.multivariate-density-function, probability.joint-distribution]

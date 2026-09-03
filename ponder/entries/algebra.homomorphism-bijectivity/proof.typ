@@ -1,0 +1,1 @@
+Surjectivity is equivalent to $im phi = H$ by the definition of image. If $phi$ is injective, then $ker phi = phi^(-1)(e_H)$ has at most one element, and it contains $e_G$. Conversely, if $ker phi = 1_G$ and $phi(g_1) = phi(g_2)$, then $phi(g_1 g_2^(-1)) = e_H$, so $g_1 g_2^(-1) = e_G$ and $g_1 = g_2$.

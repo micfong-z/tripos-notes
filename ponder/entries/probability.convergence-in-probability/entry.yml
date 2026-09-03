@@ -1,0 +1,12 @@
+id: probability.convergence-in-probability
+kind: definition
+title: Convergence in Probability
+aliases: [converges in probability]
+tags: [probability, convergence, limit theorems]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: def-convergence-in-probability, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: def-convergence-in-probability}
+related: [probability.convergence-almost-surely, probability.convergence-in-distribution, probability.random-variable]

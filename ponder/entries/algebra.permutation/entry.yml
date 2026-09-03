@@ -1,0 +1,12 @@
+id: algebra.permutation
+kind: definition
+title: Permutation
+aliases: [permutation]
+tags: [functions, symmetric groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: def-permutation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: def-permutation}
+related: []

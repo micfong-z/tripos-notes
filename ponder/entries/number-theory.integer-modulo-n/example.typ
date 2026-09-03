@@ -1,0 +1,1 @@
+Does $2a^2 + 3b^3 = 1$ have a solution with $a, b in ZZ$? If there is a solution, then reducing modulo $3$ gives $2a^2 equiv 1 mod 3$. But squares are only $0$ or $1$ modulo $3$, so $2a^2$ can only be $0$ or $2$ modulo $3$, never $1$. Thus there are no integer solutions.

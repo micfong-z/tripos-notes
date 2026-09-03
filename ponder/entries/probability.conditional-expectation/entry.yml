@@ -1,0 +1,57 @@
+id: probability.conditional-expectation
+kind: definition
+title: Conditional Expectation
+aliases: [conditional expectations, conditioning]
+tags: [probability, expectation, conditioning]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-conditional-expectation, kind: definition}
+sections:
+  - title: Definition given an event
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-conditional-expectation}
+  - title: Definition given a random variable
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-conditional-expectation-random-variable}
+  - title: A random variable that is a function of Y
+    kind: remark
+    supplemental: function.typ
+  - title: Tower property
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-tower-property-expectation}
+  - title: Proof of the tower property
+    kind: proof
+    supplemental: tower-proof.typ
+  - title: Independence makes the conditional expectation constant
+    kind: proposition
+    source:
+      document: part-ia/probability/chapters/chapter-3.typ
+      label: prop-tower-property
+      referenceTarget: true
+  - title: Proof of the independence case
+    kind: proof
+    supplemental: independence-proof.typ
+  - title: Iterated conditioning
+    kind: proposition
+    source:
+      document: part-ia/probability/chapters/chapter-3.typ
+      label: prop-tower-property-2
+      referenceTarget: true
+  - title: Proof of iterated conditioning
+    kind: proof
+    supplemental: iterating.typ
+  - title: Linearity in X
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-conditional-expectation-linearity}
+  - title: Pulling out known factors
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-conditional-expectation-pulling}
+  - title: Proof of pulling out known factors
+    kind: proof
+    supplemental: pulling-proof.typ
+  - title: Idempotence
+    kind: corollary
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: cor-conditional-expectation-idempotent}
+  - title: "Example: coin tossing"
+    kind: example
+    supplemental: coins.typ
+related: [probability.conditional-probability, probability.conditional-distribution, probability.law-of-total-expectation, probability.expectation, probability.independence-of-random-variables, set-theory.indicator-function]

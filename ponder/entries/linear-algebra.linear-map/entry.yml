@@ -1,0 +1,25 @@
+id: linear-algebra.linear-map
+kind: definition
+title: Linear map
+aliases:
+  - linear maps
+tags:
+  - linear maps
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-linear-map
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Operations on linear maps
+    kind: remark
+    supplemental: operations.typ
+related:
+  - linear-algebra.vector-space
+  - linear-algebra.kernel-image
+  - linear-algebra.rank-nullity-theorem
+  - linear-algebra.matrix-representation

@@ -1,0 +1,15 @@
+id: algebra.groups-of-order-8
+kind: lemma
+title: Groups of Order 8
+aliases: [classification of groups of order 8]
+tags: [groups, finite groups, classification, cyclic groups, dihedral groups, quaternion groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-6.typ, label: groups-of-order-8, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-6.typ, label: groups-of-order-8}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.group-order, algebra.element-order, algebra.lagrange-theorem, algebra.cyclic-group, algebra.direct-product-theorem, algebra.dihedral-group, algebra.dihedral-relation, algebra.quaternion-group, algebra.isomorphism]

@@ -1,0 +1,15 @@
+id: algebra.dihedral-group
+kind: definition
+title: Dihedral Group
+aliases: [dihedral group]
+tags: [groups, symmetries, geometry]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: dihedral-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: dihedral-group}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: []

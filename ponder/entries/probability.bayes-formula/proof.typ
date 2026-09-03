@@ -1,0 +1,1 @@
+By definition of conditional probability, $PP(B_k mid(|) A) = PP(B_k inter A) \/ PP(A)$. The numerator rewrites as $PP(B_k inter A) = PP(A mid(|) B_k) PP(B_k)$, and the law of total probability expands the denominator as $PP(A) = sum_n PP(A mid(|) B_n) PP(B_n)$.

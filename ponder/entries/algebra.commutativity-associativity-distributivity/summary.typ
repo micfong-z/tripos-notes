@@ -1,0 +1,1 @@
+A binary operation $*$ is *commutative* when $x * y = y * x$, *associative* when $x * (y * z) = (x * y) * z$, and *distributive* over $dot.o$ when $x * (y dot.o z) = (x * y) dot.o (x * z)$ and $(y dot.o z) * x = (y * x) dot.o (z * x)$.

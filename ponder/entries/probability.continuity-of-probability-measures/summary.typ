@@ -1,0 +1,1 @@
+For an increasing sequence $(A_n)$ in $cal(F)$ with $A_n subset.eq A_(n+1)$, the numbers $PP(A_n)$ increase to $PP(union.big_(n in NN) A_n)$; for a decreasing sequence with $A_n supset.eq A_(n+1)$, they decrease to $PP(inter.big_(n in NN) A_n)$.

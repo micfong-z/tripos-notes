@@ -1,0 +1,18 @@
+id: probability.conditional-density-function
+kind: definition
+title: Conditional Density Function
+aliases: [conditional density function, conditional density, conditional densities]
+tags: [probability, conditioning, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-conditional-density-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-conditional-density-function}
+  - title: Law of total probability for densities
+    kind: proposition
+    supplemental: law-of-total-probability.typ
+  - title: Conditional expectation via the conditional density
+    kind: remark
+    supplemental: conditional-expectation.typ
+related: [probability.conditional-distribution, probability.conditional-expectation, probability.multivariate-density-function, probability.marginal-density-function, probability.law-of-total-probability]

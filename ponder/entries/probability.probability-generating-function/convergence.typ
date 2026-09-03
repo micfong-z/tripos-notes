@@ -1,0 +1,1 @@
+Since $p_r >= 0$ and $sum_(r=0)^oo p_r = 1$, the series $p(z) = sum_(r=0)^oo p_r z^r$ converges absolutely for $abs(z) <= 1$. The radius of convergence of $p(z)$ is at least $1$, so $p(z)$ is well-defined on the closed unit disc.

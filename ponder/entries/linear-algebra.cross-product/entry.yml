@@ -1,0 +1,29 @@
+id: linear-algebra.cross-product
+kind: definition
+title: Cross product
+aliases:
+  - vector product
+  - cross products
+  - vector products
+tags:
+  - products
+  - geometry
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: cross-product
+  kind: definition
+sections:
+  - title: Properties
+    kind: proposition
+    supplemental: properties.typ
+  - title: Geometric interpretations
+    kind: proposition
+    supplemental: geometry.typ
+  - title: Component expression
+    kind: example
+    supplemental: components.typ
+related:
+  - linear-algebra.dot-product
+  - linear-algebra.scalar-triple-product
+  - linear-algebra.vector-triple-product

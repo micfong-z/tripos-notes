@@ -1,0 +1,23 @@
+id: analysis.convergent-sequence-bounded
+kind: proposition
+title: Convergent sequences are bounded
+aliases:
+  - limits preserve boundedness
+tags:
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: prop-convergent-bounded
+  kind: proposition
+sections:
+  - title: Statement
+    kind: proposition
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+
+related:
+  - analysis.sequence-convergence
+  - analysis.bounded-sequence

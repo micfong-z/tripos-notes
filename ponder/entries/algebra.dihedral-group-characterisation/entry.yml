@@ -1,0 +1,15 @@
+id: algebra.dihedral-group-characterisation
+kind: proposition
+title: Characterisation of Dihedral Groups
+aliases: [dihedral group characterisation]
+tags: [groups, dihedral groups, isomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: prop-groups-of-dihderal-type, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: prop-groups-of-dihderal-type}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.dihedral-group, algebra.dihedral-homomorphism, algebra.generated-subgroup, algebra.isomorphism]

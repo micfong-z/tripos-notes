@@ -1,0 +1,1 @@
+Differentiating the derivative map repeatedly: $f$ is twice differentiable when $f': X -> CC$ is itself differentiable, and inductively $n$ times differentiable; $f in C^k (X)$ when $f^((k))$ exists and is continuous.

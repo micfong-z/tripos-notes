@@ -1,0 +1,1 @@
+Define $Phi: H_1 times H_2 -> G$ by $(h_1, h_2) |-> h_1 h_2$. Commutativity of the two subgroups makes $Phi$ a homomorphism, and $G = H_1 H_2$ makes it surjective. If $Phi(h_1, h_2) = e$, then $h_2 = h_1^(-1)$ lies in $H_1 inter H_2 = {e}$, so $(h_1, h_2) = (e, e)$ and $Phi$ is injective.

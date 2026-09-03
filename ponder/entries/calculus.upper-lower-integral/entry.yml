@@ -1,0 +1,15 @@
+id: calculus.upper-lower-integral
+kind: definition
+title: Upper/Lower Integral
+aliases: [lower integral, upper integral]
+tags: [integration, riemann integration]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: upper-lower-integral, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: upper-lower-integral}
+  - title: Ordering of the two integrals
+    kind: remark
+    supplemental: ordering.typ
+related: [calculus.upper-lower-riemann-sums, calculus.riemann-integrable-function, calculus.riemann-integral, calculus.partition-refinement]

@@ -1,0 +1,12 @@
+id: probability.simple-random-walk
+kind: definition
+title: Simple Random Walk
+aliases: [simple random walks, simple symmetric random walk, SSRW]
+tags: [probability, stochastic processes, random walks]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-simple-random-walk, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-simple-random-walk}
+related: [probability.random-walk, probability.gamblers-ruin]

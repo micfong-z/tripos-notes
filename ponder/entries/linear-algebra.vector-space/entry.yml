@@ -1,0 +1,23 @@
+id: linear-algebra.vector-space
+kind: definition
+title: Vector space
+aliases:
+  - vector spaces
+  - real vector space
+  - complex vector space
+tags:
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: def-vector-space-over-rr-cc
+  kind: definition
+sections:
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - algebra.abelian-group
+  - linear-algebra.subspace
+  - linear-algebra.linear-combination
+  - linear-algebra.basis

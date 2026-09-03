@@ -1,0 +1,12 @@
+id: calculus.smooth-function
+kind: definition
+title: Smoothness
+aliases: [smooth function, smooth, C^infinity, infinitely differentiable]
+tags: [analysis, differentiation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: smooth-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: smooth-function}
+related: [calculus.higher-derivatives, calculus.taylor-series, calculus.analytic-function]

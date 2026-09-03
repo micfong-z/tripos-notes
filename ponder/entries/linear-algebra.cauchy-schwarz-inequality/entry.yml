@@ -1,0 +1,23 @@
+id: linear-algebra.cauchy-schwarz-inequality
+kind: theorem
+title: Cauchy-Schwarz inequality
+aliases:
+  - Cauchy-Schwarz
+tags:
+  - inequalities
+  - inner products
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: cauchy-schwarz
+  kind: theorem
+sections:
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Observations
+    kind: remark
+    supplemental: observations.typ
+related:
+  - linear-algebra.dot-product
+  - linear-algebra.triangle-inequality

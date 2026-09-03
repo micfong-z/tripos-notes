@@ -1,0 +1,1 @@
+$matbold(P)^(-1) matbold(A) matbold(P) = matbold(D)$ diagonal for some invertible $matbold(P)$, equivalently a basis of eigenvectors exists; this holds exactly when $M_lambda = m_lambda$ for every eigenvalue $lambda$.

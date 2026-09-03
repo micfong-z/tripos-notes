@@ -1,0 +1,12 @@
+id: probability.probability-measure-properties
+kind: proposition
+title: Properties of Probability Measures
+aliases: [properties of probability measures]
+tags: [probability, measures]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-1.typ, label: prop-probability-properties, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-1.typ, label: prop-probability-properties}
+related: [probability.probability-space, combinatorics.inclusion-exclusion-principle]

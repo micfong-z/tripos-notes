@@ -1,0 +1,15 @@
+id: algebra.matrix-change-of-basis
+kind: proposition
+title: Change of Basis for Matrices
+aliases: [matrix change of basis, change of basis]
+tags: [linear algebra, matrices, conjugation]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: matrix-change-of-basis, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: matrix-change-of-basis}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.conjugation, algebra.orbit-stabiliser-definitions, algebra.isomorphism, algebra.general-linear-group]

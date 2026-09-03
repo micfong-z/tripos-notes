@@ -1,0 +1,18 @@
+id: calculus.monotonicity-criterion
+kind: corollary
+title: Monotonicity criterion
+aliases: [sign of the derivative, corollary of the mean value theorem]
+tags: [analysis, differentiation, monotonicity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: corollary-mean-value-theorem, kind: corollary}
+sections:
+  - title: Corollary
+    kind: corollary
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: corollary-mean-value-theorem}
+  - title: Constant functions on the complex plane
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: constant-function-complex}
+  - title: The interval hypothesis cannot be dropped
+    kind: warning
+    supplemental: warning.typ
+related: [calculus.mean-value-theorem, analysis.monotone-function, analysis.completeness-of-reals, calculus.derivative]

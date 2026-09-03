@@ -1,0 +1,19 @@
+id: linear-algebra.kronecker-delta
+kind: definition
+title: Kronecker delta
+aliases: []
+tags:
+  - index notation
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: kronecker-delta
+  kind: definition
+sections:
+  - title: Properties
+    kind: proposition
+    supplemental: properties.typ
+related:
+  - linear-algebra.levi-civita-symbol
+  - linear-algebra.einstein-summation-convention
+  - linear-algebra.orthonormal

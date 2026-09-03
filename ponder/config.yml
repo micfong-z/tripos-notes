@@ -1,0 +1,3 @@
+# Profile used when a command is run without --course or --config.
+# Course settings live in ponder/courses/<course>.yml.
+defaultCourse: groups

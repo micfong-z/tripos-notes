@@ -1,0 +1,15 @@
+id: calculus.integration-by-substitution
+kind: proposition
+title: Integration by Substitution
+aliases: [change of variables for integrals]
+tags: [integration, technique]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: integration-by-substitution, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: integration-by-substitution}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.chain-rule, calculus.fundamental-theorem-of-calculus, calculus.improper-integral]

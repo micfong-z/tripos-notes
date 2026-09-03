@@ -1,0 +1,24 @@
+id: linear-algebra.parallel-vectors
+kind: definition
+title: Parallel vectors
+aliases:
+  - parallel
+  - parallelism
+tags:
+  - vectors
+  - geometry
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: parallel-vectors
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+      label: parallel-vectors
+      kind: definition
+related:
+  - linear-algebra.orthogonality
+  - linear-algebra.dot-product

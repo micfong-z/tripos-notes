@@ -1,0 +1,18 @@
+id: analysis.comparison-test
+kind: proposition
+title: Comparison test
+aliases: [direct comparison test]
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: comparison-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: comparison-test}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Example
+    kind: example
+    supplemental: examples.typ
+related: [analysis.series, analysis.root-test, analysis.integral-test, analysis.monotone-convergence-theorem]

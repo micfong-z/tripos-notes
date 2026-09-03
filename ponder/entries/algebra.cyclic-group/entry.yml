@@ -1,0 +1,15 @@
+id: algebra.cyclic-group
+kind: definition
+title: Cyclic Group
+aliases: [cyclic group, generator]
+tags: [groups, cyclic groups, generation]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: cyclic-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: cyclic-group}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.group, algebra.generated-subgroup, algebra.isomorphism]

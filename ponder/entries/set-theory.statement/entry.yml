@@ -1,0 +1,22 @@
+id: set-theory.statement
+kind: definition
+title: Statement
+aliases:
+  - assertion
+tags:
+  - logic
+  - foundations
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-1.typ
+  label: def-statement
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: In logic
+    kind: remark
+    supplemental: body.typ
+related:
+  - set-theory.proof

@@ -1,0 +1,15 @@
+id: analysis.continuity-preserves-closedness-boundedness
+kind: proposition
+title: Continuity preserves closedness and boundedness
+aliases: [continuous image of a closed bounded set]
+tags: [analysis, continuity, topology]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: prop-continuity-preserves-closedness-and-boundedness, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: prop-continuity-preserves-closedness-and-boundedness}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.closed-set, analysis.bounded-set, analysis.bolzano-weierstrass-theorem, analysis.extreme-value-theorem]

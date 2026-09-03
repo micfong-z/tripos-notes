@@ -1,0 +1,1 @@
+For a right inverse $b$ of $a$, choose a right inverse $c$ of $b$ and use associativity to obtain $b dot a = e$. This gives left identities as right identities. The same identities show that two inverses of $a$ are equal, and that two identity elements are equal.

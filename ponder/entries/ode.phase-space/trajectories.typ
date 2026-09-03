@@ -1,0 +1,1 @@
+For autonomous systems there is one trajectory through each point of phase space, except at fixed points. The direction of motion along a trajectory follows by evaluating $bold(dot(Y))$ at sample points: for example, if $dot(y)_2 > 0$ at $matbold(Y) = vec(1, 0)$, then motion is upwards at that point, so the direction of motion is counter-clockwise.

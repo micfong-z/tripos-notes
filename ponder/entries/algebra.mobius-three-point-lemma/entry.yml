@@ -1,0 +1,15 @@
+id: algebra.mobius-three-point-lemma
+kind: lemma
+title: Three-Point Lemma for Möbius Transformations
+aliases: [three-point lemma]
+tags: [transformations, uniqueness, fixed points]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: three-point-lemma-mobius, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: three-point-lemma-mobius}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.mobius-group, algebra.mobius-transformation, algebra.fixed-point]

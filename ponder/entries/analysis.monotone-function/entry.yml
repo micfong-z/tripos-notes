@@ -1,0 +1,12 @@
+id: analysis.monotone-function
+kind: definition
+title: Monotone function
+aliases: [monotone functions, strictly monotone, monotonic function]
+tags: [analysis, functions, order]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: monotone-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: monotone-function}
+related: [analysis.monotonic-sequence, analysis.inverse-function-theorem]

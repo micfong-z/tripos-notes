@@ -1,0 +1,21 @@
+id: linear-algebra.span
+kind: definition
+title: Span
+aliases:
+  - spanned
+tags:
+  - vectors
+  - span
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: span
+  kind: definition
+sections:
+  - title: Geometry
+    kind: remark
+    supplemental: plane.typ
+related:
+  - linear-algebra.linear-combination
+  - linear-algebra.spanning-set
+  - linear-algebra.subspace

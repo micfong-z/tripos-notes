@@ -1,0 +1,25 @@
+id: linear-algebra.laplace-expansion
+kind: theorem
+title: Laplace expansion formula
+aliases:
+  - cofactor expansion
+  - Laplace expansion
+tags:
+  - determinants
+  - computation
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: thm-laplace-expansion
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - linear-algebra.cofactor
+  - linear-algebra.minor
+  - linear-algebra.determinant

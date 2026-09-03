@@ -1,0 +1,1 @@
+The signature of a real symmetric matrix $matbold(H)$ is the pattern of signs of the ordered determinants $abs(matbold(H_1)), abs(matbold(H_2)), ..., abs(matbold(H_N)) = abs(matbold(H))$ of the leading principal minors of $matbold(H)$.

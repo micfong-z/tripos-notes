@@ -1,0 +1,15 @@
+id: ode.predator-prey-model
+kind: definition
+title: Predator-Prey Model
+aliases: [predator-prey equations, prey-predator model]
+tags: [ordinary differential equations, dynamical systems, population models]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: predator-prey-model, kind: example}
+sections:
+  - title: Predator-prey model
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: predator-prey-model}
+  - title: Interpretation of the terms
+    kind: remark
+    supplemental: interpretation.typ
+related: [ode.equilibrium-point, ode.equilibrium-stability, ode.autonomous-system, ode.logistic-equation]

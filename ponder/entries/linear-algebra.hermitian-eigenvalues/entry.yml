@@ -1,0 +1,27 @@
+id: linear-algebra.hermitian-eigenvalues
+kind: theorem
+title: Eigenvalues of Hermitian matrices
+aliases:
+  - Hermitian eigenvalues are real
+  - orthogonality of Hermitian eigenvectors
+tags:
+  - Hermitian matrices
+  - eigenvalues
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: thm-hermitian-eigenvalues
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - linear-algebra.hermitian-matrix
+  - linear-algebra.symmetric-matrix
+  - linear-algebra.eigenvalue-eigenvector
+  - linear-algebra.orthogonality
+  - linear-algebra.hermitian-diagonalisation

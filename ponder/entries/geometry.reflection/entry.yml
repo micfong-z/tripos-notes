@@ -1,0 +1,12 @@
+id: geometry.reflection
+kind: definition
+title: Reflection
+aliases: [reflection in a hyperplane]
+tags: [geometry, linear algebra, orthogonal transformations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: reflection, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: reflection}
+related: [algebra.orthogonal-group, algebra.special-orthogonal-group, geometry.reflection-properties]

@@ -1,0 +1,15 @@
+id: dynamics.centrifugal-force
+kind: definition
+title: Centrifugal force
+aliases: [centrifugal forces]
+tags: [mechanics, rotating-frames, forces]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-6.typ, label: ex-hanging-string, kind: example}
+sections:
+  - title: Hanging string on Earth
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-6.typ, label: ex-hanging-string}
+  - title: Force and potential
+    kind: definition
+    supplemental: body.typ
+related: [dynamics.coriolis-force, dynamics.conservative-force, dynamics.circular-motion]

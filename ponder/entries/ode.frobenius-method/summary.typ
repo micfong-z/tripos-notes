@@ -1,0 +1,1 @@
+At a regular singular point, seek $y(x) = sum_(n=0)^oo a_n (x - x_0)^(n+sigma) = (x - x_0)^sigma sum_(n=0)^oo a_n (x - x_0)^n$ with $a_0 != 0$; matching the lowest power of $x$ gives the indicial equation for $sigma$.

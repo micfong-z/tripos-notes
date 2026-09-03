@@ -1,0 +1,15 @@
+id: calculus.integration-by-parts
+kind: proposition
+title: Integration by Parts
+aliases: []
+tags: [integration, technique]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: integration-by-parts, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: integration-by-parts}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.product-rule, calculus.fundamental-theorem-of-calculus, calculus.integral-remainder]

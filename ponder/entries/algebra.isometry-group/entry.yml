@@ -1,0 +1,15 @@
+id: algebra.isometry-group
+kind: proposition
+title: Isometry Group
+aliases: [group of isometries]
+tags: [groups, geometry, isometries]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: isometry-group, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: isometry-group}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

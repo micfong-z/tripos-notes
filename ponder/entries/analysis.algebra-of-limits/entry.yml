@@ -1,0 +1,18 @@
+id: analysis.algebra-of-limits
+kind: lemma
+title: Algebra of limits
+aliases: [arithmetic of limits, sum and product of limits]
+tags: [analysis, sequences, limits]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: algebra-of-limits, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: algebra-of-limits}
+  - title: Product rule
+    kind: proof
+    supplemental: product-proof.typ
+  - title: Function limits
+    kind: lemma
+    supplemental: functions.typ
+related: [analysis.sequence-convergence, analysis.convergent-sequence-bounded, analysis.limit-of-function]

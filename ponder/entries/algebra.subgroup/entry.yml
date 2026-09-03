@@ -1,0 +1,15 @@
+id: algebra.subgroup
+kind: definition
+title: Subgroup
+aliases: [subgroup]
+tags: [groups, subgroups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: def-subgroup, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: def-subgroup}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: []

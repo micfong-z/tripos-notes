@@ -1,0 +1,1 @@
+A probability space $(Omega, cal(F), PP)$ consists of a $sigma$-algebra $cal(F)$ on $Omega$ and a countably additive $PP: cal(F) -> [0, 1]$ with $PP(Omega) = 1$, so $PP(union.big_n A_n) = sum_n PP(A_n)$ for pairwise disjoint $(A_n)$ in $cal(F)$.

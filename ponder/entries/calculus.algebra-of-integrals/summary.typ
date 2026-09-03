@@ -1,0 +1,1 @@
+For integrable $f, g$: order $f <= g$, homogeneity $integral lambda f = lambda integral f$, additivity over sums, $abs(integral_a^b f) <= integral_a^b abs(f)$, and integrability of $f g$ — but generally $integral f g != integral f integral g$.

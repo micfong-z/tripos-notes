@@ -1,0 +1,15 @@
+id: algebra.dihedral-group-order
+kind: theorem
+title: Order of a Dihedral Group
+aliases: [order of a dihedral group]
+tags: [groups, symmetries, counting]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: order-of-dihedral-group, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: order-of-dihedral-group}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: []

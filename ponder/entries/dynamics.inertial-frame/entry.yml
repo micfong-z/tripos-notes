@@ -1,0 +1,15 @@
+id: dynamics.inertial-frame
+kind: definition
+title: Inertial frame
+aliases: [inertial frames, law of inertia]
+tags: [mechanics, frames]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-1.typ, label: law-inertia}
+sections:
+  - title: Law of inertia
+    kind: definition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-1.typ, label: law-inertia}
+  - title: Free particles and Newton's 1st law
+    kind: remark
+    supplemental: body.typ
+related: [dynamics.galilean-relativity-principle, dynamics.galilean-transformation]

@@ -1,0 +1,15 @@
+id: algebra.mobius-triple-transitivity
+kind: lemma
+title: Triple Transitivity of the Möbius Group
+aliases: [triple transitivity, sharply triply transitive]
+tags: [transformations, transitivity, uniqueness]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: triple-transitivity, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: triple-transitivity}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.mobius-three-point-lemma, algebra.mobius-transformation, geometry.cross-ratio]

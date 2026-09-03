@@ -1,0 +1,15 @@
+id: calculus.integral-additivity
+kind: proposition
+title: Additivity of the Integral over Subintervals
+aliases: [additivity over intervals, splitting an integral]
+tags: [integration, riemann integration]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: integral-additivity-over-subintervals, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    supplemental: statement.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.finite-changes-preserve-integral, calculus.piecewise-continuity-implies-integrability, calculus.fundamental-theorem-of-calculus]

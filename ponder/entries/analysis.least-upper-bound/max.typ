@@ -1,0 +1,1 @@
+If $S$ has a greatest element then $sup S = max S in S$, but a least upper bound need not belong to $S$: for $S = (0, 1)$ we have $sup S = 1$ and $1 in.not S$, and likewise $sup{1 - (1)/(n) : n in NN} = 1$ although every element is smaller than $1$.

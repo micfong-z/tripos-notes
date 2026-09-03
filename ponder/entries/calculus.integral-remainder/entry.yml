@@ -1,0 +1,18 @@
+id: calculus.integral-remainder
+kind: theorem
+title: Taylor's theorem with integral remainder
+aliases: [integral remainder, Taylor's Theorem: Integral Remainder]
+tags: [taylor theorem, integration, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: taylor-integral-remainder, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: taylor-integral-remainder}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Consequences
+    kind: corollary
+    supplemental: consequences.typ
+related: [calculus.taylors-theorem, calculus.lagrange-remainder, calculus.cauchy-remainder, calculus.integration-by-parts, calculus.cauchy-mean-value-theorem-for-integrals, calculus.analytic-function]

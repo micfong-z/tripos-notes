@@ -1,0 +1,1 @@
+Matrices with $matbold(M)^tp matbold(J) matbold(M) = matbold(J)$, $det matbold(M) = 1$, $M_(00) > 0$; general form $mat(cosh theta, sinh theta; sinh theta, cosh theta)$ boosts time and space coordinates.

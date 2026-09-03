@@ -1,0 +1,18 @@
+id: calculus.characterization-of-differentiability
+kind: lemma
+title: Characterization of differentiability
+aliases: [affine approximation, error function characterization]
+tags: [analysis, differentiation, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: characterization-of-differentiability, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: characterization-of-differentiability}
+  - title: Error term
+    kind: remark
+    supplemental: body.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.derivative, analysis.limit-of-function, calculus.chain-rule, calculus.little-o]

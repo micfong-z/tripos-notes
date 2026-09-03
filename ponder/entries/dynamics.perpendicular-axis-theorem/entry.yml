@@ -1,0 +1,15 @@
+id: dynamics.perpendicular-axis-theorem
+kind: theorem
+title: Perpendicular axis theorem
+aliases: []
+tags: [mechanics, rigid-bodies, rotation]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: thm-perpendicular-axis-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-5.typ, label: thm-perpendicular-axis-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [dynamics.moment-of-inertia, dynamics.parallel-axis-theorem]

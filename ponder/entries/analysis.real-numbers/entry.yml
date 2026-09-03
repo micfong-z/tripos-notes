@@ -1,0 +1,29 @@
+id: analysis.real-numbers
+kind: definition
+title: Real numbers
+aliases:
+  - reals
+  - real number system
+tags:
+  - analysis
+  - ordered fields
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-real-numbers
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Remarks on the axioms
+    kind: remark
+    supplemental: remarks.typ
+
+  - title: Existence of square roots
+    kind: proposition
+    supplemental: square-roots.typ
+
+related:
+  - analysis.least-upper-bound
+  - analysis.archimedean-property

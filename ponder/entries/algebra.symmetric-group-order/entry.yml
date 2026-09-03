@@ -1,0 +1,12 @@
+id: algebra.symmetric-group-order
+kind: proposition
+title: Order of a Symmetric Group
+aliases: [order of S_n]
+tags: [groups, permutations, counting]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: symmetric-group-order, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: symmetric-group-order}
+related: []

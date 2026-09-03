@@ -1,0 +1,33 @@
+id: linear-algebra.matrix-image-kernel
+kind: proposition
+title: Image and Kernel of a Matrix
+aliases:
+  - column space
+  - image of a matrix
+  - kernel of a matrix
+tags:
+  - matrices
+  - linear maps
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: prop-image-kernel-matrix
+  kind: proposition
+sections:
+  - title: Statement
+    kind: proposition
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Example
+    kind: example
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+      label: ex-image-kernel-matrix
+      kind: example
+related:
+  - linear-algebra.kernel-image
+  - linear-algebra.span
+  - linear-algebra.orthogonality
+  - linear-algebra.matrix-representation

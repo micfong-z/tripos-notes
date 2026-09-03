@@ -1,0 +1,16 @@
+id: analysis.dirac-delta-function
+kind: definition
+title: Dirac Delta Function
+wikidataQID: Q209675
+aliases: [Dirac delta, delta function, unit impulse]
+tags: [distributions, ordinary differential equations, forcing]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: dirac-delta-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: dirac-delta-function}
+  - title: Properties
+    kind: proposition
+    supplemental: properties.typ
+related: [analysis.heaviside-step-function]

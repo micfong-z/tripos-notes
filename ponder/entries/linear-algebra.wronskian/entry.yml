@@ -1,0 +1,19 @@
+id: linear-algebra.wronskian
+kind: definition
+title: Wronskian
+wikidataQID: Q124743
+aliases: [Wronskian determinant]
+tags: [ordinary differential equations, linear algebra, determinants]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: wronskian, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: wronskian}
+  - title: Linear dependence test
+    kind: proposition
+    supplemental: dependence.typ
+  - title: Example
+    kind: example
+    supplemental: example.typ
+related: [linear-algebra.fundamental-matrix, linear-algebra.linearly-dependent-functions, linear-algebra.linearly-independent-functions, ode.abels-theorem]

@@ -1,0 +1,21 @@
+id: linear-algebra.einstein-summation-convention
+kind: definition
+title: Einstein summation convention
+aliases:
+  - Einstein summation
+  - summation convention
+tags:
+  - index notation
+  - notation
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: einstein-summation-convention
+  kind: definition
+sections:
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - linear-algebra.kronecker-delta
+  - linear-algebra.levi-civita-symbol

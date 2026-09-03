@@ -1,0 +1,27 @@
+id: number-theory.liouville-number
+kind: theorem
+title: Liouville number is transcendental
+aliases:
+  - Liouville numbers
+tags:
+  - number-theory
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: thm-liouville-transcendental
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+
+  - title: Criterion
+    kind: remark
+    supplemental: criterion.typ
+
+related:
+  - number-theory.transcendental-number
+  - number-theory.e-irrational

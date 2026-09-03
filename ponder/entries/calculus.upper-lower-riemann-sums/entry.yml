@@ -1,0 +1,15 @@
+id: calculus.upper-lower-riemann-sums
+kind: definition
+title: Upper/Lower Riemann Sums
+aliases: [lower Riemann sum, upper Riemann sum]
+tags: [integration, riemann integration, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: upper-lower-riemann-sums, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: upper-lower-riemann-sums}
+  - title: Bounds for bounded functions
+    kind: remark
+    supplemental: bounds.typ
+related: [calculus.upper-lower-integral, calculus.partition-refinement, calculus.riemann-integrability-criteria]

@@ -1,0 +1,23 @@
+id: linear-algebra.linear-combination
+kind: definition
+title: Linear combination
+aliases:
+  - linear combinations
+tags:
+  - vectors
+  - span
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: linear-combination
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+      label: linear-combination
+      kind: definition
+related:
+  - linear-algebra.span
+  - linear-algebra.linear-independence

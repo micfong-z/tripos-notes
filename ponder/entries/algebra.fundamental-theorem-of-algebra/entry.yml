@@ -1,0 +1,17 @@
+id: algebra.fundamental-theorem-of-algebra
+kind: theorem
+title: Fundamental Theorem of Algebra
+aliases: []
+tags:
+  - polynomials
+  - complex numbers
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-1.typ
+  label: fundamental-theorem-of-algebra
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+related: []

@@ -1,0 +1,23 @@
+id: number-theory.transcendental-number
+kind: definition
+title: Transcendental number
+aliases:
+  - transcendental
+  - transcendental numbers
+tags:
+  - numbers
+  - polynomials
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-1.typ
+  label: def-transcendental-number
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Existence
+    kind: remark
+    supplemental: existence.typ
+related:
+  - number-theory.algebraic-number

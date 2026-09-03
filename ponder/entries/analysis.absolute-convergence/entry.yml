@@ -1,0 +1,23 @@
+id: analysis.absolute-convergence
+kind: definition
+title: Absolute convergence
+aliases: [converge absolutely, absolutely convergent series]
+tags: [analysis, series]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: absolute-convergence, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: absolute-convergence}
+  - title: Absolute convergence implies convergence
+    kind: lemma
+    source:
+      document: part-ia/analysis-i/chapters/chapter-1.typ
+      label: absolute-implies-convergent
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Conditional convergence
+    kind: remark
+    supplemental: conditional.typ
+related: [analysis.series, analysis.series-rearrangements, analysis.alternating-series-test, analysis.root-test, analysis.ratio-test]

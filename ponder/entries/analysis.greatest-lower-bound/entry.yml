@@ -1,0 +1,21 @@
+id: analysis.greatest-lower-bound
+kind: definition
+title: Greatest lower bound
+aliases:
+  - infimum
+  - inf
+tags:
+  - analysis
+  - completeness
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-greatest-lower-bound
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - analysis.least-upper-bound
+  - analysis.bounded-below

@@ -1,0 +1,1 @@
+For continuous decreasing $f: [1, oo) -> [0, oo)$ and $a_n = f(n)$: $sum a_n$ converges exactly when $lim_(n->oo) integral_1^n f(t) dif t$ exists, and $sum_(n=1)^k a_n - integral_1^k f(x) dif x -> l$ for some $l in [0, f(1)]$.

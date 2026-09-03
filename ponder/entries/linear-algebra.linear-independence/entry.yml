@@ -1,0 +1,27 @@
+id: linear-algebra.linear-independence
+kind: definition
+title: Linear independence and dependence
+aliases:
+  - linearly independent
+  - linear independence
+  - linearly dependent
+  - linear dependence
+tags:
+  - vectors
+  - structure
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: linear-independence
+  kind: definition
+sections:
+  - title: Characterisations
+    kind: remark
+    supplemental: characterisations.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - linear-algebra.linear-combination
+  - linear-algebra.basis
+  - linear-algebra.scalar-triple-product

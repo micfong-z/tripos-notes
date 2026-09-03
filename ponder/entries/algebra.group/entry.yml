@@ -1,0 +1,15 @@
+id: algebra.group
+kind: definition
+title: Group
+aliases: [group]
+tags: [algebra, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: def-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: def-group}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: []

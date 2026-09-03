@@ -1,0 +1,1 @@
+$I$ depends on the choice of axis of rotation, since the distances $d_i$ do. The parallel axis theorem makes this precise: $I_"CoM"$, about the axis through the centre of mass, is lower than $I$ about any parallel axis.

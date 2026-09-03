@@ -1,0 +1,1 @@
+The gradient operator is defined by $bold(nabla) f = ((∂ f)/(∂ x), (∂ f)/(∂ y))$, so that $(dif f)/(dif s) = bold(hat(s)) dot bold(nabla) f quad forall bold(hat(s))$. Its direction is the direction of maximum increase of $f$, its magnitude $abs(bold(nabla) f)$ is the maximum rate of change, and $bold(nabla) f$ is perpendicular to the contours of $f(x, y)$.

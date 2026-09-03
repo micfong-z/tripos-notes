@@ -1,0 +1,12 @@
+id: geometry.platonic-solids-classification
+kind: proposition
+title: Classification of Platonic Solids
+aliases: [classification of Platonic solids]
+tags: [geometry, polyhedra, symmetry, classification]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-10.typ, label: platonic-solids-classification, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-10.typ, label: platonic-solids-classification}
+related: [geometry.platonic-solid, geometry.isometry]

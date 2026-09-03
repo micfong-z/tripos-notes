@@ -1,0 +1,28 @@
+id: geometry.quadric
+kind: definition
+title: Quadric
+aliases:
+  - quadrics
+tags:
+  - quadrics
+  - surfaces
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-quadric
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Reduction to principal axes
+    kind: remark
+    supplemental: reduction.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - geometry.conic
+  - linear-algebra.quadratic-form
+  - geometry.isometry
+  - linear-algebra.symmetric-matrix

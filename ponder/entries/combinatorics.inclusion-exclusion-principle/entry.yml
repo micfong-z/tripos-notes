@@ -1,0 +1,29 @@
+id: combinatorics.inclusion-exclusion-principle
+kind: theorem
+title: "Inclusion-Exclusion Principle"
+aliases:
+  - "IEP"
+  - "sieve formula"
+tags:
+  - "counting"
+  - "union"
+  - "intersections"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "thm-inclusion-exclusion", kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "thm-inclusion-exclusion"}
+  - title: "Small cases"
+    kind: example
+    supplemental: examples.typ
+  - title: "Proof via indicator functions"
+    kind: remark
+    supplemental: indicators.typ
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+related:
+  - set-theory.indicator-function
+  - set-theory.union-intersection-properties
+  - set-theory.cardinality

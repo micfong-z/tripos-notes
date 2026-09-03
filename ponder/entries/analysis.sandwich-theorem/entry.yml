@@ -1,0 +1,12 @@
+id: analysis.sandwich-theorem
+kind: proposition
+title: Sandwich theorems
+aliases: [squeeze theorem, squeeze law, sandwich theorem]
+tags: [analysis, sequences, inequalities]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: sandwich-theorems, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: sandwich-theorems}
+related: [analysis.sequence-convergence, analysis.limit-of-sequence]

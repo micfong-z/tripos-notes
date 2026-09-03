@@ -1,0 +1,1 @@
+A random variable $X$ is integrable when $EE[abs(X)] < oo$. Since $abs(X) = X^+ + X^-$, integrability forces both $EE[X^+]$ and $EE[X^-]$ to be finite, so $EE[X] = EE[X^+] - EE[X^-]$ is well-defined and finite.

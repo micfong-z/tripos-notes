@@ -1,0 +1,15 @@
+id: dynamics.circular-motion
+kind: definition
+title: Uniform circular motion
+aliases: [circular motion at constant angular speed, circular orbit]
+tags: [mechanics, orbits, polar-coordinates]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-3.typ, label: ex-circular-motion, kind: example}
+sections:
+  - title: Circular motion at constant angular speed
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-3.typ, label: ex-circular-motion}
+  - title: Radial and tangential components
+    kind: corollary
+    supplemental: components.typ
+related: [dynamics.newtons-second-law, dynamics.keplers-laws]

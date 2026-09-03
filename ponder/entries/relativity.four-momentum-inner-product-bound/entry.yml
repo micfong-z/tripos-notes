@@ -1,0 +1,18 @@
+id: relativity.four-momentum-inner-product-bound
+kind: lemma
+title: Inner product bound for 4-momenta
+aliases: [four-momentum inner product bound]
+tags: [relativity, four-vectors, particle physics]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-7.typ, label: lemma-four-momentum-inner-product, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-7.typ, label: lemma-four-momentum-inner-product}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Use in particle creation
+    kind: remark
+    supplemental: creation.typ
+related: [relativity.lorentz-group, relativity.minkowski-space]

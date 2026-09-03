@@ -1,0 +1,15 @@
+id: calculus.differentiability-implies-continuity
+kind: theorem
+title: Differentiability implies continuity
+aliases: [differentiable functions are continuous]
+tags: [analysis, differentiation, continuity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: differentiability-implies-continuity, kind: lemma}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: differentiability-implies-continuity}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.derivative, analysis.continuity, calculus.characterization-of-differentiability]

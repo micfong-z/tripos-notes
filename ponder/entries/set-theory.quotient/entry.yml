@@ -1,0 +1,21 @@
+id: set-theory.quotient
+kind: definition
+title: Quotient of a Set by a Relation
+aliases:
+  - quotient set
+tags:
+  - relations
+  - sets
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-quotient, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-quotient}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - set-theory.equivalence-class
+  - set-theory.quotient-map
+  - set-theory.equivalence-relation

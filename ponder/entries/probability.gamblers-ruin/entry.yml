@@ -1,0 +1,15 @@
+id: probability.gamblers-ruin
+kind: example
+title: Gambler's Ruin
+aliases: [gambler's ruin, gamblers ruin problem, ruin probability]
+tags: [probability, random walks, hitting times]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: exm-gamblers-ruin, kind: example}
+sections:
+  - title: Hitting probabilities for the gambler's ruin
+    kind: example
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: exm-gamblers-ruin}
+  - title: Time to absorption
+    kind: example
+    supplemental: absorption.typ
+related: [probability.simple-random-walk, probability.random-walk, probability.law-of-total-expectation]

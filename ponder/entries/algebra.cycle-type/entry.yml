@@ -1,0 +1,12 @@
+id: algebra.cycle-type
+kind: definition
+title: Cycle Type
+aliases: [cycle type]
+tags: [permutations, cycles, partitions]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: cycle-type, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: cycle-type}
+related: [algebra.cycle, algebra.disjoint-cycle-decomposition, algebra.symmetric-group-conjugacy, algebra.element-order]

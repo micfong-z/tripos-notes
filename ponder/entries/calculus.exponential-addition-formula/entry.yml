@@ -1,0 +1,12 @@
+id: calculus.exponential-addition-formula
+kind: proposition
+title: Exponential Addition Formula
+aliases: [exponential product law, exp(a+b)]
+tags: [differential equations, exponential, calculus]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: exponential-addition-formula, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: exponential-addition-formula}
+related: [calculus.exponential-function]

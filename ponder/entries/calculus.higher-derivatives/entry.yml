@@ -1,0 +1,15 @@
+id: calculus.higher-derivatives
+kind: definition
+title: Higher derivatives
+aliases: [twice differentiable, thrice differentiable, n times differentiable, k-times continuously differentiable, C^k]
+tags: [analysis, differentiation]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: higher-derivatives, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: higher-derivatives}
+  - title: Lower orders are continuous
+    kind: remark
+    supplemental: lower-orders.typ
+related: [calculus.derivative, calculus.smooth-function, calculus.taylor-polynomial, analysis.continuity]

@@ -1,0 +1,12 @@
+id: geometry.riemann-sphere
+kind: definition
+title: Riemann Sphere
+aliases: [Riemann sphere]
+tags: [complex analysis, geometry]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: riemann-sphere, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: riemann-sphere}
+related: [algebra.mobius-transformation, geometry.circle-in-riemann-sphere]

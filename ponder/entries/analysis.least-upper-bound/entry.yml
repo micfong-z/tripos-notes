@@ -1,0 +1,27 @@
+id: analysis.least-upper-bound
+kind: definition
+title: Least upper bound
+aliases:
+  - supremum
+  - sup
+  - LUB
+tags:
+  - analysis
+  - completeness
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-least-upper-bound
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Supremum versus maximum
+    kind: important
+    supplemental: max.typ
+
+related:
+  - analysis.real-numbers
+  - analysis.greatest-lower-bound
+  - analysis.bounded-above

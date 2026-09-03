@@ -1,0 +1,18 @@
+id: probability.exponential-distribution
+kind: definition
+title: Exponential Distribution
+aliases: [exponential distribution, Exp(lambda)]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-exponential-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-exponential-distribution}
+  - title: Tail probabilities
+    kind: remark
+    supplemental: tail.typ
+  - title: Continuous analogue of the geometric distribution
+    kind: remark
+    supplemental: geometric-limit.typ
+related: [probability.geometric-distribution, probability.memoryless-property, probability.gamma-distribution, probability.order-statistics, probability.continuous-random-variable]

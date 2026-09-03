@@ -1,0 +1,12 @@
+id: algebra.centraliser
+kind: definition
+title: Centraliser
+aliases: [centralizer]
+tags: [groups, actions, conjugation, subgroups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: def-centraliser, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: def-centraliser}
+related: [algebra.conjugation, algebra.orbit-stabiliser-definitions, algebra.conjugacy-class, algebra.centre]

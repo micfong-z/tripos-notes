@@ -1,0 +1,15 @@
+id: algebra.coset-partition
+kind: lemma
+title: Cosets Partition the Group
+aliases: [coset partition]
+tags: [groups, subgroups, cosets, partitions]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: cosets-partition, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: cosets-partition}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.coset, algebra.subgroup]

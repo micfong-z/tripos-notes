@@ -1,0 +1,15 @@
+id: probability.random-variable
+kind: definition
+title: Random Variable
+aliases: [random variables]
+tags: [probability, random variables, measurability]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-random-variable, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-random-variable}
+  - title: Events expressed through X
+    kind: remark
+    supplemental: events.typ
+related: [probability.probability-space, probability.outcomes-and-events, probability.discrete-random-variable, probability.multidimensional-random-variable, probability.distribution-function]

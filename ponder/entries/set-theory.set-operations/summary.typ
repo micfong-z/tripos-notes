@@ -1,0 +1,1 @@
+Sets combine through the *union* $A union B = {x: x in A "or" x in B}$, the *intersection* $A inter B = {x: x in A "and" x in B}$, and the *difference* $A \\ B = {x in A: x in.not B}$; $A$ and $B$ are *disjoint* when $A inter B = emptyset$.

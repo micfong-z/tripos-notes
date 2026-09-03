@@ -1,0 +1,15 @@
+id: calculus.rolles-theorem
+kind: proposition
+title: Rolle's Theorem
+aliases: [Rolle theorem]
+tags: [analysis, differentiation, mean value theorems]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: rolles-theorem, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: rolles-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.mean-value-theorem, analysis.extreme-value-theorem, analysis.intermediate-value-theorem]

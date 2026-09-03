@@ -1,0 +1,1 @@
+A bounded $f: [a, b] -> RR$ is Riemann integrable iff for every $epsilon > 0$ some partition has $U(f, cal(P)) - L(f, cal(P)) < epsilon$; equivalently, iff some sequence of partitions drives this gap to $0$.

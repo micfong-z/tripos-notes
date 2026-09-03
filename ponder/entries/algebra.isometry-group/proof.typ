@@ -1,0 +1,1 @@
+The identity map is an isometry. The composition of two isometries preserves distance, and if $f$ is an isometry then the distance-preservation equation applied to $f^(-1)$ shows that its inverse is an isometry. These three facts verify the subgroup conditions.

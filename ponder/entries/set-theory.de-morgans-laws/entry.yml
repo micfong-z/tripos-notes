@@ -1,0 +1,20 @@
+id: set-theory.de-morgans-laws
+kind: proposition
+title: De Morgan's Laws
+aliases:
+  - De Morgan's law
+tags:
+  - sets
+  - operations
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-2.typ
+  label: de-morgans
+  kind: proposition
+sections:
+  - title: Statement
+    kind: proposition
+    source: *a1
+related:
+  - set-theory.set-operations
+  - set-theory.union-intersection-properties

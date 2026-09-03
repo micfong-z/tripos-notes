@@ -1,0 +1,19 @@
+id: linear-algebra.triangle-inequality
+kind: corollary
+title: Triangle inequality
+aliases: []
+tags:
+  - inequalities
+  - inner products
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: triangle-inequality
+  kind: corollary
+sections:
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - linear-algebra.cauchy-schwarz-inequality
+  - linear-algebra.norm

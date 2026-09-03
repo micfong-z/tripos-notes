@@ -1,0 +1,27 @@
+id: probability.normal-distribution
+kind: definition
+title: Normal Distribution
+aliases: [normal distribution, Gaussian distribution, normal random variable, Gaussian random variable, Gaussian, normal]
+tags: [probability, distributions, normal distribution]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-normal-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-normal-distribution}
+  - title: Mean and variance
+    kind: proposition
+    supplemental: mean-variance.typ
+  - title: Linear transformations
+    kind: proposition
+    supplemental: linear-transformations.typ
+  - title: Standardisation and tables
+    kind: remark
+    supplemental: standardisation.typ
+  - title: Sums of independent normals
+    kind: remark
+    supplemental: stability.typ
+  - title: Gaussian random variables allow zero variance
+    kind: remark
+    supplemental: degenerate.typ
+related: [probability.continuous-random-variable, probability.probability-density-function, probability.expectation, probability.variance, probability.gaussian-vector, probability.moment-generating-function]

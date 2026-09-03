@@ -1,0 +1,15 @@
+id: algebra.normal-subgroup
+kind: definition
+title: Normal Subgroup
+aliases: [normal subgroup]
+tags: [groups, subgroups, conjugation]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-7.typ, label: normal-subgroup, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-7.typ, label: normal-subgroup}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.subgroup, algebra.conjugation, algebra.coset, algebra.homomorphism, algebra.image-kernel, algebra.normal-subgroup-cosets]

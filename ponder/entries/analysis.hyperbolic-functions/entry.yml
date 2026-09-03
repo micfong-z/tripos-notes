@@ -1,0 +1,12 @@
+id: analysis.hyperbolic-functions
+kind: definition
+title: Hyperbolic Functions
+aliases: [cosh, sinh]
+tags: [analysis, special functions]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-hyperbolic-functions, kind: proposition}
+sections:
+  - title: Properties
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: proposition-hyperbolic-functions}
+related: [calculus.exponential-function, calculus.complex-trigonometric-functions]

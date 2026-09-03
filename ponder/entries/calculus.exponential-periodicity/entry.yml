@@ -1,0 +1,23 @@
+id: calculus.exponential-periodicity
+kind: lemma
+title: Periodicity of the Complex Exponential
+aliases:
+  - complex exponential periodicity
+tags:
+  - complex numbers
+  - exponential function
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-1.typ
+  label: exponential-periodicity
+  kind: lemma
+sections:
+  - title: Statement
+    kind: lemma
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - calculus.exponential-function
+  - algebra.multivalued-complex-logarithm

@@ -1,0 +1,80 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pdf:
+    name: Compile PDFs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: typst-community/setup-typst@v4
+        with:
+          typst-version: "0.14.2"
+
+      - uses: extractions/setup-just@v2
+
+      - name: Cache Typst packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/typst/packages
+          key: typst-packages-${{ hashFiles('template/*.typ', '*/*/symbols.typ') }}
+          restore-keys: typst-packages-
+
+      # The vendored faces are the only ones a build may use, so a missing or
+      # wrong-version font fails here rather than silently changing the output.
+      - run: just fonts-check
+
+      - run: just build-all
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: notes-pdfs
+          path: build/*.pdf
+          if-no-files-found: error
+
+  ponder:
+    name: Ponder registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.13.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: ponder/pnpm-lock.yaml
+
+      - run: pnpm install --frozen-lockfile
+        working-directory: ponder
+
+      # Validation and the unit tests need no Typst. A full export is
+      # site-specific and writes hundreds of megabytes, so it stays local.
+      - run: pnpm ponder:check
+        working-directory: ponder
+
+  release:
+    name: Attach PDFs to the release
+    needs: pdf
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: notes-pdfs
+          path: build
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: build/*.pdf

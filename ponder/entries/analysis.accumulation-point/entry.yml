@@ -1,0 +1,18 @@
+id: analysis.accumulation-point
+kind: definition
+title: Accumulation point
+aliases: [accumulation points, cluster point]
+tags: [analysis, topology, sets]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: accumulation-point, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: accumulation-point}
+  - title: Sequential characterisation
+    kind: lemma
+    supplemental: characterisation.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.limit-of-function, analysis.sequence-convergence, analysis.sequential-characterisation-of-limits]

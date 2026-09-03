@@ -1,0 +1,18 @@
+id: probability.random-sum
+kind: lemma
+title: Random Sums
+aliases: [random sum, sum of a random number of random variables, randomly indexed sum]
+tags: [probability, generating functions, sums]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: lem-random-sum-pgf, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: lem-random-sum-pgf}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Mean and variance
+    kind: corollary
+    supplemental: moments.typ
+related: [probability.probability-generating-function, probability.expectation, probability.variance, probability.extinction-probability]

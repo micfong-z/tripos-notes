@@ -1,0 +1,15 @@
+id: algebra.reflections-generate
+kind: theorem
+title: Reflections Generate the Orthogonal Group
+aliases: [reflections generate O(n)]
+tags: [linear algebra, matrices, orthogonal groups, reflections]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: reflections-generate-on, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: reflections-generate-on}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.orthogonal-group, geometry.reflection, geometry.reflection-properties]

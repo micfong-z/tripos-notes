@@ -1,0 +1,18 @@
+id: analysis.nth-term-test
+kind: proposition
+title: nth term test
+aliases: [vanishing term condition, divergence test]
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: nth-term-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: nth-term-test}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: The converse fails
+    kind: warning
+    supplemental: converse.typ
+related: [analysis.series, analysis.root-test]

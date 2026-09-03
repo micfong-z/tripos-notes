@@ -1,0 +1,15 @@
+id: algebra.permutation-parity
+kind: definition
+title: Parity of a Permutation
+aliases: [permutation parity, even permutation, odd permutation]
+tags: [permutations, parity, sign, cycles]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: permutation-parity, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: permutation-parity}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.sign-homomorphism, algebra.transposition-parity, algebra.cycle-type, algebra.alternating-group]

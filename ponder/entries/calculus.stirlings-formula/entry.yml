@@ -1,0 +1,18 @@
+id: calculus.stirlings-formula
+kind: theorem
+title: Stirling's Formula
+aliases: [Stirling's approximation, Stirling formula]
+tags: [asymptotics, factorials, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-1.typ, label: stirlings-formula, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-1.typ, label: stirlings-formula}
+  - title: Logarithmic form
+    kind: corollary
+    supplemental: logarithmic-form.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [combinatorics.binomial-coefficient-formula]

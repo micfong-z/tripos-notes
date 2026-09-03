@@ -1,0 +1,25 @@
+id: linear-algebra.cayley-hamilton-theorem
+kind: theorem
+title: Cayley-Hamilton theorem
+aliases:
+  - Cayley-Hamilton
+tags:
+  - matrices
+  - polynomials
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: thm-cayley-hamilton
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - linear-algebra.eigenvalue-eigenvector
+  - linear-algebra.adjugate
+  - linear-algebra.determinant
+  - linear-algebra.jordan-normal-form

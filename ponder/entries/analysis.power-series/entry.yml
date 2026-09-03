@@ -1,0 +1,12 @@
+id: analysis.power-series
+kind: definition
+title: Power Series
+aliases: []
+tags: [analysis, power series, series]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: definition-power-series, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: definition-power-series}
+related: [analysis.radius-of-convergence, calculus.taylor-series, calculus.complex-trigonometric-functions]

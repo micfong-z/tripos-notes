@@ -1,0 +1,1 @@
+For $f(x) = x^2$, the image of $6$ is $36$, but the preimage of $36$ is $plus.minus 6$. Moreover $im(f) = {y in RR: y >= 0}$, $f({x in RR: -1 <= x < 4}) = [0, 16)$, and $f^(-1)({y in RR: -1 <= y < 4}) = (-2, 2)$.

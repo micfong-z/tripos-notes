@@ -1,0 +1,13 @@
+id: analysis.path-connectedness
+kind: definition
+title: Path Connectedness
+wikidataQID: Q3487687
+aliases: [path connected, path-connected, path connectedness]
+tags: [topology, domains]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: path-connectedness, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: path-connectedness}
+related: [analysis.simply-connected-domain]

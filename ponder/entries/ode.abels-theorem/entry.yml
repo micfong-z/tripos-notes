@@ -1,0 +1,18 @@
+id: ode.abels-theorem
+kind: theorem
+title: Abel's Theorem
+aliases: [Abel's identity]
+tags: [ordinary differential equations, wronskian]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: abels-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: abels-theorem}
+  - title: Proof sketch
+    kind: proof
+    supplemental: proof.typ
+  - title: Consequences and applications
+    kind: corollary
+    supplemental: consequences.typ
+related: [linear-algebra.wronskian, ode.homogeneous-differential-equation]

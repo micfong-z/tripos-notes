@@ -1,0 +1,20 @@
+id: analysis.bounded-above
+kind: definition
+title: Bounded above
+aliases:
+  - upper bound
+tags:
+  - analysis
+  - inequalities
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-bounded-above
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - analysis.least-upper-bound
+  - analysis.bounded-below

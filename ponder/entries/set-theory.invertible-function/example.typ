@@ -1,0 +1,1 @@
+Let $f: RR -> RR$ take $x |-> 2x + 1$ and $g: RR -> RR$ take $x |-> (x - 1)/(2)$. Then $(g compose f)(x) = g(2x+1) = ((2x+1)-1)/(2) = x$, so $g compose f = id_RR$, and similarly $(f compose g)(x) = 2((x-1)/2) + 1 = x$, so $f compose g = id_RR$. Hence $f$ is invertible with inverse $g$.

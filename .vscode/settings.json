@@ -1,0 +1,48 @@
+{
+    "cSpell.words": [
+        "argmin",
+        "colors",
+        "ctheorems",
+        "equate",
+        "Fulkerson",
+        "hline",
+        "labelmat",
+        "lagr",
+        "Lete",
+        "luma",
+        "mannot",
+        "markul",
+        "matbold",
+        "math",
+        "maximin",
+        "Micfong",
+        "physica",
+        "polytope",
+        "ponder",
+        "prelude",
+        "rowspan",
+        "showybox",
+        "supset",
+        "tiaoma",
+        "tinymist",
+        "typst",
+        "underbracket",
+        "vline",
+        "WLOG"
+    ],
+    "tinymist.fontPaths": [
+        "fonts"
+    ],
+    "tinymist.systemFonts": false,
+    "tinymist.rootPath": ".",
+    "tinymist.typstExtraArgs": [
+        "--input",
+        "theme=light",
+        "--input",
+        "font=sans"
+    ],
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "build": true
+    }
+}

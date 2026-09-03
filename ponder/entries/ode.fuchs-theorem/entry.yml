@@ -1,0 +1,15 @@
+id: ode.fuchs-theorem
+kind: theorem
+title: Fuchs' Theorem
+aliases: [Fuch's Theorem, Fuchs's theorem]
+tags: [ordinary differential equations, series solutions, existence]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: fuchs-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-8.typ, label: fuchs-theorem}
+  - title: Reading part 2
+    kind: remark
+    supplemental: remarks.typ
+related: [ode.singular-point, ode.frobenius-method, linear-algebra.linearly-independent-functions, calculus.taylor-series]

@@ -1,0 +1,1 @@
+For $bold(x) |-> matbold(M) bold(x)$, $im matbold(M) = span {bold(C_1), ..., bold(C_n)}$ is the span of the columns and $ker matbold(M) = {bold(x): bold(R_i) dot bold(x) = 0 "for all" i}$ is the set of vectors orthogonal to every row.

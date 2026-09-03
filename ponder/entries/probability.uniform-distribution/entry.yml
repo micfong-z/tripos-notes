@@ -1,0 +1,15 @@
+id: probability.uniform-distribution
+kind: definition
+title: Uniform Distribution
+aliases: [uniform distribution, uniform random variable, "U[a, b]"]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-uniform-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-uniform-distribution}
+  - title: Distribution function
+    kind: example
+    supplemental: distribution-function.typ
+related: [probability.continuous-random-variable, probability.probability-density-function]

@@ -1,0 +1,15 @@
+id: probability.convergence-almost-surely
+kind: definition
+title: Convergence Almost Surely
+aliases: [almost sure convergence, converges almost surely, a.s. convergence, with probability 1]
+tags: [probability, convergence, limit theorems]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-5.typ, label: def-convergence-almost-surely, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: def-convergence-almost-surely}
+  - title: Implies convergence in probability
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-5.typ, label: prop-as-implies-in-probability}
+related: [probability.convergence-in-probability, probability.convergence-in-distribution, probability.strong-law-of-large-numbers]

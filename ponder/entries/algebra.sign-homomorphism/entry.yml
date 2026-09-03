@@ -1,0 +1,15 @@
+id: algebra.sign-homomorphism
+kind: theorem
+title: Sign Homomorphism
+aliases: [sign homomorphism, sign of a permutation]
+tags: [permutations, transpositions, parity, homomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: sign-homomorphism, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: sign-homomorphism}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.transposition, algebra.transposition-parity, algebra.permutation-parity, algebra.alternating-group, algebra.homomorphism]

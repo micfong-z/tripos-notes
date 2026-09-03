@@ -1,0 +1,12 @@
+id: algebra.euler-totient-function
+kind: definition
+title: Euler Totient Function
+aliases: [Euler's totient function, totient function]
+tags: [number theory, modular arithmetic, counting]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: euler-totient-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: euler-totient-function}
+related: [algebra.fermat-euler-theorem]

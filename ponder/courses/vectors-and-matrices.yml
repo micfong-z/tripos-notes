@@ -1,0 +1,5 @@
+course: vectors-and-matrices
+title: Part IA Vectors and Matrices
+document: part-ia/vectors-and-matrices/main.typ
+sourceBase: /notes/ia-vm/content
+outputName: ia-vm.html

@@ -1,0 +1,18 @@
+id: algebra.symmetric-group-conjugacy
+kind: theorem
+title: Conjugacy in the Symmetric Group
+aliases: [conjugacy in S_n, symmetric group conjugacy criterion]
+tags: [permutations, symmetric groups, conjugacy, cycle type]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: conjugacy-in-sn, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: conjugacy-in-sn}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.symmetric-group, algebra.permutation, algebra.cycle-type, algebra.conjugation, algebra.conjugacy-class, algebra.centraliser]

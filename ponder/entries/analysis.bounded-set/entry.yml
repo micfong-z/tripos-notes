@@ -1,0 +1,15 @@
+id: analysis.bounded-set
+kind: definition
+title: Bounded set
+aliases: [bounded sets, bounded subset]
+tags: [analysis, sets]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: bounded-set, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: bounded-set}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.closed-set, analysis.bounded-above, analysis.bounded-below]

@@ -1,0 +1,15 @@
+id: calculus.piecewise-continuity-implies-integrability
+kind: proposition
+title: Piecewise Continuity implies Integrability
+aliases: [piecewise continuous functions are integrable]
+tags: [integration, continuity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: prop-piecewise-continuity-implies-integrability, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: prop-piecewise-continuity-implies-integrability}
+  - title: Proof idea
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.finite-changes-preserve-integral, calculus.integral-additivity, calculus.continuity-implies-integrability, calculus.countable-discontinuities-implies-integrability]

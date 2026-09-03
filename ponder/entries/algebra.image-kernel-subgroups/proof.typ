@@ -1,0 +1,1 @@
+The image contains $e_H = phi(e_G)$, is closed because $phi(g_1) dot phi(g_2) = phi(g_1 dot g_2)$, and contains inverses because $phi(g)^(-1) = phi(g^(-1))$. The kernel contains $e_G$, is closed under products by the homomorphism law, and is closed under inverses by $phi(g^(-1)) = phi(g)^(-1)$.

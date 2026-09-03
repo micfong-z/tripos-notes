@@ -1,0 +1,1 @@
+Let $f, g: X subset.eq CC -> CC$ be continuous at $a in X$. Then $lambda f + g$ and $f g$ are continuous at $a$, and if $f(z) != 0$ for all $z in X$, then $(1)/(f)$ is continuous at $a$ as well. Continuity therefore behaves like an algebra under pointwise operations, mirroring the algebra of limits.

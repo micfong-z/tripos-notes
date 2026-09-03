@@ -1,0 +1,25 @@
+id: relativity.minkowski-space
+kind: definition
+title: Minkowski metric and Minkowski space
+aliases:
+  - Minkowski metric
+  - Minkowski inner product
+tags:
+  - relativity
+  - bilinear forms
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-minkowski-space
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Matrices preserving the metric
+    kind: proposition
+    supplemental: preservation.typ
+related:
+  - relativity.lorentz-group
+  - linear-algebra.inner-product
+  - algebra.orthogonal-group

@@ -1,0 +1,13 @@
+id: ode.logistic-map
+kind: example
+title: Logistic Map
+wikidataQID: Q587182
+aliases: [discrete logistic equation, logistic map]
+tags: [discrete dynamical systems, population dynamics]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: logistic-map, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: logistic-map}
+related: [ode.logistic-equation, ode.first-order-discrete-equation, ode.discrete-fixed-point]

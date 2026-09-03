@@ -1,0 +1,30 @@
+id: set-theory.cantors-theorem
+kind: theorem
+title: Cantor's theorem
+aliases:
+  - no bijection between a set and its power set
+tags:
+  - sets
+  - cardinality
+  - foundations
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: cantors-theorem
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: cantors-theorem
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Remarks
+    kind: remark
+    supplemental: remarks.typ
+related:
+  - set-theory.power-set
+  - set-theory.reals-uncountable
+  - set-theory.cardinality

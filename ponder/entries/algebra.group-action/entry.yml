@@ -1,0 +1,15 @@
+id: algebra.group-action
+kind: definition
+title: Group Action
+aliases: [action of a group, group action]
+tags: [groups, actions, symmetries]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: group-action, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: group-action}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.group, algebra.homomorphism, algebra.symmetric-group]

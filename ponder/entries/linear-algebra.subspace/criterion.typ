@@ -1,0 +1,1 @@
+A subset $U subset.eq V$ is a subspace precisely when it is non-empty and $lambda bold(v) + mu bold(u) in U$ for all $bold(u), bold(v) in U$ and scalars $lambda, mu$. In particular, $span{bold(v_1), ..., bold(v_r)}$ is always a subspace of $V$. The two trivial subspaces of any vector space are ${bold(0)}$ and $V$ itself.

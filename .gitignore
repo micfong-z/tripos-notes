@@ -1,0 +1,15 @@
+.DS_Store
+
+# Built PDFs: CI compiles all four variants and attaches them to releases.
+build/
+*.pdf
+
+/revision/
+
+# LLM Generated proofreading report.
+errata-report.md
+
+# Ponder subproject
+ponder/node_modules/
+ponder/dist/
+ponder/batches/

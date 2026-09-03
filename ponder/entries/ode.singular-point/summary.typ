@@ -1,0 +1,1 @@
+For $p(x) y'' + q(x) y' + r(x) y = 0$, $x_0$ is an *ordinary point* when $(q)/(p)$ and $(r)/(p)$ are both analytic at $x_0$, and otherwise a *singular point*. A singular point is *regular* when $(x - x_0)(q)/(p)$ and $(x - x_0)^2 (r)/(p)$ are analytic at $x_0$, and *irregular* otherwise.

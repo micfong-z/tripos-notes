@@ -1,0 +1,26 @@
+id: linear-algebra.transpose
+kind: definition
+title: Transpose
+aliases:
+  - transposed matrix
+  - transpose of a matrix
+tags:
+  - matrices
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: def-transpose
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Properties of the transpose
+    kind: proposition
+    source:
+      document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+      label: prop-transpose-properties
+      kind: proposition
+related:
+  - linear-algebra.hermitian-conjugate
+  - linear-algebra.symmetric-matrix

@@ -1,0 +1,1 @@
+The factors of $12$ are $1, 2, 3, 4, 6, 12$, and the factors of $18$ are $1, 2, 3, 6, 9, 18$. The common factors of $12$ and $18$ are $1, 2, 3, 6$, so the highest common factor is $6$: that is, $gcd(12, 18) = 6$.

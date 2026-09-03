@@ -1,0 +1,12 @@
+id: algebra.image-kernel
+kind: definition
+title: Image and Kernel
+aliases: [image, kernel]
+tags: [groups, homomorphisms, subgroups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: image-kernel, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: image-kernel}
+related: [algebra.homomorphism, algebra.subgroup]

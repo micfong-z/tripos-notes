@@ -1,0 +1,12 @@
+id: calculus.taylor-series
+kind: definition
+title: Taylor Series
+aliases: [Taylor expansion]
+tags: [differential equations, differentiation, approximation]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: taylor-series, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: taylor-series}
+related: [calculus.taylor-polynomial, calculus.taylors-theorem]

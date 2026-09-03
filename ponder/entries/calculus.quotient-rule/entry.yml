@@ -1,0 +1,12 @@
+id: calculus.quotient-rule
+kind: theorem
+title: Quotient Rule
+aliases: [quotient rule]
+tags: [differential equations, differentiation]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: quotient-rule, kind: theorem}
+sections:
+  - title: Theorem
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: quotient-rule}
+related: [calculus.product-rule, calculus.derivative]

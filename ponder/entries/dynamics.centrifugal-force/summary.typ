@@ -1,0 +1,1 @@
+In a frame rotating with angular velocity $bold(omega)$, a particle at position $bold(x)$ feels the centrifugal force $bold(F_"cent") = -m bold(omega) times (bold(omega) times bold(x))$, which points away from the axis of rotation with magnitude $m omega^2 r cos theta$.

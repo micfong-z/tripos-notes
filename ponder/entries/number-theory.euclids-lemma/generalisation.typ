@@ -1,0 +1,1 @@
+The same reasoning extends by induction on $n$ to more factors: if $p$ divides $a_1 a_2 ... a_n$, then $p$ divides $a_i$ for some $i = 1, 2, ..., n$. Primality is essential: the statement is false if $p$ is not prime, since for example $6 divides 2 times 3$, yet $6 divides.not 2$ and $6 divides.not 3$.

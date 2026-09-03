@@ -1,0 +1,18 @@
+id: analysis.inverse-function-theorem
+kind: theorem
+title: Inverse Function Theorem
+aliases: [inverse function theorem version 1]
+tags: [analysis, continuity, inverse functions]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: inverse-function-theorem-version-1, kind: proposition}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: inverse-function-theorem-version-1}
+  - title: Version 2
+    kind: corollary
+    source: {document: part-ia/analysis-i/chapters/chapter-3.typ, label: inverse-function-theorem-version-2, referenceTarget: true}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.intermediate-value-theorem, analysis.monotone-function, analysis.continuity]

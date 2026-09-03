@@ -1,0 +1,1 @@
+The units $ZZ_n^* = {x in ZZ_n : gcd(x, n) = 1}$ form a group under multiplication modulo $n$. The finite-group power consequence gives $x^(abs(ZZ_n^*)) = 1 mod n$, and $abs(ZZ_n^*) = phi(n)$ by definition.

@@ -1,0 +1,15 @@
+id: algebra.isomorphism
+kind: definition
+title: Isomorphism
+aliases: [isomorphism, isomorphic groups]
+tags: [groups, maps, structure]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: isomorphism, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: isomorphism}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.homomorphism, algebra.bijection, algebra.homomorphism-bijectivity]

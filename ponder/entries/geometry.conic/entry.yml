@@ -1,0 +1,28 @@
+id: geometry.conic
+kind: definition
+title: Conic
+aliases:
+  - conics
+  - conic sections
+tags:
+  - conics
+  - curves
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-conic
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Classification
+    kind: remark
+    supplemental: classification.typ
+  - title: Standard Cartesian forms
+    kind: example
+    supplemental: standard-forms.typ
+related:
+  - geometry.quadric
+  - geometry.eccentricity
+  - geometry.isometry

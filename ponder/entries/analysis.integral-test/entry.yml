@@ -1,0 +1,18 @@
+id: analysis.integral-test
+kind: proposition
+title: Integral test
+aliases: []
+tags: [analysis, series, convergence tests]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: integral-test, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: integral-test}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [analysis.comparison-test, analysis.series, analysis.monotone-convergence-theorem, analysis.cauchy-condensation-test]

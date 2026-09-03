@@ -1,0 +1,16 @@
+id: calculus.gradient
+kind: definition
+title: Gradient
+wikidataQID: Q173582
+aliases: [gradient operator, gradient vector, nabla operator]
+tags: [multivariable calculus, vector calculus, gradient]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: gradient-vector-properties, kind: proposition}
+sections:
+  - title: Properties
+    kind: proposition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: gradient-vector-properties}
+  - title: Directional derivatives
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-9.typ, label: directional-derivative}
+related: [calculus.directional-derivative, calculus.partial-derivative, calculus.multivariate-chain-rule]

@@ -1,0 +1,15 @@
+id: calculus.finite-changes-preserve-integral
+kind: lemma
+title: Finite Changes Preserve the Integral
+aliases: [functions differing at finitely many points have the same integral]
+tags: [integration, riemann integration]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: lemma-finite-differences-implies-same-integral, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    supplemental: statement.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.piecewise-continuity-implies-integrability, calculus.integral-additivity, calculus.riemann-integrability-criteria]

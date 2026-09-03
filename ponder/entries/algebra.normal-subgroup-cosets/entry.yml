@@ -1,0 +1,15 @@
+id: algebra.normal-subgroup-cosets
+kind: lemma
+title: Normal Subgroups and Cosets
+aliases: [normal subgroup coset criterion]
+tags: [groups, subgroups, cosets]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-7.typ, label: lemma-normal-subgroup-cosets, kind: lemma}
+sections:
+  - title: Criterion
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-7.typ, label: lemma-normal-subgroup-cosets}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.normal-subgroup, algebra.coset, algebra.coset-partition, algebra.subgroup]

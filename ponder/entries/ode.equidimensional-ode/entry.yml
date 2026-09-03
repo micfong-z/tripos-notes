@@ -1,0 +1,15 @@
+id: ode.equidimensional-ode
+kind: definition
+title: Equidimensional ODE
+aliases: [equidimensional, equidimensional equation, equidimensional ODEs]
+tags: [ordinary differential equations, equidimensional]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: equidimensional-ode, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: equidimensional-ode}
+  - title: Scaling property and solving
+    kind: proposition
+    supplemental: scaling-and-solving.typ
+related: [ode.constant-coefficients, ode.linear-differential-equation, ode.homogeneous-differential-equation]

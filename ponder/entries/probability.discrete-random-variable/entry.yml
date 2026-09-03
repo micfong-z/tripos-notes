@@ -1,0 +1,12 @@
+id: probability.discrete-random-variable
+kind: definition
+title: Discrete Random Variable
+aliases: [discrete random variables, discrete]
+tags: [probability, random variables]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-discrete-random-variable, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-discrete-random-variable}
+related: [probability.random-variable, probability.probability-mass-function, set-theory.countable-set, probability.discrete-distribution]

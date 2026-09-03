@@ -1,0 +1,16 @@
+id: analysis.heaviside-step-function
+kind: definition
+title: Heaviside Step Function
+wikidataQID: Q322339
+aliases: [Heaviside function]
+tags: [distributions, ordinary differential equations, forcing]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: heaviside-step-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-6.typ, label: heaviside-step-function}
+  - title: Derivative and further integration
+    kind: remark
+    supplemental: integration.typ
+related: [analysis.dirac-delta-function, calculus.fundamental-theorem-of-calculus]

@@ -1,0 +1,15 @@
+id: algebra.direct-product-theorem
+kind: theorem
+title: Direct Product Theorem
+aliases: [direct product theorem]
+tags: [groups, products, subgroups, isomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-6.typ, label: direct-product-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-6.typ, label: direct-product-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.direct-product, algebra.subgroup, algebra.homomorphism, algebra.isomorphism]

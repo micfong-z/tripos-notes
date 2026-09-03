@@ -1,0 +1,25 @@
+id: calculus.complex-trigonometric-functions
+kind: definition
+title: Complex Trigonometric Functions
+aliases:
+  - complex cosine
+  - complex sine
+tags:
+  - complex numbers
+  - series
+  - trigonometry
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-1.typ
+  label: complex-trigonometric-functions
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Euler's formula
+    kind: proposition
+    supplemental: euler-formula.typ
+related:
+  - calculus.exponential-function
+  - algebra.de-moivres-theorem

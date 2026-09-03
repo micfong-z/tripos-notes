@@ -1,0 +1,28 @@
+id: linear-algebra.independent-eigenvectors
+kind: theorem
+title: Independence of eigenvectors with distinct eigenvalues
+aliases:
+  - distinct eigenvalues give independent eigenvectors
+tags:
+  - eigenvalues
+  - linear independence
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: thm-independent-eigenvectors
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Bases of distinct eigenspaces
+    kind: corollary
+    supplemental: union.typ
+related:
+  - linear-algebra.linear-independence
+  - linear-algebra.eigenvalue-eigenvector
+  - linear-algebra.eigenspace
+  - linear-algebra.diagonalisable-matrix

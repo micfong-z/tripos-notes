@@ -1,0 +1,32 @@
+id: linear-algebra.quadratic-form
+kind: definition
+title: Quadratic form
+aliases:
+  - quadratic forms
+tags:
+  - quadratic forms
+  - symmetric matrices
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-quadratic-form
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Diagonalisation and principal axes
+    kind: remark
+    supplemental: diagonalisation.typ
+  - title: Why the matrix may be taken symmetric
+    kind: remark
+    supplemental: why-symmetric.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - linear-algebra.symmetric-matrix
+  - linear-algebra.matrix-definiteness
+  - geometry.quadric
+  - algebra.orthogonal-group
+  - linear-algebra.eigenvalue-eigenvector

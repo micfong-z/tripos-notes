@@ -1,0 +1,20 @@
+id: set-theory.quotient-map
+kind: definition
+title: Quotient Map
+aliases:
+  - projection map
+tags:
+  - relations
+  - functions
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-2.typ
+  label: def-quotient-map
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+related:
+  - set-theory.quotient
+  - set-theory.equivalence-class

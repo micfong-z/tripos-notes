@@ -1,0 +1,23 @@
+id: algebra.multivalued-complex-logarithm
+kind: definition
+title: Multivalued Complex Logarithm
+aliases:
+  - multi-valued complex logarithm
+tags:
+  - complex numbers
+  - logarithm
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-1.typ
+  label: multivalued-complex-logarithm
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Correspondence with the argument
+    kind: remark
+    supplemental: argument-relation.typ
+related:
+  - algebra.complex-logarithm
+  - calculus.exponential-periodicity

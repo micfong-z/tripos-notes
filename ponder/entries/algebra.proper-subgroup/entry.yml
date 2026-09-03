@@ -1,0 +1,12 @@
+id: algebra.proper-subgroup
+kind: definition
+title: Proper Subgroup
+aliases: [proper subgroup]
+tags: [groups, subgroups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: proper-subgroup, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: proper-subgroup}
+related: []

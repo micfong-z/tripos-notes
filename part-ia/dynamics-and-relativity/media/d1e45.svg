@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="22.827934mm"
+   height="23.180973mm"
+   viewBox="0 0 22.827934 23.180973"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch213">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop213" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="marker14"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M -1.4,-2.8 6.3,0 -1.4,2.8 C 0,1.169 0,-1.162 -1.4,-2.8 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none;stroke-width:0.7"
+         id="path14" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker11"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path11"
+         transform="scale(0.7)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker14-0"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M -1.4,-2.8 6.3,0 -1.4,2.8 C 0,1.169 0,-1.162 -1.4,-2.8 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none;stroke-width:0.7"
+         id="path14-13" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker14-0-1"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M -1.4,-2.8 6.3,0 -1.4,2.8 C 0,1.169 0,-1.162 -1.4,-2.8 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none;stroke-width:0.7"
+         id="path14-13-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker14-0-1-0"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M -1.4,-2.8 6.3,0 -1.4,2.8 C 0,1.169 0,-1.162 -1.4,-2.8 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none;stroke-width:0.7"
+         id="path14-13-0-6" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-1387.1304,-111.18967)">
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker14)"
+       d="m 1398.2624,111.68492 c -0.1362,9.39322 -3.6773,9.39322 -10.6464,9.39322"
+       id="path370" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker14-0)"
+       d="m 1398.6647,133.87539 c 0.1362,-9.39322 3.6773,-9.39322 10.6464,-9.39322"
+       id="path370-0" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker14-0-1)"
+       d="m 1387.1324,123.38028 c 9.3932,0.1362 9.3932,3.6773 9.3932,10.6464"
+       id="path370-0-4" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#marker14-0-1-0)"
+       d="m 1409.9564,122.18003 c -9.3932,-0.1362 -9.3932,-3.6773 -9.3932,-10.6464"
+       id="path370-0-4-8" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#3584e4;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0;marker-start:url(#marker11)"
+       id="path371"
+       d="m 1400.7225,122.31216 a 1.9130399,1.9130399 0 0 1 -1.4179,1.84785 1.9130399,1.9130399 0 0 1 -2.1519,-0.89133 1.9130399,1.9130399 0 0 1 0.304,-2.30925 1.9130399,1.9130399 0 0 1 2.3093,-0.30401" />
+  </g>
+</svg>

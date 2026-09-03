@@ -1,0 +1,18 @@
+id: number-theory.unit-modulo-n
+kind: definition
+title: "Unit Modulo n"
+aliases: ["invertible modulo n", "inverse modulo n", "units modulo n"]
+tags: ["number theory", "modular arithmetic"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: def-unit-modulo-n, kind: definition}
+sections:
+  - title: "Definition"
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: def-unit-modulo-n}
+  - title: "Criterion"
+    kind: proposition
+    supplemental: criterion.typ
+  - title: "Cancellation"
+    kind: remark
+    supplemental: cancellation.typ
+related: [number-theory.integer-modulo-n, number-theory.bezouts-theorem, algebra.euler-totient-function, number-theory.fermats-little-theorem]

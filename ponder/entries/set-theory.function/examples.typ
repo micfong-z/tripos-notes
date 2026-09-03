@@ -1,0 +1,1 @@
+The map $f: RR -> RR$ with $x |-> x^2$ is a function, and so is $x |-> cases(1 quad "if" x in QQ, 0 quad "otherwise")$. By contrast, $x |-> (1)/(x)$ is not a function because it is undefined at $x = 0$, and $x |-> plus.minus sqrt(abs(x))$ is not a function because it assigns two values.

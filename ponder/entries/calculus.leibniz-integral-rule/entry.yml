@@ -1,0 +1,19 @@
+id: calculus.leibniz-integral-rule
+kind: theorem
+title: Leibniz Integral Rule
+wikidataQID: Q2996637
+aliases: [differentiation under the integral sign, differentiation of an integral with respect to a parameter]
+tags: [differential equations, differentiation, integration, multivariable]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: diff-integral-param, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: diff-integral-param}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [calculus.partial-derivative, calculus.fundamental-theorem-of-calculus, analysis.integral-mean-value-theorem]

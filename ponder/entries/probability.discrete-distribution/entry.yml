@@ -1,0 +1,15 @@
+id: probability.discrete-distribution
+kind: definition
+title: Discrete Probability Distribution
+aliases: [discrete probability distribution, discrete distribution]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-discrete-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-discrete-distribution}
+  - title: Properties
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-discrete-distribution-properties}
+related: [probability.probability-space, set-theory.countable-set, probability.bernoulli-distribution, probability.binomial-distribution, probability.multinomial-distribution, probability.geometric-distribution, probability.poisson-distribution]

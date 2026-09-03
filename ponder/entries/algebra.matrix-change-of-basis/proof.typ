@@ -1,0 +1,3 @@
+A basis $(bold(v_1), ..., bold(v_n))$ defines an isomorphism $phi: RR^n -> V$. If $matbold(A)$ represents $alpha$ in this basis, then $alpha = phi matbold(A) phi^(-1)$. For another basis with coordinate isomorphism $psi$, a matrix $matbold(B)$ represents $alpha$ when $alpha = psi matbold(B) psi^(-1)$.
+
+Therefore $matbold(B) = (psi^(-1) phi) matbold(A) (psi^(-1) phi)^(-1)$. Writing $matbold(P)$ for the matrix of $psi^(-1) phi$ in the standard basis gives $matbold(B) = matbold(P) matbold(A) matbold(P)^(-1)$. Conversely, setting $psi = phi matbold(P)^(-1)$ constructs a basis in which this conjugate matrix represents $alpha$.

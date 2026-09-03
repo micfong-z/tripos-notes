@@ -1,0 +1,12 @@
+id: probability.geometric-distribution
+kind: definition
+title: Geometric Distribution
+aliases: [geometric distribution]
+tags: [probability, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: def-geometric-distribution, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: def-geometric-distribution}
+related: [probability.discrete-distribution, probability.bernoulli-distribution]

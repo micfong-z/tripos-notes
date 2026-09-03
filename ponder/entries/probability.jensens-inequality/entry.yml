@@ -1,0 +1,18 @@
+id: probability.jensens-inequality
+kind: proposition
+title: Jensen's Inequality
+aliases: [Jensen inequality]
+tags: [probability, inequalities, convexity]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-jensens-inequality, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-jensens-inequality}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Equality case
+    kind: remark
+    supplemental: equality.typ
+related: [analysis.convex-function, probability.expectation, probability.am-gm-inequality]

@@ -1,0 +1,25 @@
+id: analysis.series
+kind: definition
+title: Series
+aliases:
+  - partial sums
+  - infinite series
+tags:
+  - analysis
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/numbers-and-sets/chapters/chapter-5.typ
+  label: def-series
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+
+related:
+  - analysis.limit-of-sequence
+  - analysis.monotone-convergence-theorem
+  - number-theory.e-irrational

@@ -1,0 +1,16 @@
+id: calculus.cyclical-rule
+kind: theorem
+title: Cyclical Rule
+wikidataQID: Q7843530
+aliases: [triple product rule, cyclic rule]
+tags: [differential equations, differentiation, multivariable]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: cyclical-rule, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/differential-equations/chapters/chapter-3.typ, label: cyclical-rule}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.partial-derivative, calculus.multivariate-chain-rule]

@@ -1,0 +1,12 @@
+id: algebra.function-composition
+kind: noun
+title: Function Composition
+aliases: [composition of maps, composition]
+tags: [functions, groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: composition-associative, kind: lemma}
+sections:
+  - title: Composition
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: composition-associative}
+related: []

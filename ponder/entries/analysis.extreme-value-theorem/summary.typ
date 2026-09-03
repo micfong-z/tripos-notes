@@ -1,0 +1,1 @@
+A continuous real function on a closed bounded set $X subset.eq RR$ attains its bounds: some $a, b in X$ satisfy $a = sup f(X)$ and $b = inf f(X)$, so the suprema and infima of $f(X)$ are actually maximum and minimum.

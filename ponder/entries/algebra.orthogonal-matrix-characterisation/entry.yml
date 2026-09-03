@@ -1,0 +1,15 @@
+id: algebra.orthogonal-matrix-characterisation
+kind: lemma
+title: Characterisations of Orthogonal Matrices
+aliases: [orthogonal matrix characterisation]
+tags: [linear algebra, matrices, orthogonal groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: orthogonal-matrix-characterisation, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: orthogonal-matrix-characterisation}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.orthogonal-group, algebra.orthogonal-dot-product]

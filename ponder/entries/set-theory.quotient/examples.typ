@@ -1,0 +1,1 @@
+For the final-digit relation (example (1) among the relations on $NN$), $NN \\/ R = {[0], [1], ..., [9]}$ with size $10$. On $ZZ times NN$ with $(a, b) R (c, d)$ when $a d = b c$, identifying $[(a, b)]$ with $(a)/(b) in QQ$ regards $ZZ times NN \\/ R$ as a copy of the rationals.

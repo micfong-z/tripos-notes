@@ -1,0 +1,1 @@
+Two sets are equal exactly when each is a subset of the other: $A = B$ if and only if $A subset.eq B$ and $B subset.eq A$. More generally, ${x in A: P(x)}$ denotes the subset of $A$ comprising exactly those elements for which the property $P(x)$ holds.

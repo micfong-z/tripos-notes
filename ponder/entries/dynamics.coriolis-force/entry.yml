@@ -1,0 +1,18 @@
+id: dynamics.coriolis-force
+kind: definition
+title: Coriolis force
+aliases: []
+tags: [mechanics, rotating-frames, forces]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-6.typ, label: ex-coriolis-hurricanes, kind: example}
+sections:
+  - title: Force law
+    kind: definition
+    supplemental: body.typ
+  - title: Hurricanes
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-6.typ, label: ex-coriolis-hurricanes}
+  - title: Eastward deflection of a falling body
+    kind: example
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-6.typ, label: ex-falling-ball-tower}
+related: [dynamics.centrifugal-force, dynamics.inertial-frame]

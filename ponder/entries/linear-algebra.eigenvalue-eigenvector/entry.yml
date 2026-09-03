@@ -1,0 +1,36 @@
+id: linear-algebra.eigenvalue-eigenvector
+kind: definition
+title: Eigenvalues and eigenvectors
+aliases:
+  - eigenvector
+  - eigenvalue
+  - eigenvalues and eigenvectors
+  - eigenvectors and eigenvalues
+  - characteristic equation
+  - characteristic polynomial
+tags:
+  - matrices
+  - eigenvalues
+  - linear maps
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-4.typ
+  label: def-eigenvalue
+  kind: definition
+sections:
+  - title: Definition
+    kind: definition
+    source: *a1
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+  - title: Trace and determinant
+    kind: remark
+    supplemental: trace-det.typ
+related:
+  - linear-algebra.linear-map
+  - linear-algebra.eigenspace
+  - linear-algebra.diagonalisable-matrix
+  - linear-algebra.trace
+  - linear-algebra.determinant
+  - ode.eigenfunction

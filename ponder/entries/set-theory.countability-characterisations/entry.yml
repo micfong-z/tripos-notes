@@ -1,0 +1,28 @@
+id: set-theory.countability-characterisations
+kind: theorem
+title: Characterisations of countability
+aliases:
+  - equivalent conditions for countability
+  - injection into NN
+  - surjection from NN
+tags:
+  - sets
+  - counting
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: countable-equiv
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: countable-equiv
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - set-theory.countable-set
+  - set-theory.injection-surjection
+  - set-theory.subsets-of-countable-sets

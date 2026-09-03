@@ -1,0 +1,18 @@
+id: number-theory.minus-one-quadratic-residue
+kind: proposition
+title: "-1 as a Square Modulo p"
+aliases: ["minus one is a square modulo p"]
+tags: ["number theory", "modular arithmetic", "primes"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-minus-one-square, kind: proposition}
+sections:
+  - title: "Statement"
+    kind: proposition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: prop-minus-one-square}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "Explicit solutions"
+    kind: remark
+    supplemental: solution-remark.typ
+related: [number-theory.wilsons-theorem, number-theory.fermats-little-theorem, number-theory.square-roots-of-one-mod-p]

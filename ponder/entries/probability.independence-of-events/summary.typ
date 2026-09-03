@@ -1,0 +1,1 @@
+Events $A, B in cal(F)$ are independent when $PP(A inter B) = PP(A) PP(B)$, written $A indep B$. A collection $(A_n)$ of events is mutually independent when every finite subcollection satisfies $PP(inter.big_(i in I) A_i) = product_(i in I) PP(A_i)$.

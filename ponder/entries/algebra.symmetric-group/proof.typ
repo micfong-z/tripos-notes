@@ -1,0 +1,1 @@
+Composition of permutations is a permutation, composition is associative, the identity map is the identity element, and every permutation has an inverse by the definition of a bijection. Thus $sym(X)$ is a group.

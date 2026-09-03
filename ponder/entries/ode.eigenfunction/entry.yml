@@ -1,0 +1,16 @@
+id: ode.eigenfunction
+kind: definition
+title: Eigenfunction
+wikidataQID: Q1307821
+aliases: [eigenfunctions]
+tags: [differential equations, linear operators, ordinary differential equations]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: eigenfunction, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: eigenfunction}
+  - title: Radioactive decay
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: ex-radioactive-decay}
+related: [calculus.exponential-function, ode.constant-coefficient-homogeneous-solutions, calculus.derivative]

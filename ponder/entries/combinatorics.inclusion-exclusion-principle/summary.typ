@@ -1,0 +1,1 @@
+For finite sets, $abs(S_1 union S_2 union ... union S_n) = sum_(r=1)^n (-1)^(r+1) sum_(abs(A) = r) abs(inter.big_(i in A) S_i)$: alternately add and subtract intersections so every element is counted once.

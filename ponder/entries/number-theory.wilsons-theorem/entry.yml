@@ -1,0 +1,15 @@
+id: number-theory.wilsons-theorem
+kind: theorem
+title: "Wilson's Theorem"
+aliases: []
+tags: ["number theory", "modular arithmetic", "primes"]
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-wilsons-theorem, kind: theorem}
+sections:
+  - title: "Statement"
+    kind: theorem
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-4.typ, label: thm-wilsons-theorem}
+  - title: "Proof"
+    kind: proof
+    supplemental: proof.typ
+related: [number-theory.square-roots-of-one-mod-p, number-theory.unit-modulo-n, number-theory.minus-one-quadratic-residue]

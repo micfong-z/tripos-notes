@@ -1,0 +1,21 @@
+id: probability.change-of-variables
+kind: theorem
+title: Change of Variables
+aliases: [change of variables formula, transformation of random variables, Jacobian transformation, density of a transformed random variable]
+tags: [probability, transformations, densities]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: thm-change-of-variables-monotone, kind: theorem}
+sections:
+  - title: Monotone transformation of a single random variable
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: thm-change-of-variables-monotone}
+  - title: Proof of the monotone case
+    kind: proof
+    supplemental: monotone-proof.typ
+  - title: Jacobian formula for several random variables
+    kind: theorem
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: thm-change-of-variables-jacobian}
+  - title: "Example: polar coordinates of two standard normals"
+    kind: example
+    supplemental: polar.typ
+related: [probability.probability-density-function, probability.normal-distribution, probability.gaussian-vector]

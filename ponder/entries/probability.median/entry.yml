@@ -1,0 +1,15 @@
+id: probability.median
+kind: definition
+title: Median
+aliases: [medians]
+tags: [probability, distributions, order]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-median, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-median}
+  - title: "Example: the median of a normal distribution"
+    kind: example
+    supplemental: normal-median.typ
+related: [probability.continuous-random-variable, probability.normal-distribution]

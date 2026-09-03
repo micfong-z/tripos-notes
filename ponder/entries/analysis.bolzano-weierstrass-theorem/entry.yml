@@ -1,0 +1,18 @@
+id: analysis.bolzano-weierstrass-theorem
+kind: theorem
+title: Bolzano-Weierstrass theorem
+aliases: [Bolzano-Weierstrass, BW theorem]
+tags: [analysis, sequences, compactness]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: bolzano-weierstrass-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-1.typ, label: bolzano-weierstrass-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Complex sequences
+    kind: remark
+    supplemental: complex.typ
+related: [analysis.subsequence, analysis.nested-interval-property, analysis.bounded-sequence, analysis.completeness-of-reals]

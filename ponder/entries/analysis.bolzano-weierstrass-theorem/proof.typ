@@ -1,0 +1,3 @@
+Given $(x_n)$ with $abs(x_n) <= M$, build nested intervals $I_n = [a_n, b_n]$ by bisection: $I_1 = [-M, M]$, and each $I_(n+1)$ is a half of $I_n$ containing infinitely many terms of the sequence. Then $b_n - a_n = M \/ 2^(n-1) -> 0$, so by the nested interval property there is a unique point $x in inter.big_n I_n$.
+
+Choose indices inductively: pick $n_1$ with $x_(n_1) in I_1$; since $I_2$ contains infinitely many terms, pick $n_2 > n_1$ with $x_(n_2) in I_2$; continuing gives a subsequence with $x_(n_k) in I_k$ for every $k$. Hence $x_(n_k) in inter.big_(n <= k) I_n$, and since the interval lengths shrink to zero, $x_(n_k) -> x$ as $k -> oo$.

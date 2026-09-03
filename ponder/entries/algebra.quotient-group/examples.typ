@@ -1,0 +1,1 @@
+The quotient groups $G \/ 1$ and $G \/ G$ are isomorphic to $G$ and the trivial group, respectively. For $n in ZZ^*$, $ZZ \/ n ZZ teq C_n$. If $[G : H] = 2$, then $H nsub G$ and $G \/ H teq C_2$. In particular, $D_(2n) \/ C_n teq C_2$.

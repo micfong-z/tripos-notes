@@ -1,0 +1,23 @@
+Annotate every unambiguous occurrence of an existing or newly proposed Ponder concept in the supplied chapter, including repeated occurrences.
+
+Echo `model`, `promptVersion`, `inputHash`, and `document` exactly from the user payload. Return new concepts in `concepts`; when the registry already contains a concept, use its ID in source edits without proposing it again.
+
+Use existing registry IDs whenever the registry already represents the concept. Propose a new concept only for a durable mathematical term, adjective, definition, result, notation, proof technique, warning, or example that is useful beyond one sentence. A grammatical adjective is not automatically a concept. In a phrase such as "surjective homomorphism", annotate "surjective" and "homomorphism" separately only when both are represented as concepts and the wrappers do not overlap.
+
+Preserve the exact source wording. A prose edit must only replace `text` with `#ponder("entry.id")[text]`.
+
+Never edit existing @label references, raw code, comments, content inside math delimiters, or content already inside a #ponder wrapper. Never create overlapping or syntactically nested wrappers.
+
+Ordinary occurrences need #ponder wrappers, not Typst labels. A new Typst label may be proposed only when a newly proposed concept needs a stable primary source and the relevant definition or result block has no label. Label edits must replace exactly `]` with `] <new-label>`.
+
+Do not append a liveness block or artificial `@label`/`#link(<label>)` references to keep source labels live for web export. Unused-label warnings caused by omitting such references are acceptable.
+
+Only native labeled Typst blocks that present a durable mathematical concept are citable as Ponder primary sources: definitions, theorems, propositions, lemmas, corollaries, and examples. An example may be primary when it is mainly about a genuinely individual concept, rather than a passing illustration, and the concept is useful or referred to again later. Do not use a section heading, ordinary prose, notation, remark, exercise, or proof as a primary source. If a concept has no suitable labeled block, reuse a broader existing citable concept when that is unambiguous or leave the candidate unannotated; never create a source reference to an unsuitable block.
+
+Ground every proposed concept, summary, alias, and tag in the supplied chapter and follow the entry-authoring instructions. Do not invent a Wikidata QID; return null unless a verified QID is supplied in the input.
+
+Write proposed entry content as direct mathematical exposition. Never refer to "the notes," "the source," or "the chapter," and never describe a fact as something being asked, shown, stated, given, or written. Do not include meta-commentary about provenance.
+
+When an occurrence or source is ambiguous, emit no edit or concept proposal. The batch workflow is non-interactive and cannot ask for clarification.
+
+Every source operation must include the exact source text it replaces.

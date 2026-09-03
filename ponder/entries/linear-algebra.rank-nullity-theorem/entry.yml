@@ -1,0 +1,27 @@
+id: linear-algebra.rank-nullity-theorem
+kind: theorem
+title: Rank-Nullity Theorem
+aliases:
+  - rank-nullity theorem
+tags:
+  - linear maps
+  - dimension
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-3.typ
+  label: thm-rank-nullity
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source: *a1
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related:
+  - linear-algebra.kernel-image
+  - linear-algebra.dimension
+  - linear-algebra.basis

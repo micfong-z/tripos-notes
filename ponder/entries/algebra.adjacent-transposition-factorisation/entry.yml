@@ -1,0 +1,15 @@
+id: algebra.adjacent-transposition-factorisation
+kind: lemma
+title: Factorisation into Adjacent Transpositions
+aliases: [adjacent transposition factorisation]
+tags: [permutations, transpositions, factorisation, induction]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: lem-transposition-adjacent, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: lem-transposition-adjacent}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.adjacent-transposition, algebra.transposition, algebra.transposition-parity]

@@ -1,0 +1,15 @@
+id: probability.law-of-total-probability
+kind: proposition
+title: Law of Total Probability
+aliases: [law of total probability]
+tags: [probability, conditioning, partitions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-law-of-total-probability, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-law-of-total-probability}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.conditional-probability, probability.bayes-formula]

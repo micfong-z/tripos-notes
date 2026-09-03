@@ -1,0 +1,31 @@
+id: set-theory.invertible-function
+kind: definition
+title: Invertible Function
+aliases:
+  - invertible
+  - inverse function
+tags:
+  - functions
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-invertible-function, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-invertible-function}
+  - title: Example
+    kind: example
+    supplemental: example.typ
+  - title: One-sided inverses
+    kind: warning
+    supplemental: one-sided-inverses.typ
+  - title: Invertible iff bijective
+    kind: theorem
+    supplemental: invertible-iff-bijective.typ
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related:
+  - algebra.bijection
+  - set-theory.function
+  - algebra.function-composition
+  - set-theory.identity-function

@@ -1,0 +1,15 @@
+id: calculus.partition-refinement
+kind: lemma
+title: Refinement of Partitions
+aliases: [refinement of a partition, finer partition]
+tags: [integration, partitions]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: lemma-refinement, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: lemma-refinement}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.upper-lower-riemann-sums, calculus.riemann-integrability-criteria]

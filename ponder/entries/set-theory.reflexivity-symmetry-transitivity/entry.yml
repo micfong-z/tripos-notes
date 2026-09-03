@@ -1,0 +1,24 @@
+id: set-theory.reflexivity-symmetry-transitivity
+kind: definition
+title: Reflexive, Symmetric and Transitive Relations
+aliases:
+  - reflexive
+  - symmetric
+  - transitive
+  - symmetry
+  - transitivity
+tags:
+  - relations
+  - sets
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-relation-props, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-relation-props}
+  - title: Checking the examples
+    kind: example
+    supplemental: checking-examples.typ
+related:
+  - set-theory.relation
+  - set-theory.equivalence-relation

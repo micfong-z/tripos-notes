@@ -1,0 +1,12 @@
+id: probability.random-walk
+kind: definition
+title: Random Walk
+aliases: [random walks]
+tags: [probability, stochastic processes, random walks]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-random-walk, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-random-walk}
+related: [probability.stochastic-process, probability.simple-random-walk, probability.independence-of-random-variables]

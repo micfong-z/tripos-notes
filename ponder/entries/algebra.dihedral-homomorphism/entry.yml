@@ -1,0 +1,15 @@
+id: algebra.dihedral-homomorphism
+kind: lemma
+title: Dihedral Homomorphism Construction
+aliases: [homomorphism from a dihedral group]
+tags: [groups, dihedral groups, homomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: hom-lemma-2, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: hom-lemma-2}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.dihedral-group, algebra.dihedral-relation, algebra.homomorphism]

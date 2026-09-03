@@ -1,0 +1,36 @@
+id: probability.expectation
+kind: definition
+title: Expectation
+aliases: [expected value, expectations]
+tags: [probability, expectation]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: def-expectation-non-negative, kind: definition}
+sections:
+  - title: Definition for non-negative random variables
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-expectation-non-negative}
+  - title: General definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: def-expectation-general}
+  - title: Properties
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-expectation-properties}
+  - title: Proof of countable additivity of expectation
+    kind: proof
+    supplemental: proof.typ
+  - title: Expectation of a function of a random variable
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-expectation-function}
+  - title: Proof of the function formula
+    kind: proof
+    supplemental: function-proof.typ
+  - title: Tail sum formula
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-tail-sum}
+  - title: Proof of the tail sum formula
+    kind: proof
+    supplemental: tail-sum-proof.typ
+  - title: Expectation of an indicator
+    kind: example
+    supplemental: indicator.typ
+related: [probability.discrete-random-variable, probability.integrable-random-variable, probability.moment, probability.variance, probability.law-of-total-expectation, probability.conditional-expectation, set-theory.indicator-function]

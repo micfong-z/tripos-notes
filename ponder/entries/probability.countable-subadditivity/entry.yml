@@ -1,0 +1,15 @@
+id: probability.countable-subadditivity
+kind: proposition
+title: Countable Subadditivity
+aliases: [countable subadditivity]
+tags: [probability, measures]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-countable-subadditivity, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-2.typ, label: prop-countable-subadditivity}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.probability-space, probability.probability-measure-properties, probability.inclusion-exclusion-formula]

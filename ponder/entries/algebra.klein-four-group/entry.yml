@@ -1,0 +1,12 @@
+id: algebra.klein-four-group
+kind: example
+title: Klein 4-Group
+aliases: [Klein four-group, K4]
+tags: [groups, finite groups, products, cyclic groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-6.typ, label: klein-four-group, kind: example}
+sections:
+  - title: Example
+    kind: example
+    source: {document: part-ia/groups/chapters/chapter-6.typ, label: klein-four-group}
+related: [algebra.direct-product, algebra.cyclic-group, algebra.element-order, algebra.dihedral-group]

@@ -1,0 +1,21 @@
+id: set-theory.union-intersection-properties
+kind: proposition
+title: Properties of Union and Intersection
+aliases:
+  - distributive laws
+  - commutativity of union and intersection
+tags:
+  - sets
+  - operations
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: inter-union-props, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: inter-union-props}
+  - title: Proof technique
+    kind: proof
+    supplemental: proof-technique.typ
+related:
+  - set-theory.set-operations
+  - set-theory.de-morgans-laws

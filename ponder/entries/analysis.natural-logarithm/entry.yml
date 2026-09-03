@@ -1,0 +1,18 @@
+id: analysis.natural-logarithm
+kind: definition
+title: Natural Logarithm
+aliases: [real logarithm, log]
+tags: [analysis, special functions]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: lemma-natural-logarithm, kind: lemma}
+sections:
+  - title: Properties
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: lemma-natural-logarithm}
+  - title: The real exponential
+    kind: lemma
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: lemma-real-exponential}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [calculus.exponential-function, analysis.real-powers, analysis.inverse-function-theorem, algebra.complex-logarithm]

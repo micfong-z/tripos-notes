@@ -1,0 +1,12 @@
+id: geometry.cross-ratio
+kind: definition
+title: Cross-Ratio
+aliases: [cross-ratio, cross ratio]
+tags: [transformations, geometry, complex analysis]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: cross-ratio, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: cross-ratio}
+related: [algebra.mobius-triple-transitivity, algebra.mobius-transformation, geometry.circle-in-riemann-sphere, geometry.cross-ratio-circle-criterion]

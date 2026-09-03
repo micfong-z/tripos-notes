@@ -1,0 +1,12 @@
+id: algebra.determinant-multiplicativity
+kind: lemma
+title: Multiplicativity of the Determinant
+aliases: [determinant multiplicativity]
+tags: [linear algebra, matrices, determinants]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-9.typ, label: determinant-multiplicativity, kind: lemma}
+sections:
+  - title: Statement
+    kind: lemma
+    source: {document: part-ia/groups/chapters/chapter-9.typ, label: determinant-multiplicativity}
+related: [algebra.homomorphism, algebra.general-linear-group]

@@ -1,0 +1,15 @@
+id: calculus.continuity-implies-integrability
+kind: proposition
+title: Continuity implies Integrability
+aliases: [continuous functions are Riemann integrable]
+tags: [integration, continuity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: continuity-implies-integrable, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/analysis-i/chapters/chapter-4.typ, label: continuity-implies-integrable}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [analysis.continuity, analysis.extreme-value-theorem, analysis.bolzano-weierstrass-theorem, analysis.sequential-continuity, calculus.riemann-integrability-criteria, calculus.piecewise-continuity-implies-integrability, calculus.monotonicity-implies-integrability]

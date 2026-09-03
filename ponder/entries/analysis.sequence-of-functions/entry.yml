@@ -1,0 +1,12 @@
+id: analysis.sequence-of-functions
+kind: definition
+title: Sequence of Functions
+aliases: [sequences of functions]
+tags: [analysis, functions, sequences]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: definition-sequence-of-functions, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/analysis-i/chapters/chapter-5.typ, label: definition-sequence-of-functions}
+related: [analysis.series-of-functions, analysis.sequence]

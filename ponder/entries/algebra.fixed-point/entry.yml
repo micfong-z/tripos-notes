@@ -1,0 +1,15 @@
+id: algebra.fixed-point
+kind: definition
+title: Fixed Point
+aliases: [fixed point]
+tags: [permutations, transformations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: fixed-point, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: fixed-point}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.permutation, algebra.mobius-transformation]

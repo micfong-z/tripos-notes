@@ -1,0 +1,15 @@
+id: geometry.cross-ratio-circle-criterion
+kind: corollary
+title: Cross-Ratio Criterion for Circles
+aliases: [cross-ratio circle criterion]
+tags: [cross-ratio, geometry, transformations]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: cross-ratio-circle-criterion, kind: corollary}
+sections:
+  - title: Statement
+    kind: corollary
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: cross-ratio-circle-criterion}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [geometry.cross-ratio, geometry.circle-in-riemann-sphere, algebra.mobius-circle-preservation]

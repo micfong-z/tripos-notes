@@ -1,0 +1,12 @@
+id: algebra.trivial-group
+kind: definition
+title: Trivial Group
+aliases: [trivial group]
+tags: [groups]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: trivial-group, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: trivial-group}
+related: []

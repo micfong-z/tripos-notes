@@ -1,0 +1,15 @@
+id: algebra.mobius-circle-preservation
+kind: theorem
+title: Circles and Möbius Transformations
+aliases: [Möbius transformations preserve circles]
+tags: [transformations, geometry, complex analysis]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-circle-preservation, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-circle-preservation}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.mobius-transformation, geometry.circle-in-riemann-sphere, algebra.mobius-generators]

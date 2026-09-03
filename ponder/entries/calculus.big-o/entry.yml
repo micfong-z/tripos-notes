@@ -1,0 +1,12 @@
+id: calculus.big-o
+kind: definition
+title: Big O
+aliases: [Big O notation, order bound]
+tags: [differential equations, asymptotics, limits]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: big-o, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-1.typ, label: big-o}
+related: [calculus.little-o, calculus.taylor-series]

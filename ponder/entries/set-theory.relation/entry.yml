@@ -1,0 +1,21 @@
+id: set-theory.relation
+kind: definition
+title: Relation
+aliases:
+  - relations
+tags:
+  - relations
+  - sets
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-relation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-relation}
+  - title: Examples on the naturals
+    kind: example
+    supplemental: examples-on-naturals.typ
+related:
+  - set-theory.reflexivity-symmetry-transitivity
+  - set-theory.equivalence-relation
+  - set-theory.cartesian-product

@@ -1,0 +1,15 @@
+id: algebra.mobius-group
+kind: theorem
+title: Möbius Group
+aliases: [Möbius group]
+tags: [groups, transformations, complex analysis]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-group, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-5.typ, label: mobius-group}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.group, algebra.function-composition, algebra.mobius-transformation, algebra.mobius-composition, algebra.mobius-generators]

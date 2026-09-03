@@ -1,0 +1,1 @@
+$EE[X mid(|) Y]$ is a random variable, namely a function of $Y$: if $Y(omega) = y$, then $EE[X mid(|) Y](omega) = EE[X mid(|) Y=y]$. Random variables are functions $X, Y: Omega -> RR$, so $g(Y)$ really means the composition $g compose Y$.

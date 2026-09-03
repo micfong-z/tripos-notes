@@ -1,0 +1,15 @@
+id: probability.am-gm-inequality
+kind: proposition
+title: AM-GM Inequality
+aliases: [AM-GM, arithmetic-geometric mean inequality, arithmetic mean-geometric mean inequality]
+tags: [inequalities, convexity]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-am-gm-inequality, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/probability/chapters/chapter-3.typ, label: prop-am-gm-inequality}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [probability.jensens-inequality, analysis.convex-function]

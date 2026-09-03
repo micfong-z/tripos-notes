@@ -1,0 +1,12 @@
+id: algebra.coset
+kind: definition
+title: Coset
+aliases: [coset, "left coset", "right coset"]
+tags: [groups, subgroups, cosets]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: left-cosets, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: left-cosets}
+related: [algebra.group, algebra.subgroup, algebra.coset-partition, algebra.coset-cardinality, algebra.subgroup-index]

@@ -1,0 +1,15 @@
+id: algebra.conjugation
+kind: definition
+title: Conjugation
+aliases: [conjugate]
+tags: [groups, actions]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: conjugation, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: conjugation}
+  - title: Examples
+    kind: example
+    supplemental: examples.typ
+related: [algebra.group-action, algebra.conjugacy-class, algebra.centraliser, algebra.centre]

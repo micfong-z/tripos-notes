@@ -1,0 +1,15 @@
+id: algebra.action-orbit-properties
+kind: proposition
+title: Stabiliser and Orbit Properties
+aliases: [stabiliser subgroup, stabilizer subgroup, orbit partition]
+tags: [groups, actions, subgroups, partitions]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-4.typ, label: action-orbit-properties, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-4.typ, label: action-orbit-properties}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.orbit-stabiliser-definitions, algebra.group-action, algebra.subgroup, algebra.coset-partition, algebra.action-properties]

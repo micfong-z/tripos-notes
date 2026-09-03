@@ -1,0 +1,15 @@
+id: algebra.transposition-generation
+kind: theorem
+title: Transpositions Generate the Symmetric Group
+aliases: [transpositions generate]
+tags: [permutations, symmetric groups, generators, induction]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-8.typ, label: transpositions-generate, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-8.typ, label: transpositions-generate}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.transposition, algebra.symmetric-group, algebra.adjacent-transposition]

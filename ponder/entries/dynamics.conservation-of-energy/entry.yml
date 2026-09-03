@@ -1,0 +1,15 @@
+id: dynamics.conservation-of-energy
+kind: theorem
+title: Conserved energy of conservative forces
+aliases: [conservation of energy, conserved energy]
+tags: [mechanics, energy]
+summary: summary.typ
+primarySource: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: prop-conserved-energy, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/dynamics-and-relativity/chapters/chapter-2.typ, label: prop-conserved-energy}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [dynamics.conservative-force, dynamics.escape-velocity]

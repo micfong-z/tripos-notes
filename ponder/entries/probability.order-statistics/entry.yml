@@ -1,0 +1,21 @@
+id: probability.order-statistics
+kind: definition
+title: Order Statistics
+aliases: [order statistic, order statistics of a random sample]
+tags: [probability, samples, distributions]
+summary: summary.typ
+primarySource: {document: part-ia/probability/chapters/chapter-4.typ, label: def-order-statistics, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/probability/chapters/chapter-4.typ, label: def-order-statistics}
+  - title: Minimum and maximum
+    kind: remark
+    supplemental: min-max.typ
+  - title: Joint density
+    kind: proposition
+    supplemental: joint-density.typ
+  - title: Spacings of i.i.d. exponentials
+    kind: example
+    supplemental: spacings.typ
+related: [probability.exponential-distribution, probability.multivariate-density-function, probability.independence-of-random-variables]

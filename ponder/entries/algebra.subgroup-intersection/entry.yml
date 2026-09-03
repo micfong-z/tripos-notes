@@ -1,0 +1,12 @@
+id: algebra.subgroup-intersection
+kind: proposition
+title: Intersection of Subgroups
+aliases: [intersection of subgroups]
+tags: [groups, subgroups, intersections]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-1.typ, label: subgroup-intersection, kind: proposition}
+sections:
+  - title: Statement
+    kind: proposition
+    source: {document: part-ia/groups/chapters/chapter-1.typ, label: subgroup-intersection}
+related: []

@@ -1,0 +1,15 @@
+id: algebra.cyclic-group-classification
+kind: theorem
+title: Classification of Cyclic Groups
+aliases: [classification of cyclic groups]
+tags: [groups, cyclic groups, isomorphisms]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-2.typ, label: cyclic-group-classification, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/groups/chapters/chapter-2.typ, label: cyclic-group-classification}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+related: [algebra.cyclic-group, algebra.isomorphism]

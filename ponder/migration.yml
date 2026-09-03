@@ -1,0 +1,4 @@
+model: gpt-5.6-luna
+promptVersion: ponder-groups-v3
+endpoint: /v1/responses
+phases: [discovery, registry, annotation]

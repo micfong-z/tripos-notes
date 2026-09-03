@@ -1,0 +1,34 @@
+id: set-theory.schroeder-bernstein-theorem
+kind: theorem
+title: Schröder-Bernstein theorem
+aliases:
+  - cantor-bernstein theorem
+  - schroeder-bernstein
+tags:
+  - sets
+  - functions
+  - cardinality
+summary: summary.typ
+primarySource:
+  document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+  label: schroeder-bernstein
+  kind: theorem
+sections:
+  - title: Statement
+    kind: theorem
+    source:
+      document: part-ia/numbers-and-sets/chapters/chapter-6.typ
+      label: schroeder-bernstein
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Example
+    kind: example
+    supplemental: example.typ
+  - title: Comparing sizes of sets
+    kind: remark
+    supplemental: comparing-sizes.typ
+related:
+  - set-theory.injection-surjection
+  - algebra.bijection
+  - set-theory.cardinality

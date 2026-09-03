@@ -1,0 +1,24 @@
+id: combinatorics.binomial-coefficient-formula
+kind: proposition
+title: "Factorial formula for binomial coefficients"
+aliases:
+  - "factorial formula"
+  - "n choose k formula"
+tags:
+  - "counting"
+  - "factorials"
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "prop-binomial-formula", kind: proposition}
+sections:
+  - title: "Statement"
+    kind: proposition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-3.typ, label: "prop-binomial-formula"}
+  - title: "Counting proof"
+    kind: proof
+    supplemental: proof.typ
+  - title: "Growth for large n"
+    kind: remark
+    supplemental: growth.typ
+related:
+  - combinatorics.binomial-coefficient
+  - combinatorics.binomial-theorem

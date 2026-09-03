@@ -1,0 +1,23 @@
+id: set-theory.finite-set
+kind: definition
+title: Finite and Infinite Sets
+aliases:
+  - finite set
+  - infinite set
+  - finite
+  - infinite
+tags:
+  - sets
+  - counting
+summary: summary.typ
+primarySource: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-finite-infinite-set, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/numbers-and-sets/chapters/chapter-2.typ, label: def-finite-infinite-set}
+  - title: Characterisations on finite sets
+    kind: corollary
+    supplemental: characterisations.typ
+related:
+  - set-theory.cardinality
+  - set-theory.injection-surjection

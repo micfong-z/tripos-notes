@@ -1,0 +1,1 @@
+$f: X subset.eq CC -> CC$ is *continuous* at $a in X$ when $forall epsilon > 0, exists delta in RR, forall z in X: |z - a| < delta => abs(f(z) - f(a)) < epsilon$; at an accumulation point this says exactly $lim_(z->a) f(z) = f(a)$.

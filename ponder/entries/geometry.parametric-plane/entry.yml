@@ -1,0 +1,22 @@
+id: geometry.parametric-plane
+kind: proposition
+title: Parametric form of a plane
+aliases:
+  - vector equation of a plane
+  - normal form of a plane
+tags:
+  - geometry
+  - planes
+summary: summary.typ
+primarySource: &a1
+  document: part-ia/vectors-and-matrices/chapters/chapter-2.typ
+  label: parametric-plane
+  kind: proposition
+sections:
+  - title: Normal form and distance
+    kind: remark
+    supplemental: normalform.typ
+related:
+  - geometry.parametric-line
+  - linear-algebra.cross-product
+  - linear-algebra.dot-product

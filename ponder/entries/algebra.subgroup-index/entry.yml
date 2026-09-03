@@ -1,0 +1,12 @@
+id: algebra.subgroup-index
+kind: definition
+title: Index of a Subgroup
+aliases: [subgroup index, index]
+tags: [groups, subgroups, cosets, counting]
+summary: summary.typ
+primarySource: {document: part-ia/groups/chapters/chapter-3.typ, label: subgroup-index, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/groups/chapters/chapter-3.typ, label: subgroup-index}
+related: [algebra.subgroup, algebra.coset, algebra.group-order, algebra.lagrange-theorem]

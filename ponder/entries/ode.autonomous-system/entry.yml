@@ -1,0 +1,23 @@
+id: ode.autonomous-system
+kind: definition
+title: Autonomous System
+wikidataQID: Q788009
+aliases: [autonomous, autonomous systems, autonomous ODE]
+tags: [differential equations, ordinary differential equations, dynamical systems]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: autonomous-system, kind: definition}
+sections:
+  - title: Definition
+    kind: definition
+    source: {document: part-ia/differential-equations/chapters/chapter-5.typ, label: autonomous-system}
+  - title: Chemical kinetics
+    kind: example
+    source:
+      document: part-ia/differential-equations/chapters/chapter-5.typ
+      label: ex-chemical-kinetics
+  - title: Logistic equation
+    kind: example
+    source:
+      document: part-ia/differential-equations/chapters/chapter-5.typ
+      label: ex-logistic-equation
+related: [ode.separable-equation, ode.equilibrium-point, ode.equilibrium-stability, ode.logistic-equation]

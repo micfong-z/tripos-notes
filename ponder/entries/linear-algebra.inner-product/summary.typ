@@ -1,0 +1,1 @@
+$(bold(v), bold(w)) = overline((bold(w), bold(v)))$ with linearity in the second argument, anti-linearity in the first, and positive definiteness $(bold(v), bold(v)) >= 0$ with equality only at $bold(v) = bold(0)$.

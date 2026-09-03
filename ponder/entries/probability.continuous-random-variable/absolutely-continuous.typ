@@ -1,0 +1,1 @@
+A continuous random variable whose probability distribution function is differentiable is also known as *absolutely continuous*. Differentiability of $F$ gives the random variable a probability density function $f = F'$, which is the setting used throughout the study of continuous distributions.

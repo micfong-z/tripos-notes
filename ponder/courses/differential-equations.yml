@@ -1,0 +1,5 @@
+course: differential-equations
+title: Part IA Differential Equations
+document: part-ia/differential-equations/main.typ
+sourceBase: /notes/ia-de/content
+outputName: ia-de.html

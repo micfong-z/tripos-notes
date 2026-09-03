@@ -1,0 +1,1 @@
+A conic has foci $(plus.minus a e, 0)$ and directrices $x = plus.minus a/e$: ellipse for $e < 1$, parabola for $e = 1$, hyperbola for $e > 1$, with polar form $r = l/(1 + e cos theta)$ around a focus.

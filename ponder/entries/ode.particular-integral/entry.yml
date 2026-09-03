@@ -1,0 +1,18 @@
+id: ode.particular-integral
+kind: definition
+title: Particular Integral and Complementary Function
+aliases: [PI, complementary function, complementary functions, CF, particular integrals]
+tags: [differential equations, ordinary differential equations, forcing]
+summary: summary.typ
+primarySource: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: ex-constant-forcing, kind: example}
+sections:
+  - title: Constant forcing
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: ex-constant-forcing}
+  - title: Eigenfunction forcing
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: ex-radioactive-decay}
+  - title: Resonance case
+    kind: example
+    source: {document: part-ia/differential-equations/chapters/chapter-4.typ, label: ex-radioactive-decay-revisited}
+related: [ode.homogeneous-differential-equation, ode.linear-differential-equation, ode.eigenfunction]

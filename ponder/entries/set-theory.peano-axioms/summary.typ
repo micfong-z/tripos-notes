@@ -1,0 +1,1 @@
+The natural numbers form a set $NN$ containing $1$ together with a successor function $S: NN -> NN$ such that $S(n) != 1$, $S(m) = S(n)$ implies $m = n$, and every subset of $NN$ containing $1$ and closed under $S$ is all of $NN$.

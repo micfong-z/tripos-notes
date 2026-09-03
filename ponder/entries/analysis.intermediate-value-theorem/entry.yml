@@ -1,0 +1,18 @@
+id: analysis.intermediate-value-theorem
+kind: theorem
+title: Intermediate Value Theorem
+aliases: [IVT]
+tags: [analysis, continuity]
+summary: summary.typ
+primarySource: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: intermediate-value-theorem, kind: theorem}
+sections:
+  - title: Statement
+    kind: theorem
+    source: {document: part-ia/analysis-i/chapters/chapter-2.typ, label: intermediate-value-theorem}
+  - title: Proof
+    kind: proof
+    supplemental: proof.typ
+  - title: Existence of N-th roots
+    kind: example
+    supplemental: examples.typ
+related: [analysis.extreme-value-theorem, analysis.continuity, analysis.inverse-function-theorem, analysis.least-upper-bound]
