@@ -14,8 +14,9 @@ ponder/            self-contained tooling subproject (see ponder/AGENTS.md)
 build/             compiled PDFs, not tracked
 ```
 
-`courses.tsv` maps each course slug to its display name and drives `build-all`,
-release asset names and the README table.
+`courses.tsv` has three tab-separated columns: the build slug, the display name,
+and the slug the website and the R2 object keys use. It drives `build-all`, the
+README table and publishing, so a new course is added there once.
 
 ## Building
 
@@ -24,7 +25,19 @@ just build part-ia/groups dark serif   # one course, one variant
 just build-all                         # every course, all four variants
 just watch part-ia/groups              # live preview
 just fonts-check                       # verify the vendored faces
+just publish                           # build everything, then push to R2
 ```
+
+## Publishing
+
+Tagging `v*` runs the release workflow: it builds all four variants, attaches
+them to the GitHub release, and uploads them to the `micfong-space` R2 bucket
+that `storage.micfong.space` serves. Object keys are
+`notes/<site-slug>.<theme>.<font>.pdf`, plus `notes/<site-slug>.pdf` as an alias
+for the light/sans build so links predating the variants still resolve.
+
+`just publish` does the same from a local `wrangler login` session. CI instead
+reads the `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets.
 
 Every compile passes `--root .`, because the shared template is imported
 root-absolutely as `/template/lib.typ`. Compiling a course file directly without

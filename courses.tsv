@@ -1,9 +1,9 @@
-part-ia/analysis-i	Part IA – Analysis I
-part-ia/differential-equations	Part IA – Differential Equations
-part-ia/dynamics-and-relativity	Part IA – Dynamics and Relativity
-part-ia/groups	Part IA – Groups
-part-ia/numbers-and-sets	Part IA – Numbers and Sets
-part-ia/probability	Part IA – Probability
-part-ia/vectors-and-matrices	Part IA – Vectors and Matrices
-part-ib/optimisation	Part IB – Optimisation
-part-ib/variational-principles	Part IB – Variational Principles
+part-ia/analysis-i	Part IA – Analysis I	ia-analysis
+part-ia/differential-equations	Part IA – Differential Equations	ia-de
+part-ia/dynamics-and-relativity	Part IA – Dynamics and Relativity	ia-dr
+part-ia/groups	Part IA – Groups	ia-groups
+part-ia/numbers-and-sets	Part IA – Numbers and Sets	ia-ns
+part-ia/probability	Part IA – Probability	ia-prob
+part-ia/vectors-and-matrices	Part IA – Vectors and Matrices	ia-vm
+part-ib/optimisation	Part IB – Optimisation	ib-optimisation
+part-ib/variational-principles	Part IB – Variational Principles	ib-vp

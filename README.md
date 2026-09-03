@@ -23,8 +23,9 @@ The web edition, with hover-and-click concept explanations, is at
 
 ## Reading the notes
 
-Compiled PDFs are attached to each [release]. Every course is published in four
-variants, so pick the one you like:
+Compiled PDFs are attached to each [release] and served from
+`storage.micfong.space/notes/`. Every course is published in four variants, so
+pick the one you like:
 
 |  | Sans | Serif |
 | --- | --- | --- |

@@ -78,3 +78,40 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           files: build/*.pdf
+
+  publish-r2:
+    name: Publish PDFs to R2
+    needs: pdf
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # courses.tsv maps each build slug to the slug the website links by.
+      - uses: actions/download-artifact@v4
+        with:
+          name: notes-pdfs
+          path: build
+
+      - name: Upload every variant
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          put() {
+            npx --yes wrangler@4 r2 object put "micfong-space/$2" \
+              --file "$1" --content-type application/pdf --remote >/dev/null
+            echo "  $2"
+          }
+          while IFS=$'\t' read -r slug name site; do
+            base="build/$(tr / - <<< "$slug")"
+            for t in light dark; do
+              for f in sans serif; do
+                put "$base.$t.$f.pdf" "notes/$site.$t.$f.pdf"
+              done
+            done
+            # Alias kept so links that predate the four variants still resolve.
+            put "$base.light.sans.pdf" "notes/$site.pdf"
+            echo "uploaded $name"
+          done < courses.tsv
