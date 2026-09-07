@@ -33,7 +33,7 @@
     ),
     math: "IBM Plex Math",
     math-features: (
-      "zero": 1, // slashed zero
+      // "zero": 1, // slashed zero
     ),
   ),
 )
