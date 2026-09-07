@@ -157,6 +157,15 @@
     },
   )
 
+  show heading: it => [
+    #context {
+      if counter(heading).get().first() != 0 {
+        text(fill: colors.text-secondary, counter(heading).display())
+      }
+    }
+    #it.body
+  ]
+
   [
     #box(text(1.75em, weight: 700, title))
     #h(1fr)
