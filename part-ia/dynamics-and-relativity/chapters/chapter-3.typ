@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/unify:0.7.1": qty
 
 #lecture-separator(lecture: 6, date: "2026-02-03")
 
@@ -317,7 +315,7 @@ Hence the energy is negative for bounded orbits, zero for parabolic orbits, and 
 $
   E = - (m k^2)/(2 l^2)
 $
-which is the minimum of $V(r)$.
+which is the minimum of $V_"eff" (r)$.
 
 == Kepler's Laws
 
@@ -329,7 +327,7 @@ A consequence of the above are #ponder("dynamics.keplers-laws")[Kepler's laws] o
 
   / K2: The line between the planet and the Sun sweeps out equal areas in equal times, and $ dot(A) = (l)/(2). $
 
-  / K3: The period of of the orbit is proportional to $"radius"^((3)/(2))$.
+  / K3: The period of the orbit is proportional to $"radius"^((3)/(2))$.
 
 ] <prop-keplers-laws>
 
@@ -372,9 +370,9 @@ A consequence of the above are #ponder("dynamics.keplers-laws")[Kepler's laws] o
         & = (2)/(l) ppi a b \
         & = (2 ppi)/(l) (r_0^2)/((1-e^2)^((3)/(2))) \
         & = (2 ppi)/(sqrt(G M) ) ((r_0)/(1-e^2))^((3)/(2)) quad "by" l^2=k r_0 \
-        & = (2 ppi)/(sqrt(G M) ) R_"avg"^(3 slash 2) \
+        & = (2 ppi)/(sqrt(G M) ) a^(3 slash 2) \
     $
-    where $R_"avg" = (r_0)/(1-e^2)$ is the average radius of the ellipse.
+    where $a = (r_0)/(1-e^2)$ is the semi-major axis of the ellipse.
 
 ]
 

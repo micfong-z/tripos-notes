@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/unify:0.7.1": qty
 
 = Special Relativity
 
@@ -93,8 +91,8 @@ Another argument for $gamma_v = gamma_(-v)$ is that in 3D there is no preferred 
 We have
 $
   x'' & = gamma_(-v) (x' + v t') \
-      & = gamma_(-v) (gamma_v (x - v t) + t') \
-      & = gamma^2 (x - v t) + gamma t'        & quad "by" gamma_v = gamma_(-v) \
+      & = gamma_(-v) (gamma_v (x - v t) + v t') \
+      & = gamma^2 (x - v t) + gamma v t'      & quad "by" gamma_v = gamma_(-v) \
       & = x                                   &           quad "by assumption" \
 $
 So
@@ -142,7 +140,7 @@ $
 _i.e._ $v -> -v$.
 
 
-For velocities $v << c$, $gamma approx 1$ and $(gamma)/(c) -> 0$, so these become the #ponder("dynamics.galilean-transformation")[Galilean transformations] _i.e._ the non-relativistic limit.
+For velocities $v << c$, $gamma approx 1$ and $(gamma v)/(c^2) -> 0$, so these become the #ponder("dynamics.galilean-transformation")[Galilean transformations] _i.e._ the non-relativistic limit.
 
 We will now explore some possibly counter-intuitive consequences of the above.
 
@@ -296,7 +294,7 @@ $
         P_1 & = (0, 0) quad "in both frames" \
         P_2 & = (c t', x') = (0, L') \
             & =(c t, x) = (gamma (v)/(c) L', gamma L'). \
-  P_3 "has" & x = gamma L' - v (gamma v L)/(c^2) \
+  P_3 "has" & x = gamma L' - v (gamma v L')/(c^2) \
 $
 _i.e._ for $P_3$ we have $eval(x)_P_3 = eval(x)_P_2 - v eval(t)_P_2$.
 
@@ -461,7 +459,7 @@ Because the #ponder("linear-algebra.inner-product")[inner product] is preserved 
 
 #ponder("algebra.subgroup")[Subgroups] with $det matbold(Lambda) = + 1$ are called the *proper Lorentz group*, denoted by $"SO"(1, 3)$.
 
-A further #ponder("algebra.subgroup")[subgroup] are those that do reserve the time direction, called the *proper orthochronous Lorentz group*, denoted by $"SO"^(+)(1, 3)$. For example,
+A further #ponder("algebra.subgroup")[subgroup] are those that do preserve the time direction, called the *proper orthochronous Lorentz group*, denoted by $"SO"^(+)(1, 3)$. For example,
 $
   matbold(Lambda) = mat(-1, 0, 0, 0; 0, -1, 0, 0; 0, 0, -1, 0; 0, 0, 0, -1)
 $
@@ -656,7 +654,7 @@ along a light ray $dif tau = 0$, since any points on the trajectory are lightlin
 
 Hence no time passes for a massless particle.
 
-There are only two known massless particles: photons and gravitons. We only conider photons (the particles of light) in this course.
+The photon is the only massless particle we can observe directly; the graviton, if it exists, would also be massless. We only conider photons (the particles of light) in this course.
 
 From quantum mechanics, we have for a photon,
 $
@@ -664,7 +662,7 @@ $
 $
 where $omega$ is the angular frequency of the photon, and $lambda$ is the wavelength of the photon.
 
-Length contraction means that different observers see different wavelengths of light, and hence sees different energies. (See Example Sheet.)
+Lorentz-transforming the photon's 4-momentum means that different observers see different wavelengths of light, and hence sees different energies. This is the relativistic Doppler effect. (See Example Sheet.)
 
 == Particle Physics
 
@@ -675,7 +673,7 @@ $
 
 _i.e._ the 4-momentum $bold(P)$ must be the same before and after the collision.
 
-Basic processes include particle delay and particle collisions.
+Basic processes include particle decay and particle collisions.
 
 === Particle Decay
 
@@ -743,7 +741,7 @@ $
   2 bold(P_h) dot bold(P_gamma) & = m_h^2 c^2.
 $
 
-Now, since $bold(P_h) = vec(m_h c, bold(0))$ and $bold(P_gamma) = (E_gamma)/(c) vec(1, bold(hat(n)))$, we have
+Now, since $bold(P_h) = vec((E_h)/(c), bold(p_h))$ and $bold(P_gamma) = (E_gamma)/(c) vec(1, bold(hat(n)))$ in the lab frame, we have
 $
   m_h^2 c^2 = 2 ((E_h E_gamma)/(c^2) - (E_gamma)/(c) abs(bold(p_h)) cos theta)
 $
@@ -807,7 +805,7 @@ Hence,
 $
   2 m^2c^2 + 2 m(E_(1)-E_3) - (2 E_1 E_3)/(c^2) = -2 abs(bold(p_1)) abs(bold(p_3)) cos phi.
 $
-We have obtained $cos theta$ in terms of $E_1, E_3$ and $bold(p_1), bold(p_3)$. Using @eq-460 eliminates the $bold(p_i)$ terms.
+We have obtained $cos phi$ in terms of $E_1, E_3$ and $bold(p_1), bold(p_3)$. Using @eq-460 eliminates the $bold(p_i)$ terms.
 
 See Example Sheet 4 for Compton scattering, which describes a massless particle scattering off a massive one.
 
@@ -996,7 +994,7 @@ $
 $
 where $matbold(G)$ is the electromagnetic 4-tensor,
 $
-  matbold(G) = mat(0, -E_x, -E_y, -E_z; E_x, 0, - c B_(z), c B_(y); E_y, c B_z, 0, - c B_x; E_z, -c B_y, c B_x, 0).
+  matbold(G) = mat(0, E_x, E_y, E_z; E_x, 0, c B_(z), - c B_(y); E_y, -c B_z, 0, c B_x; E_z, c B_y, -c B_x, 0).
 $
 
 The time component of @eq-533 is

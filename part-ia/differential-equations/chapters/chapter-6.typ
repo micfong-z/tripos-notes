@@ -81,7 +81,7 @@ $
   cal(D)(ee^(lambda x)) = underbracket((a lambda^(2) + b lambda + c), "eigenvalue") ee^(lambda x).
 $
 
-The #ponder("ode.particular-integral")[complementary functions] satisfy $cal(D) y_c = 0$, _i.e._ $y_n$ are #ponder("ode.eigenfunction")[eigenfunctions] of $cal(D)$ with eigenvalue $0$.
+The #ponder("ode.particular-integral")[complementary functions] satisfy $cal(D) y_c = 0$, _i.e._ $y_c$ are #ponder("ode.eigenfunction")[eigenfunctions] of $cal(D)$ with eigenvalue $0$.
 
 #remark[
   We can prove that the #ponder("ode.eigenfunction")[eigenfunctions] of a #ponder("ode.linear-differential-operator")[linear differential operator] with #ponder("ode.constant-coefficients")[constant coefficients] are of the form $ee^(lambda x)$.
@@ -186,7 +186,7 @@ There are two roots, $lambda_1, lambda_2$, to the characteristic equation, which
   $
     y_c &= A ee^((2+epsilon) x) + B ee^((2-epsilon) x)\
     &= ee^(2x) (A ee^(epsilon x) + B ee^(-epsilon x)) \
-    &= ee^(2x) [(A+B) + epsilon (A-B) x + O(A epsilon^2) + O(B epsilon^2 x^2)] quad "as" epsilon -> 0. quad ("Taylor series") \
+    &= ee^(2x) [(A+B) + epsilon (A-B) x + O(A epsilon^2 x^2) + O(B epsilon^2 x^2)] quad "as" epsilon -> 0. quad ("Taylor series") \
   $
 
   Consider the initial conditions $y(0) = C$, $y'(0) = D$ to both the original and detuned equations. We have
@@ -457,7 +457,7 @@ We can find $W(x)$ without knowing the solutions explicitly.
 ]
 
 #remarklike[Application][
-  Abel's identity can be usde to find a second solution $y_2$ given a known solution $y_1$. Consider that we have
+  Abel's identity can be used to find a second solution $y_2$ given a known solution $y_1$. Consider that we have
   $ y_1y'_2 - y_2y'_1 = W(x_0) exp[-integral_(x_0)^x p(u) dif u]. $
   Dividing both sides by $y_1^2$, we get
   $
@@ -602,7 +602,7 @@ We can determine the constants by substituting into the ODE. Since the #ponder("
   $
   Therefore, $A = 1/3$, $B = 5/18$, $C = 1/2$.
 
-  The #ponder("ode.particular-integral")[complmentary function], as discussed earlier, is
+  The #ponder("ode.particular-integral")[complementary function], as discussed earlier, is
   $ y_c (x) = alpha ee^(2 x) + beta ee^(3 x). $
 
   Hence, the general solution is
@@ -615,25 +615,25 @@ If the forcing term $f(x)$ involves a term that is in a #ponder("ode.particular-
 #example[Resonance][
   Consider the #ponder("ode.ordinary-differential-equation")[ODE]
   $
-    dot.double(y) + omega_0^2 y = sin(omega_0 x)
+    dot.double(y) + omega_0^2 y = sin(omega_0 t)
   $
   which represents a simple harmonic oscillator driven at its natural frequency $omega_0$. We say that this oscillator is driven #ponder("ode.resonance")[resonantly]. We have the comcomplementary functions
   $
-    y_c (x) = A cos(omega_0 x) + B sin(omega_0 x).
+    y_c (t) = A cos(omega_0 t) + B sin(omega_0 t).
   $
-  Since $sin(omega_0 x)$ is already in the #ponder("ode.particular-integral")[complementary function], we consider detuning by looking at the slightly modified equation
+  Since $sin(omega_0 t)$ is already in the #ponder("ode.particular-integral")[complementary function], we consider detuning by looking at the slightly modified equation
   $
-    dot.double(y) + omega_0^2 y = sin(omega x)
+    dot.double(y) + omega_0^2 y = sin(omega t)
   $
   with $omega != omega_0$.
 
   We try a #ponder("ode.particular-integral")[particular integral] of the form
   $
-    y_p (x) = C sin(omega x) + D cos(omega x).
+    y_p (t) = C sin(omega t) + D cos(omega t).
   $
-  We can see that $D$ must be zero since there is no $cos(omega x)$ term on the RHS. Substituting into the #ponder("ode.ordinary-differential-equation")[ODE], we get
+  We can see that $D$ must be zero since there is no $cos(omega t)$ term on the RHS. Substituting into the #ponder("ode.ordinary-differential-equation")[ODE], we get
   $
-    -C omega^2 sin(omega x) + omega_0^2 C sin(omega x) & = sin(omega x) \
+    -C omega^2 sin(omega t) + omega_0^2 C sin(omega t) & = sin(omega t) \
                                C (omega_0^2 - omega^2) & = 1 \
                                                      C & = (1)/(omega_0^2 - omega^2).
   $
@@ -648,7 +648,7 @@ If the forcing term $f(x)$ involves a term that is in a #ponder("ode.particular-
                                    & = - (t)/(2 omega_0) cos(omega_0 t).
   $
   Therefore, a #ponder("ode.particular-integral")[particular integral] for the #ponder("ode.resonance")[resonant] case is
-  $ y_p (x) = - (x)/(2 omega_0) cos(omega_0 x). $
+  $ y_p (t) = - (t)/(2 omega_0) cos(omega_0 t). $
 ] <ex-resonance>
 
 The general rule is that if the forcing term is a linear combination of #ponder("linear-algebra.linearly-independent-functions")[linearly independent] #ponder("ode.particular-integral")[complementary functions], the #ponder("ode.particular-integral")[particular integral] is of the form
@@ -834,7 +834,7 @@ Depending on the value of $kappa$, we have three cases:
 1. *Light damping* (underdamping) when $kappa < 1$.
 
   In this case, the roots are complex, so we can write
-  $ lambda = -kappa plus.minus ii sqrt(1-k^2). $
+  $ lambda = -kappa plus.minus ii sqrt(1-kappa^2). $
   So the general solution is
   $
     y(tau) = ee^(-kappa tau) [A sin(sqrt(1-kappa^2) tau) + B cos(sqrt(1-kappa^2) tau)]
@@ -905,7 +905,7 @@ Over time, $"C.F."$ decays, and the behavior is dominated by the $"P.I."$, calle
   $
   Equating coefficients, we have
   $
-    D(omega_0^2 - omega^2) & = mu C omega , \
+    D(omega_0^2 - omega^2) & = - mu C omega , \
     C(omega_0^2 - omega^2) & = 1 + mu D omega. \
   $
   Eliminating $C$, we have
@@ -933,7 +933,7 @@ Over time, $"C.F."$ decays, and the behavior is dominated by the $"P.I."$, calle
 
 == Impulses and Point Forces
 
-Conside a system that experiences a sudden force between time $t = T-epsilon$ and $T+epsilon$.
+Consider a system that experiences a sudden force between time $t = T-epsilon$ and $T+epsilon$.
 
 #align(center)[
   #dynamic-svg("/part-ia/differential-equations/media/d8e6.svg", width: 22em)
@@ -947,7 +947,7 @@ $
 $
 which is a forced, damped oscillator.
 
-It is mathamatically convienient to consider the limit of a sudden impluse, as $epsilon -> 0$.
+It is mathematically convenient to consider the limit of a sudden impulse, as $epsilon -> 0$.
 
 We can integrate the #ponder("ode.ordinary-differential-equation")[ODE] from $T-epsilon$ to $T+epsilon$, and take the limit $epsilon -> 0$.
 
@@ -961,7 +961,7 @@ $
 $
 and the velocity $dot(y)$ is discontinuous.
 
-As $epsilon ->0$ only impluse $I$ matters for subsequent motion.
+As $epsilon ->0$ only impulse $I$ matters for subsequent motion.
 
 
 #align(center)[

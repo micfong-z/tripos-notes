@@ -19,7 +19,7 @@ Consider $f(x, y)$ and a vector displacement $dif bold(s) = (dif x, dif y)$.
   #dynamic-svg("/part-ia/differential-equations/media/d10e1.svg", width: 18em)
 ]
 
-The infinestimal change in $f$ along $dif bold(s)$ is given by
+The infinitesimal change in $f$ along $dif bold(s)$ is given by
 $
   dif f & = (∂f)/(∂x) dif x + (∂f)/(∂y) dif y quad ("multivariate chain rule") \
         & = (dif x, dif y) dot ( (∂f)/(∂x), (∂f)/(∂y) ) \
@@ -211,7 +211,7 @@ Hence,
 An alternative method to determine #ponder("linear-algebra.matrix-definiteness")[definiteness] without having to compute eigenvalues is to use #ponder("linear-algebra.signature")[signatures].
 
 #definition[Signature][
-  The #ponder("linear-algebra.signature")[*signature*] of $matbold(H)$ is the parttern of signs of the ordered determinants of the leading principal minors of $matbold(H)$.
+  The #ponder("linear-algebra.signature")[*signature*] of $matbold(H)$ is the pattern of signs of the ordered determinants of the leading principal minors of $matbold(H)$.
 ] <signature>
 
 #example[
@@ -240,7 +240,7 @@ Assume that the eigenvalues are non-zero. Then, consider
 $
   bold(x) = bold(x_0) + (xi, eta),
 $
-then around $matbold(x_0)$ we have
+then around $bold(x_0)$ we have
 $
   f(bold(x)) approx f(bold(x_0)) + (1/2) (lambda_1 xi^2 + lambda_2 eta^2).
 $
@@ -261,7 +261,7 @@ $
   $
     f_x = 12x^2-12 y, quad f_y = -12 x + 2y + 10.
   $
-  The stationary points are found by solving $f_x = 0$ and $f_y = 0$ simultaenously:
+  The stationary points are found by solving $f_x = 0$ and $f_y = 0$ simultaneously:
   $
     f_x = 0 & => y = x^2 \
     f_y = 0 & => -12 x + 2y + 10 = 0 \
@@ -286,7 +286,7 @@ $
   $
   The leading principal minors are
   $
-    abs(matbold(H_1)) = 24 > 0, quad abs(matbold(H)) = 24 times 2 - (-12)^2 = 96 < 0.
+    abs(matbold(H_1)) = 24 > 0, quad abs(matbold(H)) = 24 times 2 - (-12)^2 = -96 < 0.
   $
   Thus, the #ponder("linear-algebra.signature")[signature] is $+, -$, so it is #ponder("linear-algebra.matrix-definiteness")[indefinite]. See that $abs(matbold(H)) != 0$, #fade[[so that eigenvalues are all non-zero,]] and hence $(1, 1)$ is a saddle point.
 
@@ -352,7 +352,7 @@ There are two ways to solve this system:
 2. Solve directly with matrix methods. #fade[[This may be more convenient.]]
 
   #remark[
-    Under some cases, we write higher order #ponder("ode.ordinary-differential-equation")[ODE] as a set of 1st order #ponder("ode.ordinary-differential-equation")[ODEs], esentially reversing the process above.
+    Under some cases, we write higher order #ponder("ode.ordinary-differential-equation")[ODE] as a set of 1st order #ponder("ode.ordinary-differential-equation")[ODEs], essentially reversing the process above.
     #example[
       Consider the equation
       $
@@ -426,7 +426,6 @@ where $matbold(M)$ is a constant matrix.
                               bold(u) & = (matbold(I) - matbold(M))^(-1) vec(4, 1). \
   $
   Note that an inverse exists since $abs(matbold(I) - matbold(M)) != 0$ ($1$ is not an eigenvalue of $matbold(M)$). We have
-  ƒ
   $
     bold(u) = vec(-4, -1).
   $
@@ -468,13 +467,13 @@ where $A, B$ are constants.
 
 For $lambda_1 != 0, lambda_2 != 0$ and $lambda_1 != lambda_2$, we have the following cases:
 
-1. $lambda_1$ and $lambda_2$ are real and of opposite signs. WLOG suppose $lambda_1 > 0 > lambda_2$. In this case, $bold(v_1), bold(v_2)$ can be chosen to be real. The #ponder("ode.equilibrium-point")[fixed point] is a saddle node.
+1. $lambda_1$ and $lambda_2$ are real and of opposite signs. WLOG suppose $lambda_1 > 0 > lambda_2$. In this case, $bold(v_1), bold(v_2)$ can be chosen to be real. The #ponder("ode.equilibrium-point")[fixed point] is a saddle point.
 
   #align(center)[
     #dynamic-svg("/part-ia/differential-equations/media/d11e1.svg", width: 16em)
   ]
 
-2. $lambda_2$ and $lambda_2$ are real and have the same sign. WLOG suppose $abs(lambda_1) > abs(lambda_2)$.
+2. $lambda_1$ and $lambda_2$ are real and have the same sign. WLOG suppose $abs(lambda_1) > abs(lambda_2)$.
 
   - If both are positive, then the #ponder("ode.equilibrium-point")[fixed point] is an unstable node.
   #align(center)[
@@ -513,7 +512,7 @@ For $lambda_1 != 0, lambda_2 != 0$ and $lambda_1 != lambda_2$, we have the follo
 
 In order to determine the direction of motion along the trajectories, we can evaluate $bold(dot(Y))$ at some points on the trajectory.
 
-For example, if $dot(y)_2 > 0$ at $matbold(Y) = vec(1, 0)$, then motion is upwards at that point, so the direction of motion is counter-clockwise.
+For example, if $dot(y)_2 > 0$ at $bold(Y) = vec(1, 0)$, then motion is upwards at that point, so the direction of motion is counter-clockwise.
 
 == Non-Linear Dynamical Systems
 
@@ -654,7 +653,7 @@ Paths $x(t)$ where $x(t) = x_0 - c t$ are called characteristics of $(*)$.
 
 Since $psi$ is constant along characteristics, the general solution of $(*)$ is
 $
-  psi(x, y) = f(x_0) = f(x + c t)
+  psi(x, t) = f(x_0) = f(x + c t)
 $
 where $f$ is an arbitrary function.
 
@@ -700,7 +699,7 @@ The solutions are left-moving wave solutions.
 
   Along these characteristics, we have
   $
-    (dif psi)/(dif t) & = (∂psi)/(∂t) + (∂psi)/(∂t) (dif x)/(dif t) \
+    (dif psi)/(dif t) & = (∂psi)/(∂t) + (∂psi)/(∂x) (dif x)/(dif t) \
                       & = ee^(-t) - 5 (∂ psi)/(∂ x) + 5 (∂ psi)/(∂ x) \
                       & = ee^(-t). \
   $

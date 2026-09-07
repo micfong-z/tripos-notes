@@ -140,7 +140,7 @@ We can extend @def-cartesian-product to ordered triples and so on, _e.g._ $ RR^3
 
 #definition("Size of a set")[
 
-  Given $n in ZZ_(>=0)$, we say a #ponder("set-theory.set")[set] $A$ has *#ponder("set-theory.cardinality")[size]* $n$ if we can write $A = {a_1, a_2, ..., a_n}$ with the elemtns $a_i$ distinct.
+  Given $n in ZZ_(>=0)$, we say a #ponder("set-theory.set")[set] $A$ has *#ponder("set-theory.cardinality")[size]* $n$ if we can write $A = {a_1, a_2, ..., a_n}$ with the elements $a_i$ distinct.
 ] <def-size-of-a-set>
 
 #definition("Finite and infinite set")[
@@ -160,7 +160,7 @@ We can extend @def-cartesian-product to ordered triples and so on, _e.g._ $ RR^3
 
 #example[
   1. $f: RR->RR$ with $x |-> x^2$ is a #ponder("set-theory.function")[function].
-  2. $f: RR->RR$ with $x |-> (1)/(x)$ is not a #ponder("set-theory.function")[funciton] since it is undefined at $x=0$.
+  2. $f: RR->RR$ with $x |-> (1)/(x)$ is not a #ponder("set-theory.function")[function] since it is undefined at $x=0$.
   3. $f: RR->RR$ with $x |-> plus.minus sqrt(abs(x))$ is not a #ponder("set-theory.function")[function].
   4. $f: RR->RR$ with $x |-> cases(
       1 quad "if" x in QQ,
@@ -171,7 +171,7 @@ We can extend @def-cartesian-product to ordered triples and so on, _e.g._ $ RR^3
 #definition("Domain, range, image, preimage")[
   Following @def-function, for $f: A->B$, we say that $A$ is the *#ponder("set-theory.image-preimage")[domain]* of $f$ and $B$ is the *#ponder("set-theory.image-preimage")[range]* (or #ponder("set-theory.image-preimage")[codomain]).
 
-  If $x in A$ and $f(x) in y$, then $y$ is called the *#ponder("set-theory.image-preimage")[image]* of $x$, and $x$ is called a *#ponder("set-theory.image-preimage")[preimage]* of $y$.
+  If $x in A$ and $f(x) = y$, then $y$ is called the *#ponder("set-theory.image-preimage")[image]* of $x$, and $x$ is called a *#ponder("set-theory.image-preimage")[preimage]* of $y$.
 
   Moreover, if $X subset.eq A$ then the *#ponder("set-theory.image-preimage")[image]* of $X$ under $f$ is
   $
@@ -217,7 +217,7 @@ If $f: A-> B$ is a #ponder("algebra.bijection")[bijection], then everything in $
 
 #remarklike("Observation")[
 
-  1. $f$ is #ponder("set-theory.injection-surjection")[surjective] if and only $f(A)=B$.
+  1. $f$ is #ponder("set-theory.injection-surjection")[surjective] if and only if $f(A)=B$.
 
     For #ponder("set-theory.finite-set")[finite] #ponder("set-theory.set")[sets] $A$ and $B$, if $|B|>|A|$, then there cannot be a #ponder("set-theory.injection-surjection")[surjective] #ponder("set-theory.function")[function] from $A$ to $B$.
 
@@ -275,8 +275,8 @@ If $f: A-> B$ is a #ponder("algebra.bijection")[bijection], then everything in $
 
 #lecture-separator(lecture: 5, date: "2025-10-18")
 
-#definition("Fucntion composition")[
-  Given $f: A->B$ and $y: B->C$, the *#ponder("algebra.function-composition")[composition]* is $g compose f: A->C$, where $a |-> g(f(a)).$
+#definition("Function composition")[
+  Given $f: A->B$ and $g: B->C$, the *#ponder("algebra.function-composition")[composition]* is $g compose f: A->C$, where $a |-> g(f(a)).$
 ]
 
 #proposition("Properties of composition")[
@@ -312,7 +312,7 @@ If $f: A-> B$ is a #ponder("algebra.bijection")[bijection], then everything in $
 
   Indeed, $forall x in RR$, $(g compose f)(x)=g(2x+1)=(2x+1-1)/2=x$, so $g compose f = id_RR$.
 
-  Similarly, $forall x in RR$, $(f compose g)(x)=f((x-1)2)) = 2((x-1)/2)+1 = x$, so $f compose g = id_RR$.
+  Similarly, $forall x in RR$, $(f compose g)(x)=f((x-1)/2) = 2((x-1)/2)+1 = x$, so $f compose g = id_RR$.
 
   Hence $f$ is #ponder("set-theory.invertible-function")[invertible] with inverse $g$.
 ]
@@ -340,7 +340,7 @@ If $f: A-> B$ is a #ponder("algebra.bijection")[bijection], then everything in $
 
     - If $b in f(A)$. let $g(b)=a$, where $a$ the unique element of $A$ with $f(a)=b$.
 
-    - If $b in.not f(a)$, then let $g(b)$ be anything in the #ponder("set-theory.set")[set] $A$.
+    - If $b in.not f(A)$, then let $g(b)$ be anything in the #ponder("set-theory.set")[set] $A$.
 
     So we have constructed the required #ponder("set-theory.function")[function] $g$ such that $g compose f = id_A$, and the condition of $f$ being #ponder("set-theory.injection-surjection")[injective] is sufficient.
 
@@ -362,7 +362,7 @@ If $f: A-> B$ is a #ponder("algebra.bijection")[bijection], then everything in $
 #definition("Relation")[
   A *#ponder("set-theory.relation")[relation]* on a #ponder("set-theory.set")[set] $X$ is a #ponder("set-theory.subset")[subset] $R subset.eq X times X$.
 
-  We write $a R b$ if $(a, b) in RR$. We say that $a$ and $b$ are related by $R$.
+  We write $a R b$ if $(a, b) in R$. We say that $a$ and $b$ are related by $R$.
 ] <def-relation>
 
 #example([Examples of relations on $NN$])[
@@ -404,7 +404,7 @@ There are three properties of a #ponder("set-theory.relation")[relation] that ar
 In @ex-relations, only (1) is an #ponder("set-theory.equivalence-relation")[equivalence relation].
 
 #example[
-  Let $X = {"IA students"}$.
+  Let $X$ be the #ponder("set-theory.set")[set] of all IA students.
 
   Let $a R b$ if two students are born in the same month. Then $R$ is an #ponder("set-theory.equivalence-relation")[equivalence relation].
 
@@ -414,7 +414,7 @@ In @ex-relations, only (1) is an #ponder("set-theory.equivalence-relation")[equi
 #lecture-separator(lecture: 6, date: "2025-10-21")
 
 #definition("Equivalence class")[
-  If $~$ is an #ponder("set-theory.equivalence-relation")[equivalence relation] on $X_1$, then the *equivalence class* of $x in X$ is denoted by
+  If $~$ is an #ponder("set-theory.equivalence-relation")[equivalence relation] on $X$, then the *equivalence class* of $x in X$ is denoted by
   $ [x] = {y in X: y ~ x}. $
 ] <def-equivalence-class>
 
@@ -423,7 +423,7 @@ In @ex-relations, only (1) is an #ponder("set-theory.equivalence-relation")[equi
 ] <def-partition>
 
 #theorem[
-  Let $~$ be an #ponder("set-theory.equivalence-relation")[equivalence relation] on $X$. Then, the #ponder("set-theory.equivalence-class")[equivalence classes] from a #ponder("set-theory.partition")[partition] of $X$.
+  Let $~$ be an #ponder("set-theory.equivalence-relation")[equivalence relation] on $X$. Then, the #ponder("set-theory.equivalence-class")[equivalence classes] form a #ponder("set-theory.partition")[partition] of $X$.
 ] <thm-equivalence-partition>
 
 #proof[

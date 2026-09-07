@@ -116,7 +116,7 @@ On #ponder("analysis.divergence-to-infinity")[divergence to infinity]:
   #fade[[$arrow.l.double$]] Note the inequality $abs(z) <= abs(re z) + abs(im z).$ Fix $epsilon > 0$. By definiition of convergence,
   $
     & exists N_1 = N_1(epsilon), & forall n >= N_1: & abs(re x_n - re x) < epsilon, \
-    & exists N_1 = N_2(epsilon), & forall n >= N_2: & abs(im x_n - im x) < epsilon. \
+    & exists N_2 = N_2(epsilon), & forall n >= N_2: & abs(im x_n - im x) < epsilon. \
   $
   Hence $abs(x_n - x) <= 2 epsilon$ for all $n >= max{N_1, N_2}$.
 ]
@@ -171,7 +171,7 @@ On #ponder("analysis.divergence-to-infinity")[divergence to infinity]:
 ]
 
 #definition[Bounded Sequence][
-  We say $(x_n)$ is *#ponder("analysis.bounded-sequence")[bounded]* if $exists M > 0$ such that $abs(x_n) <= M$ for all $n$. Equivalently, $sup_(n >= 0) abs(x_n) <= M$.
+  We say $(x_n)$ is *#ponder("analysis.bounded-sequence")[bounded]* if $exists M > 0$ such that $abs(x_n) <= M$ for all $n$. Equivalently, $sup_(n >= 1) abs(x_n) <= M$.
 ]
 
 #definition[Monotonic Sequence][
@@ -187,7 +187,7 @@ On #ponder("analysis.divergence-to-infinity")[divergence to infinity]:
 ] <monotone-convergence-theorem>
 
 #proof[
-  WLOG suppose $(x_n)$ is strictly increasing and #ponder("analysis.bounded-above")[bounded above]. We will use the #ponder("analysis.least-upper-bound")[supremum axiom], that every non-empty set of $RR$ #ponder("analysis.bounded-above")[bounded above] has a #ponder("analysis.least-upper-bound")[supremum] in $RR$.
+  WLOG suppose $(x_n)$ is increasing and #ponder("analysis.bounded-above")[bounded above]. We will use the #ponder("analysis.least-upper-bound")[supremum axiom], that every non-empty set of $RR$ #ponder("analysis.bounded-above")[bounded above] has a #ponder("analysis.least-upper-bound")[supremum] in $RR$.
 
   Refer to IA Numbers and Sets for a full proof of this proposition.
 ]
@@ -254,7 +254,7 @@ If we drop the #ponder("analysis.monotonic-sequence")[monotonicity] condition, w
 
   Let $a_1 = -M, b_1 = M$. Then $I_1 = [-M, M] supset.eq {x_n: n in NN}$.
 
-  Now take $c = (a_1 + b_1)/(2)$. Then at least one of the intervals $[a_1, c]$ and $[c, b_1]$ must contain infinitely many terms of the sequence $(x_n)$. #fade[[If both intervals contained only finitely many terms, then the whole interval $[-M, M]$ would contain only finitely many terms, contradicting the fact that $(x_n)$ is an infinite sequence.]] Take $I_2$ to be a half interval that contains infinitely many terms. Continuing inductively gives a sequence of nested intervals $I_n = [a_n, b_n]$ with $b_n - a_n = (M)/(2^(n-1)) -> 0$ as $n -> oo$, and each $I_n$ contains infinitely many terms of the sequence.
+  Now take $c = (a_1 + b_1)/(2)$. Then at least one of the intervals $[a_1, c]$ and $[c, b_1]$ must contain infinitely many terms of the sequence $(x_n)$. #fade[[If both intervals contained only finitely many terms, then the whole interval $[-M, M]$ would contain only finitely many terms, contradicting the fact that $(x_n)$ is an infinite sequence.]] Take $I_2$ to be a half interval that contains infinitely many terms. Continuing inductively gives a sequence of nested intervals $I_n = [a_n, b_n]$ with $b_n - a_n = (M)/(2^(n-2)) -> 0$ as $n -> oo$, and each $I_n$ contains infinitely many terms of the sequence.
 
   By @nested-interval-property[Nested Interval Property], $exists! x in inter.big_n I_n$. We can now choose $(x_n_k)$ as follows: pick $n_1$ such that $x_n_1 in I_1$, then $I_2$ has infinitely many elements of $(x_n)$ with indices greater than $n_1$, so pick $n_2 > n_1$ such that $x_n_2 in I_2$. Continuing in this manner gives a subsequence $(x_n_k)$ with $x_n_k in I_k$ for all $k$.
 
@@ -332,7 +332,7 @@ If we drop the #ponder("analysis.monotonic-sequence")[monotonicity] condition, w
   $forall epsilon >0, exists N = N(epsilon), forall m, n >= N$, we have
   $
     abs(x_n - x_m) & = abs(x_n - x + x - x_m) \
-                   & = abs(x_n - x) + abs(x - x_m) \
+                   & <= abs(x_n - x) + abs(x - x_m) \
                    & < epsilon + epsilon = 2 epsilon.
   $
 ]
@@ -385,7 +385,7 @@ Consider the converse of @convergence-implies-cauchy. Note that @cauchy-sequence
 #example[
   - $sum_(n=1)^oo n$ does not converge as $s_k = sum_(n=1)^k n = (1)/(2 ) k (k+1) -> oo$ as $k->oo$.
 
-  - *Geometric series.* $sum_(k=1)^oo r^n < oo$ #ponder("analysis.series")[converges] iff $abs(r) < 1$. The partial sums for $abs(r) < 1$ are
+  - *Geometric series.* $sum_(n=0)^oo r^n < oo$ #ponder("analysis.series")[converges] iff $abs(r) < 1$. The partial sums for $abs(r) < 1$ are
     $
       s_k = sum_(n=0)^k r^n = (1 - r^(k+1))/(1 - r) -> (1)/(1 - r) quad "as" k -> oo.
     $
@@ -420,7 +420,7 @@ As usual, only the tail of the series matters for #ponder("analysis.series")[con
                                      & = s_k + sum_(n=1)^(N) (b_n - a_n).
   $
 
-  Note that $sum_(n=1)^n (b_n - a_n)$ is a finite sum, so it does not affect #ponder("analysis.series")[convergence]. If $k -> oo$, then $s_k$ #ponder("analysis.series")[converges] iff $r_k$ #ponder("analysis.series")[converges].
+  Note that $sum_(n=1)^N (b_n - a_n)$ is a finite sum, so it does not affect #ponder("analysis.series")[convergence]. If $k -> oo$, then $s_k$ #ponder("analysis.series")[converges] iff $r_k$ #ponder("analysis.series")[converges].
 
 ]
 
@@ -557,7 +557,7 @@ The next two tests are about asymptotic comparisons to the geometric series.
 
   Then
   $
-    sum_(n>=1) a_n "converges" <=> lim_(n->oo) f(t) dif t "exists".
+    sum_(n>=1) a_n "converges" <=> lim_(n->oo) integral_1^n f(t) dif t "exists".
   $
   Furthermore, as $k->oo$,
   $
@@ -588,7 +588,7 @@ The next two tests are about asymptotic comparisons to the geometric series.
 
   - $b_k >= a_k = f(k) >= 0$.
 
-  Hence $(k)$ is decreasing and #ponder("analysis.bounded-below")[bounded below], so it #ponder("analysis.sequence-convergence")[converges] to some $l >= 0$. Also, since
+  Hence $(b_k)$ is decreasing and #ponder("analysis.bounded-below")[bounded below], so it #ponder("analysis.sequence-convergence")[converges] to some $l >= 0$. Also, since
 
   $
     0 <= f(k) <= b_k <= a_1 = f(1)
@@ -602,7 +602,7 @@ The next two tests are about asymptotic comparisons to the geometric series.
     Note that
     $
       lim_(x->oo) integral_1^x (1)/(t^p) dif t = lim_(x->oo) cases(
-        (1-p)x^(-p) quad & p!=1,
+        (x^(1-p))/(1-p) quad & p!=1,
         log x quad & p = 1
       )
       + "constant"
@@ -615,13 +615,13 @@ The next two tests are about asymptotic comparisons to the geometric series.
       Rough calculation suggests that $a_n << (1)/(n)$ for large $n$ would be enough for #ponder("analysis.series")[convergence].
     ]
 
-  - $sum (1)/(n log n)$ diverges since
+  - $sum_(n=2)^oo (1)/(n log n)$ diverges since
     $
       integral 1/(t log t) dif t = integral (1)/(u) dif u = log u + C = log(log t) + C
     $
     with the substitution $u = log t$.
 
-  - $sum (1)/(n log^2 n)$ #ponder("analysis.series")[converges] since
+  - $sum_(n=2)^oo (1)/(n log^2 n)$ #ponder("analysis.series")[converges] since
     $
       integral 1/(t log^2 t) dif t = integral (1)/(u^2) dif u = - (1)/(u) + C = - (1)/(log t) + C
     $
@@ -639,9 +639,9 @@ The next two tests are about asymptotic comparisons to the geometric series.
 #proof[
   We have
   $
-    integral_1^x f(t) dif t = log 2 integral_0^2^x f(2^t) 2^t dif t
+    integral_1^(2^x) f(t) dif t = log 2 integral_0^x f(2^t) 2^t dif t
   $
-  using the substitution $u = 2^t dif t$.
+  using the substitution $u = 2^t$, $dif u = 2^t log 2 dif t$.
 
   From @integral-test[Integral Test], we have
   $
@@ -650,9 +650,9 @@ The next two tests are about asymptotic comparisons to the geometric series.
   $
   Hence, letting $g(t) = 2^t f(2^t)$,
   $
-    f "decreasing" & => f(2^(k+1)) <= f(t) <= f(2^k) quad & forall t in [k, k+1], \
+    f "decreasing" & => f(2^(k+1)) <= f(2^t) <= f(2^k) quad & forall t in [k, k+1], \
     & => 2^k f(2^(k+1)) <= g(t) <= 2^(k+1) f(2^k) quad & forall t in [k, k+1], \
-    &=> (1)/(2) sum_(n=1)^(k+1) 2^(n+1) a_(2^(n+1)) <= integral_1^(k+1) g(t) dif t <= 2 sum_(n=1)^(k+1) 2^n a_(2^n). \
+    &=> (1)/(2) sum_(n=1)^(k) 2^(n+1) a_(2^(n+1)) <= integral_1^(k+1) g(t) dif t <= 2 sum_(n=1)^(k) 2^n a_(2^n). \
   $
 
   Thus, $sum 2^n a_(2^n)$ #ponder("analysis.series")[converges] iff $lim_(y->oo) integral_0^y f(2^t) 2^t dif t$ exists, and the result follows.
@@ -781,7 +781,7 @@ Conditionally convergent series can behave badly under #ponder("analysis.series-
   Now, since $sigma$ is a bijection, $exists M >= N$ such that $a_1, ..., a_N$ is contained in $a'_1, ..., a'_(M)$. Hence, for $m >= M$,
   $
              sum_(n=1)^m a'_n & = underbracket(sum_(n=1)^N a_n, s_N) + sum_(n=N+1)^m a'_n \
-    abs(sum_(n=1)^m a'_n - s) & = abs(s_N - s) + sum_(k>=N) abs(a_k) \
+    abs(sum_(n=1)^m a'_n - s) & <= abs(s_N - s) + sum_(k>=N) abs(a_k) \
                               & < epsilon + epsilon = 2 epsilon. \
   $
   Hence $sum a'_n = sum a_n.$

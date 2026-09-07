@@ -1,5 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/fletcher:0.5.8": edge
 
 
 = Matrix Groups
@@ -361,13 +360,13 @@ Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflec
 #proof[
   We will prove this by induction on $n$.
 
-  *Base case.* When $n = 1$, $O(1) = {plus.minus 1} = lr(chevron.l S_1 chevron.r) teq C_2$. The matrix $mat(-1)$ is the #ponder("geometry.reflection")[reflection] in the origin, so the result holds.
+  *Base case.* When $n = 1$, $O(1) = {plus.minus 1} = lr(chevron.l S_bold(1) chevron.r) teq C_2$. The matrix $mat(-1)$ is the #ponder("geometry.reflection")[reflection] in the origin, so the result holds.
 
-  *Inductive step.* Let ${bold(e_1), ..., bold(e_n)}$ be the standard basis for $RR^n$. Let $bold(v) = bold(e_n) - matbold(A) bold(e_n)$.
+  *Inductive step.* Let ${bold(e_1), ..., bold(e_n)}$ be the standard basis for $RR^n$. Let $bold(v) = bold(e_n) - matbold(A) bold(e_n)$. #fade[[If $matbold(A) bold(e_n) = bold(e_n)$ then $bold(v) = bold(0)$ and $matbold(S)_bold(v)$ is undefined; but in that case $matbold(A)$ already preserves $P_(bold(e_n))$, and the induction below applied to $matbold(A)$ itself writes $matbold(A)$ as a product of at most $n-1$ #ponder("geometry.reflection")[reflections]. So we may assume $bold(v) != bold(0)$.]]
 
   Then $matbold(S)_bold(v) (matbold(A) bold(e_n)) = bold(e_n)$, #fade[[and since $matbold(S)_bold(v) matbold(A)$ is an #ponder("algebra.orthogonal-group")[orthogonal transformation], by @on-and-the-dot-product, dot products are preserved, and hence vectors that are orthogonal to $bold(e_n)$ are sent to some vector that is still orthogonal to $bold(e_n)$,]] so $matbold(S)_bold(v) matbold(A)$ preserves $P_(bold(e_n)) = RR^(n-1)times {0}$.
 
-  By induction, there are $bold(v_1), ..., bold(v_n) in RR^(n-1)$ such that
+  By induction, there are $bold(v_1), ..., bold(v_(n-1)) in RR^(n-1)$ such that
   $
     matbold(S)_bold(v) matbold(A) = matbold(S)_bold(v_1) ... matbold(S)_bold(v_(n-1)) quad "on" RR^(n-1).
   $
@@ -398,7 +397,7 @@ Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflec
     $
       matbold(S)_bold(u) matbold(S)_bold(v) (bold(x)) = bold(x) <=> matbold(S)_bold(v) bold(x) = matbold(S)_bold(u) bold(x).
     $
-    But $bold(v)$ is parallel to $bold(x) - matbold(S)_bold(v) bold(x)$ and $bold(u)$ is parallel to $bold(x) - matbold(S)_bold(u) bold(x)$, so this implies that $bold(u)$ is parallel to $bold(v)$. $smash$
+    If $bold(x) - matbold(S)_bold(v) bold(x) != bold(0)$, then $bold(v)$ is parallel to $bold(x) - matbold(S)_bold(v) bold(x)$ and $bold(u)$ is parallel to $bold(x) - matbold(S)_bold(u) bold(x)$, so this implies that $bold(u)$ is parallel to $bold(v)$. #fade[[Otherwise $bold(x) - matbold(S)_bold(v) bold(x) = bold(0)$, so $bold(x) != bold(0)$ is fixed by $matbold(S)_bold(v)$ and hence also by $matbold(S)_bold(u)$; then the lines $P_bold(v)$ and $P_bold(u)$ in $RR^2$ both contain $bold(x)$ and so coincide, and again $bold(u)$ is parallel to $bold(v)$.]] $smash$
 
     Hence $matbold(A)$ only fixes the origin, and is therefore a #ponder("geometry.rotation")[rotation] about $O$.
 

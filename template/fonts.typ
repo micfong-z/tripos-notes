@@ -7,12 +7,12 @@
 #let mono = "JetBrains Mono"
 
 #let font-suites = (
-  // Inter v4.1 + Lete Sans Math v0.62
+  // Inter v4.1 + Lete Sans Math v0.61
   sans: (
     body: "Inter",
     body-features: (
       "ss01": 1, // open digits
-      "ss02": 1, // disambiguation, with slashed zero
+      "ss04": 1, // disambiguation, without slashed zero
       "tnum": 1, // tabular numbers
     ),
     math: "Lete Sans Math",
@@ -21,15 +21,15 @@
       "cv01": 1, // horizontal bar on reduced Planck's constant
       "cv03": 1, // alternate epsilon shape
       "cv11": 1, // single storey g
-      "cv13": 1, // disambiguation on l
-      "cv14": 1, // slashed zero
+      // "cv12": 1, // disambiguation on l
+      // "cv14": 1, // slashed zero
     ),
   ),
   // IBM Plex Serif v3.006 + IBM Plex Math v1.000
   serif: (
     body: "IBM Plex Serif",
     body-features: (
-      "zero": 1, // slashed zero
+      // "zero": 1, // slashed zero
     ),
     math: "IBM Plex Math",
     math-features: (

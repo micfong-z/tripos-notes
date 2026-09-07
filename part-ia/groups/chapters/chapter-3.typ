@@ -7,7 +7,7 @@
 This very important theorem helps us to think about the #ponder("algebra.group-order")[orders] of #ponder("algebra.group")[groups] and #ponder("algebra.subgroup")[subgroups].
 
 #theorem[Lagrange's Theorem, Weak Version][
-  If $H <= G$ and $abs(G)<= oo$, then $abs(H) | abs(G)$.
+  If $H <= G$ and $abs(G) < oo$, then $abs(H) | abs(G)$.
 ]
 
 The idea of this theorem is to somehow #ponder("algebra.coset-partition")[partition] the #ponder("algebra.group")[group] $G$ into #ponder("algebra.coset")[cosets] of $H$.
@@ -47,7 +47,7 @@ The idea of this theorem is to somehow #ponder("algebra.coset-partition")[partit
     $ g_1 in g_2 H. $
     Furthermore, for any $h in H$,
 
-    $ g_1 h = g_2 (h_1 h_1^(-1)) h in g_2 H. $
+    $ g_1 h = g_2 (h_2 h_1^(-1)) h in g_2 H. $
     Hence $g_1 H subset.eq g_2 H$. By symmetry, we have the reverse inclusion. Thus, the equality holds.
 ]
 
@@ -83,7 +83,7 @@ So the schematic picture above can be redrawn, where each #ponder("algebra.coset
 ] <subgroup-index>
 
 #theorem[#ponder("algebra.lagrange-theorem")[Lagrange's Theorem]][
-  If $H <= G$ and $abs(G) <= oo$, then
+  If $H <= G$ and $abs(G) < oo$, then
   $ abs(G) = [G : H] dot abs(H). $
 ] <lagranges-theorem>
 
@@ -104,7 +104,7 @@ So the schematic picture above can be redrawn, where each #ponder("algebra.coset
 ]
 
 #corollary[
-  If $abs(G) < oo$ and $y in G$, then $g^abs(G) = e_G$.
+  If $abs(G) < oo$ and $g in G$, then $g^abs(G) = e_G$.
 ] <cor-lagrange-2>
 
 #proof[
@@ -119,7 +119,7 @@ So the schematic picture above can be redrawn, where each #ponder("algebra.coset
 
 #proof[
   Choose any $g != e$. Then
-  $ o(g) mid(|) G. $
+  $ o(g) mid(|) abs(G). $
   So, since $abs(G)$ is prime, either $o(g) = 1$ or $o(g) = abs(G)$.
   Since $g != e$, we must have $o(g) = abs(G)$. Therefore,
   $ G = lr(chevron.l g chevron.r). $
@@ -132,7 +132,7 @@ So the schematic picture above can be redrawn, where each #ponder("algebra.coset
 
 #definition[Euler totient function][
   The *#ponder("algebra.euler-totient-function")[Euler totient function]*
-  $ phi(n) = hash {x in Z_n:gcd(x, n) = 1}. $
+  $ phi(n) = abs({x in ZZ_n : gcd(x, n) = 1}). $
 ]
 <euler-totient-function>
 
@@ -140,7 +140,7 @@ Let $times_n$ denote #ponder("algebra.binary-operation")[multiplication] modulo 
 
 #lecture-separator(lecture: 9, date: "2025-10-29")
 
-Recall that by the division algorithm, $x in ZZ_n$ has a #ponder("algebra.inverse-element")[multiplicative inverse] modulo $n$, iff there are $y , m in ZZ$ such that
+Recall that by Bézout's lemma, $x in ZZ_n$ has a #ponder("algebra.inverse-element")[multiplicative inverse] modulo $n$, iff there are $y , m in ZZ$ such that
 $
       & x y + m n &  = 1 \
   <=> & gcd(x, n) & = 1.

@@ -73,7 +73,7 @@ $ (∂P)/(∂y) = (∂Q)/(∂x). $
 ] <exactness-criterion>
 
 #definition[Simply Connected Domain][
-  A domain $cal(D)$ is *#ponder("analysis.simply-connected-domain")[simply connected]* if it is #ponder("analysis.path-connectedness")[path connected], any any closed curve can be continuously shrunk to a point within $cal(D)$ without leaving $cal(D)$.
+  A domain $cal(D)$ is *#ponder("analysis.simply-connected-domain")[simply connected]* if it is #ponder("analysis.path-connectedness")[path connected], any closed curve can be continuously shrunk to a point within $cal(D)$ without leaving $cal(D)$.
 ] <simply-connected-domain>
 
 #definition[Path Connectedness][
@@ -202,7 +202,7 @@ These points often reveal important features of #ponder("ode.ordinary-differenti
 
 #example[
   Consider $ (dif y)/(dif t) = t(1-y^2). $
-  The #ponder("ode.equilibrium-point")[fixed points] are $y = plus.minus 1$. They have very different character as seen from the sketchs above. The solution curves $y = +1$ as $t->oo$, while those near $y = -1$ diverge away from it.
+  The #ponder("ode.equilibrium-point")[fixed points] are $y = plus.minus 1$. They have very different character as seen from the sketchs above. The solution curves near $y = +1$ converge to it as $t->oo$, while those near $y = -1$ diverge away from it.
 ]
 
 #definition("Stability of Fixed Points")[

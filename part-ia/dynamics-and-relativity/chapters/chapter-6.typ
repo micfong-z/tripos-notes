@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/unify:0.7.1": qty
 
 = Rotating Reference Frames
 
@@ -58,7 +56,7 @@ $
 
 Hence,
 $
-  m ((dif^2 bold(x))/(dif t^2))_S' = bold(F) - underbracket(underbracket(m bold(dot(omega)) times bold(x), "Euler force") - underbracket(2 m bold(omega) times ((dif bold(x))/(dif t))_S', "Coriolis force") - underbracket(m bold(omega) times (bold(omega) times bold(x)), "Centrifugal force"), "Fictitious forces"). #<eq-342>
+  m ((dif^2 bold(x))/(dif t^2))_S' = bold(F) - underbracket(underbracket(m bold(dot(omega)) times bold(x), "Euler force") + underbracket(2 m bold(omega) times ((dif bold(x))/(dif t))_S', "Coriolis force") + underbracket(m bold(omega) times (bold(omega) times bold(x)), "Centrifugal force"), "Fictitious forces"). #<eq-342>
 $
 
 
@@ -68,7 +66,7 @@ A free particle does not move in a straight line in the rotating frame.
 
 Consider the rotating frame of the earth. We have
 $
-  omega_"rot" = 2ppi / (1 "day") & approx qty("7e-5", "s") \
+  omega_"rot" = 2ppi / (1 "day") & approx qty("7e-5", "s^-1") \
                        R_"Earth" & approx qty("6e3", "km") \
 $
 
@@ -111,7 +109,7 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
 
   The forces acting on the particle satisfy
   $
-    bold(g) = - m g bold(hat(r)).
+    m bold(g) = - m g bold(hat(r)).
   $
   #fade[[The string is short compared to $R_"Earth"$, so it does not matter whether we use $bold(hat(r))$ at the top or the bottom of the string.]]
   $
@@ -133,7 +131,7 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
 
   The net force on the particle is zero, so
   $
-    bold(g) + bold(F_"cent") + bold(T) = bold(0).
+    m bold(g) + bold(F_"cent") + bold(T) = bold(0).
   $
   We have 2 equations (for $bold(hat(r))$ and $bold(hat(theta))$) and 2 unknowns ($T$ and $phi$), so we can solve for $phi$:
   $
@@ -141,7 +139,7 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
   $
   At the equator ($theta = 0$), the gravity is a bit weaker, but $phi = 0$.
 
-  When $theta = 45°$, $phi approx 10^(-4)$, so the effect is very small.
+  When $theta = 45°$, $phi approx 1.7 times 10^(-3)$, so the effect is very small.
 ] <ex-hanging-string>
 
 == #ponder("dynamics.coriolis-force")[Coriolis Force]

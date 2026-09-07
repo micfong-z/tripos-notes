@@ -53,8 +53,7 @@ Hence, for $f(z)->y$ as $z->a$ to be meaningful, we need $a in X$, or if $a in.n
 
   $y$ is called the *#ponder("analysis.limit-of-function")[limit]* of $f$ as $z -> a$, and we write $lim_(z->a) f(z) = y$.
 
-  // TODO: DO WE NEED THIS DIRECTION TO BE TENDING TO THAT OF $l$ EVEN FOR DIVERGENCE?
-  In particular, for $a in CC$ where $a$ is an accumulation point for $X$, we say that $f$ diverges (to $oo$) as $z->a$ if $f(z)/(|f(z)|) -> l$ for some $l in CC$, and
+  In particular, for $a in CC$ where $a$ is an accumulation point for $X$, we say that $f$ diverges (to $oo$) as $z->a$ if
   $
     forall L > 0, exists delta > 0, forall z in X: 0 < |z - a| < delta => |f(z)| > L.
   $
@@ -97,7 +96,7 @@ We can also give a #ponder("analysis.sequential-characterisation-of-limits")[seq
         f(z) -> y "as" z->a quad & <=> quad f(z_n) -> y "for every" (z_n) "on" X. \
     f(z) "diverges as" z->a quad & <=> quad f(z_n) "diverges for every" (z_n) "on" X.
   $
-  with $(z_n) -> a$ and $z_n$ is not the constant sequence.
+  with $(z_n) -> a$ and $z_n in X \\ {a}$ for all $n$.
 ] <sequential-characterisation-of-limits>
 
 #lemma[
@@ -118,7 +117,7 @@ We can also give a #ponder("analysis.sequential-characterisation-of-limits")[seq
 ]
 
 #lemma[
-  Let $f: X subset.eq CC -> CC$. Let $a in CC$ where $a$ is an accumulation point of $X$. Suppose $lim_(z->a) f(z) = y$, $lim_(z-a) g(z) = x$. Then,
+  Let $f: X subset.eq CC -> CC$. Let $a in CC$ where $a$ is an accumulation point of $X$. Suppose $lim_(z->a) f(z) = y$, $lim_(z->a) g(z) = x$. Then,
   $
     lim_(z->a) (f(z) + g(z)) = y + x, quad lim_(z->a) (f(z)g(z)) = y x, quad lim_(z->a) (f(z)/g(z)) = y/x "if" forall z in X, space g(z) !=0 "and" x!=0.
   $
@@ -129,18 +128,18 @@ We can also give a #ponder("analysis.sequential-characterisation-of-limits")[seq
 From the previous section, we can compute $lim_(z->a) f(z)$ if $a$ is a #ponder("analysis.accumulation-point")[accumulation point] for $X$.
 
 #definition[Continuity of a Function][
-  Let $f: X subset.eq CC -> CC$. We say that $f$ is *#ponder("analysis.continuity")[continuous]* at every point in $X$.
+  Let $f: X subset.eq CC -> CC$. We say that $f$ is *#ponder("analysis.continuity")[continuous]* if it is #ponder("analysis.continuity")[continuous] at every point in $X$.
 
   Take $a in X$. We say that $f$ is #ponder("analysis.continuity")[continuous] at $a$ if
   $
-    forall epsilon > 0, exists delta in RR, forall z in X: |z - a| < delta => abs(f(z) - f(a)) < epsilon.
+    forall epsilon > 0, exists delta > 0, forall z in X: |z - a| < delta => abs(f(z) - f(a)) < epsilon.
   $
 
 
 ] <continuity>
 
 #remark[
-  If $a in X$ is an isolated point, then $f$ is #ponder("analysis.continuity")[continuous] at $a$. Inf $a in CC$ is an #ponder("analysis.accumulation-point")[accumulation point] for $X$, then $f$ is #ponder("analysis.continuity")[continuous] at $a$ iff $lim_(z->a) f(z) = f(a)$.
+  If $a in X$ is an isolated point, then $f$ is #ponder("analysis.continuity")[continuous] at $a$. If $a in CC$ is an #ponder("analysis.accumulation-point")[accumulation point] for $X$, then $f$ is #ponder("analysis.continuity")[continuous] at $a$ iff $lim_(z->a) f(z) = f(a)$.
 ]
 
 #example[
@@ -192,9 +191,10 @@ From the previous section, we can compute $lim_(z->a) f(z)$ if $a$ is a #ponder(
   - Consider $f(x) = sin x$, we shall show that it is #ponder("analysis.continuity")[continuous] at every point $a in RR$. Fix $a in RR$. We can choose $delta(epsilon) = min (epsilon, (ppi)/(2))$,
     $
       abs(f(x) - f(a)) & = abs(sin x - sin a) \
-                       & <= 2 cos ((x+a)/(2)) sin((x-a)/(2)) \
-                       & <= abs(sin((x-a)/(2))) \
-                       & <= abs(x-a) quad "by taking" (x-a)/(2) in [-(ppi)/(2), (ppi)/(2)].
+                       & = abs(2 cos ((x+a)/(2)) sin((x-a)/(2))) \
+                       & = 2 abs(cos ((x+a)/(2))) abs(sin((x-a)/(2))) \
+                       & <= 2 abs(sin((x-a)/(2))) \
+                       & <= 2 abs((x-a)/(2)) = abs(x-a) quad "by taking" (x-a)/(2) in [-(ppi)/(2), (ppi)/(2)].
     $
     Therefore, $abs(f(x_n)-f(a)) <= abs(x_n-a)$ holds for $n$ sufficiently large.
 ]
@@ -263,7 +263,7 @@ From the previous section, we can compute $lim_(z->a) f(z)$ if $a$ is a #ponder(
 
   #fade[[$f(X)$ is #ponder("analysis.bounded-set")[bounded].]] Suppose $f(X)$ is not #ponder("analysis.bounded-set")[bounded], then for each $n in NN$ we can find $x_n$ such that $abs(f(x_n)) > n$. Now, $(x_n)$ is a #ponder("analysis.sequence")[sequence] in $X$, and it must be #ponder("analysis.bounded-sequence")[bounded] since $X$ is #ponder("analysis.bounded-set")[bounded].
 
-  By @bolzano-weierstrass-theorem[Bolzano-Weierstrass Theorem], there exists a #ponder("analysis.sequence-convergence")[convergent] #ponder("analysis.subsequence")[subsequence] $(x_n_k)$. Let the limit of $(x_n_k)$ be $x$. Since $X$ is #ponder("analysis.closed-set")[closed], $x in X$. On the other hand, $abs(f(x_n_k)) > n_k >= k$. So $f(x_n_k)$ cannot #ponder("analysis.sequence-convergence")[converge] as $k->oo$. Then $f$ is not #ponder("analysis.continuity")[continuous] at $x$. $smash$ Therefore $f(X)$ must be #ponder("analysis.bounded-set")[bounded].
+  By @bolzano-weierstrass-theorem[Bolzano-Weierstrass Theorem], there exists a #ponder("analysis.sequence-convergence")[convergent] #ponder("analysis.subsequence")[subsequence] $(x_n_k)$. Let the limit of $(x_n_k)$ be $x$. Since $X$ is #ponder("analysis.closed-set")[closed], $x in X$. On the other hand, $abs(f(x_n_k)) > n_k >= k$. So $f(x_n_k)$ cannot #ponder("analysis.sequence-convergence")[converge] as $k->oo$. Then $f$ is not #ponder("analysis.continuity")[continuous] at $x$. Therefore $f(X)$ must be #ponder("analysis.bounded-set")[bounded].
 
   #fade[[$f(X)$ is #ponder("analysis.closed-set")[closed].]] Take $(y_n)$ in $f(X)$, suppose that it #ponder("analysis.sequence-convergence")[converges] to some $y in CC$. We want to show that $y in f(X)$. Note that $y_n in f(X) => exists x_n in X$ such that $f(x_n) = y_n$. This #ponder("analysis.sequence")[sequence] $(x_n)$ is inside $X$, hence it is #ponder("analysis.bounded-sequence")[bounded]. Copying the argument above to get $x_n_k -> x in X$. Thus $y_n_k = f(x_n_k)$. By #ponder("analysis.continuity")[continuity] of $f$,
   $
@@ -276,7 +276,7 @@ From the previous section, we can compute $lim_(z->a) f(z)$ if $a$ is a #ponder(
 #theorem[Extreme Value Theorem][
   Let $X subset.eq RR$ be a #ponder("analysis.closed-set")[closed] #ponder("analysis.bounded-set")[bounded] set. If $f: X -> RR$ is #ponder("analysis.continuity")[continuous], then there exist $a, b in X$ with
   $
-    a & = sup f(X), quad b = inf f(X).
+    f(a) & = sup f(X), quad f(b) = inf f(X).
   $
 
 ] <extreme-value-theorem>
@@ -297,14 +297,14 @@ From the previous section, we can compute $lim_(z->a) f(z)$ if $a$ is a #ponder(
     M <= lim_(n->oo) f(x_n) <= M => lim_(n->oo) f(x_n) = M.
   $
 
-  By #ponder("analysis.closed-set")[closedness] of $X$, $f(X)$ is also #ponder("analysis.closed-set")[closed] by @prop-continuity-preserves-closedness-and-boundedness. Hence $M in f(X)$, so there exists $a in X$ such that $f(a) = M$. Hence $a = sup f(X)$.
+  By #ponder("analysis.closed-set")[closedness] of $X$, $f(X)$ is also #ponder("analysis.closed-set")[closed] by @prop-continuity-preserves-closedness-and-boundedness. Hence $M in f(X)$, so there exists $a in X$ such that $f(a) = M$. Hence $f(a) = sup f(X)$.
 ]
 
 == Intermediate Value Theorem
 
 
 #theorem[Intermediate Value Theorem][
-  If $f: [a, b] -> RR$ is #ponder("analysis.continuity")[continuous], then $f([a, b])$ is an interval. Hence, if $f(a) <= y <= f(b)$, then there exists $c in [a, b]$ such that $f(c) = y$.
+  If $f: [a, b] -> RR$ is #ponder("analysis.continuity")[continuous], then $f([a, b])$ is an interval. Hence, if $y$ lies between $f(a)$ and $f(b)$, then there exists $c in [a, b]$ such that $f(c) = y$.
 ] <intermediate-value-theorem>
 
 #remark[
@@ -321,7 +321,7 @@ From the previous section, we can compute $lim_(z->a) f(z)$ if $a$ is a #ponder(
 
     This means that $(d - delta, d) inter S = emptyset$, which contradicts the definition of $d$.
 
-  - Suppose $f(d) < y$. Then $epsilon = y - f(d) > 0$. By #ponder("analysis.continuity")[continuity] of $f$, $exists delta = delta(epsilon) > 0$ such that $forall abs(x - d) < delta$, $x in [a, b] => abs(f(x) - f(d)) < epsilon => f(x) < f(d) + epsilon = y$. But then, $f(d + (delta)/(2)) < y => d <= d + (delta)/(2) in S$, again contradicting the definition of $d$.
+  - Suppose $f(d) < y$. Then $epsilon = y - f(d) > 0$. By #ponder("analysis.continuity")[continuity] of $f$, $exists delta = delta(epsilon) > 0$ such that $forall abs(x - d) < delta$, $x in [a, b] => abs(f(x) - f(d)) < epsilon => f(x) < f(d) + epsilon = y$. Since $f(b) > y$, we have $d != b$, so shrinking $delta$ to $min{delta, b-d}$ if necessary, we may assume $d + (delta)/(2) in [a, b]$. But then, $f(d + (delta)/(2)) < y => d <= d + (delta)/(2) in S$, again contradicting the definition of $d$.
 
   Hence $f(d) = y$.
 ]
@@ -338,9 +338,9 @@ From the previous section, we can compute $lim_(z->a) f(z)$ if $a$ is a #ponder(
 #definition[Monotone Function][
   Consider $f: [a, b] -> RR$. We say $f$ is (strictly) #ponder("analysis.monotone-function")[monotone] if either
 
-  - it is (strictly) #ponder("analysis.monotone-function")[increasing], so $a <= x_1 <= x_2 <= b => f(x_1) <= f(x_2)$,
+  - it is #ponder("analysis.monotone-function")[increasing], so $a <= x_1 < x_2 <= b => f(x_1) <= f(x_2)$ (strictly increasing if $f(x_1) < f(x_2)$),
 
-  - it is (strictly) #ponder("analysis.monotone-function")[decreasing], so $a <= x_1 <= x_2 <= b => f(x_1) >= f(x_2)$.
+  - it is #ponder("analysis.monotone-function")[decreasing], so $a <= x_1 < x_2 <= b => f(x_1) >= f(x_2)$ (strictly decreasing if $f(x_1) > f(x_2)$).
 ] <monotone-function>
 
 #proposition[Inverse Function Theorem, Version 1][

@@ -64,7 +64,7 @@ Recall that two #ponder("probability.outcomes-and-events")[events] $A$ and $B$ a
 ] <def-independence-of-random-variables>
 
 #example[
-  Consider tossing a $p$-coin $N$ times #ponder("probability.independence-of-events")[independently]. let $Omega = {0, 1}$ with $omega in Omega$, where
+  Consider tossing a $p$-coin $N$ times #ponder("probability.independence-of-events")[independently]. let $Omega = {0, 1}^N$ with $omega in Omega$, where
   $
     omega = (omega_1, omega_2, ..., omega_N)
   $
@@ -77,15 +77,15 @@ Recall that two #ponder("probability.outcomes-and-events")[events] $A$ and $B$ a
       PP(X_k=1) & =p \
     PP(X_k = 0) & =1-p. \
   $
-  Note that $X$ is a #ponder("probability.bernoulli-distribution")[Bernoulli] #ponder("probability.random-variable")[random variable] with parameter $p$.
+  Note that $X_k$ is a #ponder("probability.bernoulli-distribution")[Bernoulli] #ponder("probability.random-variable")[random variable] with parameter $p$.
 
   #claim[
-    $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent] #ponder("probability.random-variable")[random variables].
+    $X_1, ..., X_N$ are #ponder("probability.independence-of-random-variables")[independent] #ponder("probability.random-variable")[random variables].
   ]
 
   #proof[
     $
-      PP(X_1 = x_1, ..., X_n = x_n) & = product_(k=1)^N p^(x_k) (1 - p)^(1 - x_k) \
+      PP(X_1 = x_1, ..., X_N = x_N) & = product_(k=1)^N p^(x_k) (1 - p)^(1 - x_k) \
                                     & = product_(k=1)^N PP(X_k = x_k). \
     $
 
@@ -291,11 +291,11 @@ With #ponder("probability.expectation")[expectation], we can form another proof 
   $
     bb(1)(A_1 union ... union A_n) & = 1 - bb(1)(A_1^cp inter ... inter A_n^cp) \
     & = 1 - product_(i=1)^n (1 - bb(1)(A_i))\
-    &= sum_(i-1)^n bb(1)(A_i) - sum_(1 <= i < j <= n) bb(1)(A_i) dot bb(1)(A_j) + ... + (-1)^(n-1) bb(1)(A_1) dot ... dot bb(1)(A_n).
+    &= sum_(i=1)^n bb(1)(A_i) - sum_(1 <= i < j <= n) bb(1)(A_i) dot bb(1)(A_j) + ... + (-1)^(n-1) bb(1)(A_1) dot ... dot bb(1)(A_n).
   $
   Taking #ponder("probability.expectation")[expectation] on both sides, since $EE[bb(1)(A)]=PP(A)$, we get
   $
-    PP(A_1 union ... union A_n) & = sum_(i-1)^n PP(A_i) - sum_(1 <= i < j <= n) PP(A_i inter A_j) + ... + (-1)^(n-1) PP(A_1 inter ... inter A_n). \
+    PP(A_1 union ... union A_n) & = sum_(i=1)^n PP(A_i) - sum_(1 <= i < j <= n) PP(A_i inter A_j) + ... + (-1)^(n-1) PP(A_1 inter ... inter A_n). \
   $
 ]
 
@@ -409,7 +409,7 @@ It is a measure of the dependency between $X$ and $Y$.
 
     More generally, for all $c_1, ..., c_n, d_1, ..., d_n in RR$, we have
     $
-      "Cov"(sum_(i=1)^n c_k X_k, sum_(j=1)^n d_k Y_k) = sum_(i=1)^n sum_(j=1)^n c_k d_l "Cov"(X_k, Y_l).
+      "Cov"(sum_(i=1)^n c_i X_i, sum_(j=1)^n d_j Y_j) = sum_(i=1)^n sum_(j=1)^n c_i d_j "Cov"(X_i, Y_j).
     $
 
     In particular,
@@ -513,9 +513,8 @@ $ PP(X_1 = x_1, ..., X_n = x_n) = PP(X_1 = x_1) dot ... dot PP(X_n = x_n). $
   $
   However,
   $
-    PP(Z_1 = 0, Z_2 = 0) & = PP(X_3 = 0) + PP(X_3 = 1, Y_1 = 0) + PP(X_3 = 1, Y_2 = 0) \
-                         & = (1)/(2) + (1)/(8) + (1)/(8) \
-                         & = (3)/(4) != PP(Z_1 = 0) PP(Z_2 = 0) = (1)/(4). \
+    PP(Z_1 = 0, Z_2 = 0) & = PP(X_3 = 0) \
+                         & = (1)/(2) != PP(Z_1 = 0) PP(Z_2 = 0) = (1)/(4). \
   $
   Hence $Z_1$ and $Z_2$ are not #ponder("probability.independence-of-random-variables")[independent], even though $"Cov"(Z_1, Z_2) = 0$.
 ] <exm-uncorrelated-dependent>
@@ -588,7 +587,7 @@ $ PP(X_1 = x_1, ..., X_n = x_n) = PP(X_1 = x_1) dot ... dot PP(X_n = x_n). $
 #proof[
   Assume that $EE[X^2] < oo$ and $EE[Y^2] < oo$, otherwise there is nothing to prove. Then
   $
-    abs(X Y) <= (1)/(2) (X^2 + Y^2) => EE[abs(X Y)] <= oo.
+    abs(X Y) <= (1)/(2) (X^2 + Y^2) => EE[abs(X Y)] < oo.
   $
   Assume that $EE[X^2] > 0$ and $EE[Y^2] > 0$, otherwise this is the trivial case. Assume WLOG that $X$ and $Y$ are non-negative.
 
@@ -929,9 +928,9 @@ We will define $EE[X mid(|) Y]$ as a #ponder("probability.random-variable")[rand
                       & = PP(g(Y)=w) PP(Z=z).
     $
   ]
-  Then, by @prop-tower-property-2, we have $EE[g(Y) mid(|) Z] = EE[g(Y)]$.
+  Then, by @prop-tower-property, we have $EE[g(Y) mid(|) Z] = EE[g(Y)]$.
 
-  By @prop-tower-property, we have $EE[g(Y)] = EE[X]$. Hence, $EE[EE[X mid(|) Y] mid(|) Z] = EE[X]$.
+  By @prop-tower-property-expectation, we have $EE[g(Y)] = EE[X]$. Hence, $EE[EE[X mid(|) Y] mid(|) Z] = EE[X]$.
 ]
 
 #proposition[
@@ -1472,7 +1471,7 @@ Note that the gradient of the tangent at $x=1$ is $G'(1) = EE[X_1]$. Hence, the 
 
   Now, we will show that $q < 1$ iff $EE[X_1] > 1$.
 
-  Assume that $PP(X_1 <= 1) = g_0 + g_1 = 1$, then $PP(X_1 <= 1) = 1$, and then
+  Assume that $g_0 + g_1 = 1$, then $PP(X_1 <= 1) = 1$, and then
   $
     EE[X_1] = g_1.
   $
@@ -1488,7 +1487,7 @@ Note that the gradient of the tangent at $x=1$ is $G'(1) = EE[X_1]$. Hence, the 
   $
   Then $H(1) = 0$. We shall first show that $H$ can have at most one more root in $[0, 1)$. We have
   $
-    H''(z) = sum_(r=0)^oo r(r-q) g_r z^(r-2) > 0 "in" (0, 1)
+    H''(z) = sum_(r=0)^oo r(r-1) g_r z^(r-2) > 0 "in" (0, 1)
   $
   because $g_0 + g_1 < 1$ implies that there exists $r >= 2$ such that $g_r > 0$.
 

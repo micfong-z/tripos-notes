@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/mannot:0.4.0": markul
 
 = Applications of Linear Programming
 
@@ -94,24 +92,24 @@ $
 
 If P1's strategy is $vb(p)$, then their expected payoff is $min_(j in {1, ..., n}) sum_(i=1)^m p_i a_(i j)$. Hence they will try to find
 $
-  max_(vb(p)) (min_(j in {1, ...,, n}) sum_(i=1)^m p_i a_(i j)).
+  max_(vb(p)) (min_(j in {1, ..., n}) sum_(i=1)^m p_i a_(i j)).
 $
 We can express P1's optimisation problem as
 $
   & "maximise"   && v \
-  & "subject to" && matbold(A)^tp vb(p) >= v vb(e) \
-  &              && vb(e)^tp vb(p) = 1 \
+  & "subject to" && matbold(A)^tp vb(p) >= v vb(e)_n \
+  &              && vb(e)_m^tp vb(p) = 1 \
   &              && vb(p) >= vb(0) \
-  & "where"      && vb(e) = (1, dots.c, 1)^tp in RR^m.
+  & "where"      && vb(e)_k = (1, dots.c, 1)^tp in RR^k.
 $
 
 We can also express P2's optimisation problem as
 $
   & "minimise"   && w \
-  & "subject to" && matbold(A) vb(q) <= w vb(e) \
-  &              && vb(e)^tp vb(q) = 1 \
+  & "subject to" && matbold(A) vb(q) <= w vb(e)_m \
+  &              && vb(e)_n^tp vb(q) = 1 \
   &              && vb(q) >= vb(0) \
-  & "where"      && vb(e) = (1, dots.c, 1)^tp in RR^n.
+  & "where"      && vb(e)_k = (1, dots.c, 1)^tp in RR^k, "as above".
 $
 
 Rather surprisingly, these two linear programmes are dual to each other. Hence, we can solve either one of them to find the optimal strategies for both players, and we have a saddle point $(vb(p)^*, vb(q)^*)$ in the sense of mixed strategies.
@@ -123,24 +121,24 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 #proof[
   The dual of P2's problem is
   $
-    lagr(w, vb(q), vb(s), vb(lambda_1), lambda_2) &= w + vb(lambda_1)^tp (matbold(A) vb(q) + vb(s) - w vb(e)) - lambda_2 (vb(e)^tp vb(q) - 1) \
-    &= w(1-vb(lambda_1)^tp vb(e)) + (vb(lambda_1)^tp matbold(A) - lambda_2 vb(e)^tp) vb(q) + vb(lambda_1)^tp vb(s) + lambda_2.
+    lagr(w, vb(q), vb(s), vb(lambda_1), lambda_2) &= w + vb(lambda_1)^tp (matbold(A) vb(q) + vb(s) - w vb(e)_m) - lambda_2 (vb(e)_n^tp vb(q) - 1) \
+    &= w(1-vb(lambda_1)^tp vb(e)_m) + (vb(lambda_1)^tp matbold(A) - lambda_2 vb(e)_n^tp) vb(q) + vb(lambda_1)^tp vb(s) + lambda_2.
   $
 
   Note that $Lambda$ satisfies
 
-  1. $vb(lambda_1)^tp vb(e) = 1$,
+  1. $vb(lambda_1)^tp vb(e)_m = 1$,
 
-  2. $vb(lambda_1)^tp matbold(A) >= lambda_2 vb(e)^tp$,
+  2. $vb(lambda_1)^tp matbold(A) >= lambda_2 vb(e)_n^tp$,
 
   3. $vb(lambda_1) >= vb(0)$.
 
   When $lambda in Lambda$, $min lagr = lambda_2$. Hence, the dual of P2's problem is
   $
     & "maximise"   && lambda_2 \
-    & "subject to" && vb(lambda_1)^tp vb(e) = 1 \
+    & "subject to" && vb(lambda_1)^tp vb(e)_m = 1 \
     &              && vb(lambda_1) >= vb(0) \
-    &              && matbold(A)^tp vb(lambda_1) >= lambda_2 vb(e). \
+    &              && matbold(A)^tp vb(lambda_1) >= lambda_2 vb(e)_n. \
   $
   Replacing $vb(lambda_1)$ with $vb(p)$ and $lambda_2$ with $v$, we see that this is exactly P1's problem.
 ]
@@ -148,9 +146,9 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 #theorem[Optimal Strategies in Two Person Zero-Sum Games][
   A strategy $vb(p)$ is optimal for P1 if and only if there exists a strategy $vb(q)$ and $v$ such that
 
-  1. $matbold(A)^tp vb(p) >= v vb(e), vb(e)^tp vb(p) = 1, vb(p) >= 0$ #fade[[primal feasibility]],
+  1. $matbold(A)^tp vb(p) >= v vb(e)_n, vb(e)_m^tp vb(p) = 1, vb(p) >= 0$ #fade[[primal feasibility]],
 
-  2. $matbold(A) vb(q) <= v vb(e), vb(e)^tp vb(q) = 1, vb(q) >= 0$ #fade[[dual feasibility]],
+  2. $matbold(A) vb(q) <= v vb(e)_m, vb(e)_n^tp vb(q) = 1, vb(q) >= 0$ #fade[[dual feasibility]],
 
   3. $vb(p)^tp matbold(A) vb(q) = v$ #fade[[complementary slackness]].
 ]
@@ -160,9 +158,9 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 
   If $(vb(p), v)$ and $(vb(q), w)$ are primal/dual optimal, then
 
-  1. $(matbold(A) vb(q) - w vb(e))^tp vb(p) = 0$
+  1. $(matbold(A) vb(q) - w vb(e)_m)^tp vb(p) = 0$
 
-  2. $vb(q)^tp (matbold(A)^tp vb(p) - v vb(e)) = 0$
+  2. $vb(q)^tp (matbold(A)^tp vb(p) - v vb(e)_n) = 0$
 
   Hence, we must have
   $
@@ -201,7 +199,7 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
     & "subject to" && 2p + 3(1-p) >= v \
     &              && 3p + (1-p) >= v \
     &              && 4p + (1)/(2)(1-p) >= v \
-    &              && 0 < p <= 1.
+    &              && 0 <= p <= 1.
   $
   It might be easier to solve this problem graphically as shown in the figure below.
 
@@ -313,7 +311,7 @@ In this course, we will use another version of the simplex algorithm called the 
   $
   These are exactly what we want. Also, for any solution $matbold(x)$ to the transport problem, the cost is
   $
-    sum_((i, j) in E) x_(i j) c_(i j)
+    sum_((i, j) in E) x_(i j) C_(i j)
   $
   which is exactly the cost in the minimum cost flow problem. Hence, we have an equivalent transport problem.
 ]
@@ -323,8 +321,8 @@ In this course, we will use another version of the simplex algorithm called the 
 #theorem[Optimality Conditions for the Transport Problem][
   If for some feasible $matbold(x)$, we have dual variables $vb(lambda) in RR^n$, $vb(mu) in RR^m$ such that
   $
-                                  c_(i j) & >= lambda_i + mu_j quad && "for all" i, j \
-    (c_(i j) - (lambda_i + mu_j)) x_(i j) & = 0 quad                && "for all" i, j,
+                                  C_(i j) & >= lambda_i + mu_j quad && "for all" i, j \
+    (C_(i j) - (lambda_i + mu_j)) x_(i j) & = 0 quad                && "for all" i, j,
   $
   then $matbold(x)$ is optimal.
 ] <thm-optimality-conditions-for-transport-problem>
@@ -332,8 +330,8 @@ In this course, we will use another version of the simplex algorithm called the 
 #proof[
   The Lagrangian is given by
   $
-    lagr(matbold(x), vb(lambda), vb(mu)) &= sum_(i = 1)^n sum_(j =1)^m c_(i j) x_(i j) - sum_(i = 1)^n lambda_i (sum_(j=1)^m x_(i j) - s_i) - sum_(j = 1)^m mu_j (sum_(i=1)^n x_(i j) - d_j) \
-    &= sum_(i=1)^n sum_(j =1)^m (c_(i j) - lambda_i - mu_j) x_(i j) + sum_(i=1)^n lambda_i s_i + sum_(j=1)^m mu_j d_j.
+    lagr(matbold(x), vb(lambda), vb(mu)) &= sum_(i = 1)^n sum_(j =1)^m C_(i j) x_(i j) - sum_(i = 1)^n lambda_i (sum_(j=1)^m x_(i j) - s_i) - sum_(j = 1)^m mu_j (sum_(i=1)^n x_(i j) - d_j) \
+    &= sum_(i=1)^n sum_(j =1)^m (C_(i j) - lambda_i - mu_j) x_(i j) + sum_(i=1)^n lambda_i s_i + sum_(j=1)^m mu_j d_j.
   $
 
   The conditions in the theorem mean that given $vb(lambda), vb(mu)$ are dual feasible, and complementary slackness holds. Using @thm-optimality-conditions-for-linear-programming[Optimality Conditions for Linear Programming], we see that $matbold(x)$ is optimal.
@@ -585,7 +583,7 @@ In order to run the transportation simplex algorithm, we need to form a transpor
     )
   ]
 
-  Recall @thm-optimality-conditions-for-transport-problem[Optimality Conditions for the Transport Problem]. If $x_(i j) != 0$, then we have $c_(i j) = lambda_i + mu_j$. Hence, we have
+  Recall @thm-optimality-conditions-for-transport-problem[Optimality Conditions for the Transport Problem]. If $x_(i j) != 0$, then we have $C_(i j) = lambda_i + mu_j$. Hence, we have
   $
     lambda_1 + mu_1 = 5, quad lambda_1 + mu_2 = 3, quad lambda_2 + mu_2 = 7, \
     lambda_2 + mu_3 = 4, quad lambda_3 + mu_3 = 2, quad lambda_3 + mu_4 = 4.
@@ -668,7 +666,7 @@ In order to run the transportation simplex algorithm, we need to form a transpor
     )
   ]
 
-  We also require that $lambda_i + mu_j <= c_(i j)$. Note that in row 2, column 1, we have $9 > 2$. Hence, this means that we need to add an edge from supplier 2 to consumer 1. Once we add the edge, within a cycle in the graph we need to adjust the flow along the edges to make sure that the supply and demand constraints are still satisfied.
+  We also require that $lambda_i + mu_j <= C_(i j)$. Note that in row 2, column 1, we have $9 > 2$. Hence, this means that we need to add an edge from supplier 2 to consumer 1. Once we add the edge, within a cycle in the graph we need to adjust the flow along the edges to make sure that the supply and demand constraints are still satisfied.
 
   Suppose the new edge has flow $theta$. Then, the maximum $theta$ we can take #fade[[without making any flow negative]] is $theta = 3$. Thus, we arrive at the following situation:
 
@@ -774,7 +772,7 @@ In order to run the transportation simplex algorithm, we need to form a transpor
 == Max-Flow Min-Cut Theorem
 
 #definition[Max-Flow Problem][
-  Given a graph $G = (V, E)$ with source vertex $1$ and sink vertex $n$ (where $abs(v) = n$), the *max-flow problem* is:
+  Given a graph $G = (V, E)$ with source vertex $1$ and sink vertex $n$ (where $abs(V) = n$), the *max-flow problem* is:
   $
     & "maximise"   && delta \
     & "subject to" && sum_({j: (1, j) in E}) x_(1 j) = delta \
@@ -786,7 +784,7 @@ In order to run the transportation simplex algorithm, we need to form a transpor
   $
     & "maximise"   && delta \
     & "subject to" && phi_1 (x) = delta \
-    &              && phi_n (x) = delta \
+    &              && phi_n (x) = -delta \
     &              && phi_i (x) = 0 quad           && "for" 2 <= i <= n-1. \
     &              && 0 <= x_(i j) <= c_(i j) quad && "for" (i, j) in E. \
   $

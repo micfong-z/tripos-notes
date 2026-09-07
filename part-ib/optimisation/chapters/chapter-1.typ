@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/mannot:0.4.0": markul
 
 #lecture-separator(lecture: 1, date: "2026-05-01")
 
@@ -40,7 +38,7 @@ Intuitively, a set is convex if for any two points in the set, the line segment 
 #definition[Convex Functions][
   A function $f: S -> RR$ is called a *convex function* if $S$ is convex and $forall vb(x), vb(y) in S$ and $forall lambda in [0, 1]$,
   $
-    f(lambda vb(x) + (1-lambda vb(y))) <= lambda f(vb(x)) + (1 - lambda) f(vb(y)).
+    f(lambda vb(x) + (1-lambda) vb(y)) <= lambda f(vb(x)) + (1 - lambda) f(vb(y)).
   $
 ]
 #align(center)[
@@ -120,13 +118,14 @@ Intuitively, a function is convex iff the tangent line at any point is below the
 The 1D Taylor expansion of $f$ at $y$ is
 
 $
-  f(y) = f(x) + (y-x)f'(x) + ((y-x)^2)/2 f''(z) + ...
+  f(y) = f(x) + (y-x)f'(x) + ((y-x)^2)/2 f''(z)
 $
 
-In $n$ dimensions, we have
+where $z$ is some point between $x$ and $y$. In $n$ dimensions, we have
 $
-  f(vb(y)) = f(vb(x)) + (vb(y)-vb(x))^tp grad f(vb(x)) + ((vb(y)-vb(x))^tp hess f(vb(x)) (vb(y)-vb(x)))/2 + ...
+  f(vb(y)) = f(vb(x)) + (vb(y)-vb(x))^tp grad f(vb(x)) + ((vb(y)-vb(x))^tp hess f(vb(z)) (vb(y)-vb(x)))/2
 $
+where $vb(z)$ is some point on the line segment between $vb(x)$ and $vb(y)$.
 
 #fade[[We can derive this by applying the 1D Taylor expansion to the function $g(t) = f((1-t) vb(x) + t vb(y))$.]]
 
@@ -295,12 +294,12 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
   Let $f$ be $alpha$-strongly convex and $beta$-smooth, and let $vb(x^*)$ be the optimal solution. Then gradient descent with step size $eta_t =(1)/(beta)$ satisfies
 
   $
-    f(vb(x)_t) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x_0)) - f(vb(x^*))) <= ee^(-(alpha T)/(beta)) (f(vb(x_0)) - f(vb(x^*))).
+    f(vb(x)_T) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x_0)) - f(vb(x^*))) <= ee^(-(alpha T)/(beta)) (f(vb(x_0)) - f(vb(x^*))).
   $
 ]
 
 #remark[
-  Taking $T >= (beta)/(alpha) log((f(vb(x_0)) - f(vb(x^*)))/(epsilon))$ gives us $f(vb(x)_t) - f(vb(x^*)) <= epsilon$, so the relationship between the number of iterations and the error is logarithmic, _i.e._ we need $O(log (1/epsilon))$ iterations to get an error of at most $epsilon$.
+  Taking $T >= (beta)/(alpha) log((f(vb(x_0)) - f(vb(x^*)))/(epsilon))$ gives us $f(vb(x)_T) - f(vb(x^*)) <= epsilon$, so the relationship between the number of iterations and the error is logarithmic, _i.e._ we need $O(log (1/epsilon))$ iterations to get an error of at most $epsilon$.
 ]
 
 #proof[
@@ -312,7 +311,7 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
   $
   By telescoping, we have
   $
-    f(vb(x)_t) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x_0)) - f(vb(x^*))).
+    f(vb(x)_T) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x_0)) - f(vb(x^*))).
   $
 
 ]
@@ -374,7 +373,7 @@ $
 ]
 
 #definition[Matrix Norm][
-  For $matbold(A) in RR^(n times n)$, $norm(matbold(A))$ is the smallest $a > 0$ such that $norm(matbold(A)vb(z))_2 <= a norm(vb(z))_2$ for all $vb(z) in RR^n$. In particular, for positive semidefinite matrices, $norm(matbold(A))$ is the largest eigenvalue of $matbold(A)$.
+  For $matbold(A) in RR^(n times n)$, $norm(matbold(A))$ is the smallest $a >= 0$ such that $norm(matbold(A)vb(z))_2 <= a norm(vb(z))_2$ for all $vb(z) in RR^n$. In particular, for positive semidefinite matrices, $norm(matbold(A))$ is the largest eigenvalue of $matbold(A)$.
 
   #fade[[Intuitively, this is the largest scaling factor of $matbold(A)$ among all possible vectors.]]
 ]
@@ -401,7 +400,7 @@ $
 
 Suppose we want to solve the following problem:
 $
-  "minimise" f(vb(x)) "subject to" vb(a_i)^tp vb(x) <= vb(b_i) "for all" 1<=i<=m.
+  "minimise" f(vb(x)) "subject to" vb(a_i)^tp vb(x) <= b_i "for all" 1<=i<=m.
 $
 
 #align(center)[
@@ -411,10 +410,10 @@ $
 This can be re-worded as an unconstrained optimisation problem as follows:
 
 $
-  & "minimise"   && f(vb(x)) + sum_(i=1)^m phi(vb(a_i)^tp vb(x) - vb(b_i)) \
+  & "minimise"   && f(vb(x)) + sum_(i=1)^m phi(vb(a_i)^tp vb(x) - b_i) \
   & "subject to" && vb(x) in RR^n \
   & "where"      && phi(x) = cases(
-                      x & "if" x <= 0,
+                      0 & "if" x <= 0,
                       +oo & "if" x > 0.
                     )
 $
@@ -425,22 +424,22 @@ However, this function is badly behaved at the boundaries, so we can approximate
   #dynamic-svg2("/part-ib/optimisation/media/d1e3.svg", width: 26em)
 ]
 
-#fade[[Our example of $phi(x) = x$ for $x <= 0$ is, in fact, not a good barrier function, since it has problematic limits as $x -> -oo$. Nevertheless, $phi(x) = -log(-x)$ is much better behaved using the methods described below.]]
+#fade[[The indicator function $phi$ above makes the unconstrained problem exactly equivalent to the constrained one, but it is not a good barrier function: it jumps to $+oo$ at the boundary, so it is neither continuous nor differentiable there and offers no gradient information to guide an iterative method. By contrast, $phi(x) = -log(-x)$ is much better behaved using the methods described below.]]
 
 However, since we wish to minimise $f(vb(x))$ without the extra term, we can consider a parameter $t > 0$ and the following problem instead:
 $
-  & "minimise"   && t f(vb(x)) - sum_(i=1)^m log(-vb(a_i)^tp vb(x) + vb(b_i)) \
+  & "minimise"   && t f(vb(x)) - sum_(i=1)^m log(-vb(a_i)^tp vb(x) + b_i) \
   & "subject to" && vb(x) in RR^n.
 $
 
 #listing[Barrier Method][
-  1. Find a strictly feasible point $vb(x)$ such that $vb(a_i)^tp vb(x) < vb(b_i)$ for all $i$ and set $t>0, alpha > 1$.
+  1. Find a strictly feasible point $vb(x)$ such that $vb(a_i)^tp vb(x) < b_i$ for all $i$ and set $t>0, alpha > 1$.
 
   2. Repeat the following:
 
     1. Compute $vb(x^*)(t)$ by minimising
       $
-        t f(x) - sum_(i=1)^m log(-(vb(a_i)^tp vb(x) - vb(b_i)))
+        t f(x) - sum_(i=1)^m log(-(vb(a_i)^tp vb(x) - b_i))
       $
       using Newton's method with initial point $vb(x)$.
     2. Update $vb(x) := vb(x^*)(t)$ and $t := alpha t$.

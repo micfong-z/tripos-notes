@@ -58,7 +58,7 @@ Now we shall see an alternative proof.
 
   Thus if $c x + d > 0$, then $(c x + d) >= 1 / b$. But we have $0 < x - 1 < 1$ as $1 < x < 2$, so if $n$ is sufficiently large,
   $ 0 < (x - 1)^n < (1)/(b). $
-  But for any $n in NN$, $(x-1)^n$ is of the form $c x + d$ #fade[[we replace all even powers of $x$ by $2$]], for some $c, d in ZZ$. Thus $0 < c x + d < (1)/(b)$. $smash$
+  But for any $n in NN$, $(x-1)^n$ is of the form $c x + d$ #fade[[we replace all even powers of $x$ by powers of $2$]], for some $c, d in ZZ$. Thus $0 < c x + d < (1)/(b)$. $smash$
 ]
 
 So $QQ$ clearly has gaps. We shall express this fact making reference only to $QQ$, in order to motivate the construction of $RR$.
@@ -101,7 +101,7 @@ Thus $q in A$, so $A$ has no largest number. Similarly the set ${q in QQ: q > 0,
 
 #remark[
   1. In @def-real-numbers, from (1-5) we can check for example that $0 < 1$, indeed, if not then $1 < 0$, so
-    $ 0 = 1 - 1 < 0 < 0 - 1 = -1 $
+    $ 0 = 1 - 1 < 0 - 1 = -1 $
 
     so $0 = 0 dot (-1) < (-1) dot (-1) = 1$. $smash$
 
@@ -147,7 +147,7 @@ Thus $q in A$, so $A$ has no largest number. Similarly the set ${q in QQ: q > 0,
     However, it is not necessary that $sup S in S$.
   ]
 
-  3. Consider $S = {0, (1)/(2), (3)/(4), (4)/(5), ...} = {1-(1)/(n): n in NN}$.
+  3. Consider $S = {0, (1)/(2), (2)/(3), (3)/(4), (4)/(5), ...} = {1-(1)/(n): n in NN}$.
 
     It is clear that $1$ is an #ponder("analysis.bounded-above")[upper bound] of $S$. We wish to show that $sup S = 1$.
 ]
@@ -170,7 +170,7 @@ Thus $q in A$, so $A$ has no largest number. Similarly the set ${q in QQ: q > 0,
 ]
 
 #definition[Bounded below][
-  A set $S$ is said to be *#ponder("analysis.bounded-below")[bounded below]* if $exists x$ such that $x <= y$ for all $y <= S$. Such an $x$ is called a *#ponder("analysis.bounded-below")[lower bound]* of $S$.
+  A set $S$ is said to be *#ponder("analysis.bounded-below")[bounded below]* if $exists x$ such that $x <= y$ for all $y in S$. Such an $x$ is called a *#ponder("analysis.bounded-below")[lower bound]* of $S$.
 ] <def-bounded-below>
 
 #definition[Greatest lower bound][
@@ -245,7 +245,7 @@ $
 
   Consider the set $T = {k in NN: (k)/(n) >= b}$. By @axiom-of-archimedes[Axiom of Archimedes], $exists N in NN$ such that $N > b$, hence $n N in T$ and $T != emptyset$.
 
-  By the @well-ordering-principle[Well-ordering Principle], $T$ has a least element, say $m$. Let $c = (m-1)/(b)$. Since $m-1 in.not T$, we have $c < b$.
+  By the @well-ordering-principle[Well-ordering Principle], $T$ has a least element, say $m$. Let $c = (m-1)/(n)$. Since $m-1 in.not T$, we have $c < b$.
 
   Suppose $c <= a$. Then $(m)/(n) = c + (1)/(n) < a + (b - a) = b$. $smash$
 
@@ -277,7 +277,7 @@ Therefore, we want the #ponder("analysis.sequence")[sequence] to get and stay wi
 #definition[Limit of a sequence][
   We say that the #ponder("analysis.sequence")[sequence] $a_1, a_2, a_3, ...$ tends to the *#ponder("analysis.limit-of-sequence")[limit]* $l in RR$ as $n$ tends to $oo$, if
   $
-    forall epsilon > 0, exists N in NN, forall n in NN, abs(a_n - l) < epsilon.
+    forall epsilon > 0, exists N in NN, forall n >= N, abs(a_n - l) < epsilon.
   $
   where the absolute value $abs(x)$ for $x in RR$ is defined by
   $
@@ -363,7 +363,7 @@ $
 
     We claim that $a_n arrow.not 0$. Indeed let $epsilon = 1$, and observe that for any $N in NN$, $abs(a_n - 0) = 1$ for all $n in NN$.
 
-    In fact, $a_n$ does not #ponder("analysis.sequence-convergence")[converge] to any #ponder("analysis.limit-of-sequence")[limit] $l in RR$. Suppose $a_n -> l$ as $n->oo$ for some $l in RR$, let $epsilon > 1$. Then $exists N in NN$ such that $forall n >= N$, $abs(a_n - l) < 1$. In particular,
+    In fact, $a_n$ does not #ponder("analysis.sequence-convergence")[converge] to any #ponder("analysis.limit-of-sequence")[limit] $l in RR$. Suppose $a_n -> l$ as $n->oo$ for some $l in RR$, let $epsilon = 1$. Then $exists N in NN$ such that $forall n >= N$, $abs(a_n - l) < 1$. In particular,
     $
       abs(1-l) < 1 quad "and" quad abs(-1-l) < 1.
     $
@@ -457,7 +457,7 @@ $
 ]
 
 #important[
-  If $a_m < d$ for all $n in NN$ and $a_n -> c$ as $n -> oo$, we need not the strict inequality $c < d$.
+  If $a_n < d$ for all $n in NN$ and $a_n -> c$ as $n -> oo$, we do not necessarily have the strict inequality $c < d$.
 ]
 
 #proposition[
@@ -502,7 +502,7 @@ In the reals, the sum of two numbers is defined, so by induction we can define t
     $
       s_k & = r + r^2 + ... + r^k \
           & = r dot (1 - r^k)/(1 - r) \
-          & -> r dot (1)/(1-r) quad "as" k -> oo "since" r^k < 1.
+          & -> r dot (1)/(1-r) quad "as" k -> oo "since" r^k -> 0.
     $
     Hence $sum_(n=1)^oo r^n = r/(1-r)$ for $abs(r) < 1$.
 
@@ -518,7 +518,7 @@ In the reals, the sum of two numbers is defined, so by induction we can define t
     $
     Hence
     $
-      s_(2^k) & >= 1 + (1)/(2) + k dot (1)/(2) \
+      s_(2^k) & >= 1 + (1)/(2) + (k-1) dot (1)/(2) \
               & = 1 + (k)/(2).
     $
     So the #ponder("analysis.series")[partial sums] are increasing and unbounded, hence $sum_(n=1)^oo (1)/(n)$ #ponder("analysis.series")[diverges].
@@ -526,7 +526,7 @@ In the reals, the sum of two numbers is defined, so by induction we can define t
   3. The #ponder("analysis.series")[series] whose $n$th term is $a_n = (1)/(n^2)$:
 
     $
-      s_(2^k - 1) = 1 + underbracket((1)/(2^2) + (1)/(3^2), <= 2 dot (1)/(2^2)) + underbracket((1)/(4^2) + (1)/(5^2) + (1)/(6^2) + (1)/(7^2), <= 4 dot (1)/(4^2)) +...+ (1)/(2k-1)^2.
+      s_(2^k - 1) = 1 + underbracket((1)/(2^2) + (1)/(3^2), <= 2 dot (1)/(2^2)) + underbracket((1)/(4^2) + (1)/(5^2) + (1)/(6^2) + (1)/(7^2), <= 4 dot (1)/(4^2)) +...+ (1)/(2^k-1)^2.
     $
 
     In general,
@@ -547,12 +547,12 @@ In the reals, the sum of two numbers is defined, so by induction we can define t
 
 == Decimal Expansions
 
-Let $(d_n)$ be a sequence where each $d_n in {0, 1, 2, ..., 9}$. Then $sum_n=1^oo (d_n)/(10^n)$ converges to some limit $x$ with $0 <= x <= 1$, since te #ponder("analysis.series")[partial sums] are increasing and #ponder("analysis.bounded-above")[bounded above] by
+Let $(d_n)$ be a sequence where each $d_n in {0, 1, 2, ..., 9}$. Then $sum_(n=1)^oo (d_n)/(10^n)$ converges to some limit $x$ with $0 <= x <= 1$, since the #ponder("analysis.series")[partial sums] are increasing and #ponder("analysis.bounded-above")[bounded above] by
 $
   sum_(n=1)^oo (9)/(10^n) = 9/(10) dot (1)/(1 - (1)/(10)) = 1.
 $
 
-We say that $x$ has *decimal expansion* $0.d_1 d_2 d_3 ...$. We shall consider whether every $x$ with $0 <= x < 1$ have a decimal expansion.
+We say that $x$ has *decimal expansion* $0.d_1 d_2 d_3 ...$. We shall consider whether every $x$ with $0 <= x < 1$ has a decimal expansion.
 
 We can pick $d_1 in ZZ$ to be maximal such that $(d_1)/(10) <= x < 1$.
 
@@ -591,11 +591,11 @@ $
     $
     We must have $b_k = a_k + 1$, for that if $b_k > a_k + 1$, then $b - a >= 2dot 10^(-k) - 10^(-k) > 0$.
 
-    Also, for all $j > k$, we have $a_j = 0$ and $b_k = 0$.
+    Also, for all $j > k$, we have $a_j = 9$ and $b_j = 0$.
 
   #lecture-separator(lecture: 20, date: "2025-11-25")
 
-  2. A decimal expansion if *periodic* if, after a finite number of terms, it repeats in blocks, of length $k$ say. _i.e._ $exists l, k$ such that $forall n > l$, $d_n = d_(n+k)$.
+  2. A decimal expansion is *periodic* if, after a finite number of terms, it repeats in blocks, of length $k$ say. _i.e._ $exists l, k$ such that $forall n > l$, $d_n = d_(n+k)$.
 
     A periodic decimal is rational, _e.g._
     $
@@ -603,13 +603,13 @@ $
     $
     Then we have
     $
-      10^4 - x - 7832 & = 0.147147147... \
+        10^4 x - 7832 & = 0.147147147... \
                       & = 147 sum_(j = 1)^oo (1)/(10^(3 j)) \
                       & = 147 dot (1)/(10^3) dot (1)/(1 - (1)/(10^3)) in QQ.
     $
     So $x in QQ$.
 
-    Conversely, if $x in QQ$, then it has a periodic decimal expansion. To see that, we write $x = (p)/(2^a 5^b q)$ where $a, b, p, q in ZZ$ with $a, b, q >= 0$, and $gcd(10, q) = 1$. Then
+    Conversely, if $x in QQ$, then it has a periodic decimal expansion. To see that, we write $x = (p)/(2^a 5^b q)$ where $a, b, p, q in ZZ$ with $a, b >= 0$ and $q >= 1$, and $gcd(10, q) = 1$. Then
     $
       10^(max(a, b))x = (t)/(q) = n + (c)/(q)
     $
@@ -624,7 +624,7 @@ $
     $
       (c)/(q) = (k c)/(k q)=(k c)/(10^phi(q) - 1) = k c dot sum_(j = 1)^oo (1)/((10^phi(q))^j).
     $
-    Since $0 <= k c < k q$, and $k q$ has at most $10^phi(q)$ digits (by Fermat-Euler), we can write $k c$ as a $phi(q)$-digit number $d_1d_2...d_(phi(q))$.
+    Since $0 <= k c < k q$, and $k q$ has at most $phi(q)$ digits (by Fermat-Euler), we can write $k c$ as a $phi(q)$-digit number $d_1d_2...d_(phi(q))$.
 
     Thus $c / q = 0.d_1d_2...d_(phi(q))d_1d_2...d_(phi(q))...$ and so $x$ has a periodic decimal expansion.
 ]
@@ -684,12 +684,12 @@ Recall the definitions of @def-algebraic-number[Algebraic Numbers] and @def-tran
 #proof[
   We will need two facts about polynomials:
 
-  *Fact A.* For any polynomial $p$, there exists some $K$ such that $abs(p(x) - p(y)) <= k abs(x - y), forall 0 <= x, y <= 1.$
+  *Fact A.* For any polynomial $p$, there exists some $K$ such that $abs(p(x) - p(y)) <= K abs(x - y), forall 0 <= x, y <= 1.$
 
   Indeed, suppose $p(x) = a_d x^d + a_(d-1)x^(d-1) + ... + a_1x + a_0$. Then
   $
-    p(x) - (y) & = a_d (x^d - y^d) + a_(d-1)(x^(d-1) - y^(d-1)) + ... + a_1(x - y) \
-               & = (x-y)[a_d (x^(d-1) + x^(d-2)y +...+y^(d-1)) + ... + a_1]. \
+    p(x) - p(y) & = a_d (x^d - y^d) + a_(d-1)(x^(d-1) - y^(d-1)) + ... + a_1(x - y) \
+                & = (x-y)[a_d (x^(d-1) + x^(d-2)y +...+y^(d-1)) + ... + a_1]. \
   $
   So
   $
@@ -701,13 +701,13 @@ Recall the definitions of @def-algebraic-number[Algebraic Numbers] and @def-tran
   #lecture-separator(lecture: 21, date: "2025-11-27")
 
 
-  Write $L_n = sum_(k-1)^n (1)/(10^k!)$, so that $L = lim_(n -> oo) L_n$.
+  Write $L_n = sum_(k=1)^n (1)/(10^k!)$, so that $L = lim_(n -> oo) L_n$.
 
   Suppose that there is a polynomial $p$ of which $p(L) = 0$. Note  $0 < L < 1$.
 
   Then by Fact A, there exists some $K$ such that
   $
-    p(x) - p(y) <= K abs(x - y) quad forall 0 <= x, y <= 1.
+    abs(p(x) - p(y)) <= K abs(x - y) quad forall 0 <= x, y <= 1.
   $
   Note
   $
@@ -760,7 +760,7 @@ $
   (a, b) times (c, d) & = (a c - b d, a d + b c).
 $
 
-We can view $RR$ as contained in $CC$ ny identifying $a in RR$ with $(a, 0) in CC$.
+We can view $RR$ as contained in $CC$ by identifying $a in RR$ with $(a, 0) in CC$.
 
 Note that $(a, 0) + (b, 0) = (a + b, 0)$ and similarly $(a, 0)times (b, 0) = (a b, 0)$.
 We define $i = (0, 1) in CC$. Then
@@ -772,7 +772,7 @@ Indeed, $(a, b) = a (1, 0) + b(0, 1) = a + b ii$.
 
 #remark[
 
-  1. $CC$ obeys all the usual rules of arithmetic. In particualr, if $0 != z in CC$, then there exists some $w in CC$ such that $z w = 1$.
+  1. $CC$ obeys all the usual rules of arithmetic. In particular, if $0 != z in CC$, then there exists some $w in CC$ such that $z w = 1$.
 
     Indeed, ,given $z = a + ii b$, note that
     $

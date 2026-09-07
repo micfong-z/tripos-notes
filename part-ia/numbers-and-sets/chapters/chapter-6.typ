@@ -94,8 +94,8 @@ We may thus view _#ponder("set-theory.countable-set")[countable]_ as saying that
 
   $
     a_n = cases(
-      (p-1, q+1) & quad p > 1,
-      (q+1, 1) & quad p = 1
+      (p+1, q-1) & quad q > 1,
+      (1, p+1) & quad q = 1
     )
   $
   gives a well-defined #ponder("analysis.sequence")[sequence] $(a_n)_(n=1)^oo$ which lists all elements of $NN times NN$. The #ponder("set-theory.function")[map] $f: NN->NN times NN$ defined by $f(n) = a_n$ is then a #ponder("set-theory.injection-surjection")[surjection].
@@ -130,7 +130,7 @@ We may thus view _#ponder("set-theory.countable-set")[countable]_ as saying that
 ] <countable-union-countable>
 
 #proof[
-  We me assume that our #ponder("set-theory.countable-set")[countable] sets are indexed by $NN$. Given #ponder("set-theory.countable-set")[countable] sets $A_1, A_2, A_3, ...$, we wish to show that $union.big_(n in NN) A_n$ is #ponder("set-theory.countable-set")[countable].
+  We may assume that our #ponder("set-theory.countable-set")[countable] sets are indexed by $NN$. Given #ponder("set-theory.countable-set")[countable] sets $A_1, A_2, A_3, ...$, we wish to show that $union.big_(n in NN) A_n$ is #ponder("set-theory.countable-set")[countable].
 
   For each $i in NN$, since $A_i$ is #ponder("set-theory.countable-set")[countable], we can list its elements as
   $ A_i = { a_1^((i)), a_2^((i)), a_3^((i)), ... }. $
@@ -208,7 +208,7 @@ Note that this is a variant of Cantor's diagonal argument.
   $
     x = 0.x_1 x_2 x_3 ...
   $
-  with $x_(i) in {0, 1}$. #fade[[Assume that we do not end with an infinite string of $1$s.]] Then define $f: (0, 1) -> cal(NN)$ by
+  with $x_(i) in {0, 1}$. #fade[[Assume that we do not end with an infinite string of $1$s.]] Then define $f: (0, 1) -> cal(P)(NN)$ by
   $
     f(x) = { n in NN: x_n = 1 }.
   $
@@ -246,13 +246,13 @@ In fact, Proof 1 shows the following:
   ]
 
   #prooflike[Proof 2][
-    The set ${i in I: A_i "has length" >= 1}$ is #ponder("set-theory.countable-set")[countable], because each such interval contains at least one integer, and the integers are #ponder("set-theory.countable-set")[countable].
+    The set ${i in I: A_i "has length" > 1}$ is #ponder("set-theory.countable-set")[countable], because each such interval contains at least one integer, and the integers are #ponder("set-theory.countable-set")[countable].
 
-    Similarly, the set ${i in I: A_i "has length" >= (1)/(2)}$ is #ponder("set-theory.countable-set")[countable] as it injects into the set of half-integers, which is #ponder("set-theory.countable-set")[countable].
+    Similarly, the set ${i in I: A_i "has length" > (1)/(2)}$ is #ponder("set-theory.countable-set")[countable] as it injects into the set of half-integers, which is #ponder("set-theory.countable-set")[countable].
 
-    More generally, for each $n in NN$, the set ${i in I: A_i "has length" >= (1)/(n)}$ is #ponder("set-theory.countable-set")[countable] as it injects into the set of integer multiples of $(1)/(n)$, which is #ponder("set-theory.countable-set")[countable].
+    More generally, for each $n in NN$, the set ${i in I: A_i "has length" > (1)/(n)}$ is #ponder("set-theory.countable-set")[countable] as it injects into the set of integer multiples of $(1)/(n)$, which is #ponder("set-theory.countable-set")[countable].
 
-    Thus $I = union.big_(n in NN) {i in I: A_i "has length" >= (1)/(n)}$ is a #ponder("set-theory.countable-set")[countable] #ponder("set-theory.set-operations")[union] of countable sets, and hence #ponder("set-theory.countable-set")[countable] by @countable-union-countable.
+    Thus $I = union.big_(n in NN) {i in I: A_i "has length" > (1)/(n)}$ is a #ponder("set-theory.countable-set")[countable] #ponder("set-theory.set-operations")[union] of countable sets, and hence #ponder("set-theory.countable-set")[countable] by @countable-union-countable.
   ]
 ]
 
@@ -329,7 +329,7 @@ We also need that, if _"$A$ is at most as big as $B$"_ and _"$B$ is at most as b
   $
   and similarly for $B_0, B_1, B_oo$.
 
-  Note that $f$ bijects $A_0$ with $B_1$ #fade[[observing that every $b in B_1$ has at least one anscestor, so is equal to $f(a)$ for some $a in A_0$]]. Similarly, $g$ bijects $B_0$ with $A_1$. Also, $f$ (or $g$) bijects $A_oo$ with $B_oo$.
+  Note that $f$ bijects $A_0$ with $B_1$ #fade[[observing that every $b in B_1$ has at least one ancestor, so is equal to $f(a)$ for some $a in A_0$]]. Similarly, $g$ bijects $B_0$ with $A_1$. Also, $f$ (or $g$) bijects $A_oo$ with $B_oo$.
 
   Then the #ponder("set-theory.function")[function] $h: A->B$ defined by
   $

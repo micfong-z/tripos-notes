@@ -1,6 +1,6 @@
 #import "../prelude.typ": *
 
-#lecture-separator(lecture: 3, date: "2025-01-28")
+#lecture-separator(lecture: 3, date: "2026-01-28")
 
 = Axiomatic Approach
 
@@ -10,7 +10,7 @@ Recall our definition of probability spaces in @def-probability-space.
 
 There are several important properties of the #ponder("probability.probability-space")[probability measure] $PP$.
 
-#proposition[Countable Subaddivity][
+#proposition[Countable Subadditivity][
   If $(A_n)$ is a collection in $cal(F)$, _i.e._ $(A_n in cal(F)) space forall n$, then
   $
     PP(union.big_(n in NN) A_n) <= sum_(n in NN) PP(A_n).
@@ -44,7 +44,7 @@ There are several important properties of the #ponder("probability.probability-s
   Then $(B_n)$ is a disjoint collection, and
   $
     union.big_(k=1)^n B_k & = A_n \
-    PP(A_n) & = union.big_(k=1)^n B_k & = sum_(k=1)^n PP(B_k) -> PP(union.big_(k=1)^oo B_k) quad "as" quad n->oo.
+    PP(A_n) & = PP(union.big_(k=1)^n B_k) & = sum_(k=1)^n PP(B_k) -> PP(union.big_(k=1)^oo B_k) quad "as" quad n->oo.
   $
   Now we also have
   $
@@ -131,7 +131,7 @@ There are several important properties of the #ponder("probability.probability-s
 ]
 
 #remark[
-  If $Omega$ is a #ponder("set-theory.finite-set")[finite set] and $(omega, cal(F), PP)$ is a #ponder("probability.probability-space")[probability space] with $cal(F) = cal(P)(Omega)$, and define
+  If $Omega$ is a #ponder("set-theory.finite-set")[finite set] and $(Omega, cal(F), PP)$ is a #ponder("probability.probability-space")[probability space] with $cal(F) = cal(P)(Omega)$, and define
   $
     PP(A) = abs(A) / abs(Omega) quad forall A in cal(F).
   $
@@ -142,11 +142,11 @@ There are several important properties of the #ponder("probability.probability-s
   This is the *#ponder("combinatorics.inclusion-exclusion-principle")[inclusion-exclusion principle]* in combinatorics.
 ]
 
-#lecture-separator(lecture: 4, date: "2025-01-30")
+#lecture-separator(lecture: 4, date: "2026-01-30")
 
 #example[Counting surjections][
   Let $ Omega & = {f: {1, ..., n} -> {1, ..., m}} \
-      A & = {f in omega: f "is a surjection"}. $
+      A & = {f in Omega: f "is a surjection"}. $
   We want to find $abs(A)$.
 
   Define
@@ -283,7 +283,7 @@ There are several important properties of the #ponder("probability.probability-s
 ]
 
 #proposition[Law of Total Probability][
-  Suppose $(B_n)_(n in NN)$ is a disjoint collection if $cal(F)$ such that $union.big_n B_n = Omega$ and $PP(B_n) > 0$ for all $n$. Then for any $A in cal(F)$,
+  Suppose $(B_n)_(n in NN)$ is a disjoint collection in $cal(F)$ such that $union.big_n B_n = Omega$ and $PP(B_n) > 0$ for all $n$. Then for any $A in cal(F)$,
 
   $
     PP(A) = sum_n PP(A mid(|) B_n) PP(B_n).
@@ -322,7 +322,7 @@ There are several important properties of the #ponder("probability.probability-s
   Plugging these into the first equation gives the result.
 ]
 
-This formula is the basis of Bayesian statistics; if we know the probabilities of $PP(B_k)$ and we have a model which gives us $PP(A mid(|) B_k)$, then we can compute the posterior probability $PP(B_n mid(|) A)$.
+This formula is the basis of Bayesian statistics; if we know the probabilities of $PP(B_k)$ and we have a model which gives us $PP(A mid(|) B_k)$, then we can compute the posterior probability $PP(B_k mid(|) A)$.
 
 #example[False positives for a rare condition][
   Suppose that a rare condition $A$ affects $0.1%$ of the population, _i.e._ $PP(A) = 0.001$. A test for the condition has a $98%$ true positive rate and a $1%$ false positive rate. #fade[[For affected individuals, the test is positive with probability $0.98$, and for unaffected individuals, the test is positive with probability $0.01$.]]
@@ -347,7 +347,7 @@ This formula is the basis of Bayesian statistics; if we know the probabilities o
   $
     PP(A mid(|) P) = (1)/(1+ (PP(P mid(|) A^(cp)) PP(A^(cp))) / (PP(P mid(|) A) PP(A))) = (1)/(1 + (0.01 times 0.999) / (0.98 times 0.001)) approx 0.09.
   $
-  Since $PP(A^cp)$ and $PP(P mid(|) A)$ are both very close to $1$, so the relavent ration is approximately
+  Since $PP(A^cp)$ and $PP(P mid(|) A)$ are both very close to $1$, so the relevant ratio is approximately
   $
     PP(P mid(|) A^cp) / PP(A).
   $
@@ -386,7 +386,7 @@ This formula is the basis of Bayesian statistics; if we know the probabilities o
                                       & = (1)/(2). \
     $
 
-  3. They have exactly 2 children, exactly one of them is a boy, who was born on a Thursday.
+  3. They have exactly 2 children, at least one of them is a boy, who was born on a Thursday.
 
     Let  $"T"$ denote the #ponder("probability.outcomes-and-events")[event] that a child is a boy born on a Thursday, and $"N"$ denote the #ponder("probability.outcomes-and-events")[event] that a child is a boy not born on a Thursday. We want to find
     $
@@ -503,7 +503,7 @@ Let us see some examples of discrete probability distributions.
 
   The #ponder("probability.multinomial-distribution")[multinomial distribution] $"M"(n, p_1, ..., p_k)$ with parameters $n in NN$ and $p_1, ..., p_k in[0, 1]$ where $p_1 + ... + p_k = 1$ is defined by
   $
-                Omega & = {(n_1, ..., n_k) in NN^k : sum_(i=1)^k n_i= n} \
+                Omega & = {(n_1, ..., n_k) in ZZ_(>=0)^k : sum_(i=1)^k n_i= n} \
     p_(n_1, ..., n_k) & = binom(n, n_1, ..., n_k) p_1^(n_1) dot ... dot p_k^(n_k) quad forall (n_1, ..., n_k) in Omega. \
   $
 
@@ -539,11 +539,11 @@ Let us see some examples of discrete probability distributions.
   The #ponder("probability.poisson-distribution")[Poisson distribution] $"Poi"(lambda)$ with parameter $lambda > 0$ is defined by
   $
     Omega & = ZZ_(>=0) \
-      p_k & = (lambda^k ee^(-lambda)) / (k!) quad forall k in NN_0. \
+      p_k & = (lambda^k ee^(-lambda)) / (k!) quad forall k in ZZ_(>=0). \
   $
   Note that
   $
-    sum_k p_k = sum_k (lambda^k ee^(-lambda)) / (k!) = ee^(-lambda) / ee^(lambda) = 1.
+    sum_k p_k = sum_k (lambda^k ee^(-lambda)) / (k!) = ee^(-lambda) dot ee^(lambda) = 1.
   $
 ] <def-poisson-distribution>
 

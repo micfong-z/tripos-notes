@@ -85,7 +85,7 @@ We shall begin by general definitions in probability theory.
     This models the experiment of picking a uniformly random element from $Omega$. We have
 
     $
-      PP({omega} = (1)/(abs(Omega) )) quad forall omega in Omega.
+      PP({omega}) = (1)/(abs(Omega) ) quad forall omega in Omega.
     $
 
   3. Consider picking balls from a bag. Suppose we have $n$ balls labelled ${1, 2, ..., n}$. We pick $k$ balls at random without replacement. Then we have
@@ -159,7 +159,7 @@ We shall begin by general definitions in probability theory.
 
 1. Let $Omega$ be a #ponder("set-theory.finite-set")[finite set] with $abs(Omega) = n$.
 
-  We want to #ponder("set-theory.partition")[partition] $Omega$ into $k$ disjoint subsets $Omega_1, ... ,Omega_k$ with $abs(Omega_i) = n_i$ and $sum_(n_i) = n$. Consider the number of ways to do this.
+  We want to #ponder("set-theory.partition")[partition] $Omega$ into $k$ disjoint subsets $Omega_1, ... ,Omega_k$ with $abs(Omega_i) = n_i$ and $sum_i n_i = n$. Consider the number of ways to do this.
 
   Let $M$ be the number of ways to do this. Then
 
@@ -179,7 +179,7 @@ We shall begin by general definitions in probability theory.
 
   For increasing functions, define a #ponder("algebra.bijection")[bijection]
   $
-    g: {f: {1, ..., k} -> {1, ..., n} "increasing"} -> {f: {1, ..., k}->{1, ..., n} "strictly increasing"}
+    g: {f: {1, ..., k} -> {1, ..., n} "increasing"} -> {f: {1, ..., k}->{1, ..., n + k - 1} "strictly increasing"}
   $
 
   by
@@ -335,7 +335,7 @@ We shall first consider a weaker statement.
   Since $I_n$ is decreasing in $n$,
   $
     I_(2n) / I_(2n + 1) & <= (I_(2n-1)) / I_(2n + 1) -> 1, \
-    I_(2n) / I_(2n + 1) & >= (I_(2n)) / I_(2n + 2) -> 1.
+    I_(2n) / I_(2n + 1) & <= (I_(2n)) / I_(2n + 2) -> 1.
   $
   So
   $

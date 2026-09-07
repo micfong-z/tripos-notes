@@ -53,7 +53,7 @@
 We can also derive some properties of #ponder("calculus.derivative")[derivatives] from #ponder("analysis.algebra-of-limits")[properties of limits].
 
 #lemma[
-  let $f, g : X in CC -> CC$ be #ponder("calculus.derivative")[differentiable] at $a in X$. Then so are $f + g, f g$, and $(1)/(f)$ if $f(z) != 0$ for all $z in X$.
+  let $f, g : X subset.eq CC -> CC$ be #ponder("calculus.derivative")[differentiable] at $a in X$. Then so are $f + g, f g$, and $(1)/(f)$ if $f(z) != 0$ for all $z in X$.
 
   Moreover, we have
 
@@ -171,7 +171,7 @@ It will be convenient to have an alternative #ponder("calculus.characterization-
   and since
   $
     lim_(h->0) [g'(f(a)) epsilon_f (h)] &= g'(f(a)) lim_(h->0) epsilon_f (h) = 0\
-    lim_(h->0) [epsilon_g (h f'(a) + epsilon_f (h) abs(h)) abs(f'(a) + epsilon_f (h))] &= lim_(k->0) epsilon_g (k) abs(g'(f(a)) + epsilon_f (h)) = 0,
+    lim_(h->0) [epsilon_g (h f'(a) + epsilon_f (h) abs(h)) abs(f'(a) + epsilon_f (h))] &= lim_(k->0) epsilon_g (k) abs(f'(a) + epsilon_f (h)) = 0,
   $
   our conclusion follows.
 ]
@@ -196,7 +196,7 @@ It will be convenient to have an alternative #ponder("calculus.characterization-
 ]
 
 #lemma[
-  If $X subset.eq CC -> CC$ is #ponder("calculus.derivative")[differentiable] at $a in X$, then $f$ is #ponder("analysis.continuity")[continuous] at $a$.
+  If $f : X subset.eq CC -> CC$ is #ponder("calculus.derivative")[differentiable] at $a in X$, then $f$ is #ponder("analysis.continuity")[continuous] at $a$.
 ] <differentiability-implies-continuity>
 
 #proof[
@@ -260,7 +260,7 @@ We shall consider an easier case first.
 
   - $x_M in (a, b) => "sign"((f(x_M + h) - f(x_M))/(h)) = -"sign"(h)$. Hence by taking limits from $h->0^+$ and $h->0^-$, we have $f'(x_M) = 0$.
 
-  Now, suppose $f$ is not constant (or otherwise the result is trivial). Either $f(a) < f(b)$ or $f(a) > f(b)$, so either $x_M$ or $x_m$ is in $(a, b)$.
+  Now, suppose $f$ is not constant (or otherwise the result is trivial). Then either $sup_([a, b]) f > f(a)$ or $inf_([a, b]) f < f(a)$, and since $f(a) = f(b)$, this forces either $x_M$ or $x_m$ to be in $(a, b)$.
 ]
 
 We shall see some applications about @mean-value-theorem[Mean Value Theorem].
@@ -319,7 +319,7 @@ Note that we can generalise @corollary-mean-value-theorem[Corollary of Mean Valu
 #proof[
   By the corollary above, $f$ is strictly #ponder("analysis.monotone-function")[increasing], so @inverse-function-theorem-version-1[Inverse Function Theorem (Version 1)] applies, so $f$ is a #ponder("algebra.bijection")[bijection] to its image and $f^(-1)$ is #ponder("analysis.continuity")[continuous].
 
-  Now for #ponder("calculus.derivative")[differentiability], let $y in (f(a), f(b))$ and $x = f^(-1)(y)$. This $x$ is unique by #ponder("algebra.bijection")[bijectivity]. Given $h$ such that $y + h in (f(a), f(b))$, define $k$ such that $y + h = f(x + k) <=> k = f^(-1)(t+h)-x$. Then
+  Now for #ponder("calculus.derivative")[differentiability], let $y in (f(a), f(b))$ and $x = f^(-1)(y)$. This $x$ is unique by #ponder("algebra.bijection")[bijectivity]. Given $h$ such that $y + h in (f(a), f(b))$, define $k$ such that $y + h = f(x + k) <=> k = f^(-1)(y+h)-x$. Then
   $
     (f^(-1)(y+h) - f^(-1)(y))/(h) = (x + k - x)/(f(x+k) - y) = (k)/(f(x+k) - f(x)) = (1)/((f(x+k)-f(x))/k).
   $
@@ -389,14 +389,14 @@ Note that we can generalise @corollary-mean-value-theorem[Corollary of Mean Valu
 #definition[Higher Derivatives][
   Let $f: X subset.eq CC -> CC$ be #ponder("calculus.derivative")[differentiable] on $X$. We say that $f$ is *#ponder("calculus.higher-derivatives")[twice differentiable]* if
   $
-    f': X & -> R \
+    f': X & -> CC \
         x & |-> f'(x)
   $
   is #ponder("calculus.derivative")[differentiable]. We similarly define *#ponder("calculus.higher-derivatives")[thrice differentiable]* and *#ponder("calculus.higher-derivatives")[$n$ times differentiable]* for $n in NN$ inductively.
 
   We say that $f$ is #ponder("calculus.higher-derivatives")[$k$-times continuously differentiable], and write $f in C^k (X)$, if $f$ is #ponder("calculus.higher-derivatives")[$k$ times differentiable] and
   $
-    f^(k): X & -> RR \
+    f^(k): X & -> CC \
            x & |-> f^(k)(x)
   $
   is #ponder("analysis.continuity")[continuous].
@@ -435,7 +435,7 @@ We want to state a general version of this apprixmation, under appropriate condi
 ]
 
 #theorem[Taylor's Theorem: Lagrange Remainder][
-  Let $f: [a, a+b]$ be #ponder("analysis.continuity")[continuous], and assume its first $n-1$ derivatives are #ponder("analysis.continuity")[continuous] as well, and that it is #ponder("calculus.higher-derivatives")[$n$-times differentiable] on $(a, a+h)$. #fade[[This is all satisfied if $f in C^n ((c, d))$ where $[a, a+h] subset.eq (c, d)$.]]
+  Let $f: [a, a+h] -> RR$ be #ponder("analysis.continuity")[continuous], and assume its first $n-1$ derivatives are #ponder("analysis.continuity")[continuous] as well, and that it is #ponder("calculus.higher-derivatives")[$n$-times differentiable] on $(a, a+h)$. #fade[[This is all satisfied if $f in C^n ((c, d))$ where $[a, a+h] subset.eq (c, d)$.]]
 
   Let the #ponder("calculus.lagrange-remainder")[Taylor remainder] be
   $
@@ -479,13 +479,13 @@ We want to state a general version of this apprixmation, under appropriate condi
     where we pick $B$ such that $phi(h)=0$. Note that $phi(0) = 0$ and also $phi^(k)(0)=0$ for all $k < n$. By #ponder("calculus.rolles-theorem")[Rolle's theorem],
     $
       phi(0) = phi(h) = 0 & => exists theta_1 in (0, 1) "s.t." phi'(theta_1 h) = 0. \
-      phi'(0) = phi'(theta_1 h = 0 & => exists theta_2 in (0, 1) "s.t." phi''(theta_2 theta_1 h) = 0. \
+      phi'(0) = phi'(theta_1 h) = 0 & => exists theta_2 in (0, 1) "s.t." phi''(theta_2 theta_1 h) = 0. \
       & dots.v\
       phi^((n-1))(0) = phi^((n-1))(theta_(n-1) ... theta_2 theta_1 h) = 0 & => exists theta_n in (0, 1) "s.t." phi^((n))(theta_n ... theta_2 theta_1 h) = 0.
     $
-    Now let $theta = theta_n dot... dot theta_1$. Then $theta in (0, 1)$ and we have effective shown that
+    Now let $theta = theta_n dot... dot theta_1$. Then $theta in (0, 1)$ and we have effectively shown that
     $
-      exists theta(0, 1) "s.t." f^((n))(theta h) - B = phi^((n))(theta h) = 0
+      exists theta in (0, 1) "s.t." f^((n))(theta h) - B = phi^((n))(theta h) = 0
     $
     and hence $B = f^((n))(theta h)$, so we have
     $
@@ -500,7 +500,7 @@ We want to state a general version of this apprixmation, under appropriate condi
 
     #fade[[Note $g(0) = f(h) - T_(n-1, f, 0)(h).$]]
 
-    Note that $g$ is #ponder("analysis.continuity")[continuous] on $[a,h]$, #ponder("calculus.derivative")[differentiable] on $(a, b)$ with
+    Note that $g$ is #ponder("analysis.continuity")[continuous] on $[0,h]$, #ponder("calculus.derivative")[differentiable] on $(0, h)$ with
     $
       g'(t) = - (f^((n))(t))/(n-1)! (h-t)^(n-1)
     $
@@ -550,7 +550,7 @@ The second proof leads to an alternative version of #ponder("calculus.taylors-th
   $
 
   #remark[
-    If $q in ZZ$, then $f$ is exactly its #ponder("calculus.taylor-polynomial")[Taylor polynomial] of some degree.
+    If $q in ZZ_(>=0)$, then $f$ is exactly its #ponder("calculus.taylor-polynomial")[Taylor polynomial] of some degree.
   ]
 
   Then
@@ -572,7 +572,7 @@ The second proof leads to an alternative version of #ponder("calculus.taylors-th
 
     If $n >= q$, then $(1 + theta x)^(q - n) <= 1$ for $x in (0, 1)$, so for any $x in (0, 1)$, we have
     $
-      abs(R_(n, f, 1)(x)) <= abs(binom(q, n) x)^n -> 0 quad "as" quad n -> oo.
+      abs(R_(n, f, 1)(x)) <= abs(binom(q, n)) abs(x)^n -> 0 quad "as" quad n -> oo.
     $
     Note that argument fails for $x in (-1, 0)$.
 
@@ -593,7 +593,7 @@ The second proof leads to an alternative version of #ponder("calculus.taylors-th
 ]
 
 #definition[Analytic Functions][
-  We say $f in C^oo ((c, d))$ if for every $a in (c, d)$, there exists $r > 0$ such that $forall abs(h) < r$, we have
+  We say $f in C^omega ((c, d))$ if for every $a in (c, d)$, there exists $r > 0$ such that $forall abs(h) < r$, we have
   $
     f(a+h) = sum_(k=0)^oo (f^((k))(a))/(k!) h^k = lim_(n->oo) T_(n, f, a)(h),
   $

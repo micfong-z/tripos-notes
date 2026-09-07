@@ -54,7 +54,7 @@ We can show by induction that these satisfy the usual rules of arithmetic, that
   - base case is $m = 1$
 
   _i.e._ $n + 1 = 1 + n$
-  - #ponder("set-theory.proof")[prove] this by inclusion on $n$
+  - #ponder("set-theory.proof")[prove] this by induction on $n$
 ]
 
 #lecture-separator(lecture: 7, date: "2025-10-23")
@@ -128,7 +128,7 @@ The above ordering of $NN$ satisfies a special property called the *#ponder("set
 ]
 
 #remark[
-  $"WOP" arrow.double.not "SPI"$, and it fails for certain ordinals. However, in any proof using SPI, one can in fact use WOP.
+  $"WOP" <=> "SPI"$, and it fails for certain ordinals. However, in any proof using SPI, one can in fact use WOP.
 ]
 
 #example[
@@ -170,7 +170,7 @@ So this proposition says that if $abs(A) = n$, then $abs(cal(P)(A)) = 2^n$.
 === #ponder("combinatorics.binomial-coefficient")[Binomial Coefficients]
 
 #definition("Binomial coefficient")[
-  Given $n in NN_0$, and $0<= k <= n$, we can write $binom(n, k)$ for the number of #ponder("set-theory.subset")[subsets] of an $n$-element #ponder("set-theory.set")[set] that are of #ponder("set-theory.cardinality")[size] $k$.
+  Given $n in ZZ_(>=0)$, and $0<= k <= n$, we can write $binom(n, k)$ for the number of #ponder("set-theory.subset")[subsets] of an $n$-element #ponder("set-theory.set")[set] that are of #ponder("set-theory.cardinality")[size] $k$.
 
   $binom(n, k)$ is called a *#ponder("combinatorics.binomial-coefficient")[binomial coefficient]*.
 ] <def-binomial-coefficient>
@@ -193,7 +193,7 @@ Moreover, $ binom(n, k) = binom(n - 1, k - 1) + binom(n - 1, k) quad forall n in
   Consider
   $ binom(8, 3) = binom(7, 2) + binom(7, 3). $
 
-  Suppose that you are in a group of 8 people. To form a commitee of 3 people, either you are in the commitee, in which case you need to choose 2 more people from the remaining 7, or you are not in the commitee, in which case you need to choose all 3 people from the remaining 7.
+  Suppose that you are in a group of 8 people. To form a committee of 3 people, either you are in the committee, in which case you need to choose 2 more people from the remaining 7, or you are not in the committee, in which case you need to choose all 3 people from the remaining 7.
 ]
 
 #lecture-separator(lecture: 8, date: "2025-10-25")
@@ -218,7 +218,7 @@ where each row starts and ends with a 1, and the remaining entries are the sum o
 ] <prop-binomial-formula>
 
 #proof[
-  Given a #ponder("set-theory.set")[set] of #ponder("set-theory.cardinality")[size] $n$, there are $n(n-1)dots.c(n-k+1)$ to pick $k$ elements, in order, one by one. But each #ponder("set-theory.subset")[subset] of #ponder("set-theory.cardinality")[size] $k$ is picked in  $k!$ ways in this method.
+  Given a #ponder("set-theory.set")[set] of #ponder("set-theory.cardinality")[size] $n$, there are $n(n-1)dots.c(n-k+1)$ ways to pick $k$ elements, in order, one by one. But each #ponder("set-theory.subset")[subset] of #ponder("set-theory.cardinality")[size] $k$ is picked in  $k!$ ways in this method.
 
   Hence, the number of subsets of size $k$ in ${1, 2, ..., n}$ is
   $ binom(n, k) = (n(n-1)dots.c(n-k+1))/k! = n!/(k!(n-k)!). $
@@ -312,11 +312,11 @@ What can we say about the relationship between #ponder("set-theory.cardinality")
                                                          & dots.v \
     hash {A: abs(A) = r and x in inter.big_(i in A) S_i} & = cases(binom(k, r) quad &"for" r <= k, 0 quad &"for" r > k). \
   $
-  Thus the number fo times $x$ is counted on the RHS is
+  Thus the number of times $x$ is counted on the RHS is
 
   $
       & k - binom(k, 2) + binom(k, 3) - binom(k, 4) + ... + (-1)^(k+1) binom(k, k) \
-    = & 1-(1-k+(binom(k, 2)-binom(k, 3)+...+(-1)^k binom(k, k)) \
+    = & 1-(1-k+binom(k, 2)-binom(k, 3)+...+(-1)^k binom(k, k)) \
     = & 1-(1-1)^k \
     = & 1 quad "for" k >= 1. \
   $

@@ -126,7 +126,7 @@ Consider again $5y' - 3y = 0$ with $y(0)=y_0$.
 
 We can approximate this equation by discrete form at ${x_n}$ with $x_n = n h$ and $x_0 = 0$. With $y_(n) = y(x_(n))$, we have
 
-$ eval((dif y)/(dif x))_x_0 approx (y_(n+1)-y_(n))/(h). $
+$ eval((dif y)/(dif x))_x_n approx (y_(n+1)-y_(n))/(h). $
 
 #fade[[This is called the Forward Euler scheme, which is not a great approximation numerically.]]
 
@@ -168,7 +168,7 @@ where we will determine $a_n$ by substituting into the ODE.
   We shall get back to the example
   $ 5y'-3y=0. $
   Then, we have
-  $ (dif y)/(dif x) sum_(n=0)^(infinity) a_n n x^(n-1) = sum_(n=1)^(infinity) a_n n x^(n-1). $
+  $ (dif y)/(dif x) = sum_(n=0)^(infinity) a_n n x^(n-1) = sum_(n=1)^(infinity) a_n n x^(n-1). $
   Thus,
 
   $
@@ -220,7 +220,7 @@ This method is general for *#ponder("ode.linear-differential-equation")[linear]*
 
   A #ponder("ode.particular-integral")[particular integral] is $y_p(x) = - (10)/(3)$, since substituting it gives
 
-  $ 5 (dif y_p)/(dif x) - 3 y_p = 0 - 10 = 10. $
+  $ 5 (dif y_p)/(dif x) - 3 y_p = 0 + 10 = 10. $
 
   Then the #ponder("ode.particular-integral")[complementary function] is the solution of the #ponder("ode.homogeneous-differential-equation")[homogeneous] equation $5 y' - 3 y = 0$, which we have already solved as $y_c (x) = A exp((3x)/(5))$.
 
@@ -262,7 +262,7 @@ The forcing term may also be an #ponder("ode.eigenfunction")[eigenfunction] of t
   $
 
   #remark[
-    If $k_a = k_B$, we need another #ponder("ode.particular-integral")[particular integral]. See @ex-radioactive-decay-revisited.
+    If $k_a = k_b$, we need another #ponder("ode.particular-integral")[particular integral]. See @ex-radioactive-decay-revisited.
   ]
 
   Hence $b_c (t)$ is the solution of the #ponder("ode.homogeneous-differential-equation")[homogeneous] equation $(dif b_c)/(dif t) + k_b b_c = 0$. Thus
@@ -313,7 +313,7 @@ $
 We want the left-hand side to be $(mu y)'$, so we require $mu' = mu P$ by the #ponder("calculus.product-rule")[product rule]. This is a separable equation, so
 
 $
-  mu'/mu = P => integral P dif x = integral mu'/mu dif x = ln u. quad ("up to constant")
+  mu'/mu = P => integral P dif x = integral mu'/mu dif x = ln mu. quad ("up to constant")
 $
 
 Therefore,
@@ -351,7 +351,7 @@ $
   $
 
   #remark[
-    We require $c = 1$ if we want $y$ to be finite as $x->0$.
+    We require $C = 1$ if we want $y$ to be finite as $x->0$.
   ]
 ] <ex-integrating-factor>
 

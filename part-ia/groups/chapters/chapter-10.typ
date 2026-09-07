@@ -76,7 +76,7 @@ In particular, if $X$ and $Y$ are dual, then $isom(X) teq isom(Y)$, so we only h
     If $H <= S_n$ and $[S_n : H] = 2$, then $H teq A_n$.
   ]
   #proof[
-    Because $[S_n : H] = 2$, $H nsub S_n$, and $S_n \/ H teq C_2$. We therefore have #ponder("algebra.homomorphism-bijectivity")[surjective] #ponder("algebra.homomorphism")[homomorphism] $theta: S_n -> C_2 = {plus.minus 1}$ with $ker(phi) = H$.
+    Because $[S_n : H] = 2$, $H nsub S_n$, and $S_n \/ H teq C_2$. We therefore have #ponder("algebra.homomorphism-bijectivity")[surjective] #ponder("algebra.homomorphism")[homomorphism] $theta: S_n -> C_2 = {plus.minus 1}$ with $ker(theta) = H$.
 
     Since #ponder("algebra.transposition-generation")[transpositions generate] $S_n$, there is a #ponder("algebra.transposition")[transposition] $tau_0 in S_n$ with $theta(tau_0) = -1$. Because all #ponder("algebra.transposition")[transpositions] are #ponder("algebra.conjugation")[conjugate] #fade[[they have the same #ponder("algebra.cycle-type")[cycle type]]], so $tau = sigma tau_0 sigma^(-1)$ for any other #ponder("algebra.transposition")[transposition] $tau$ and some $sigma in S_n$. Thus
     $
@@ -139,13 +139,13 @@ In particular, if $X$ and $Y$ are dual, then $isom(X) teq isom(Y)$, so we only h
 Now, for the final two #ponder("geometry.platonic-solid")[Platonic solids].
 
 #example[Dodecahedron and Icosahedron #fade[[Non-Examinable]]][
-  Let $G = isom("dodecahedron")$ and $G_0$ the #ponder("geometry.rotation")[rotational] #ponder("algebra.subgroup")[subgourp] of #ponder("algebra.subgroup-index")[index two].
+  Let $G = isom("dodecahedron")$ and $G_0$ the #ponder("geometry.rotation")[rotational] #ponder("algebra.subgroup")[subgroup] of #ponder("algebra.subgroup-index")[index two].
 
   By definition, $G$ #ponder("algebra.group-action")[acts] #ponder("algebra.action-properties")[transitively] on the twelve faces, and the $stab_G (x) teq D_(10)$ so by the #ponder("algebra.orbit-stabiliser")[orbit-stabiliser theorem],
   $ |G| = 12 dot 10 = 120, $
   where $x$ is the center of a face. And so $|G_0| = 60$.
 
-  By drawing diagonoals on faces, we may inscribe 5 cubes into the dodecahedron.
+  By drawing diagonals on faces, we may inscribe 5 cubes into the dodecahedron.
 
   #align(center)[
     #dynamic-svg("/part-ia/groups/media/d8e4.svg", width: 28em)
@@ -153,7 +153,7 @@ Now, for the final two #ponder("geometry.platonic-solid")[Platonic solids].
 
   Since the 5 cubes are built symmetrically from the geometry of the dodecahedron, $G_0$ #ponder("algebra.group-action")[acts] on the set of these 5 cubes, giving a #ponder("algebra.homomorphism")[homomorphism]
   $ theta: G_0-> S_5. $
-  #ponder("geometry.rotation")[Rotation] around the axes through an opposite pair of vertices leads to a #ponder("algebra.cycle")[3-cycle]. There are 10 diagonals between opposite pairs of vertices, so we get 10 inverse pairs of #ponder("algebra.cycle")[3-cycles]. So, we get all 10 #ponder("algebra.cycle")[3-cycles] in $S_5$.
+  #ponder("geometry.rotation")[Rotation] around the axes through an opposite pair of vertices leads to a #ponder("algebra.cycle")[3-cycle]. There are 10 diagonals between opposite pairs of vertices, so we get 10 inverse pairs of #ponder("algebra.cycle")[3-cycles]. So, we get all 20 #ponder("algebra.cycle")[3-cycles] in $S_5$.
 
   #claim[
     Let $X subset.eq A_5$ be the set of 3-cycles. Then
@@ -176,7 +176,7 @@ Now, for the final two #ponder("geometry.platonic-solid")[Platonic solids].
 
   Therefore we have
   $
-    60 = abs(G_0) >= im theta >= abs(A_5) = 60,
+    60 = abs(G_0) >= abs(im theta) >= abs(A_5) = 60,
   $
   so $theta$ is #ponder("algebra.homomorphism-bijectivity")[surjective] and hence an #ponder("algebra.isomorphism")[isomorphism]. Therefore $G_0 teq A_5$.
 

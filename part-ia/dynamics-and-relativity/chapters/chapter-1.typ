@@ -4,7 +4,7 @@
 
 = The Structure of the Newtonian Universe
 
-To set up the arena we are going we work in, we require
+To set up the arena we are going to work in, we require
 
 - a three dimensional *space* that can be endowed with a _Cartesian reference frame_ #fade[[_i.e._ an origin and some axes]], such that points in space are labelled as
   $
@@ -65,7 +65,7 @@ $
 
 The #ponder("dynamics.inertial-frame")[law of inertia] is an improved version of Newton's 1st law.
 
-This is a true statement about the world, but not an obvious one. #fade[[In antiquity, it was believe that the natural state of an object is to be at rest, and a force is required to keep it moving.]]
+This is a true statement about the world, but not an obvious one. #fade[[In antiquity, it was believed that the natural state of an object is to be at rest, and a force is required to keep it moving.]]
 
 #law[Galilean relativity principle][
   A frame related to an #ponder("dynamics.inertial-frame")[inertial frame] by a #ponder("dynamics.galilean-transformation")[*Galilean transformation*] is also an #ponder("dynamics.inertial-frame")[inertial frame], and all laws of physics are the same in both frames.

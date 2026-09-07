@@ -22,7 +22,7 @@ This set is called a #ponder("geometry.riemann-sphere")[sphere] because we can v
 We can define a map $pi: CC->S^2$ called the *stereographic projection*. It identifies $CC$ with all the points on the #ponder("geometry.riemann-sphere")[sphere] except the north pole at $oo$.
 
 #definition[#ponder("algebra.mobius-transformation")[Möbius Transformation]][
-  Let $a, b, c, d$ be complex numbers with $a d - b c != 0$. If $c != 0$, then the corresponding *#ponder("algebra.mobius-transformation")[Möbius transformation]* is the map $mu: CC_oo -> CC_oo$ defined by, if $c != 0$,
+  Let $a, b, c, d$ be complex numbers with $a d - b c != 0$. If $c != 0$, then the corresponding *#ponder("algebra.mobius-transformation")[Möbius transformation]* is the map $mu: CC_oo -> CC_oo$ defined by
   $
     z |-> cases(
       ( a z + b)/(c z + d) quad & "if" z in CC \\ { - (d)/(c)},
@@ -41,7 +41,7 @@ We can define a map $pi: CC->S^2$ called the *stereographic projection*. It iden
 ]<mobius-transformation>
 
 Then
-$ cal(M) = {f: C_oo -> C_oo : f "is a Möbius transformation"} $
+$ cal(M) = {f: CC_oo -> CC_oo : f "is a Möbius transformation"} $
 together with #ponder("algebra.function-composition")[composition of functions] forms a #ponder("algebra.group")[group], called the *#ponder("algebra.mobius-group")[Möbius group]*.
 
 #proposition[
@@ -227,7 +227,7 @@ Just like for dihedral groups, we can use the #ponder("algebra.mobius-three-poin
 == #ponder("geometry.circle-in-riemann-sphere")[Circles]
 
 #definition[#ponder("geometry.circle-in-riemann-sphere")[Circle in] $CC_oo$][
-  A *#ponder("geometry.circle-in-riemann-sphere")[circle]* in $C_oo$ is either
+  A *#ponder("geometry.circle-in-riemann-sphere")[circle]* in $CC_oo$ is either
 
   - a Euclidean #ponder("geometry.circle-in-riemann-sphere")[circle] in $CC$, or
 
@@ -259,7 +259,7 @@ $
 ]
 
 #theorem[#ponder("algebra.mobius-circle-preservation")[Circles and Möbius Transformations]][
-  #ponder("algebra.mobius-transformation")[Möbius transformations] map #ponder("geometry.circle-in-riemann-sphere")[circles] to #ponder("geometry.circle-in-riemann-sphere")[circles]. Formally, if $C subset.eq CC_oo$ is a #ponder("geometry.circle-in-riemann-sphere")[circle], then $mu in cal(M)$ then $mu(C)$ is also a #ponder("geometry.circle-in-riemann-sphere")[circle].
+  #ponder("algebra.mobius-transformation")[Möbius transformations] map #ponder("geometry.circle-in-riemann-sphere")[circles] to #ponder("geometry.circle-in-riemann-sphere")[circles]. Formally, if $C subset.eq CC_oo$ is a #ponder("geometry.circle-in-riemann-sphere")[circle] and $mu in cal(M)$, then $mu(C)$ is also a #ponder("geometry.circle-in-riemann-sphere")[circle].
 ]<mobius-circle-preservation>
 
 #proof[
@@ -276,9 +276,9 @@ $
   If $C$ is a Euclidean #ponder("geometry.circle-in-riemann-sphere")[circle] in $CC$, then $gamma(C)$ has equation
   $
     abs(1/z - c) =r & <=> abs((1)/(z)-c)^2 = r^2 \
-                    & <=> ((1)/(z ) - c) ( (1)/(z) - overline(c)) = r^2 \
-                    & <=> (1)/(abs(z)^2 ) - (c)/(z) - overline(c)/(z) + abs(c)^2 - r^2 = 0 \
-                    & <=> (abs(c)^2-r^2) abs(z^2)- c z - overline(c)space overline(z) + 1 = 0.
+                    & <=> ((1)/(z ) - c) ( (1)/(overline(z)) - overline(c)) = r^2 \
+                    & <=> (1)/(abs(z)^2 ) - (c)/(overline(z)) - overline(c)/(z) + abs(c)^2 - r^2 = 0 \
+                    & <=> (abs(c)^2-r^2) abs(z)^2- c z - overline(c)space overline(z) + 1 = 0.
   $
 
   If $abs(c)^2=r^2$, then we have
@@ -291,7 +291,7 @@ $
 
   $
     & abs(z)^2 - ((c)/(abs(c)^2-r^2))z - (overline(c)/(abs(c)^2-r^2))overline(z) + (1)/(abs(c)^2-r^2 ) = 0 \
-    <=> & abs(z-overline(c)/(abs(c)^2-r^2 ))^2 =abs(c)^(2)/((abs(c^2)-r^2 )^2) - (1)/(abs(c^2)-r^2) = (r^2)/(abs(c)^2-r^2 )^2 \
+    <=> & abs(z-overline(c)/(abs(c)^2-r^2 ))^2 =abs(c)^(2)/((abs(c)^2-r^2 )^2) - (1)/(abs(c)^2-r^2) = (r^2)/(abs(c)^2-r^2 )^2 \
   $
   which is the equation of a #ponder("geometry.circle-in-riemann-sphere")[circle].
 

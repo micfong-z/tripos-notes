@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/unify:0.7.1": qty
 
 = Systems of Particles
 
@@ -167,7 +165,7 @@ Note that
 $
   mu bold(dot.double(r)) & = mu (bold(dot.double(x)_1) - bold(dot.double(x)_2)) \
                          & = mu (bold(F_(12))/m_1 - bold(F_(21))/m_2) \
-                         & = mu ((1)/(m_1) + (1)/(m_2)) bold(F_(12)) quad "since" bold(F_(12)) = bold(F_(21)) \
+                         & = mu ((1)/(m_1) + (1)/(m_2)) bold(F_(12)) quad "since" bold(F_(12)) = -bold(F_(21)) \
                          & = bold(F_(12)) \
 $
 

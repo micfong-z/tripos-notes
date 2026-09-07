@@ -32,10 +32,10 @@ How are we sure this limit evaluates to the _area under a curve_ idea? We shall 
 
 We will need to borrow this following idea from IA Analysis I for now:
 
-#theorem([Mean-value theorem (MRT) #fade[[IA Analysis I content]]])[
+#theorem([Mean-value theorem (MVT) #fade[[IA Analysis I content]]])[
   For a continuous function $f(x)$, the area under curve from $x_(n)$ to $x_(n+1)$ is
-  $ A_n = (x_(n+1) - x_(n)) f(c_0) $
-  for some $c_n$ where $x_(n) <= c_n <= x_n+1$.
+  $ A_n = (x_(n+1) - x_(n)) f(c_n) $
+  for some $c_n$ where $x_(n) <= c_n <= x_(n+1)$.
 ] <integral-mean-value-theorem>
 
 Hence, if $f(x)$ is differentiable, then by #ponder("calculus.taylors-theorem")[Taylor's theorem]
@@ -45,7 +45,7 @@ $
 $
 
 Hence,
-$ A_n = Delta x f(x_0) + O((Delta x)^2). $
+$ A_n = Delta x f(x_n) + O((Delta x)^2). $
 
 Therefore, the total area under curve from $x=a$ to $x=b$ is
 
@@ -113,7 +113,7 @@ Another important class of substitutions are trigonometric substitutions. These 
 $
   cos^2 theta + sin^2 theta & = 1 \
             1 + tan^2 theta & = sec^2theta \
-           cosh^2u - sinh u & = 1 \
+         cosh^2u - sinh^2 u & = 1 \
                1 - tanh^2 u & = sech^2 u.
 $
 
@@ -153,7 +153,7 @@ We can use the following table as a substitution reference.
 === Integration by Parts
 
 Recall the #ponder("calculus.product-rule")[product rule]
-$ (u v)' = u''v+u v', $
+$ (u v)' = u'v+u v', $
 we can derive the integration by parts technique
 $ integral u v' dif x = u v - integral u' v dif x. $
 

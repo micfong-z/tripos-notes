@@ -11,7 +11,7 @@ We now have sufficient tools to revisit and generalise notions in @chapter-1.
 #definition[Sequence of Functions][
   A #ponder("analysis.sequence-of-functions")[*sequence* of complex-valued functions] $(f_n)_(n in NN)$ on a set $X$ is an enumerated list $(f_1, f_2, ...)$ where each element is a function $f_i: X -> CC$.
 
-  If, for each $x in Y subset.eq X$, the numerical sequences $(f_n (x))_(n in NN)$ #ponder("analysis.sequence-convergence")[converges], we can define a function $f: Y subset.eq X -> C$ such that
+  If, for each $x in Y subset.eq X$, the numerical sequences $(f_n (x))_(n in NN)$ #ponder("analysis.sequence-convergence")[converges], we can define a function $f: Y subset.eq X -> CC$ such that
   $
     x |-> f(x) = lim_(n -> oo) f_n (x)
   $
@@ -25,7 +25,7 @@ We now have sufficient tools to revisit and generalise notions in @chapter-1.
   $
   a #ponder("analysis.series-of-functions")[*series* of complex-valued functions] on $X$.
 
-  If, for each $x in Y subset.eq X$, the numerical series $sum_(n=1)^oo f_n (x)$ #ponder("analysis.series")[converges], we can define a function $f: Y subset.eq X -> C$ such that
+  If, for each $x in Y subset.eq X$, the numerical series $sum_(n=1)^oo f_n (x)$ #ponder("analysis.series")[converges], we can define a function $f: Y subset.eq X -> CC$ such that
   $
     x |-> f(x) = sum_(n=1)^oo f_n (x)
   $
@@ -71,7 +71,7 @@ $
 
 Tautologically, any #ponder("analysis.power-series")[power series] #ponder("analysis.series")[converges] at its centre. We would like to consider if
 $
-  {x in CC: sum_(n=0)^oo c_n (x-a)^n}
+  {x in CC: sum_(n=0)^oo c_n (x-a)^n "converges"}
 $
 has any points other than $a$. #fade[[Otherwise we can define a function by $sum c_n (x-a)^n$ only at $a$, which is not very interesting.]]
 
@@ -188,15 +188,15 @@ To compute the #ponder("analysis.radius-of-convergence")[radius of convergence],
 
     If $x != 1$, then
     $
-      (1-x) sum_(n=1)^N x^(n)/(n) & = sum_(n=1)^n (x^(n)/(n) - x^(n+1)/n) \
-                                  & = sum_(n=1)^n (x^(n+1)/(n+1) - x^(n+1)/n) + x - x^(N+1)/(N+1) \
-                                  & = -x sum_(n=1)^n x^(n)/(n(n+1)) + x - x^(N+1)/(N+1).
+      (1-x) sum_(n=1)^N x^(n)/(n) & = sum_(n=1)^N (x^(n)/(n) - x^(n+1)/n) \
+                                  & = sum_(n=1)^N (x^(n+1)/(n+1) - x^(n+1)/n) + x - x^(N+1)/(N+1) \
+                                  & = -x sum_(n=1)^N x^(n)/(n(n+1)) + x - x^(N+1)/(N+1).
     $
     Hence
     $
-      sum_(n=1)^N x^(n)/(n) = (x)/(1-x) - (x)/(1-x) sum_(n=1)^n x^(n)/(n(n+1)) + (x^(N+1))/((N+1)(1-x)).
+      sum_(n=1)^N x^(n)/(n) = (x)/(1-x) - (x)/(1-x) sum_(n=1)^N x^(n)/(n(n+1)) - (x^(N+1))/((N+1)(1-x)).
     $
-    By taking the limit as $N->oo$, observe that $sum_(n=1)^oo x^(n)/(n(n+1))$ #ponder("analysis.absolute-convergence")[converges absolutely], so $sum_(n=1)^oo x^(n)/(n)$ #ponder("analysis.absolute-convergence")[converges absolutely] for all $x$ with $abs(x) = 1$ and $x != 1$.
+    By taking the limit as $N->oo$, observe that $sum_(n=1)^oo x^(n)/(n(n+1))$ #ponder("analysis.absolute-convergence")[converges absolutely], so $sum_(n=1)^oo x^(n)/(n)$ #ponder("analysis.series")[converges] for all $x$ with $abs(x) = 1$ and $x != 1$.
 ]
 
 #lecture-separator(lecture: 22, date: "2026-03-14")
@@ -255,7 +255,7 @@ We need to be careful that term-by-term operations will not hold on the entire s
   Let $sum_(n=0)^oo c_n (x-a)^n$ have a #ponder("analysis.radius-of-convergence")[radius of convergence] $R>0$. Then
   $
     f: B_R (a) & -> CC \
-             x & |-> sum_(n=0)^oo c_n (x-n)^n
+             x & |-> sum_(n=0)^oo c_n (x-a)^n
   $
   is #ponder("analysis.continuity")[continuous] inside $D_r (a)$ for every $r < R$.
 ] <proposition-continuity-of-power-series>
@@ -393,7 +393,7 @@ We need to be careful that term-by-term operations will not hold on the entire s
 
   More ambitiously, #ponder("calculus.taylors-theorem")[Taylor's theorem] says that $exists xi in [0, x]$
   $
-    R_(N, 0) (x) - sum_(n <= N-1)x^(n)/(n!) = (ee^xi)/(N!) x^N.
+    ee^x - sum_(n <= N-1)x^(n)/(n!) = (ee^xi)/(N!) x^N.
   $
 
   For fixed $x in RR$,
@@ -469,7 +469,7 @@ We need to be careful that term-by-term operations will not hold on the entire s
   $
     cases(
       e(x)> 0 & quad forall x < 0,
-      e(-x) -> 0^+ & "as" x-> -oo
+      e(x) -> 0^+ & "as" x-> -oo
     )
   $
   It follows that
@@ -509,7 +509,7 @@ Since $e: RR->(0, oo)$ is a #ponder("algebra.bijection")[bijection], it must hav
 
   Since $y > 0$ in the domain of $ell$, $ell$ is #ponder("analysis.monotone-function")[monotone].
 
-  Since $e(0) = 1 <=> e(1) = 0$, by @thm-fundamental-theorem-calculus-part-1[Fundamental Theorem of Calculus],
+  Since $e(0) = 1 <=> ell(1) = 0$, by @thm-fundamental-theorem-calculus-part-1[Fundamental Theorem of Calculus],
   $
     ell(y) & = integral_1^y ell'(t) dif t \
            & = integral_1^y (1)/(t) dif t.
@@ -522,9 +522,9 @@ Since $e: RR->(0, oo)$ is a #ponder("algebra.bijection")[bijection], it must hav
 
 #remark[
   $
-    ell(1+y) = integral_1^y (dif t)/(1+t) & = integral_1^y (1)/(1-(-t)) dif t \
-    & = integral_1^y underbracket(sum_(n=0)^oo (-1)^n t^n, R=1) dif t &quad "given" abs(t) <= abs(y) < 1\
-    &= sum_(n=0)^oo integral_1^y (-1)^n t^n dif t& quad forall abs(y) < 1\
+    ell(1+y) = integral_0^y (dif t)/(1+t) & = integral_0^y (1)/(1-(-t)) dif t \
+    & = integral_0^y underbracket(sum_(n=0)^oo (-1)^n t^n, R=1) dif t &quad "given" abs(t) <= abs(y) < 1\
+    &= sum_(n=0)^oo integral_0^y (-1)^n t^n dif t& quad forall abs(y) < 1\
     &= sum_(n=0)^oo (-1)^(n)/(n+1) y^(n+1) &quad forall abs(y) < 1.
   $
   One can push this, in Part IB Analysis II, to show that
@@ -597,10 +597,10 @@ This allows us to identify $e(x) = ee^x$ and use standard notation. We shall wri
 
   2. $t^(-1) <= t^(epsilon - 1)$, $t >= 1$ and any $epsilon > 0$. Pick $epsilon in (0, r)$. Then
   $
-    0 <= x^(-r) log x = x^(-r) integral_1^x (dif t)/(t) <= x^(-r) integral t^(epsilon - 1) dif t <= x^(epsilon -r)/(epsilon) stretch(->)_(n->oo) 0
+    0 <= x^(-r) log x = x^(-r) integral_1^x (dif t)/(t) <= x^(-r) integral t^(epsilon - 1) dif t <= x^(epsilon -r)/(epsilon) stretch(->)_(x->oo) 0
   $
 
-  3. $lim_x->0^+ x^r log x stretch(=)^(x = ee^(-t)) -lim_(t->oo) t ee^(-r t) stretch(=)^(y = r t) = - lim_(y ->0 ) (y ee^(-y))/(r) = 0$.
+  3. $lim_x->0^+ x^r log x stretch(=)^(x = ee^(-t)) -lim_(t->oo) t ee^(-r t) stretch(=)^(y = r t) = - lim_(y ->oo ) (y ee^(-y))/(r) = 0$.
 ]
 
 #lecture-separator(lecture: 24, date: "2026-03-19")
@@ -679,10 +679,10 @@ $
 
   Thus $c(x)$ is #ponder("analysis.monotone-function")[strictly decreasing] on $(0, 2)$, and thus it has at most one root in $(0, 2)$. To see the existence of the root,
   $
-    c(sqrt(2) ) &= underbracket(1-(sqrt(2) )^(2)/(2!), >0) + underbracket((sqrt(2) )^(4)/(4!) - (sqrt(2) )^(6)/(6!), >0) + dots.c > 0\
-    c(sqrt(3) ) &= underbracket(1 - (sqrt(3))^(2)/(2!) + (sqrt(3))^(4)/(4!), -1slash 8) - underbracket((sqrt(3))^(6)/(6!) + (sqrt(3))^(8)/(8!), >0) - underbracket((sqrt(3))^(10)/(10!) + (sqrt(3))^(12)/(12!), >0) - dots.c < 0.
+    c(sqrt(2) ) &= underbracket(1-(sqrt(2) )^(2)/(2!), =0) + underbracket((sqrt(2) )^(4)/(4!) - (sqrt(2) )^(6)/(6!), >0) + dots.c > 0\
+    c(sqrt(3) ) &= underbracket(1 - (sqrt(3))^(2)/(2!) + (sqrt(3))^(4)/(4!), -1slash 8) - underbracket((sqrt(3))^(6)/(6!) - (sqrt(3))^(8)/(8!), >0) - underbracket((sqrt(3))^(10)/(10!) - (sqrt(3))^(12)/(12!), >0) - dots.c < 0.
   $
-  By @intermediate-value-theorem[Intermediate Value Theorem], there is a root in $(omega)/(2 )= (sqrt(2), sqrt(3)) subset.eq (0, 2)$. Now
+  By @intermediate-value-theorem[Intermediate Value Theorem], there is a root in $(omega)/(2 ) in (sqrt(2), sqrt(3)) subset.eq (0, 2)$. Now
   $
     s^2((omega)/(2)) = 1-c^2((omega)/(2)) = 1 => s((omega)/(2)) = plus.minus 1.
   $
@@ -727,7 +727,7 @@ Hence $omega = ppi$, and $c(z) = cos z, s(z) = sin z$ for all $z in CC$. We can 
 We can further define, for $z in CC$,
 #ponder("analysis.hyperbolic-functions")[
 $
-  cosh = 1/2 (e^z + e^(-z)) = cos (ii z), quad sinh = 1/2 (e^z - e^(-z)) = oo sin (ii z).
+  cosh (z) = 1/2 (e^z + e^(-z)) = cos (ii z), quad sinh (z) = 1/2 (e^z - e^(-z)) = -ii sin (ii z).
 $
 ]
 

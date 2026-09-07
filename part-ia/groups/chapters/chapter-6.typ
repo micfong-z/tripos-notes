@@ -48,7 +48,7 @@ Now, if $abs(G)=4$, we know that $C_4$ is always an option. But is there another
 
   #boxed-header[$Phi$ is a #ponder("algebra.homomorphism")[homomorphism]]
 
-  For any $h_1, h'_1 in H$, $h_2, h'_2 in H$, by definition,
+  For any $h_1, h'_1 in H_1$, $h_2, h'_2 in H_2$, by definition,
   $
     Phi(h_1, h_2) Phi(h'_1, h'_2) & = (h_1 h_2)(h'_1 h'_2) \
                                   & = h_1 h'_1 h_2 h'_2 quad "by (2)" \
@@ -76,7 +76,7 @@ Now, if $abs(G)=4$, we know that $C_4$ is always an option. But is there another
 #proof[
   By #ponder("algebra.lagrange-theorem")[Lagrange's theorem], every non-trivial element of $G$ has #ponder("algebra.element-order")[order] 2 or 4. If there is a $g in G$ such that $o(g)=4$, then $G teq C_4$.
 
-  Otherwise, every non-trivial element has #ponder("algebra.element-order")[order] 2. Let $a, b in G$ be distinct elements such that $o(a)=o(g) = 2$. Let $H_1 = lr(chevron.l a chevron.r)$ and $H_2 = lr(chevron.l b chevron.r)$. It is immediate that $H_1 inter H_2 = {e}$ #fade[[this can be seen by writing out the elements explicitly]], which gives us (1). Following the remark, (3) holds.
+  Otherwise, every non-trivial element has #ponder("algebra.element-order")[order] 2. Let $a, b in G$ be distinct elements such that $o(a)=o(b) = 2$. Let $H_1 = lr(chevron.l a chevron.r)$ and $H_2 = lr(chevron.l b chevron.r)$. It is immediate that $H_1 inter H_2 = {e}$ #fade[[this can be seen by writing out the elements explicitly]], which gives us (1). Following the remark, (3) holds.
 
   Finally, since $o(a b) =2$, we have $a b a b = e$, so $a b = b a$, giving us (2) #fade[[this was mentioned in Example Sheet 1, Q11]]. Thus by the #ponder("algebra.direct-product-theorem")[direct product theorem], $G teq H_1 times H_2 teq C_2 times C_2 teq K_4$, as required.
 ]
@@ -205,7 +205,7 @@ It can be shown that these are all the #ponder("algebra.groups-of-order-8")[grou
   - If there is an element of #ponder("algebra.element-order")[order] 4, but no element of #ponder("algebra.element-order")[order] 8, let $a in G$ with $o(a) = 4$. Let $b in G \\ lr(chevron.l a chevron.r)$. By #ponder("algebra.lagrange-theorem")[Lagrange's theorem],
 
     $
-      [G: lr(chevron.l a chevron.r) = 2]
+      [G: lr(chevron.l a chevron.r)] = 2
     $
     so
     $
@@ -237,7 +237,7 @@ It can be shown that these are all the #ponder("algebra.groups-of-order-8")[grou
       $
         (a b^(-1))^2 = e => o(a b^(-1)) = 2.
       $
-      Again, $G equiv C_2 times C_2$ by @direct-product-theorem.
+      Again, $G teq C_4 times C_2$ by @direct-product-theorem.
 
     - *[Case B, I.]* We have $o(a) = 4$ and $o(b) = 2$ with #ponder("algebra.dihedral-relation")[relation] $b a = a^(-1) b$. These are exactly the #ponder("algebra.dihedral-relation")[relations] for $D_8$ (using @prop-groups-of-dihderal-type), so $G teq D_8$.
 

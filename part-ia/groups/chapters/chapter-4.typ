@@ -28,7 +28,7 @@
 
   3. If $G arrow.cw.half X$ and $H<=G$ then $H arrow.cw.half X$ by restriction.
 
-    In particular, $isom(CC) arrow.cw.half CC$ since $sym(CC) <= isom(CC)$.
+    In particular, $isom(CC) arrow.cw.half CC$ since $isom(CC) <= sym(CC)$.
 
   4. Similarly, #ponder("algebra.dihedral-group")[dihedral groups] $D_(2n)$ #ponder("algebra.group-action")[acts] on $X_n$ (the regular $n$-gon). It also #ponder("algebra.group-action")[acts] on the set of vertices of the regular $n$-gons.
 
@@ -53,7 +53,7 @@
                         & = (g^(-1) dot g) (x) \
                         & = x.
   $
-  So $t_(g^(-1)) dot t_g = id_X$. Similarly, $t_g dot t_(g^(-1)) = id_X$. Thus $t_g$ is invertible, so $t_g in sym(X)$. Therefore, we can define a #ponder("algebra.homomorphism")[homomorphism] $phi: G-> sym(X)$ by $g |-> t_g$.
+  So $t_(g^(-1)) compose t_g = id_X$. Similarly, $t_g compose t_(g^(-1)) = id_X$. Thus $t_g$ is invertible, so $t_g in sym(X)$. Therefore, we can define a #ponder("algebra.homomorphism")[homomorphism] $phi: G-> sym(X)$ by $g |-> t_g$.
 
   We shall now prove that $phi$ is a #ponder("algebra.homomorphism")[homomorphism]. For any $g, h in G$ and $x in X$, we have
   $
@@ -168,7 +168,7 @@ A lot of important results in #ponder("algebra.group")[group] theory come from s
 
   2. Similarly to the proof of @cosets-partition,
 
-    - $x = e x in G x$ so #ponder("algebra.orbit-stabiliser-definitions")[orbits] cover $x$.
+    - $x = e x in G x$ so #ponder("algebra.orbit-stabiliser-definitions")[orbits] cover $X$.
 
     - If $G x_1 inter G x_2 != emptyset$, then $exists y = g_1 x_1 = g_2 x_2$ for some $g_1 in G, g_2 in G$. Hence,
 
@@ -200,7 +200,7 @@ A lot of important results in #ponder("algebra.group")[group] theory come from s
 
   Therefore, $D_(2n) x = {ee^((2 ppi i j) / n) : 0 <= j < n} = {"nth roots of unity"}.$
 
-  The above calculation also shows that $g x = x => g = {e, s}$. Hence, $stab_(D_(2n)) (x) = {e, s}.$
+  The above calculation also shows that $g x = x => g in {e, s}$. Hence, $stab_(D_(2n)) (x) = {e, s}.$
 ]
 
 #theorem[#ponder("algebra.orbit-stabiliser")[Orbit-stabiliser theorem]][
@@ -212,7 +212,7 @@ A lot of important results in #ponder("algebra.group")[group] theory come from s
 
 #corollary[
   If $G arrow.cw.half X$ and $x in X$, then
-  $ abs(G) = (abs(G x) (abs(stab_G (x))) $
+  $ abs(G) = (abs(G x)) (abs(stab_G (x))) $
 ]
 
 #proof[

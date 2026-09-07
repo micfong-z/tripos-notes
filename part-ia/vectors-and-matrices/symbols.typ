@@ -9,6 +9,5 @@
 #let rank = math.op("rank")
 #let null = math.op("null")
 #let span = math.op("span")
-#let sgn = math.op("sgn")
 #let adj = math.op("adj")
 #let SO = math.op("SO")

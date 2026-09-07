@@ -27,7 +27,7 @@ Each complex number consists of a *real part* $re(z)=x$ and an *imaginary part* 
 
 3. *Identity.* The identity element for the addition operation is the element 0. #fade[[Thus $(CC, +)$ is an #ponder("algebra.abelian-group")[Abelian group] with identity element 0.]]
 
-4. *Inverse.* For any $z!=0$, the inverse of $z$ is given by $ x^(-1)=(x-ii y)/(x^2+y^2), $ and it satisfies $z dot z^(-1)=1$. #fade[[Thus $(CC^*, dot)$ is an #ponder("algebra.abelian-group")[Abelian group] with identity element 1.]]
+4. *Inverse.* For any $z!=0$, the inverse of $z$ is given by $ z^(-1)=(x-ii y)/(x^2+y^2), $ and it satisfies $z dot z^(-1)=1$. #fade[[Thus $(CC^*, dot)$ is an #ponder("algebra.abelian-group")[Abelian group] with identity element 1.]]
 
   Moreover, #ponder("algebra.commutativity-associativity-distributivity")[distributivity] is satisfied, _i.e._ if $z_1, z_2, z_3 in CC$ Then $ (z_1+z_2)z_3=z_1z_3+z_2z_3. $
 
@@ -43,7 +43,7 @@ Each complex number consists of a *real part* $re(z)=x$ and an *imaginary part* 
 
   We will sometimes denote $abs(z)$ by $r$.
 
-7. *Argument.* The argument fo a complex number $z=x+ii y != 0$ is a rela number, denoted by $arg(z) = theta$ such that $ z=r(cos theta + i sin theta). $
+7. *Argument.* The argument of a complex number $z=x+ii y != 0$ is a real number, denoted by $arg(z) = theta$ such that $ z=r(cos theta + i sin theta). $
 
   This is called the *polar form* of $z$. We can write
   $ cos theta = (x)/(sqrt(x^2+y^2) ), quad sin theta=(y)/(sqrt(x^2+y^2) ), quad tan theta = (y)/(x). $
@@ -137,7 +137,7 @@ This method immediately leads to some properties:
 
     $
       (cos theta + ii sin theta)^(n+1) & = (cos theta + ii sin theta)^n (cos theta + ii sin theta) \
-                                       & = cos (n theta) + ii sin (n theta) (cos theta + ii sin theta) \
+                                       & = (cos (n theta) + ii sin (n theta)) (cos theta + ii sin theta) \
                        "by lemma" quad & = cos ((n+1) theta) + ii sin ((n+1) theta). \
     $
 
@@ -179,7 +179,7 @@ This definition converges $forall z in CC$. Some fundamental properties of this 
 
   $
     cos z & = (1)/(2)(ee^(ii z) + ee^(-ii z)) \
-          & = (1)/(2)(sum_(n=0)^(infinity) (1)/(n!) (ii ee)^n+sum_(n=0)^(infinity) (1)/(n!) (-ii ee)^n) \
+          & = (1)/(2)(sum_(n=0)^(infinity) (1)/(n!) (ii z)^n+sum_(n=0)^(infinity) (1)/(n!) (-ii z)^n) \
           & = sum_(n=0)^(infinity) (-1)^n z^(2n)/(2n)!.
   $
 
@@ -187,8 +187,8 @@ This definition converges $forall z in CC$. Some fundamental properties of this 
 
 
   $
-    sin z & = (1)/(2)(ee^(ii z) - ee^(-ii z)) \
-          & = (1)/(2)(sum_(n=0)^(infinity) (1)/(n!) (ii ee)^n-sum_(n=0)^(infinity) (1)/(n!) (-ii ee)^n) \
+    sin z & = (1)/(2 ii)(ee^(ii z) - ee^(-ii z)) \
+          & = (1)/(2 ii)(sum_(n=0)^(infinity) (1)/(n!) (ii z)^n-sum_(n=0)^(infinity) (1)/(n!) (-ii z)^n) \
           & = sum_(n=0)^(infinity) (-1)^n z^(2n+1)/(2n+1)!.
   $
 ] <complex-trigonometric-functions>
@@ -241,7 +241,7 @@ Finally, if $z = r(cos theta + ii sin theta)= r ee^(ii theta)$ for $r > 0, theta
 
 == Roots of Unity
 
-Let $r = ee^(ii theta)$. If for some $N in NN$ we have $z^N=1$, then
+Let $z = r ee^(ii theta)$. If for some $N in NN$ we have $z^N=1$, then
 
 $ r^N ee^(ii theta N) = r^N (cos theta N + ii sin theta N) = 1. $
 
@@ -267,7 +267,7 @@ We call the roots to be the *roots of unity*.
 
 Hence we have
 
-$ ln (r ee^(ii theta))=ln r + i theta. $
+$ log (r ee^(ii theta))=ln r + i theta. $
 
 Note that #ponder("algebra.complex-logarithm")[complex logarithm] is #ponder("algebra.multivalued-complex-logarithm")[multi-valued].
 
@@ -285,17 +285,17 @@ Note that #ponder("algebra.complex-logarithm")[complex logarithm] is #ponder("al
 
 We can define, for $z in CC$, $z != 0$, $alpha in CC$ that
 
-$ z^alpha = ee^(alpha ln z). $
+$ z^alpha = ee^(alpha log z). $
 
-Note that this is multi-valued in general. However
+Note that this is multi-valued in general: different choices of the logarithm give
 
 $ z^alpha |-> z^alpha ee^(2 ppi ii n alpha) $
-gives the same value for $n in ZZ$.
+for $n in ZZ$, and these agree for all $n$ only when $alpha in ZZ$.
 
 #example[
   Consider $ii = ee^((ii ppi) / 2)$.
 
-  Then $arg(ii)=(ppi)/(2)$ and $upright(A r g)(i)={ppi / 2 + 2 ppi n : n in ZZ}$. Hence $ln ii = ii (ppi / 2 + 2 ppi n)$ for all $n in ZZ$.
+  Then $arg(ii)=(ppi)/(2)$ and $upright(A r g)(i)={ppi / 2 + 2 ppi n : n in ZZ}$. Hence $log ii = ii (ppi / 2 + 2 ppi n)$ for all $n in ZZ$.
 ]
 
 == Lines and Circles in the Complex Plane
@@ -315,6 +315,6 @@ For a center $c in CC$ and radius $rho > 0$, we can describe a circle as
 $
   &     &                                   z & = c+rho ee^(ii theta) quad theta in RR \
   & <=> &                            abs(z-c) & =rho \
-  & <=> & abs(z)^2-c overline(z)-overline(c)z & =p^2-abs(c)^2.
+  & <=> & abs(z)^2-c overline(z)-overline(c)z & =rho^2-abs(c)^2.
 $
 

@@ -21,9 +21,9 @@ If we choose $O$ as the origin, then point $A$ has position vector $bold(a)=arro
   that satisfy the following axioms:
 
   _Vector addition axioms_
-  1. #ponder("algebra.commutativity-associativity-distributivity")[*Commutivity*]: $bold(u) plus.o bold(v)=bold(v) plus.o bold(u)$.
+  1. #ponder("algebra.commutativity-associativity-distributivity")[*Commutativity*]: $bold(u) plus.o bold(v)=bold(v) plus.o bold(u)$.
   2. #ponder("algebra.commutativity-associativity-distributivity")[*Associativity*]: $(bold(u) plus.o bold(v)) plus.o bold(w)=bold(u) plus.o (bold(v) plus.o bold(w))$.
-  3. *Additive identity*: $exists bold(0) in V$ such that $0 plus.o bold(v) = bold(v)$ for all $bold(v) in V$.
+  3. *Additive identity*: $exists bold(0) in V$ such that $bold(0) plus.o bold(v) = bold(v)$ for all $bold(v) in V$.
   4. #ponder("algebra.inverse-element")[*Additive inverse*]: $forall bold(v) in V$, $exists (-bold(v)) in V$ such that $bold(v) plus.o bold((-v))=bold(0)$.
 
   _Scalar multiplication axioms_
@@ -34,7 +34,7 @@ If we choose $O$ as the origin, then point $A$ has position vector $bold(a)=arro
 ] <def-vector-space-over-rr-cc>
 
 #notation[
-  Usually, we omit the circles of $plus.o$ and $times.o$, and write then as if they were $+$ and $times$.
+  Usually, we omit the circles of $plus.o$ and $times.o$, and write them as if they were $+$ and $times$.
 ]
 
 #remark[
@@ -51,7 +51,7 @@ If we choose $O$ as the origin, then point $A$ has position vector $bold(a)=arro
       #dynamic-svg("/part-ia/vectors-and-matrices/media/d2e1.svg", width: 12em)
     ]
 
-  - *Scalar multiplicaton.* Given $bold(a)$ the position vector of a point $A$, and $lambda in RR$, $lambda bold(a)$ is a position vector of a point on line $O A$, with length $abs(lambda bold(a))=abs(lambda) abs(bold(a))$, in the direction as shown follows.
+  - *Scalar multiplication.* Given $bold(a)$ the position vector of a point $A$, and $lambda in RR$, $lambda bold(a)$ is a position vector of a point on line $O A$, with length $abs(lambda bold(a))=abs(lambda) abs(bold(a))$, in the direction as shown follows.
 
 
     #align(center)[
@@ -74,7 +74,7 @@ If we choose $O$ as the origin, then point $A$ has position vector $bold(a)=arro
 
 In general, we denote all possible #ponder("linear-algebra.linear-combination")[linear combinations] of two given vectors $bold(a), bold(b)$ by
 
-$ {alpha bold(a) + beta bold(b):alpha beta in RR} = upright(s p a n) {bold(a), bold(b)}. $
+$ {alpha bold(a) + beta bold(b):alpha, beta in RR} = upright(s p a n) {bold(a), bold(b)}. $
 This is called that #ponder("linear-algebra.span")[*span*] of ${bold(a), bold(b)}$.
 
 This extends to any number of vectors (possibly more than two).
@@ -90,7 +90,7 @@ This extends to any number of vectors (possibly more than two).
 == #ponder("linear-algebra.dot-product")[Scalar Product] (Dot Product)
 
 #definition([Scalar product in $RR^n$])[
-  For two vectors $bold(a), bold(b)$ in $RR^n$, and $theta$ the solid angle between them. Then the #ponder("linear-algebra.dot-product")[*scalar* product] of $bold(a)$ and $bold(b)$ is given by:
+  For two vectors $bold(a), bold(b)$ in $RR^n$, and $theta$ the (plane) angle between them. Then the #ponder("linear-algebra.dot-product")[*scalar* product] of $bold(a)$ and $bold(b)$ is given by:
 
   $ bold(a) dot bold(b) = abs(bold(a))abs(bold(b)) cos theta. $
 
@@ -103,7 +103,7 @@ We have some interesting results on #ponder("linear-algebra.dot-product")[scalar
   If $bold(a), bold(b), bold(c)$ are vectors and $lambda in RR$, we have
 
   - $bold(a) dot bold(b) = bold(b) dot bold(a)$
-  - $bold(a) dot bold(a) = abs(bold(a))^2 >= 0$, and $abs(bold(a))=&0$ if and only if $bold(a) = bold(0)$
+  - $bold(a) dot bold(a) = abs(bold(a))^2 >= 0$, and $abs(bold(a))=0$ if and only if $bold(a) = bold(0)$
   - $(lambda bold(a)) dot bold(b) = lambda(bold(a) dot bold(b)) = bold(a) dot (lambda bold(b))$
   - $bold(a) dot (bold(b) + bold(c)) = bold(a) dot bold(b) + bold(a) dot bold(c)$
 ]
@@ -124,7 +124,7 @@ $ bold(hat(a)) abs(bold(b)) cos theta= (bold(hat(a)) dot bold(b)) bold(hat(a)). 
 We can actually derive @rn-scalar-product.
 
 #proposition[
-  For $x, y in RR^3$, define $theta in [0, ppi]$ to be the solid angle between them. Then
+  For $x, y in RR^3$, define $theta in [0, ppi]$ to be the (plane) angle between them. Then
   $ bold(x) dot bold(y) = |bold(x)| |bold(y)|cos theta. $
 ] <lem-2-1>
 
@@ -234,7 +234,7 @@ This is equivalent to choosing Cartesian axes along these directions. We need a 
 ]
 
 #definition("Basis")[
-  A set of vectors $B={bold(u_1), ..., bold(u_2)}$ in $V$ is called a #ponder("linear-algebra.basis")[*basis*] if it is #ponder("linear-algebra.spanning-set")[spanning] and #ponder("linear-algebra.linear-independence")[linearly independent].
+  A set of vectors $B={bold(u_1), ..., bold(u_n)}$ in $V$ is called a #ponder("linear-algebra.basis")[*basis*] if it is #ponder("linear-algebra.spanning-set")[spanning] and #ponder("linear-algebra.linear-independence")[linearly independent].
 ]
 
 Hence, ${bold(e_1), bold(e_2), bold(e_3)}$ is an #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis].
@@ -321,7 +321,7 @@ Consider $bold(a)=(a_1, a_2, a_3)$ and $bold(b)=(b_1, b_2, b_3)$. We have
 
 $
   bold(a) times bold(b) = & (a_2b_3-a_3b_2)bold(e_1) \
-                          & + (a_3b_1-a_2b_3) bold(e_2) \
+                          & + (a_3b_1-a_1b_3) bold(e_2) \
                           & + (a_1b_2-a_2b_1) bold(e_3).
 $
 
@@ -353,7 +353,7 @@ $
 
 ] <prop-triple-product>
 
-We can interpret @prop-triple-product using a parallelpiped.
+We can interpret @prop-triple-product using a parallelepiped.
 
 #align(center)[
   #dynamic-svg("/part-ia/vectors-and-matrices/media/d3e2.svg", width: 42em)
@@ -406,7 +406,7 @@ $ (bold(a) times bold(b)) times bold(c) = (bold(a) dot bold(c)) bold(b) - (bold(
   ]
 
   This form is equivalent to
-  $ bold(u) times (bold(c) - bold(a)) = bold(0) <=> bold(u) times bold(r) = bold(b) $ where $bold(b)$ is a constant vector.
+  $ bold(u) times (bold(r) - bold(a)) = bold(0) <=> bold(u) times bold(r) = bold(b) $ where $bold(b)$ is a constant vector.
 ] <parametric-line>
 
 
@@ -456,7 +456,7 @@ and $(k)/(|bold(n)|)$ is the perpendicular distance from the origin to the plane
   Applying #ponder("linear-algebra.vector-triple-product")[vector triple product] property in @prop-vec-triple-product gives
 
   $
-    (bold(r) times bold(u)) times bold(n) & = (bold(r) dot bold(n))bold(u) - (bold(u) dot bold(b)) bold(r) \
+    (bold(r) times bold(u)) times bold(n) & = (bold(r) dot bold(n))bold(u) - (bold(u) dot bold(n)) bold(r) \
                                           & = (bold(b) dot bold(n)) bold(u) - (bold(u) dot bold(n)) bold(r). \
   $
 
@@ -649,7 +649,7 @@ Now, we can use a more efficient notation.
 #proposition("Important identities involving delta and epsilon")[
   For indices $i, j, k, l$ taking values $1, 2, 3$, we have
 
-  1. $epsilon_(i j k) epsilon_(p q r) = delta_(i p) delta_(j q) delta_(k r) - delta_(j p) delta_(i q) delta_(k r) + delta_(j i) delta_(k q) delta_(i r) - delta_(k p) delta_(j q) delta_(i r) + delta_(k p) delta_(i q) delta_(j r) - delta_(i p) delta_(k q) delta_(j k).$
+  1. $epsilon_(i j k) epsilon_(p q r) = delta_(i p) delta_(j q) delta_(k r) - delta_(j p) delta_(i q) delta_(k r) + delta_(j p) delta_(k q) delta_(i r) - delta_(k p) delta_(j q) delta_(i r) + delta_(k p) delta_(i q) delta_(j r) - delta_(i p) delta_(k q) delta_(j r).$
   2. $epsilon_(i j k) epsilon_(p q k) = delta_(i p) delta_(j q) - delta_(i q) delta_(j p)$
   3. $epsilon_(i j k) epsilon_(p j k) = 2 delta_(i p)$
   4. $epsilon_(i j k) epsilon_(i j k) = 6$
@@ -727,7 +727,7 @@ $
   cos alpha &= ((bold(a) times bold(b)) dot (bold(a) times bold(c)))/(abs(bold(a)times bold(b)) abs(bold(a) times bold(c)))\
   &= - ((bold(b) times bold(a)) dot (bold(a) times bold(c)))/(abs(bold(a)times bold(b)) abs(bold(a) times bold(c))) \
   &= ((bold(b) dot bold(c))abs(bold(a))^2-(bold(b) dot bold(a))(bold(a) dot bold(c)) )/(abs(bold(a)times bold(b)) abs(bold(a) times bold(c))). \
-  cos alpha sin delta(A, B) sin delta(A, C) &= cos delta(B, A) - cos delta(B, A) cos delta(A, C). \
+  cos alpha sin delta(A, B) sin delta(A, C) &= cos delta(B, C) - cos delta(B, A) cos delta(A, C). \
 $
 
 Which is the cosine rule for spherical triangles.
@@ -797,8 +797,8 @@ We define the following operations for vectors in $CC^n$.
 
   *Scalar Multiplication.* For $bold(z) in CC^n$ and $lambda in CC$, we define
   $ lambda bold(z) = (lambda z_1, lambda z_2, ..., lambda z_n). $
-  - If $lambda in RR$, then $CC_n$ is a #ponder("linear-algebra.vector-space")[real vector space].
-  - If $lambda in CC$, then $CC_n$ is a #ponder("linear-algebra.vector-space")[complex vector space].
+  - If $lambda in RR$, then $CC^n$ is a #ponder("linear-algebra.vector-space")[real vector space].
+  - If $lambda in CC$, then $CC^n$ is a #ponder("linear-algebra.vector-space")[complex vector space].
 ]
 
 For any $bold(z) in CC^n$, we have
@@ -840,7 +840,7 @@ and thus $bold(z) = sum_j z_j bold(e_j)$. Hence $CC^n$ is a #ponder("linear-alge
 
   2. *Linearity and anti-linearity.* $forall bold(z), bold(w) in CC^n, forall mu, mu', lambda, lambda' in CC$,
 
-    - $(bold(z), lambda bold(w') + lambda' bold(w)) = lambda (bold(z), bold(w)) + lambda' (bold(z), bold(w'))$
+    - $(bold(z), lambda bold(w') + lambda' bold(w)) = lambda (bold(z), bold(w')) + lambda' (bold(z), bold(w))$
     - $(mu bold(z) + mu' bold(z'), bold(w)) = overline(mu) (bold(z), bold(w)) + overline(mu') (bold(z'), bold(w))$
 
   3. *Positive definite.* $(bold(z), bold(z)) = sum_j abs(z_j)^2 >= 0$. Equality holds iff $bold(z) = bold(0)$.
@@ -898,7 +898,7 @@ $ lambda_1 bold(v_1) + lambda_2 bold(v_2) + ... + lambda_r bold(v_r) in V $ for 
   A #ponder("linear-algebra.subspace")[*subspace*] $U$ of a #ponder("linear-algebra.vector-space")[vector space] $V$ is a subset of $V$ that is also a #ponder("linear-algebra.vector-space")[vector space] under the same operations of addition and scalar multiplication defined on $V$.
 ] <subspace>
 
-Equivalently, a non-empty subset $U subset.eq V$ is a #ponder("linear-algebra.subspace")[subspace] if it satisfies that for every $bold(u), bold(v) in U$ and $lambda in RR$, we have $lambda bold(v) + mu bold(u) in U$.
+Equivalently, a non-empty subset $U subset.eq V$ is a #ponder("linear-algebra.subspace")[subspace] if it satisfies that for every $bold(u), bold(v) in U$ and $lambda, mu in RR$, we have $lambda bold(v) + mu bold(u) in U$.
 
 In particular, for any $bold(v_1), bold(v_2), ..., bold(v_r) in V$, $ span{bold(v_1), ..., bold(v_r)} $ is a #ponder("linear-algebra.subspace")[subspace] of $V$.
 
@@ -925,7 +925,7 @@ In particular, for any $bold(v_1), bold(v_2), ..., bold(v_r) in V$, $ span{bold(
 
     $ bold(a) dot (bold(b) times bold(c)) != 0. $
 
-    This can be geomtrically interpreted as the vectors not being coplanar #fade[[the LHS represents the volume of the parallelepiped spanned by the vectors]].
+    This can be geometrically interpreted as the vectors not being coplanar #fade[[the LHS represents the volume of the parallelepiped spanned by the vectors]].
 ]
 
 #example[

@@ -26,7 +26,7 @@
   }
 
   let nrows = mat.rows.len()
-  let ncols = mat.rows.at(1).len()
+  let ncols = mat.rows.at(0).len()
 
   if labels.len() != nrows + ncols {
     panic("Number of labels must be equal to number of rows plus number of columns")

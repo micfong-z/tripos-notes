@@ -89,7 +89,7 @@ Give path $x(t), y(t)$ and a function $f(x, y)$, consider $(dif f)/(dif t)$ alon
 
   $
                         f(x + delta x, y) - f(x, y) & = f_x (x, y) delta x + o(delta x), quad "by Taylor's theorem" \
-    f(x + delta x, y + delta y) - f(x + delta y, y) & = f_y (x + delta x, y) delta y + o(delta y). \
+    f(x + delta x, y + delta y) - f(x + delta x, y) & = f_y (x + delta x, y) delta y + o(delta y). \
   $
 
   Note that
@@ -98,7 +98,7 @@ Give path $x(t), y(t)$ and a function $f(x, y)$, consider $(dif f)/(dif t)$ alon
   Hence,
 
   $
-    delta f = [f_y (x, y) + f_(y x) (x, y) delta x + o(delta x)] delta y + f_x (x, y) delta x + o(delta y) + o delta(x).
+    delta f = [f_y (x, y) + f_(y x) (x, y) delta x + o(delta x)] delta y + f_x (x, y) delta x + o(delta y) + o(delta x).
   $
 
   Taking the limit $lim_(delta x, delta y -> 0)$ gives the required results.
@@ -157,7 +157,7 @@ $ dif f = eval((∂ f)/(∂ x))_(y, z) dif x + eval((∂ f)/(∂ y))_(x, z) dif 
 
 Consider $f(x, y, z) = "constant"$, which represents a surface in 3D space. In this case, it implicitly defines
 
-$ z = z(x, y), quad x = (y, z), quad y = (x, z), $
+$ z = z(x, y), quad x = x(y, z), quad y = y(x, z), $
 but we may not be able to find the solutions explicitly.
 
 However, we can still evaluate #ponder("calculus.derivative")[derivatives] like $eval((∂ z)/(∂ x))_y$.

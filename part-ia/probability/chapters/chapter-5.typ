@@ -69,7 +69,7 @@
 
 ]
 #fade[[It can be clearer to see the difference between #ponder("probability.convergence-in-probability")[*convergence in probability*] and #ponder("probability.convergence-almost-surely")[*convergence almost surely*] without any shorthands.
-  Let the underlying #ponder("probability.probability-space")[probability space] be $(omega, cal(F), PP)$. Let $X$ and the sequence $X_1, X_2, ...$ be #ponder("probability.random-variable")[random variables], where $X, X_i: Omega -> RR$.
+  Let the underlying #ponder("probability.probability-space")[probability space] be $(Omega, cal(F), PP)$. Let $X$ and the sequence $X_1, X_2, ...$ be #ponder("probability.random-variable")[random variables], where $X, X_i: Omega -> RR$.
 
   #ponder("probability.convergence-in-probability")[*Convergence in probability*] states that $forall epsilon > 0$,
   $
@@ -79,7 +79,7 @@
   #ponder("probability.convergence-almost-surely")[*Convergence almost surely*] states that
   $
     &PP({omega in Omega: lim_(n->oo) X_n (omega) = X(omega)}) = 1\
-    <=> quad &PP({omega in Omega: forall epsilon > 0, exists n_0 in NN, forall n <= n_0, abs(X_n (omega) - X(omega)) < epsilon}) = 1.
+    <=> quad &PP({omega in Omega: forall epsilon > 0, exists n_0 in NN, forall n >= n_0, abs(X_n (omega) - X(omega)) < epsilon}) = 1.
   $
 
   _i.e._ #ponder("probability.convergence-in-probability")[*convergence in probability*] cares about that as $n->oo$, (at each snapshot of $n$ big enough) the percentage of the population $Omega$ that behaves badly (away from $X(omega)$) shrinks to zero; whereas #ponder("probability.convergence-almost-surely")[*convergence almost surely*] cares about that the percentage of the population that converges to $X(omega)$ as $n->oo$ (without leaving there) is 1. This is a much stronger condition. For a sequence to converge #ponder("probability.convergence-almost-surely")[almost surely], the individuals can't keep jumping away from the target infinitely often, but they could for #ponder("probability.convergence-in-probability")[convergence in probability].
@@ -97,7 +97,7 @@
   $
   Note that $A_n subset.eq A_(n+1)$. Hence
   $
-    PP(A_n) stretch(->)^("increasing")_(n->oo) PP(union.big_n A_n) = PP(union.big_A inter.big_(m=n)^oo {abs(X_m) <= epsilon}).
+    PP(A_n) stretch(->)^("increasing")_(n->oo) PP(union.big_n A_n) = PP(union.big_n inter.big_(m=n)^oo {abs(X_m) <= epsilon}).
   $
   So
   $
@@ -229,7 +229,7 @@ The #ponder("probability.normal-distribution")[normal distribution] is universal
   $
   _i.e._ $forall x in RR$,
   $
-    PP((S_n - n mu)/(sigma sqrt(n)) <= x) stretch(->)_(n->oo) integral_(-oo)^x (exp(-t^y/2))/(sqrt(2 pi)) dif y = Phi(x).
+    PP((S_n - n mu)/(sigma sqrt(n)) <= x) stretch(->)_(n->oo) integral_(-oo)^x (exp(-t^2/2))/(sqrt(2 pi)) dif t = Phi(x).
   $
 ] <thm-central-limit-theorem>
 
@@ -255,7 +255,7 @@ The #ponder("probability.normal-distribution")[normal distribution] is universal
     S_n/(sqrt(n)) stretch(->)^((d))_(n->oo) Z.
   $
 
-  Assume that $exists delta > 0$ such that $EE[ee^(delta X_1)] + EE[-ee^(delta X_1)] < oo$.
+  Assume that $exists delta > 0$ such that $EE[ee^(delta X_1)] + EE[ee^(-delta X_1)] < oo$.
 
   Set $m(theta) = EE[ee^(theta X_1)]$. By the #ponder("probability.mgf-continuity-property")[continuity property for MGFs], it suffices to show that
   $
@@ -276,7 +276,7 @@ The #ponder("probability.normal-distribution")[normal distribution] is universal
 
   #claim[
     $
-      abs(EE[sum_(k>=3) (theta X_1)^k/ (k!)]) = o(abs(theta)^(2)) quad "as" n-> oo.
+      abs(EE[sum_(k>=3) (theta X_1)^k/ (k!)]) = o(abs(theta)^(2)) quad "as" theta -> 0.
     $
 
   ]
@@ -296,13 +296,13 @@ The #ponder("probability.normal-distribution")[normal distribution] is universal
     where $C = 3! dot 2^(3)/delta^3$. So
     $
       EE[abs(theta X_1)^3 ee^((delta)/(2) abs(X_1))] & <= C dot abs(theta)^3 EE[ee^(delta abs(X_1))] \
-                                                     & <= C dot abs(theta)^3 (EE[ee^(delta X_1)] + EE[-ee^(delta X_1)]) < oo.
+                                                     & <= C dot abs(theta)^3 (EE[ee^(delta X_1)] + EE[ee^(-delta X_1)]) < oo.
     $
     So
     $
       abs(EE[sum_(k>=3) (theta X_1)^k/ (k!)]) <= C' dot abs(theta)^3 = o(abs(theta)^2) quad "as" theta -> 0
     $
-    where $C' = C (EE[ee^(delta X_1)] + EE[-ee^(delta X_1)])$.
+    where $C' = C (EE[ee^(delta X_1)] + EE[ee^(-delta X_1)])$.
   ]
 
   Then we can conclude, because
@@ -334,7 +334,7 @@ The #ponder("probability.normal-distribution")[normal distribution] is universal
 
   - Suppose $S_n ~ "Bin"(n, (lambda)/(n))$ with $lambda > 0$. Then
     $
-      PP(S_n = x) stretch(->)_(n->oo) PP("Poi"(lambda) = x) quad forall x in NN.
+      PP(S_n = x) stretch(->)_(n->oo) PP("Poi"(lambda) = x) quad forall x in ZZ_(>=0).
     $
 
   - We can approximate #ponder("probability.poisson-distribution")[Poisson distribution] with #ponder("probability.normal-distribution")[normal distribution]. Suppose $S_n ~ "Poi"(n)$ with $n > 0$. Then $S_n = X_1 + ... +X_n$ where $X_i$ are i.i.d. with $X_i ~ "Poi"(1)$. So
@@ -363,7 +363,7 @@ $
 We have $S_N ~ "Bin"(N, p)$.
 
 
-We need to testimate $p$ with an accuracy of $plus.minus 4 percent$ with probability $>= 0.99$. We now wish to consider how large should $N$ be.
+We need to estimate $p$ with an accuracy of $plus.minus 4 percent$ with probability $>= 0.99$. We now wish to consider how large should $N$ be.
 
 By @thm-central-limit-theorem[Central Limit Theorem],
 $
@@ -371,7 +371,7 @@ $
 $
 where $Z ~ N(0, 1)$ for large $N$. Then we want to find $N$ such that
 $
-  PP(abs(hat(p)_N - p) <= 0.04) <= 0.01.
+  PP(abs(hat(p)_N - p) <= 0.04) >= 0.99.
 $
 Note that for large $N$,
 $
@@ -385,7 +385,7 @@ Since we have $PP(abs(Z) >= z) = 2 (1- Phi(z))$ and that $PP(abs(Z) >= 2.58) = 0
 $
   sqrt(N)/(sqrt(p (1-p)) ) dot 0.04 >= 2.58
 $
-Since $sqrt(p (1-p)) <= (1)/(2)$, taking $N = 1040$ is sufficient.
+Since $sqrt(p (1-p)) <= (1)/(2)$, taking $N = 1041$ is sufficient.
 
 == Simulation of Random Variables
 
@@ -403,7 +403,7 @@ Computers can generate random numbers between $0$ to $1$. We would like to exten
       PP(X<=x) = PP(F^(-1)(U) <= x) = PP(U <= F(x)) = F(x).
     $
 
-  - If $F$ is not 1-1, then define its generalised inverse $G(u) = inf {x in RR: u <= F(x)}$. Then let $X = F^(-1)(U)$. We can show that $PP(X <= x) = F(x)$ as well.
+  - If $F$ is not 1-1, then define its generalised inverse $G(u) = inf {x in RR: u <= F(x)}$. Then let $X = G(U)$. We can show that $PP(X <= x) = F(x)$ as well.
 
     #claim[
       $G(u) <= x$ iff $u <= F(x).$
@@ -472,7 +472,7 @@ $
 
 Note that
 $
-  PP(bold(X) in B) = PP(bold(U_N) in B) &= sum_(n=1)^oo PP(bold(U_n) in B, N in n)\
+  PP(bold(X) in B) = PP(bold(U_N) in B) &= sum_(n=1)^oo PP(bold(U_n) in B, N = n)\
   &= sum_(n=1)^oo PP(bold(U_n) in B, bold(U_n) in A, bold(U_(n-1)) in.not A, ..., bold(U_1) in.not A) \
   &= sum_(n=1)^oo PP(bold(U_n) in B inter A) PP(bold(U_1) in.not A)^(n-1) \
   &= sum_(n=1)^oo abs(B inter A) (1 - abs(A))^(n-1) = abs(B inter A)/(abs(A)).

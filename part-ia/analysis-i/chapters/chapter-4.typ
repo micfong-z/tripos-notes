@@ -159,12 +159,12 @@ There is another way to define #ponder("calculus.riemann-integral")[integrals]. 
 
   #fade[[$=>$]] From the definition of $sup$ and $inf$, we can always find partitions $cal(P), cal(P')$ such that
   $
-     U(f, cal(P)) & <= I^*(f) + epsilon / 2 \
-    L(f, cal(P')) & >= I_*(f) - epsilon / 2
+     U(f, cal(P)) & <= I^*(f) + epsilon / 4 \
+    L(f, cal(P')) & >= I_*(f) - epsilon / 4
   $
-  By assumption, $I^*(f) = I_*(f)$, so $U(f, cal(P)) - L(f, cal(P')) <= epsilon$. To conclude, we can take $cal(P'') = cal(P) union cal(P')$, and by @lemma-refinement, we have
+  By assumption, $I^*(f) = I_*(f)$, so $U(f, cal(P)) - L(f, cal(P')) <= epsilon / 2$. To conclude, we can take $cal(P'') = cal(P) union cal(P')$, and by @lemma-refinement, we have
   $
-    U(f, cal(P'')) - L(f, cal(P'')) <= U(f, cal(P)) - L(f, cal(P')) <= epsilon < 2 epsilon.
+    U(f, cal(P'')) - L(f, cal(P'')) <= U(f, cal(P)) - L(f, cal(P')) <= epsilon / 2 < epsilon.
   $
 ]
 
@@ -310,13 +310,13 @@ We can try to generalize the above examples to get classes of functions that are
   ] <lemma-finite-differences-implies-same-integral>
 
   #proof[
-    Set $M = sup_[a, b] f$. Fix $epsilon > 0$ then $exists cal(P)$ of $[a, b]$ such that
+    Set $M = sup_[a, b] abs(f)$. Fix $epsilon > 0$ then $exists cal(P)$ of $[a, b]$ such that
     $
       U(g, cal(P)) - L(g, cal(P)) < epsilon.
     $
-    The idea is to choose a partition which isolates problematic points, and gives them very little weight. Choose intervals $J_j = [z_k - r_k, z_k + r_k]$ with
+    The idea is to choose a partition which isolates problematic points, and gives them very little weight. Choose intervals $J_n = [z_n - r_n, z_n + r_n]$ with
     $
-      sum_(n=1)^N abs(J_k) = 2 sum_(n=1)^N r_k < epsilon.
+      sum_(n=1)^N abs(J_n) = 2 sum_(n=1)^N r_n < epsilon.
     $
     Set $cal(P)' = cal(P) union {z_1 plus.minus r_1, z_2 plus.minus r_2, ..., z_N plus.minus r_N}$. Also, let $J = union.big_(n=1)^N J_n$. Then
     $
@@ -325,12 +325,12 @@ We can try to generalize the above examples to get classes of functions that are
 
     Try to estimate
     $
-      U(f, cal(P)) - L(f, cal(P)) & = sum_(j=1)^n abs(I_j) (sup_(J_j) f - inf_(J_j) f) \
-      &= sum_(j = 1, I_j subset.eq J)^n abs(I_j) (sup_(J_j) f - inf_(J_j) f) + sum_(j = 1, I_j subset.eq.not J)^n abs(I_j) (sup_(J_j) f - inf_(J_j) f). \
+      U(f, cal(P)') - L(f, cal(P)') & = sum_(j=1)^n abs(I_j) (sup_(I_j) f - inf_(I_j) f) \
+      &= sum_(j = 1, I_j subset.eq J)^n abs(I_j) (sup_(I_j) f - inf_(I_j) f) + sum_(j = 1, I_j subset.eq.not J)^n abs(I_j) (sup_(I_j) f - inf_(I_j) f). \
     $
     Note that if $I_j subset.eq.not J$, then $f = g$, and hence
     $
-      sum_(j = 1, I_j subset.eq J)^n abs(I_j) (sup_(J_j) f - inf_(J_j) f) <= sum_(j=1)^n abs(I_j) (sup_(J_j) g - inf_(J_j) g) = U(g, cal(P)') - L(g, cal(P)') < epsilon, \
+      sum_(j = 1, I_j subset.eq.not J)^n abs(I_j) (sup_(I_j) f - inf_(I_j) f) <= sum_(j=1)^n abs(I_j) (sup_(I_j) g - inf_(I_j) g) = U(g, cal(P)') - L(g, cal(P)') < epsilon, \
     $
     and if $I_j subset.eq J$, then we only know that $f$ is bounded, and
     $
@@ -351,9 +351,9 @@ We can try to generalize the above examples to get classes of functions that are
     $
     Hence
     $
-      integral_a^b f - integral_a^b g <= underbracket(U(f, cal(P)') - U(g, cal(P)'), < epsilon) + underbracket((g, cal(P)') - L(g, cal(P)'), <epsilon).
+      integral_a^b f - integral_a^b g <= underbracket(U(f, cal(P)') - U(g, cal(P)'), <= 2 M epsilon) + underbracket(U(g, cal(P)') - L(g, cal(P)'), <epsilon).
     $
-    Thus $integral_a^b f - integral_a^b g < 2 epsilon$. Similarly, we can show $integral_a^b g - integral_a^b f < 2 epsilon$, and the result follows by arbitrariness of $epsilon$.
+    Thus $integral_a^b f - integral_a^b g < (2 M + 1) epsilon$. Similarly, we can show $integral_a^b g - integral_a^b f < (2 M + 1) epsilon$, and the result follows by arbitrariness of $epsilon$.
 
   ]
 
@@ -367,12 +367,12 @@ We can try to generalize the above examples to get classes of functions that are
 
   ] <integral-additivity-over-subintervals>
 
-  #lecture-separator(lecture: 17, date: "2025-03-03")
+  #lecture-separator(lecture: 17, date: "2026-03-03")
 
   #proof[
     We will set $I_L = [a, c]$, $I_R = [c, b]$, $f_L = eval(f)_I_L$ and $f_R = eval(f)_I_R$ for brevity.
 
-    #fade[[$=>$]] For $epsilon > 0$, then there exists a partition $cal(P)$ of $[c, b]$ such that $U(f, cal(P)) - L(f, cal(P)) < epsilon$. WLOG let $c = x_ell$ for some $ell in {0, ..., n}$ #fade[[otherwise add $c$ to $cal(P)$, which can only make $U(f, cal(P))-L(f, cal(P))$ smaller]]. Then $cal(P) = cal(P)_L union cal(P)_R$ where $cal(P)_L = {underbracket(x_0, a), ..., underbracket(x_ell, c)}$ and $cal(P)_R = {underbracket(x_ell, c), ..., underbracket(x_n, b)}$ are partitions of $[a, c]$ and $[c, b]$ respectively. Furthermore,
+    #fade[[$=>$]] For $epsilon > 0$, then there exists a partition $cal(P)$ of $[a, b]$ such that $U(f, cal(P)) - L(f, cal(P)) < epsilon$. WLOG let $c = x_ell$ for some $ell in {0, ..., n}$ #fade[[otherwise add $c$ to $cal(P)$, which can only make $U(f, cal(P))-L(f, cal(P))$ smaller]]. Then $cal(P) = cal(P)_L union cal(P)_R$ where $cal(P)_L = {underbracket(x_0, a), ..., underbracket(x_ell, c)}$ and $cal(P)_R = {underbracket(x_ell, c), ..., underbracket(x_n, b)}$ are partitions of $[a, c]$ and $[c, b]$ respectively. Furthermore,
     $
       cases(
         U(f, cal(P)) & = U(f_L, cal(P)_L) + U(f_R, cal(P)_R),
@@ -527,8 +527,8 @@ In order to show the lemma, we first need a few other lemmas, including
   5. We have
     $
             f^2(x) - f^2(y) & = (f(x) - f(y)) (f(x) + f(y)) \
-      sup_I f^2 - inf_I f^2 & <= sup_(x in I) inf_(y in I) abs([f(x) - f(y)] [f(x) + f(y)]) \
-                            & <= 2 sup_I abs(f) underbracket(sup_(x in I) inf_(y in I) [f(x) - f(y)], sup_I f - inf_I f).
+      sup_I f^2 - inf_I f^2 & <= sup_(x, y in I) abs([f(x) - f(y)] [f(x) + f(y)]) \
+                            & <= 2 sup_I abs(f) underbracket(sup_(x, y in I) [f(x) - f(y)], sup_I f - inf_I f).
     $
 
 ]
@@ -548,7 +548,7 @@ In order to show the lemma, we first need a few other lemmas, including
 
     Since for all $x in [a, b]$,
     $
-      - abs(f(x)) < f(x) < abs(f(x)),
+      - abs(f(x)) <= f(x) <= abs(f(x)),
     $
     by (1) we have
     $
@@ -564,7 +564,7 @@ In order to show the lemma, we first need a few other lemmas, including
 
     For any partition $cal(P)$ of $[a, b]$,
     $
-      U(f^2, cal(P)) - L(f^2, cal(P)) <= 2 sup_I abs(f) dot [U(f, cal(P)) - L(f, cal(P))].
+      U(f^2, cal(P)) - L(f^2, cal(P)) <= 2 sup_[a, b] abs(f) dot [U(f, cal(P)) - L(f, cal(P))].
     $
     Hence if $f$ is #ponder("calculus.riemann-integrable-function")[integrable], then $f^2$ is also #ponder("calculus.riemann-integrable-function")[integrable].
 ]
@@ -587,8 +587,8 @@ If we want $F$ to be #ponder("calculus.derivative")[differentiable], it must be 
   $
     abs(F(x+h)-F(x)) & = abs(integral_a^(x+h) f(t) dif t - integral_a^x f(t) dif t) \
                      & = abs(integral_x^(x+h) f(t) dif t) \
-                     & <= integral_x^(x+h) abs(f(t)) dif t \
-                     & <= sup_[a, b] abs(f) underbracket(integral_x^(x+h) dif t, h) -> 0 quad "as" h -> 0.
+                     & <= abs(integral_x^(x+h) abs(f(t)) dif t) \
+                     & <= sup_[a, b] abs(f) underbracket(abs(integral_x^(x+h) dif t), abs(h)) -> 0 quad "as" h -> 0.
   $
 
 ]
@@ -608,8 +608,8 @@ If we want $F$ to be #ponder("calculus.derivative")[differentiable], it must be 
     abs(F(x_0+h) - F(x_0) - h f(x_0)) & = abs(integral_(x_0)^(x_0+h) f(t) dif t - h f(x_0)) \
     & = abs(integral_(x_0)^(x_0+h) abs(f(t) - f(x_0)) dif t) \
     & <= integral_(x_0)^(x_0+h) abs(f(t) - f(x_0)) dif t \
-    & <= sup_(t in [0 ,h]) abs((x_0+t) - f(x_0)) dot underbracket(integral_(x_0)^(x_0+h) dif t, h) \
-    => abs(epsilon(h)) & <= sup_(t in [0, h]) abs(f(x_0+t) - f(x_0)) -> 0 quad "as" h -> 0.
+    & <= sup_(abs(t) <= abs(h)) abs(f(x_0+t) - f(x_0)) dot underbracket(abs(integral_(x_0)^(x_0+h) dif t), abs(h)) \
+    => abs(epsilon(h)) & <= sup_(abs(t) <= abs(h)) abs(f(x_0+t) - f(x_0)) -> 0 quad "as" h -> 0.
   $
 
 ]
@@ -625,9 +625,9 @@ If we want $F$ to be #ponder("calculus.derivative")[differentiable], it must be 
   is #ponder("calculus.riemann-integrable-function")[integrable], with
   $
     F(x) = integral_0^x f(t) dif t = cases(
-      -1 -x & quad x<= 0,
-      x - 1 & quad x>=0
-    ) = abs(x) - 1
+      x & quad x<= 0,
+      -x & quad x>=0
+    ) = -abs(x)
   $
   which is not #ponder("calculus.derivative")[differentiable] at $x=0$.
 
@@ -718,15 +718,15 @@ Now we shall derive some common consequences.
 ] <taylor-integral-remainder>
 
 #remark[
-  By @extreme-value-theorem[Extreme Value Theorem], $exists M_n = sup_(x in [0, n]) abs(f^((n)) (a+x)) < oo$. Thus, by @taylor-integral-remainder[Taylor's Theorem: Integral Remainder],
+  By @extreme-value-theorem[Extreme Value Theorem], $exists M_n = sup_(x in [0, h]) abs(f^((n)) (a+x)) < oo$. Thus, by @taylor-integral-remainder[Taylor's Theorem: Integral Remainder],
   $
-    abs(R_(n, f, a)(h)) <= (h^n)/(n!) abs(integral_0^1 dots.c) = h^(n)/(n!) M_n integral_0^1 dif t = h^(n)/(n!).
+    abs(R_(n, f, a)(h)) <= (h^n)/(n!) abs(integral_0^1 dots.c) = h^(n)/(n!) M_n integral_0^1 dif t = M_n h^(n)/(n!).
   $
   Hence $R_(n, f, a)(h) -> 0$ as $h->0$ for fixed $n$.
 
   If we knew $sup_(n>=0) M_n = M < oo$, then we would get
   $
-    abs(R_(n, f, a)(h)) <= (M h^n)/(h!) -> 0 quad "as" quad n->oo
+    abs(R_(n, f, a)(h)) <= (M h^n)/(n!) -> 0 quad "as" quad n->oo
   $
   for all $abs(h) < 1$, and this would mean $f$ to be #ponder("calculus.analytic-function")[analytic] at $a$.
 ]
@@ -768,7 +768,7 @@ We would use @taylor-integral-remainder[Taylor's Theorem: Integral Remainder] to
 #prooflike[Proof of @taylor-lagrange-remainder[TT: Lagrange Remainder]][
   Assuming #ponder("analysis.continuity")[continuity] of $f^((n))$, let $g(t) = (1-t)^(n-1)$, then $exists theta in (0, 1)$ such that
   $
-    R_(n, f, a)(h) & = h^(n)/(n-1)! f^((n)) (a + theta h) integral_0^1 (1-t)^n dif t \
+    R_(n, f, a)(h) & = h^(n)/(n-1)! f^((n)) (a + theta h) integral_0^1 (1-t)^(n-1) dif t \
                    & = (h^n)/(n!) f^((n)) (a + theta h).
   $
 ]
@@ -777,7 +777,7 @@ We would use @taylor-integral-remainder[Taylor's Theorem: Integral Remainder] to
   Take $g = 1$.
   $
     R_(n, f, a)(h) & = h^(n)/(n-1)! (1-theta)^(n-1) f^(n) (a+theta h) integral_0^1 dif t \
-                   & = (h^n)/(n!) (1-theta)^(n-1) f^((n)) (a + theta h).
+                   & = (h^n)/((n-1)!) (1-theta)^(n-1) f^((n)) (a + theta h).
   $
 ]
 
@@ -786,14 +786,14 @@ We would use @taylor-integral-remainder[Taylor's Theorem: Integral Remainder] to
 In this section, we will integrate functions of unbounded domain and unbounded image.
 
 #definition[Improper Integrals: Unbounded Domain][
-  Suppose $f: [0, oo) -> RR$ is #ponder("calculus.riemann-integrable-function")[integrable] on $[a, R]$ for every $a< R < oo$, and set
+  Suppose $f: [a, oo) -> RR$ is #ponder("calculus.riemann-integrable-function")[integrable] on $[a, R]$ for every $a< R < oo$, and set
   $
     F: [a, oo) & -> RR \
              R & |-> integral_a^R f(x) dif x.
   $
   Then we say that $integral_a^oo f(x) dif x$ exists (converges) if
   $
-    lim_(R->oo) = L in RR
+    lim_(R->oo) F(R) = L in RR
   $
   then we set $integral_a^oo f(x) dif x = L$. Otherwise, we say that $integral_a^oo f(x) dif x$ does not exist.
 
@@ -816,9 +816,9 @@ In this section, we will integrate functions of unbounded domain and unbounded i
 ] <improper-integral-unbounded-domain>
 
 #example[
-  - $integral_1^oo x^p dif x = lim_(R->oo) integral_1^R 1/x^p dif x$ exists iff $x >= 1$.
+  - $integral_1^oo 1/x^p dif x = lim_(R->oo) integral_1^R 1/x^p dif x$ exists iff $p > 1$.
 
-  - $integral_2^oo (1)/(x log^2 x) dif x = lim_(R->oo) integral_x^R (dif x)/(x log^2 x) = 1/(log 2).$\
+  - $integral_2^oo (1)/(x log^2 x) dif x = lim_(R->oo) integral_2^R (dif x)/(x log^2 x) = 1/(log 2).$\
 
   - $integral_(-oo)^oo ee^(-x^2) dif x$ exists assuming knowledge of normal distribution.
 ]
@@ -837,15 +837,15 @@ We need some convergence tests to have a proper proof for the last example.
 
 #proof[
 
-  1. Let $F(R) = integral_0^R f(x) dif x$, note that this is #ponder("analysis.monotone-function")[increasing] since $f >= 0$. It is also bounded, since
+  1. Let $F(R) = integral_a^R f(x) dif x$, note that this is #ponder("analysis.monotone-function")[increasing] since $f >= 0$. It is also bounded, since
 
     $
-      0 <= F(R) <= integral_0^R g(x) dif x <= integral_0^oo g(x) dif x < oo.
+      0 <= F(R) <= integral_a^R g(x) dif x <= integral_a^oo g(x) dif x < oo.
     $
 
     Since $F$ is #ponder("analysis.monotone-function")[monotone] and bounded, let $L = sup_(R >= a) F(R)$ exists. We claim that
     $
-      L = lim_(R->oo) integral_0^R f(x) dif x.
+      L = lim_(R->oo) integral_a^R f(x) dif x.
     $
     Indeed, by the definition of #ponder("analysis.least-upper-bound")[supremum], $forall epsilon > 0, exists R_0 in [a, oo)$ such that for $R >= R_0$,
     $
@@ -860,9 +860,9 @@ We need some convergence tests to have a proper proof for the last example.
       L - epsilon <= F(R) <= L quad forall R >= R_0 quad => lim_(R->oo)F(R) = L.
     $
 
-  2. Since $f>=0$, $lim_(R->oo) underbracket(integral_0^R f(x) dif x, F(R)) = +oo$ necessarily. Hence $forall L > 0$, $exists R$ such that $forall r >= R, F(r) > L$. But
-    $ integral_0^R g(x) dif x >= F(R) > L. $
-    Hence $integral_0^oo g(x) dif x$ diverges to $+oo$.
+  2. Since $f>=0$, $lim_(R->oo) underbracket(integral_a^R f(x) dif x, F(R)) = +oo$ necessarily. Hence $forall L > 0$, $exists R$ such that $forall r >= R, F(r) > L$. But
+    $ integral_a^R g(x) dif x >= F(R) > L. $
+    Hence $integral_a^oo g(x) dif x$ diverges to $+oo$.
 ]
 
 #example[
@@ -875,7 +875,7 @@ We need some convergence tests to have a proper proof for the last example.
 ]
 
 #proposition[Ratio Test for Integrals][
-  Let $f, g: [0, oo) -> RR$ satisfy $f, g >= 0$, and
+  Let $f, g: [a, oo) -> RR$ satisfy $f, g >= 0$, and
   $
     lim_(x->oo) f(x)/g(x) = L in (0, oo),
   $
@@ -911,7 +911,7 @@ We need some convergence tests to have a proper proof for the last example.
   - For $integral_1^oo (x)/(x^4 + 1) dif x$ #ponder("calculus.improper-integral")[converges] since
 
     $
-      lim_(x->oo) ((x)/(x^4 + 1))/(x^3) = 1 in (0, oo)
+      lim_(x->oo) ((x)/(x^4 + 1))/((1)/(x^3)) = 1 in (0, oo)
     $
     and by $integral_1^oo (1)/(x^3) dif x < oo$ we have $integral_1^oo (x)/(x^4 + 1) dif x < oo$.
 ]
@@ -928,7 +928,7 @@ We shall now consider #ponder("calculus.improper-integral")[improper integrals] 
     F: (0, b-a] & -> RR \
           delta & |-> integral_(a+delta)^b f(x) dif x.
   $
-  Then, we say $integral_a^b f(x) dif x$ exists (converges) if $lim_(delta -> 0) f(delta)$ exists and is finite, and we say
+  Then, we say $integral_a^b f(x) dif x$ exists (converges) if $lim_(delta -> 0) F(delta)$ exists and is finite, and we say
   $
     integral_a^b f(x) dif x= lim_(delta->0) F(delta).
   $
@@ -942,7 +942,7 @@ We shall now consider #ponder("calculus.improper-integral")[improper integrals] 
 
 #remark[
   $
-    integral_B^b f(x) dif x & = integral_B^a f(x) dif x + integral_a^b dif(x) dif x \
+    integral_B^b f(x) dif x & = integral_B^a f(x) dif x + integral_a^b f(x) dif x \
     & = lim_(delta->0) integral_B^(a-delta) f(x) dif x + lim_(sigma->0) integral_(a+sigma)^b f(x) dif x \
   $
   In general, this is not equal to
@@ -955,9 +955,9 @@ We shall now consider #ponder("calculus.improper-integral")[improper integrals] 
 #example[
   - $integral_0^1 (1)/(x^p) dif x$ #ponder("calculus.improper-integral")[converges] iff $p < 1$, since as $delta -> 0$
     $
-      integral_delta^1 1/x^p dif p = cases(
-        p = 1: quad & [log_x]_delta^1 = -log delta -> -oo,
-        p!= 1: quad & [x^(1-p)/(1-p)]^1_delta = delta^(1-p)/(p-1) -> 0 "iff" p < 1.
+      integral_delta^1 1/x^p dif x = cases(
+        p = 1: quad & [log_x]_delta^1 = -log delta -> +oo,
+        p!= 1: quad & [x^(1-p)/(1-p)]^1_delta = delta^(1-p)/(p-1) - 1/(p-1) -> -1/(p-1) "iff" p < 1.
       )
     $
 

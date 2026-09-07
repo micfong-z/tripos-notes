@@ -149,7 +149,7 @@ This reversal procedure leads to the following important result.
   $
     r_n = x r_i + y r_(i-1)
   $
-  for all $1 <= i <= n-1$. In particular,
+  for all $1 <= i <= n-1$, where we adopt the convention $r_0 = b$. In particular,
   $
     r_n = x b + y a.
   $
@@ -165,7 +165,7 @@ This reversal procedure leads to the following important result.
 
   To show (2), observe that given $d$ such that $d divides a$ and $d divides b$, we have $d divides a x + b y$ for all $x, y in ZZ$. In particular, $d divides h$.
 
-  To show (1), suppose that $h divides.not a$. Then we can write $a = q h + r$ for some $q, r in ZZ$ ans $0 < r < h$. Hence $r = a - q h = a - q (x a + y b)$ is also a positive linear combination of $a$ and $b$, contradicting the minimality of $h$. Thus, $h divides a$. Similarly, we can show that $h divides b$.
+  To show (1), suppose that $h divides.not a$. Then we can write $a = q h + r$ for some $q, r in ZZ$ and $0 < r < h$. Hence $r = a - q h = a - q (x a + y b)$ is also a positive linear combination of $a$ and $b$, contradicting the minimality of $h$. Thus, $h divides a$. Similarly, we can show that $h divides b$.
 
   Therefore, $h = gcd(a, b)$.
 ]
@@ -234,13 +234,13 @@ Recall @prop-euclid-lemma. We shall now #ponder("set-theory.proof")[prove] it.
     (1 + sqrt(-3)) times (1 - sqrt(-3)) & = 1 - (-3) = 4.
   $
 
-  In $ZZ[sqrt(-3) ]$ we can define what it means to be a "#ponder("number-theory.prime-composite-numbers")[prime]", and both $1 plus.minus sqrt(-3)$ happens to be #ponder("number-theory.prime-composite-numbers")[primes] in this sense. However, we can also write $4$ as $4 = 2 times 2$, so the factorisation is not unique.
+  In $ZZ[sqrt(-3) ]$ we can define what it means to be a "#ponder("number-theory.prime-composite-numbers")[prime]", and both $1 plus.minus sqrt(-3)$ happens to be #ponder("number-theory.prime-composite-numbers")[primes] in this sense; so does $2$, and $2$ is not a unit multiple of either of $1 plus.minus sqrt(-3)$. However, we can also write $4$ as $4 = 2 times 2$, so the factorisation is not unique.
 ]
 
 
 We shall consider some applications of the #ponder("number-theory.fundamental-theorem-of-arithmetic")[fundamental theorem of arithmetic].
 
-1. The factors of $n = 2^3 dot 3^7 dot 11$ are all numbers of the form $2^a 3^b 11^c$ where $0 <= a <= 3$, $0 <= b <= 7$ and $0 <= c <= 1$. We can show that there are others: if, for example, $7 divides n$, then we would have a factorisation of $n$ involving $7$, contradicting the uniqueness of factorisation.
+1. The factors of $n = 2^3 dot 3^7 dot 11$ are all numbers of the form $2^a 3^b 11^c$ where $0 <= a <= 3$, $0 <= b <= 7$ and $0 <= c <= 1$. We can show that there are no others: if, for example, $7 divides n$, then we would have a factorisation of $n$ involving $7$, contradicting the uniqueness of factorisation.
 
   More generally, the factors of $n = p_1^(a_1) p_2^(a_2) ... p_k^(a_k)$ are all numbers of the form $p_1^(b_1) p_2^(b_2) ... p_k^(b_k)$ where $0 <= b_i <= a_i$ for all $1 <= i <= k$.
 
@@ -318,7 +318,7 @@ We cannot divide both sides of a #ponder("number-theory.integer-modulo-n")[congr
   If $a$ is a #ponder("number-theory.unit-modulo-n")[unit modulo] $n$, then
 
   1. its inverse is unique: suppose $exists b, b'$ such that $a b equiv a b' equiv 1 mod n$. Then
-    $ b equiv b (a b) equiv b (a b') equiv (b a) b' equiv b. $
+    $ b equiv b (a b) equiv b (a b') equiv (b a) b' equiv b'. $
 
   2. We can write $a^(-1)$ for its inverse.
 
@@ -359,7 +359,7 @@ We can rephrase this proposition more generally.
   Consider whether "New Year's Day" can fall on any day of the week in a year. #fade[[Assume a year has 365 days and a week has 7 days.]]
 
   Since $gcd(365, 7) = 1$, so if we put "New Year's Day" as day 0, and our week has 7 days in it, then we need to solve
-  $ 7 x + k = 365 y. $ _i.e._ $365 x equiv k mod 7$, which has a unique solution for all $k in {0, 1, 2, 3, 4, 5, 6}$. Thus, "New Year's Day" can fall on any day of the week.
+  $ 7 x + k = 365 y. $ _i.e._ $365 y equiv k mod 7$, which has a unique solution for all $k in {0, 1, 2, 3, 4, 5, 6}$. Thus, "New Year's Day" can fall on any day of the week.
 ]
 
 We shall now consider equations of the form $a x equiv b mod n$ with $gcd(a, n) != 1$, say $gcd(a, n) = d > 1$.
@@ -409,7 +409,7 @@ We shall now consider equations of the form $a x equiv b mod n$ with $gcd(a, n) 
                            & <=> 5 x = 6 + 17 k \
                            & <=> 5 x equiv 6 mod 17
     $
-    ans so we reduce to the case of example (1).
+    and so we reduce to the case of example (1).
 ]
 
 == Solving Simultaneous Congruence
@@ -462,7 +462,7 @@ Now let us consider the general case.
     s m & equiv 1 mod n quad & "and" quad t n & equiv 1 mod m \
     s m & equiv 0 mod m quad & "and" quad t n & equiv 0 mod n.
   $
-  Hence $ x = a(t n) + b (s m) equiv a mod n equiv b mod m. $
+  Hence $ x = a(t n) + b (s m) equiv a mod m equiv b mod n. $
 
   #fade[[Uniqueness.]] Suppose $y$ is another solution. _i.e._
   $
@@ -642,11 +642,11 @@ We may wonder if $-1$ is a square modulo $p$ for some #ponder("number-theory.pri
   $
     2^p equiv 2 mod p.
   $
-  Another way is to state that if $2^p mod p = 2$, then there is a good chance that $p$ is #ponder("number-theory.prime-composite-numbers")[prime]. If not, then $p$ is called a #ponder("number-theory.pseudoprime")[pseudoprime].
+  Another way is to state that if $2^p mod p = 2$, then there is a good chance that $p$ is #ponder("number-theory.prime-composite-numbers")[prime]; if not, then $p$ is certainly #ponder("number-theory.prime-composite-numbers")[composite]. A #ponder("number-theory.prime-composite-numbers")[composite] $p$ which nevertheless satisfies $2^p equiv 2 mod p$ is called a #ponder("number-theory.pseudoprime")[pseudoprime].
 
 ] <prop-fermats-criterion>
 
-Let us agree to write messages as sequences of numbers, say $A -> 00$, $B -> 01$, ..., $Z -> 25$, $"space" -> 26$, $"full stop" -> 27$, $"comma" -> 28$, and so on. One (say, $A$) want to send secure messages in an encrypted form in such a way that the intended recipient can decrypt them easily, but an eavesdropper cannot.
+Let us agree to write messages as sequences of numbers, say $A -> 00$, $B -> 01$, ..., $Z -> 25$, $"space" -> 26$, $"full stop" -> 27$, $"comma" -> 28$, and so on. One (say, $A$) wants to send secure messages in an encrypted form in such a way that the intended recipient can decrypt them easily, but an eavesdropper cannot.
 
 We are going to use the RSA (Rivest-Shamir-Adleman) algorithm, which is based on #ponder("number-theory.integer-modulo-n")[modular arithmetic].
 
@@ -670,11 +670,11 @@ We are going to use the RSA (Rivest-Shamir-Adleman) algorithm, which is based on
 
   - $A$ computes the *decoding exponent* $d$ such that $e d equiv 1 mod phi(n)$ (this can be done using the #ponder("number-theory.euclids-algorithm")[Euclidean algorithm]). This step requires knowledge of $phi(n)$, which in turn requires knowledge of $p$ and $q$ for computation within reasonable time.
 
-  - $A$ computes $(m^e)^d = m^(k phi(n) + 1)$ for some $k in ZZ$. By #ponder("algebra.fermat-euler-theorem")[Fermat-Euler theorem] (@fermat-euler-theorem), we have $m^(k phi(n)) equiv 1 mod n$ since $gcd(m, n) = 1$ if $m < n$. Thus, $m^(k phi(n) + 1) equiv m mod n$.
+  - $A$ computes $(m^e)^d = m^(k phi(n) + 1)$ for some $k in ZZ$. By #ponder("algebra.fermat-euler-theorem")[Fermat-Euler theorem] (@fermat-euler-theorem), we have $m^(k phi(n)) equiv 1 mod n$ provided $gcd(m, n) = 1$, which we assume. #fade[[A block $m < n$ with $gcd(m, n) != 1$ would reveal a factor of $n$, and such blocks are vanishingly rare.]] Thus, $m^(k phi(n) + 1) equiv m mod n$.
 
 #remark[
   Finding $phi(n)$ without knowing $p$ and $q$ is equivalent to factoring $n$ into $p$ and $q$, which is believed to be hard for classical computers on large $n$. This is what makes RSA secure.
 
-  It is unknown whether there are efficient algorithms for factoring large integers on quantum computers. If such algorithms exist, they would compromise the security of RSA.
+  On quantum computers, however, Shor's algorithm (1994) factors large integers efficiently. A sufficiently large quantum computer would therefore compromise the security of RSA.
 ]
 

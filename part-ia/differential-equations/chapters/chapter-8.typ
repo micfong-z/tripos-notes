@@ -47,7 +47,7 @@ where $x=0$ is a #ponder("ode.singular-point")[regular singular point]. We can s
   So we have
 
   $
-                          (q)/(p) & = (-2x)/(1-x^2) = (2x)/(x-1)(x+1), \
+                          (q)/(p) & = (-2x)/(1-x^2) = (2x)/((x-1)(x+1)), \
     lim_(x->plus.minus 1) (q)/(p) & = plus.minus oo.
   $
   and
@@ -58,9 +58,9 @@ where $x=0$ is a #ponder("ode.singular-point")[regular singular point]. We can s
   Therefore, $x=1$ and $x=-1$ are #ponder("ode.singular-point")[singular points].
 
   Now, consider $x=1$. We have
-  $ (x-1) (q)/(p) = (x-1) (-2x)/(1-x^2) = -(2x)/(x+1), $
-  which is analytic at $x=1$ with value $-1$. Also,
-  $ (x-1)^2 (r)/(p) = (x-1)^2 (2)/(1-x^2) = (2(x-1))/(x+1), $
+  $ (x-1) (q)/(p) = (x-1) (-2x)/(1-x^2) = (2x)/(x+1), $
+  which is analytic at $x=1$ with value $1$. Also,
+  $ (x-1)^2 (r)/(p) = (x-1)^2 (2)/(1-x^2) = -(2(x-1))/(x+1), $
   which is analytic at $x=1$ with value $0$.
 
   Hence, $x=1$ is a #ponder("ode.singular-point")[regular singular point]. Similarly, $x=-1$ is also a #ponder("ode.singular-point")[regular singular point].
@@ -77,7 +77,7 @@ where $x=0$ is a #ponder("ode.singular-point")[regular singular point]. We can s
     lim_(x->0+) (q)/(p) & = 0
   $
 
-  It may appear that $x=0$ is an #ponder("ode.singular-point")[ordinary point]. However, the 2nd derivative of $(q)/(p)$ is not defined at $x=0$. Therfore, $x=0$ is a #ponder("ode.singular-point")[singular point]. Now, consider
+  It may appear that $x=0$ is an #ponder("ode.singular-point")[ordinary point]. However, the 2nd derivative of $(q)/(p)$ is not defined at $x=0$. Therefore, $x=0$ is a #ponder("ode.singular-point")[singular point]. Now, consider
 
   $ (x-0) (q)/(p) = x (-2x)/(1+sqrt(x)) = (-2x^2)/(1+sqrt(x)). $
   It does not have a #ponder("calculus.taylor-series")[Taylor series] about $x=0$ again. Hence, $x=0$ is an #ponder("ode.singular-point")[irregular singular point].
@@ -85,7 +85,7 @@ where $x=0$ is a #ponder("ode.singular-point")[regular singular point]. We can s
 
 == #ponder("ode.frobenius-method")[Method of Frobenius]
 
-#theorem[Fuch's Theorem][
+#theorem[Fuchs' Theorem][
   1. If $x=x_0$ is an #ponder("ode.singular-point")[ordinary point] of the #ponder("ode.ordinary-differential-equation")[ODE]
     $ p(x) y'' + q(x) y' + r(x) y = 0, $
     then there are two #ponder("linear-algebra.linearly-independent-functions")[linearly independent] solutions of the form
@@ -144,7 +144,7 @@ The #ponder("ode.series-solution")[series solution] method may fail completely a
   $
   Hence we have a recurrence relation for $n>=2$. Therefore, $a_0$ and $a_1$ are arbitrary constants in the general solution.
 
-  Consider the odd terms. Note that $n_3=0$. Hence, all odd terms are zero. Therefore, one solution is
+  Consider the odd terms. Note that $a_3=0$. Hence, all odd terms are zero. Therefore, one solution is
   $ y(x) = a_(1) x. quad ("odd function of" x) $
 
   Consider the even terms. We have
@@ -200,7 +200,7 @@ The #ponder("ode.series-solution")[series solution] method may fail completely a
     $
     Since $a_0 != 0$, we have $sigma = 0$ or $sigma = 1/2$.
 
-  - The next lowerest power is $x^(sigma + 1)$ with $n = 1$.
+  - The next lowest power is $x^(sigma + 1)$ with $n = 1$.
 
     $
       a_1 [4(sigma + 1) sigma + 2 (sigma + 1)] & = 0 \

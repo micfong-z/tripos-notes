@@ -87,8 +87,6 @@ is always a special kind of #ponder("algebra.subgroup")[subgroup].
     g_1g_2 = (g'_1 h_1)(h_2 g'_2) = g'_1 underbracket((h_1 h_2) g'_2, in H g'_2) = g'_1 g'_2 h_3
   $
   by @lemma-normal-subgroup-cosets, for some $h_3 in H$. Thus,
-  $ (g_1 g_2) H = (g'_1 g'_2) H $
-  so
   $
     (g_1 g_2) H = (g'_1 g'_2) H
   $
@@ -117,7 +115,7 @@ is always a special kind of #ponder("algebra.subgroup")[subgroup].
 #example[
   1. $G \/ 1 teq G$, $G \/ G teq 1$.
 
-  2. Since $ZZ$ is #ponder("algebra.abelian-group")[abelian], $n ZZ nsub ZZ$ for any $n$. Thus, for any $n in ZZ^*$, we have the #ponder("algebra.quotient-group")[quotient group]
+  2. Since $ZZ$ is #ponder("algebra.abelian-group")[abelian], $n ZZ nsub ZZ$ for any $n$. Thus, for any $n in ZZ^+$, we have the #ponder("algebra.quotient-group")[quotient group]
     $
       ZZ \/ n ZZ teq C_n
     $

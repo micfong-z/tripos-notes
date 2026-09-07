@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/mannot:0.4.0": markul
 
 #lecture-separator(lecture: 4, date: "2026-05-08")
 
@@ -69,7 +67,7 @@ $
     & "minimise"   && lagr(vb(x), vb(lambda)) \
     & "subject to" && italic("no constraints").
   $
-  Note that if $1 - lambda_2 != 0$, then $lagr(vb(x), vb(lambda)) -> -oo$ as $x_3 -> oo$. Hence, for this problem to have a solution, we must have $lambda_2 = 1$. Then we have
+  Note that if $1 - lambda_2 != 0$, then the term $(1-lambda_2)x_3$ is unbounded below as $x_3$ ranges over $RR$, so $lagr(vb(x), vb(lambda)) -> -oo$ (as $x_3 -> oo$ if $1 - lambda_2 < 0$, and as $x_3 -> -oo$ if $1 - lambda_2 > 0$). Hence, for this problem to have a solution, we must have $lambda_2 = 1$. Then we have
   $
     lagr(vb(x), vb(lambda)) = (-2 x_1 - lambda_1 x_1^2) + (-2 x_2 - lambda_1 x_2^2) + 4 lambda_1 + 1.
   $
@@ -134,7 +132,7 @@ We can now generalise this method to problems of the form
     #remark[
       We can simplify the search by noting *complementary slackness.* With $ lagr(vb(x), vb(s), vb(lambda)) = f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x))- vb(b)) - vb(lambda)^tp vb(s), $ we must have $lambda_i <= 0$ or else we can choose components of $vb(s)$ to be arbitrarily large and hence $lagr(vb(x), vb(s), vb(lambda)) -> -oo$. Moreover, if $lambda_i < 0$, then we must have $s_i = 0$.
 
-      As a result, we must have $vb(lambda)^*^tp vb(s)^* = 0$, which is the complementary slackness condition. _i.e._ given conditions $h(vb(x))_i <= b_i$ and $lambda_i <= 0$, one of the inequalities must be strict.
+      As a result, we must have $vb(lambda)^*^tp vb(s)^* = 0$, which is the complementary slackness condition. _i.e._ given conditions $h(vb(x))_i <= b_i$ and $lambda_i <= 0$, at most one of the two inequalities can be strict; they may also both be tight.
     ]
 
     The usual method to do this is as follows:
@@ -259,13 +257,13 @@ $ <problem-b>
 ]
 
 #proposition[
-  The Lagrangian multiplier method can be used to solve the original problem if and only if strong duality holds. #fade[[_i.e._ there exists $(vb(x)^*, vb(lambda)^*)$ such that $vb(x)^* = argmin_(vb(x) in cal(X)) f(vb(x))$, and $vb(h)(vb(x)^*) = vb(b).$]]
+  The Lagrangian multiplier method can be used to solve the original problem if and only if strong duality holds. #fade[[_i.e._ there exists $(vb(x)^*, vb(lambda)^*)$ such that $vb(x)^* = argmin_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)^*)$, and $vb(h)(vb(x)^*) = vb(b).$]]
 
 
   Note that
   $
-    g(vb(lambda)^*) &= min_(vb(x) in cal(X)) (f(vb((x))) - vb(lambda)^*^tp (vb(h)(vb(x)) - vb(b)))\
-    &= f(vb(x)^*) - vb(lambda)^*^tp (vb(h)(vb(x)^*) - vb(b)) quad &"since" vb(x)^* = argmin_(vb(x) in cal(X)) f(vb(x))\
+    g(vb(lambda)^*) &= min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^*^tp (vb(h)(vb(x)) - vb(b)))\
+    &= f(vb(x)^*) - vb(lambda)^*^tp (vb(h)(vb(x)^*) - vb(b)) quad &"since" vb(x)^* = argmin_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)^*)\
     &= f(vb(x)^*) quad &"since" vb(h)(vb(x)^*) = vb(b).
   $
 ]
@@ -329,7 +327,7 @@ $ <problem-b>
   $
     g(vb(lambda)) & =min_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)) \
     & = min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(b))) \
-    & = min_(vb(c) in RR^m) (min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))- vb(lambda)^tp (vb(c) - vb(b)))) \.
+    & = min_(vb(c) in RR^m) (min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))- vb(lambda)^tp (vb(c) - vb(b)))).
   $
   Note that
   $
@@ -349,7 +347,7 @@ $ <problem-b>
   $
   Note that
   $
-    min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))) <= min_(vb(x) in cal(X)(vb(c))) f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c)) = phi(vb(c)).
+    min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))) = min_(vb(x) in cal(X)(vb(c))) f(vb(x)) = phi(vb(c)).
   $
   Hence we have
   $

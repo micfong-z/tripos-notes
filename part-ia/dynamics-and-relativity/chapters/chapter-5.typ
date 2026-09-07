@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/unify:0.7.1": qty
 
 = Rigid Bodies
 
@@ -177,7 +175,7 @@ where $x_perp$ is the perpendicular distance from $bold(x)$ to the axis of rotat
     Then
     $
       M & = (4)/(3) ppi a^3 rho \
-      I & = rho integral_0^a 4 ppi r^4 dif r integral_0^pi sin^3 theta dif theta \
+      I & = rho integral_0^a 2 ppi r^4 dif r integral_0^pi sin^3 theta dif theta \
         & = (8)/(15) ppi a^5 rho
     $
     Hence $I = (2)/(5) M a^2$.
@@ -282,7 +280,7 @@ $
 
 where the $bold(y_(i))$ term will capture the rotation about the #ponder("dynamics.centre-of-mass")[CoM] if
 $
-  bold(dot(y)) = bold(omega) + bold(y_(i)).
+  bold(dot(y)_i) = bold(omega) times bold(y_(i)).
 $
 
 The velocity of the body is
@@ -462,13 +460,13 @@ where $Q_y$ is the momentum of the Earth or the wall after the collision.
 
 By conservavtion of energy,
 $
-  (p^2y)/(2 m) = (q y^2)/(2m) + (Q_y^2)/(2 M) #<eq-325>
+  (p_y^2)/(2 m) = (q_y^2)/(2m) + (Q_y^2)/(2 M) #<eq-325>
 $ 
 where $m$ is the mass of the ball, and $M$ is the mass of the Earth or the wall. Clearly $M >> m$.
 
 Substituting @eq-324 into @eq-325 gives
 $
-  (1)/(2m) (q_y^2 + 2 q_y Q_y + Q_y^2) & = (q y^2)/(2m) + (Q_y^2)/(2 M) \
+  (1)/(2m) (q_y^2 + 2 q_y Q_y + Q_y^2) & = (q_y^2)/(2m) + (Q_y^2)/(2 M) \
           (1)/(2m) (2 q_y Q_y + Q_y^2) & = (Q_y^2)/(2 M) \
 $
 If $M >> m$, then $Q_y^2/(2 M) approx 0$, and we have
@@ -482,4 +480,4 @@ $
   beta = alpha.
 $
 
-The change $Delta p$ in momentum over a short time is called an *impulse* $I$.
+The change $Delta p$ in momentum over a short time is called an *impulse* $J$.

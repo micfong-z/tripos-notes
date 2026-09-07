@@ -23,6 +23,8 @@
 #let teq = math.tilde.equiv
 #let nsub = math.lt.tri
 
+#let edge = fletcher.edge
+
 #let fletcher-diagram(..args) = align(center, fletcher.diagram(
   edge-stroke: colors.text,
   ..args,

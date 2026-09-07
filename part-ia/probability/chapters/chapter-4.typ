@@ -6,9 +6,9 @@
 
 Consider a #ponder("probability.probability-space")[probability space] $(Omega, cal(F), PP)$. Recall that a #ponder("probability.random-variable")[random variable] is a function
 $
-  X: omega -> RR
+  X: Omega -> RR
 $
-where $forall x in RR$, the set $X^(-1)({x}) = {X <= x} = {omega in Omega : X(omega) = x}$ is an #ponder("probability.outcomes-and-events")[event] in $cal(F)$.
+where $forall x in RR$, the set $X^(-1)((-oo, x]) = {X <= x} = {omega in Omega : X(omega) <= x}$ is an #ponder("probability.outcomes-and-events")[event] in $cal(F)$.
 
 Recall @def-probability-distribution-function[Definition of Probability Distribution Function]. Let $F(x)$ be the #ponder("probability.distribution-function")[probability distribution function] of $X$. We have the following properties of $F$:
 
@@ -79,7 +79,7 @@ Recall @def-probability-distribution-function[Definition of Probability Distribu
   $
 ] <def-continuous-random-variable>
 
-For the purpose of this course, we will only consider #ponder("probability.continuous-random-variable")[continuous random variables] whose PDF is differentiable. These are also known as *absolutely continuous* random variables.
+For the purpose of this course, we will only consider #ponder("probability.continuous-random-variable")[continuous random variables] whose probability distribution function $F$ is differentiable. These are also known as *absolutely continuous* random variables.
 
 #definition[Probability Density Function][
   Let $X$ be a #ponder("probability.continuous-random-variable")[continuous random variable] with #ponder("probability.distribution-function")[probability distribution function] $F$. If $F$ is differentiable, then the #ponder("probability.probability-density-function")[*probability density function*] $f$ of $X$ is defined as
@@ -171,7 +171,7 @@ $
   $
     PP(T_n >= k) = PP(n T >= k) = PP(T >= k/n) = (ee^(-lambda/n))^k. \
   $
-  Note that $T_n$ is a #ponder("probability.geometric-distribution")[geometric random variable] with parameter $p = 1 - ee^(-lambda/n)$. As $n->oo$, $p approx (lambda)/(n)$.
+  Note that $T_n + 1$ is a #ponder("probability.geometric-distribution")[geometric random variable] with parameter $p = 1 - ee^(-lambda/n)$, since $PP(T_n + 1 >= k) = PP(T_n >= k - 1) = (1 - p)^(k - 1)$ for every $k in NN$. As $n->oo$, $p approx (lambda)/(n)$.
 
   Hence, $T_n / n$ converges in distribution to $T$ as $n -> oo$. So, we can think of an #ponder("probability.exponential-distribution")[exponential distribution] as a continuous analogue of a #ponder("probability.geometric-distribution")[geometric distribution].
 ]
@@ -341,7 +341,7 @@ $
     $
     Changing to polar coordintates with $u = r cos(theta)$ and $v = r sin(theta)$, we have
     $
-      I^2 & = (2)/(ppi) integral_0^(ppi/2) r ee^(-r^(2)/2) dif theta dif r \
+      I^2 & = (2)/(ppi) integral_0^(ppi/2) integral_0^(oo) r ee^(-r^(2)/2) dif r dif theta \
           & = integral_0^(oo) r ee^(-r^(2)/2) dif r \
           & = [- ee^(-r^(2)/2)]_0^(oo) \
           & = 1.
@@ -361,7 +361,7 @@ $
   $
     EE[X] & = integral_(-oo)^(oo) x f(x) dif x \
     & = integral_(-oo)^(oo) (x-mu) 1/sqrt(2 ppi sigma^2) exp(- (x-mu)^(2)/(2sigma^2)) dif x + underbracket(integral_(-oo)^(oo) mu 1/sqrt(2 ppi sigma^2) exp(- (x-mu)^(2)/(2sigma^2)) dif x, mu integral_(-oo)^oo f(x) dif x = mu) \
-    &= integral_(-oo)^(oo) u/sqrt(2 ppi sigma^2) exp(- u^(2)/(2sigma^2)) dif x + mu & quad "with" u = x - mu \
+    &= integral_(-oo)^(oo) u/sqrt(2 ppi sigma^2) exp(- u^(2)/(2sigma^2)) dif u + mu & quad "with" u = x - mu \
     & = mu. &quad "the integrand is odd"
   $
   Hence, $EE[X] = mu$. Moreover,
@@ -440,7 +440,7 @@ $
   $
   Since $Phi(0) = (1)/(2)$, we have $Phi(x) + Phi(-x) = 1$. Hence,
   $
-    PP(X <= x) + PP(X <= -x) = 1.
+    PP(Z <= x) + PP(Z <= -x) = 1.
   $
   We have existing tables of $Phi$ values, so we can compute $PP(X <= x)$ for any $x$, in particular,
   $
@@ -458,7 +458,7 @@ $
 
   Alternatively,
   $
-    integral_oo^m f(x) dif x = integral_m^(oo) f(x) dif x = (1)/(2)
+    integral_(-oo)^m f(x) dif x = integral_m^(oo) f(x) dif x = (1)/(2)
   $
   where $f$ is the #ponder("probability.probability-density-function")[density] of $X$.
 ] <def-median>
@@ -532,7 +532,7 @@ $
 
     Note that
     $
-      integral_(-oo)^(oo) ... integral_(-oo)^(oo) f(y_1) ... f_n (y_n) dif y_n ... dif y_1 = 1.
+      integral_(-oo)^(oo) ... integral_(-oo)^(oo) f_1 (y_1) ... f_n (y_n) dif y_n ... dif y_1 = 1.
     $
     Hence
     $
@@ -760,7 +760,7 @@ Hence, $Z_i ~ "Exp"((n - i + 1) lambda)$ and they are #ponder("probability.indep
     We have
     $
       I_n & = integral_0^oo f(x) dif x = integral_0^oo lambda ee^(-lambda x) (lambda^(n-1) x^(n-1))/((n-1)!) dif x \
-          & = integral_0^oo lambda ee^(-lambda x) (lambda^(n-1) x^(n-1))/((n-1)!) dif x \
+          & = [- ee^(-lambda x) (lambda^(n-1) x^(n-1))/((n-1)!)]_0^oo + integral_0^oo ee^(-lambda x) (lambda^(n-1) (n-1) x^(n-2))/((n-1)!) dif x & quad "integrating by parts" \
           & = integral_0^oo lambda ee^(-lambda x) (lambda^(n-2) x^(n-2))/((n-2)!) dif x \
           & = I_(n-1) = ... = I_1 = integral_0^oo lambda ee^(-lambda x) dif x = 1.
     $
@@ -783,7 +783,7 @@ Hence, $Z_i ~ "Exp"((n - i + 1) lambda)$ and they are #ponder("probability.indep
   $
 ]
 
-Suppose $X ~ Gamma(n, lambda)$ and $Y ~ Gamma(m lambda)$, where $m, n in NN$, $lambda > 0$ and $X indep Y$. Consider the #ponder("probability.probability-density-function")[density] of $X + Y$.
+Suppose $X ~ Gamma(n, lambda)$ and $Y ~ Gamma(m, lambda)$, where $m, n in NN$, $lambda > 0$ and $X indep Y$. Consider the #ponder("probability.probability-density-function")[density] of $X + Y$.
 
 We aim to show this by @thm-mgf-uniqueness. Consider, for $theta < lambda$,
 $

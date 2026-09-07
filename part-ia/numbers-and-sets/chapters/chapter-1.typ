@@ -10,7 +10,7 @@ As an introduction to university-level mathematics, we will look at precise defi
   A *#ponder("set-theory.statement")[statement]* is a sentence that can have a true or false value.
 ] <def-statement>
 
-If were to #ponder("set-theory.proof")[prove] a #ponder("set-theory.statement")[statement], we need a #ponder("set-theory.proof")[proof].
+If we were to #ponder("set-theory.proof")[prove] a #ponder("set-theory.statement")[statement], we need a #ponder("set-theory.proof")[proof].
 
 #definition("Proof")[
   A *#ponder("set-theory.proof")[proof]* is a sequence of true #ponder("set-theory.statement")[statements] without logical gaps, that establishes some conclusions.
@@ -33,10 +33,10 @@ We want to prove things because
   )
 ]
 
-Conside the length $x$ of the hypotenuse in a right-angled isosceles triangle with side lengths 1. The Pythagorean realized that $x in.not QQ$. To show that $x=sqrt(2)$ exists, we need to construct a new number system $RR$, where $exists x in RR$ such that $x^2=2$.
+Consider the length $x$ of the hypotenuse in a right-angled isosceles triangle with side lengths 1. The Pythagorean realized that $x in.not QQ$. To show that $x=sqrt(2)$ exists, we need to construct a new number system $RR$, where $exists x in RR$ such that $x^2=2$.
 
 #definition("Algebraic number")[
-  A real number is *#ponder("number-theory.algebraic-number")[algebraic]* if it is the root of some polynomial with integer coefficients. _e.g._ $sqrt(2)$.
+  A real number is *#ponder("number-theory.algebraic-number")[algebraic]* if it is the root of some non-zero polynomial with integer coefficients. _e.g._ $sqrt(2)$.
 ] <def-algebraic-number>
 
 #definition("Transcendental number")[
@@ -130,7 +130,7 @@ It is vital that every step is using $<=>$.
 #prooflike("Non-proof")[
   Let $r$ be the least positive real number.
 
-  Either $r=1$ or $r<1$ or $r>1$. #fade[[This is a trichotony.]]
+  Either $r=1$ or $r<1$ or $r>1$. #fade[[This is a trichotomy.]]
 
   If $r<1$, then $0<r^2 <r$. However, $r$ is the least positive real number. $smash$
 
@@ -154,7 +154,7 @@ If $A$ and $B$ are #ponder("set-theory.statement")[assertions], we can write:
 
 === Truth Tables
 
-The truth of these #ponder("set-theory.statement")[assertions] depends on the truth of $A$ and $B$, and can be summerized in a *truth table*.
+The truth of these #ponder("set-theory.statement")[assertions] depends on the truth of $A$ and $B$, and can be summarized in a *truth table*.
 
 #align(center)[
   #table(
@@ -167,7 +167,7 @@ The truth of these #ponder("set-theory.statement")[assertions] depends on the tr
   )
 ]
 
-Note, _e.g._, that $not (A and B)$ is equivalent to $(not A) or not B)$, by comparing truth tables.
+Note, _e.g._, that $not (A and B)$ is equivalent to $(not A) or (not B)$, by comparing truth tables.
 
 Also, $A=>B$ is equivalent to $(not A) or B$, and hence $B or (not A)$, and so to $(not B) => (not A)$. This is called the *contrapositive*.
 
@@ -179,7 +179,7 @@ We have
 
 $
   not(forall x, A(x)) & <=> exists x, not A(x) \
-    not (exists B(x)) & <=> forall x, not B(x).
+ not (exists x, B(x)) & <=> forall x, not B(x).
 $
 
 #remark[

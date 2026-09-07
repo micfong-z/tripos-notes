@@ -49,8 +49,14 @@ We can find #ponder("ode.particular-integral")[particular integrals] based on th
   [*$f_n$*], [*$y_n^((p))$*],
   $k^n$, $A k^n quad ("if" k != k_1 "or" k_2)$,
   $k_1^n$, $A n k_1^n$,
-  $n^p quad (p in ZZ_(>=0))$, $A n^p + B n^(p-1) + ... + C_n + D$,
+  $n^p quad (p in ZZ_(>=0))$, $A n^p + B n^(p-1) + ... + C n + D$,
 )
+
+#remark[
+  If the #ponder("ode.homogeneous-differential-equation")[homogeneous equation] is degenerate, that is $k_1 = k_2$, we may need to multiply by higher powers of $n$ to find a #ponder("ode.particular-integral")[particular integral], in the form
+  $ y_n^((p)) = A n^(2) k_1^n $
+  for a 2nd order degenerate case.
+]
 
 #example[Fibbonacci Sequence][
   Consider the sequence with conditions

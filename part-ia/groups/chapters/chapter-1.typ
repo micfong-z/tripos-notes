@@ -176,7 +176,7 @@ which tells us the following.
 
 #exercise[
   Show that, if $G$ is a #ponder("algebra.group")[group], then for $a in G$ and $m, n in ZZ$,
-  $ a^m dot a^n = a^(m+1) quad "and" quad (a^n)^m = a^(n m). $
+  $ a^m dot a^n = a^(m+n) quad "and" quad (a^n)^m = a^(n m). $
 ]
 
 Recall that it is *not* necessarily true that $a dot b = b dot a$ in a #ponder("algebra.group")[group] $G$. Hence, it is also *not* necessarily true that $(a dot b)^(-1) = a^(-1) dot b^(-1).$
@@ -191,10 +191,10 @@ Recall that it is *not* necessarily true that $a dot b = b dot a$ in a #ponder("
 #proof[
   We have
   $
-    (a dot b)^(-1) dot (b^(-1) dot a^(-1)) & = (a dot (b dot b^(-1))) dot a^(-1) \
-                                           & = (a dot e) dot a^(-1) \
-                                           & = a dot a^(-1) \
-                                           & = e. \
+    (a dot b) dot (b^(-1) dot a^(-1)) & = (a dot (b dot b^(-1))) dot a^(-1) \
+                                      & = (a dot e) dot a^(-1) \
+                                      & = a dot a^(-1) \
+                                      & = e. \
   $
 
   Since #ponder("algebra.inverse-element")[inverses] are unique, the result follows.
@@ -247,7 +247,7 @@ We need to introduce some definitions before we introduce the notion of a #ponde
 
 #definition("Bijection")[
   Let $X, Y$ be sets. A *#ponder("algebra.bijection")[bijection]* is a map $f:X->Y$ that has an #ponder("algebra.inverse-element")[inverse] $g:Y->X$ such that
-  $ f compose g = "id"_X quad "and" quad g compose f = "id"_Y. $
+  $ g compose f = "id"_X quad "and" quad f compose g = "id"_Y. $
   _i.e._ $g compose f (x) = x$ for all $x in X$, and $f compose g (y) = y$ for all $y in Y$.
 ] <bijection>
 
@@ -284,7 +284,7 @@ Recall that $g compose f(x) = g(f(x))$.
 This makes it easy to see that $sym(X)$ is a #ponder("algebra.group")[group].
 
 #proposition[
-  For any set $X$, $(sym(X), compose, "id"_x)$ is a #ponder("algebra.group")[group].
+  For any set $X$, $(sym(X), compose, "id"_X)$ is a #ponder("algebra.group")[group].
 ] <sym-group-is-group>
 
 #proof[
@@ -358,7 +358,7 @@ Sometimes, we want to restrict our attention to smaller #ponder("algebra.group")
 ] <proper-subgroup>
 
 #proposition()[
-  If $H <= ZZ$, then $H = n ZZ$ for some $n = ZZ_(>=0)$.
+  If $H <= ZZ$, then $H = n ZZ$ for some $n in ZZ_(>=0)$.
 ] <subgroups-of-integers>
 
 #proof[
@@ -366,7 +366,7 @@ Sometimes, we want to restrict our attention to smaller #ponder("algebra.group")
 
   Otherwise, if $H != {0}$, we may choose $n in H \\ {0}$ to be the smallest positive $n in H$. #fade[[Note that, if $x in H$ and $x <0$, then $-x in H$ and $-x > 0$. Therefore, unless $H={0}$, $H$ contains a positive element.]]
 
-  By induction, we see that $n k in H$ for all $k = ZZ^+$. By the #ponder("algebra.group")[closure] of #ponder("algebra.inverse-element")[inverses], we conclude that $n k in H$ for all $k in ZZ$. Hence $n ZZ <= H$.
+  By induction, we see that $n k in H$ for all $k in ZZ^+$. By the #ponder("algebra.group")[closure] of #ponder("algebra.inverse-element")[inverses], we conclude that $n k in H$ for all $k in ZZ$. Hence $n ZZ <= H$.
 
   It remains to prove that $n ZZ = H$. We shall prove this by contradiction. Suppose that $n ZZ != H$, so there exists some $x in H$ such that $x in.not n ZZ$. Dividing by $n$ and taking remainders, we get
   $ x = n q + r $
@@ -432,17 +432,17 @@ Let $CC$ be the plane, equipped with the usual notion of distance.
 
   - Let $x' = f^(-1)(x), y' = f^(-1)(y)$. Then
 
-    $ abs(x'y') = abs(f(x')-f(y')) $
+    $ abs(x'-y') = abs(f(x')-f(y')) $
 
     because $f$ is an #ponder("geometry.isometry")[isometry]. So
 
-    $ abs(f^(-1)(x)f^(-1)(y)) = abs(f(f^(-1)(x))-f(f^(-1)(y))) = |x-y| $
+    $ abs(f^(-1)(x)-f^(-1)(y)) = abs(f(f^(-1)(x))-f(f^(-1)(y))) = |x-y| $
 
     and $f^(-1) in isom(X)$ as required.
 ]
 
 #definition("Dihedral groups")[
-  Let $X_n in CC$ be the $n$-gon with vertices ${ee^((2 ppi i k)/(n)):k = 0, ..., n-1}$ for $n >= 3$.
+  Let $X_n subset.eq CC$ be the $n$-gon with vertices ${ee^((2 ppi i k)/(n)):k = 0, ..., n-1}$ for $n >= 3$.
 
 
   #align(center)[
@@ -487,7 +487,7 @@ The proof will also give us a good desciption of all the elements. But first, we
 #lecture-separator(lecture: 5, date: "2025-10-20")
 
 #lemma("3 point lemma")[
-  Let $X subset.eq CC$ and $f in isom(X)$. If there are non-collinear points $x_1, x_2, x_3 in X$ such that $f(x_(i))=x_(i)$ for $i = 1, 2, 3$, then $f=id_x$.
+  Let $X subset.eq CC$ and $f in isom(X)$. If there are non-collinear points $x_1, x_2, x_3 in X$ such that $f(x_(i))=x_(i)$ for $i = 1, 2, 3$, then $f=id_X$.
 ] <3-point-lemma>
 
 #proof[
@@ -514,8 +514,8 @@ The proof will also give us a good desciption of all the elements. But first, we
 Now, to prove the theorem we stated above, we define two elements of $D_(2n)$:
 
 $
-  r(z) & = e^(2ppi ii)/(n) z quad &   "(a rotation)" \
-  s(z) & = overline(z) quad       & "(a reflection)" \
+  r(z) & = ee^((2 ppi ii)/(n)) z quad &   "(a rotation)" \
+  s(z) & = overline(z) quad           & "(a reflection)" \
 $
 
 
@@ -577,7 +577,7 @@ $
 
   #boxed-header[Step 2: $D_(2n) = {e, r, ..., r^(n-1), s, r s, ..., r^(n-1)s}$]
 
-  We have shown that ${r, s} in D_(2n)$. Therefore, by induction,
+  We have shown that ${r, s} subset.eq D_(2n)$. Therefore, by induction,
   $ {e, r, ..., r^(n-1), s, r s, ..., r^(n-1)s} subset.eq D_(2n). $
 
   To see that this is all the elements, let $f in D_(2n)$. We aim to prove that $f in {e, r, ..., r^(n-1), s, r s, ..., r^(n-1)s}$. We shall apply @3-point-lemma to complete this proof.
@@ -597,7 +597,7 @@ $
 
   - *For $y$ and $z$*:
 
-    Now, $r^(-k) compose f subset.eq D_(2n)$, so
+    Now, $r^(-k) compose f in D_(2n)$, so
 
     $
       abs(r^(-k) compose f(y) - x) & = abs(r^(-k) compose f(y) - r^(-k) compose f(x)) \
@@ -611,7 +611,7 @@ $
     1. $r^(-k) compose f(y) = y$ and $r^(-k) compose f(z) = z$,
     2. $r^(-k) compose f(y) = z$ and $r^(-k) compose f(z) = y$.
 
-    - *Case 1.* $r^(-k) compose f$ forms $x, y, z$.
+    - *Case 1.* $r^(-k) compose f$ fixes $x, y, z$.
 
       Since $x, y, z$ are not collinear,
       $ r^(-k) compose f = id_X $
@@ -646,7 +646,7 @@ $
   Now, we need to check that this list does not contain duplicate elements, so that $abs(D_(2n))=2n.$
 
 
-  First, if $0 <= k, l <= n$ such that
+  First, if $0 <= k, l < n$ such that
 
   $ r^k = r^l, $
 
@@ -663,7 +663,7 @@ $
 
   But then $z = s(y) = id_X(y) = y$, which is a contradiction. Therefore, $s != r^k$ for any $k$.
 
-  Now, if $r^k = r^l s$, then $s=r^k-l$, contradicting the previous case.
+  Now, if $r^k = r^l s$, then $s=r^(k-l)$, contradicting the previous case.
 
   Finally, if there exists $0<=k, l < n$ such that $r^k s = r^l s$, then multiplying by #ponder("algebra.inverse-element")[inverses] to the right by $s^(-1)$ gives
 
@@ -682,8 +682,8 @@ To understand the #ponder("algebra.group")[group] operations on $D_(2n)$, we nee
 #proof[
   By @3-point-lemma, it suffices to check that the two expressions do the same thing to $x, y, z$. Indeed,   with $x = 1$, $y = ee^((2ppi ii)/(n))$ and $z = ee^(-(2ppi ii)/(n))$,
   $
-    s r (z) & = overline(ee^(-(2 ppi i k)/(n))) & = & ee^((2ppi i k)/(n))  & = & r^(-1)(y) & = & r^(-1) s(z), \
-    s r (y) & = overline(ee^((2 ppi i k)/(n)))  & = & ee^(-(2ppi i k)/(n)) & = & r^(-1)(z) & = & r^(-1) s(y), \
-    s r (x) & = overline(1)                     & = & ee^(1)               & = & r^(-1)(x) & = & r^(-1) s(x). \
+    s r (z) & = overline(1)                   & = & 1                    & = & r^(-1)(y) & = & r^(-1) s(z), \
+    s r (y) & = overline(ee^((4 ppi ii)/(n))) & = & ee^(-(4ppi ii)/(n))  & = & r^(-1)(z) & = & r^(-1) s(y), \
+    s r (x) & = overline(ee^((2 ppi ii)/(n))) & = & ee^(-(2ppi ii)/(n))  & = & r^(-1)(x) & = & r^(-1) s(x). \
   $
 ]

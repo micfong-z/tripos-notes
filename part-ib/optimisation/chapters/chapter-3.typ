@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/mannot:0.4.0": markul
 
 #lecture-separator(lecture: 6, date: "2026-05-13")
 
@@ -11,9 +9,9 @@
   A *linear program* is a problem of the form
   $
     & "minimise"   && vb(c)^tp vb(x) \
-    & "subject to" && vb(a_i)^tp vb(x) >= vb(b_i) quad &  "for" i in M_1 \
-    &              && vb(a_i)^tp vb(x) <= vb(b_i) quad &  "for" i in M_2 \
-    &              && vb(a_i)^tp vb(x) = vb(b_i) quad  &  "for" i in M_3 \
+    & "subject to" && vb(a_i)^tp vb(x) >= b_i quad &  "for" i in M_1 \
+    &              && vb(a_i)^tp vb(x) <= b_i quad &  "for" i in M_2 \
+    &              && vb(a_i)^tp vb(x) = b_i quad  &  "for" i in M_3 \
     &              && x_j >= 0 quad                    &  "for" j in N_1 \
     &              && x_j <= 0 quad                    &  "for" j in N_2 \
     &              && x_j "is not constrained" quad    & "for" j in N_3.
@@ -43,7 +41,7 @@ $
 #proof[
   Adding slack variables, the lagrangian is given by
   $
-    lagr(vb(x), vb(s), vb(lambda)) &= vb(c)^tp vb(x) - sum_(i in M_1) lambda_i (vb(a_i)^tp vb(x) - vb(b_i) - s_i) - sum_(i in M_2) lambda_i (vb(a_i)^tp vb(x) - vb(b_i) + s_i) - sum_(i in M_3) lambda_i (vb(a_i)^tp vb(x) - vb(b_i))\
+    lagr(vb(x), vb(s), vb(lambda)) &= vb(c)^tp vb(x) - sum_(i in M_1) lambda_i (vb(a_i)^tp vb(x) - b_i - s_i) - sum_(i in M_2) lambda_i (vb(a_i)^tp vb(x) - b_i + s_i) - sum_(i in M_3) lambda_i (vb(a_i)^tp vb(x) - b_i)\
     &=sum_(j in N_1) (c_j - vb(lambda)^tp vb(A_j)) x_j + sum_(j in N_2) (c_j - vb(lambda)^tp vb(A_j)) x_j + sum_(j in N_3) (c_j - vb(lambda)^tp vb(A_j)) x_j + sum_(i in M_1) lambda_i s_i- sum_(i in M_2) lambda_i s_i + sum_(i) lambda_i b_i
   $
   where $vb(A_j)$ is the $j$-th column of $matbold(A)$. For the lagrangian to be bounded below, we must have
@@ -344,7 +342,7 @@ $
 ]
 
 #proof[
-  Note that we already have $matbold(A) vb(y) = vb(0)$ and $vb(y) >= vb(0)$.
+  Note that we already have $matbold(A) vb(y) = vb(b)$ and $vb(y) >= vb(0)$.
 
   In the $j^*$-th entry, we introduce an additional non-zero entry. However, since we chose $t^*$ to be maximum possible, exactly one among $y_B(1), ..., y_B(m)$ has become zero. Thus, $vb(y)$ has exactly $m$ non-zero entries, so $vb(y)$ is also a basic feasible solution.
 ]
@@ -360,7 +358,7 @@ $
     x_B(m), bar, bar, dots.c, bar;
   )
 $
-Recall that $matbold(B)^(-1) vb(A)_1 = -vb(d)_B$, if we drop the added $1$ component.
+Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if we drop the added $1$ component.
 
 #example[Simplex Method][
 
@@ -502,7 +500,7 @@ Recall that $matbold(B)^(-1) vb(A)_1 = -vb(d)_B$, if we drop the added $1$ compo
                                                  5, pivot(0), -1 slash 2, 0, 0, 1 slash 2, 0;
                                                  fade(x_4) thick 5, pivot(0), 3 slash 2, 1, 1, -1 slash 2, 0;
                                                  fade(x_1) thick pivot(5), important(1), pivot(1 slash 2), pivot(1), pivot(0), pivot(1 slash 2), pivot(0);
-                                                 fade(x_6) thick 10, pivot(0), 1, 0, 0, -1, 1
+                                                 fade(x_6) thick 10, pivot(0), 1, -1, 0, -1, 1
                                                )
       $
 
@@ -538,9 +536,9 @@ Recall that $matbold(B)^(-1) vb(A)_1 = -vb(d)_B$, if we drop the added $1$ compo
 
   2. Construct the initial simplex tableau, then
 
-    1. Find the pivot column $i$ such that $overline(c_i) < 0$.
+    1. Find the pivot column $j$ such that $overline(c_j) < 0$.
 
-    2. Find the pivot row $j$ such that $-x_B(j)/d_B(j)$ is minimum among all $j$ such that $d_B(j) < 0$. #fade[[Recall that $vb(d)_B = -matbold(B)^(-1) vb(A)_i$.]]
+    2. Find the pivot row $i$ such that $-x_B(i)/d_B(i)$ is minimum among all $i$ such that $d_B(i) < 0$. #fade[[Recall that $vb(d)_B = -matbold(B)^(-1) vb(A)_j$.]]
 
     3. Find the pivot entry, and then perform row operations to make all other entries in the pivot column zero, and the pivot entry one.
 

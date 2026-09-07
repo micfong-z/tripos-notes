@@ -1,5 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/xarrow:0.4.0": xarrow
 
 = #ponder("algebra.permutation")[Permutations]
 
@@ -48,7 +47,7 @@ This is nonetheless a bit cumbersome. A more compact notation is to write #ponde
 #example[
   For @ex-permutations, we have
   $
-    sigma & = mat(1, 3, 2) = mat(2, 3, 1) = mat(3, 2, 1), \
+    sigma & = mat(1, 3, 2) = mat(2, 1, 3) = mat(3, 2, 1), \
       tau & = mat(1, 2) = mat(2, 1).
   $
 ]
@@ -209,7 +208,7 @@ This discussion leads to a notion of #ponder("algebra.permutation-parity")[parit
     $
       sigma(i) = l + 1 > l = sigma (j).
     $
-    Therefore, if $i < j$ and ${i, j}$ is an inversion for $sigma$ but not for $sigma'$, while if $j < i$ and ${i, j}$ is an inversion for $sigma'$ but not for $sigma$.
+    Therefore, if $i < j$, then ${i, j}$ is an inversion for $sigma$ but not for $sigma'$, while if $j < i$, then ${i, j}$ is an inversion for $sigma'$ but not for $sigma$.
 
     In either case,
     $
@@ -275,7 +274,7 @@ This enables us to define the #ponder("algebra.sign-homomorphism")[sign homomorp
 #remark[
   The #ponder("algebra.cycle-type")[cycle type] makes it easy to determine the sign of a #ponder("algebra.permutation")[permutation].
 
-  Indeed, $ mat(a_1, ..., a_k) = mat(a_1, a_k), (a_1, a_(k-)1), ..., mat(a_1, a_3) mat(a_1, a_2) $
+  Indeed, $ mat(a_1, ..., a_k) = mat(a_1, a_k) mat(a_1, a_(k-1)) ... mat(a_1, a_3) mat(a_1, a_2) $
   so $mat(a_1, ..., a_k)$ is #ponder("algebra.permutation-parity")[even] iff $k$ is odd.
 
   More generally, a #ponder("algebra.cycle")[$(k_1, ..., k_l)$-cycle] is #ponder("algebra.permutation-parity")[even] iff $abs({"even" k_i})$ is even.
@@ -288,7 +287,7 @@ This enables us to define the #ponder("algebra.sign-homomorphism")[sign homomorp
 
 == #ponder("algebra.conjugation")[Conjugacy] in $S_n$ and $A_n$
 
-We shall apply what we have obtained so far to study #ponder("algebra.conjugation")[conjugacy] in $S_n$ in $A_n$. Recall that since $A_n$ is a #ponder("algebra.normal-subgroup")[normal subgroup] of $S_n$, the #ponder("algebra.conjugacy-class")[conjugacy class] of any element $alpha in A_n$ in $S_n$ is contained in $A_n$.
+We shall apply what we have obtained so far to study #ponder("algebra.conjugation")[conjugacy] in $S_n$ and $A_n$. Recall that since $A_n$ is a #ponder("algebra.normal-subgroup")[normal subgroup] of $S_n$, the #ponder("algebra.conjugacy-class")[conjugacy class] of any element $alpha in A_n$ in $S_n$ is contained in $A_n$.
 
 #theorem[#ponder("algebra.symmetric-group-conjugacy")[Conjugacy] in $S_n$][
   Two #ponder("algebra.permutation")[permutations] $sigma_1, sigma_2 in S_n$ are #ponder("algebra.conjugation")[conjugate] iff they have the same #ponder("algebra.cycle-type")[cycle type].
@@ -367,7 +366,7 @@ Therefore, it is also easy to count the sizes of #ponder("algebra.centraliser")[
   In $S_4$, we have
 
   $
-    C_(S_4) (mat(1, 2)mat(3, 4)) = abs(S_4) / abs(ccl_(S_4) (mat(1, 2) mat(3, 4))) = 24 / 3 = 8.
+    abs(C_(S_4) (mat(1, 2)mat(3, 4))) = abs(S_4) / abs(ccl_(S_4) (mat(1, 2) mat(3, 4))) = 24 / 3 = 8.
   $
 
   Indeed, we can make a list:
@@ -520,7 +519,7 @@ Finally, let us look at #ponder("algebra.conjugation")[conjugacy] in $S_5$ and $
   Note that
   - $e$ commutes with every element, so its #ponder("algebra.conjugacy-class")[conjugacy class] in $A_5$ is the same as in $S_5$.
 
-  - $mat(4, 5) <= C_(S_5) mat(1, 2, 3)$, so the #ponder("algebra.conjugacy-class")[conjugacy class] of $mat(1, 2, 3)$ remains intact in $A_5$.
+  - $mat(4, 5) in C_(S_5) mat(1, 2, 3)$, so the #ponder("algebra.conjugacy-class")[conjugacy class] of $mat(1, 2, 3)$ remains intact in $A_5$.
 
   - Since $15$ is odd, the #ponder("algebra.conjugacy-class")[conjugacy class] of $mat(1, 2) mat(3, 4)$ remains intact in $A_5$.
 

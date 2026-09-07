@@ -57,7 +57,7 @@
       x'_1 & = 2x_1 + x_2 \
       x'_2 & = x_1 - 4x_2.
     $
-    This is a #ponder("linear-algebra.linear-map")[linear map]. In this case, $im T = {lambda vec(2, 1) + mu vec(1, -3): lambda, mu in RR} = RR^2$ and $ker T = {bold(0)}$.
+    This is a #ponder("linear-algebra.linear-map")[linear map]. In this case, $im T = {lambda vec(2, 1) + mu vec(1, -4): lambda, mu in RR} = RR^2$ and $ker T = {bold(0)}$.
 ]
 
 We can carry out several operations on linear maps.
@@ -220,7 +220,7 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
     $
       im T = im matbold(M) = span {bold(C_1), bold(C_2), bold(C_3)} = span {bold(C_1), bold(C_2)} => rank(T) = 2,
     $
-    because we have that $vec(5, -2, 3) = 2 vec(1, 0, 1) + vec(3, -1, 2)$.
+    because we have that $vec(5, -2, 3) = 2 vec(3, -1, 2) - vec(1, 0, 1)$.
 
     Then, for the #ponder("linear-algebra.kernel-image")[kernel], we need
 
@@ -267,7 +267,7 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
 
   - $matbold("Rot")(theta) matbold("Ref")(2 phi) = matbold("Ref")(2 phi + theta)$
 
-  - $matbold("Ref")(2 theta) matbold("Rot")(phi) = matbold("Ref")(2 phi - theta)$
+  - $matbold("Ref")(2 theta) matbold("Rot")(phi) = matbold("Ref")(2 theta - phi)$
 ]
 
 === In $RR^3$
@@ -370,7 +370,7 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
   $
   where
   $
-    S_(i j)(lambda) = delta_(i j) + lambda a_i b_j.
+    S_(i j)(lambda) = delta_(i j) + lambda b_i a_j.
   $
 
 == Matrices in General
@@ -509,7 +509,7 @@ $
 
 === Matrix Inverses
 
-Consider three matrices $bold(M), bold(N), bold(L)$, satisfiying
+Consider three matrices $bold(M), bold(N), bold(L)$, satisfying
 
 - The size of $matbold(N)$ is $m times n$,
 - The size of $matbold(M)$ is $n times m$,
@@ -563,7 +563,7 @@ so the left and right inverses coincide. In this case, we say that $matbold(N)$ 
 
 #proposition[Properties of the transpose][
   1. $(matbold(M)^tp)^tp = matbold(M)$
-  2. If $bold(x)$ is a column vector $vec(x_1, dots.v, x_n)$, then $bold(x)^tp$ is the row vector $mat(x_1, dots.v, x_n)$.
+  2. If $bold(x)$ is a column vector $vec(x_1, dots.v, x_n)$, then $bold(x)^tp$ is the row vector $mat(x_1, dots.c, x_n)$.
   3. $(matbold(M) matbold(N))^tp = matbold(N)^tp matbold(M)^tp$
   4. $(alpha matbold(M) + beta matbold(N))^tp = alpha matbold(M)^tp + beta matbold(N)^tp$
 ] <prop-transpose-properties>
@@ -576,7 +576,7 @@ so the left and right inverses coincide. In this case, we say that $matbold(N)$ 
 ] <def-symmetric-antisymmetric-matrices>
 
 #definition[Hermitian conjugate][
-  Consider a matrix $matbold(M)$ of size $m times n$ with complex entries. Then, the #ponder("linear-algebra.hermitian-conjugate")[*Hermitian conjugate*] of $matbold(M)$ is the matrix $matbold(M)^dagger$ of size $n times m$ is the matrix
+  Consider a matrix $matbold(M)$ of size $m times n$ with complex entries. Then, the #ponder("linear-algebra.hermitian-conjugate")[*Hermitian conjugate*] of $matbold(M)$ is the matrix $matbold(M)^dagger$ of size $n times m$
   $ matbold(M)^dagger = overline(matbold(M)^tp) $
   with entries
   $ (matbold(M)^dagger)_(i j) = overline(M_(j i)) $
@@ -716,8 +716,8 @@ which describes the volume of the parallelepiped formed by the three vectors.
 Under the action of a $3 times 3$ matrix $matbold(M)$, volumes are scaled by a factor $det matbold(M)$, where
 $
   [matbold(M) bold(e_1), matbold(M) bold(e_2), matbold(M) bold(e_3)] &= [bold(C_1)(matbold(M)) , bold(C_2)(matbold(M)), bold(C_3)(matbold(M))]\
-  &= [M_(i 1) matbold(e_1), M_(j 2) matbold(e_2), M_(k 3) matbold(e_3)] \
-  &=M_(i 1) M_(j 2) M_(k 3) [bold(e_1), bold(e_2), bold(e_3)] \
+  &= [M_(i 1) matbold(e_i), M_(j 2) matbold(e_j), M_(k 3) matbold(e_k)] \
+  &=M_(i 1) M_(j 2) M_(k 3) [bold(e_i), bold(e_j), bold(e_k)] \
   &= epsilon_(i j k) M_(i 1) M_(j 2) M_(k 3)\
   &=: det matbold(M).
 $
@@ -756,7 +756,7 @@ And hence $det matbold(M) != 0$ iff ${matbold(M) bold(e_1), matbold(M) bold(e_2)
 
 Our goal is to generalise the #ponder("linear-algebra.levi-civita-symbol")[Levi-Civita symbol] to $n$ dimensions to define the #ponder("linear-algebra.determinant")[determinant] of an $n times n$ matrix.
 
-#definition[Permuation][
+#definition[Permutation][
   A #ponder("algebra.permutation")[*permutation*] of a set $S$ is a #ponder("algebra.bijection")[bijection] $epsilon: S->S$.
 ]
 
@@ -788,8 +788,8 @@ $
             5, 6, 3, 1, 4, 2
           ) \
         & = mat(1, 2, 4, 5, 6; 5, 6, 1, 4, 2) \
-        & = mat(1, 4, 5; 5, 1, 2) mat(2, 6; 6, 2) \
-        & = mat(5, 1, 4) mat(6, 2)
+        & = mat(1, 4, 5; 5, 1, 4) mat(2, 6; 6, 2) \
+        & = mat(5, 4, 1) mat(6, 2)
   $
   where $mat(5, 4, 1)$ and $mat(6, 2)$ are called #ponder("algebra.cycle")[cycles].
 ]
@@ -816,7 +816,7 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
   $
     epsilon(rho) = (-1)^r
   $
-  where $r$ is the number of #ponder("algebra.transposition")[2-cycles] of $p$ when written as a product of $2$-cycles.
+  where $r$ is the number of #ponder("algebra.transposition")[2-cycles] of $rho$ when written as a product of $2$-cycles.
 
   In particular, if $epsilon(rho) = 1$, then $rho$ is an #ponder("algebra.permutation-parity")[*even*] #ponder("algebra.permutation")[permutation], and if $epsilon(rho) = -1$, then $rho$ is an #ponder("algebra.permutation-parity")[*odd*] #ponder("algebra.permutation")[permutation].
 ]
@@ -957,9 +957,9 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
   For (5), Suppose $bold(C_i)(matbold(M)) + lambda matbold(C_j) (matbold(M)) = 0$ for some $i != j$ and scalar $lambda$. Define $matbold(N)$ given by
 
   $
-    N_(i s) = cases(
-      M_(i s) & "if" s != i,
-      M_(i s) + lambda M_(j s) & "if" s = i
+    N_(r s) = cases(
+      M_(r s) & "if" s != i,
+      M_(r s) + lambda M_(r j) & "if" s = i
     ).
   $
   Then
@@ -1096,7 +1096,7 @@ for any fixed row $i$.
 
   Note that $rho sigma$ reorders $(1, ..., n)$ to $(i_1, ..., i_n)$. Thus,
   $
-    sigma(rho sigma) = epsilon_(i_1 ... i_n) & = epsilon(rho) epsilon(sigma) \
+    epsilon(rho sigma) = epsilon_(i_1 ... i_n) & = epsilon(rho) epsilon(sigma) \
                                              & = (-1)^(j - i_j) epsilon_(i_1 ... overline(i_j) ... i_n).
   $
   Hence, we can rewrite
@@ -1160,8 +1160,8 @@ This suggests a way to compute the inverse of a matrix using only #ponder("linea
     & = (x-1)^2 mat(delim: "|", 0, x, 1; -2, 0, 1; 1, -1, 0) & "by scaling in" bold(R_2) "and" bold(R_3) \
     & = (x-1)^2 mat(delim: "|", 0, x + 2, 0; -2, 0, 1; 1, -1, 0) & "by" bold(R_1) -> bold(R_1) - 2bold(R_3) - bold(R_2)\
     &= (x-1)^2 (x+2) mat(delim: "|", 0, 1, 0; -2, 0, 1; 1, -1, 0) & "by scaling in" bold(R_1) \
-    &= (x-1)^2(x+2) (-1) &"by direct computation"\
-    &= - (x-1)^2 (x+2). \
+    &= (x-1)^2(x+2) (1) &"by direct computation"\
+    &= (x-1)^2 (x+2). \
   $
 ] <ex-determinant-column-operations>
 
@@ -1183,7 +1183,7 @@ $ matbold(A) bold(x) = bold(b) $
 where
 $ matbold(A) = mat(A_(11), A_(12); A_(21), A_(22)), quad bold(x) = vec(x_1, x_2), quad bold(b) = vec(b_1, b_2). $
 
-Consider $(1) times A_(22) - (2) - A_(12)$, we have
+Consider $(1) times A_(22) - (2) times A_(12)$, we have
 $
   (A_(11) A_(22)- A_(21) A_(12)) x_1 = b_1 A_(22) - b_2 A_(12).
 $
@@ -1203,7 +1203,7 @@ $
 
 === General Case
 
-Consider a system of $n$ linear equations in $n$ unknown $x_o$ written is matrix form as
+Consider a system of $n$ linear equations in $n$ unknowns $x_i$ written in matrix form as
 $ matbold(A) bold(x) = bold(b) $
 where $matbold(A)$ is an $n times n$ matrix, $bold(x), bold(b) in RR^n$.
 
@@ -1219,7 +1219,7 @@ We shall consider three possible scenarios.
 3. If $det matbold(A) = 0$ and $matbold(b) in im matbold(A)$, then there are infinitely many solutions. We can find these solutions by considering
 
   $
-    bold(x) + bold(x_0) + bold(u)
+    bold(x) = bold(x_0) + bold(u)
   $
   where $bold(x_0)$ is a particular solution to the system, and $bold(u) in ker matbold(A)$.
 
@@ -1282,7 +1282,7 @@ We shall consider three possible scenarios.
   $ matbold(A)=mat(1, x, 1; 1, 1, x; x, 1, 1) $
   and $ bold(b) = vec(1, y, 1). $
   where $x, y in RR$ are some scalars.
-  We saw before that $ det matbold(A) = - (x-1)^2 (x+2). $
+  We saw before that $ det matbold(A) = (x-1)^2 (x+2). $
 
   1. Assume $det matbold(A) != 0 <=> x != 1, -2$. Then $matbold(A)^(-1)$ exists, and we can construct it from the matrix of cofactors.
 
@@ -1446,9 +1446,9 @@ The possible cases are as follows.
 
 1. $r = n <= m$ and $b_i^(r) = 0$ for all $i = r + 1, ..., m$. Then, there is a unique solution. To obtain it, we can first find $x_n$ from the $n$th equation, then substitute it into the $(n-1)$th equation to find $x_(n-1)$, and so on.
 
-2. $r < n$ and $b_i^(r) !=0$ for some $i = r + 1, ..., m$. Then, there is no solution.
+2. $b_i^(r) !=0$ for some $i = r + 1, ..., m$. Then, there is no solution.
 
-3. $r = m$ (and not necessarily $n = m$. Then $x_(r+1) ... x_n$ are undetermined. So, given any values of $b_1, ..., b_r$, we can solve $x_1, ..., x_r$. Then, there are infinitely many solutions given by varying $x_(r+1), ..., x_n$.
+3. $r < n$ and $b_i^(r) = 0$ for all $i = r + 1, ..., m$ (and not necessarily $n = m$). Then $x_(r+1) ... x_n$ are undetermined. So, given any values of $b_1, ..., b_r$, we can solve $x_1, ..., x_r$. Then, there are infinitely many solutions given by varying $x_(r+1), ..., x_n$.
 
 Note that this algorithm can also be written in matrix form by
 $

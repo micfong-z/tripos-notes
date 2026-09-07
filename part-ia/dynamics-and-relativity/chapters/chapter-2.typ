@@ -1,6 +1,4 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
-#import "@preview/unify:0.7.1": qty
 
 = Forces
 
@@ -145,7 +143,7 @@ $
   $
     (1)/(2) m v^2 - (G M m)/(R) & = E_"initial" \
                                 & = E_oo \
-                                & = (1)/(2) m v_0^2 - 0 > 0. \
+                                & = (1)/(2) m v_oo^2 - 0 > 0. \
   $
   Therefore we require
   $
@@ -153,7 +151,7 @@ $
   $
   Hence the #ponder("dynamics.escape-velocity")[escape velocity] is
   $
-    v_"escape" = sqrt((2 G M)/(R)) approx qty("10", "km/s") "for the Earth".
+    v_"escape" = sqrt((2 G M)/(R)) approx qty("11.2", "km/s") "for the Earth".
   $
 
   The mass $m$ is cancelled out, since the gravitational mass (that appears in the #ponder("dynamics.gravitational-force")[inverse square law]) is the same as the inertial mass (that appears in #ponder("dynamics.newtons-second-law")[Newton's 2nd law]).
@@ -218,10 +216,10 @@ $
 
 To check this,
 $
-  (dif bold(E))/(dif t) & = m bold(dot.double(x)) dot bold(dot(x)) + q bold(nabla) Phi dot bold(dot(x)) \
-                        & = (bold(F) + q bold(nabla) Phi) dot bold(dot(x)) \
-                        & = q (bold(dot(x)) times bold(B)) dot bold(dot(x)) quad                        & ("by Lorentz") \
-                        & = 0. \
+  (dif E)/(dif t) & = m bold(dot.double(x)) dot bold(dot(x)) + q bold(nabla) Phi dot bold(dot(x)) \
+                  & = (bold(F) + q bold(nabla) Phi) dot bold(dot(x)) \
+                  & = q (bold(dot(x)) times bold(B)) dot bold(dot(x)) quad                        & ("by Lorentz") \
+                  & = 0. \
 $
 
 The velocity-dependent force is #ponder("linear-algebra.orthogonality")[orthogonal] to the trajectory of the particle, so it does no work.
@@ -304,7 +302,7 @@ $
   $
     cases(
       x & = x_0 + A cos(omega t + phi),
-      y & = y_0 + A sin(omega t + phi).
+      y & = y_0 - A sin(omega t + phi).
     )
   $
 
@@ -344,7 +342,7 @@ More often than not the integral is not analytically solvable, but it is still u
 
 #lecture-separator(lecture: 4, date: "2026-01-29")
 
-From $E = (1)/(2) m dot(x)^2 + V(x)$, we get $E > V(x)$. This restricts the range of $x$ where the particle can be.
+From $E = (1)/(2) m dot(x)^2 + V(x)$, we get $E >= V(x)$. This restricts the range of $x$ where the particle can be.
 
 #align(center)[
   #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e6.svg", width: 32em)
@@ -368,7 +366,7 @@ We shall show that motion close to #ponder("ode.equilibrium-point")[equilibrium 
 
 Let $x_0$ be the #ponder("ode.equilibrium-point")[equilibrium point], the #ponder("calculus.taylor-series")[Taylor expansion] about $x_0$ gives
 $
-  V(x) & approx V(x_0) + (x-x_0) V'(x) + (1)/(2) (x-x_0)^2 V''(x_0) + ... \
+  V(x) & approx V(x_0) + (x-x_0) V'(x_0) + (1)/(2) (x-x_0)^2 V''(x_0) + ... \
        & approx V(x_0) + (1)/(2) (x-x_0)^2 V''(x_0) quad                  & "since" V'(x_0) = 0. \
 $
 
@@ -389,7 +387,7 @@ $
 
 - If $V''(x_0) < 0$, then we get an #ponder("ode.equilibrium-stability")[*unstable equilibrium*] point. The solution is
   $
-    x = x_0 = tilde(A) ee^(gamma t) + tilde(B) ee^(-gamma t)
+    x = x_0 + tilde(A) ee^(gamma t) + tilde(B) ee^(-gamma t)
   $
   where
   $
@@ -488,7 +486,7 @@ The fundamental principles of #ponder("dynamics.dimensional-analysis")[dimension
   $
   This gives
   $
-    C = 0, A = (1)/(2), B = (1)/(2).
+    C = 0, A = -(1)/(2), B = (1)/(2).
   $
   Therefore, the period is
   $
@@ -544,7 +542,7 @@ There are two common cases of #ponder("dynamics.friction")[friction] forces:
   The number of collisions depends on the density of the medium $rho$ and the cross-sectional area $A$ of the object, so $k_2 prop rho A$. We can also see this by #ponder("dynamics.dimensional-analysis")[dimensional analysis]:
 
   $
-          [F] & = M L T^2 \
+          [F] & = M L T^(-2) \
     [k_2 v^2] & = [k_2] (L T^(-1))^2 = [k_2] L^2 T^(-2) \
         [k_2] & = M L^(-1) = [rho A]. \
   $
@@ -563,7 +561,7 @@ $
   m (dif v)/(dif t)= - m g + k v^2.
 $
 
-The velocity starts at $0$, then increases. Initially, $"RHS"$ is dominated by $-m g$. Eventually, the two forces balance, giving a *terminal velocity*.
+The velocity starts at $0$, then decreases. Initially, $"RHS"$ is dominated by $-m g$. Eventually, the two forces balance, giving a *terminal velocity*.
 
 $
   v_"term" = -sqrt((m g)/(k))
@@ -577,7 +575,7 @@ $
 $
 So we have
 $
-  A = -C, quad B = -(1)/(2), quad B = C quad => quad C = -(1)/(2), A = -(1)/(2).
+  A = -C, quad B = -(1)/(2), quad B = C quad => quad C = -(1)/(2), A = (1)/(2).
 $
 Therefore,
 $
@@ -617,5 +615,5 @@ The three cases are
 - $omega_0^2 = alpha^2$, critical damping: $x = (A + B t) ee^(-alpha t)$.
 
 #remark[
-  Note that $x, dot.double(x)$ are invarant under time reversal $t -> -t$, but $dot(x) -> - dot(x)$. As far as we know, the fundamental laws of nature are invariant under CPT. #ponder("dynamics.friction")[Friction] forces are always off under T and cannot be fundamental forces.
+  Note that $x, dot.double(x)$ are invariant under time reversal $t -> -t$, but $dot(x) -> - dot(x)$. As far as we know, the fundamental laws of nature are invariant under CPT. #ponder("dynamics.friction")[Friction] forces are always odd under T and cannot be fundamental forces.
 ]

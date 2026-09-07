@@ -22,13 +22,13 @@ Some #ponder("algebra.group")[groups] are not set-theoretically _equal_, but non
     $ phi: G->H quad "with" quad g |-> e_H $
     for all $g in G$ is a #ponder("algebra.homomorphism")[homomorphism], called the *trivial #ponder("algebra.homomorphism")[homomorphism]*.
 
-  3. If $H <= G$, then the map
+  2. If $H <= G$, then the map
 
     $ i: H->G quad "with" quad h|->h $
 
     is the *inclusion #ponder("algebra.homomorphism")[homomorphism]*.
 
-  4. Recall that $C_n = {z in CC: z^n = 1}$.
+  3. Recall that $C_n = {z in CC: z^n = 1}$.
 
     #exercise[
       Show that if $n mid(|) m$, then
@@ -36,9 +36,9 @@ Some #ponder("algebra.group")[groups] are not set-theoretically _equal_, but non
       is a #ponder("algebra.homomorphism")[homomorphism].
     ]
 
-  5. Since $det(A B) = det(A) det(B)$, the determinant function
+  4. Since $det(A B) = det(A) det(B)$, the determinant function
 
-    $ det: G L_2(RR) -> (RR^*, times ) quad "with" quad A |-> det(A) $
+    $ det: GL_2(RR) -> (RR^*, times ) quad "with" quad A |-> det(A) $
 
     is a #ponder("algebra.homomorphism")[homomorphism].
 ]
@@ -233,7 +233,7 @@ The #ponder("algebra.group")[groups] $C_n teq ZZ_n$ that we have seen are exampl
 #theorem[
   If $G$ is #ponder("algebra.cyclic-group")[cyclic], then either
 
-  - $G teq C_n$ for some $n in ZZ$, or
+  - $G teq C_n$ for some $n in ZZ^+$, or
   - $G teq ZZ$.
 ] <cyclic-group-classification>
 
@@ -245,14 +245,14 @@ The #ponder("algebra.group")[groups] $C_n teq ZZ_n$ that we have seen are exampl
   #separator
 
   *Case 1.* If $n = oo$, Define
-  $ phi: ZZ->G quad "with" quad k |-> g^abs(k) $
+  $ phi: ZZ->G quad "with" quad k |-> g^k $
   We need to show that $phi$ is an #ponder("algebra.isomorphism")[isomorphism]. Since
   $ phi(k+l) = g^(k+l) = g^k g^l = phi(k)phi(l), $
   $phi$ is certainly a #ponder("algebra.homomorphism")[homomorphism].
 
   By the definition of #ponder("algebra.cyclic-group")[cyclic groups], $phi$ is #ponder("algebra.homomorphism-bijectivity")[surjective].
 
-  To prove that $phi$ is #ponder("algebra.homomorphism-bijectivity")[injective], for the purpose of contradiction, suppose that $0 != k in ker phi$. Since $ker phi <= ZZ$, we may replace $k$ by $-k$ if necessary, and assume $k > 0$. Then $k in S => S != emptyset$, which is a contradiction because $n in oo$. $smash$
+  To prove that $phi$ is #ponder("algebra.homomorphism-bijectivity")[injective], for the purpose of contradiction, suppose that $0 != k in ker phi$. Since $ker phi <= ZZ$, we may replace $k$ by $-k$ if necessary, and assume $k > 0$. Then $k in S => S != emptyset$, which is a contradiction because $n = oo$. $smash$
 
   Therefore, $ker phi = {0}$ so $phi$ is #ponder("algebra.homomorphism-bijectivity")[injective]. Hence, $phi$ is an #ponder("algebra.isomorphism")[isomorphism] and $G teq ZZ$.
 
@@ -280,7 +280,7 @@ The #ponder("algebra.group")[groups] $C_n teq ZZ_n$ that we have seen are exampl
 
   This proves that $phi$ is #ponder("algebra.homomorphism-bijectivity")[surjective].
 
-  To prove #ponder("algebra.homomorphism-bijectivity")[injectivity], suppose that $phi(k) = e$ for some $k in ZZ_n$ #fade[[this is equivalent to saying $k in ker phi$]]. Then $k in S$ or $k = 0$. Since $n$ is minimal in $S$, and that $n > 0$ and $phi(n) = e$, it follows that $k = 0$, because $k < n$. Therefore, $ker phi = {0}$ and $phi$ is #ponder("algebra.homomorphism-bijectivity")[injective].
+  To prove #ponder("algebra.homomorphism-bijectivity")[injectivity], suppose that $phi(k) = e$ for some $k in ZZ_n$ #fade[[this is equivalent to saying $k in ker phi$]]. Then $k in S$ or $k = 0$. Since $n = min S$ and $0 <= k < n$, we cannot have $k in S$, so it follows that $k = 0$. Therefore, $ker phi = {0}$ and $phi$ is #ponder("algebra.homomorphism-bijectivity")[injective].
 
   Therefore,
   $ G teq ZZ_n teq C_n. $
@@ -307,7 +307,7 @@ Because of this theorem, we will write $C_n$ for any #ponder("algebra.cyclic-gro
 
   Then, for any $l > 0$, we have
 
-  $ y x^(-l) = (y x) x^(1 - l) = x y x^(1-l) = ... = x^l y $
+  $ y x^(-l) = (y x^(-1)) x^(1 - l) = x y x^(1-l) = ... = x^l y $
 
   by induction on $l$.
 
@@ -334,7 +334,7 @@ Because of this theorem, we will write $C_n$ for any #ponder("algebra.cyclic-gro
 #proof[
   There are 4 cases to check:
 
-  1. $phi(r^k) phi(r^l) = a_k a^l = a^(k + l) = a^(k +_n l) = phi(r^(k + l))$
+  1. $phi(r^k) phi(r^l) = a^k a^l = a^(k + l) = a^(k +_n l) = phi(r^(k + l))$
   2. $phi(r^k) phi(r^l s) = a^k a^l b = a^(k + l) b = a^(k +_n l) b = phi(r^(k + l) s)$
   3. $phi(r^k s) phi(r^l) = a^k b a^l = a^k a^(-l) b = a^(k - l) b = phi(r^(k - l) s) = phi(r^k s r^l)$
   4. $phi(r^k s) phi(r^l s) = a^k b a^l b = a^k a^(-l) b^2 = a^(k - l) = phi(r^(k - l)) = phi(r^(k-l) s s) = phi(r^k s r^l s)$

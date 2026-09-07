@@ -34,7 +34,7 @@
         "fonts"
     ],
     "tinymist.systemFonts": false,
-    "tinymist.rootPath": ".",
+    // "tinymist.rootPath": ".",
     "tinymist.typstExtraArgs": [
         "--input",
         "theme=light",
@@ -43,6 +43,6 @@
     ],
     "files.exclude": {
         "**/.DS_Store": true,
-        "build": true
+        // "build": true
     }
 }
