@@ -5,6 +5,7 @@
 // import only the prelude.
 
 #import "/template/lib.typ": *
+#import "@preview/physica:0.9.8": *
 
 #let cp = sym.complement
 #let indep = sym.perp

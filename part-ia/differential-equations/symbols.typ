@@ -5,5 +5,6 @@
 // import only the prelude.
 
 #import "/template/lib.typ": *
+#import "@preview/physica:0.9.8": *
 
-// This course adds no notation beyond the shared template.
+// Beyond physica's vector and derivative notation, this course adds nothing.

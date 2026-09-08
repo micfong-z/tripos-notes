@@ -1,10 +1,10 @@
-For two particles with no external forces, let $bold(r) = bold(x_1) - bold(x_2)$ be the relative separation and $M bold(R) = m_1 bold(x_1) + m_2 bold(x_2)$. Then
+For two particles with no external forces, let $vb(r) = vb(x_1) - vb(x_2)$ be the relative separation and $M vb(R) = m_1 vb(x_1) + m_2 vb(x_2)$. Then
 $
-  bold(x_1) & = bold(R) + (m_2)/(M) bold(r) \
-  bold(x_2) & = bold(R) - (m_1)/(M) bold(r),
+  vb(x_1) & = vb(R) + (m_2)/(M) vb(r) \
+  vb(x_2) & = vb(R) - (m_1)/(M) vb(r),
 $
 and the kinetic energy becomes
 $
-  T = 1/2 M abs(bold(dot(R)))^2 + 1/2 mu abs(bold(dot(r)))^2, quad mu = (m_1 m_2)/(m_1 + m_2),
+  T = 1/2 M abs(vb(dot(R)))^2 + 1/2 mu abs(vb(dot(r)))^2, quad mu = (m_1 m_2)/(m_1 + m_2),
 $
-where $mu$ is the reduced mass. Moreover $mu bold(dot.double(r)) = bold(F_(12))$, so both the centre of mass motion and the relative separation behave like single particle problems. If $m_1 >> m_2$, then $mu approx m_2$: in this limit the heavy object is essentially still and the lighter object moves around it.
+where $mu$ is the reduced mass. Moreover $mu vb(dot.double(r)) = vb(F_(12))$, so both the centre of mass motion and the relative separation behave like single particle problems. If $m_1 >> m_2$, then $mu approx m_2$: in this limit the heavy object is essentially still and the lighter object moves around it.

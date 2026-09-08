@@ -1,13 +1,13 @@
-For a Gaussian vector $bold(X)$ define
+For a Gaussian vector $vb(X)$ define
 $
-  bold(mu) = EE[bold(X)] = vec(EE[X_1], ..., EE[X_n]) quad quad "and" quad quad matbold(V) = "Var"(bold(X)) = EE[(bold(X) - bold(mu)) (bold(X) - bold(mu))^tp].
+  vb(mu) = EE[vb(X)] = vec(EE[X_1], ..., EE[X_n]) quad quad "and" quad quad matbold(V) = "Var"(vb(X)) = EE[(vb(X) - vb(mu)) (vb(X) - vb(mu))^TT].
 $
-The entries of $matbold(V)$ are $"Var"(bold(X))_(i j) = "Cov"(X_i, X_j)$, so $matbold(V)$ is a symmetric matrix, and it is non-negative definite since
+The entries of $matbold(V)$ are $"Var"(vb(X))_(i j) = "Cov"(X_i, X_j)$, so $matbold(V)$ is a symmetric matrix, and it is non-negative definite since
 $
-  bold(u)^tp matbold(V) bold(u) = "Var"(bold(u)^tp bold(X)) >= 0 quad quad "for every" bold(u).
+  vb(u)^TT matbold(V) vb(u) = "Var"(vb(u)^TT vb(X)) >= 0 quad quad "for every" vb(u).
 $
-Moreover $bold(lambda)^tp bold(X) ~ N(bold(lambda)^tp bold(mu), bold(lambda)^tp matbold(V) bold(lambda))$ for every $bold(lambda)$, so
+Moreover $vb(lambda)^TT vb(X) ~ N(vb(lambda)^TT vb(mu), vb(lambda)^TT matbold(V) vb(lambda))$ for every $vb(lambda)$, so
 $
-  m(bold(lambda)) = EE[ee^(bold(lambda)^tp bold(X))] = exp(bold(lambda)^tp bold(mu) + 1/2 bold(lambda)^tp matbold(V) bold(lambda)).
+  m(vb(lambda)) = EE[ee^(vb(lambda)^TT vb(X))] = exp(vb(lambda)^TT vb(mu) + 1/2 vb(lambda)^TT matbold(V) vb(lambda)).
 $
-Since the MGF uniquely characterises the distribution when finite on an open set, a Gaussian vector is completely determined by $bold(mu)$ and $matbold(V)$.
+Since the MGF uniquely characterises the distribution when finite on an open set, a Gaussian vector is completely determined by $vb(mu)$ and $matbold(V)$.

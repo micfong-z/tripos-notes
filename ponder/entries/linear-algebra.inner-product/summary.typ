@@ -1,1 +1,1 @@
-$(bold(v), bold(w)) = overline((bold(w), bold(v)))$ with linearity in the second argument, anti-linearity in the first, and positive definiteness $(bold(v), bold(v)) >= 0$ with equality only at $bold(v) = bold(0)$.
+$iprod(vb(v), vb(w)) = overline(iprod(vb(w), vb(v)))$ with linearity in the second argument, anti-linearity in the first, and positive definiteness $iprod(vb(v), vb(v)) >= 0$ with equality only at $vb(v) = vb(0)$.

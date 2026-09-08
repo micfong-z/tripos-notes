@@ -1,6 +1,6 @@
 A real symmetric matrix $matbold(H)$ can be diagonalised by an orthogonal transformation. Using coordinates along the principal axes (eigenvectors), in $N$ dimensions
 $
-  delta x^tp matbold(H) delta x = sum_(i=1)^N lambda_i (delta x_i)^2,
+  delta x^TT matbold(H) delta x = sum_(i=1)^N lambda_i (delta x_i)^2,
 $
 so the sign of the quadratic form is determined entirely by the eigenvalues:
 

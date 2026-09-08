@@ -12,11 +12,11 @@ Different to the 1st order case, closed form solutions to #ponder("ode.order")[2
 
 The general form of a #ponder("ode.order")[2nd order] #ponder("ode.linear-differential-equation")[linear] #ponder("ode.ordinary-differential-equation")[ODE] with #ponder("ode.constant-coefficients")[constant coefficients] is
 $
-  underbracket(a (dif^(2) y)/(dif x^(2)) + b (dif y)/(dif x) + c y, cal(D)(y)) = f(x)
+  underbracket(a dv(y, x, 2) + b dv(y, x) + c y, cal(D)(y)) = f(x)
 $
 where $a, b, c$ are constants and $f(x)$ is a given function, and $cal(D)$ is the differential operator
 $
-  cal(D) equiv a (dif^(2))/(dif x^(2)) + b (dif)/(dif x) + c
+  cal(D) equiv a dv(, x, 2) + b dv(, x) + c
 $
 which is #ponder("ode.linear-differential-operator")[linear].
 
@@ -73,7 +73,7 @@ One can compare the two definitions above with the definition of vectors.
 
 Recall that
 $
-  (dif )/(dif x) ee^(lambda x) = lambda ee^(lambda x)
+  dv(, x) ee^(lambda x) = lambda ee^(lambda x)
 $
 so $ee^(lambda x)$ is also an #ponder("ode.eigenfunction")[eigenfunction] of $cal(D)$, where
 
@@ -116,7 +116,7 @@ There are two roots, $lambda_1, lambda_2$, to the characteristic equation, which
 #example[Real, non-degenerate roots][
   Consider the #ponder("ode.ordinary-differential-equation")[ODE]
   $
-    (dif^(2) y)/(dif x^(2)) - 5 (dif y)/(dif x) + 6 y = 0.
+    dv(y, x, 2) - 5 dv(y, x) + 6 y = 0.
   $
   The characteristic equation is
   $
@@ -134,7 +134,7 @@ There are two roots, $lambda_1, lambda_2$, to the characteristic equation, which
 #example[Complex, non-degenerate roots][
   Consider the #ponder("ode.ordinary-differential-equation")[ODE]
   $
-    (dif^(2) y)/(dif x^(2)) + 4 y = 0.
+    dv(y, x, 2) + 4 y = 0.
   $
   The characteristic equation is
   $
@@ -159,7 +159,7 @@ There are two roots, $lambda_1, lambda_2$, to the characteristic equation, which
 #example[Degenerate roots and "detuning"][
   Consider the #ponder("ode.ordinary-differential-equation")[ODE]
   $
-    (dif^(2) y)/(dif x^(2)) - 4 (dif y)/(dif x) + 4 y = 0.
+    dv(y, x, 2) - 4 dv(y, x) + 4 y = 0.
   $
   The characteristic equation is
   $
@@ -172,7 +172,7 @@ There are two roots, $lambda_1, lambda_2$, to the characteristic equation, which
   To find the second #ponder("ode.particular-integral")[complementary function], we can "detune" the equation slightly to remove the degeneracy, by considering a slightly modified equation:
 
   $
-    (dif^(2) y)/(dif x^(2)) - 4 (dif y)/(dif x) + (4 - epsilon^2) y = 0,
+    dv(y, x, 2) - 4 dv(y, x) + (4 - epsilon^2) y = 0,
   $
   where $epsilon << 1$.
 
@@ -186,7 +186,7 @@ There are two roots, $lambda_1, lambda_2$, to the characteristic equation, which
   $
     y_c &= A ee^((2+epsilon) x) + B ee^((2-epsilon) x)\
     &= ee^(2x) (A ee^(epsilon x) + B ee^(-epsilon x)) \
-    &= ee^(2x) [(A+B) + epsilon (A-B) x + O(A epsilon^2 x^2) + O(B epsilon^2 x^2)] quad "as" epsilon -> 0. quad ("Taylor series") \
+    &= ee^(2x) [(A+B) + epsilon (A-B) x + Order(A epsilon^2 x^2) + Order(B epsilon^2 x^2)] quad "as" epsilon -> 0. quad ("Taylor series") \
   $
 
   Consider the initial conditions $y(0) = C$, $y'(0) = D$ to both the original and detuned equations. We have
@@ -200,11 +200,11 @@ There are two roots, $lambda_1, lambda_2$, to the characteristic equation, which
               )
   $
   Therefore,
-  $ O(A epsilon^2 x^2) = O(epsilon x^2) -> 0 quad "as" epsilon -> 0. $
+  $ Order(A epsilon^2 x^2) = Order(epsilon x^2) -> 0 quad "as" epsilon -> 0. $
   We have
   $
-    alpha & = A + B        & = & O(1) \
-     beta & = epsilon(A-B) & = & O(1).
+    alpha & = A + B        & = & Order(1) \
+     beta & = epsilon(A-B) & = & Order(1).
   $
   Therefore, we can write the general #ponder("ode.particular-integral")[complementary function] as
   $
@@ -302,14 +302,14 @@ Hence, we can construct #ponder("calculus.taylor-series")[Taylor series] about $
 We say that the state of the system at any $x$ is fully specified by an $n$-dimensional solution vector.
 
 $
-  bold(Y)(x) = vec(y(x), y'(x), dots.v, y^(n-1)(x)).
+  vb(Y)(x) = vec(y(x), y'(x), dots.v, y^(n-1)(x)).
 $
 
 #remark[
 
-  - At any $x$, $bold(Y)(x)$ defines a point in $n$-dimensional phase space.
+  - At any $x$, $vb(Y)(x)$ defines a point in $n$-dimensional phase space.
 
-  - As $x$ varies, $bold(Y)(x)$ traces out a trajectory in phase space.
+  - As $x$ varies, $vb(Y)(x)$ traces out a trajectory in phase space.
 ]
 
 #example[
@@ -324,8 +324,8 @@ $
   Hence the solution vectors are
 
   $
-    bold(Y_1)(x) & = vec(cos 2x, -2 sin 2x) \
-    bold(Y_2)(x) & = vec(sin 2x, 2 cos 2x).
+    vb(Y_1)(x) & = vec(cos 2x, -2 sin 2x) \
+    vb(Y_2)(x) & = vec(sin 2x, 2 cos 2x).
   $
   In this case we have a 2D phase space.
 
@@ -333,7 +333,7 @@ $
     #dynamic-svg("/part-ia/differential-equations/media/d7e1.svg", width: 20em)
   ]
 
-  Note that $bold(Y)_1 (x)$ and $bold(Y)_2 (x)$ are #ponder("linear-algebra.linearly-independent-functions")[linearly independent] vectors, so we can use them as a basis for the phase space.
+  Note that $vb(Y)_1 (x)$ and $vb(Y)_2 (x)$ are #ponder("linear-algebra.linearly-independent-functions")[linearly independent] vectors, so we can use them as a basis for the phase space.
 ]
 
 === #ponder("linear-algebra.wronskian")[Wronskian] and #ponder("linear-algebra.linearly-dependent-functions")[Linear Dependence]
@@ -344,19 +344,19 @@ $ sum_(i=1)^N c_i y_i (x) = 0 quad forall x. $
 Hence, we can differentiate this equation $N-1$ times to get
 
 $
-  sum_(i=1)^N c_i bold(Y)_i (x) = bold(0) quad forall x.
+  sum_(i=1)^N c_i vb(Y)_i (x) = vb(0) quad forall x.
 $
 
-so ${y_i}$ being linearly dependent implies that ${bold(Y)_i}$ is linearly dependent.
+so ${y_i}$ being linearly dependent implies that ${vb(Y)_i}$ is linearly dependent.
 
 #definition[Fundamental matrix][
-  Given $n$ solution vectors ${bold(Y)_i (x)}$ of an #ponder("ode.order")[$n$th order] #ponder("ode.linear-differential-equation")[linear] #ponder("ode.ordinary-differential-equation")[ODE],
+  Given $n$ solution vectors ${vb(Y)_i (x)}$ of an #ponder("ode.order")[$n$th order] #ponder("ode.linear-differential-equation")[linear] #ponder("ode.ordinary-differential-equation")[ODE],
   the *fundamental matrix* is the $n times n$ matrix whose columns are the solution vectors:
 
   $
     mat(
       bar, bar, , bar;
-      bold(Y_1), bold(Y_2), dots.c, bold(Y_n);
+      vb(Y_1), vb(Y_2), dots.c, vb(Y_n);
       bar, bar, , bar
     )
   $
@@ -369,7 +369,7 @@ so ${y_i}$ being linearly dependent implies that ${bold(Y)_i}$ is linearly depen
     W(x) & = det[
              mat(
                bar, bar, , bar;
-               bold(Y_1), bold(Y_2), dots.c, bold(Y_n);
+               vb(Y_1), vb(Y_2), dots.c, vb(Y_n);
                bar, bar, , bar
              )
            ] \
@@ -461,7 +461,7 @@ We can find $W(x)$ without knowing the solutions explicitly.
   $ y_1y'_2 - y_2y'_1 = W(x_0) exp[-integral_(x_0)^x p(u) dif u]. $
   Dividing both sides by $y_1^2$, we get
   $
-    (dif)/(dif x) (y_2 / y_1) = (W(x_0))/(y_1^2) exp[- integral_(x_0)^x p(u) dif u].
+    dv(, x) (y_2 / y_1) = (W(x_0))/(y_1^2) exp[- integral_(x_0)^x p(u) dif u].
   $
   This is the same as we had using reduction of order.
 ]
@@ -492,14 +492,14 @@ These #ponder("ode.ordinary-differential-equation")[ODEs] are related to #ponder
   We have
 
   $
-       (dif g(alpha x))/(dif x) & = (dif g (alpha x))/(dif (alpha x) dif(alpha x)/(dif x)) = g'(alpha x) alpha \
-              x (dif y)/(dif x) & = (alpha x) g'(alpha x) \
-    x^2 (dif^(2) y)/(dif x^(2)) & = (alpha x)^2 g''(alpha x).
+       dv(g(alpha x), x) & = dv(g(alpha x), (alpha x)) dv((alpha x), x) = g'(alpha x) alpha \
+              x dv(y, x) & = (alpha x) g'(alpha x) \
+    x^2 dv(y, x, 2) & = (alpha x)^2 g''(alpha x).
   $
   Therefore,
 
   $
-    a x^2 (dif^(2) y)/(dif x^(2)) + b x (dif y)/(dif x) + c y & = a (alpha x)^2 g''(alpha x) + b (alpha x) g'(alpha x) + c g(alpha x) \
+    a x^2 dv(y, x, 2) + b x dv(y, x) + c y & = a (alpha x)^2 g''(alpha x) + b (alpha x) g'(alpha x) + c g(alpha x) \
     & = a u^2 g''(u) + b u g'(u) + c g(u).\
     &= 0 quad "(since" g "is a solution of the homogeneous equation)" \
   $
@@ -507,8 +507,8 @@ These #ponder("ode.ordinary-differential-equation")[ODEs] are related to #ponder
 
 === Solving by #ponder("ode.eigenfunction")[Eigenfunctions]
 
-$ x (dif )/(dif x) (x^k) & = k x^k \ $
-so $x^k$ is an #ponder("ode.eigenfunction")[eigenfunction] of the operator $x (dif )/(dif x)$ with eigenvalue $k$.
+$ x dv(, x) (x^k) & = k x^k \ $
+so $x^k$ is an #ponder("ode.eigenfunction")[eigenfunction] of the operator $x dv(, x)$ with eigenvalue $k$.
 
 It suggests that we should look for #ponder("ode.particular-integral")[complementary functions] of the form $y = x^k$. Substituting into the #ponder("ode.homogeneous-differential-equation")[homogeneous equation], we get
 
@@ -525,13 +525,13 @@ if $k_1 != k_2$.
 
 Substitute $z = ln x$, then
 $
-  (dif y)/(dif z) & = (dif x)/(dif z) (dif y)/(dif x) \
-  (dif^(2) y)/(dif z^(2)) & = underbracket(e^z (dif y)/(dif x), x (dif y)/(dif x)) + underbracket(e^(2z) (dif^(2) y)/(dif x^(2)), x^2 (dif^2 y)/(dif x^2)).
+  dv(y, z) & = dv(x, z) dv(y, x) \
+  dv(y, z, 2) & = underbracket(e^z dv(y, x), x dv(y, x)) + underbracket(e^(2z) dv(y, x, 2), x^2 dv(y, x, 2)).
 $
 Substituting into the #ponder("ode.ordinary-differential-equation")[ODE], we get
 $
-  a ((dif^(2) y)/(dif z^(2)) - (dif y)/(dif z) ) + b (dif y)/(dif z) + c y & = f(e^z) \
-                 a (dif^(2) y)/(dif z^(2)) + (b - a) (dif y)/(dif z) + c y & = f(e^z).
+  a (dv(y, z, 2) - dv(y, z) ) + b dv(y, z) + c y & = f(e^z) \
+                 a dv(y, z, 2) + (b - a) dv(y, z) + c y & = f(e^z).
 $
 
 Now we have a #ponder("ode.linear-differential-equation")[linear ODE] with #ponder("ode.constant-coefficients")[constant coefficients] in the variable $z$, which we can solve using the methods discussed earlier. The characteristic equation is
@@ -561,7 +561,7 @@ We will discuss the methods to find #ponder("ode.particular-integral")[particula
 
 We have the form
 $
-  a (dif^(2) y)/(dif x^(2)) + b (dif y)/(dif x) + c y = f(x).
+  a dv(y, x, 2) + b dv(y, x) + c y = f(x).
 $
 
 Now, use the following ansatz for $y_p$ depending on the form of $f(x)$:
@@ -698,11 +698,11 @@ $ y'' + p(x) y' + q(x) y = f(x) $
 
 with #ponder("linear-algebra.linearly-independent-functions")[linearly independent] #ponder("ode.particular-integral")[complementary functions] $y_1$ and $y_2$.
 
-We will use solution vectors $bold(Y)_1 (x)$ and $bold(Y)_2 (x)$ as a basis in phase space at any $x$ to write the solution vector for the particular integral.
+We will use solution vectors $vb(Y)_1 (x)$ and $vb(Y)_2 (x)$ as a basis in phase space at any $x$ to write the solution vector for the particular integral.
 
 We have
 $
-  bold(Y_p)(x) = u (x) bold(Y)_1 (x) + v (x) bold(Y)_2 (x).
+  vb(Y_p)(x) = u (x) vb(Y)_1 (x) + v (x) vb(Y)_2 (x).
 $
 The components are
 $
@@ -727,7 +727,7 @@ $
 Therefore,
 $ u' y'_1 + v' y'_2 & = f(x). $
 
-Note that the second component of $bold(Y_p)$ must be consistent with the derivative of the first component. Therefore, we have the additional constraint
+Note that the second component of $vb(Y_p)$ must be consistent with the derivative of the first component. Therefore, we have the additional constraint
 $
   u'y_1 + u y'_1 + v'y_2 + v y'_2 & = y'_p = u y'_1 + v y'_2 \
                   u' y_1 + v' y_2 & = 0.
@@ -807,7 +807,7 @@ where $m, b, k$ are positive constants.
 
 For $b = 0$ and $F(t) = 0$, we have simple harmonic motion at angular frequency $omega_0 = sqrt((k)/(m)).$
 
-For convenience, we will add in a dimensionless time coordinate $tau = omega_0 t$. Then we have $(dif y)/(dif t) = omega_0 (dif y)/(dif tau)$. Therefore,
+For convenience, we will add in a dimensionless time coordinate $tau = omega_0 t$. Then we have $dv(y, t) = omega_0 dv(y, tau)$. Therefore,
 $
   y'' + 2 kappa y' + y = f(tau)
 $
@@ -1134,7 +1134,7 @@ The general rule for higher order #ponder("ode.ordinary-differential-equation")[
 By the #ponder("calculus.fundamental-theorem-of-calculus")[fundamental theorem of calculus], we have
 
 $
-  (dif H(x))/(dif x) = delta(x).
+  dv(H(x), x) = delta(x).
 $
 
 #definition[Ramp function][

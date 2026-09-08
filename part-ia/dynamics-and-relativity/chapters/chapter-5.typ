@@ -12,15 +12,15 @@ The only motions a #ponder("dynamics.rigid-body")[rigid body] can undergo are tr
 
 == Angular Velocity
 
-In three dimensions, rotations are described by an angular velocity vector $bold(omega)$. We write
+In three dimensions, rotations are described by an angular velocity vector $vb(omega)$. We write
 $
-  bold(omega) = omega bold(hat(n)),
+  vb(omega) = omega vu(n),
 $
-where $bold(hat(n))$ points along the axis of rotation, and $omega = abs(bold(omega)) = dot(theta)$ is the angular speed of rotation. The direction of $bold(omega)$ is determined by the right hand rule.
+where $vu(n)$ points along the axis of rotation, and $omega = abs(vb(omega)) = dot(theta)$ is the angular speed of rotation. The direction of $vb(omega)$ is determined by the right hand rule.
 
 This is captured by the equation
 $
-  bold(dot(x)) = bold(omega) times bold(x).
+  vb(dot(x)) = vb(omega) times vb(x).
 $
 
 #align(center)[
@@ -29,18 +29,18 @@ $
 
 We have
 
-- $bold(dot(x))$ orthogonal to both $bold(omega)$ and $bold(x)$
+- $vb(dot(x))$ orthogonal to both $vb(omega)$ and $vb(x)$
 
-- $abs(bold(dot(x))) = omega abs(bold(x)) sin phi = omega d$
+- $abs(vb(dot(x))) = omega abs(vb(x)) sin phi = omega d$
 
-Hence indeed $omega = abs(dot(theta))$. Note that $d = abs(bold(hat(n)) times bold(x))$.
+Hence indeed $omega = abs(dot(theta))$. Note that $d = abs(vu(n) times vb(x))$.
 
 In addition to the angular velocity, a rotation must specify a point about which the axis of ration passes, since there are infinitely many parallel axis an object can rotate about.
 
-$bold(x)$ in the equation $bold(dot(x)) = bold(omega) times bold(x)$ is the position relative to some (any) point on the axis of rotation.
+$vb(x)$ in the equation $vb(dot(x)) = vb(omega) times vb(x)$ is the position relative to some (any) point on the axis of rotation.
 
 #remark[
-  The equations above instantaeous behavior of a particle, so $bold(omega)$ can depend on $t$.
+  The equations above instantaeous behavior of a particle, so $vb(omega)$ can depend on $t$.
 ]
 
 #lecture-separator(lecture: 11, date: "2026-02-17")
@@ -49,25 +49,25 @@ $bold(x)$ in the equation $bold(dot(x)) = bold(omega) times bold(x)$ is the posi
 
 Rotation of a particle involves kinetic energy. For a single particle, we have
 $
-  T = (1)/(2) m bold(dot(x))^2 & = (1)/(2) m (bold(omega) times bold(x))^2 \
+  T = (1)/(2) m vb(dot(x))^2 & = (1)/(2) m (vb(omega) times vb(x))^2 \
                                & = (1)/(2) m omega^2 d^2 \
 $
-where $d = abs(bold(hat(n)) times bold(x))$ is the perpendicular distance of particle from an axis of rotation.
+where $d = abs(vu(n) times vb(x))$ is the perpendicular distance of particle from an axis of rotation.
 
 In a #ponder("dynamics.rigid-body")[rigid body], all particles rotate with the same angular velocity:
 $
-  bold(dot(x)_i) = bold(omega) times bold(x)_i.
+  vb(dot(x)_i) = vb(omega) times vb(x)_i.
 $
 
 This keeps the distances between particles fixed, since
 $
-  (dif)/(dif t) abs(bold(x_i) - bold(x_j))^2 = 2 (bold(dot(x)_i) - bold(dot(x)_j)) dot (bold(x)_i - bold(x)_j) = 2 (bold(omega) times (bold(x)_i - bold(x)_j)) dot (bold(x)_i - bold(x)_j) = 0.
+  dv(, t) abs(vb(x_i) - vb(x_j))^2 = 2 (vb(dot(x)_i) - vb(dot(x)_j)) dot (vb(x)_i - vb(x)_j) = 2 (vb(omega) times (vb(x)_i - vb(x)_j)) dot (vb(x)_i - vb(x)_j) = 0.
 $
 
 
 The kinetic energy of a #ponder("dynamics.rigid-body")[rigid body] is then
 $
-  T =(1)/(2) sum_i m_i bold(dot(x)_i)^2 & = (1)/(2) I omega^2,
+  T =(1)/(2) sum_i m_i vb(dot(x)_i)^2 & = (1)/(2) I omega^2,
 $ <kinetic-energy-of-rigid-body>
 
 where $ I = sum_i m_i d_i^2 $ is the #ponder("dynamics.moment-of-inertia")[*moment of inertia*] of the #ponder("dynamics.rigid-body")[rigid body] about the axis of rotation.
@@ -80,26 +80,26 @@ In @kinetic-energy-of-rigid-body, see that $I$ is effectively a _rotational mass
 
 The *angular momentum* of a #ponder("dynamics.rigid-body")[rigid body] is
 $
-  bold(L) & = sum_i m_i bold(x_i) times bold(dot(x)_i) \
-          & = sum_i m_i bold(x_i) times (bold(omega) times bold(x_i)).
+  vb(L) & = sum_i m_i vb(x_i) times vb(dot(x)_i) \
+          & = sum_i m_i vb(x_i) times (vb(omega) times vb(x_i)).
 $
 
-In this course, we only consider the component of $bold(L)$ along the axis of rotation, so define
+In this course, we only consider the component of $vb(L)$ along the axis of rotation, so define
 $
-  L & = bold(L) dot bold(hat(n)) \
-    & = omega sum_i m_i [bold(x_i) times (bold(hat(n)) times bold(x_i))] dot bold(hat(n)) \
-    & =omega sum_i m_i (bold(hat(n)) times bold(x_i)) dot (bold(hat(n)) times bold(x_i)) \
+  L & = vb(L) dot vu(n) \
+    & = omega sum_i m_i [vb(x_i) times (vu(n) times vb(x_i))] dot vu(n) \
+    & =omega sum_i m_i (vu(n) times vb(x_i)) dot (vu(n) times vb(x_i)) \
     & = omega sum_i m_i d_i^2 \
     & = omega I.
 $
 
 Again, we can observe that $I$ is a _rotational mass_.
 
-Recall that torque causes change in the angular momentum, as $bold(dot(L)) = bold(G)$. If the torque is also along the axis of rotation, then we can write
+Recall that torque causes change in the angular momentum, as $vb(dot(L)) = vb(G)$. If the torque is also along the axis of rotation, then we can write
 $
-  bold(G) = G bold(hat(n)),
+  vb(G) = G vu(n),
 $
-and dotting $bold(dot(L)) = bold(G)$ with $bold(hat(n))$ gives
+and dotting $vb(dot(L)) = vb(G)$ with $vu(n)$ gives
 $
   G = I dot(omega).
 $
@@ -108,10 +108,10 @@ Hence $G$ acts like a _rotational force_, causing change in the angular velocity
 To calculate the #ponder("dynamics.moment-of-inertia")[moment of inertia], we use the fact that at large $N$, the particles are densely spaced, and the sums can be approximated by integrals.
 
 $
-  sum_i m_i f(bold(x)_i) approx integral f(bold(x)) rho(bold(x)) dif^3 bold(x)
+  sum_i m_i f(vb(x)_i) approx integral f(vb(x)) rho(vb(x)) dif^3 vb(x)
 $
 
-where $rho(bold(x))$ is the density of mass of the #ponder("dynamics.rigid-body")[rigid body]. We typically consider uniform density, so
+where $rho(vb(x))$ is the density of mass of the #ponder("dynamics.rigid-body")[rigid body]. We typically consider uniform density, so
 $
   rho(x) = rho_0,
 $
@@ -119,11 +119,11 @@ which is a constant.
 
 For example, we have
 $
-  M & = sum_i m_i = integral rho(bold(x)) dif^3 bold(x) \
-  I & = integral rho(bold(x)) x_perp^2 dif^3 bold(x)
+  M & = sum_i m_i = integral rho(vb(x)) dif^3 vb(x) \
+  I & = integral rho(vb(x)) x_perp^2 dif^3 vb(x)
 $
 
-where $x_perp$ is the perpendicular distance from $bold(x)$ to the axis of rotation.
+where $x_perp$ is the perpendicular distance from $vb(x)$ to the axis of rotation.
 
 #example[Moment of Inertia of Rigid Bodies with Uniform Density][
   1. Consider a rotating hoop of radius $a$. We have
@@ -224,31 +224,31 @@ We will now consider less symmetric axes.
 ] <thm-parallel-axis-theorem>
 
 #proof[
-  To prove this, we will express all positions relative to the #ponder("dynamics.centre-of-mass")[centre of mass]. Choose an origin on the parallel axis, and let $bold(x_i)$ be the position of particle $i$ relative to this origin. Then
+  To prove this, we will express all positions relative to the #ponder("dynamics.centre-of-mass")[centre of mass]. Choose an origin on the parallel axis, and let $vb(x_i)$ be the position of particle $i$ relative to this origin. Then
   $
-    bold(x_i) = bold(R) + bold(y_i)
+    vb(x_i) = vb(R) + vb(y_i)
   $
 
-  where $bold(R)$ is the position of the #ponder("dynamics.centre-of-mass")[centre of mass], and $bold(y_i)$ is the position of particle $i$ relative to the #ponder("dynamics.centre-of-mass")[centre of mass]. Note
+  where $vb(R)$ is the position of the #ponder("dynamics.centre-of-mass")[centre of mass], and $vb(y_i)$ is the position of particle $i$ relative to the #ponder("dynamics.centre-of-mass")[centre of mass]. Note
   $
-    sum_i m_i bold(y_i) = bold(0).
+    sum_i m_i vb(y_i) = vb(0).
   $
 
   #lecture-separator(lecture: 12, date: "2026-02-19")
 
   We have
   $
-    I & = sum_i m_i underbracket((bold(hat(n)) times bold(x_i))^2, d_i^2) \
-    & = sum_i m_i [bold(hat(n))times [bold(R + bold(y_i))]]^2 \
-    &= sum_i m_i [(bold(hat(n))times bold(R))^2 + 2 (bold(hat(n)) times bold(R)) dot (hat(n) times bold(y_i)) + (bold(hat(n))times bold(y_i))^2] \
+    I & = sum_i m_i underbracket((vu(n) times vb(x_i))^2, d_i^2) \
+    & = sum_i m_i [vu(n) times [vb(R) + vb(y_i)]]^2 \
+    &= sum_i m_i [(vu(n)times vb(R))^2 + 2 (vu(n) times vb(R)) dot (hat(n) times vb(y_i)) + (vu(n)times vb(y_i))^2] \
   $
 
 
-  Since $sum_i m_i bold(y_i) = bold(0)$, the middle term vanishes, and we have
+  Since $sum_i m_i vb(y_i) = vb(0)$, the middle term vanishes, and we have
   $
     I & = M h^2 + I_"CoM", \
   $
-  by noting that $h = abs(bold(hat(n)) times bold(R))$ and $I_"CoM" = sum_i m_i (bold(hat(n))times bold(y_i))^2$.
+  by noting that $h = abs(vu(n) times vb(R))$ and $I_"CoM" = sum_i m_i (vu(n)times vb(y_i))^2$.
 ]
 
 #remark[
@@ -275,28 +275,28 @@ We will now consider less symmetric axes.
 We will now consider the cases where #ponder("dynamics.centre-of-mass")[CoM] moves as the body rotates. We have
 
 $
-  bold(x_(i)) = bold(R)(t) + bold(y_(i))
+  vb(x_(i)) = vb(R)(t) + vb(y_(i))
 $
 
-where the $bold(y_(i))$ term will capture the rotation about the #ponder("dynamics.centre-of-mass")[CoM] if
+where the $vb(y_(i))$ term will capture the rotation about the #ponder("dynamics.centre-of-mass")[CoM] if
 $
-  bold(dot(y)_i) = bold(omega) times bold(y_(i)).
+  vb(dot(y)_i) = vb(omega) times vb(y_(i)).
 $
 
 The velocity of the body is
 $
-  bold(dot(x)) = bold(dot(R)) + bold(dot(y)_i).
+  vb(dot(x)) = vb(dot(R)) + vb(dot(y)_i).
 $
 
 For the kinetic energy, we have shown in @eq-232 that
 $
-  T & = (1)/(2) M bold(dot(R))^2 + (1)/(2) sum_i m_i bold(dot(y)_i)^2 \
-  & = underbracket((1)/(2) M bold(dot(R))^2, "translational"\ "kinetic"\ "energy") + underbracket((1)/(2) I_"CoM" omega^2, "rotational"\ "kinetic"\ "energy"). \
+  T & = (1)/(2) M vb(dot(R))^2 + (1)/(2) sum_i m_i vb(dot(y)_i)^2 \
+  & = underbracket((1)/(2) M vb(dot(R))^2, "translational"\ "kinetic"\ "energy") + underbracket((1)/(2) I_"CoM" omega^2, "rotational"\ "kinetic"\ "energy"). \
 $
 
 Then the full energy of the body is $E = T+ V$, where we have previously shown that
 $
-  V = sum_i V_i (bold(x_i)) + underbracket(sum_(i < j) V_(i j) (abs(bold(x_i) - bold(x_j))), "constant for rigid body"\ "so drops out from"\ "Newton's equation").
+  V = sum_i V_i (vb(x_i)) + underbracket(sum_(i < j) V_(i j) (abs(vb(x_i) - vb(x_j))), "constant for rigid body"\ "so drops out from"\ "Newton's equation").
 $
 
 Consider a nice case, where
@@ -407,7 +407,7 @@ where $R_z$ is the $z$-component of the #ponder("dynamics.centre-of-mass")[centr
 
   Then
   $
-    (dif E)/(dif t) & = M dot(x) dot.double(x) + I dot(theta) dot.double(theta) \
+    dv(E, t) & = M dot(x) dot.double(x) + I dot(theta) dot.double(theta) \
                     & = dot(x) (-f) + dot(theta) (a f) \
                     & = f (-dot(x) + a dot(theta)) \
                     & = 0 \

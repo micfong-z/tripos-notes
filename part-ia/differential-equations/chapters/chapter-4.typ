@@ -37,13 +37,13 @@ In order to introduce #ponder("ode.order")[first-order] #ponder("ode.linear-diff
 
 Differentiaing the #ponder("calculus.exponential-function")[exponential function], we have
 $
-  (dif )/(dif x) exp(x) & = 1 + (2)/(2!)x + (3)/(3!) x^2 +... \
+  dv(, x) exp(x) & = 1 + (2)/(2!)x + (3)/(3!) x^2 +... \
                         & = exp(x).
 $
 
 This allows us to define the #ponder("calculus.exponential-function")[exponential function] in another way. We can define $exp(x)$ to be the solution of
 
-$ (dif f)/(dif x) =f $
+$ dv(f, x) =f $
 
 with the initial condition $f(0) = 1$.
 
@@ -64,14 +64,14 @@ It follows that $a^x = (ee^(ln a))^x = ee^(x ln a)$
 
 Hence
 
-$ (dif a^x)/(dif x) = (dif e^(x ln a))/(dif x) = e^(x ln a) ln a = a^x ln a. $
+$ dv(a^x, x) = dv(e^(x ln a), x) = e^(x ln a) ln a = a^x ln a. $
 
 #definition("Eigenfunction")[
   An *#ponder("ode.eigenfunction")[eigenfunction]* of an operator is a function that is unchanged up to multiplicative scaling by the *eigenvalue*, under action of the operator.
 
   In case of the differential operator, an #ponder("ode.eigenfunction")[eigenfunction] satisfies
 
-  $ (dif)/(dif x) f(x) = lambda f(x). $
+  $ dv(, x) f(x) = lambda f(x). $
 ] <eigenfunction>
 
 Hence, the #ponder("ode.eigenfunction")[eigenfunctions] of the differential operator are of the form
@@ -103,7 +103,7 @@ $ f(x) = C ee^(lambda x) $
 
 #example[
   Consider the equation
-  $ 5 (dif y)/(dif x) - 3 y = 0. $
+  $ 5 dv(y, x) - 3 y = 0. $
 
   We should try $y = A ee^(lambda x)$. Then
   $ 5 lambda A ee^(lambda x) - 3 A ee^(lambda x) = 0. $
@@ -126,7 +126,7 @@ Consider again $5y' - 3y = 0$ with $y(0)=y_0$.
 
 We can approximate this equation by discrete form at ${x_n}$ with $x_n = n h$ and $x_0 = 0$. With $y_(n) = y(x_(n))$, we have
 
-$ eval((dif y)/(dif x))_x_n approx (y_(n+1)-y_(n))/(h). $
+$ eval(dv(y, x))_x_n approx (y_(n+1)-y_(n))/(h). $
 
 #fade[[This is called the Forward Euler scheme, which is not a great approximation numerically.]]
 
@@ -168,11 +168,11 @@ where we will determine $a_n$ by substituting into the ODE.
   We shall get back to the example
   $ 5y'-3y=0. $
   Then, we have
-  $ (dif y)/(dif x) = sum_(n=0)^(infinity) a_n n x^(n-1) = sum_(n=1)^(infinity) a_n n x^(n-1). $
+  $ dv(y, x) = sum_(n=0)^(infinity) a_n n x^(n-1) = sum_(n=1)^(infinity) a_n n x^(n-1). $
   Thus,
 
   $
-    x (dif y)/(dif x) & = sum_(n=1)^(infinity) a_n n x^n. \
+    x dv(y, x) & = sum_(n=1)^(infinity) a_n n x^n. \
   $
   Also, by multiplying our original series by $x$,
   $
@@ -220,7 +220,7 @@ This method is general for *#ponder("ode.linear-differential-equation")[linear]*
 
   A #ponder("ode.particular-integral")[particular integral] is $y_p(x) = - (10)/(3)$, since substituting it gives
 
-  $ 5 (dif y_p)/(dif x) - 3 y_p = 0 + 10 = 10. $
+  $ 5 dv(y_p, x) - 3 y_p = 0 + 10 = 10. $
 
   Then the #ponder("ode.particular-integral")[complementary function] is the solution of the #ponder("ode.homogeneous-differential-equation")[homogeneous] equation $5 y' - 3 y = 0$, which we have already solved as $y_c (x) = A exp((3x)/(5))$.
 
@@ -242,15 +242,15 @@ The forcing term may also be an #ponder("ode.eigenfunction")[eigenfunction] of t
   Thus we have
 
   $
-    (dif a)/(dif t) & = - k_a a \
+    dv(a, t) & = - k_a a \
                   a & = a_0 exp(-k_a t) \
   $
 
   and also
 
   $
-            (dif b)/(dif t) & = k_a a - k_b b \
-    (dif b)/(dif t) + k_b b & = underbracket(k_a a_0 exp(-k_a t), "forcing term is an eigenfunction"). \
+            dv(b, t) & = k_a a - k_b b \
+    dv(b, t) + k_b b & = underbracket(k_a a_0 exp(-k_a t), "forcing term is an eigenfunction"). \
   $
 
   We shall try the #ponder("ode.particular-integral")[particular integral] of the form $b_p (t) = beta exp(-k_a t)$. Substituting it gives
@@ -265,7 +265,7 @@ The forcing term may also be an #ponder("ode.eigenfunction")[eigenfunction] of t
     If $k_a = k_b$, we need another #ponder("ode.particular-integral")[particular integral]. See @ex-radioactive-decay-revisited.
   ]
 
-  Hence $b_c (t)$ is the solution of the #ponder("ode.homogeneous-differential-equation")[homogeneous] equation $(dif b_c)/(dif t) + k_b b_c = 0$. Thus
+  Hence $b_c (t)$ is the solution of the #ponder("ode.homogeneous-differential-equation")[homogeneous] equation $dv(b_c, t) + k_b b_c = 0$. Thus
 
   $ b_c (t) = D exp(-k_b t). $
 
@@ -295,13 +295,13 @@ The forcing term may also be an #ponder("ode.eigenfunction")[eigenfunction] of t
 The general form of such equations is
 
 $
-  a(x) (dif y)/(dif x) + b(x) y = c(x).
+  a(x) dv(y, x) + b(x) y = c(x).
 $
 
 We can get the standard form by dividing both sides by $a(x)$ (assuming $a(x) != 0$):
 
 $
-  (dif y)/(dif x) + P(x) y = f(x).
+  dv(y, x) + P(x) y = f(x).
 $
 
 To solve these equations, we use an #ponder("ode.integrating-factor")[integrating factor] (IF) $mu(x)$. Multiplying our standard form by $mu(x)$ gives
@@ -322,7 +322,7 @@ $ mu(x) = exp(integral^x P(u) dif u), $
 which is unique up to an irrelevant constant factor. Hence, the original equation becomes
 
 $
-  (dif )/(dif x) (mu y) & = mu f \
+  dv(, x) (mu y) & = mu f \
                 => mu y & = integral mu f dif x. \
 $
 
@@ -345,7 +345,7 @@ $
   Therefore,
 
   $
-    (dif )/(dif x) (x ee^(-x) y) & = ee^(-x) \
+    dv(, x) (x ee^(-x) y) & = ee^(-x) \
                      x ee^(-x) y & = - ee^(-x) + C \
                                y & = (C ee^(x) - 1)/(x). \
   $
@@ -360,7 +360,7 @@ Let us get back to @ex-radioactive-decay.
 #example("Radioactive Decay, Revisited")[
   We have
   $
-    (dif b)/(dif t) + k_b b & = k_a a_0 exp(-k_a t). \
+    dv(b, t) + k_b b & = k_a a_0 exp(-k_a t). \
   $
   We can identify $P(t) = k_b$ and $f(t) = k_a a_0 exp(-k_a t)$. Thus, the #ponder("ode.integrating-factor")[integrating factor] is
   $

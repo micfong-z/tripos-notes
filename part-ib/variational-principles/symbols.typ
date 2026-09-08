@@ -7,4 +7,5 @@
 #import "/template/lib.typ": *
 #import "@preview/physica:0.9.8": *
 
-#let hess = laplacian
+#let hess = matbold(laplacian)
+#let dom = math.op("dom")

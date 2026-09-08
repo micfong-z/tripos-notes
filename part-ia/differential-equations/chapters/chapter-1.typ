@@ -5,7 +5,7 @@
 Differential equations appear in almost all branches of science and applied mathematics.
 
 For example, we have the following differential equation,
-$ underbracket(m, "mass of particle") (dif^(2) x)/(dif t^(2)) = underbracket(F, "force")(x, t) $
+$ underbracket(m, "mass of particle") dv(x, t, 2) = underbracket(F, "force")(x, t) $
 which relates the rate of change of position $x$, the _dependent variable_, with time $t$, the _independent variable_.
 
 The main purpose of this course is to solve such equations.
@@ -16,7 +16,7 @@ The main purpose of this course is to solve such equations.
 
 #definition("Derivative")[
   The *#ponder("calculus.derivative")[derivative]* of a function $f(x)$ w.r.t. its argument $x$ is the function
-  $ (dif f)/(dif x) = lim_(h->0) (f(x+h)-f(x))/(h). $
+  $ dv(f, x) = lim_(h->0) (f(x+h)-f(x))/(h). $
   #align(center)[
     #dynamic-svg("/part-ia/differential-equations/media/d1e1.svg", width: 24em)
   ]
@@ -32,13 +32,13 @@ Informally, if $lim_(x->x_0) f(x)=A$, then $f(x)$ can be made arbitrarily close 
 
 #notation[
   We write
-  $ (dif f)/(dif x) =f'(x)=underbracket(dot(f)(x)., "usually used for" f(t)) $
+  $ dv(f, x) =f'(x)=underbracket(dot(f)(x)., "usually used for" f(t)) $
 ]
 
 We can define higher #ponder("calculus.derivative")[derivatives] for sufficiently smooth functions. For example,
-$ (dif )/(dif x)((dif f)/(dif x)) = (dif^(2) f)/(dif x^(2)) =f''(x) =dot.double(f)(x). $
+$ dv(, x)(dv(f, x)) = dv(f, x, 2) =f''(x) =dot.double(f)(x). $
 To refer to the $n$th #ponder("calculus.derivative")[derivative], we write
-$ (dif^(n) f)/(dif x^(n)) =f^((n))(x). $
+$ dv(f, x, n) =f^((n))(x). $
 
 == #ponder("calculus.big-o")[Big O] and #ponder("calculus.little-o")[Little O]
 
@@ -47,46 +47,46 @@ If we wish to compare the behavior of functions close to a limiting point $x_0$,
 1. *#ponder("calculus.big-o")[Big O]* — "can be bounded by"
 
   #definition("Big O")[
-    - if $x_0$ is finite, then $f(x)$ is $O(g(x))$ as $x->x_0$ if $exists delta > 0$ and $M>0$ such that $forall x$ with $0<|x-x_0|<delta$, we have
+    - if $x_0$ is finite, then $f(x)$ is $Order(g(x))$ as $x->x_0$ if $exists delta > 0$ and $M>0$ such that $forall x$ with $0<|x-x_0|<delta$, we have
       $ |f(x)|<=M|g(x)|. $
-      We often write $f(x)underbracket(=, "abuse of notation")O(g(x)).$ It follows that $f(x)/g(x)$ is bounded as $x->x_0$.
+      We often write $f(x)underbracket(=, "abuse of notation")Order(g(x)).$ It follows that $f(x)/g(x)$ is bounded as $x->x_0$.
 
-      _e.g._ if $x_0=0$, then $x!=O(x^2), x^2=O(x)$ and $x=O(sqrt(x) )$.
+      _e.g._ if $x_0=0$, then $x!=Order(x^2), x^2=Order(x)$ and $x=Order(sqrt(x) )$.
 
     #align(center)[
       #dynamic-svg("/part-ia/differential-equations/media/d1e2.svg", width: 18em)
     ]
 
-    _e.g._ $sin 2x = O(x)$ as $x->0$ since $|sin 2x| <=2|x|$.
+    _e.g._ $sin 2x = Order(x)$ as $x->0$ since $|sin 2x| <=2|x|$.
 
-    - if $x_0 = oo$, then $f(x)$ is $O(g(x))$ as $x->oo$ if $exists x_1 in RR$ and $M>0$ such that $forall x>x_1$, $|f(x)|<=M|g(x)|.$
+    - if $x_0 = oo$, then $f(x)$ is $Order(g(x))$ as $x->oo$ if $exists x_1 in RR$ and $M>0$ such that $forall x>x_1$, $|f(x)|<=M|g(x)|.$
 
-      _e.g._ $2x^3+4x=O(x^3)$ as $x->oo$ since $forall x > 1$, $abs(2x^3+4x) <=2abs(x^3) +4abs(x) <=6abs(x^3)$
+      _e.g._ $2x^3+4x=Order(x^3)$ as $x->oo$ since $forall x > 1$, $abs(2x^3+4x) <=2abs(x^3) +4abs(x) <=6abs(x^3)$
   ] <big-o>
 
 1. *#ponder("calculus.little-o")[Little O]* — "much smaller than"
 
   #definition("Little O")[
-    $f(x)$ is $o(g(x))$ as $x->x_0$ if $forall epsilon > 0 , exists delta>0$ such that $forall x$ with $0<|x-x_0|<delta$,
+    $f(x)$ is $order(g(x))$ as $x->x_0$ if $forall epsilon > 0 , exists delta>0$ such that $forall x$ with $0<|x-x_0|<delta$,
     $ abs(f(x)) <=epsilon abs(g(x)). $
 
     If $g!=0$ in vicinity of $x_0$ (regardless of the behavior at $x_0$), equivalently
     $ lim_(x->x_0) f(x)/(g(x)) = 0. $
-    We often write $f(x)=o(g(x))$.
+    We often write $f(x)=order(g(x))$.
   ] <little-o>
 
-  _e.g._ $x^2=o(x)$ as $x->0$, since $lim_(x->0)((x^2)/(x))=0$.
+  _e.g._ $x^2=order(x)$ as $x->0$, since $lim_(x->0)((x^2)/(x))=0$.
 
-  _e.g._ $sqrt(x)=o(x)$ as $x->oo$.
+  _e.g._ $sqrt(x)=order(x)$ as $x->oo$.
 
 #remark[
-  - $f(x)=o(g(x))$ is a stronger statement than $f(x)=O(g(x))$. #ponder("calculus.big-o")[Big O] shows that a function is bounded by a *given* multiple, whereas #ponder("calculus.little-o")[Little O] shows that it is bounded by *any* multiple.
+  - $f(x)=order(g(x))$ is a stronger statement than $f(x)=Order(g(x))$. #ponder("calculus.big-o")[Big O] shows that a function is bounded by a *given* multiple, whereas #ponder("calculus.little-o")[Little O] shows that it is bounded by *any* multiple.
 
-    So, $f(x)=o(g(x))=>f(x)=O(g(x))$, but not the converse.
+    So, $f(x)=order(g(x))=>f(x)=Order(g(x))$, but not the converse.
 
-    _e.g._ $2x=O(x)$ but $2x != o(x)$ as $x->0$.
+    _e.g._ $2x=Order(x)$ but $2x != order(x)$ as $x->0$.
 
-  - Multiplicative constants do not matter for #ponder("calculus.big-o")[Big O]. _i.e._ If $f(x)=O(g(x))$, $a f(x)=O(g(x))$ and $f(x)=O(a g(x))$ for any non-zero constant $a$.
+  - Multiplicative constants do not matter for #ponder("calculus.big-o")[Big O]. _i.e._ If $f(x)=Order(g(x))$, $a f(x)=Order(g(x))$ and $f(x)=Order(a g(x))$ for any non-zero constant $a$.
 ]
 
 #lecture-separator(lecture: 2, date: "2025-10-13")
@@ -97,25 +97,25 @@ $
   lim_(h->0) (f(x_0+h)-f(x_0))/(h) & =f'(x_0) + lim_(h->(0)) (epsilon(h))/(h).
 $
 
-Therefore $epsilon(h)=o(h)$ as $h->0$.
+Therefore $epsilon(h)=order(h)$ as $h->0$.
 
-Hence $ f(x_0+h)-f(x_0) & =h f'(x_0) + o(h) $ as $h->0$. This result extends to @taylors-theorem (#ponder("calculus.taylors-theorem")[Taylor's Theorem]).
+Hence $ f(x_0+h)-f(x_0) & =h f'(x_0) + order(h) $ as $h->0$. This result extends to @taylors-theorem (#ponder("calculus.taylors-theorem")[Taylor's Theorem]).
 
 == Rules for Differentiation
 
 #theorem("Chain rule")[
   #fade[[#ponder("calculus.derivative")[Differentiating] a function of a function.]] Given $f(x)=F(g(x))$, then
-  $ (dif f)/(dif x) =F'(g(x)) (dif g)/(dif x) = (dif F)/(dif g) (dif g)/(dif x) . $
+  $ dv(f, x) =F'(g(x)) dv(g, x) = dv(F, g) dv(g, x) . $
 ] <chain-rule>
 
 #theorem("Product rule")[
   Given $f(x)=u(x) v(x)$, then
-  $ (dif f)/(dif x) =v (dif u)/(dif x) +u (dif v)/(dif x) . $
+  $ dv(f, x) =v dv(u, x) +u dv(v, x) . $
 ] <product-rule>
 
 #theorem("Quotient rule")[
   #fade[[Special case of the #ponder("calculus.product-rule")[product rule].]] Given $f(x)=u(x)/(v(x))$, then
-  $ (dif f)/(dif x) =(v u' - u v')/(v^2). $
+  $ dv(f, x) =(v u' - u v')/(v^2). $
 ] <quotient-rule>
 
 Consider $f(x)=u(x) v(x).$ By repeated applying the #ponder("calculus.product-rule")[product rule], we have
@@ -151,28 +151,28 @@ Note that $P_n (x)$ are the partial sums of the #ponder("calculus.taylor-series"
   $
     f(x_0+h)=f(x_0)+h f'(x_0) + (1)/(2!) h^2f''(x_0) + ... + h^(n)/(n!) f^((n))(x_0) + underbracket(E_n, "remainder")
   $
-  where $E_n = o(h^n)$ as $h->0$.
+  where $E_n = order(h^n)$ as $h->0$.
 ] <taylors-theorem>
 
 #corollary[Stronger version of #ponder("calculus.taylors-theorem")[Taylor's theorem]][
   Following @taylors-theorem, if $f^((n+1))(x)$ exists $forall x in (x_0, x_0+h)$ and $f^((n+1))(x)$ is continuous in this range, then
   $
-    E_n & = O(h^(n+1)) quad "as" h->0 \
+    E_n & = Order(h^(n+1)) quad "as" h->0 \
         & = f^((n+1))(x_n) h^(n+1)/((n+1)!). \
   $
   for some $x_n$ with $x_0<=x_(n)<=x_0+h$.
 ] <stronger-taylor-theorem>
 
 #remark[
-  Note that $E_n=O(h^(n+1))$ is a stronger statement than $o(h^n)$.
+  Note that $E_n=Order(h^(n+1))$ is a stronger statement than $order(h^n)$.
 
-  _e.g._ $h^(n+(1)/(2))$ is $o(h^n)$ but not $O(h^(n+1))$ as $h->0$.
+  _e.g._ $h^(n+(1)/(2))$ is $order(h^n)$ but not $Order(h^(n+1))$ as $h->0$.
 ]
 
 With $x=x_0+h$, @taylors-theorem (#ponder("calculus.taylors-theorem")[Taylor's theorem]) gives
 $ f(x)=P_n (x)+E_n. $
 
-This is to say, that $P_n (x)$ provides a local approximation to $f(x)$ in the vicinity of $x_0$ with error $o(h^n)$ or $O(h^(n+1))$.
+This is to say, that $P_n (x)$ provides a local approximation to $f(x)$ in the vicinity of $x_0$ with error $order(h^n)$ or $Order(h^(n+1))$.
 
 #corollary[
   If $lim_(n->oo) E_n=0$, then the #ponder("calculus.taylor-series")[Taylor series] converges to $f(x)$.
@@ -216,15 +216,15 @@ Therefore, for a given target accuracy at $x=h$, this can be used to specify how
 #proof[
   From @taylors-theorem (#ponder("calculus.taylors-theorem")[Taylor's theorem]) we have
   $
-    f(x) & =f(x_0)+(x-x_0)f'(x_0)+o(x-x_0) \
-    g(x) & =g(x_0)+(x-x_0)g'(x_0)+o(x-x_0)
+    f(x) & =f(x_0)+(x-x_0)f'(x_0)+order(x-x_0) \
+    g(x) & =g(x_0)+(x-x_0)g'(x_0)+order(x-x_0)
   $
   as $x->x_0$.
 
   Thus
   $
-    lim_(x->x_0) f(x)/(g(x)) &= lim_(x->x_0)(f'(x_0) + (o(x-x_0))/(x-x_0))/(underbracket(g'(x_0), !=0) + (o(x-x_0))/(x-x_0)) \
-    &= (lim_(x->x_0)(f'(x_0) + (o(x-x_0))/(x-x_0)))/(lim_(x->x_0)(g'(x_0) + (o(x-x_0))/(x-x_0))) \
+    lim_(x->x_0) f(x)/(g(x)) &= lim_(x->x_0)(f'(x_0) + (order(x-x_0))/(x-x_0))/(underbracket(g'(x_0), !=0) + (order(x-x_0))/(x-x_0)) \
+    &= (lim_(x->x_0)(f'(x_0) + (order(x-x_0))/(x-x_0)))/(lim_(x->x_0)(g'(x_0) + (order(x-x_0))/(x-x_0))) \
     &= (f'(x_0))/(g'(x_0)) quad "by definition of the little O" \
     &= lim_(x->x_0) (f'(x))/(g'(x)) quad "from the continuity of 1st derivatives." \
   $

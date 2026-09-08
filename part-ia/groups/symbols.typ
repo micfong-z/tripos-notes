@@ -5,6 +5,7 @@
 // import only the prelude.
 
 #import "/template/lib.typ": *
+#import "@preview/physica:0.9.8": *
 #import "@preview/fletcher:0.5.8" as fletcher
 
 // The image operator. Shadows the shared `im` (the imaginary part), which this

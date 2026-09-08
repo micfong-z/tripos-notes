@@ -1,4 +1,4 @@
-Requiring $(matbold(M) bold(e_0), matbold(M) bold(e_0)) = 1$, $(matbold(M) bold(e_1), matbold(M) bold(e_1)) = -1$, $(matbold(M) bold(e_0), matbold(M) bold(e_1)) = 0$ and $M_(00) > 0$ imposes
+Requiring $iprod(matbold(M) vb(e_0), matbold(M) vb(e_0)) = 1$, $iprod(matbold(M) vb(e_1), matbold(M) vb(e_1)) = -1$, $iprod(matbold(M) vb(e_0), matbold(M) vb(e_1)) = 0$ and $M_(00) > 0$ imposes
 
 $ M_(00)^2 - M_(10)^2 = 1, quad M_(11)^2 - M_(01)^2 = 1, quad M_(00) M_(01) = M_(10) M_(11), $
 

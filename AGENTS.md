@@ -70,6 +70,12 @@ a non-contextual value.
   and may shadow a shared name (Groups redefines `im` as the image operator).
 - Notation packages a course needs (physica, mannot, fletcher, unify) are
   imported by its `symbols.typ`, so they reach chapters through the prelude.
+  Vector notation is physica's throughout: `vb`/`vu` for bold and unit vectors,
+  `vecrow` for a row vector, `grad`/`div`/`curl`, `iprod` for an inner product,
+  and `TT` for a transpose. Every course except Analysis I and Numbers and Sets
+  imports it, as does `ponder/fragment-preamble.typ`. physica shadows the
+  built-in `div` (the division sign) with the divergence operator, which is why
+  Numbers and Sets, which writes `÷`, stays out.
 - `project()` applies `thmrules` and the fonts once. Chapters must not reapply
   them.
 - Anything that renders differently in HTML branches on `is-html` inside one

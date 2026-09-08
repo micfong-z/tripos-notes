@@ -8,55 +8,55 @@ Rotating reference frames (RRFs) are important examples of non-inertial frames.
 
 // TODO: SOME OF THE x_i IN THIS CHAPTER ARE WRONGFULLY BOLDED.
 
-An #ponder("dynamics.inertial-frame")[inertial frame] $S$ has Cartesian axes $bold(e_1)$, $bold(e_2)$, $bold(e_3)$, and a rotating frame $S'$ has axes $bold(e'_1)$, $bold(e'_2)$, $bold(e'_3)$.
+An #ponder("dynamics.inertial-frame")[inertial frame] $S$ has Cartesian axes $vb(e_1)$, $vb(e_2)$, $vb(e_3)$, and a rotating frame $S'$ has axes $vb(e'_1)$, $vb(e'_2)$, $vb(e'_3)$.
 
-From the perspective of the #ponder("dynamics.inertial-frame")[inertial frame], the $bold(e'_i)$ axes rotates with angular velocity $bold(omega)$.
+From the perspective of the #ponder("dynamics.inertial-frame")[inertial frame], the $vb(e'_i)$ axes rotates with angular velocity $vb(omega)$.
 $
-  bold(dot(e)'_i) = bold(omega) times bold(e'_i).
+  vb(dot(e)'_i) = vb(omega) times vb(e'_i).
 $
 
 In the two frames, the position of a particle is, repsectively,
 $
-  bold(x) = x_i bold(e_i) = x'_i bold(e'_i).
+  vb(x) = x_i vb(e_i) = x'_i vb(e'_i).
 $
-We wish to find $bold(dot.double(e)'_i)$ in terms of $bold(omega)$ and $bold(e'_i)$. We have
+We wish to find $vb(dot.double(e)'_i)$ in terms of $vb(omega)$ and $vb(e'_i)$. We have
 $
-  bold(dot(x)) = underbracket(dot(x)_i bold(e_i), ((dif bold(x))/(dif t))_S) & = dot(x)'_i bold(e'_i) + x'_i bold(dot(e)'_i) \
-  & = dot(x)'_i bold(e'_i) + x'_i bold(omega) times bold(e'_i) \
-  & = underbracket(dot(x)'_i bold(e'_i), ((dif bold(x))/(dif t))_S') + bold(omega) times bold(x) #<eq-336>\
-  ((dif bold(x))/(dif t))_S &= ((dif bold(x))/(dif t))_S' + bold(omega) times bold(x).
+  vb(dot(x)) = underbracket(dot(x)_i vb(e_i), (dv(vb(x), t))_S) & = dot(x)'_i vb(e'_i) + x'_i vb(dot(e)'_i) \
+  & = dot(x)'_i vb(e'_i) + x'_i vb(omega) times vb(e'_i) \
+  & = underbracket(dot(x)'_i vb(e'_i), (dv(vb(x), t))_S') + vb(omega) times vb(x) #<eq-336>\
+  (dv(vb(x), t))_S &= (dv(vb(x), t))_S' + vb(omega) times vb(x).
 $
 
-where $((dif bold(x))/(dif t))_S$ means the derivatives of components of $bold(x)$ with respect to $t$ in the frame $S$.
+where $(dv(vb(x), t))_S$ means the derivatives of components of $vb(x)$ with respect to $t$ in the frame $S$.
 
 The difference between the two time derivatives is just the relative velocity of the two frames.
 
 For #ponder("dynamics.newtons-second-law")[Newton's second law], we need to find the acceleration,
 $
-  bold(dot.double(x)) & = dot.double(x)_i bold(e_i) \
-                      & = dot.double(x)'_i bold(e'_i) + underbracket(
-                          dot(x)'_i bold(dot(e)'_i),
-                          & = dot(x)'_i bold(omega) times bold(e'_i) \
-                          & = bold(omega) times ((dif bold(x))/(dif t))_S'
+  vb(dot.double(x)) & = dot.double(x)_i vb(e_i) \
+                      & = dot.double(x)'_i vb(e'_i) + underbracket(
+                          dot(x)'_i vb(dot(e)'_i),
+                          & = dot(x)'_i vb(omega) times vb(e'_i) \
+                          & = vb(omega) times (dv(vb(x), t))_S'
                         )
-                        + bold(dot(omega)) times bold(x) + underbracket(
-                          bold(omega) times bold(dot(x)),
-                          & =bold(omega)times ((dif bold(x))/(dif t))_S' + bold(omega) times (bold(omega) times bold(x))
+                        + vb(dot(omega)) times vb(x) + underbracket(
+                          vb(omega) times vb(dot(x)),
+                          & =vb(omega)times (dv(vb(x), t))_S' + vb(omega) times (vb(omega) times vb(x))
                         ) \
 $
 _i.e._
 $
-  ((dif^2 bold(x))/(dif t^2))_S = ((dif^2 bold(x))/(dif t^2))_S' + 2 bold(omega) times ((dif bold(x))/(dif t))_S' + bold(dot(omega)) times bold(x) + bold(omega) times (bold(omega) times bold(x)).
+  (dv(vb(x), t, 2))_S = (dv(vb(x), t, 2))_S' + 2 vb(omega) times (dv(vb(x), t))_S' + vb(dot(omega)) times vb(x) + vb(omega) times (vb(omega) times vb(x)).
 $
 
 In the #ponder("dynamics.inertial-frame")[inertial frame], we have
 $
-  m ((dif^2 bold(x))/(dif t^2))_S = bold(F).
+  m (dv(vb(x), t, 2))_S = vb(F).
 $
 
 Hence,
 $
-  m ((dif^2 bold(x))/(dif t^2))_S' = bold(F) - underbracket(underbracket(m bold(dot(omega)) times bold(x), "Euler force") + underbracket(2 m bold(omega) times ((dif bold(x))/(dif t))_S', "Coriolis force") + underbracket(m bold(omega) times (bold(omega) times bold(x)), "Centrifugal force"), "Fictitious forces"). #<eq-342>
+  m (dv(vb(x), t, 2))_S' = vb(F) - underbracket(underbracket(m vb(dot(omega)) times vb(x), "Euler force") + underbracket(2 m vb(omega) times (dv(vb(x), t))_S', "Coriolis force") + underbracket(m vb(omega) times (vb(omega) times vb(x)), "Centrifugal force"), "Fictitious forces"). #<eq-342>
 $
 
 
@@ -70,7 +70,7 @@ $
                        R_"Earth" & approx qty("6e3", "km") \
 $
 
-We shall neglect the small wobbling of the Earth, so assume $bold(dot(omega)) = bold(0)$, and hence no Euler force.
+We shall neglect the small wobbling of the Earth, so assume $vb(dot(omega)) = vb(0)$, and hence no Euler force.
 
 
 == #ponder("dynamics.centrifugal-force")[Centrifugal Force]
@@ -78,7 +78,7 @@ We shall neglect the small wobbling of the Earth, so assume $bold(dot(omega)) = 
 
 We have
 $
-  bold(F_"cent") = -m bold(omega) times (bold(omega) times bold(x)).
+  vb(F)_"cent" = -m vb(omega) times (vb(omega) times vb(x)).
 $
 
 It points away from the axis of rotation, as shown in the following diagram.
@@ -89,12 +89,12 @@ It points away from the axis of rotation, as shown in the following diagram.
 
 For the size of the force,
 $
-  abs(bold(F_"cent")) = m omega^2 r cos theta.
+  abs(vb(F)_"cent") = m omega^2 r cos theta.
 $
 The #ponder("dynamics.centrifugal-force")[centrifugal force] is #ponder("dynamics.conservative-force")[conservative], with
 $
-  bold(F_"cent") & = - bold(nabla) V_"cent" \
-        V_"cent" & = - (m)/(2) abs(bold(omega) times bold(x))^2 = -(m)/(2) omega^2 r^2 cos^2 theta.
+  vb(F)_"cent" & = - grad V_"cent" \
+        V_"cent" & = - (m)/(2) abs(vb(omega) times vb(x))^2 = -(m)/(2) omega^2 r^2 cos^2 theta.
 $
 Hence, potential energy is lowered by moving away from the axis of rotation.
 
@@ -109,12 +109,12 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
 
   The forces acting on the particle satisfy
   $
-    m bold(g) = - m g bold(hat(r)).
+    m vb(g) = - m g vu(r).
   $
-  #fade[[The string is short compared to $R_"Earth"$, so it does not matter whether we use $bold(hat(r))$ at the top or the bottom of the string.]]
+  #fade[[The string is short compared to $R_"Earth"$, so it does not matter whether we use $vu(r)$ at the top or the bottom of the string.]]
   $
-    bold(F_"cent") & = - m bold(omega) times (bold(omega) times bold(x)) \
-                   & = m omega^2 r cos theta (cos theta bold(hat(r)) - sin theta bold(hat(theta))). \
+    vb(F)_"cent" & = - m vb(omega) times (vb(omega) times vb(x)) \
+                   & = m omega^2 r cos theta (cos theta vu(r) - sin theta vu(theta)). \
   $
   #align(center)[
     #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e42.svg", width: 7em)
@@ -122,7 +122,7 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
 
   To hold the string together, there must be a force exerted by the molecules on the string that balances the other forces, which is the tension.
   $
-    bold(T) = T cos phi bold(hat(r)) + T sin phi bold(hat(theta)).
+    vb(T) = T cos phi vu(r) + T sin phi vu(theta).
   $
 
   #align(center)[
@@ -131,9 +131,9 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
 
   The net force on the particle is zero, so
   $
-    m bold(g) + bold(F_"cent") + bold(T) = bold(0).
+    m vb(g) + vb(F)_"cent" + vb(T) = vb(0).
   $
-  We have 2 equations (for $bold(hat(r))$ and $bold(hat(theta))$) and 2 unknowns ($T$ and $phi$), so we can solve for $phi$:
+  We have 2 equations (for $vu(r)$ and $vu(theta)$) and 2 unknowns ($T$ and $phi$), so we can solve for $phi$:
   $
     tan phi & = (omega^2 R cos theta sin theta)/(g - omega^2 R cos^2 theta). \
   $
@@ -146,11 +146,11 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
 
 In @eq-342, we have
 $
-  bold(F_"cor") = - 2 m bold(omega) times bold(v)
+  vb(F)_"cor" = - 2 m vb(omega) times vb(v)
 $
-where $bold(v)$ is the velocity of the particle in the rotating frame.
+where $vb(v)$ is the velocity of the particle in the rotating frame.
 
-Note that this is similar to Lorentz force with $bold(B) -> bold(omega)$, so moving particles will turn in circles.
+Note that this is similar to Lorentz force with $vb(B) -> vb(omega)$, so moving particles will turn in circles.
 
 #example[
   #ponder("dynamics.coriolis-force")[Coriolis force] is responsible for the formation of hurricanes.
@@ -161,7 +161,7 @@ Note that this is similar to Lorentz force with $bold(B) -> bold(omega)$, so mov
     #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e44.svg", width: 10em)
   ]
 
-  Each molecule of air in bent clockwise in the northern hemisphere #fade[[by the right hand rule with $-bold(omega)$ going into the plane]], which leads to an anticlockwise swirling motion.
+  Each molecule of air in bent clockwise in the northern hemisphere #fade[[by the right hand rule with $-vb(omega)$ going into the plane]], which leads to an anticlockwise swirling motion.
 
   #align(center)[
     #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e45.svg", width: 6em)
@@ -170,9 +170,9 @@ Note that this is similar to Lorentz force with $bold(B) -> bold(omega)$, so mov
   In the southern hemisphere, the #ponder("dynamics.coriolis-force")[Coriolis force] bends particles anticlockwise, leading to a clockwise swirling motion.
 
 
-  Motion along the Earth's surface is not in general perpendicular to the axis of rotation $bold(omega)$. Hence, the effect of #ponder("dynamics.coriolis-force")[Coriolis force] is typically weaker near the equator. There are empirical observations that hurricanes do not form within near the equator.
+  Motion along the Earth's surface is not in general perpendicular to the axis of rotation $vb(omega)$. Hence, the effect of #ponder("dynamics.coriolis-force")[Coriolis force] is typically weaker near the equator. There are empirical observations that hurricanes do not form within near the equator.
 
-  #fade[[$bold(omega)times bold(v)$ can be substantial near the equator if $bold(v)$ moves along the equator, but it pushes particles vertically, and it need to compete with gravity, which is much stronger.]]
+  #fade[[$vb(omega)times vb(v)$ can be substantial near the equator if $vb(v)$ moves along the equator, but it pushes particles vertically, and it need to compete with gravity, which is much stronger.]]
 ] <ex-coriolis-hurricanes>
 
 #example[
@@ -192,21 +192,21 @@ Note that this is similar to Lorentz force with $bold(B) -> bold(omega)$, so mov
 
   In the rotating frame,
   $
-    bold(dot.double(x)) = bold(g) - 2 bold(omega) times bold(dot(x)). #<eq-357>
+    vb(dot.double(x)) = vb(g) - 2 vb(omega) times vb(dot(x)). #<eq-357>
   $
   #fade[[We can neglect the #ponder("dynamics.centrifugal-force")[centrifugal force] since it does not affect the horizontal motion.]]
 
   Integrating once gives
   $
-    bold(dot(x)) = bold(g) t - 2 bold(omega)times (bold(x) - bold(x_0)) #<eq-358>
+    vb(dot(x)) = vb(g) t - 2 vb(omega)times (vb(x) - vb(x_0)) #<eq-358>
   $
-  where $bold(x_0)$ is the initial position of the ball. Subsituting @eq-358 into @eq-357 gives
+  where $vb(x_0)$ is the initial position of the ball. Subsituting @eq-358 into @eq-357 gives
   $
-    bold(dot.double(x)) = bold(g) - 2 bold(omega) times bold(g) t + underbracket(4 bold(omega) times (bold(omega) times (bold(x) - bold(x_0))), "same order as centrifugal force").
+    vb(dot.double(x)) = vb(g) - 2 vb(omega) times vb(g) t + underbracket(4 vb(omega) times (vb(omega) times (vb(x) - vb(x_0))), "same order as centrifugal force").
   $
   The last term acts in the vertical direction and is small, so we can neglect it. Hence, integrating twice gives
   $
-    bold(x) = bold(x_0) + (1)/(2) bold(g) t^2 - (1)/(3) bold(omega) times bold(g) t^3. #<eq-360>
+    vb(x) = vb(x_0) + (1)/(2) vb(g) t^2 - (1)/(3) vb(omega) times vb(g) t^3. #<eq-360>
   $
 
   Consider the following right-handed set of #ponder("linear-algebra.basis")[basis]:
@@ -216,13 +216,13 @@ Note that this is similar to Lorentz force with $bold(B) -> bold(omega)$, so mov
   ]
 
   $
-    bold(omega) & = omega bold(e_1) \
-        bold(g) & = - g bold(e_3). \
-      bold(x_0) & = (R + h) bold(e_3).
+    vb(omega) & = omega vb(e_1) \
+        vb(g) & = - g vb(e_3). \
+      vb(x_0) & = (R + h) vb(e_3).
   $
   Then, substituting back into @eq-360 gives
   $
-    bold(x) = vec(0, -(1)/(3) omega g t^3, R + h - (1)/(2) g t^2).
+    vb(x) = vec(0, -(1)/(3) omega g t^3, R + h - (1)/(2) g t^2).
   $
   Clearly, $x_2$ is negative at positive $t$, so the ball lands slightly east of the foot of the tower.
 ] <ex-falling-ball-tower>
@@ -247,9 +247,9 @@ At a general latitude,
 
 In the #ponder("linear-algebra.basis")[basis] on the Earth's surface, we have
 $
-      bold(x) & = (x, y, z) \
-      bold(g) & = (0, 0, -g) \
-  bold(omega) & = (omega cos theta, 0, omega sin theta) \
+      vb(x) & = vecrow(x, y, z) \
+      vb(g) & = vecrow(0, 0, -g) \
+  vb(omega) & = vecrow(omega cos theta, 0, omega sin theta) \
 $
 
 #align(center)[
@@ -258,7 +258,7 @@ $
 
 The tension in the string is
 $
-  bold(T) = T (-(x)/(ell), -(y)/(ell), (ell - z)/(ell)).
+  vb(T) = T (-(x)/(ell), -(y)/(ell), (ell - z)/(ell)).
 $
 Since the string doesn't break, we have
 $
@@ -267,7 +267,7 @@ $
 
 Now, for the equations of motion,
 $
-  m bold(dot.double(x)) = bold(T) + m bold(g) - 2 m bold(omega) times bold(dot(x)).
+  m vb(dot.double(x)) = vb(T) + m vb(g) - 2 m vb(omega) times vb(dot(x)).
 $
 
 Note that we have all the quantities defined, with 4 equations (3 #ponder("ode.ordinary-differential-equation")[ODEs] and 1 constraint) and 4 unknowns ($x$, $y$, $z$, and $T$), so we can solve for the motion of the pendulum. Our strategy is as follows

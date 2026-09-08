@@ -1,1 +1,1 @@
-For nonzero $bold(v) in RR^n$, reflection in $P_bold(v) = bold(v)^perp$ is $S_bold(v) (bold(x)) = bold(x) - (2 (bold(x) dot bold(v))) / norm(bold(v))^2 bold(v)$.
+For nonzero $vb(v) in RR^n$, reflection in $P_vb(v) = vb(v)^perp$ is $S_vb(v) (vb(x)) = vb(x) - (2 (vb(x) dot vb(v))) / norm(vb(v))^2 vb(v)$.

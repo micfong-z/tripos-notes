@@ -7,22 +7,22 @@
 An important class of potentials only depend on the distance to the origin, such that
 
 $
-  V(bold(x)) = V(abs(bold(x)) ) = V(r).
+  V(vb(x)) = V(abs(vb(x)) ) = V(r).
 $
 
 The force points towards (or away from) the origin, so
 $
-  bold(F) = -bold(nabla) V = -(dif V)/(dif r) bold(nabla) r.
+  vb(F) = -grad V = -dv(V, r) grad r.
 $
 
 Recall that
 $
-  bold(nabla) r = bold(x)/r = hat(bold(x)).
+  grad r = vb(x)/r = vu(x).
 $
 
 Thus,
 $
-  bold(F) = - (dif V)/(dif r) hat(bold(x)) #<eq-124>
+  vb(F) = - dv(V, r) vu(x) #<eq-124>
 $
 
 We will study the motion of a particle under a central force, particularly in polar coordinates.
@@ -31,39 +31,39 @@ We will study the motion of a particle under a central force, particularly in po
 
 The most important fact about central potentials is that angular momentum is conserved. We have
 $
-  bold(L) = m bold(x) times bold(dot(x)) = bold(x) times bold(p),
+  vb(L) = m vb(x) times vb(dot(x)) = vb(x) times vb(p),
 $
-where $bold(L)$ is the angular momentum, and $bold(p) = m bold(dot(x))$ is the linear momentum. Note that $bold(L)$ is #ponder("linear-algebra.orthogonality")[orthogonal] to both position and velocity/momentum.
+where $vb(L)$ is the angular momentum, and $vb(p) = m vb(dot(x))$ is the linear momentum. Note that $vb(L)$ is #ponder("linear-algebra.orthogonality")[orthogonal] to both position and velocity/momentum.
 
 #align(center)[
   #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e12.svg", width: 18em)
 ]
 
-$bold(L)$ is defined relative to an origin, here we are setting the origin at $bold(x)=bold(0)$, which will be generalised later.
+$vb(L)$ is defined relative to an origin, here we are setting the origin at $vb(x)=vb(0)$, which will be generalised later.
 
-For a general force $bold(F)$,
+For a general force $vb(F)$,
 $
-  (dif bold(L))/(dif t) = m (dif )/(dif t) (bold(x) times bold(dot(x))) = m(bold(dot(x)) times bold(dot(x)) + bold(x) times bold(dot.double(x))) = bold(x) times bold(F) equiv bold(G),
+  dv(vb(L), t) = m dv(, t) (vb(x) times vb(dot(x))) = m(vb(dot(x)) times vb(dot(x)) + vb(x) times vb(dot.double(x))) = vb(x) times vb(F) equiv vb(G),
 $
-where $bold(G)$ is the torque. _i.e._
+where $vb(G)$ is the torque. _i.e._
 $
-  bold(dot(L)) = bold(G).
+  vb(dot(L)) = vb(G).
 $
-This is analogous to #ponder("dynamics.newtons-second-law")[Newton's law] @eq-8, but for rotational motion. #fade[[$bold(G)$ can be thought of as the _rotational force_, and $bold(L)$ as the _rotational momentum_.]]
+This is analogous to #ponder("dynamics.newtons-second-law")[Newton's law] @eq-8, but for rotational motion. #fade[[$vb(G)$ can be thought of as the _rotational force_, and $vb(L)$ as the _rotational momentum_.]]
 
-For a central force, $bold(F) parallel bold(hat(x)) => bold(x) times bold(F) = bold(G) = bold(0)$. Thus, angular momentum is conserved:
+For a central force, $vb(F) parallel vu(x) => vb(x) times vb(F) = vb(G) = vb(0)$. Thus, angular momentum is conserved:
 $
-  bold(dot(L)) = bold(0).
+  vb(dot(L)) = vb(0).
 $
 
-Since $bold(L)$ doesn't change, and obeys
+Since $vb(L)$ doesn't change, and obeys
 $
   cases(
-    bold(L) dot bold(x) = 0,
-    bold(L) dot bold(dot(x)) = 0,
+    vb(L) dot vb(x) = 0,
+    vb(L) dot vb(dot(x)) = 0,
   )
 $
-where the position and velocity are constrained to a plane perpendicular to $bold(L)$. Hence, we have reduced the problem from 3D to 2D.
+where the position and velocity are constrained to a plane perpendicular to $vb(L)$. Hence, we have reduced the problem from 3D to 2D.
 
 == Polar Coordinates in the Plane
 
@@ -81,30 +81,30 @@ $
 
 In cartesian coordinates, #fade[[see IA Vector Calculus for more details]]
 $
-  bold(hat(r)) = vec(cos theta, sin theta), quad bold(hat(theta)) = vec(-sin theta, cos theta).
+  vu(r) = vec(cos theta, sin theta), quad vu(theta) = vec(-sin theta, cos theta).
 $
 Note that
 $
-  bold(hat(r))^2 = bold(hat(theta))^2 = 1, quad bold(hat(r)) dot bold(hat(theta)) = 0.
+  vu(r)^2 = vu(theta)^2 = 1, quad vu(r) dot vu(theta) = 0.
 $
 
 #important[
   These vectors depend on positions. We have
   $
-    (dif bold(hat(r)))/(dif theta) = bold(hat(theta)), quad (dif bold(hat(theta)))/(dif theta) = - bold(hat(r)).
+    dv(vu(r), theta) = vu(theta), quad dv(vu(theta), theta) = - vu(r).
   $
 
   Hence, we must keep track of these changes when we write equations in polar coordinates.
 ]
 
-Consider #ponder("dynamics.newtons-second-law")[Newton's equation] #fade[[_i.e._ $bold(F) = m bold(dot.double(x))$]] in polar coordinates,
+Consider #ponder("dynamics.newtons-second-law")[Newton's equation] #fade[[_i.e._ $vb(F) = m vb(dot.double(x))$]] in polar coordinates,
 $
-  bold(x) & = r bold(hat(r)) \
-  bold(dot(x)) & = dot(r) bold(hat(r)) + r bold(dot(hat(r))) \
-  & = dot(r) bold(hat(r)) + r dot(theta) (dif bold(hat(r)))/(dif theta) \
-  & = dot(r) bold(hat(r)) + r dot(theta) bold(hat(theta)) \
-  bold(dot.double(x)) &= dot.double(r) bold(hat(r)) + 2dot(r) dot(theta) bold(hat(theta)) + r dot.double(theta) bold(hat(theta)) - r dot(theta)^2 bold(hat(r)) \
-  & = (dot.double(r) - r dot(theta)^2) bold(hat(r)) + (r dot.double(theta) + 2 dot(r) dot(theta)) bold(hat(theta)) #<eq-139>
+  vb(x) & = r vu(r) \
+  vb(dot(x)) & = dot(r) vu(r) + r vb(dot(hat(r))) \
+  & = dot(r) vu(r) + r dot(theta) dv(vu(r), theta) \
+  & = dot(r) vu(r) + r dot(theta) vu(theta) \
+  vb(dot.double(x)) &= dot.double(r) vu(r) + 2dot(r) dot(theta) vu(theta) + r dot.double(theta) vu(theta) - r dot(theta)^2 vu(r) \
+  & = (dot.double(r) - r dot(theta)^2) vu(r) + (r dot.double(theta) + 2 dot(r) dot(theta)) vu(theta) #<eq-139>
 $
 
 #example[Circular motion at constant angular speed][
@@ -114,7 +114,7 @@ $
   $
   Thus,
   $
-    bold(dot.double(x)) = - r omega^2 bold(hat(r)).
+    vb(dot.double(x)) = - r omega^2 vu(r).
   $
 
   Note that #ponder("dynamics.circular-motion")[circular motion] requires a centripetal force towards the origin.
@@ -126,31 +126,31 @@ $
 
 Matching components of @eq-124 with @eq-139 substituted in @eq-8, we have
 $
-  bold(hat(theta)): quad & r dot.double(theta) + 2 dot(r) dot(theta) = 0, #<eq-142> \
-      bold(hat(r)): quad & m (dot.double(r) - r dot(theta)^2) = - (dif V)/(dif r). 
+  vu(theta): quad & r dot.double(theta) + 2 dot(r) dot(theta) = 0, #<eq-142> \
+      vu(r): quad & m (dot.double(r) - r dot(theta)^2) = - dv(V, r). 
 $
 These are the #ponder("dynamics.newtons-second-law")[Newton's equations] for a central force in polar coordinates.
 
 Hence, @eq-142 gives
 $
-  (1)/(r) (dif )/(dif t) (r^2 dot(theta)) = 0.
+  (1)/(r) dv(, t) (r^2 dot(theta)) = 0.
 $
 Thus $l equiv r^2 dot(theta)$ is constant.
 
 In fact, this is the magnitude of the angular momentum per unit mass:
 $
-       bold(L) & =m bold(x) times bold(dot(x)) \
-               & = m r bold(hat(r)) times (dot(r) bold(hat(r)) + r dot(theta) bold(hat(theta))) \
-               & = m r^2 dot(theta) (bold(hat(r)) times bold(hat(theta))) \
-  abs(bold(L)) & = m r^2 dot(theta) = m l.
+       vb(L) & =m vb(x) times vb(dot(x)) \
+               & = m r vu(r) times (dot(r) vu(r) + r dot(theta) vu(theta)) \
+               & = m r^2 dot(theta) (vu(r) times vu(theta)) \
+  abs(vb(L)) & = m r^2 dot(theta) = m l.
 $
 Sometimes, $l$ is called the "angular momentum", even though it is angular momentum per unit mass. Using the definition of $l$ in the equation for $hat(r)$, we have
 $
-  m (dot.double(r) - r (l^2)/(r^4)) = - (dif V)/(dif r). \
+  m (dot.double(r) - r (l^2)/(r^4)) = - dv(V, r). \
 $
 We can rewrite this as
 $
-  m dot.double(r) = - (dif V_"eff")/(dif r)
+  m dot.double(r) = - dv(V_"eff", r)
 $
 where $V_"eff"$ is the effective potential defined by
 $
@@ -177,7 +177,7 @@ We have a centrifugal barrier at small $r$ due to the angular momentum term. The
 
 We can also see the effective potential from the #ponder("dynamics.conservation-of-energy")[conserved energy],
 $
-  E = & (1)/(2) m bold(dot(x))^2 + V(r) \
+  E = & (1)/(2) m vb(dot(x))^2 + V(r) \
       & = (1)/(2) m (dot(r)^2 + r^2 dot(theta)^2) + V(r) \
       & = (1)/(2) m dot(r)^2 + (m l^2)/(2 r^2) + V(r) \
       & = (1)/(2) m dot(r)^2 + V_"eff" (r).
@@ -214,7 +214,7 @@ Note that in $V = -(k)/(r^n)$ there are no stable bound orbits, and the particle
 We shall now see how to solve the equations of motion for a central potential. Consider $ u = (1)/(r). $ We want to derive the orbit equation for $u(theta)$. Recall the case that
 
 $
-  m dot.double(r) & = - (dif V_"eff")/(dif r) \
+  m dot.double(r) & = - dv(V_"eff", r) \
       V_"eff" (r) & = V(r) + (m l^2)/(2 r^2) \
              V(r) & = -(k)/(r).
 $
@@ -222,19 +222,19 @@ $
 
 Under the change of variables $r(t) -> u(theta)$,
 $
-  (dif r)/(dif t) &= (dif r)/(dif theta) (dif theta)/(dif t) = - (1)/(u^2) (dif u)/(dif theta) (l)/(r^2) = - l (dif u)/(dif theta)\
-  (dif^(2) r)/(dif t^(2)) &= (dif )/(dif t) (-l (dif u)/(dif theta) ) = -l (dif^2 u)/(dif theta^2) (dif theta)/(dif t) = - l^2 u^2 (dif^2 u)/(dif theta^2).
+  dv(r, t) &= dv(r, theta) dv(theta, t) = - (1)/(u^2) dv(u, theta) (l)/(r^2) = - l dv(u, theta)\
+  dv(r, t, 2) &= dv(, t) (-l dv(u, theta) ) = -l dv(u, theta, 2) dv(theta, t) = - l^2 u^2 dv(u, theta, 2).
 $
 
 Then
 $
-                 m dot.double(r) - (m l^2)/(r^3) & = F(r) = - (dif V)/(dif r) \
-  -l^2 m u^2 (dif^2 u)/(dif theta^2) - m l^2 u^3 & = F(1/u) \
-                     (dif^2 u)/(dif theta^2) + u & = - (1)/(m l^2 u^2) F(1/u).
+                 m dot.double(r) - (m l^2)/(r^3) & = F(r) = - dv(V, r) \
+  -l^2 m u^2 dv(u, theta, 2) - m l^2 u^3 & = F(1/u) \
+                     dv(u, theta, 2) + u & = - (1)/(m l^2 u^2) F(1/u).
 $
 A special case arises when $V = -(k m)/(r)$, _i.e._ the Kepler problem.
 $
-  (dif^2 u)/(dif theta^2) + u = (k)/(l^2).
+  dv(u, theta, 2) + u = (k)/(l^2).
 $
 This equation is a harmonic oscillator with a displaced centre. The solution is
 $
@@ -390,7 +390,7 @@ Given a central potential $V(r)$ such that $V->0$ as $r->oo$, one can perform sc
 
 #proposition[
 
-  The #ponder("dynamics.impact-parameter")[impact parameter] is related to the angular momentum (per unit mass) $l = (abs(bold(L)) )/(m)$ as
+  The #ponder("dynamics.impact-parameter")[impact parameter] is related to the angular momentum (per unit mass) $l = (abs(vb(L)) )/(m)$ as
   $
     l = b v.
   $
@@ -399,7 +399,7 @@ Given a central potential $V(r)$ such that $V->0$ as $r->oo$, one can perform sc
 #proof[
   A non-interacting particle has a conserved angular momentum. The velocity does not change. At the closest point,
   $
-    l = abs(bold(x) times bold(dot(x))) = b v.
+    l = abs(vb(x) times vb(dot(x))) = b v.
   $
 
   This must also be the angular momentum at the start. But the initial $l$ is the same for the interacting and non-interacting particles and is also conserved in the interacting case.

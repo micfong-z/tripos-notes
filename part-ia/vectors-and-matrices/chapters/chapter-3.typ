@@ -10,24 +10,24 @@
   For two #ponder("linear-algebra.vector-space")[vector spaces] $V$ and $W$, a #ponder("linear-algebra.linear-map")[*linear map*] is a function
   $ T: V->W $
   such that
-  $ T(lambda bold(x) + mu bold(y)) = lambda T(bold(x)) + mu T(bold(y)) $
-  for all $bold(x), bold(y) in V$ and all scalars $lambda, mu$.
+  $ T(lambda vb(x) + mu vb(y)) = lambda T(vb(x)) + mu T(vb(y)) $
+  for all $vb(x), vb(y) in V$ and all scalars $lambda, mu$.
 ] <def-linear-map>
 
 #definition[
   Let $T: V-> W$ be a #ponder("linear-algebra.linear-map")[linear map].
 
-  - The #ponder("linear-algebra.kernel-image")[*image*] of $bold(x) in V$ under $T$ is the vector $bold(x')= T(bold(x)) in W$.
+  - The #ponder("linear-algebra.kernel-image")[*image*] of $vb(x) in V$ under $T$ is the vector $vb(x')= T(vb(x)) in W$.
 
     The #ponder("linear-algebra.kernel-image")[*image*] of $T$ is the set
-    $ im T = { bold(x') in W: bold(x') = T(bold(x)) "for some" bold(x) in V}. $
+    $ im T = { vb(x') in W: vb(x') = T(vb(x)) "for some" vb(x) in V}. $
 
     It forms a #ponder("linear-algebra.subspace")[subspace] of $W$.
 
-  - If $bold(x) in V$ such that $T(bold(x)) = bold(0)$, then $bold(x)$ is in the #ponder("linear-algebra.kernel-image")[*kernel*] of $T$.
+  - If $vb(x) in V$ such that $T(vb(x)) = vb(0)$, then $vb(x)$ is in the #ponder("linear-algebra.kernel-image")[*kernel*] of $T$.
 
     The #ponder("linear-algebra.kernel-image")[*kernel*] of $T$ is the set
-    $ ker T = { bold(x) in V: T(bold(x)) = bold(0) }. $
+    $ ker T = { vb(x) in V: T(vb(x)) = vb(0) }. $
 
     It forms a #ponder("linear-algebra.subspace")[subspace] of $V$.
 
@@ -44,20 +44,20 @@
 ]
 
 #example[
-  1. The *zero linear map* $T: V-> W$ is defined by $T(bold(x)) = bold(0)$ for all $bold(x) in V$.
+  1. The *zero linear map* $T: V-> W$ is defined by $T(vb(x)) = vb(0)$ for all $vb(x) in V$.
 
-    It has $im T = {bold(0)}$ and $ker T = V$.
+    It has $im T = {vb(0)}$ and $ker T = V$.
 
-  2. The #ponder("set-theory.identity-function")[*identity map*] $T:V->V$ is defined by $T(bold(x)) = bold(x)$ for all $bold(x) in V$.
+  2. The #ponder("set-theory.identity-function")[*identity map*] $T:V->V$ is defined by $T(vb(x)) = vb(x)$ for all $vb(x) in V$.
 
-    It has $im T = V$ and $ker T = {bold(0)}$.
+    It has $im T = V$ and $ker T = {vb(0)}$.
 
-  3. Consider $V=W=RR^2$ and $T(bold(x))= bold(x')$, with
+  3. Consider $V=W=RR^2$ and $T(vb(x))= vb(x')$, with
     $
       x'_1 & = 2x_1 + x_2 \
       x'_2 & = x_1 - 4x_2.
     $
-    This is a #ponder("linear-algebra.linear-map")[linear map]. In this case, $im T = {lambda vec(2, 1) + mu vec(1, -4): lambda, mu in RR} = RR^2$ and $ker T = {bold(0)}$.
+    This is a #ponder("linear-algebra.linear-map")[linear map]. In this case, $im T = {lambda vec(2, 1) + mu vec(1, -4): lambda, mu in RR} = RR^2$ and $ker T = {vb(0)}$.
 ]
 
 We can carry out several operations on linear maps.
@@ -67,8 +67,8 @@ We can carry out several operations on linear maps.
   Let $T, S: V->W$ be #ponder("linear-algebra.linear-map")[linear maps]. Then,
   $ alpha T + beta S: V->W $
   is still a linear map, defined by
-  $ (alpha T + beta S)(bold(x)) = alpha T(bold(x)) + beta S(bold(x)) $
-  for all $bold(x) in V$ and all scalars $alpha, beta$.
+  $ (alpha T + beta S)(vb(x)) = alpha T(vb(x)) + beta S(vb(x)) $
+  for all $vb(x) in V$ and all scalars $alpha, beta$.
 
 - *Composition*
 
@@ -77,8 +77,8 @@ We can carry out several operations on linear maps.
     T compose S: U->W
   $
   is still a linear map, defined by
-  $ (T compose S)(bold(x)) = T(S(bold(x))) $
-  for all $bold(x) in U$.
+  $ (T compose S)(vb(x)) = T(S(vb(x))) $
+  for all $vb(x) in U$.
 
 #theorem[Rank-Nullity Theorem][
   Let $T: V->W$ be a #ponder("linear-algebra.rank-nullity-theorem")[linear map], where $V$ is finite-dimensional. Then,
@@ -88,36 +88,36 @@ We can carry out several operations on linear maps.
 #proof[
   Let us call $n = dim V$ and $m = null T$. Since $dim (ker T) <= dim V$, we have $m <= n$. We have two cases:
 
-  1. $m = n$. Then, $ker T = V$, so $T$ is the zero map. Thus, $im T = {bold(0)}$ and $rank T = 0$. Therefore, $dim V = n = 0 + n = rank T + null T$.
+  1. $m = n$. Then, $ker T = V$, so $T$ is the zero map. Thus, $im T = {vb(0)}$ and $rank T = 0$. Therefore, $dim V = n = 0 + n = rank T + null T$.
 
-  2. $m < n$. Then let ${bold(e_1), ..., bold(e_m)} subset.eq V$ be a #ponder("linear-algebra.basis")[basis] of $ker T$. Then, $T(bold(e_i)) = bold(0)$ for all $i$.
+  2. $m < n$. Then let ${vb(e_1), ..., vb(e_m)} subset.eq V$ be a #ponder("linear-algebra.basis")[basis] of $ker T$. Then, $T(vb(e_i)) = vb(0)$ for all $i$.
 
-    We can extend ${bold(e_1), ..., bold(e_m)}$ to the #ponder("linear-algebra.basis")[basis] of the whole $V$:
-    $ {bold(e_1), ..., bold(e_m), bold(e_(m+1)), ..., bold(e_n)}. $
-    We need to show that  ${T(bold(e_(m+1))) , ..., T(bold(e_n))}$ is a #ponder("linear-algebra.basis")[basis] of $im T$.
+    We can extend ${vb(e_1), ..., vb(e_m)}$ to the #ponder("linear-algebra.basis")[basis] of the whole $V$:
+    $ {vb(e_1), ..., vb(e_m), vb(e_(m+1)), ..., vb(e_n)}. $
+    We need to show that  ${T(vb(e_(m+1))) , ..., T(vb(e_n))}$ is a #ponder("linear-algebra.basis")[basis] of $im T$.
 
-    - #ponder("linear-algebra.spanning-set")[*Spanning*.] To show that ${T(bold(e_(m+1))) , ..., T(bold(e_n))}$ #ponder("linear-algebra.spanning-set")[spans] $im T$, take $y in im T$. Then $exists bold(x) in V$ such that
+    - #ponder("linear-algebra.spanning-set")[*Spanning*.] To show that ${T(vb(e_(m+1))) , ..., T(vb(e_n))}$ #ponder("linear-algebra.spanning-set")[spans] $im T$, take $y in im T$. Then $exists vb(x) in V$ such that
 
-      $ T(bold(x)) = y. $
+      $ T(vb(x)) = y. $
 
-      Since $bold(x) in V$, we can write
-      $ bold(x) = sum_(i=1)^n alpha_i bold(e_i) $
+      Since $vb(x) in V$, we can write
+      $ vb(x) = sum_(i=1)^n alpha_i vb(e_i) $
 
       for some scalars $alpha_1, ..., alpha_n$. Thus,
 
       $
-        y = T(bold(x)) = T(sum_(i=1)^n alpha_i bold(e_i)) = sum_(i=1)^n alpha_i T(bold(e_i)) = sum_(i=m+1)^n alpha_i T(bold(e_i)).
+        y = T(vb(x)) = T(sum_(i=1)^n alpha_i vb(e_i)) = sum_(i=1)^n alpha_i T(vb(e_i)) = sum_(i=m+1)^n alpha_i T(vb(e_i)).
       $
 
-      Therefore, $y$ is in the #ponder("linear-algebra.span")[span] of ${T(bold(e_(m+1))) , ..., T(bold(e_n))}$.
+      Therefore, $y$ is in the #ponder("linear-algebra.span")[span] of ${T(vb(e_(m+1))) , ..., T(vb(e_n))}$.
 
-    - #ponder("linear-algebra.linear-independence")[*Linear independence*.] To show that ${T(bold(e_(m+1))) , ..., T(bold(e_n))}$ is #ponder("linear-algebra.linear-independence")[linearly independent], suppose that
-      $ sum_(i=m+1)^n alpha_i T(bold(e_i)) = bold(0) $
+    - #ponder("linear-algebra.linear-independence")[*Linear independence*.] To show that ${T(vb(e_(m+1))) , ..., T(vb(e_n))}$ is #ponder("linear-algebra.linear-independence")[linearly independent], suppose that
+      $ sum_(i=m+1)^n alpha_i T(vb(e_i)) = vb(0) $
       for some scalars $alpha_(m+1), ..., alpha_n$. Then, by linearity of $T$, we can write
-      $ T(underbracket(sum_(i=m+1)^n alpha_i bold(e_i), bold(x))) = bold(0). $
-      Thus, $bold(x) in ker T$. Therefore, since we supposed that ${bold(e_1), ..., bold(e_m)}$ is a #ponder("linear-algebra.basis")[basis] of $ker T$, we write
-      $ bold(x) = sum_(i=1)^m beta_i bold(e_i) $
-      for some scalars $beta_1, ..., beta_m$. But since ${bold(e_1), ..., bold(e_n)}$ is a #ponder("linear-algebra.basis")[basis] of $V$, the representation of $bold(x)$ is unique. Thus, $alpha_(m+1) = ... = alpha_n = 0$.
+      $ T(underbracket(sum_(i=m+1)^n alpha_i vb(e_i), vb(x))) = vb(0). $
+      Thus, $vb(x) in ker T$. Therefore, since we supposed that ${vb(e_1), ..., vb(e_m)}$ is a #ponder("linear-algebra.basis")[basis] of $ker T$, we write
+      $ vb(x) = sum_(i=1)^m beta_i vb(e_i) $
+      for some scalars $beta_1, ..., beta_m$. But since ${vb(e_1), ..., vb(e_n)}$ is a #ponder("linear-algebra.basis")[basis] of $V$, the representation of $vb(x)$ is unique. Thus, $alpha_(m+1) = ... = alpha_n = 0$.
 ]
 
 #example[
@@ -132,7 +132,7 @@ Let $matbold(M)$ be a matrix with entries $M_(i j) in RR$. define
 $ T: RR^n -> RR^n $
 such that
 
-$ T(bold(x)) = matbold(M) bold(x) = bold(x') quad "for" bold(x), bold(x') in RR^n $
+$ T(vb(x)) = matbold(M) vb(x) = vb(x') quad "for" vb(x), vb(x') in RR^n $
 
 where
 
@@ -147,54 +147,54 @@ $
   vec(x'_1, x'_2) = mat(M_(11), M_(12); M_(21), M_(22)) vec(x_1, x_2) = vec(M_(11)x_1 + M_(12)x_2, M_(21)x_1 + M_(22)x_2).
 $
 
-Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $matbold(M)$.
+Consider $vb(R_i) in RR^n$ the rows, and $vb(C_i) in RR^n$ the columns of $matbold(M)$.
 
 #lecture-separator(lecture: 10, date: "2025-10-30")
 
 #proposition[
   The #ponder("linear-algebra.kernel-image")[image and kernel] of the #ponder("linear-algebra.linear-map")[linear map] $T$ defined by the matrix $matbold(M)$ are given by
   $
-    im T = im matbold(M) = span {bold(C_1), ..., bold(C_n)}
+    im T = im matbold(M) = span {vb(C_1), ..., vb(C_n)}
   $
   and
-  $ ker T = ker matbold(M) = { bold(x) in RR^n: bold(R_i) dot bold(x) = 0 "for all" i = 1, ..., n }. $
+  $ ker T = ker matbold(M) = { vb(x) in RR^n: vb(R_i) dot vb(x) = 0 "for all" i = 1, ..., n }. $
 ] <prop-image-kernel-matrix>
 
 #proof[
   Let us consider the #ponder("linear-algebra.kernel-image")[image and kernel] of $matbold(M)$. The components are related in the following form:
 
   $
-    M_(i j) = (bold(C_j))_i = (bold(R_i))_j .
+    M_(i j) = (vb(C_j))_i = (vb(R_i))_j .
   $
 
-  If ${bold(e_1), ..., bold(e_n)}$ is the standard #ponder("linear-algebra.basis")[basis] of $RR^n$, then, under $T$,
+  If ${vb(e_1), ..., vb(e_n)}$ is the standard #ponder("linear-algebra.basis")[basis] of $RR^n$, then, under $T$,
 
   $
-    bold(e_i) |-> T(bold(e_i)) = matbold(M) bold(e_i) = bold(C_i).
+    vb(e_i) |-> T(vb(e_i)) = matbold(M) vb(e_i) = vb(C_i).
   $
 
   Since $T$ is a #ponder("linear-algebra.linear-map")[linear map], we can write
 
   $
-    bold(x) = sum_i x_i bold(e_i) |-> T(bold(x)) = sum_i x_i T(bold(e_i)) = sum_i x_i bold(C_i) = x_i bold(C_i).
+    vb(x) = sum_i x_i vb(e_i) |-> T(vb(x)) = sum_i x_i T(vb(e_i)) = sum_i x_i vb(C_i) = x_i vb(C_i).
   $
 
-  Thus, $im T = im matbold(M) = span {bold(C_1), ..., bold(C_n)}$, which is the #ponder("linear-algebra.span")[span] of the columns of $matbold(M)$.
+  Thus, $im T = im matbold(M) = span {vb(C_1), ..., vb(C_n)}$, which is the #ponder("linear-algebra.span")[span] of the columns of $matbold(M)$.
 
 
-  Now, for the kernel, consider $x'_i = M_(i j)x_j = (bold(R_i))_j x_j = bold(R_i) dot bold(x)$.
+  Now, for the kernel, consider $x'_i = M_(i j)x_j = (vb(R_i))_j x_j = vb(R_i) dot vb(x)$.
 
 
-  If $bold(x') = bold(0)$, then $bold(R_i) dot bold(x) = 0$ for all $i$. Thus, $ker T = ker matbold(M)$ is the set of vectors #ponder("linear-algebra.orthogonality")[orthogonal] to all the rows of $matbold(M)$.
+  If $vb(x') = vb(0)$, then $vb(R_i) dot vb(x) = 0$ for all $i$. Thus, $ker T = ker matbold(M)$ is the set of vectors #ponder("linear-algebra.orthogonality")[orthogonal] to all the rows of $matbold(M)$.
 
 ]
 
 #example[Examples of matrices as linear maps][
-  1. *Zero map*. The zero map is defined by taking $matbold(M) = bold(0)$.
+  1. *Zero map*. The zero map is defined by taking $matbold(M) = vb(0)$.
 
   2. #ponder("set-theory.identity-function")[*Identity map*]. The #ponder("set-theory.identity-function")[identity map] is defined by taking $matbold(M) = matbold(I)$, where $matbold(I)$ is the identity matrix.
 
-  3. Consider the map $T: V->W$ where $bold(x') = T(bold(x)) = matbold(M) bold(x)$. Let $T$ be defined by
+  3. Consider the map $T: V->W$ where $vb(x') = T(vb(x)) = matbold(M) vb(x)$. Let $T$ be defined by
 
     $
       cases(
@@ -210,22 +210,22 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
     $
     with columns
     $
-      bold(C_1) = vec(3, -1, 2), bold(C_2) = vec(1, 0, 1), bold(C_3) = vec(5, -2, 3).
+      vb(C_1) = vec(3, -1, 2), vb(C_2) = vec(1, 0, 1), vb(C_3) = vec(5, -2, 3).
     $
     and rows
     $
-      bold(R_1) = vec(3, 1, 5), bold(R_2) = vec(-1, 0, -2), bold(R_3) = vec(2, 1, 3).
+      vb(R_1) = vec(3, 1, 5), vb(R_2) = vec(-1, 0, -2), vb(R_3) = vec(2, 1, 3).
     $
     Hence, the #ponder("linear-algebra.kernel-image")[image and kernel] of the #ponder("linear-algebra.linear-map")[linear map] $T$ are given by
     $
-      im T = im matbold(M) = span {bold(C_1), bold(C_2), bold(C_3)} = span {bold(C_1), bold(C_2)} => rank(T) = 2,
+      im T = im matbold(M) = span {vb(C_1), vb(C_2), vb(C_3)} = span {vb(C_1), vb(C_2)} => rank(T) = 2,
     $
     because we have that $vec(5, -2, 3) = 2 vec(3, -1, 2) - vec(1, 0, 1)$.
 
     Then, for the #ponder("linear-algebra.kernel-image")[kernel], we need
 
     $
-      bold(R_2) times bold(R_3) = mat(delim: "|", bold(i), bold(j), bold(k); -1, 0, -2; 2, 1, 3) = vec(0 - (-2), 3 + (-4), -1 - 0) = vec(2, -1, -1).
+      vb(R_2) times vb(R_3) = mdet(vb(i), vb(j), vb(k); -1, 0, -2; 2, 1, 3) = vec(0 - (-2), 3 + (-4), -1 - 0) = vec(2, -1, -1).
     $
 
     Hence $ ker T = ker matbold(M) = span {vec(2, -1, -1)}. $
@@ -238,7 +238,7 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
 1. #ponder("geometry.rotation")[*Rotations.*]
 
   Consider $theta$ such that $-pi < theta <= pi$. Then, a #ponder("geometry.rotation")[rotation] by an angle $theta$ about the origin in $RR^2$ is given by the matrix
-  $ matbold("Rot")(theta) = mat(cos theta, -sin theta; sin theta, cos theta). $
+  $ matbold("Rot")(theta) = rot2mat(theta). $
 
   Note that $det matbold("Rot")(theta) = cos^2(theta) + sin^2(theta) = 1$.
 
@@ -274,19 +274,19 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
 
 1. #ponder("geometry.rotation")[*Rotations.*]
 
-  - Consider a #ponder("geometry.rotation")[rotation] by an angle $theta$ about axis $bold(e_3)$. This is given by the matrix
+  - Consider a #ponder("geometry.rotation")[rotation] by an angle $theta$ about axis $vb(e_3)$. This is given by the matrix
     $
-      matbold("Rot")(theta) = mat(cos theta, -sin theta, 0; sin theta, cos theta, 0; 0, 0, 1).
+      matbold("Rot")(theta) = rot3zmat(theta).
     $
 
-  - Consider a #ponder("geometry.rotation")[rotation] by an angle $theta$ about the #ponder("linear-algebra.unit-vector")[unit vector] $bold(n)$. In this case, we have
-    $ bold(x') = matbold(R) bold(x) $
-    where $bold(x) in RR^3$ and $x'_i = R_(i j) x_j$.
+  - Consider a #ponder("geometry.rotation")[rotation] by an angle $theta$ about the #ponder("linear-algebra.unit-vector")[unit vector] $vb(n)$. In this case, we have
+    $ vb(x') = matbold(R) vb(x) $
+    where $vb(x) in RR^3$ and $x'_i = R_(i j) x_j$.
 
     Then,
 
     $
-      bold(x') = (cos theta) bold(x) + (1- cos theta) (bold(n) dot bold(x)) bold(n) + (sin theta) bold(n) times bold(x)
+      vb(x') = (cos theta) vb(x) + (1- cos theta) (vb(n) dot vb(x)) vb(n) + (sin theta) vb(n) times vb(x)
     $
     or equivalently,
     $
@@ -297,22 +297,22 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
     #dynamic-svg("/part-ia/vectors-and-matrices/media/d5e3.svg", width: 14em)
   ]
 
-  This can be derived by decomposing $bold(x)$ into components #ponder("linear-algebra.parallel-vectors")[parallel] and #ponder("linear-algebra.orthogonality")[perpendicular] to $bold(n)$, and then rotating the #ponder("linear-algebra.orthogonality")[perpendicular] component in the plane #ponder("linear-algebra.orthogonality")[orthogonal] to $bold(n)$.
+  This can be derived by decomposing $vb(x)$ into components #ponder("linear-algebra.parallel-vectors")[parallel] and #ponder("linear-algebra.orthogonality")[perpendicular] to $vb(n)$, and then rotating the #ponder("linear-algebra.orthogonality")[perpendicular] component in the plane #ponder("linear-algebra.orthogonality")[orthogonal] to $vb(n)$.
 
-  $ bold(x) = bold(x_parallel) + bold(x_perp) $
+  $ vb(x) = vb(x_parallel) + vb(x_perp) $
 
   with
 
   $
-    bold(x_parallel) & = (bold(n) dot bold(x)) bold(n), \
-        bold(x_perp) & = bold(x) - bold(x_parallel).
+    vb(x_parallel) & = (vb(n) dot vb(x)) vb(n), \
+        vb(x_perp) & = vb(x) - vb(x_parallel).
   $
 
   After applying $matbold(R)$, we have
 
   $
-    bold(x'_parallel) = bold(x_parallel), \
-    bold(x'_perp) = (cos theta) bold(x_perp) + (sin theta) bold(n) times bold(x_perp).
+    vb(x'_parallel) = vb(x_parallel), \
+    vb(x'_perp) = (cos theta) vb(x_perp) + (sin theta) vb(n) times vb(x_perp).
   $
 
 
@@ -322,14 +322,14 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
 
 2. #ponder("geometry.reflection")[*Reflections.*]
 
-  #ponder("geometry.reflection")[Reflections] in a plane through the origin with normal #ponder("linear-algebra.unit-vector")[unit vector] $bold(n)$ are given by
+  #ponder("geometry.reflection")[Reflections] in a plane through the origin with normal #ponder("linear-algebra.unit-vector")[unit vector] $vb(n)$ are given by
   $
-    bold(x') = matbold(H)bold(x) = bold(x) - 2 (bold(n) dot bold(x)) bold(n).
+    vb(x') = matbold(H)vb(x) = vb(x) - 2 (vb(n) dot vb(x)) vb(n).
   $
 
   Thus we have
   $
-    bold(x')_i = H_(i j) x_j,
+    vb(x')_i = H_(i j) x_j,
   $
   where
 
@@ -343,12 +343,12 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
 
   Dilations from the origin with scale factor $lambda$ are given by
   $
-    bold(x') = matbold(D)(lambda) bold(x) = lambda bold(x).
+    vb(x') = matbold(D)(lambda) vb(x) = lambda vb(x).
   $
 
   Thus, we have
   $
-    bold(x')_i = D_(i j)(lambda) x_j,
+    vb(x')_i = D_(i j)(lambda) x_j,
   $
   where
 
@@ -358,15 +358,15 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
 
 4. *Shears.*
 
-  Given $a, b$ with $abs(a) = abs(b) = 1$ and such that $bold(a) dot bold(b) = 0$, a shear with parameter $lambda$ is defined by
+  Given $a, b$ with $abs(a) = abs(b) = 1$ and such that $vb(a) dot vb(b) = 0$, a shear with parameter $lambda$ is defined by
 
   $
-    bold(x') = matbold(S)(lambda) bold(x) = bold(x) + lambda (bold(x) dot bold(a)) bold(b).
+    vb(x') = matbold(S)(lambda) vb(x) = vb(x) + lambda (vb(x) dot vb(a)) vb(b).
   $
   Thus, we have
 
   $
-    bold(x')_i = S_(i j)(lambda) x_j,
+    vb(x')_i = S_(i j)(lambda) x_j,
   $
   where
   $
@@ -378,24 +378,24 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
 === Definitions
 
 #definition[Matrix][
-  Consider a #ponder("linear-algebra.linear-map")[linear map] $T: V-> W$, with $dim V = n$ and $dim W = m$, and take two #ponder("linear-algebra.basis")[bases] ${bold(e_1), ..., bold(e_n)}$ of $V$ and ${bold(f_1), ..., bold(f_m)}$ of $W$.
+  Consider a #ponder("linear-algebra.linear-map")[linear map] $T: V-> W$, with $dim V = n$ and $dim W = m$, and take two #ponder("linear-algebra.basis")[bases] ${vb(e_1), ..., vb(e_n)}$ of $V$ and ${vb(f_1), ..., vb(f_m)}$ of $W$.
 
   Then, $T$ can be represented by $matbold(M)$, which is an $m times n$ array with entries $M_(i j) in RR "or" CC$ for $i = 1, ..., m$ as the rows and $j = 1, ..., n$ as the columns, such that
-  $ T(bold(e_j)) = sum_(i=1)^m M_(i j) bold(f_i) $
+  $ T(vb(e_j)) = sum_(i=1)^m M_(i j) vb(f_i) $
   for $j = 1, ..., n$.
-  This automatically ensures that for any $bold(x) in V$, $bold(x') = T(bold(x))$, we can always write $bold(x')$ and $bold(x)$ in terms of the bases:
+  This automatically ensures that for any $vb(x) in V$, $vb(x') = T(vb(x))$, we can always write $vb(x')$ and $vb(x)$ in terms of the bases:
   $
-    bold(x) = sum_(j=1)^n x_j bold(e_j), quad bold(x') = sum_(i=1)^m x'_i bold(f_i).
+    vb(x) = sum_(j=1)^n x_j vb(e_j), quad vb(x') = sum_(i=1)^m x'_i vb(f_i).
   $
   This means that any coefficient from the image can be written as
   $
     x'_i = sum_(j=1)^n M_(i j) x_j.
   $
-  To summarise, given $V$ and $W$ which are real or complex #ponder("linear-algebra.vector-space")[vector spaces] with $dim V = n$ and $dim W = m$, and given #ponder("linear-algebra.basis")[bases] ${bold(e_1), ..., bold(e_n)}$ of $V$ and ${bold(f_1), ..., bold(f_m)}$ of $W$, then
+  To summarise, given $V$ and $W$ which are real or complex #ponder("linear-algebra.vector-space")[vector spaces] with $dim V = n$ and $dim W = m$, and given #ponder("linear-algebra.basis")[bases] ${vb(e_1), ..., vb(e_n)}$ of $V$ and ${vb(f_1), ..., vb(f_m)}$ of $W$, then
 
   - $V$ is identified with $RR^n$ or $CC^n$.
   - $W$ is identified with $RR^m$ or $CC^m$.
-  - We identify the #ponder("linear-algebra.linear-map")[linear map] $T: V->W$ with the matrix $matbold(M)$ such that $bold(x') = matbold(M) bold(x)$.
+  - We identify the #ponder("linear-algebra.linear-map")[linear map] $T: V->W$ with the matrix $matbold(M)$ such that $vb(x') = matbold(M) vb(x)$.
 ] <def-matrix-representation>
 
 #remark[
@@ -416,21 +416,21 @@ Consider $bold(R_i) in RR^n$ the rows, and $bold(C_i) in RR^n$ the columns of $m
   $
   The map is linear. We want to find the #ponder("linear-algebra.matrix-representation")[matrix representation] of $T$ with respect to the #ponder("linear-algebra.basis")[bases]
   $
-    { bold(e_1) = mat(1, 0; 0, 0), bold(e_2) = mat(0, 1; 0, 0), bold(e_3) = mat(0, 0; 1, 0), bold(e_4) = mat(0, 0; 0, 1) }
+    { vb(e_1) = mat(1, 0; 0, 0), vb(e_2) = mat(0, 1; 0, 0), vb(e_3) = mat(0, 0; 1, 0), vb(e_4) = mat(0, 0; 0, 1) }
   $
   of $V$ and
-  $ { bold(f_1) = vec(1, 0, 0), bold(f_2) = vec(0, 1, 0), bold(f_3) = vec(0, 0, 1) } $
+  $ { vb(f_1) = vec(1, 0, 0), vb(f_2) = vec(0, 1, 0), vb(f_3) = vec(0, 0, 1) } $
   of $W$.
 
-  To determine $matbold(M)$, we need to compute $T(bold(e_i))$ for $i = 1, ..., 4$:
-  $ T(bold(e_1)) = T(mat(1, 0; 0, 0)) = vec(1, 0, 0) $
-  $ T(bold(e_2)) = T(mat(0, 1; 0, 0)) = vec(1, 0, 0) $
-  $ T(bold(e_3)) = T(mat(0, 0; 1, 0)) = vec(0, 1, 0) $
-  $ T(bold(e_4)) = T(mat(0, 0; 0, 1)) = vec(0, 0, 1) $
+  To determine $matbold(M)$, we need to compute $T(vb(e_i))$ for $i = 1, ..., 4$:
+  $ T(vb(e_1)) = T(mat(1, 0; 0, 0)) = vec(1, 0, 0) $
+  $ T(vb(e_2)) = T(mat(0, 1; 0, 0)) = vec(1, 0, 0) $
+  $ T(vb(e_3)) = T(mat(0, 0; 1, 0)) = vec(0, 1, 0) $
+  $ T(vb(e_4)) = T(mat(0, 0; 0, 1)) = vec(0, 0, 1) $
   Therefore, for $a, b, c, d in RR$,
 
   $
-    T(mat(a, b; c, d)) = a T(bold(e_1)) + b T(bold(e_2)) + c T(bold(e_3)) + d T(bold(e_4)) = a vec(1, 0, 0) + b vec(1, 0, 0) + c vec(0, 1, 0) + d vec(0, 0, 1) = vec(a + b, c, d).
+    T(mat(a, b; c, d)) = a T(vb(e_1)) + b T(vb(e_2)) + c T(vb(e_3)) + d T(vb(e_4)) = a vec(1, 0, 0) + b vec(1, 0, 0) + c vec(0, 1, 0) + d vec(0, 0, 1) = vec(a + b, c, d).
   $
   Thus, the #ponder("linear-algebra.matrix-representation")[matrix representation] of $T$ with respect to the given bases is
   $
@@ -450,8 +450,8 @@ $
   T compose S: U-> W
 $
 such that
-$ (T compose S)(bold(x)) = T(S(bold(x))) $
-for all $bold(x) in U$.
+$ (T compose S)(vb(x)) = T(S(vb(x))) $
+for all $vb(x) in U$.
 
 If $T$ is represented by the matrix $matbold(M)$ and $S$ is represented by the matrix $matbold(N)$, then $T compose S$ is represented by the matrix $matbold(L)= matbold(M) matbold(N)$.
 
@@ -459,9 +459,9 @@ If $T$ is represented by the matrix $matbold(M)$ and $S$ is represented by the m
 
 Let
 
-- ${bold(e_1), ..., bold(e_n)}$ be a #ponder("linear-algebra.basis")[basis] of $V$ ($dim V = n$),
-- ${bold(f_1), ..., bold(f_m)}$ be a #ponder("linear-algebra.basis")[basis] of $W$ ($dim W = m$),
-- ${bold(g_1), ..., bold(g_l)}$ be a #ponder("linear-algebra.basis")[basis] of $U$ ($dim U = l$).
+- ${vb(e_1), ..., vb(e_n)}$ be a #ponder("linear-algebra.basis")[basis] of $V$ ($dim V = n$),
+- ${vb(f_1), ..., vb(f_m)}$ be a #ponder("linear-algebra.basis")[basis] of $W$ ($dim W = m$),
+- ${vb(g_1), ..., vb(g_l)}$ be a #ponder("linear-algebra.basis")[basis] of $U$ ($dim U = l$).
 
 If we consider $T compose S$ so that $T compose S$ is represented by the matrix $matbold(L) = matbold(M)matbold(N)$, with coefficients given by
 $ L_(i k) = M_(i j) N_(j k). $
@@ -479,18 +479,18 @@ Note that
 We can also write
 $
   L_(i k) & = (matbold(M)matbold(N))_(i k) \
-          & = [ bold(R_i) (matbold(M))]_j [ bold(C_k) (matbold(N)) ]_j \
-          & = bold(R_i) (matbold(M)) dot bold(C_k) (matbold(N)) .
+          & = [ vb(R_i) (matbold(M))]_j [ vb(C_k) (matbold(N)) ]_j \
+          & = vb(R_i) (matbold(M)) dot vb(C_k) (matbold(N)) .
 $
 
-If we apply $matbold(M) matbold(N)$ to a $bold(x) in U$, we obtain
+If we apply $matbold(M) matbold(N)$ to a $vb(x) in U$, we obtain
 
 $
-  (matbold(M)matbold(N))bold(x) = matbold(M)(matbold(N) bold(x))
+  (matbold(M)matbold(N))vb(x) = matbold(M)(matbold(N) vb(x))
 $
 with
 $
-  [matbold(M)(matbold(N)bold(x))]_i = M_(i j) [matbold(N) bold(x)]_j
+  [matbold(M)(matbold(N)vb(x))]_i = M_(i j) [matbold(N) vb(x)]_j
 $
 and Thus
 $
@@ -509,7 +509,7 @@ $
 
 === Matrix Inverses
 
-Consider three matrices $bold(M), bold(N), bold(L)$, satisfying
+Consider three matrices $vb(M), vb(N), vb(L)$, satisfying
 
 - The size of $matbold(N)$ is $m times n$,
 - The size of $matbold(M)$ is $n times m$,
@@ -546,38 +546,38 @@ so the left and right inverses coincide. In this case, we say that $matbold(N)$ 
 ]
 
 #example[
-  1. #ponder("geometry.rotation")[*Rotation.*] For $matbold("Rot")(theta, bold(n))$, we have
-    $ matbold("Rot")(theta, bold(n))^(-1) = matbold("Rot")(-theta, bold(n)). $
-  2. *Shear.* Fix $bold(a), bold(b)$. Then, for $matbold(S)(lambda)$, we have
+  1. #ponder("geometry.rotation")[*Rotation.*] For $matbold("Rot")(theta, vb(n))$, we have
+    $ matbold("Rot")(theta, vb(n))^(-1) = matbold("Rot")(-theta, vb(n)). $
+  2. *Shear.* Fix $vb(a), vb(b)$. Then, for $matbold(S)(lambda)$, we have
     $ matbold(S)(lambda)^(-1) = matbold(S)(-lambda). $
-  3. #ponder("geometry.reflection")[*Reflection.*] If $matbold(H)$ is a #ponder("geometry.reflection")[reflection] in a plane with normal $bold(n)$, then
+  3. #ponder("geometry.reflection")[*Reflection.*] If $matbold(H)$ is a #ponder("geometry.reflection")[reflection] in a plane with normal $vb(n)$, then
     $ matbold(H)^(-1) = matbold(H). $
 ]
 
 === Transpose and Hermitian Conjugate
 
 #definition[Transpose][
-  Consider a matrix $matbold(M)$ of size $m times n$. Then, the #ponder("linear-algebra.transpose")[*transpose*] of $matbold(M)$ is the matrix $matbold(M)^tp$ of size $n times m$ with entries
-  $ (matbold(M)^tp)_(i j) = M_(j i). $
+  Consider a matrix $matbold(M)$ of size $m times n$. Then, the #ponder("linear-algebra.transpose")[*transpose*] of $matbold(M)$ is the matrix $matbold(M)^TT$ of size $n times m$ with entries
+  $ (matbold(M)^TT)_(i j) = M_(j i). $
 ] <def-transpose>
 
 #proposition[Properties of the transpose][
-  1. $(matbold(M)^tp)^tp = matbold(M)$
-  2. If $bold(x)$ is a column vector $vec(x_1, dots.v, x_n)$, then $bold(x)^tp$ is the row vector $mat(x_1, dots.c, x_n)$.
-  3. $(matbold(M) matbold(N))^tp = matbold(N)^tp matbold(M)^tp$
-  4. $(alpha matbold(M) + beta matbold(N))^tp = alpha matbold(M)^tp + beta matbold(N)^tp$
+  1. $(matbold(M)^TT)^TT = matbold(M)$
+  2. If $vb(x)$ is a column vector $vec(x_1, dots.v, x_n)$, then $vb(x)^TT$ is the row vector $mat(x_1, dots.c, x_n)$.
+  3. $(matbold(M) matbold(N))^TT = matbold(N)^TT matbold(M)^TT$
+  4. $(alpha matbold(M) + beta matbold(N))^TT = alpha matbold(M)^TT + beta matbold(N)^TT$
 ] <prop-transpose-properties>
 
 #definition[Symmetric and antisymmetric matrices][
   If $matbold(M)$ is a square matrix, then $matbold(M)$ is
 
-  - #ponder("linear-algebra.symmetric-matrix")[*symmetric*] if $matbold(M)^tp = matbold(M)$,
-  - #ponder("linear-algebra.symmetric-matrix")[*antisymmetric*] if $matbold(M)^tp = - matbold(M)$
+  - #ponder("linear-algebra.symmetric-matrix")[*symmetric*] if $matbold(M)^TT = matbold(M)$,
+  - #ponder("linear-algebra.symmetric-matrix")[*antisymmetric*] if $matbold(M)^TT = - matbold(M)$
 ] <def-symmetric-antisymmetric-matrices>
 
 #definition[Hermitian conjugate][
   Consider a matrix $matbold(M)$ of size $m times n$ with complex entries. Then, the #ponder("linear-algebra.hermitian-conjugate")[*Hermitian conjugate*] of $matbold(M)$ is the matrix $matbold(M)^dagger$ of size $n times m$
-  $ matbold(M)^dagger = overline(matbold(M)^tp) $
+  $ matbold(M)^dagger = overline(matbold(M)^TT) $
   with entries
   $ (matbold(M)^dagger)_(i j) = overline(M_(j i)) $
   where $overline(z)$ denotes the complex conjugate of $z in CC$.
@@ -606,7 +606,7 @@ so the left and right inverses coincide. In this case, we say that $matbold(N)$ 
 #proposition[Properties of the trace][
   1. $tr(alpha matbold(M) + beta matbold(N)) = alpha tr(matbold(M)) + beta tr(matbold(N))$
   2. $tr(matbold(M) matbold(N)) = tr(matbold(N) matbold(M))$
-  3. $tr(matbold(M)^tp) = tr(matbold(M))$
+  3. $tr(matbold(M)^TT) = tr(matbold(M))$
   4. $tr(matbold(I))=n$ for the identity matrix of size $n times n$.
 ] <prop-trace-properties>
 
@@ -614,11 +614,11 @@ so the left and right inverses coincide. In this case, we say that $matbold(N)$ 
 
 Any $n times n$ matrix is a sum of #ponder("linear-algebra.symmetric-matrix")[symmetric and antisymmetric parts]. For a matrix $matbold(M)$ that is square with real entries, we can write $matbold(M)$ as $matbold(S) + matbold(A)$, where
 
-$ matbold(S) = (1)/(2) (matbold(M) + matbold(M)^tp) $
+$ matbold(S) = (1)/(2) (matbold(M) + matbold(M)^TT) $
 
 is the #ponder("linear-algebra.symmetric-matrix")[symmetric part] and
 
-$ matbold(A) = (1)/(2) (matbold(M) - matbold(M)^tp) $
+$ matbold(A) = (1)/(2) (matbold(M) - matbold(M)^TT) $
 
 is the #ponder("linear-algebra.symmetric-matrix")[antisymmetric part].
 
@@ -637,11 +637,11 @@ $
 
 #definition[Orthogonal matrix][
   A real $n times n$ matrix $matbold(U)$ is #ponder("algebra.orthogonal-group")[*orthogonal*] if and only if
-  $ matbold(U)^tp matbold(U) = matbold(U) matbold(U)^tp = matbold(I) $
+  $ matbold(U)^TT matbold(U) = matbold(U) matbold(U)^TT = matbold(I) $
   or equivalently,
-  $ matbold(U)^tp = matbold(U)^(-1). $
-  This means that columns and rows of $matbold(U)$ are #ponder("linear-algebra.orthonormal")[orthonormal] vectors. Equivalently, $matbold(U)$ is #ponder("algebra.orthogonal-group")[orthogonal] if and only if $matbold(U)$ #ponder("algebra.orthogonal-dot-product")[preserves the dot product], _i.e._ for all $bold(x), bold(y) in RR^n$,
-  $ (matbold(U) bold(x)) dot (matbold(U) bold(y)) = bold(x) dot bold(y), $
+  $ matbold(U)^TT = matbold(U)^(-1). $
+  This means that columns and rows of $matbold(U)$ are #ponder("linear-algebra.orthonormal")[orthonormal] vectors. Equivalently, $matbold(U)$ is #ponder("algebra.orthogonal-group")[orthogonal] if and only if $matbold(U)$ #ponder("algebra.orthogonal-dot-product")[preserves the dot product], _i.e._ for all $vb(x), vb(y) in RR^n$,
+  $ (matbold(U) vb(x)) dot (matbold(U) vb(y)) = vb(x) dot vb(y), $
   and in this cases, $matbold(U)$ preserves lengths and angles.
 ]
 
@@ -650,8 +650,8 @@ $
   $ matbold(U)^dagger matbold(U) = matbold(U) matbold(U)^dagger = matbold(I) $
   or equivalently,
   $ matbold(U)^dagger = matbold(U)^(-1). $
-  Equivalently, $matbold(U)$ is #ponder("linear-algebra.unitary-matrix")[unitary] iff it preserves the complex #ponder("linear-algebra.inner-product")[inner product], _i.e._ for all $bold(x), bold(y) in CC^n$,
-  $ (matbold(U) bold(x))^dagger (matbold(U) bold(y)) = bold(x)^dagger bold(y), $
+  Equivalently, $matbold(U)$ is #ponder("linear-algebra.unitary-matrix")[unitary] iff it preserves the complex #ponder("linear-algebra.inner-product")[inner product], _i.e._ for all $vb(x), vb(y) in CC^n$,
+  $ (matbold(U) vb(x))^dagger (matbold(U) vb(y)) = vb(x)^dagger vb(y), $
   and in this cases, $matbold(U)$ preserves lengths and angles.
 ] <def-unitary-matrix>
 
@@ -674,7 +674,7 @@ $
   $
 
   Thus, we have either
-  $ matbold(U) = matbold("Rot")(theta) = mat(cos theta, -sin theta; sin theta, cos theta) $
+  $ matbold(U) = matbold("Rot")(theta) = rot2mat(theta) $
   or
   $ matbold(U) = matbold("Ref")(theta) = mat(cos theta, sin theta; sin theta, -cos theta). $
 ]
@@ -682,42 +682,42 @@ $
 == Determinant
 
 Consider a map $RR^n -> RR^n$ given by a real $n times n$ matrix $matbold(M)$, where
-$ bold(x') = matbold(M) bold(x) $
-for all $bold(x) in RR^n$.
+$ vb(x') = matbold(M) vb(x) $
+for all $vb(x) in RR^n$.
 
 Assume that $matbold(M^(-1))$ exists, then
-$ bold(x) = matbold(M^(-1)) bold(x'). $
+$ vb(x) = matbold(M^(-1)) vb(x'). $
 
 === In $RR^2$
 
 Consider $matbold(M) = mat(M_(11), M_(12); M_(21), M_(22))$, and let $matbold(tilde(M)) = mat(M_(22), -M_(12); -M_(21), M_(11))$. Then,
 
 $
-  bold(x') = matbold(M) bold(x) quad => quad matbold(tilde(M)) bold(x') = matbold(M) matbold(tilde(M)) bold(x)= det(matbold(M)) bold(x).
+  vb(x') = matbold(M) vb(x) quad => quad matbold(tilde(M)) vb(x') = matbold(M) matbold(tilde(M)) vb(x)= det(matbold(M)) vb(x).
 $
 
 with $det matbold(M) = M_(11) M_(22) - M_(12) M_(21).$
 
-Note that $det matbold(M) = [matbold(M) bold(e_1), matbold(M) bold(e_2)]$.
+Note that $det matbold(M) = [matbold(M) vb(e_1), matbold(M) vb(e_2)]$.
 
 Therefore, if $det matbold(M) != 0$, then $matbold(M^(-1)) = (1)/(det matbold(M)) matbold(tilde(M))$.
 
 === In $RR^3$
 
-We shall attempt to generalise our construction of the $det matbold(M)$ to $RR^3$. Take $matbold(x) |-> matbold(x') = matbold(M) bold(x)$ where $matbold(M)$ is a $3 times 3$ matrix with real entries. We seek a matrix $matbold(tilde(M))$ and a scalar $det matbold(M)$ such that
+We shall attempt to generalise our construction of the $det matbold(M)$ to $RR^3$. Take $matbold(x) |-> matbold(x') = matbold(M) vb(x)$ where $matbold(M)$ is a $3 times 3$ matrix with real entries. We seek a matrix $matbold(tilde(M))$ and a scalar $det matbold(M)$ such that
 $ matbold(tilde(M)) matbold(M) = (det matbold(M)) matbold(I). $
 
 We call this scalar $det matbold(M)$ the #ponder("linear-algebra.determinant")[*determinant*] of $matbold(M)$.
 
-Recall that the #ponder("linear-algebra.scalar-triple-product")[scalar triple product] of three vectors $bold(a), bold(b), bold(c) in RR^3$ is defined by
-$ [bold(a), bold(b), bold(c)] = bold(a) dot (bold(b) times bold(c)) = epsilon_(i j k) a_i b_j c_k $
+Recall that the #ponder("linear-algebra.scalar-triple-product")[scalar triple product] of three vectors $vb(a), vb(b), vb(c) in RR^3$ is defined by
+$ [vb(a), vb(b), vb(c)] = vb(a) dot (vb(b) times vb(c)) = epsilon_(i j k) a_i b_j c_k $
 which describes the volume of the parallelepiped formed by the three vectors.
 
 Under the action of a $3 times 3$ matrix $matbold(M)$, volumes are scaled by a factor $det matbold(M)$, where
 $
-  [matbold(M) bold(e_1), matbold(M) bold(e_2), matbold(M) bold(e_3)] &= [bold(C_1)(matbold(M)) , bold(C_2)(matbold(M)), bold(C_3)(matbold(M))]\
+  [matbold(M) vb(e_1), matbold(M) vb(e_2), matbold(M) vb(e_3)] &= [vb(C_1)(matbold(M)) , vb(C_2)(matbold(M)), vb(C_3)(matbold(M))]\
   &= [M_(i 1) matbold(e_i), M_(j 2) matbold(e_j), M_(k 3) matbold(e_k)] \
-  &=M_(i 1) M_(j 2) M_(k 3) [bold(e_i), bold(e_j), bold(e_k)] \
+  &=M_(i 1) M_(j 2) M_(k 3) [vb(e_i), vb(e_j), vb(e_k)] \
   &= epsilon_(i j k) M_(i 1) M_(j 2) M_(k 3)\
   &=: det matbold(M).
 $
@@ -727,19 +727,19 @@ $ det matbold(M) = epsilon_(i j k) M_(i 1) M_(j 2) M_(k 3). $
 
 To construct $matbold(tilde(M))$, note
 $
-  bold(R_1)(matbold(tilde(M))) & = bold(C_2)(matbold(M)) times bold(C_3)(matbold(M)) \
-  bold(R_2)(matbold(tilde(M))) & = bold(C_3)(matbold(M)) times bold(C_1)(matbold(M)) \
-  bold(R_3)(matbold(tilde(M))) & = bold(C_1)(matbold(M)) times bold(C_2)(matbold(M))
+  vb(R_1)(matbold(tilde(M))) & = vb(C_2)(matbold(M)) times vb(C_3)(matbold(M)) \
+  vb(R_2)(matbold(tilde(M))) & = vb(C_3)(matbold(M)) times vb(C_1)(matbold(M)) \
+  vb(R_3)(matbold(tilde(M))) & = vb(C_1)(matbold(M)) times vb(C_2)(matbold(M))
 $
 so that
 $
-  bold(R_i)(matbold(tilde(M))) dot bold(C_j)(matbold(M)) = matbold(C_1)(matbold(M)) dot (matbold(C_2)(matbold(M)) times matbold(C_3)(matbold(M))) delta_(i j).
+  vb(R_i)(matbold(tilde(M))) dot vb(C_j)(matbold(M)) = matbold(C_1)(matbold(M)) dot (matbold(C_2)(matbold(M)) times matbold(C_3)(matbold(M))) delta_(i j).
 $
 
 Thus,
 $ (matbold(tilde(M)) matbold(M))_(i j) = (det matbold(M)) delta_(i j). $
 
-And hence $det matbold(M) != 0$ iff ${matbold(M) bold(e_1), matbold(M) bold(e_2), matbold(M) bold(e_3)}$ is #ponder("linear-algebra.linear-independence")[linearly independent]. This is equivalent to saying $im(matbold(M)) = RR^3$, or that $rank(matbold(M)) = 3$.
+And hence $det matbold(M) != 0$ iff ${matbold(M) vb(e_1), matbold(M) vb(e_2), matbold(M) vb(e_3)}$ is #ponder("linear-algebra.linear-independence")[linearly independent]. This is equivalent to saying $im(matbold(M)) = RR^3$, or that $rank(matbold(M)) = 3$.
 
 #remark[
   General $3times 3$ #ponder("linear-algebra.determinant")[determinants] can be expanded in terms of $2times 2$ #ponder("linear-algebra.determinant")[determinants]. For example,
@@ -748,7 +748,7 @@ And hence $det matbold(M) != 0$ iff ${matbold(M) bold(e_1), matbold(M) bold(e_2)
       delim: "|", M_(11), M_(12), M_(13);
       M_(21), M_(22), M_(23);
       M_(31), M_(32), M_(33)
-    ) = M_(11) mat(delim: "|", M_(22), M_(23); M_(32), M_(33)) - M_(12) mat(delim: "|", M_(21), M_(23); M_(31), M_(33)) + M_(13) mat(delim: "|", M_(21), M_(22); M_(31), M_(32)).
+    ) = M_(11) mdet(M_(22), M_(23); M_(32), M_(33)) - M_(12) mdet(M_(21), M_(23); M_(31), M_(33)) + M_(13) mdet(M_(21), M_(22); M_(31), M_(32)).
   $
 ]
 
@@ -842,38 +842,38 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
 === Alternating Forms
 
 #definition[Alternating form][
-  For vectors $bold(v_1), ..., bold(v_n)$ in $RR^n$ or $CC^n$, the rank $n$ #ponder("linear-algebra.alternating-form")[*alternating form*] is defined by
+  For vectors $vb(v_1), ..., vb(v_n)$ in $RR^n$ or $CC^n$, the rank $n$ #ponder("linear-algebra.alternating-form")[*alternating form*] is defined by
   $
-    [bold(v_1), ..., bold(v_n)] & = epsilon_(j_1, ..., j_n) (v_1)_(j 1) (v_2)_(j 2) ... (v_n)_(j n) \
+    [vb(v_1), ..., vb(v_n)] & = epsilon_(j_1, ..., j_n) (v_1)_(j 1) (v_2)_(j 2) ... (v_n)_(j n) \
                                 & = sum_rho epsilon(rho) (v_1)_(rho(1)) (v_2)_(rho(2)) ... (v_n)_(rho(n))
   $
 ] <def-alternating-form>
 
 #proposition[Properties of alternating forms][
-  1. $[bold(v_1), ..., bold(v_n)]$ is multilinear in its arguments. _i.e._
+  1. $[vb(v_1), ..., vb(v_n)]$ is multilinear in its arguments. _i.e._
 
     $
-      [bold(v_1), ..., alpha bold(v_i) + beta bold(u_i), ..., bold(v_n)] = alpha [bold(v_1), ..., bold(v_i), ..., bold(v_n)] + beta [bold(v_1), ..., bold(u_i), ..., bold(v_n)]
+      [vb(v_1), ..., alpha vb(v_i) + beta vb(u_i), ..., vb(v_n)] = alpha [vb(v_1), ..., vb(v_i), ..., vb(v_n)] + beta [vb(v_1), ..., vb(u_i), ..., vb(v_n)]
     $
 
-  2. It is #ponder("linear-algebra.alternating-form")[totally antisymmetric]: $[bold(v_1), ..., bold(v_i), ..., bold(v_j), ..., bold(v_n)] = - [bold(v_1), ..., bold(v_j), ..., bold(v_i), ..., bold(v_n)]$ for all $i != j$.
+  2. It is #ponder("linear-algebra.alternating-form")[totally antisymmetric]: $[vb(v_1), ..., vb(v_i), ..., vb(v_j), ..., vb(v_n)] = - [vb(v_1), ..., vb(v_j), ..., vb(v_i), ..., vb(v_n)]$ for all $i != j$.
 
-    Alternatively, $[bold(v_(rho(1))), ..., bold(v_(rho(n)))] = epsilon(rho) [bold(v_1), ..., bold(v_n)]$ for any permutation $rho$.
-  3. $[bold(e_1), ..., bold(e_n)] = 1$.
+    Alternatively, $[vb(v_(rho(1))), ..., vb(v_(rho(n)))] = epsilon(rho) [vb(v_1), ..., vb(v_n)]$ for any permutation $rho$.
+  3. $[vb(e_1), ..., vb(e_n)] = 1$.
 
 
   #remark[
     Properties (1) (2) (3) uniquely define the #ponder("linear-algebra.alternating-form")[alternating forms]. Note that exchanging two vectors changes the sign of the #ponder("linear-algebra.alternating-form")[alternating form], so if any two vectors are equal, the #ponder("linear-algebra.alternating-form")[alternating form] is zero.
   ]
 
-  4. If $bold(v_p) = bold(v_q)$ for some $p != q$, then $[bold(v_1), ..., bold(v_n)] = 0$. #fade[[Follows from (2).]]
+  4. If $vb(v_p) = vb(v_q)$ for some $p != q$, then $[vb(v_1), ..., vb(v_n)] = 0$. #fade[[Follows from (2).]]
 
-  5. If $bold(v_p) = sum_(i != p) lambda_i bold(v_i)$ for some scalars $lambda_i$, then $[bold(v_1), ..., bold(v_n)] = 0$.  #fade[[Follows from (1) and (4).]]
+  5. If $vb(v_p) = sum_(i != p) lambda_i vb(v_i)$ for some scalars $lambda_i$, then $[vb(v_1), ..., vb(v_n)] = 0$.  #fade[[Follows from (1) and (4).]]
 ] <prop-alternating-form-properties>
 
 #proposition[
   $
-    [bold(v_1), ..., bold(v_n)] != 0 <=> {bold(v_1), ..., bold(v_n)} "is linearly independent."
+    [vb(v_1), ..., vb(v_n)] != 0 <=> {vb(v_1), ..., vb(v_n)} "is linearly independent."
   $
 ] <prop-alternating-independence>
 
@@ -883,17 +883,17 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
 
   #fade[[$arrow.double.l$]] If the vectors are #ponder("linear-algebra.linear-independence")[linearly independent], then they #ponder("linear-algebra.spanning-set")[span] $RR^n$ or $CC^n$. In particular, for some matrix $matbold(U)$, we can write
   $
-    e_j = U_(i j) bold(v_i).
+    e_j = U_(i j) vb(v_i).
   $
   Hence,
   $
-    [bold(e_1), ..., bold(e_n)] &= U_(i_1 1) U_(i_2 2) ... U_(i_n n) [bold(v_(i_1)), ..., bold(v_(i_n))]\
-    &= U_(i_1 1) U_(i_2 2) ... U_(i_n n) epsilon_(i_1 i_2 ... i_n) [bold(v_1), ..., bold(v_n)].
+    [vb(e_1), ..., vb(e_n)] &= U_(i_1 1) U_(i_2 2) ... U_(i_n n) [vb(v_(i_1)), ..., vb(v_(i_n))]\
+    &= U_(i_1 1) U_(i_2 2) ... U_(i_n n) epsilon_(i_1 i_2 ... i_n) [vb(v_1), ..., vb(v_n)].
   $
 
-  Since $[bold(e_1), ..., bold(e_n)] = 1$, we have
+  Since $[vb(e_1), ..., vb(e_n)] = 1$, we have
   $
-    [bold(v_1), ..., bold(v_n)] != 0.
+    [vb(v_1), ..., vb(v_n)] != 0.
   $
 ]
 
@@ -901,12 +901,12 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
 
 #definition[Determinant][
   Consider an $n times n$ matrix $matbold(M)$ with  columns given by
-  $ bold(C_i) = matbold(M) bold(e_i). $
+  $ vb(C_i) = matbold(M) vb(e_i). $
 
   The #ponder("linear-algebra.determinant")[*determinant*] of $matbold(M)$ is defined by
   $
-    det matbold(M) & = [bold(C_1), bold(C_2), ..., bold(C_n)] \
-                   & = [matbold(M) bold(e_1), matbold(M) bold(e_2), ..., matbold(M) bold(e_n)] \
+    det matbold(M) & = [vb(C_1), vb(C_2), ..., vb(C_n)] \
+                   & = [matbold(M) vb(e_1), matbold(M) vb(e_2), ..., matbold(M) vb(e_n)] \
                    & = epsilon_(i_1 i_2 ... i_n) M_(i_1 1) M_(i_2 2) ... M_(i_n n) \
                    & = sum_rho epsilon(rho) M_(rho(1) 1) M_(rho(2) 2) ... M_(rho(n) n)
   $
@@ -937,9 +937,9 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
   6. $det(matbold(M)) != 0$ if and only if the columns of $matbold(M)$ are #ponder("linear-algebra.linear-independence")[linearly independent].
 
 
-    As a consequence, under a column operation $bold(C_i) |-> bold(C_i) + lambda bold(C_j)$ for some $j != i$, the #ponder("linear-algebra.determinant")[determinant] is unchanged.
+    As a consequence, under a column operation $vb(C_i) |-> vb(C_i) + lambda vb(C_j)$ for some $j != i$, the #ponder("linear-algebra.determinant")[determinant] is unchanged.
 
-  7. $det(matbold(M)) = det(matbold(M)^tp).$
+  7. $det(matbold(M)) = det(matbold(M)^TT).$
 
     Hence, all properties above also hold for rows.
 
@@ -954,7 +954,7 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
 ] <prop-determinant-properties>
 
 #proof[
-  For (5), Suppose $bold(C_i)(matbold(M)) + lambda matbold(C_j) (matbold(M)) = 0$ for some $i != j$ and scalar $lambda$. Define $matbold(N)$ given by
+  For (5), Suppose $vb(C_i)(matbold(M)) + lambda matbold(C_j) (matbold(M)) = 0$ for some $i != j$ and scalar $lambda$. Define $matbold(N)$ given by
 
   $
     N_(r s) = cases(
@@ -978,7 +978,7 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
   Take $rho = sigma^(-1)$. Since $epsilon(rho) = epsilon(sigma)$, we have
   $
     det matbold(M) & = sum_(sigma in S_n) epsilon(sigma) M_(1 sigma(1)), ..., M_(n sigma(n)) \
-                   & = det(matbold(M)^tp).
+                   & = det(matbold(M)^TT).
   $
 
   #separator
@@ -1003,9 +1003,9 @@ Note that #ponder("algebra.disjoint-cycles")[disjoint permutations] commute, but
 
   #separator
 
-  For (9), if $matbold(M)$ is #ponder("algebra.orthogonal-group")[orthogonal], then $matbold(M)^tp matbold(M) = matbold(I)$, and thus
+  For (9), if $matbold(M)$ is #ponder("algebra.orthogonal-group")[orthogonal], then $matbold(M)^TT matbold(M) = matbold(I)$, and thus
   $
-    det(matbold(M)^tp) det(matbold(M)) = det(matbold(I)) = 1.
+    det(matbold(M)^TT) det(matbold(M)) = det(matbold(I)) = 1.
   $
   Hence, $det(matbold(M)) = plus.minus 1$.
 
@@ -1031,14 +1031,14 @@ We want to find a way to compute #ponder("linear-algebra.determinant")[determina
   $ Delta_(i j) = (-1)^(i + j) M^(i j). $
 
   Consider the columns and rows of $matbold(M)$ given by
-  $ bold(C_j) = sum_i M_(i j) bold(e_i), quad bold(R_i) = sum_j M_(i j) bold(e_j). $
+  $ vb(C_j) = sum_i M_(i j) vb(e_i), quad vb(R_i) = sum_j M_(i j) vb(e_j). $
   Then, the #ponder("linear-algebra.determinant")[determinant] of $matbold(M)$ can be written as (see proof in @thm-laplace-expansion):
-  $ det matbold(M) = [bold(C_1), ..., bold(C_n)] = sum_i M_(i j) Delta_(i j) = sum_j M_(i j) Delta_(i j). $
+  $ det matbold(M) = [vb(C_1), ..., vb(C_n)] = sum_i M_(i j) Delta_(i j) = sum_j M_(i j) Delta_(i j). $
 
   We have
   $
-    Delta_(i j) & = [bold(C_1), ..., bold(C_(j-1)), bold(e_i), bold(C_(j+1)), ..., bold(C_n)] \
-                & = [bold(R_1), ..., bold(R_(i - 1)), bold(e_j), bold(R_(i + 1)), ..., bold(R_n)] \
+    Delta_(i j) & = [vb(C_1), ..., vb(C_(j-1)), vb(e_i), vb(C_(j+1)), ..., vb(C_n)] \
+                & = [vb(R_1), ..., vb(R_(i - 1)), vb(e_j), vb(R_(i + 1)), ..., vb(R_n)] \
                 & = mat(
                     delim: "|",
                     M_(1 1), dots.c, M_(1 (j-1)), 0, M_(1 (j+1)), dots.c, M_(1 n);
@@ -1111,9 +1111,9 @@ for any fixed row $i$.
 
 
 #definition[Adjugate matrix][
-  Reasoning as above, if $bold(C_k) = sum_i M_(i k) bold(e_i)$ then
+  Reasoning as above, if $vb(C_k) = sum_i M_(i k) vb(e_i)$ then
   $
-    [bold(C_1), ..., bold(C_(j-1)), bold(C_k), bold(C_(j+1)), ..., bold(C_n)] = sum_i M_(i k) Delta_(i j) = cases(
+    [vb(C_1), ..., vb(C_(j-1)), vb(C_k), vb(C_(j+1)), ..., vb(C_n)] = sum_i M_(i k) Delta_(i j) = cases(
       det matbold(M) & "if" k = j,
       0 & "if" k != j
     ) .
@@ -1125,7 +1125,7 @@ for any fixed row $i$.
 
   The #ponder("linear-algebra.adjugate")[*adjugate*] of a matrix is defined to be
   $
-    tilde(matbold(M)) = adj (matbold(M)) = matbold(Delta)^tp.
+    tilde(matbold(M)) = adj (matbold(M)) = matbold(Delta)^TT.
   $
   where $matbold(Delta)$ is the matrix with entries of #ponder("linear-algebra.cofactor")[cofactors] $Delta_(i j)$.
 ] <def-adjugate>
@@ -1150,16 +1150,16 @@ This suggests a way to compute the inverse of a matrix using only #ponder("linea
   $
   for some arbitrary scalar $x in RR$. We want to compute $det matbold(M)$.
 
-  By the fact that #ponder("linear-algebra.determinant")[determinants] are conserved under  operations of the form $bold(C_i) -> bold(C_i) + lambda bold(C_j)$,
+  By the fact that #ponder("linear-algebra.determinant")[determinants] are conserved under  operations of the form $vb(C_i) -> vb(C_i) + lambda vb(C_j)$,
 
   $
-    det matbold(M) & = mat(delim: "|", 1, x, 1; 1, 1, x; x, 1, 1) \
-    & = mat(delim: "|", 0, x, 1; 1-x, 1, x; x-1, 1, 1) & "by" bold(C_1 -> C_1 - C_3) \
-    & = mat(delim: "|", 0, x, 1; 2-2x, 0, x-1; x-1, 1, 1) & "by" bold(R_2 -> R_2 - R_3) \
-    & = mat(delim: "|", 0, x, 1; 2-2x, 0, x-1; x-1, 1-x, 0) & "by" bold(R_3 -> R_3 - R_1) \
-    & = (x-1)^2 mat(delim: "|", 0, x, 1; -2, 0, 1; 1, -1, 0) & "by scaling in" bold(R_2) "and" bold(R_3) \
-    & = (x-1)^2 mat(delim: "|", 0, x + 2, 0; -2, 0, 1; 1, -1, 0) & "by" bold(R_1) -> bold(R_1) - 2bold(R_3) - bold(R_2)\
-    &= (x-1)^2 (x+2) mat(delim: "|", 0, 1, 0; -2, 0, 1; 1, -1, 0) & "by scaling in" bold(R_1) \
+    det matbold(M) & = mdet(1, x, 1; 1, 1, x; x, 1, 1) \
+    & = mdet(0, x, 1; 1-x, 1, x; x-1, 1, 1) & "by" vb(C_1) -> vb(C_1) - vb(C_3) \
+    & = mdet(0, x, 1; 2-2x, 0, x-1; x-1, 1, 1) & "by" vb(R_2) -> vb(R_2) - vb(R_3) \
+    & = mdet(0, x, 1; 2-2x, 0, x-1; x-1, 1-x, 0) & "by" vb(R_3) -> vb(R_3) - vb(R_1) \
+    & = (x-1)^2 mdet(0, x, 1; -2, 0, 1; 1, -1, 0) & "by scaling in" vb(R_2) "and" vb(R_3) \
+    & = (x-1)^2 mdet(0, x + 2, 0; -2, 0, 1; 1, -1, 0) & "by" vb(R_1) -> vb(R_1) - 2 vb(R_3) - vb(R_2)\
+    &= (x-1)^2 (x+2) mdet(0, 1, 0; -2, 0, 1; 1, -1, 0) & "by scaling in" vb(R_1) \
     &= (x-1)^2(x+2) (1) &"by direct computation"\
     &= (x-1)^2 (x+2). \
   $
@@ -1179,9 +1179,9 @@ $
 $
 
 We can write this system in matrix form as
-$ matbold(A) bold(x) = bold(b) $
+$ matbold(A) vb(x) = vb(b) $
 where
-$ matbold(A) = mat(A_(11), A_(12); A_(21), A_(22)), quad bold(x) = vec(x_1, x_2), quad bold(b) = vec(b_1, b_2). $
+$ matbold(A) = mat(A_(11), A_(12); A_(21), A_(22)), quad vb(x) = vec(x_1, x_2), quad vb(b) = vec(b_1, b_2). $
 
 Consider $(1) times A_(22) - (2) times A_(12)$, we have
 $
@@ -1196,7 +1196,7 @@ $
   vec(x_1, x_2) = (1)/(det matbold(A)) mat(A_(22), -A_(12); -A_(21), A_(11)) vec(b_1, b_2).
 $
 
-Equivalently, given $matbold(A) bold(x) = bold(b)$, if $matbold(A)^(-1)$ exists, we can write
+Equivalently, given $matbold(A) vb(x) = vb(b)$, if $matbold(A)^(-1)$ exists, we can write
 $
   matbold(A)^(-1) = (1)/(det matbold(A)) mat(A_(22), -A_(12); -A_(21), A_(11))
 $
@@ -1204,14 +1204,14 @@ $
 === General Case
 
 Consider a system of $n$ linear equations in $n$ unknowns $x_i$ written in matrix form as
-$ matbold(A) bold(x) = bold(b) $
-where $matbold(A)$ is an $n times n$ matrix, $bold(x), bold(b) in RR^n$.
+$ matbold(A) vb(x) = vb(b) $
+where $matbold(A)$ is an $n times n$ matrix, $vb(x), vb(b) in RR^n$.
 
 We shall consider three possible scenarios.
 
 1. If $det matbold(A) != 0$, then $matbold(A)^(-1)$ exists, and therefore there is a unique solution given by
   $
-    bold(x) = matbold(A)^(-1) bold(b).
+    vb(x) = matbold(A)^(-1) vb(b).
   $
 
 2. If $det matbold(A) = 0$ and $matbold(b) in.not im matbold(A)$, then there is no solution.
@@ -1219,55 +1219,55 @@ We shall consider three possible scenarios.
 3. If $det matbold(A) = 0$ and $matbold(b) in im matbold(A)$, then there are infinitely many solutions. We can find these solutions by considering
 
   $
-    bold(x) = bold(x_0) + bold(u)
+    vb(x) = vb(x_0) + vb(u)
   $
-  where $bold(x_0)$ is a particular solution to the system, and $bold(u) in ker matbold(A)$.
+  where $vb(x_0)$ is a particular solution to the system, and $vb(u) in ker matbold(A)$.
 
   In more detail, a solution exists for
   $
-    matbold(A) bold(x_0) = bold(b)
+    matbold(A) vb(x_0) = vb(b)
   $
 
-  if and only if we can find $matbold(A) bold(x_0) = bold(b)$ for some $bold(x_0) in RR^n$. This is equivalent to saying that $bold(b) in im matbold(A)$. Then, $bold(x)$ is also a solution if and only if
+  if and only if we can find $matbold(A) vb(x_0) = vb(b)$ for some $vb(x_0) in RR^n$. This is equivalent to saying that $vb(b) in im matbold(A)$. Then, $vb(x)$ is also a solution if and only if
   $
-    bold(u) = bold(x) - bold(x_0)
+    vb(u) = vb(x) - vb(x_0)
   $
   satisfies
   $
-    matbold(A) bold(u) = bold(0).
+    matbold(A) vb(u) = vb(0).
   $
   Thus, the general solution is given by
   $
-    bold(x) = bold(x_0) + bold(u)
+    vb(x) = vb(x_0) + vb(u)
   $
-  for any $bold(u) in ker matbold(A)$.
+  for any $vb(u) in ker matbold(A)$.
 
 #remark[
   In the first case, note that
 
   $
-    det matbold(A) != 0 <=> im matbold(A) = RR^n <=> ker matbold(A) = {bold(0)}.
+    det matbold(A) != 0 <=> im matbold(A) = RR^n <=> ker matbold(A) = {vb(0)}.
   $
-  In this case, if $matbold(A) bold(u) = bold(0)$ then we must have $bold(u) = bold(0)$. Hence there is a unique solution.
+  In this case, if $matbold(A) vb(u) = vb(0)$ then we must have $vb(u) = vb(0)$. Hence there is a unique solution.
 
   #separator
 
   For the other cases,
 
   $
-    det matbold(A) = bold(0) <=> im matbold(A) != RR^n <=> ker matbold(A) != {bold(0)}.
+    det matbold(A) = vb(0) <=> im matbold(A) != RR^n <=> ker matbold(A) != {vb(0)}.
   $
 
   and thus either
   $
     cases(
-      bold(b) in.not im matbold(A) & quad "as in (2)",
-      bold(b) in im matbold(A) & quad "as in (3)"
+      vb(b) in.not im matbold(A) & quad "as in (2)",
+      vb(b) in im matbold(A) & quad "as in (3)"
     )
   $
-  If ${bold(u_1), ..., bold(u_k)}$ is a #ponder("linear-algebra.basis")[basis] for $ker matbold(A)$, then the general solution for $matbold(A) bold(u) = bold(0)$ is
+  If ${vb(u_1), ..., vb(u_k)}$ is a #ponder("linear-algebra.basis")[basis] for $ker matbold(A)$, then the general solution for $matbold(A) vb(u) = vb(0)$ is
   $
-    bold(u) = sum_(i=1)^k lambda_i bold(u_i)
+    vb(u) = sum_(i=1)^k lambda_i vb(u_i)
   $
   for any scalars $lambda_1, ..., lambda_k$, where $k = null matbold(A)$.
 
@@ -1276,18 +1276,18 @@ We shall consider three possible scenarios.
 #example[
   Consider the equation
   $
-    matbold(A) bold(x) = bold(b)
+    matbold(A) vb(x) = vb(b)
   $
   with
   $ matbold(A)=mat(1, x, 1; 1, 1, x; x, 1, 1) $
-  and $ bold(b) = vec(1, y, 1). $
+  and $ vb(b) = vec(1, y, 1). $
   where $x, y in RR$ are some scalars.
   We saw before that $ det matbold(A) = (x-1)^2 (x+2). $
 
   1. Assume $det matbold(A) != 0 <=> x != 1, -2$. Then $matbold(A)^(-1)$ exists, and we can construct it from the matrix of cofactors.
 
     $
-      matbold(A)^(-1) = matbold(Delta)^tp/(det matbold(A)).
+      matbold(A)^(-1) = matbold(Delta)^TT/(det matbold(A)).
     $
 
     #fade[[
@@ -1301,7 +1301,7 @@ We shall consider three possible scenarios.
 
     We have
     $
-      matbold(Delta)^tp = mat(
+      matbold(Delta)^TT = mat(
         1 - x, 1 - x, x^2 - 1;
         x^2 - 1, 1 - x, 1 - x;
         1 - x, x^2 - 1, 1 - x
@@ -1309,7 +1309,7 @@ We shall consider three possible scenarios.
     $
     Note that $x^2 - 1 = (x + 1) (x- 1)$. This indicates that we can simplify our matrix. Hence, the solution to the equation is
     $
-      bold(x) & = matbold(A)^(-1) bold(b) = (1)/((1-x)(x+2)) mat(1, 1, -x-1; -x-1, 1, 1; 1, -x-1, 1) vec(1, y, 1) \
+      vb(x) & = matbold(A)^(-1) vb(b) = (1)/((1-x)(x+2)) mat(1, 1, -x-1; -x-1, 1, 1; 1, -x-1, 1) vec(1, y, 1) \
               & = (1)/((1-x)(x+2)) vec(y -x, -x + y, 2 - x y - y).
     $
     The solution is a point in $RR^3$.
@@ -1319,13 +1319,13 @@ We shall consider three possible scenarios.
     $ matbold(A) = mat(1, 1, 1; 1, 1, 1; 1, 1, 1) $
     and then $im(matbold(A)) = span{vec(1, 1, 1)}$ with $ker matbold(A) = span{vec(1, -1, 0), vec(1, 0, -1)}$.
 
-    The #ponder("linear-algebra.kernel-image")[image] suggests that we must have $y = 1$ to have a solution. In this case, one particular solution is given by $bold(x_0) = vec(1, 0, 0)$. Hence, the general solution is given by
+    The #ponder("linear-algebra.kernel-image")[image] suggests that we must have $y = 1$ to have a solution. In this case, one particular solution is given by $vb(x_0) = vec(1, 0, 0)$. Hence, the general solution is given by
     $
-      bold(x) = bold(x_0) + lambda vec(1, -1, 0) + mu vec(1, 0, -1)
+      vb(x) = vb(x_0) + lambda vec(1, -1, 0) + mu vec(1, 0, -1)
     $
     for any scalars $lambda, mu in RR$, _i.e._
     $
-      bold(x) = vec(1 + lambda + mu, -lambda, -mu).
+      vb(x) = vec(1 + lambda + mu, -lambda, -mu).
     $
 
     If $y != 1$, then there is no solution.
@@ -1339,22 +1339,22 @@ We shall consider three possible scenarios.
 
 Consider the equation
 $
-  matbold(A) bold(u) = bold(0).
+  matbold(A) vb(u) = vb(0).
 $
-Then, if $bold(R_1), bold(R_2), bold(R_3)$ are the rows of $matbold(A)$, then
+Then, if $vb(R_1), vb(R_2), vb(R_3)$ are the rows of $matbold(A)$, then
 $
-  matbold(A) bold(u) = bold(0) & <=> cases(
-                                   bold(R_1) dot bold(u) = 0,
-                                   bold(R_2) dot bold(u) = 0,
-                                   bold(R_3) dot bold(u) = 0
+  matbold(A) vb(u) = vb(0) & <=> cases(
+                                   vb(R_1) dot vb(u) = 0,
+                                   vb(R_2) dot vb(u) = 0,
+                                   vb(R_3) dot vb(u) = 0
                                  )
 $
 
-Each equation represents a plane in $RR^3$ that passes through the origin with normal $bold(R_i)$. The solution to the system, which is $ker matbold(A)$, is the intersection of these planes.
+Each equation represents a plane in $RR^3$ that passes through the origin with normal $vb(R_i)$. The solution to the system, which is $ker matbold(A)$, is the intersection of these planes.
 
 The possible scenarios are as follows:
 
-1. $rank matbold(A) = 3 <=> null matbold(A) = 0$, so $ker matbold(A) = {bold(0)}$. This means that all the normals of the three planes are #ponder("linear-algebra.linear-independence")[linearly independent], and thus the only intersection point is the origin.
+1. $rank matbold(A) = 3 <=> null matbold(A) = 0$, so $ker matbold(A) = {vb(0)}$. This means that all the normals of the three planes are #ponder("linear-algebra.linear-independence")[linearly independent], and thus the only intersection point is the origin.
 
 2. $rank matbold(A) = 2 <=> null matbold(A) = 1$. The intersection of the three planes is a line through the origin, and the three normals #ponder("linear-algebra.spanning-set")[span] a plane.
 
@@ -1363,24 +1363,24 @@ The possible scenarios are as follows:
 === The General Case – Geometrical Interpretation
 
 Consider the equation
-$ matbold(A) bold(u) = bold(b). $
+$ matbold(A) vb(u) = vb(b). $
 Then,
 $
-  matbold(A) bold(u) = bold(b) & <=> cases(
-                                   bold(R_1) dot bold(u) = b_1,
-                                   bold(R_2) dot bold(u) = b_2,
-                                   bold(R_3) dot bold(u) = b_3
+  matbold(A) vb(u) = vb(b) & <=> cases(
+                                   vb(R_1) dot vb(u) = b_1,
+                                   vb(R_2) dot vb(u) = b_2,
+                                   vb(R_3) dot vb(u) = b_3
                                  )
 $
-These are three planes in $RR^3$ with normals $bold(R_1), bold(R_2), bold(R_3)$, and in general do not pass through the origin.
+These are three planes in $RR^3$ with normals $vb(R_1), vb(R_2), vb(R_3)$, and in general do not pass through the origin.
 
 The possible scenarios are as follows:
 
-1. $rank matbold(A) = 3 <=> det matbold(A) != 0$. All the normals are #ponder("linear-algebra.linear-independence")[linearly independent], and thus the three planes intersect at a single point. There is a unique solution for any $bold(b) in RR^3$.
+1. $rank matbold(A) = 3 <=> det matbold(A) != 0$. All the normals are #ponder("linear-algebra.linear-independence")[linearly independent], and thus the three planes intersect at a single point. There is a unique solution for any $vb(b) in RR^3$.
 
 2. $rank matbold(A) < 3 <=> det matbold(A) = 0$.
 
-  The existence of solutions depends on $bold(b)$. More specifically, whether $bold(b)$ is in the #ponder("linear-algebra.kernel-image")[image] of $matbold(A)$.
+  The existence of solutions depends on $vb(b)$. More specifically, whether $vb(b)$ is in the #ponder("linear-algebra.kernel-image")[image] of $matbold(A)$.
 
   - if $rank matbold(A) = 2$, then the planes may intersect in a line as in the homogeneous case, or there is no solution.
 
@@ -1452,11 +1452,11 @@ The possible cases are as follows.
 
 Note that this algorithm can also be written in matrix form by
 $
-  matbold(A) bold(x) = bold(b)
+  matbold(A) vb(x) = vb(b)
 $
 where $matbold(A)$ is an $m times n$ matrix. This algorithm can be reexpressed to obtain
 $
-  matbold(M) bold(x) = bold(d)
+  matbold(M) vb(x) = vb(d)
 $
 with
 $

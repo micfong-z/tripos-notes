@@ -596,7 +596,7 @@ If we want $F$ to be #ponder("calculus.derivative")[differentiable], it must be 
 #theorem[Fundamental Theorem of Calculus, Part 1][
   If $f: [a, b] -> RR$ is #ponder("calculus.riemann-integrable-function")[Riemann integrable] and #ponder("analysis.continuity")[continuous] at $x_0$, then $F(x) = integral_a^x f(t) dif t$ is #ponder("calculus.derivative")[differentiable] at $x_0$, with
   $
-    F'(x_0) = eval((dif)/(dif x) [integral_a^x f(t) dif t])_(x=x_0) = f(x_0).
+    F'(x_0) = eval(dv(, x) [integral_a^x f(t) dif t])_(x=x_0) = f(x_0).
   $
 ] <thm-fundamental-theorem-calculus-part-1>
 

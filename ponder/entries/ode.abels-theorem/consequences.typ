@@ -17,5 +17,5 @@ $
 dividing both sides by $y_1^2$,
 
 $
-  (dif)/(dif x) (y_2 / y_1) = (W(x_0))/(y_1^2) exp[-integral_(x_0)^x p(u) dif u].
+  dv(, x) (y_2 / y_1) = (W(x_0))/(y_1^2) exp[-integral_(x_0)^x p(u) dif u].
 $

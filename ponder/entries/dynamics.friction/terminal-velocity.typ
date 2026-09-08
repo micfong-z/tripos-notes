@@ -1,6 +1,6 @@
 For a particle falling with quadratic friction under gravity, the $z$-component of the motion obeys
 $
-  m (dif v)/(dif t) = - m g + k v^2.
+  m dv(v, t) = - m g + k v^2.
 $
 The velocity starts at $0$ and increases; initially the right-hand side is dominated by $-m g$, but eventually the two forces balance, giving the terminal velocity
 $

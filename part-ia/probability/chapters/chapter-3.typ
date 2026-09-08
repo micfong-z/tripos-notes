@@ -469,9 +469,9 @@ $ PP(X_1 = x_1, ..., X_n = x_n) = PP(X_1 = x_1) dot ... dot PP(X_n = x_n). $
 ] <lem-independent-factorisation>
 
 #proof[
-  Let $bold(Z) = (X, Y)$ and define $h(bold(Z)) = f(X) g(Y)$. Then
+  Let $vb(Z) = vecrow(X, Y)$ and define $h(vb(Z)) = f(X) g(Y)$. Then
   $
-    EE[h(bold(Z))] & = sum_(x, y) h(x, y) PP(bold(Z) = (x, y)) \
+    EE[h(vb(Z))] & = sum_(x, y) h(x, y) PP(vb(Z) = vecrow(x, y)) \
                    & = sum_(x, y) f(x) g(y) PP(X = x, Y = y) \
                    & = sum_(x, y) f(x) g(y) PP(X = x) PP(Y = y) \
                    & = (sum_x f(x) PP(X = x)) (sum_y g(y) PP(Y = y)) \

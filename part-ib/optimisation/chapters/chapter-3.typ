@@ -8,10 +8,10 @@
 #definition[Linear Program][
   A *linear program* is a problem of the form
   $
-    & "minimise"   && vb(c)^tp vb(x) \
-    & "subject to" && vb(a_i)^tp vb(x) >= b_i quad &  "for" i in M_1 \
-    &              && vb(a_i)^tp vb(x) <= b_i quad &  "for" i in M_2 \
-    &              && vb(a_i)^tp vb(x) = b_i quad  &  "for" i in M_3 \
+    & "minimise"   && vb(c)^TT vb(x) \
+    & "subject to" && vb(a_i)^TT vb(x) >= b_i quad &  "for" i in M_1 \
+    &              && vb(a_i)^TT vb(x) <= b_i quad &  "for" i in M_2 \
+    &              && vb(a_i)^TT vb(x) = b_i quad  &  "for" i in M_3 \
     &              && x_j >= 0 quad                    &  "for" j in N_1 \
     &              && x_j <= 0 quad                    &  "for" j in N_2 \
     &              && x_j "is not constrained" quad    & "for" j in N_3.
@@ -22,27 +22,27 @@
 
 Note that we can write
 $
-  matbold(A) = mat(—, vb(a_1)^tp, —; —, vb(a_2)^tp, —; , dots.v, ; —, vb(a_m)^tp, —) .
+  matbold(A) = mat(—, vb(a_1)^TT, —; —, vb(a_2)^TT, —; , dots.v, ; —, vb(a_m)^TT, —) .
 $
 
 #theorem[
   The dual of @problem-linear-program[Problem] is given by
   $
-    & "maximise"   && vb(b)^tp vb(lambda) \
+    & "maximise"   && vb(b)^TT vb(lambda) \
     & "subject to" && lambda_i >= 0                & "for" i in M_1, \
     &              && lambda_i <= 0                & "for" i in M_2, \
     &              && lambda_i in RR               & "for" i in M_3, \
-    &              && vb(lambda)^tp vb(A_j) <= c_j & "for" j in N_1, \
-    &              && vb(lambda)^tp vb(A_j) >= c_j & "for" j in N_2, \
-    &              && vb(lambda)^tp vb(A_j) = c_j  & "for" j in N_3.
+    &              && vb(lambda)^TT vb(A_j) <= c_j & "for" j in N_1, \
+    &              && vb(lambda)^TT vb(A_j) >= c_j & "for" j in N_2, \
+    &              && vb(lambda)^TT vb(A_j) = c_j  & "for" j in N_3.
   $
 ]
 
 #proof[
   Adding slack variables, the lagrangian is given by
   $
-    lagr(vb(x), vb(s), vb(lambda)) &= vb(c)^tp vb(x) - sum_(i in M_1) lambda_i (vb(a_i)^tp vb(x) - b_i - s_i) - sum_(i in M_2) lambda_i (vb(a_i)^tp vb(x) - b_i + s_i) - sum_(i in M_3) lambda_i (vb(a_i)^tp vb(x) - b_i)\
-    &=sum_(j in N_1) (c_j - vb(lambda)^tp vb(A_j)) x_j + sum_(j in N_2) (c_j - vb(lambda)^tp vb(A_j)) x_j + sum_(j in N_3) (c_j - vb(lambda)^tp vb(A_j)) x_j + sum_(i in M_1) lambda_i s_i- sum_(i in M_2) lambda_i s_i + sum_(i) lambda_i b_i
+    lagr(vb(x), vb(s), vb(lambda)) &= vb(c)^TT vb(x) - sum_(i in M_1) lambda_i (vb(a_i)^TT vb(x) - b_i - s_i) - sum_(i in M_2) lambda_i (vb(a_i)^TT vb(x) - b_i + s_i) - sum_(i in M_3) lambda_i (vb(a_i)^TT vb(x) - b_i)\
+    &=sum_(j in N_1) (c_j - vb(lambda)^TT vb(A_j)) x_j + sum_(j in N_2) (c_j - vb(lambda)^TT vb(A_j)) x_j + sum_(j in N_3) (c_j - vb(lambda)^TT vb(A_j)) x_j + sum_(i in M_1) lambda_i s_i- sum_(i in M_2) lambda_i s_i + sum_(i) lambda_i b_i
   $
   where $vb(A_j)$ is the $j$-th column of $matbold(A)$. For the lagrangian to be bounded below, we must have
   $
@@ -50,14 +50,14 @@ $
     lambda_i >= 0                & "for" i in M_1, \
                    lambda_i <= 0 & "for" i in M_2, \
                   lambda_i in RR & "for" i in M_3, \
-    vb(lambda)^tp vb(A_j) <= c_j & "for" j in N_1, \
-    vb(lambda)^tp vb(A_j) >= c_j & "for" j in N_2, \
-     vb(lambda)^tp vb(A_j) = c_j & "for" j in N_3
+    vb(lambda)^TT vb(A_j) <= c_j & "for" j in N_1, \
+    vb(lambda)^TT vb(A_j) >= c_j & "for" j in N_2, \
+     vb(lambda)^TT vb(A_j) = c_j & "for" j in N_3
                                    }
   $
   Note that if $vb(lambda) in Lambda$, then
   $
-    min_(vb(x) in cal(X)\ vb(s) >= vb(0)) lagr(vb(x), vb(s), vb(lambda)) = vb(b)^tp vb(lambda) = g(vb(lambda)).
+    min_(vb(x) in cal(X)\ vb(s) >= vb(0)) lagr(vb(x), vb(s), vb(lambda)) = vb(b)^TT vb(lambda) = g(vb(lambda)).
   $
 
 ]
@@ -67,34 +67,34 @@ $
 #theorem[Optimality Conditions for Linear Programming][
   Let $vb(x)$ and $vb(lambda)$ be feasible solutions to @problem-linear-program[Problem] and its dual. Then these are optimal iff
   $
-    lambda_i (vb(a_i)^tp vb(x) - b_i) & = 0 quad "for all" i, \
-    (c_j - vb(lambda)^tp vb(A_j)) x_j & = 0 quad "for all" j.
+    lambda_i (vb(a_i)^TT vb(x) - b_i) & = 0 quad "for all" i, \
+    (c_j - vb(lambda)^TT vb(A_j)) x_j & = 0 quad "for all" j.
   $
 
 ] <thm-optimality-conditions-for-linear-programming>
 
 #proof[
-  Define $u_i = lambda_i (vb(a_i)^tp vb(x) - b_i)$ and $v_j = (c_j - vb(lambda)^tp vb(A_j)) x_j$. Since $vb(x)$ and $vb(lambda)$ are primal and dual feasible respectively, we have $u_i >= 0$ and $v_j >= 0$. Adding up,
+  Define $u_i = lambda_i (vb(a_i)^TT vb(x) - b_i)$ and $v_j = (c_j - vb(lambda)^TT vb(A_j)) x_j$. Since $vb(x)$ and $vb(lambda)$ are primal and dual feasible respectively, we have $u_i >= 0$ and $v_j >= 0$. Adding up,
   $
-    sum_i u_i & = vb(lambda)^tp matbold(A) vb(x) - vb(lambda)^tp vb(b), \
-    sum_j v_j & = vb(c)^tp vb(x) - vb(lambda)^tp matbold(A) vb(x).
+    sum_i u_i & = vb(lambda)^TT matbold(A) vb(x) - vb(lambda)^TT vb(b), \
+    sum_j v_j & = vb(c)^TT vb(x) - vb(lambda)^TT matbold(A) vb(x).
   $
   Hence
   $
-    sum_i u_i + sum_j v_j = vb(c)^tp vb(x) - vb(lambda)^tp vb(b).
+    sum_i u_i + sum_j v_j = vb(c)^TT vb(x) - vb(lambda)^TT vb(b).
   $
-  By @theorem-weak-duality[Weak Duality Theorem], we have $vb(c)^tp vb(x) >= vb(lambda)^tp vb(b)$. Since $vb(c)^tp vb(x) = vb(lambda)^tp vb(b)$ if and only if $vb(x)$ and $vb(lambda)$ are optimal, we have the desired result:
+  By @theorem-weak-duality[Weak Duality Theorem], we have $vb(c)^TT vb(x) >= vb(lambda)^TT vb(b)$. Since $vb(c)^TT vb(x) = vb(lambda)^TT vb(b)$ if and only if $vb(x)$ and $vb(lambda)$ are optimal, we have the desired result:
 
-  #fade[[$=>$]] If $vb(c)^tp vb(x) = vb(lambda)^tp vb(b)$, then $sum_i u_i + sum_j v_j = 0$. Since $u_i, v_j >= 0$, we must have $u_i = v_j = 0$ for all $i, j$.
+  #fade[[$=>$]] If $vb(c)^TT vb(x) = vb(lambda)^TT vb(b)$, then $sum_i u_i + sum_j v_j = 0$. Since $u_i, v_j >= 0$, we must have $u_i = v_j = 0$ for all $i, j$.
 
-  #fade[[$arrow.double.l$]] If $u_i = v_j = 0$ for all $i, j$, then $sum_i u_i + sum_j v_j = 0$. Hence, $vb(c)^tp vb(x) = vb(lambda)^tp vb(b)$, and $vb(x)$ and $vb(lambda)$ are optimal by @theorem-weak-duality[Weak Duality Theorem].
+  #fade[[$arrow.double.l$]] If $u_i = v_j = 0$ for all $i, j$, then $sum_i u_i + sum_j v_j = 0$. Hence, $vb(c)^TT vb(x) = vb(lambda)^TT vb(b)$, and $vb(x)$ and $vb(lambda)$ are optimal by @theorem-weak-duality[Weak Duality Theorem].
 ]
 
 == Standard Form of Linear Programs
 
 Observe that we can always write any linear program as
 $
-  & "minimise"   && vb(c)^tp vb(x) \
+  & "minimise"   && vb(c)^TT vb(x) \
   & "subject to" && matbold(A) vb(x) <= vb(b).
 $
 
@@ -102,7 +102,7 @@ $
 
 This is called the *general form*. A linear program is in *standard form* if it is of the form
 $
-  & "minimise"   && vb(c)^tp vb(x) \
+  & "minimise"   && vb(c)^TT vb(x) \
   & "subject to" && matbold(A) vb(x) = vb(b) \
   &              && vb(x) >= 0.
 $
@@ -110,14 +110,14 @@ $
 Since any $x in RR$ can be expressed as $x = x_+ - x_-$ where $x_+, x_- >= 0$, we can convert any linear program in general form to standard form:
 
 $
-  & "minimise"   && vb(c)^tp (vb(x)_+ - vb(x)_-) \
+  & "minimise"   && vb(c)^TT (vb(x)_+ - vb(x)_-) \
   & "subject to" && matbold(A) (vb(x)_+ - vb(x)_-) + vb(s) = vb(b) \
   &              && vb(x)_+, vb(x)_-, vb(s) >= 0.
 $
 
 == Solving Linear Programs
 
-Note that minimising $vb(c)^tp vb(x)$ is the same as maximising $-vb(c)^tp vb(x)$. Since $-vb(c)^tp vb(x)$ is a convex function, we are essentially maximising a convex function over a convex set.
+Note that minimising $vb(c)^TT vb(x)$ is the same as maximising $-vb(c)^TT vb(x)$. Since $-vb(c)^TT vb(x)$ is a convex function, we are essentially maximising a convex function over a convex set.
 
 #definition[Extreme Point][
   A point $vb(x) in C$ where $C subset.eq RR^n$ is a convex set is an *extreme point* if it cannot be written as a convex combination of two distinct points in $C$. _i.e._ for $vb(y), vb(z) in C$ and $delta in (0, 1)$, if $vb(x) = delta vb(y) + (1 - delta) vb(z)$, then $vb(x) = vb(y) = vb(z)$.
@@ -149,7 +149,7 @@ In linear programs, the constraint set is always a polytope. Hence, all we need 
 
 We are looking at the problem
 $
-  & "minimise"   && vb(c)^tp vb(x) \
+  & "minimise"   && vb(c)^TT vb(x) \
   & "subject to" && matbold(A) vb(x) = vb(b) \
   &              && vb(x) >= 0
 $
@@ -164,7 +164,7 @@ $
       dots.v, dots.v, dots.down, dots.v;
       A_(m 1), A_(m 2), dots.c, A_(m n)
     ),
-    vb(a)_1^tp, vb(a)_2^tp, dots.v, vb(a)_m^tp,
+    vb(a)_1^TT, vb(a)_2^TT, dots.v, vb(a)_m^TT,
     vb(A)_1, vb(A)_2, dots.c, vb(A)_n,
     dx: #{ 2em }, dy: #{ 1.2em },
   ).
@@ -254,7 +254,7 @@ If $matbold(B)^(-1)vb(b) >= 0$, then that basis gives a basic feasible solution.
 
   2. Filter out the basic feasible solutions.
 
-  3. Evaluate $vb(c)^tp vb(x)$ for each basic feasible solution and choose the one with the minimum value.
+  3. Evaluate $vb(c)^TT vb(x)$ for each basic feasible solution and choose the one with the minimum value.
 ]
 
 === Towards the Simplex Method
@@ -263,21 +263,21 @@ When a linear problem is in standard form, the optimality conditions are
 
 1. Primal feasibility: $matbold(A)vb(x) = vb(b)$ and $vb(x) >= 0$.
 
-2. Dual feasibility: $matbold(A)^tp vb(lambda) <= vb(c)$.
+2. Dual feasibility: $matbold(A)^TT vb(lambda) <= vb(c)$.
 
-3. Complementary slackness: $vb(x)^tp (vb(c) - matbold(A)^tp vb(lambda)) = 0$.
+3. Complementary slackness: $vb(x)^TT (vb(c) - matbold(A)^TT vb(lambda)) = 0$.
 
 For any basic feasible solution $vb(x)$, the complementary slackness equations reduce to
 $
-  vb(x)_B^tp (vb(c)_B - matbold(B)^tp vb(lambda)) = 0.
+  vb(x)_B^TT (vb(c)_B - matbold(B)^TT vb(lambda)) = 0.
 $
 Since $vb(x)_B > vb(0)$ #fade[[by the non-degeneracy assumption]], we must have
 $
-  matbold(B)^tp vb(lambda) & = vb(c)_B \
-                vb(lambda) & = (matbold(B)^tp)^(-1) vb(c)_B.
+  matbold(B)^TT vb(lambda) & = vb(c)_B \
+                vb(lambda) & = (matbold(B)^TT)^(-1) vb(c)_B.
 $
 
-Thus, if $matbold(A)^tp ((matbold(B)^tp)^(-1) vb(c)_B) <= vb(c)$, then $vb(lambda)$ is dual feasible, and this implies that $vb(x)$ is optimal.
+Thus, if $matbold(A)^TT ((matbold(B)^TT)^(-1) vb(c)_B) <= vb(c)$, then $vb(lambda)$ is dual feasible, and this implies that $vb(x)$ is optimal.
 
 #remark[
   This gives us a slightly better algorithm to find the optimal solution to a linear program, as we may abort the search early once the optimality conditions are satisfied in step 3.
@@ -288,7 +288,7 @@ Thus, if $matbold(A)^tp ((matbold(B)^tp)^(-1) vb(c)_B) <= vb(c)$, then $vb(lambd
 #definition[Reduced Cost][
   The vector of *reduced costs* $overline(vb(c))$ is defined as
   $
-    overline(vb(c))^tp = vb(c)^tp - vb(c_B)^tp matbold(B)^(-1) matbold(A).
+    overline(vb(c))^TT = vb(c)^TT - vb(c_B)^TT matbold(B)^(-1) matbold(A).
   $
 ]
 
@@ -296,7 +296,7 @@ If for a basic feasible solution $vb(x)$, we have $overline(vb(c)) >= vb(0)$, th
 
 === The Simplex Algorithm <sec-simplex-algorithm>
 
-Now, suppose $vb(x) = (x_B(1), x_B(2), ..., x_B(m), 0, ..., 0)^tp$ is a basic feasible solution. Suppose there is some $j^*$ such that $overline(c_(j^*)) < 0$. We want to now choose a direction to perturb our $vb(x)$.
+Now, suppose $vb(x) = vecrow(x_B(1), x_B(2), ..., x_B(m), 0, ..., 0)^TT$ is a basic feasible solution. Suppose there is some $j^*$ such that $overline(c_(j^*)) < 0$. We want to now choose a direction to perturb our $vb(x)$.
 
 Suppose we choose some $j in.not {B(1), ..., B(m)}$ and we make $x_j > 0$, while keeping all non-basic $x_i = 0$, _i.e._ consider
 $
@@ -305,9 +305,9 @@ $
 
 We need $matbold(A)vb(x) = vb(b)$ to still be satisfied to make sure our perturbed point is still feasible, so
 $
-            matbold(A)(vb(x) + t (d_B(1), dots.c, d_B(m), 0, dots.c, 1, dots.c, 0)^tp) & = vb(b) \
-  matbold(A) vb(x) + t matbold(A) (d_B(1), dots.c, d_B(m), 0, dots.c, 1, dots.c, 0)^tp & = vb(b) \
-                       matbold(A) (d_B(1), dots.c, d_B(m), 0, dots.c, 1, dots.c, 0)^tp & = vb(0).
+            matbold(A)(vb(x) + t vecrow(d_B(1), dots.c, d_B(m), 0, dots.c, 1, dots.c, 0)^TT) & = vb(b) \
+  matbold(A) vb(x) + t matbold(A) vecrow(d_B(1), dots.c, d_B(m), 0, dots.c, 1, dots.c, 0)^TT & = vb(b) \
+                       matbold(A) vecrow(d_B(1), dots.c, d_B(m), 0, dots.c, 1, dots.c, 0)^TT & = vb(0).
 $
 This can be solved to
 $
@@ -315,11 +315,11 @@ $
                        vb(d)_B & = - matbold(B)^(-1) vb(A)_j.
 $
 
-Now, consider the cost $vb(c)^tp vb(x)$ at $vb(x) + t (vb(d)_B, dots.c, 1, dots.c, 0)$.
+Now, consider the cost $vb(c)^TT vb(x)$ at $vb(x) + t (vb(d)_B, dots.c, 1, dots.c, 0)$.
 $
-  vb(c)^tp (vb(x) + t vec(vb(d_B), dots.v, 1, dots.v, 0)) &= underbracket(vb(c)^tp vb(x), "old cost") + underbracket(t (vb(c)_B^tp vb(d)_B + c_j), "change of cost")\
-  &= vb(c)^tp vb(x) + t(c_j - vb(c)_B^tp matbold(B)^(-1) vb(A)_j)\
-  &= vb(c)^tp vb(x) + t overline(c_j).
+  vb(c)^TT (vb(x) + t vec(vb(d_B), dots.v, 1, dots.v, 0)) &= underbracket(vb(c)^TT vb(x), "old cost") + underbracket(t (vb(c)_B^TT vb(d)_B + c_j), "change of cost")\
+  &= vb(c)^TT vb(x) + t(c_j - vb(c)_B^TT matbold(B)^(-1) vb(A)_j)\
+  &= vb(c)^TT vb(x) + t overline(c_j).
 $
 
 Note that since our $vb(x)$ is suboptimal, we have some $vb(j)^*$ such that $overline(c_(j^*)) < 0$. Hence we can choose $j = j^*$ and use that direction to reduce our cost.
@@ -332,7 +332,7 @@ and noting that only those $B(i)$ where $d_B(i)<0$ can cause problems. Therefore
 $
   - (x_B(1))/(d_B(1)), dots.c, -x_B(m)/(d_B(m))
 $
-to be our $t$. Let it be $t^*$. Let $vb(d) = (vb(d_B), dots.c, 1, dots.c, 0)^tp$. Then
+to be our $t$. Let it be $t^*$. Let $vb(d) = vecrow(vb(d_B), dots.c, 1, dots.c, 0)^TT$. Then
 $
   vb(y) = vb(x) + t^* vb(d).
 $
@@ -352,7 +352,7 @@ $
   mat(
     delim: "[",
     augment: #(hline: 1, vline: 1),
-    -vb(c)_B^tp vb(x)_B, overline(c_1), overline(c_2), dots.c, overline(vb(c)_n);
+    -vb(c)_B^TT vb(x)_B, overline(c_1), overline(c_2), dots.c, overline(vb(c)_n);
     x_B(1), bar, bar, dots.c, bar;
     dots.v, matbold(B)^(-1)vb(A)_1, matbold(B)^(-1)vb(A)_2, dots.c, matbold(B)^(-1)vb(A)_n;
     x_B(m), bar, bar, dots.c, bar;
@@ -376,7 +376,7 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
 
   1. We first convert this to standard form by adding slack variables $x_4, x_5, x_6$:
     $
-      & "minimise"   && vb(c)^tp vb(x) \
+      & "minimise"   && vb(c)^TT vb(x) \
       & "subject to" && matbold(A) vb(x) = vb(b) \
       &              && vb(x) >= 0,
     $
@@ -392,7 +392,7 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
       ).
     $
 
-  2. Find an initial basic feasible solution. We can take $vb(x) = (0, 0, 0, 10, 10, 20)^tp$, with basis matrix
+  2. Find an initial basic feasible solution. We can take $vb(x) = vecrow(0, 0, 0, 10, 10, 20)^TT$, with basis matrix
     $
       matbold(B) = mat(
         1, 0, 0;
@@ -401,19 +401,19 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
       ).
     $
 
-  3. Calculate the reduced costs with $vb(c_B) = (0, 0, 0)^tp$:
+  3. Calculate the reduced costs with $vb(c_B) = vecrow(0, 0, 0)^TT$:
     $
-      overline(vb(c)) = vb(c) - (matbold(B)^(-1) matbold(A))^tp vb(c_B) = (-1, -1, -1, 0, 0, 0).
+      overline(vb(c)) = vb(c) - (matbold(B)^(-1) matbold(A))^TT vb(c_B) = vecrow(-1, -1, -1, 0, 0, 0).
     $
 
-  4. Calculate the initial cost $vb(c)^tp vb(x) = 0$.
+  4. Calculate the initial cost $vb(c)^TT vb(x) = 0$.
 
   5. Construct the initial simplex tableau:
     $
       mat(
         delim: "[",
         augment: #(hline: 1, vline: 1),
-        -vb(c)_B^tp vb(x)_B, overline(c_1), overline(c_2), overline(c_3), overline(c_4), overline(c_5), overline(c_6);
+        -vb(c)_B^TT vb(x)_B, overline(c_1), overline(c_2), overline(c_3), overline(c_4), overline(c_5), overline(c_6);
         x_B(1), bar, bar, bar, bar, bar, bar;
         x_B(2), matbold(B)^(-1)vb(A)_1, matbold(B)^(-1)vb(A)_2, matbold(B)^(-1)vb(A)_3, matbold(B)^(-1)vb(A)_4, matbold(B)^(-1)vb(A)_5, matbold(B)^(-1)vb(A)_6;
         x_B(3), bar, bar, bar, bar, bar, bar;
@@ -433,7 +433,7 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
 
     - We can choose $j = 1$ to make $x_1$ enter the basis.
 
-    - Find the pivot row such that $-x_B(i)/d_B(i)$ is minimum among all $i$ such that $d_B(i) < 0$. Note that $vb(d)_B = -matbold(B)^(-1) vb(A)_j$, and this is equivalent to the initial column of $(x_4, x_5, x_6)^tp$ divided by the entries in pivot column $j = 1$, which is $(1, 2, 2)^tp$. Hence, we have
+    - Find the pivot row such that $-x_B(i)/d_B(i)$ is minimum among all $i$ such that $d_B(i) < 0$. Note that $vb(d)_B = -matbold(B)^(-1) vb(A)_j$, and this is equivalent to the initial column of $vecrow(x_4, x_5, x_6)^TT$ divided by the entries in pivot column $j = 1$, which is $vecrow(1, 2, 2)^TT$. Hence, we have
       $
         -x_B(1)/d_B(1) = 10/1 = 10, quad
         -x_B(2)/d_B(2) = 10/2 = 5, quad
@@ -516,9 +516,9 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
       ).
     $
 
-  This gives a final solution of $vb(x) = (10/3, 10/3, 0, 0, 0, 20/3)^tp$ with optimal cost $vb(c)^tp vb(x) = -20/3$.
+  This gives a final solution of $vb(x) = vecrow(10/3, 10/3, 0, 0, 0, 20/3)^TT$ with optimal cost $vb(c)^TT vb(x) = -20/3$.
 
-  Hence the solution to the original problem is $vb(x) = (10/3, 10/3, 0)^tp$ with optimal cost $-20/3$.
+  Hence the solution to the original problem is $vb(x) = vecrow(10/3, 10/3, 0)^TT$ with optimal cost $-20/3$.
 ]
 
 #lecture-separator(lecture: 9, date: "2026-05-20")
@@ -526,7 +526,7 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
 #listing[Simplex Method][
   For problems of the form
   $
-    & "minimise"   && vb(c)^tp vb(x) \
+    & "minimise"   && vb(c)^TT vb(x) \
     & "subject to" && matbold(A) vb(x) <= vb(b) \
     &              && vb(x) >= vb(0),
   $

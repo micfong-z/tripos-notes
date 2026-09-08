@@ -21,16 +21,16 @@
 ] <def-root-multiplicity>
 
 #definition[Eigenvector and Eigenvalue][
-  Let $T: V-> V$ (for a #ponder("linear-algebra.vector-space")[real or complex vector space] $V$) be a #ponder("linear-algebra.linear-map")[linear map]. Then, a vector $bold(v) in V$ with $bold(v) != bold(0)$ is an #ponder("linear-algebra.eigenvalue-eigenvector")[*eigenvector*] of $T$ if there exists a scalar $lambda in RR$ (or $CC$) such that
-  $ T(bold(v)) = lambda bold(v). $
-  The scalar $lambda$ is called the #ponder("linear-algebra.eigenvalue-eigenvector")[*eigenvalue*] corresponding to the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] $bold(v)$.
+  Let $T: V-> V$ (for a #ponder("linear-algebra.vector-space")[real or complex vector space] $V$) be a #ponder("linear-algebra.linear-map")[linear map]. Then, a vector $vb(v) in V$ with $vb(v) != vb(0)$ is an #ponder("linear-algebra.eigenvalue-eigenvector")[*eigenvector*] of $T$ if there exists a scalar $lambda in RR$ (or $CC$) such that
+  $ T(vb(v)) = lambda vb(v). $
+  The scalar $lambda$ is called the #ponder("linear-algebra.eigenvalue-eigenvector")[*eigenvalue*] corresponding to the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] $vb(v)$.
 
 
   If $V = RR^n$ or $CC^n$, and $T$ is given in terms of a $n times n$ matrix $matbold(A)$, then
   $
-    matbold(A) bold(v) = lambda bold(v) <=> (matbold(A) - lambda matbold(I)) bold(v) = 0.
+    matbold(A) vb(v) = lambda vb(v) <=> (matbold(A) - lambda matbold(I)) vb(v) = 0.
   $
-  and for a given $lambda$, this holds for some vector $bold(v) != 0$ if and only if $det(matbold(A) - lambda matbold(I)) = 0$. This is called the #ponder("linear-algebra.eigenvalue-eigenvector")[*characteristic equation*] of the matrix $matbold(A)$.
+  and for a given $lambda$, this holds for some vector $vb(v) != 0$ if and only if $det(matbold(A) - lambda matbold(I)) = 0$. This is called the #ponder("linear-algebra.eigenvalue-eigenvector")[*characteristic equation*] of the matrix $matbold(A)$.
 
   Furthermore, the polynomial $chi_matbold(A) (lambda) = det(matbold(A) - lambda matbold(I))$ is called the #ponder("linear-algebra.eigenvalue-eigenvector")[*characteristic polynomial*] of degree $n$ of the matrix $matbold(A)$.
 ] <def-eigenvalue>
@@ -70,12 +70,12 @@
     Hence the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] are $lambda_1 = ii$ and $lambda_2 = -ii$. To find #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors], for $lambda = ii$, we have
 
     $
-      mat(-ii, -1; 1, -ii) bold(v) = bold(0) => bold(v) = alpha vec(1, -ii).
+      mat(-ii, -1; 1, -ii) vb(v) = vb(0) => vb(v) = alpha vec(1, -ii).
     $
 
     For $lambda = -ii$, we have
     $
-      mat(ii, -1; 1, ii) bold(v) = bold(0) => bold(v) = beta vec(1, ii).
+      mat(ii, -1; 1, ii) vb(v) = vb(0) => vb(v) = beta vec(1, ii).
     $
 
   2. Consider $V= RR^2$ with $A = mat(1, 1; 0, 1)$. Then
@@ -84,7 +84,7 @@
       chi_(matbold(A))(t) = (t-1)^2.
     $
     Hence the only #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] is $lambda = 1$ with #ponder("algebra.root-multiplicity")[multiplicity] 2. To find #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors], we have
-    $ mat(0, 1; 0, 0) bold(v) = bold(0) => bold(v) = alpha vec(1, 0) $
+    $ mat(0, 1; 0, 0) vb(v) = vb(0) => vb(v) = alpha vec(1, 0) $
     for any $alpha in RR$.
 
 ]
@@ -94,7 +94,7 @@
 #definition[Eigenspace][
   For an #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda$ of a matrix $matbold(A)$, we define its #ponder("linear-algebra.eigenspace")[*eigenspace*] as
   $
-    E_lambda = {bold(v): matbold(A) bold(v) = lambda bold(v)} = ker (matbold(A) - lambda matbold(I)).
+    E_lambda = {vb(v): matbold(A) vb(v) = lambda vb(v)} = ker (matbold(A) - lambda matbold(I)).
   $
 ] <def-eigenspace>
 
@@ -126,28 +126,28 @@
 
     The #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] is $lambda = 4$ with #ponder("linear-algebra.algebraic-multiplicity")[algebraic multiplicity] $M_4 = 3$. To find the #ponder("linear-algebra.eigenspace")[eigenspace], we solve
     $
-      mat(0, 1, 0; 0, 0, 1; 0, 0, 0) bold(v) = bold(0) => bold(v) = alpha vec(1, 0, 0).
+      mat(0, 1, 0; 0, 0, 1; 0, 0, 0) vb(v) = vb(0) => vb(v) = alpha vec(1, 0, 0).
     $
 
     Therefore, #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] is $vec(1, 0, 0)$ with #ponder("linear-algebra.geometric-multiplicity")[geometric multiplicity] $m_4 = 1$.
 
     #ponder("linear-algebra.eigenspace")[Eigenspace] is $E_4 = span{vec(1, 0, 0)}$ with $dim E_4 = 1$.
 
-  2. Consider a #ponder("geometry.reflection")[reflection matrix] in $RR^3$ in plane through $bold(0)$ with normal $bold(n)$. Then we have
+  2. Consider a #ponder("geometry.reflection")[reflection matrix] in $RR^3$ in plane through $vb(0)$ with normal $vb(n)$. Then we have
     $
-      matbold(H) bold(n) = - bold(n), quad matbold(H) bold(v) = 1 bold(v) quad forall bold(v) perp bold(n).
+      matbold(H) vb(n) = - vb(n), quad matbold(H) vb(v) = 1 vb(v) quad forall vb(v) perp vb(n).
     $
 
     Hence the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] are $lambda_1 = -1$ and $lambda_2 = 1$. We have
     $
-      E_(-1) & = {alpha bold(n)}                    & quad M_(-1) & = m_(-1) = 1. \
-         E_1 & = {bold(x): bold(x) dot bold(n) = 0} &    quad M_1 & = m_1 = 2.
+      E_(-1) & = {alpha vb(n)}                    & quad M_(-1) & = m_(-1) = 1. \
+         E_1 & = {vb(x): vb(x) dot vb(n) = 0} &    quad M_1 & = m_1 = 2.
     $
 
   3. Consider a #ponder("geometry.rotation")[rotation] in $RR^2$
 
     $
-      matbold("Rot")(theta) = mat(cos theta, -sin theta; sin theta, cos theta).
+      matbold("Rot")(theta) = rot2mat(theta).
     $
 
     We have
@@ -155,19 +155,19 @@
     $
       chi_(matbold("Rot")(theta))(t) & = t^2 - 2 (cos theta) t + 1 \
                        lambda_(1, 2) & = ee^(plus.minus ii theta) \
-                             bold(v) & = alpha vec(1, minus.plus ii).
+                             vb(v) & = alpha vec(1, minus.plus ii).
     $
 
-  4. Consider a #ponder("geometry.rotation")[rotation] by angle $theta$ about $bold(n)$. Then
+  4. Consider a #ponder("geometry.rotation")[rotation] by angle $theta$ about $vb(n)$. Then
 
     $
-      matbold("Rot")(theta, bold(n)) bold(n) = bold(n),
+      matbold("Rot")(theta, vb(n)) vb(n) = vb(n),
     $
     and we have an #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda = 1$ with #ponder("linear-algebra.eigenspace")[eigenspace]
     $
-      E_1 = span {bold(n)}.
+      E_1 = span {vb(n)}.
     $
-    There are no other #ponder("linear-algebra.eigenvalue-eigenvector")[real eigenvalues unless] $theta = k ppi$ for some integer $k$. A #ponder("geometry.rotation")[rotation] restricted to the plane that is perpendicular to $bold(n)$ has #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] $ee^(plus.minus ii theta)$.
+    There are no other #ponder("linear-algebra.eigenvalue-eigenvector")[real eigenvalues unless] $theta = k ppi$ for some integer $k$. A #ponder("geometry.rotation")[rotation] restricted to the plane that is perpendicular to $vb(n)$ has #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] $ee^(plus.minus ii theta)$.
 
   5. Consider the matrix
 
@@ -176,7 +176,7 @@
     $
     Then the only #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] is $lambda = -2$ with #ponder("linear-algebra.algebraic-multiplicity")[algebraic multiplicity] $M_(-2) = 3$. To find the #ponder("linear-algebra.eigenspace")[eigenspace], we solve
     $
-      mat(-1, -1, 1; -1, -1, 1; -2, -2, 2) bold(v) = bold(0)
+      mat(-1, -1, 1; -1, -1, 1; -2, -2, 2) vb(v) = vb(0)
     $
     and we have a general solution $vec(x, y, x+y)$. Therefore, the #ponder("linear-algebra.eigenspace")[eigenspace] is
     $
@@ -193,7 +193,7 @@
 #proposition[
   For an $n times n$ matrix $matbold(A)$ acting on $V = RR^n$ or $CC^n$, the following are equivalent:
 
-  - There exists a #ponder("linear-algebra.basis")[basis] of $V$ consisting of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $matbold(A)$. _i.e._ we have ${bold(v_1), ..., bold(v_n)}$ where $ matbold(A) bold(v_i) = lambda_i bold(v_i) $ for some #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda_i$.
+  - There exists a #ponder("linear-algebra.basis")[basis] of $V$ consisting of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $matbold(A)$. _i.e._ we have ${vb(v_1), ..., vb(v_n)}$ where $ matbold(A) vb(v_i) = lambda_i vb(v_i) $ for some #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda_i$.
 
   - $matbold(A)$ is #ponder("linear-algebra.diagonalisable-matrix")[diagonalisable], _i.e._ there exists an $n times n$ #ponder("algebra.matrix-invertibility")[invertible] matrix $matbold(P)$ such that
     $
@@ -216,7 +216,7 @@ We will prove @prop-diagonalisable in the following section.
 === Linearly Independent Eigenvectors
 
 #theorem[
-  Suppose that an $n times n$ matrix $matbold(M)$ has #ponder("linear-algebra.eigenvalue-eigenvector")[distinct eigenvalues] $lambda_1, lambda_2, ..., lambda_r$. Then the corresponding #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $bold(v_1), bold(v_2), ..., bold(v_r)$ are #ponder("linear-algebra.linear-independence")[linearly independent].
+  Suppose that an $n times n$ matrix $matbold(M)$ has #ponder("linear-algebra.eigenvalue-eigenvector")[distinct eigenvalues] $lambda_1, lambda_2, ..., lambda_r$. Then the corresponding #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $vb(v_1), vb(v_2), ..., vb(v_r)$ are #ponder("linear-algebra.linear-independence")[linearly independent].
 ] <thm-independent-eigenvectors>
 
 #remark[
@@ -224,20 +224,20 @@ We will prove @prop-diagonalisable in the following section.
 ]
 
 #proof[
-  We shall #ponder("set-theory.proof")[prove] this by contradiction. Suppose that ${bold(v_1), ..., bold(v_r)}$ are #ponder("linear-algebra.linear-independence")[linearly dependent], such that
+  We shall #ponder("set-theory.proof")[prove] this by contradiction. Suppose that ${vb(v_1), ..., vb(v_r)}$ are #ponder("linear-algebra.linear-independence")[linearly dependent], such that
   $
-    sum_(j=1)^r alpha_j bold(v_j) = bold(0)
+    sum_(j=1)^r alpha_j vb(v_j) = vb(0)
   $
   for some scalars $alpha_j$, not all zero.
 
   Take the minimal $p$ for which $exists alpha_1, ..., alpha_p != 0$ with #fade[[reordering if necessary]]
   $
-    sum_(j=1)^p alpha_j bold(v_j) = bold(0).
+    sum_(j=1)^p alpha_j vb(v_j) = vb(0).
   $
   Then, applying $matbold(A) - lambda_1 matbold(I)$ gives
 
   $
-    (matbold(A) - lambda_1 matbold(I)) sum_(j=1)^p alpha_j bold(v_j) = sum_(j > 1) alpha_j (lambda_j - lambda_1) bold(v_j) = bold(0).
+    (matbold(A) - lambda_1 matbold(I)) sum_(j=1)^p alpha_j vb(v_j) = sum_(j > 1) alpha_j (lambda_j - lambda_1) vb(v_j) = vb(0).
   $
 
   which is a #ponder("linear-algebra.linear-combination")[linear combination] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] with $p-1$ non-zero coefficients. This contradicts the minimality of $p$. $smash$
@@ -250,16 +250,16 @@ Now, we can prove @prop-diagonalisable.
 
   For any matrix $matbold(P)$,
 
-  - $matbold(A P)$ has columns $matbold(A) bold(C_i)(matbold(P))$
-  - $matbold(P D)$ has columns $lambda_i bold(C_i)(matbold(P))$
+  - $matbold(A P)$ has columns $matbold(A) vb(C_i)(matbold(P))$
+  - $matbold(P D)$ has columns $lambda_i vb(C_i)(matbold(P))$
 
-  where $bold(C_i)(matbold(P))$ is the $i$th column of $matbold(P)$.
+  where $vb(C_i)(matbold(P))$ is the $i$th column of $matbold(P)$.
 
   This means that
   $
-    matbold(P)^(-1) matbold(A) matbold(P) = matbold(D) <=> matbold(A P) = matbold(P D) <=> matbold(A) bold(v_i) = lambda_i bold(v_i) quad forall i = 1, ..., n
+    matbold(P)^(-1) matbold(A) matbold(P) = matbold(D) <=> matbold(A P) = matbold(P D) <=> matbold(A) vb(v_i) = lambda_i vb(v_i) quad forall i = 1, ..., n
   $
-  where $bold(v_i) = bold(C_i)(matbold(P))$.
+  where $vb(v_i) = vb(C_i)(matbold(P))$.
 
   #fade[[$=>$]] Given a #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors], we can construct $matbold(P)$ with these #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] as columns, and the above holds.
 
@@ -317,12 +317,12 @@ Now, we can prove @prop-diagonalisable.
 
 Recall that a matrix $matbold(A)$ is called #ponder("linear-algebra.hermitian-matrix")[Hermitian] if $matbold(A) = matbold(A)^dagger$, and #ponder("linear-algebra.symmetric-matrix")[symmetric] if $matbold(A) = matbold(A)^top$.
 
-Recall that the #ponder("linear-algebra.inner-product")[complex inner product] is defined as $bold(v)^dagger bold(w)$. For $bold(v), bold(w) in RR$, this reduces to the #ponder("linear-algebra.dot-product")[dot product] $bold(v) dot bold(w)$.
+Recall that the #ponder("linear-algebra.inner-product")[complex inner product] is defined as $vb(v)^dagger vb(w)$. For $vb(v), vb(w) in RR$, this reduces to the #ponder("linear-algebra.dot-product")[dot product] $vb(v) dot vb(w)$.
 
 #remark[
   If $matbold(A)$ is #ponder("linear-algebra.hermitian-matrix")[Hermitian],
   $
-    (matbold(A) bold(v))^dagger bold(w) = bold(v)^dagger (matbold(A) bold(w))
+    (matbold(A) vb(v))^dagger vb(w) = vb(v)^dagger (matbold(A) vb(w))
   $
 
 ]
@@ -332,11 +332,11 @@ Recall that the #ponder("linear-algebra.inner-product")[complex inner product] i
 
   1. Every #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] of $matbold(A)$ is real.
 
-  2. #ponder("linear-algebra.eigenvalue-eigenvector")[Eigenvectors] $bold(v), bold(w)$ corresponding to #ponder("linear-algebra.eigenvalue-eigenvector")[distinct eigenvalues] $lambda, mu$ are #ponder("linear-algebra.orthogonality")[orthogonal].
+  2. #ponder("linear-algebra.eigenvalue-eigenvector")[Eigenvectors] $vb(v), vb(w)$ corresponding to #ponder("linear-algebra.eigenvalue-eigenvector")[distinct eigenvalues] $lambda, mu$ are #ponder("linear-algebra.orthogonality")[orthogonal].
 
-  3. If $matbold(A)$ is #ponder("linear-algebra.symmetric-matrix")[symmetric], then for each #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda$, we can choose a real #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] $bold(v)$ so that (2) becomes
+  3. If $matbold(A)$ is #ponder("linear-algebra.symmetric-matrix")[symmetric], then for each #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda$, we can choose a real #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] $vb(v)$ so that (2) becomes
     $
-      bold(v)^tp bold(w) = 0.
+      vb(v)^TT vb(w) = 0.
     $
 ] <thm-hermitian-eigenvalues>
 
@@ -345,27 +345,27 @@ Recall that the #ponder("linear-algebra.inner-product")[complex inner product] i
   1. Consider an #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] $matbold(v)$ with #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda$. We have
 
     $
-          & bold(v)^dagger (matbold(A) bold(v)) =( matbold(A) bold(v))^dagger bold(v) \
-      <=> & lambda bold(v)^dagger bold(v) = (overline(lambda) bold(v))^dagger bold(v). \
+          & vb(v)^dagger (matbold(A) vb(v)) =( matbold(A) vb(v))^dagger vb(v) \
+      <=> & lambda vb(v)^dagger vb(v) = (overline(lambda) vb(v))^dagger vb(v). \
     $
-    Since $bold(v) != 0$, we have $lambda = overline(lambda)$, so $lambda in RR$.
+    Since $vb(v) != 0$, we have $lambda = overline(lambda)$, so $lambda in RR$.
 
-  2. Let $bold(v), bold(w)$ be #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] with #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] $lambda, mu$. Then
+  2. Let $vb(v), vb(w)$ be #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] with #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] $lambda, mu$. Then
 
     $
-      & bold(v)^dagger (matbold(A) bold(w)) & =& (matbold(A) bold(v))^dagger bold(w) \
-      <=> & mu bold(v)^dagger bold(w) & = &overline(lambda) bold(v)^dagger bold(w) &= lambda bold(v)^dagger bold(w) quad (lambda "real"). \
+      & vb(v)^dagger (matbold(A) vb(w)) & =& (matbold(A) vb(v))^dagger vb(w) \
+      <=> & mu vb(v)^dagger vb(w) & = &overline(lambda) vb(v)^dagger vb(w) &= lambda vb(v)^dagger vb(w) quad (lambda "real"). \
     $
-    Since $lambda != mu$, we have $bold(v)^dagger bold(w) = 0$.
+    Since $lambda != mu$, we have $vb(v)^dagger vb(w) = 0$.
 
-  3. We have $matbold(A) bold(v) = lambda bold(v)$ with $bold(v) in CC^n$ and $matbold(A), lambda$ are real. Let $bold(v) = bold(u) + ii bold(u')$, with $bold(u), bold(u') in RR^n$. Then we have
+  3. We have $matbold(A) vb(v) = lambda vb(v)$ with $vb(v) in CC^n$ and $matbold(A), lambda$ are real. Let $vb(v) = vb(u) + ii vb(u')$, with $vb(u), vb(u') in RR^n$. Then we have
     $
       cases(
-        matbold(A) bold(u) = lambda bold(u),
-        matbold(A) bold(u') = lambda bold(u')
+        matbold(A) vb(u) = lambda vb(u),
+        matbold(A) vb(u') = lambda vb(u')
       )
     $
-    but $matbold(v) != bold(0)$ since it is an #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector], so at least one of $bold(u), bold(u')$ is non-zero, and we can choose this as a real #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector].
+    but $matbold(v) != vb(0)$ since it is an #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector], so at least one of $vb(u), vb(u')$ is non-zero, and we can choose this as a real #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector].
 
 ]
 
@@ -373,34 +373,34 @@ Recall that the #ponder("linear-algebra.inner-product")[complex inner product] i
 
 === Gram-Schmidt Orthogonalisation
 
-Given a #ponder("linear-algebra.linear-independence")[linearly independent] set of vectors in $CC^n$, say ${bold(w_1), ..., bold(w_r)}$. We can construct a sequence of sets of the form:
+Given a #ponder("linear-algebra.linear-independence")[linearly independent] set of vectors in $CC^n$, say ${vb(w_1), ..., vb(w_r)}$. We can construct a sequence of sets of the form:
 
-- ${bold(u_1), bold(w'_2), ..., bold(w'_r)}$
-- ${bold(u_1), bold(u_2), bold(w''_3), ..., bold(w''_r)}$
+- ${vb(u_1), vb(w'_2), ..., vb(w'_r)}$
+- ${vb(u_1), vb(u_2), vb(w''_3), ..., vb(w''_r)}$
 - ...
-- ${bold(u_1), bold(u_2), ..., bold(u_r)}$
+- ${vb(u_1), vb(u_2), ..., vb(u_r)}$
 
-so that each set has the same #ponder("linear-algebra.span")[span], each is #ponder("linear-algebra.linear-independence")[linearly independent], and $bold(u_i)$ are #ponder("linear-algebra.orthonormal")[orthonormal] to each other, and #ponder("linear-algebra.orthogonality")[orthogonal] to the $bold(w)$-vectors.
+so that each set has the same #ponder("linear-algebra.span")[span], each is #ponder("linear-algebra.linear-independence")[linearly independent], and $vb(u_i)$ are #ponder("linear-algebra.orthonormal")[orthonormal] to each other, and #ponder("linear-algebra.orthogonality")[orthogonal] to the $vb(w)$-vectors.
 
 We construct this as follows:
 
-- *First step.* Let $bold(u_1) = bold(w_1)/abs(bold(w_1))$ and $bold(w'_j) = bold(w_j) - (bold(u_1^dagger) bold(w_j)) bold(u_1)$.
+- *First step.* Let $vb(u_1) = vb(w_1)/abs(vb(w_1))$ and $vb(w'_j) = vb(w_j) - (vb(u_1)^dagger vb(w_j)) vb(u_1)$.
 
-  This guarantees that $abs(bold(u_1)) = 1$ and $bold(u_1^dagger) bold(w'_j) = 0$ for all $j >= 2$.
+  This guarantees that $abs(vb(u_1)) = 1$ and $vb(u_1)^dagger vb(w'_j) = 0$ for all $j >= 2$.
 
-- *Next step.* Let $bold(u_2) = bold(w'_2)/abs(bold(w'_2))$ and $bold(w''_j) = bold(w'_j) - (bold(u_2^dagger) bold(w'_j)) bold(u_2)$.
+- *Next step.* Let $vb(u_2) = vb(w'_2)/abs(vb(w'_2))$ and $vb(w''_j) = vb(w'_j) - (vb(u_2)^dagger vb(w'_j)) vb(u_2)$.
 
-  This guarantees that $abs(bold(u_2)) = 1$ and
+  This guarantees that $abs(vb(u_2)) = 1$ and
   $
     cases(
-      bold(u_2^dagger) bold(u_1) = 0,
-      bold(u_1^dagger) bold(w''_j) = 0,
-      bold(u_2^dagger) bold(w''_j) = 0
+      vb(u_2)^dagger vb(u_1) = 0,
+      vb(u_1)^dagger vb(w''_j) = 0,
+      vb(u_2)^dagger vb(w''_j) = 0
     )
   $
   for all $j >= 3$.
 
-- *Continue similarly* until we reach $bold(u_r)$.
+- *Continue similarly* until we reach $vb(u_r)$.
 
 We then find an #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] $B_lambda$ for each #ponder("linear-algebra.eigenspace")[eigenspace] $E_lambda$ of a #ponder("linear-algebra.hermitian-matrix")[Hermitian matrix] $matbold(A)$.
 
@@ -417,9 +417,9 @@ is an #ponder("linear-algebra.orthonormal")[orthonormal] set of $CC^n$ consistin
 
   More specifically,
 
-  1. There exists a #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $bold(u_1), ..., bold(u_n) in CC^n$ with
+  1. There exists a #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $vb(u_1), ..., vb(u_n) in CC^n$ with
     $
-      matbold(A) bold(u_i) = lambda_i bold(u_i)
+      matbold(A) vb(u_i) = lambda_i vb(u_i)
     $
     for #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] $lambda_i$;
 
@@ -429,11 +429,11 @@ is an #ponder("linear-algebra.orthonormal")[orthonormal] set of $CC^n$ consistin
     $
       matbold(P)^(-1) matbold(A) matbold(P) = matbold(D) = mat(lambda_1, 0, ..., 0; 0, lambda_2, ..., 0; dots.v, dots.v, dots.down, dots.v; 0, 0, ..., lambda_n).
     $
-    with the columns of $matbold(P)$ representing the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $bold(v_i)$.
+    with the columns of $matbold(P)$ representing the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $vb(v_i)$.
 ] <thm-hermitian-diagonalisation>
 
 #remark[
-  In addition, the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $matbold(u_i)$ can be chosen to be #ponder("linear-algebra.orthonormal")[orthonormal], so that $bold(u_i^dagger) bold(u_j) = delta_(i j)$.
+  In addition, the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $matbold(u_i)$ can be chosen to be #ponder("linear-algebra.orthonormal")[orthonormal], so that $vb(u_i)^dagger vb(u_j) = delta_(i j)$.
 
   Equivalently, the matrix $matbold(P)$ can be chosen to be #ponder("linear-algebra.unitary-matrix")[unitary], so that $matbold(P)^dagger = matbold(P)^(-1)$, and that
   $
@@ -442,12 +442,12 @@ is an #ponder("linear-algebra.orthonormal")[orthonormal] set of $CC^n$ consistin
 ]
 
 #remark[
-  For an $n times n$ real #ponder("linear-algebra.symmetric-matrix")[symmetric matrix] $matbold(A)$, the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] can be taken to be $bold(u_1), ..., bold(u_n) in RR^n$, and can be chosen such that
+  For an $n times n$ real #ponder("linear-algebra.symmetric-matrix")[symmetric matrix] $matbold(A)$, the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] can be taken to be $vb(u_1), ..., vb(u_n) in RR^n$, and can be chosen such that
   $
-    bold(u_i^tp) bold(u_j) = delta_(i j).
+    vb(u_i)^TT vb(u_j) = delta_(i j).
   $
-  Equivalently, $matbold(P)$ can be chosen to be #ponder("algebra.orthogonal-group")[orthogonal], so that $matbold(P)^tp = matbold(P)^(-1)$, and that
-  $ matbold(P^tp) matbold(A) matbold(P) = matbold(D). $
+  Equivalently, $matbold(P)$ can be chosen to be #ponder("algebra.orthogonal-group")[orthogonal], so that $matbold(P)^TT = matbold(P)^(-1)$, and that
+  $ matbold(P)^TT matbold(A) matbold(P) = matbold(D). $
 ]
 
 == Change of Basis
@@ -458,29 +458,29 @@ $
 $
 and
 
-- ${bold(e_1), ..., bold(e_n)}$ to be a #ponder("linear-algebra.basis")[basis] of $V$;
-- ${bold(f_1), ..., bold(f_m)}$ to be a #ponder("linear-algebra.basis")[basis] of $W$,
+- ${vb(e_1), ..., vb(e_n)}$ to be a #ponder("linear-algebra.basis")[basis] of $V$;
+- ${vb(f_1), ..., vb(f_m)}$ to be a #ponder("linear-algebra.basis")[basis] of $W$,
 
 such that $T$ is represented by the $m times n$ matrix $matbold(A)$ with respect to these #ponder("linear-algebra.basis")[bases]. This means that
 
 $
-  T(bold(e_i)) = sum_(j=1)^m A_(j i) bold(f_j).
+  T(vb(e_i)) = sum_(j=1)^m A_(j i) vb(f_j).
 $
 
 Now consider
 
-- ${bold(e'_1), ..., bold(e'_n)}$ to be another basis of $V$;
-- ${bold(f'_1), ..., bold(f'_m)}$ to be another basis of $W$.
+- ${vb(e'_1), ..., vb(e'_n)}$ to be another basis of $V$;
+- ${vb(f'_1), ..., vb(f'_m)}$ to be another basis of $W$.
 
 In this case, $T$ is represented by another $m times n$ matrix $matbold(B)$ with respect to these new #ponder("linear-algebra.basis")[bases], such that
 
 $
-  T(bold(e'_i)) = sum_(j=1)^m B_(j i) bold(f'_j).
+  T(vb(e'_i)) = sum_(j=1)^m B_(j i) vb(f'_j).
 $
 
 Suppose that the bases are related by
 $
-  bold(e'_i) = sum_k P_(k i) bold(e_k), quad bold(f'_j) = sum_l Q_(l j) bold(f_l)
+  vb(e'_i) = sum_k P_(k i) vb(e_k), quad vb(f'_j) = sum_l Q_(l j) vb(f_l)
 $
 where $matbold(P)$ of size $n times n$ and $matbold(Q)$ of size $m times m$ are #ponder("algebra.matrix-invertibility")[invertible] matrices.
 
@@ -497,17 +497,17 @@ where $matbold(P)$ of size $n times n$ and $matbold(Q)$ of size $m times m$ are 
 #proof[
   We have
   $
-    T(bold(e'_i)) & = T(sum_k P_(k i) bold(e_k)) \
-                  & = sum_k P_(k i) T(bold(e_k)) \
-                  & = sum_(k, j) bold(f_j) A_(j k) P_(k i) \
+    T(vb(e'_i)) & = T(sum_k P_(k i) vb(e_k)) \
+                  & = sum_k P_(k i) T(vb(e_k)) \
+                  & = sum_(k, j) vb(f_j) A_(j k) P_(k i) \
   $
   and also
   $
-    T(bold(e'_i)) & = sum_j bold(f'_j) B_(j i) \
-                  & = sum_(j, l) bold(f_l) Q_(l j) B_(j i) \
-                  & = sum_(k, j) bold(f_j) Q_(j k) B_(k i). quad ("exchanging indices") \
+    T(vb(e'_i)) & = sum_j vb(f'_j) B_(j i) \
+                  & = sum_(j, l) vb(f_l) Q_(l j) B_(j i) \
+                  & = sum_(k, j) vb(f_j) Q_(j k) B_(k i). quad ("exchanging indices") \
   $
-  Comparing coefficients of $bold(f_j)$, we have, in summation notation,
+  Comparing coefficients of $vb(f_j)$, we have, in summation notation,
   $
     A_(j k) P_(k i) = Q_(j k) B_(k i).
   $
@@ -519,13 +519,13 @@ where $matbold(P)$ of size $n times n$ and $matbold(Q)$ of size $m times m$ are 
 
 #remark[
 
-  - The definition of $matbold(A)$ which represents $T$ with respect to ${bold(e_i)}$ and ${bold(f_j)}$ implies that the column $i$ of $matbold(A)$ consists of the components of $T(bold(e_i))$ in the #ponder("linear-algebra.basis")[basis] ${bold(f_j)}$.
+  - The definition of $matbold(A)$ which represents $T$ with respect to ${vb(e_i)}$ and ${vb(f_j)}$ implies that the column $i$ of $matbold(A)$ consists of the components of $T(vb(e_i))$ in the #ponder("linear-algebra.basis")[basis] ${vb(f_j)}$.
 
-  - Similarly, the column $i$ of $matbold(P)$ consists of the components of $bold(e'_i)$ in the #ponder("linear-algebra.basis")[basis] ${bold(e_j)}$.
+  - Similarly, the column $i$ of $matbold(P)$ consists of the components of $vb(e'_i)$ in the #ponder("linear-algebra.basis")[basis] ${vb(e_j)}$.
 
-  - If we instead change in the other direction, _i.e._ from ${bold(e'_i)}$ to ${bold(e_i)}$ and from ${bold(f'_j)}$ to ${bold(f_j)}$, then $matbold(P') = matbold(P)^(-1)$ and $matbold(Q') = matbold(Q)^(-1)$, such that
+  - If we instead change in the other direction, _i.e._ from ${vb(e'_i)}$ to ${vb(e_i)}$ and from ${vb(f'_j)}$ to ${vb(f_j)}$, then $matbold(P') = matbold(P)^(-1)$ and $matbold(Q') = matbold(Q)^(-1)$, such that
     $
-      bold(e_i) = sum_k P'_(k i) bold(e'_k), quad bold(f_j) = sum_l Q'_(l j) bold(f'_l).
+      vb(e_i) = sum_k P'_(k i) vb(e'_k), quad vb(f_j) = sum_l Q'_(l j) vb(f'_l).
     $
 
 ]
@@ -533,22 +533,22 @@ where $matbold(P)$ of size $n times n$ and $matbold(Q)$ of size $m times m$ are 
 #example[
   Consider $dim V = n = 2$ and $dim W = m = 3$, with
   $
-    T(bold(e_1)) & = bold(f_1) + 2 bold(f_2) - bold(f_3) \
-    T(bold(e_2)) & = - bold(f_1) + 2 bold(f_2) + bold(f_3).
+    T(vb(e_1)) & = vb(f_1) + 2 vb(f_2) - vb(f_3) \
+    T(vb(e_2)) & = - vb(f_1) + 2 vb(f_2) + vb(f_3).
   $
   Thus, $matbold(A)$ is represented by
   $
     matbold(A) = mat(1, -1; 2, 2; -1, 1).
   $
-  Now consider a #ponder("linear-algebra.basis")[basis] for $V$ formed by ${bold(e'_1), bold(e'_2)}$ that relates to ${bold(e_1), bold(e_2)}$ by
-  $ bold(e'_1) = bold(e_1) - bold(e_2), quad bold(e'_2) = bold(e_1) + bold(e_2). $
+  Now consider a #ponder("linear-algebra.basis")[basis] for $V$ formed by ${vb(e'_1), vb(e'_2)}$ that relates to ${vb(e_1), vb(e_2)}$ by
+  $ vb(e'_1) = vb(e_1) - vb(e_2), quad vb(e'_2) = vb(e_1) + vb(e_2). $
   Hence we have
   $
     matbold(P) = mat(1, 1; -1, 1).
   $
-  For $W$, consider a #ponder("linear-algebra.basis")[basis] formed by ${bold(f'_1), bold(f'_2), bold(f'_3)}$ that relates to ${bold(f_1), bold(f_2), bold(f_3)}$ by
+  For $W$, consider a #ponder("linear-algebra.basis")[basis] formed by ${vb(f'_1), vb(f'_2), vb(f'_3)}$ that relates to ${vb(f_1), vb(f_2), vb(f_3)}$ by
   $
-    bold(f'_1) = bold(f_1) - bold(f_3), quad bold(f'_2) = bold(f_2), quad bold(f'_3) = bold(f_1) + bold(f_3).
+    vb(f'_1) = vb(f_1) - vb(f_3), quad vb(f'_2) = vb(f_2), quad vb(f'_3) = vb(f_1) + vb(f_3).
   $
   Hence we have
   $
@@ -558,8 +558,8 @@ where $matbold(P)$ of size $n times n$ and $matbold(Q)$ of size $m times m$ are 
   #ponder("linear-algebra.basis")[bases] is given by
   $
     matbold(B) = matbold(Q)^(-1) matbold(A) matbold(P) = mat(2, 0; 0, 4; 0, 0) => cases(
-      T(bold(e'_1)) = 2 bold(f'_1),
-      T(bold(e'_2)) = 4 bold(f'_2)
+      T(vb(e'_1)) = 2 vb(f'_1),
+      T(vb(e'_2)) = 4 vb(f'_2)
     )
   $
 ]
@@ -567,36 +567,36 @@ where $matbold(P)$ of size $n times n$ and $matbold(Q)$ of size $m times m$ are 
 #remark[
   #fade[[Special cases]]
 
-  1. If $V = W$ with the same basis change, _i.e._ $bold(e'_i) = bold(e_i)$ and $bold(f'_j) = bold(f_j)$, then $bold(P) = bold(Q)$ and
+  1. If $V = W$ with the same basis change, _i.e._ $vb(e'_i) = vb(e_i)$ and $vb(f'_j) = vb(f_j)$, then $vb(P) = vb(Q)$ and
     $
       matbold(B) = matbold(P)^(-1) matbold(A) matbold(P).
     $
     Therefore, matrices represent the same #ponder("linear-algebra.linear-map")[linear map] $T: V-> V$ iff they are #ponder("linear-algebra.similar-matrices")[similar].
 
-  2. If $V = W = RR^n "or" CC^n$, consider for both the #ponder("linear-algebra.basis")[standard basis] ${bold(e_i)}$, then if there exists a #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $T$ denoted by ${bold(v_1), ..., bold(v_n)}$, denote ${bold(e'_i) = bold(v_i)}$, and define $matbold(B)$ to be the matrix representing $T$ with respect to this #ponder("linear-algebra.basis")[basis]. Then,
+  2. If $V = W = RR^n "or" CC^n$, consider for both the #ponder("linear-algebra.basis")[standard basis] ${vb(e_i)}$, then if there exists a #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $T$ denoted by ${vb(v_1), ..., vb(v_n)}$, denote ${vb(e'_i) = vb(v_i)}$, and define $matbold(B)$ to be the matrix representing $T$ with respect to this #ponder("linear-algebra.basis")[basis]. Then,
     $
       matbold(B) = matbold(P)^(-1) matbold(A) matbold(P)
     $
-    where $matbold(P)$ has columns given by the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $bold(v_i)$. By @prop-diagonalisable, $matbold(B)$ is diagonal, with the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] of $T$ on the diagonal. So
+    where $matbold(P)$ has columns given by the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $vb(v_i)$. By @prop-diagonalisable, $matbold(B)$ is diagonal, with the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] of $T$ on the diagonal. So
     $
       matbold(B) = matbold(D) = mat(lambda_1, 0, ..., 0; 0, lambda_2, ..., 0; dots.v, dots.v, dots.down, dots.v; 0, 0, ..., lambda_n).
     $
-    where $T(bold(v_i)) = lambda_i bold(v_i)$ for each $i$, and thus $matbold(D) = matbold(P)^(-1) matbold(A) matbold(P)$ such that
+    where $T(vb(v_i)) = lambda_i vb(v_i)$ for each $i$, and thus $matbold(D) = matbold(P)^(-1) matbold(A) matbold(P)$ such that
 
-    Since $bold(v_i) = sum_j bold(e_j) P_(j i)$ is the $i$th #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] of $T$, the columns of $matbold(P)$ are the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $T$ expressed in the #ponder("linear-algebra.basis")[standard basis]. Therefore, $matbold(P)$ is the #ponder("algebra.matrix-change-of-basis")[change of basis matrix], and is also the matrix that #ponder("linear-algebra.diagonalisable-matrix")[diagonalises] $matbold(A)$.
+    Since $vb(v_i) = sum_j vb(e_j) P_(j i)$ is the $i$th #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] of $T$, the columns of $matbold(P)$ are the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $T$ expressed in the #ponder("linear-algebra.basis")[standard basis]. Therefore, $matbold(P)$ is the #ponder("algebra.matrix-change-of-basis")[change of basis matrix], and is also the matrix that #ponder("linear-algebra.diagonalisable-matrix")[diagonalises] $matbold(A)$.
 ]
 
 #lecture-separator(lecture: 21, date: "2025-11-25")
 
 === Changes in Vector Components Under Change of Basis
 
-Consider $V$ a #ponder("linear-algebra.vector-space")[vector space] and $bold(x) in V$. Assume that ${bold(e_i)}$ and ${bold(e'_i)}$ are two different #ponder("linear-algebra.basis")[bases] of $V$, related by $matbold(P)$ and
+Consider $V$ a #ponder("linear-algebra.vector-space")[vector space] and $vb(x) in V$. Assume that ${vb(e_i)}$ and ${vb(e'_i)}$ are two different #ponder("linear-algebra.basis")[bases] of $V$, related by $matbold(P)$ and
 $
-  bold(x) = x_i bold(e_i) = x'_i bold(e'_i).
+  vb(x) = x_i vb(e_i) = x'_i vb(e'_i).
 $
-Then, taking into account that $bold(e'_j) = bold(e_i) P_(i j)$, we have
+Then, taking into account that $vb(e'_j) = vb(e_i) P_(i j)$, we have
 $
-  bold(x) = underbracket(x_i bold(e_i)) = x'_j bold(e_i) P_(i j) = underbracket((P_(i j) x'_j) bold(e_i))
+  vb(x) = underbracket(x_i vb(e_i)) = x'_j vb(e_i) P_(i j) = underbracket((P_(i j) x'_j) vb(e_i))
 $
 and hence
 $
@@ -605,27 +605,27 @@ $
 and this is the relation between vector components with respect to #ponder("linear-algebra.basis")[bases] related by $matbold(P)$. We can write
 
 $
-  bold(x) = vec(x_1, dots.v, x_n) = mat(P_(1 1), ..., P_(1 n); dots.v, dots.down, dots.v; P_(n 1), ..., P_(n n)) vec(x'_1, dots.v, x'_n) = matbold(P) vec(x'_1, dots.v, x'_n)
+  vb(x) = vec(x_1, dots.v, x_n) = mat(P_(1 1), ..., P_(1 n); dots.v, dots.down, dots.v; P_(n 1), ..., P_(n n)) vec(x'_1, dots.v, x'_n) = matbold(P) vec(x'_1, dots.v, x'_n)
 $
 and thus
 $
-  bold(x) = matbold(P) bold(x').
+  vb(x) = matbold(P) vb(x').
 $
-Similarly, consider #ponder("linear-algebra.vector-space")[vector space] $W$ and $bold(y) in W$. Assume that ${bold(f_j)}$ and ${bold(f'_j)}$ are two different #ponder("linear-algebra.basis")[bases] of $W$ such that
+Similarly, consider #ponder("linear-algebra.vector-space")[vector space] $W$ and $vb(y) in W$. Assume that ${vb(f_j)}$ and ${vb(f'_j)}$ are two different #ponder("linear-algebra.basis")[bases] of $W$ such that
 $
-  bold(y) = y_j bold(f_j) = y'_j bold(f'_j)
+  vb(y) = y_j vb(f_j) = y'_j vb(f'_j)
 $
 and with #ponder("linear-algebra.basis")[bases] related by $matbold(Q)$. Then, we have
 $
-  bold(y) = matbold(Q) bold(y').
+  vb(y) = matbold(Q) vb(y').
 $
 Now, if we consider the definition of a #ponder("linear-algebra.linear-map")[linear map] $T: V->W$ in terms of a matrix $matbold(A)$, we have
 $
-  bold(y) = T(bold(x)) <=> bold(y) = matbold(A) bold(x) quad "and" quad bold(y') = matbold(B) bold(x').
+  vb(y) = T(vb(x)) <=> vb(y) = matbold(A) vb(x) quad "and" quad vb(y') = matbold(B) vb(x').
 $
 Therefore,
 $
-  bold(y') = matbold(Q)^(-1) bold(y) = matbold(Q)^(-1) matbold(A) bold(x) = matbold(Q)^(-1) matbold(A) matbold(P) bold(x') = matbold(B) bold(x').
+  vb(y') = matbold(Q)^(-1) vb(y) = matbold(Q)^(-1) matbold(A) vb(x) = matbold(Q)^(-1) matbold(A) matbold(P) vb(x') = matbold(B) vb(x').
 $
 This recovers the #ponder("algebra.matrix-change-of-basis")[change of basis formula] for matrices representing #ponder("linear-algebra.linear-map")[linear maps]:
 $
@@ -711,59 +711,59 @@ $
 
 == Quadratic Forms
 
-We wish to study functions of the form $x_1^2 + x_2^2$ or $2 x_1^2 + 2 x_1 x_2 + 5 x_2^2$ in $RR^2$, or more generally, a quadratic homogeneous polynomial of degree 2 in $n$ variables $x_1, ..., x_n$. It turns out that these can be written in matrix form as $bold(x)^tp matbold(A) bold(x)$ for some #ponder("linear-algebra.symmetric-matrix")[symmetric matrix] $matbold(A)$.
+We wish to study functions of the form $x_1^2 + x_2^2$ or $2 x_1^2 + 2 x_1 x_2 + 5 x_2^2$ in $RR^2$, or more generally, a quadratic homogeneous polynomial of degree 2 in $n$ variables $x_1, ..., x_n$. It turns out that these can be written in matrix form as $vb(x)^TT matbold(A) vb(x)$ for some #ponder("linear-algebra.symmetric-matrix")[symmetric matrix] $matbold(A)$.
 
 #definition[
   A #ponder("linear-algebra.quadratic-form")[*quadratic form*] is a function $cal(F) : RR^n -> RR$ defined by
   $
-    cal(F)(bold(x)) = bold(x)^tp matbold(A) bold(x) = x_i A_(i j) x_j
+    cal(F)(vb(x)) = vb(x)^TT matbold(A) vb(x) = x_i A_(i j) x_j
   $
   where $matbold(A)$ is a real #ponder("linear-algebra.symmetric-matrix")[symmetric matrix] of size $n times n$.
 ] <def-quadratic-form>
 We can hence write
 $
-  matbold(P)^tp matbold(A) matbold(P) = matbold(D)
+  matbold(P)^TT matbold(A) matbold(P) = matbold(D)
 $
 where $matbold(D)$ is diagonal with #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] $lambda_1, ..., lambda_n$ on the diagonal, and $matbold(P)$ is a real #ponder("algebra.orthogonal-group")[orthogonal matrix] of size $n times n$ with columns given by #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $matbold(A)$.
 
-Setting $bold(x') = matbold(P)^tp bold(x) <=> bold(x) = matbold(P) bold(x')$, we can #ponder("linear-algebra.diagonalisable-matrix")[diagonalise] the #ponder("linear-algebra.quadratic-form")[quadratic form]:
+Setting $vb(x') = matbold(P)^TT vb(x) <=> vb(x) = matbold(P) vb(x')$, we can #ponder("linear-algebra.diagonalisable-matrix")[diagonalise] the #ponder("linear-algebra.quadratic-form")[quadratic form]:
 $
-  cal(F) (bold(x)) & = bold(x)^tp matbold(A) bold(x) \
-                   & = (matbold(P) bold(x'))^tp matbold(A) (matbold(P) bold(x')) \
-                   & = bold(x')^tp (matbold(P)^tp matbold(A) matbold(P)) bold(x') \
-                   & = bold(x')^tp matbold(D) bold(x') \
+  cal(F) (vb(x)) & = vb(x)^TT matbold(A) vb(x) \
+                   & = (matbold(P) vb(x'))^TT matbold(A) (matbold(P) vb(x')) \
+                   & = vb(x')^TT (matbold(P)^TT matbold(A) matbold(P)) vb(x') \
+                   & = vb(x')^TT matbold(D) vb(x') \
 $
 Therefore,
 $
-  cal(F) (bold(x)) = sum_(i=1)^n lambda_i (x'_i)^2.
+  cal(F) (vb(x)) = sum_(i=1)^n lambda_i (x'_i)^2.
 $
 
-Note that $bold(x')$ is the representation of $bold(x)$ in the #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] ${bold(u_1), ..., bold(u_n)}$ of $matbold(A)$, where $bold(u_i)$ is the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] corresponding to #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda_i$. Indeed, since the columns of $matbold(P)$ are the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $bold(u_i)$, we have
+Note that $vb(x')$ is the representation of $vb(x)$ in the #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] ${vb(u_1), ..., vb(u_n)}$ of $matbold(A)$, where $vb(u_i)$ is the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] corresponding to #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalue] $lambda_i$. Indeed, since the columns of $matbold(P)$ are the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $vb(u_i)$, we have
 $
-  bold(x') & = x'_1 bold(e_1) + ... + x'_n bold(e_n) \
-   bold(x) & = x_1 bold(e_1) + ... + x_n bold(e_n) \
-           & = x'_1 bold(u_1) + ... + x'_n bold(u_n) quad ("since" bold(x) = matbold(P) bold(x')) \
+  vb(x') & = x'_1 vb(e_1) + ... + x'_n vb(e_n) \
+   vb(x) & = x_1 vb(e_1) + ... + x_n vb(e_n) \
+           & = x'_1 vb(u_1) + ... + x'_n vb(u_n) quad ("since" vb(x) = matbold(P) vb(x')) \
 $
 and
 $
-  x'_i = bold(u_i) dot bold(x)
+  x'_i = vb(u_i) dot vb(x)
 $
-are the components of $bold(x)$ in the #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] ${bold(u_1), ..., bold(u_n)}$, with the new axes along these direction called the #ponder("linear-algebra.quadratic-form")[*principal axes*] of the #ponder("linear-algebra.quadratic-form")[quadratic form].
+are the components of $vb(x)$ in the #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] of #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] ${vb(u_1), ..., vb(u_n)}$, with the new axes along these direction called the #ponder("linear-algebra.quadratic-form")[*principal axes*] of the #ponder("linear-algebra.quadratic-form")[quadratic form].
 
 Since these are related to the standard axes by #ponder("algebra.orthogonal-group")[orthogonal] $matbold(P)$, we have
 $
-  abs(bold(x))^2 = x_i x_i = x'_i x'_i.
+  abs(vb(x))^2 = x_i x_i = x'_i x'_i.
 $
 
 #example[
-  In $RR^2$, consider $cal(F)(bold(x)) = bold(x)^tp matbold(A) bold(x)$ with $matbold(A) = mat(alpha, beta; beta, alpha)$.
+  In $RR^2$, consider $cal(F)(vb(x)) = vb(x)^TT matbold(A) vb(x)$ with $matbold(A) = mat(alpha, beta; beta, alpha)$.
 
   The #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] are $lambda_1 = alpha + beta, lambda_2 =alpha - beta$
   and the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] are
-  $ bold(u_1) = (1)/(sqrt(2)) vec(1, 1), quad bold(u_2) = (1)/(sqrt(2)) vec(-1, 1). $
+  $ vb(u_1) = (1)/(sqrt(2)) vec(1, 1), quad vb(u_2) = (1)/(sqrt(2)) vec(-1, 1). $
   Then
   $
-    cal(F)(bold(x)) = alpha x_1^2 + 2 beta x_1 x_2 + alpha x_2^2 = (alpha + beta) (x'_1)^2 + (alpha - beta) (x'_2)^2
+    cal(F)(vb(x)) = alpha x_1^2 + 2 beta x_1 x_2 + alpha x_2^2 = (alpha + beta) (x'_1)^2 + (alpha - beta) (x'_2)^2
   $
   with
   $
@@ -772,13 +772,13 @@ $
 
   _e.g._ take $alpha = (3)/(2)$, $beta = -(1)/(2)$, then $lambda_1 = 1$, $lambda_2 = 2$. Then if we set $cal(F) = 1$,
   $
-    cal(F) (bold(x)) = (3)/(2) x_1^2 - x_1 x_2 + (3)/(2) x_2^2 = (x'_1)^2 + 2 (x'_2)^2 = 1.
+    cal(F) (vb(x)) = (3)/(2) x_1^2 - x_1 x_2 + (3)/(2) x_2^2 = (x'_1)^2 + 2 (x'_2)^2 = 1.
   $
   defines an ellipse.
 
   _e.g._ take $alpha = -(1)/(2)$, $beta = (3)/(2)$, then $lambda_1 = 1, lambda_2 = -2$. Then if we set $cal(F) = 1$,
   $
-    cal(F) (bold(x)) = -(1)/(2) x_1^2 + 3 x_1 x_2 - (1)/(2) x_2^2 = (x'_1)^2 - 2 (x'_2)^2 = 1.
+    cal(F) (vb(x)) = -(1)/(2) x_1^2 + 3 x_1 x_2 - (1)/(2) x_2^2 = (x'_1)^2 - 2 (x'_2)^2 = 1.
   $
   defines a hyperbola.
 ]
@@ -786,11 +786,11 @@ $
 #example[
   Consider
   $
-    cal(F)(bold(x)) = bold(x)^tp matbold(A) bold(x) = lambda_1 (x'_1)^2 + lambda_2 (x'_2)^2 + lambda_3 (x'_3)^2.
+    cal(F)(vb(x)) = vb(x)^TT matbold(A) vb(x) = lambda_1 (x'_1)^2 + lambda_2 (x'_2)^2 + lambda_3 (x'_3)^2.
   $
   1. If $lambda_1, lambda_2, lambda_3 > 0$, then
     $
-      cal(F)(bold(x)) = 1
+      cal(F)(vb(x)) = 1
     $
     defines an ellipsoid.
 
@@ -800,19 +800,19 @@ $
 
   2. If $matbold(A) = mat(0, 1, 1; 1, 0, 1; 1, 1, 0)$, then the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] are $lambda_1 = lambda_2 = -1, lambda_3 = 2$, and the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] are
     $
-      bold(u_1) = (1)/(sqrt(2)) vec(1, -1, 0), quad bold(u_2) = (1)/(sqrt(6)) vec(1, 1, -2), quad bold(u_3) = (1)/(sqrt(3)) vec(1, 1, 1).
+      vb(u_1) = (1)/(sqrt(2)) vec(1, -1, 0), quad vb(u_2) = (1)/(sqrt(6)) vec(1, 1, -2), quad vb(u_3) = (1)/(sqrt(3)) vec(1, 1, 1).
     $
     Then,
     $
-      cal(F)(bold(x)) = 2 (x'_3)^2 - (x'_1)^2 - (x'_2)^2 = 2 x_1x_2 + 2 x_2 x_3 + 2 x_3 x_1.
+      cal(F)(vb(x)) = 2 (x'_3)^2 - (x'_1)^2 - (x'_2)^2 = 2 x_1x_2 + 2 x_2 x_3 + 2 x_3 x_1.
     $
-    If we set $cal(F)(bold(x)) = 1$, it defines a two-sheeted hyperboloid.
+    If we set $cal(F)(vb(x)) = 1$, it defines a two-sheeted hyperboloid.
 
     #align(center)[
       #dynamic-svg2("/part-ia/vectors-and-matrices/media/m1e1.svg", width: 17em)
     ]
 
-    If we set $cal(F)(bold(x)) = -1$, it defines a one-sheeted hyperboloid.
+    If we set $cal(F)(vb(x)) = -1$, it defines a one-sheeted hyperboloid.
 
     #align(center)[
       #dynamic-svg2("/part-ia/vectors-and-matrices/media/m1e2.svg", width: 17em)
@@ -826,9 +826,9 @@ $
   $
     matbold(M) = matbold(S) + matbold(A)
   $
-  where $matbold(S)$ is #ponder("linear-algebra.symmetric-matrix")[symmetric] and $matbold(A)$ is #ponder("linear-algebra.symmetric-matrix")[antisymmetric]. Note that since $matbold(A)$ is #ponder("linear-algebra.symmetric-matrix")[antisymmetric], $bold(x)^tp matbold(A) bold(x) = 0$ for all $bold(x) in RR^n$. Therefore,
+  where $matbold(S)$ is #ponder("linear-algebra.symmetric-matrix")[symmetric] and $matbold(A)$ is #ponder("linear-algebra.symmetric-matrix")[antisymmetric]. Note that since $matbold(A)$ is #ponder("linear-algebra.symmetric-matrix")[antisymmetric], $vb(x)^TT matbold(A) vb(x) = 0$ for all $vb(x) in RR^n$. Therefore,
   $
-    bold(x)^tp matbold(M) bold(x) = bold(x)^tp matbold(S) bold(x).
+    vb(x)^TT matbold(M) vb(x) = vb(x)^TT matbold(S) vb(x).
   $
   This is why we only consider #ponder("linear-algebra.symmetric-matrix")[symmetric matrices] in the definition of #ponder("linear-algebra.quadratic-form")[quadratic forms].
 ]
@@ -840,14 +840,14 @@ $
 #definition[Quadric][
   A #ponder("geometry.quadric")[*quadric*] in $RR^n$ is a hypersurface defined by
   $
-    Q(bold(x)) = bold(x)^tp matbold(A) bold(x) + 2 bold(b)^tp bold(x) + c = 0
+    Q(vb(x)) = vb(x)^TT matbold(A) vb(x) + 2 vb(b)^TT vb(x) + c = 0
   $
-  for some $n times n$ real #ponder("linear-algebra.symmetric-matrix")[symmetric matrix] $matbold(A)$, $bold(b) in RR^n$ and $c in RR$.
+  for some $n times n$ real #ponder("linear-algebra.symmetric-matrix")[symmetric matrix] $matbold(A)$, $vb(b) in RR^n$ and $c in RR$.
 ] <def-quadric>
 
 Hence,
 $
-  Q(bold(x)) = A_(i j) x_i x_j + 2 b_i x_i + c = 0.
+  Q(vb(x)) = A_(i j) x_i x_j + 2 b_i x_i + c = 0.
 $
 
 The purpose of this section is to classify the solutions of this kind of equations up to geomtrical equivalence. _i.e._ there is no distinction between solutions related by #ponder("geometry.isometry")[isometries] of $RR^n$, including
@@ -858,20 +858,20 @@ The purpose of this section is to classify the solutions of this kind of equatio
 
 If $matbold(A)$ to be #ponder("algebra.matrix-invertibility")[invertible], we can complete the square by setting
 $
-  bold(y) = bold(x) + matbold(A)^(-1) bold(b),
+  vb(y) = vb(x) + matbold(A)^(-1) vb(b),
 $
 then
 $
-  cal(F)(bold(y))= bold(y)^tp matbold(A) bold(y) &= bold(x)^tp matbold(A) bold(x) + 2 bold(b)^tp bold(x) + bold(b)^tp matbold(A)^(-1) bold(b)\
-  &= (bold(x)^tp matbold(A) bold(x) + 2 bold(b)^tp bold(x) + c) + bold(b)^tp matbold(A)^(-1) bold(b) - c\
-  &= Q(bold(x)) + bold(b)^tp matbold(A)^(-1) bold(b) - c\
-  &= Q(bold(x)) + k \
+  cal(F)(vb(y))= vb(y)^TT matbold(A) vb(y) &= vb(x)^TT matbold(A) vb(x) + 2 vb(b)^TT vb(x) + vb(b)^TT matbold(A)^(-1) vb(b)\
+  &= (vb(x)^TT matbold(A) vb(x) + 2 vb(b)^TT vb(x) + c) + vb(b)^TT matbold(A)^(-1) vb(b) - c\
+  &= Q(vb(x)) + vb(b)^TT matbold(A)^(-1) vb(b) - c\
+  &= Q(vb(x)) + k \
 $
-where $k = bold(b)^tp matbold(A)^(-1) bold(b) - c$ is a constant.
+where $k = vb(b)^TT matbold(A)^(-1) vb(b) - c$ is a constant.
 
 Hence we have
 $
-  cal(F)(bold(y)) = k <=> Q(bold(x)) = 0.
+  cal(F)(vb(y)) = k <=> Q(vb(x)) = 0.
 $
 
 Now we #ponder("linear-algebra.diagonalisable-matrix")[diagonalise] $cal(F)$ as for the #ponder("linear-algebra.quadratic-form")[quadratic forms] before. The #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] of $matbold(A)$ define #ponder("linear-algebra.quadratic-form")[principal axes] (the new coordinate axes), and the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues] of $matbold(A)$ along with $k$ determine the shape of the #ponder("geometry.quadric")[quadric].
@@ -907,11 +907,11 @@ Now we #ponder("linear-algebra.diagonalisable-matrix")[diagonalise] $cal(F)$ as 
   $
     lambda_1 (x'_1)^2 + b'_1 x'_1 + b'_2 x'_2 + c & = 0. \
     lambda_1 (x'_1)^2 + b'_1 x'_1 +1/(4 lambda_1) (b'_1)^2 - 1/(4 lambda_1) (b'_1)^2 + b'_2 x'_2 + c & = 0 \
-    lambda_1 underbracket((x'_1 + (b'_1)/(2 lambda_1))^2, bold(x''_1)) + b'_2 x'_2 + underbracket((c - (b'_1)^2/(4 lambda_1)), c') & = 0 \
-    lambda_1 bold(x''_1)^2 + b'_2 x'_2 + c' & = 0. \
+    lambda_1 underbracket((x'_1 + (b'_1)/(2 lambda_1))^2, vb(x''_1)) + b'_2 x'_2 + underbracket((c - (b'_1)^2/(4 lambda_1)), c') & = 0 \
+    lambda_1 vb(x''_1)^2 + b'_2 x'_2 + c' & = 0. \
   $
 
-  1. If $b'_2 = 0$, then the equation reduces to $lambda_1 bold(x''_1)^2 + c' = 0$. This represents
+  1. If $b'_2 = 0$, then the equation reduces to $lambda_1 vb(x''_1)^2 + c' = 0$. This represents
     - if $c' < 0$, a pair of lines;
     - if $c' = 0$, a single line;
     - if $c' > 0$, no solutions.
@@ -1078,24 +1078,24 @@ Consider a matrix $matbold(A)$ of size $n times n$ corresponding to a #ponder("l
 #proof[
   $chi_matbold(A) (t)$ has 2 roots, #ponder("algebra.root-multiplicity")[counting multiplicities], in $CC$. We have the following cases.
 
-  1. For distinct roots (#ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues]) $lambda_1, lambda_2$, we have $M_(lambda_1) = m_(lambda_1) = 1 = m_(lambda_2) = M_(lambda_2)$. And thus #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $bold(v_1), bold(v_2)$ form a #ponder("linear-algebra.basis")[basis] of $matbold(B) = matbold(P)^(-1) matbold(A) matbold(P)$, #ponder("linear-algebra.diagonalisable-matrix")[diagonalised] with the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] as columns of $matbold(P)$.
+  1. For distinct roots (#ponder("linear-algebra.eigenvalue-eigenvector")[eigenvalues]) $lambda_1, lambda_2$, we have $M_(lambda_1) = m_(lambda_1) = 1 = m_(lambda_2) = M_(lambda_2)$. And thus #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] $vb(v_1), vb(v_2)$ form a #ponder("linear-algebra.basis")[basis] of $matbold(B) = matbold(P)^(-1) matbold(A) matbold(P)$, #ponder("linear-algebra.diagonalisable-matrix")[diagonalised] with the #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvectors] as columns of $matbold(P)$.
 
   2. For #ponder("algebra.root-multiplicity")[repeated root] $lambda_1 = lambda_2 = lambda$, with $M_(lambda) = m_lambda = 2$, then the same argument as above applies, and $matbold(B)$ is #ponder("linear-algebra.diagonalisable-matrix")[diagonalised].
 
-  3. For #ponder("algebra.root-multiplicity")[repeated root] $lambda_1 = lambda_2 = lambda$, with $M_(lambda) = 2$ and $m_(lambda) = 1$. Let $bold(v)$ to be an #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] for $lambda$ and extend it to a #ponder("linear-algebra.basis")[basis] ${bold(v), bold(w)}$, where $bold(w)$ is any vector #ponder("linear-algebra.linear-independence")[linearly independent] of $bold(v)$. Hence,
+  3. For #ponder("algebra.root-multiplicity")[repeated root] $lambda_1 = lambda_2 = lambda$, with $M_(lambda) = 2$ and $m_(lambda) = 1$. Let $vb(v)$ to be an #ponder("linear-algebra.eigenvalue-eigenvector")[eigenvector] for $lambda$ and extend it to a #ponder("linear-algebra.basis")[basis] ${vb(v), vb(w)}$, where $vb(w)$ is any vector #ponder("linear-algebra.linear-independence")[linearly independent] of $vb(v)$. Hence,
     $
-      matbold(A) bold(v) = lambda bold(v), quad matbold(A) bold(w) = alpha bold(v) + beta bold(w).
+      matbold(A) vb(v) = lambda vb(v), quad matbold(A) vb(w) = alpha vb(v) + beta vb(w).
     $
 
-    Then, the matrix of the #ponder("linear-algebra.linear-map")[linear map] w.r.t. the #ponder("linear-algebra.basis")[basis] ${bold(v), bold(w)}$ is
+    Then, the matrix of the #ponder("linear-algebra.linear-map")[linear map] w.r.t. the #ponder("linear-algebra.basis")[basis] ${vb(v), vb(w)}$ is
     $ matbold(B) = mat(lambda, alpha; 0, beta). $
     Note that we will only consider $beta = lambda$, otherwise we will return to case (1). Also, $alpha != 0$, otherwise we will return to case (2).
 
-    Now, defining $bold(u) = alpha bold(v)$. Then we have that, with respect to the #ponder("linear-algebra.basis")[basis] ${bold(u), bold(w)}$, the matrix of the #ponder("linear-algebra.linear-map")[linear map] is
+    Now, defining $vb(u) = alpha vb(v)$. Then we have that, with respect to the #ponder("linear-algebra.basis")[basis] ${vb(u), vb(w)}$, the matrix of the #ponder("linear-algebra.linear-map")[linear map] is
     $
       matbold(B) = mat(lambda, 1; 0, lambda),
     $
-    with $matbold(B) = matbold(P)^(-1) matbold(A) matbold(P)$, and the columns of $matbold(P)$ given by $bold(u), bold(w)$.
+    with $matbold(B) = matbold(P)^(-1) matbold(A) matbold(P)$, and the columns of $matbold(P)$ given by $vb(u), vb(w)$.
 ]
 
 #theorem[General Jordan Normal Form][
@@ -1149,9 +1149,9 @@ Consider a matrix $matbold(A)$ of size $n times n$ corresponding to a #ponder("l
 
 Recall that $matbold(R)$ is an #ponder("algebra.orthogonal-group")[orthogonal] is equivalent to
 
-- $matbold(R)^tp matbold(R) = matbold(R) matbold(R)^tp = matbold(I)$,
+- $matbold(R)^TT matbold(R) = matbold(R) matbold(R)^TT = matbold(I)$,
 
-- $(matbold(R) bold(x)) dot (matbold(R) bold(y)) = bold(x) dot bold(y)$ for all $bold(x), bold(y) in RR^n$,
+- $(matbold(R) vb(x)) dot (matbold(R) vb(y)) = vb(x) dot vb(y)$ for all $vb(x), vb(y) in RR^n$,
 
 - The columns or rows of $matbold(R)$ form an #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] of $RR^n$.
 
@@ -1191,7 +1191,7 @@ We can view this in two ways:
     #dynamic-svg("/part-ia/vectors-and-matrices/media/d8e1.svg", width: 12em)
   ]
 
-  We have $abs(bold(x')) = abs(bold(x))$ where $x'_i$ are components of the new vector $bold(x')$ after $bold(x') = matbold(R) bold(x)$ with respect to the #ponder("linear-algebra.basis")[standard basis].
+  We have $abs(vb(x')) = abs(vb(x))$ where $x'_i$ are components of the new vector $vb(x')$ after $vb(x') = matbold(R) vb(x)$ with respect to the #ponder("linear-algebra.basis")[standard basis].
 
 - #ponder("algebra.matrix-change-of-basis")[change of basis] (passive point of view)
 
@@ -1199,10 +1199,10 @@ We can view this in two ways:
     #dynamic-svg("/part-ia/vectors-and-matrices/media/d8e2.svg", width: 12em)
   ]
 
-  Now $x'_i$ are components of the same vector $bold(x)$ but with respect to a new #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] ${bold(u_1), bold(u_2)}$ where
+  Now $x'_i$ are components of the same vector $vb(x)$ but with respect to a new #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] ${vb(u_1), vb(u_2)}$ where
 
   $
-    bold(u_i) = sum_(j) R_(i j) bold(e_j) = sum_(j) e_j (bold(R)^(-1))_(j i)
+    vb(u_i) = sum_(j) R_(i j) vb(e_j) = sum_(j) e_j (vb(R)^(-1))_(j i)
   $
 
 #remark[
@@ -1211,28 +1211,28 @@ We can view this in two ways:
 
 === 2D Minkowski Space and Lorentz Transformations
 
-Consider the #ponder("relativity.minkowski-space")[_inner product_] on $RR^2$ given by $(bold(x), bold(y)) = bold(x)^tp matbold(J) bold(y)$ where $matbold(J) = mat(1, 0; 0, -1)$.
+Consider the #ponder("relativity.minkowski-space")[_inner product_] on $RR^2$ given by $iprod(vb(x), vb(y)) = vb(x)^TT matbold(J) vb(y)$ where $matbold(J) = mat(1, 0; 0, -1)$.
 
-If $bold(x) = vec(x_1, x_2)$ and $bold(y) = vec(y_1, y_2)$, then
+If $vb(x) = vec(x_1, x_2)$ and $vb(y) = vec(y_1, y_2)$, then
 $
-  (bold(x), bold(y)) = x_1 y_1 - x_2 y_2.
+  iprod(vb(x), vb(y)) = x_1 y_1 - x_2 y_2.
 $
 
 This #ponder("relativity.minkowski-space")[_inner product_] is not #ponder("linear-algebra.matrix-definiteness")[positive definite], since
 $
-  (bold(x), bold(x)) = x_1^2 - x_2^2
+  iprod(vb(x), vb(x)) = x_1^2 - x_2^2
 $
 which is not always positive. Nonetheless, it is still bilinear and symmetric.
 
-Now let us consider how the #ponder("linear-algebra.basis")[standard basis] vectors behave under this #ponder("relativity.minkowski-space")[inner product]. Consider $bold(e_0) = vec(1, 0)$ and $bold(e_1) = vec(0, 1)$. They are #ponder("linear-algebra.orthonormal")[_orthonormal_] with respect to this #ponder("relativity.minkowski-space")[inner product], in the sense that
+Now let us consider how the #ponder("linear-algebra.basis")[standard basis] vectors behave under this #ponder("relativity.minkowski-space")[inner product]. Consider $vb(e_0) = vec(1, 0)$ and $vb(e_1) = vec(0, 1)$. They are #ponder("linear-algebra.orthonormal")[_orthonormal_] with respect to this #ponder("relativity.minkowski-space")[inner product], in the sense that
 $
-  (bold(e_0), bold(e_0)) = 1, quad (bold(e_1), bold(e_1)) = -1, quad (bold(e_0), bold(e_1)) = 0.
+  iprod(vb(e_0), vb(e_0)) = 1, quad iprod(vb(e_1), vb(e_1)) = -1, quad iprod(vb(e_0), vb(e_1)) = 0.
 $
 
 #definition[Minkowski metric and Minkowski space][
-  The #ponder("linear-algebra.inner-product")[inner product] defined $forall bold(x), bold(y) in RR^2$ by
+  The #ponder("linear-algebra.inner-product")[inner product] defined $forall vb(x), vb(y) in RR^2$ by
   $
-    (bold(x), bold(y)) = bold(x)^tp matbold(J) bold(y)
+    iprod(vb(x), vb(y)) = vb(x)^TT matbold(J) vb(y)
   $
   where $matbold(J) = mat(1, 0; 0, -1)$ is called the #ponder("relativity.minkowski-space")[*Minkowski metric*].
 
@@ -1241,15 +1241,15 @@ $
 
 Consider $matbold(M) = mat(M_(00), M_(01); M_(10), M_(11))$ associated to a #ponder("linear-algebra.linear-map")[linear map] $T: RR^2 -> RR^2$. This preserves the #ponder("relativity.minkowski-space")[Minkowski metric] iff
 $
-  &(matbold(M) bold(x), matbold(M) bold(y)) &=& (bold(x), bold(y)) quad &forall bold(x), bold(y) in RR^2\
-  <=> &(matbold(M) bold(x))^tp matbold(J) (matbold(M) bold(y)) &=&bold(x)^tp matbold(J) bold(y) quad &forall bold(x), bold(y) in RR^2\
-  <=> &bold(x)^tp (matbold(M)^tp matbold(J) matbold(M)) bold(y) &=& bold(x)^tp matbold(J) bold(y) quad &forall bold(x), bold(y) in RR^2\
-  <=> &matbold(M)^tp matbold(J) matbold(M) &=& matbold(J).
+  &iprod(matbold(M) vb(x), matbold(M) vb(y)) &=& iprod(vb(x), vb(y)) quad &forall vb(x), vb(y) in RR^2\
+  <=> &(matbold(M) vb(x))^TT matbold(J) (matbold(M) vb(y)) &=&vb(x)^TT matbold(J) vb(y) quad &forall vb(x), vb(y) in RR^2\
+  <=> &vb(x)^TT (matbold(M)^TT matbold(J) matbold(M)) vb(y) &=& vb(x)^TT matbold(J) vb(y) quad &forall vb(x), vb(y) in RR^2\
+  <=> &matbold(M)^TT matbold(J) matbold(M) &=& matbold(J).
 $
 
 The matrices $matbold(M)$ satisfying this condition form a #ponder("algebra.group")[group], with
 $
-  (det matbold(M)^tp) (det matbold(J)) (det matbold(M)) = det matbold(J) => (det matbold(M))^2 = 1 => det matbold(M) = plus.minus 1.
+  (det matbold(M)^TT) (det matbold(J)) (det matbold(M)) = det matbold(J) => (det matbold(M))^2 = 1 => det matbold(M) = plus.minus 1.
 $
 #definition[Lorentz group][
   The #ponder("relativity.lorentz-group")[Lorentz group] is the #ponder("algebra.subgroup")[subgroup]  of the group above that satisfies $det matbold(M) = 1$ and $M_(00) > 0$.
@@ -1263,21 +1263,21 @@ A similar argument as for #ponder("algebra.orthogonal-group")[orthogonal matrice
 
 Using
 
-- $(bold(e_0), bold(e_0)) = 1$, which gives $(matbold(M) bold(e_0), matbold(M) bold(e_0)) = 1$.
+- $iprod(vb(e_0), vb(e_0)) = 1$, which gives $iprod(matbold(M) vb(e_0), matbold(M) vb(e_0)) = 1$.
 
   We have
   $
     mat(1, 0) mat(M_(00), M_(10); M_(01), M_(11)) mat(1, 0; 0, -1) mat(M_(00), M_(01); M_(10), M_(11)) vec(1, 0) = M_(00)^2 - M_(10)^2 = 1.
   $
 
-- $(bold(e_1), bold(e_1)) = -1$, which gives $(matbold(M) bold(e_1), matbold(M) bold(e_1)) = -1$.
+- $iprod(vb(e_1), vb(e_1)) = -1$, which gives $iprod(matbold(M) vb(e_1), matbold(M) vb(e_1)) = -1$.
 
   We have
   $
     mat(0, 1) mat(M_(00), M_(10); M_(01), M_(11)) mat(1, 0; 0, -1) mat(M_(00), M_(01); M_(10), M_(11)) vec(0, 1) = M_(01)^2 - M_(11)^2 = -1.
   $
 
-- $(bold(e_0), bold(e_1)) = 0$, which gives $(matbold(M) bold(e_0), matbold(M) bold(e_1)) = 0$.
+- $iprod(vb(e_0), vb(e_1)) = 0$, which gives $iprod(matbold(M) vb(e_0), matbold(M) vb(e_1)) = 0$.
 
   This similarly gives $M_(00) M_(01) - M_(10) M_(11) = 0$.
 
@@ -1300,9 +1300,9 @@ using hyperbolic trigonometric identities.
     #dynamic-svg("/part-ia/vectors-and-matrices/media/d8e3.svg", width: 22em)
   ]
 
-Fix $(bold(x), bold(x)) = k$ to be constant. Any #ponder("relativity.lorentz-group")[Lorentz transformation] over $bold(x)$ maps it to other vector $bold(x')$ on a same curve.
+Fix $iprod(vb(x), vb(x)) = k$ to be constant. Any #ponder("relativity.lorentz-group")[Lorentz transformation] over $vb(x)$ maps it to other vector $vb(x')$ on a same curve.
 
-Note that $bold(x)$ and $bold(x')$ must lie on the same branch of the curve, since $M_(00) > 0$.
+Note that $vb(x)$ and $vb(x')$ must lie on the same branch of the curve, since $M_(00) > 0$.
 
 We have
 $
@@ -1314,7 +1314,7 @@ Now, for a physical interpretation, define $v := tanh theta$ with $-1 < v < 1$. 
 
 Rename $x_0 -> t$ #fade[[time coordinate]] and $x_1 -> x$ #fade[[space coordinate]]. Then, we can interpret
 $
-  bold(x') = matbold(M) bold(x) "with" cases(
+  vb(x') = matbold(M) vb(x) "with" cases(
     t' = (1)/(sqrt(1-v^2) ) (t + v x),
     x' = (1)/(sqrt(1-v^2) ) (x + v t)
   )

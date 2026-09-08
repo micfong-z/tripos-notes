@@ -1,1 +1,1 @@
-Points of the plane through $bold(a)$ with directions $bold(u) parallel.not bold(v)$ have position vectors $bold(r) = bold(a) + lambda bold(u) + mu bold(v)$.
+Points of the plane through $vb(a)$ with directions $vb(u) parallel.not vb(v)$ have position vectors $vb(r) = vb(a) + lambda vb(u) + mu vb(v)$.

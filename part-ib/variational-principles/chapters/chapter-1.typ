@@ -1,59 +1,57 @@
 #import "../prelude.typ": *
 #import "@preview/physica:0.9.8": *
 
-// Hiloledsosalt & Tromba notes
-
 #lecture-separator(lecture: 1, date: "2026-05-01")
 
-The motivational problem is: how do we find the shortest point between two points,
+A motivational problem for this course is: how do we find the shortest point between two points,
 
 1. in Euclidean space?
-2. on surface of sphere?
-3. on a general curved surface?
+2. on the surface of a sphere?
+3. on a general curved surface? #fade[[_e.g._ the surface of a potato]]
 
 For (1), assuming $RR^2$, we can write path as $y = y(x)$ where $a <= x <= b$. Then the length is
 $
-  L[y] = integral_a^b sqrt(1+(y'(x))^2) dif x.
+  L[y] = integral_a^b sqrt(1+(y')^2) dif x.
 $
-We can carry out similar calculations for (2) and (3). Note that $L$ is a *functional*, which is a map from a function $y$ to $RR$.
+We can carry out similar calculations for (2) and (3). $L$ is called a *functional*, which is a map from a function $y$ to $RR$. The shortest path problem is now the problem of finding the function $y$ that minimises the functional $L[y]$.
 
-We will develop the tools to determine minima and maxima of functionals.
+We will develop the tools to determine minima and maxima of functionals in this course.
 
 = Calculus on $RR^n$
 
-Consider $f: RR^n -> RR$, we write $(x_1, ..., x_n) in RR^n$ as $vb(x)$. Assuming that $f$ is sufficiently differentiable (at least $C^2$: twice continuously differentiable), then a point $vb(a) in RR^n$ is a *stationary point* of $f$ iff $(grad f) (vb(a)) = vb(0)$.
+Consider $f: RR^n -> RR$. Write $(x_1, ..., x_n) in RR^n$ as $vb(x)$. Assuming that $f$ is sufficiently differentiable (at least $C^2$, #fade[_i.e._ twice continuously differentiable]), then a point $vb(a) in RR^n$ is a *stationary point* of $f$ iff $(grad f) (vb(a)) = vb(0)$.
 
 The Taylor expansion of $f$ around such $vb(a)$ is
 $
-  f(vb(x)) = f(vb(a)) + 1/2 (vb(x) - vb(a))^T hess f(vb(a)) (vb(x) - vb(a)) + ...
+  f(vb(x)) = f(vb(a)) + 1/2 (vb(x) - vb(a))^T hess f(vb(a)) (vb(x) - vb(a)) + Order(abs(vb(x) - vb(a))^3),
 $
 where the Hessian matrix $hess f$ is the matrix of second derivatives of $f$:
 $
-  H_(i j) = (hess f)_(i j) = (∂^2 f) / (∂ x_i ∂ x_j).
+  H_(i j) = (hess f)_(i j) = pdv(f, x_i, x_j).
 $
 WLOG assume that $vb(a) = vb(0)$. Then
 $
-  f(vb(x)) - f(vb(0)) = (1)/(2) x_i H_(i j) x_j + O(|vb(x)|^3).
+  f(vb(x)) - f(vb(0)) = (1)/(2) x_i H_(i j) x_j + Order(|vb(x)|^3).
 $
 
-Since $H$ is symmetric, we can diagonalise it by an orthogonal transformation.
+Since $matbold(H)$ is symmetric, we can diagonalise it by an orthogonal transformation.
 
-Let $x_i = R_(i j) x'_j$, where $matbold(R)$ is a rotation matrix. Then $matbold(H)' = matbold(R)^tp matbold(H) matbold(R)$. Choosing $matbold(R)$ such that $matbold(H)'$ is diagonal,
+Let $x_i = R_(i j) x'_j$, where $matbold(R)$ is a rotation matrix. Then $matbold(H)' = matbold(R)^TT matbold(H) matbold(R)$. Choosing $matbold(R)$ such that $matbold(H)'$ is diagonal,
 $
-  matbold(H)'_(i j) =dmat(lambda_1, lambda_2, dots.down, lambda_n) quad "where" lambda_i "are eigenvalues of" matbold(H).
+  matbold(H)' = dmat(lambda_1, lambda_2, dots.down, lambda_n) quad "where" lambda_i "are eigenvalues of" matbold(H).
 $
 By IA Vectors and Matrices, since $matbold(H)$ is symmetric, $lambda_i in RR$. Then
 $
-  f(vb(x)) - f(vb(0)) = (1)/(2) lambda_i x'^2_i + O(|vb(x)|^3).
+  f(vb(x)) - f(vb(0)) = (1)/(2) lambda_i x'^2_i + Order(|vb(x)|^3).
 $
 
-- If $lambda_i > 0$ for all $i$, then $f(bold(x)) > f(bold(0))$ for small enough $vb(x)$, so $vb(0)$ is a *local minimum*.
+- If $lambda_i > 0$ for all $i$, then $f(vb(x)) > f(vb(0))$ for small enough $vb(x)$, so $vb(x) = vb(0)$ is a *local minimum*.
 
-- If $lambda_i < 0$ for all $i$, then $vb(0)$ is a *local maximum*.
+- If $lambda_i < 0$ for all $i$, then $vb(x) = vb(0)$ is a *local maximum*.
 
-- If $lambda_i$ have different signs, then $vb(0)$ is a *saddle point*.
+- If $lambda_i$ have different signs, then $vb(x) = vb(0)$ is a *saddle point*.
 
-The remaining case (*degenerate case*) is when some $lambda_i$ are zero. In this case, the second order term in the expansion does not give us any information, so the nature depends on $O(|vb(x)|^3)$ terms.
+The remaining case (*degenerate* stationary point) is when some $lambda_i$ are zero. In this case, the second order term in the expansion does not give us any information, so the nature depends on $Order(|vb(x)|^3)$ terms.
 
 In the $n=2$ case, we have $det matbold(H) = lambda_1 lambda_2$ and $tr matbold(H) = lambda_1 + lambda_2$. So
 
@@ -76,7 +74,7 @@ In the $n=2$ case, we have $det matbold(H) = lambda_1 lambda_2$ and $tr matbold(
 ]
 
 #example[
-  Consider $f: RR^2 -> RR$ where $f(x, y) = x^3 + y^3 - 3 x y$. Then $grad f = (3 x^2 - 3 y, 3 y^2 - 3 x)$.
+  Consider $f: RR^2 -> RR$ where $f(x, y) = x^3 + y^3 - 3 x y$. Then $grad f = vec(3 x^2 - 3 y, 3 y^2 - 3 x)$.
 
   So the stationary points are $(0, 0), (1, 1)$. The Hessian matrix is
   $
@@ -87,10 +85,10 @@ In the $n=2$ case, we have $det matbold(H) = lambda_1 lambda_2$ and $tr matbold(
 
   At $(0, 0)$, $det matbold(H) < 0$, so it is a saddle point. The eigenvalues and eigenvectors are
 
-  - $lambda_1 = -3, vb(e_1) = (1, 1)$
-  - $lambda_2 = 3, vb(e_2) = (1, -1)$
+  - $lambda_1 = -3, vb(e_1) = vecrow(1, 1)$
+  - $lambda_2 = 3, vb(e_2) = vecrow(1, -1)$
 
   Therefore $(0, 0)$ is a local maximum along $y=x$ and a local minimum along $y=-x$.
 
-  Note that for $f$, $exists.not$ global minimum or maximum, since it is not bounded as $x^2 + y^2 -> oo$.
+  Note that for $f$, there is no global minimum or maximum, since $f$ is unbounded as $x^2 + y^2 -> oo$.
 ]

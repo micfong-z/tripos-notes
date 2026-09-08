@@ -1,6 +1,6 @@
 If $X_1, ..., X_n$ are independent then $"Cov"(X_i, X_j) = 0$ for $i != j$, so the covariance matrix of a Gaussian vector is diagonal in that case. For Gaussian vectors the converse holds: if $matbold(V)$ is diagonal and strictly positive definite with diagonal $lambda_1, ..., lambda_n > 0$, the joint density factorises as
 $
-  f_bold(X) (bold(x)) = product_(i=1)^n 1/sqrt(2 ppi lambda_i) exp(- ((x_i - mu_i)^2)/(2 lambda_i)),
+  f_vb(X) (vb(x)) = product_(i=1)^n 1/sqrt(2 ppi lambda_i) exp(- ((x_i - mu_i)^2)/(2 lambda_i)),
 $
 so by the factorisation criterion the coordinates are independent with $X_i ~ N(mu_i, lambda_i)$; alternatively the MGF
 $

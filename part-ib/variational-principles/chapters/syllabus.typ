@@ -4,26 +4,20 @@
 
 = Syllabus and Overview
 
-#fade[Easter Term, 2026] #h(1fr) #fade[[24 Lectures]]
+#fade[Easter Term, 2026] #h(1fr) #fade[[12 Lectures]]
 
-#fade[Faded topics are not examinable.]
+#h(1fr) #fade[[4 Lectures]]
 
-*Limits and Convergence* #h(1fr) #fade[[6 Lectures]]
+Stationary points for functions on $RR^n$. Necessary and sufficient conditions for minima and maxima. Importance of convexity. Variational problems with constraints; method of Lagrange multipliers. The Legendre Transform; need for convexity to ensure invertibility; illustrations from thermodynamics.
 
-Sequences and series in $RR$ and $CC$. Sums, products and quotients. Absolute convergence; absolute convergence implies convergence. The Bolzano-Weierstrass theorem and applications (the General Principle of Convergence). Comparison and ratio tests, alternating series test.
+#h(1fr) #fade[[3 Lectures]]
 
-*Continuity* #h(1fr) #fade[[3 Lectures]]
+The idea of a functional and a functional derivative. First variation for functionals, Euler-Lagrange equations, for both ordinary and partial differential equations. Use of Lagrange multipliers and multiplier functions.
 
-Continuity of real- and complex-valued functions defined on subsets of $RR$ and $CC$. The intermediate value theorem. A continuous function on a closed bounded interval is bounded and attains its bounds.
+#h(1fr) #fade[[3 Lectures]]
 
-*Differentiability* #h(1fr) #fade[[5 Lectures]]
+Fermat's principle; geodesics; least action principles, Lagrange's and Hamilton’s equations for particles and fields. Noether theorems and first integrals, including two forms of Noether's theorem for ordinary differential equations (energy and momentum, for example). Interpretation in terms of conservation laws.
 
-Differentiability of functions from $RR$ to $RR$. Derivative of sums and products. The chain rule. Derivative of the inverse function. Rolle’s theorem; the mean value theorem. One-dimensional version of the inverse function theorem. Taylor’s theorem from $RR$ to $RR$; Lagrange’s form of the remainder. Complex differentiation.
+#h(1fr) #fade[[2 Lectures]]
 
-*Power Series* #h(1fr) #fade[[4 Lectures]]
-
-Complex power series and radius of convergence. Exponential, trigonometric and hyperbolic functions, and relations between them. #fade[Direct proof of the differentiability of a power series within its circle of convergence.]
-
-*Integration* #h(1fr) #fade[[6 Lectures]]
-
-Definition and basic properties of the Riemann integral. A non-integrable function. Integrability of monotonic functions. Integrability of piecewise-continuous functions. The fundamental theorem of calculus. Differentiation of indefinite integrals. Integration by parts. The integral form of the remainder in Taylor’s theorem. Improper integrals.
+Second variation for functionals; associated eigenvalue problem.

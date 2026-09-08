@@ -10,10 +10,10 @@ Recall that a non-linear #ponder("ode.ordinary-differential-equation")[ODE] is o
 
 The general form of a #ponder("ode.order")[first-order] nonlinear #ponder("ode.ordinary-differential-equation")[ODE] is
 $
-  Q(x, y) (dif y)/(dif x) +P(x, y)=0.
+  Q(x, y) dv(y, x) +P(x, y)=0.
 $ <general-nonlinear-ode>
 
-#fade[[The term in $(dif y)/(dif x)$ could be nonlinear, but it is not considered here.]]
+#fade[[The term in $dv(y, x)$ could be nonlinear, but it is not considered here.]]
 
 #set math.equation(numbering: none)
 
@@ -32,11 +32,11 @@ $ integral q(y) dif y = integral p(x) dif x. $
 
 #example[
   Consider the equation
-  $ (x^2y-3y) (dif y)/(dif x) -2 x y^2 = 4 x. $
+  $ (x^2y-3y) dv(y, x) -2 x y^2 = 4 x. $
 
   Rearranging the equation gives
   $
-    y(x^2-3) (dif y)/(dif x) & = 2x(2+y^2) \
+    y(x^2-3) dv(y, x) & = 2x(2+y^2) \
            (y)/(2+y^2) dif y & = (2x)/(x^2-3) dif x. \
        (1)/(2) ln abs(2+y^2) & = ln abs(x^2-3) + C \
         abs(2+y^2)^((1)/(2)) & = A abs(x^2-3). \
@@ -55,21 +55,21 @@ $ integral q(y) dif y = integral p(x) dif x. $
 If an #ponder("ode.ordinary-differential-equation")[ODE] is #ponder("ode.exact-equation")[exact], then using the #ponder("calculus.multivariate-chain-rule")[multivariate chain rule], we have
 
 $
-  dif f = underbracket((∂f)/(∂x), P) dif x + underbracket((∂f)/(∂y), Q) dif y.
+  dif f = underbracket(pdv(f, x), P) dif x + underbracket(pdv(f, y), Q) dif y.
 $
 
-So, we can solve #ponder("ode.exact-equation")[exact equations] by finding a function $f(x, y)$ such that $(∂f)/(∂x) = P(x, y)$ and $(∂f)/(∂y) = Q(x, y)$.
+So, we can solve #ponder("ode.exact-equation")[exact equations] by finding a function $f(x, y)$ such that $pdv(f, x) = P(x, y)$ and $pdv(f, y) = Q(x, y)$.
 
 Since #ponder("calculus.partial-derivative")[partial derivatives] commute, we have
 
-$ (∂P)/(∂y) = (∂^2f)/(∂y∂x) = (∂^2f)/(∂x∂y) = (∂Q)/(∂x). $
+$ pdv(P, y) = pdv(f, y, x) = pdv(f, x, y) = pdv(Q, x). $
 
 This is a necessary condition but not sufficient for #ponder("ode.exact-equation")[exactness]:
 
-$ (∂P)/(∂y) = (∂Q)/(∂x). $
+$ pdv(P, y) = pdv(Q, x). $
 
 #theorem[
-  If $(∂P)/(∂y) = (∂Q)/(∂x)$ throughout a #ponder("analysis.simply-connected-domain")[simply connected domain] $cal(D)$, then $P dif x + Q dif y$ is an exact differential of a single-valued function $f(x, y)$ on $cal(D)$.
+  If $pdv(P, y) = pdv(Q, x)$ throughout a #ponder("analysis.simply-connected-domain")[simply connected domain] $cal(D)$, then $P dif x + Q dif y$ is an exact differential of a single-valued function $f(x, y)$ on $cal(D)$.
 ] <exactness-criterion>
 
 #definition[Simply Connected Domain][
@@ -86,22 +86,22 @@ $ (∂P)/(∂y) = (∂Q)/(∂x). $
 
 #example[
   Consider the equation
-  $ 6y(y-x) (dif y)/(dif x) + 2x - 3 y^2 = 0. $
+  $ 6y(y-x) dv(y, x) + 2x - 3 y^2 = 0. $
   Rewriting gives
   $ underbracket((2x-3y^2), P)dif x + underbracket(6y(y-x), Q) dif y & = 0 \ $
 
   Hence we have
-  $ (∂P)/(∂y) = -6y = (∂Q)/(∂x) = -6y. $
+  $ pdv(P, y) = -6y = pdv(Q, x) = -6y. $
 
   Hence, the equation is #ponder("ode.exact-equation")[exact] in any #ponder("analysis.simply-connected-domain")[simply connected domain].
 
-  Thus $ P=eval((∂f)/(∂x))_y & = 2x - 3y^2 \
+  Thus $ P=eval(pdv(f, x))_y & = 2x - 3y^2 \
               f(x, y) & = x^2-3 x y^2 + h(y) \ $
 
   and similarly,
   $
-        Q=6y^2-6x y & = eval((∂f)/(∂y))_x = -6x y + (dif h)/(dif y) \
-    (dif h)/(dif y) & = 6y^2 \
+        Q=6y^2-6x y & = eval(pdv(f, y))_x = -6x y + dv(h, y) \
+    dv(h, y) & = 6y^2 \
                h(y) & = 2 y^3 + C. \
   $
   Hence $f(x, y) = x^2 - 3 x y^2 + 2 y^3 + C = "constant"$, and we have the implicit solution
@@ -114,7 +114,7 @@ The general idea is that nonlinear #ponder("ode.ordinary-differential-equation")
 
 === Solution Curves
 
-Consider $ (dif y) / (dif t) = f(t, y). quad (y=y(t)) $
+Consider $ dv(y, t) = f(t, y). quad (y=y(t)) $
 
 Then, each initial condition (_e.g._ $y(0)=y_0$) generates a distinct solution curve (trajectory).
 
@@ -127,7 +127,7 @@ We can still sketch these solution curves without actually solving the #ponder("
 #example[
   We can solve the following equation to illustrate the ideas:
 
-  $ (dif y)/(dif t) = t(1-y^2). $
+  $ dv(y, t) = t(1-y^2). $
   This is a #ponder("ode.separable-equation")[separable equation]:
   $
                         (1)/(1-y^2) dif y & = t dif t \
@@ -157,7 +157,7 @@ We can still sketch these solution curves without actually solving the #ponder("
 #lecture-separator(lecture: 9, date: "2025-10-29")
 
 
-The equation $(dif y)/(dif t) = f(t, y)$ gives us the gradient of the solution through $(t, y)$.
+The equation $dv(y, t) = f(t, y)$ gives us the gradient of the solution through $(t, y)$.
 
 Note that the solution curves can't cross if $f(t, y)$ is single valued.
 
@@ -167,7 +167,7 @@ Note that the solution curves can't cross if $f(t, y)$ is single valued.
 
 #example[
   Consider
-  $ (dif y)/(dif t) = t(1-y^2). $
+  $ dv(y, t) = t(1-y^2). $
   Then, for $t > 0$,
   - $dot(y) > 0$ for $abs(y) < 1$ and
   - $dot(y) < 0$ for $abs(y) > 1$.
@@ -179,7 +179,7 @@ Note that the solution curves can't cross if $f(t, y)$ is single valued.
 
 
 #example[
-  For $ (dif y)/(dif t) = t(1-y^2), $
+  For $ dv(y, t) = t(1-y^2), $
   we have
   $
     t(1-y^2) & = D \
@@ -197,11 +197,11 @@ Note that the solution curves can't cross if $f(t, y)$ is single valued.
 These points often reveal important features of #ponder("ode.ordinary-differential-equation")[ODEs].
 
 #definition("Fixed Point")[
-  A *#ponder("ode.equilibrium-point")[fixed point]* (or *#ponder("ode.equilibrium-point")[equilibrium point]*) of an #ponder("ode.ordinary-differential-equation")[ODE] $(dif y)/(dif t) = f(t, y)$ is a constant solution $y = c$, such that $(dif y)/(dif t) = 0 space forall t$.
+  A *#ponder("ode.equilibrium-point")[fixed point]* (or *#ponder("ode.equilibrium-point")[equilibrium point]*) of an #ponder("ode.ordinary-differential-equation")[ODE] $dv(y, t) = f(t, y)$ is a constant solution $y = c$, such that $dv(y, t) = 0 space forall t$.
 ] <equilibrium-point>
 
 #example[
-  Consider $ (dif y)/(dif t) = t(1-y^2). $
+  Consider $ dv(y, t) = t(1-y^2). $
   The #ponder("ode.equilibrium-point")[fixed points] are $y = plus.minus 1$. They have very different character as seen from the sketchs above. The solution curves near $y = +1$ converge to it as $t->oo$, while those near $y = -1$ diverge away from it.
 ]
 
@@ -213,7 +213,7 @@ These points often reveal important features of #ponder("ode.ordinary-differenti
 
 === Perturbation Analysis and #ponder("ode.equilibrium-stability")[Stability]
 
-Let $y = c$ be a #ponder("ode.equilibrium-point")[fixed point] of $(dif y)/(dif t) = f(t, y)$ #fade[[_i.e._ $f(t, c) = 0$ for all $t$]]. Consider a small perturbation about the #ponder("ode.equilibrium-point")[fixed point]:
+Let $y = c$ be a #ponder("ode.equilibrium-point")[fixed point] of $dv(y, t) = f(t, y)$ #fade[[_i.e._ $f(t, c) = 0$ for all $t$]]. Consider a small perturbation about the #ponder("ode.equilibrium-point")[fixed point]:
 $ y(t) = c + epsilon(t), quad abs(epsilon) << 1. $
 
 We want to analyze how $epsilon(t)$ behaves as $t->oo$.
@@ -221,35 +221,35 @@ We want to analyze how $epsilon(t)$ behaves as $t->oo$.
 Then
 
 $
-  (dif y)/(dif t) = (dif epsilon)/(dif t) & = f(t, c + epsilon) \
-  & = underbracket(f(t, c), =0 "at F.P.") + epsilon (∂f)/(∂y)(t, c) + O(epsilon^2)
+  dv(y, t) = dv(epsilon, t) & = f(t, c + epsilon) \
+  & = underbracket(f(t, c), =0 "at F.P.") + epsilon pdv(f, y)(t, c) + Order(epsilon^2)
 $
 
 Linearize for small epsilon:
 $
-  (dif epsilon)/(dif t) & approx epsilon (∂f)/(∂y)(t, c). \
+  dv(epsilon, t) & approx epsilon pdv(f, y)(t, c). \
 $
 Not that this is a #ponder("ode.linear-differential-equation")[linear] #ponder("ode.ordinary-differential-equation")[ODE] in $epsilon$.
 
-Note that if $(∂f)/(∂y)(t, c) = 0$, then we need higher order terms to determine #ponder("ode.equilibrium-stability")[stability].
+Note that if $pdv(f, y)(t, c) = 0$, then we need higher order terms to determine #ponder("ode.equilibrium-stability")[stability].
 
 #example[
   Consider the equation
-  $ (dif y)/(dif t) = t(1-y^2). $
+  $ dv(y, t) = t(1-y^2). $
 
   We are aware that the #ponder("ode.equilibrium-point")[fixed points] are $y = plus.minus 1$. We have
 
   $
-    (∂f)/(∂y) = -2t y = cases(
+    pdv(f, y) = -2t y = cases(
       -2t quad y = +1,
       +2t quad y = -1
     )
   $
 
-  Near $y = 1$: $ (dif epsilon)/(dif t) approx -2 t epsilon => epsilon(t) = epsilon_0 ee^(-t^2). $
+  Near $y = 1$: $ dv(epsilon, t) approx -2 t epsilon => epsilon(t) = epsilon_0 ee^(-t^2). $
   Hence, as $t->oo$, $epsilon(t)->0$ and the #ponder("ode.equilibrium-point")[fixed point] at $y=1$ is #ponder("ode.equilibrium-stability")[stable].
 
-  Near $y = -1$: $ (dif epsilon)/(dif t) approx 2 t epsilon => epsilon(t) = epsilon_0 ee^(t^2). $
+  Near $y = -1$: $ dv(epsilon, t) approx 2 t epsilon => epsilon(t) = epsilon_0 ee^(t^2). $
   Hence, as $t->oo$, $epsilon(t)->oo$ and the #ponder("ode.equilibrium-point")[fixed point] at $y=-1$ is #ponder("ode.equilibrium-stability")[unstable].
 ]
 
@@ -261,7 +261,7 @@ Note that if $(∂f)/(∂y)(t, c) = 0$, then we need higher order terms to deter
 
 #definition("Autonomous system")[
   #ponder("ode.autonomous-system")[Autonomous systems] are #ponder("ode.ordinary-differential-equation")[ODEs] in which the independent variable (_e.g._ $t$) does not appear explicitly in the equation. _e.g._
-  $ (dif y)/(dif t) = f(y). $
+  $ dv(y, t) = f(y). $
 ] <autonomous-system>
 
 First of all, these #ponder("ode.autonomous-system")[autonomous systems] are #ponder("ode.separable-equation")[separable]. We can write
@@ -273,12 +273,12 @@ Hence, if $y(t)$ is a solution, then so is $y(t - t_0)$ for any constant $t_0$.
 Although this equation is #ponder("ode.separable-equation")[separable], we may not be able to solve it in closed form. Consider, near a #ponder("ode.equilibrium-point")[fixed point] $y= c$, we have
 
 $
-  (dif y)/(dif t) = (dif epsilon)/(dif t) = epsilon underbracket((dif f)/(dif y)(c), "constant" k) & = k epsilon \
+  dv(y, t) = dv(epsilon, t) = epsilon underbracket(dv(f, y)(c), "constant" k) & = k epsilon \
   epsilon(t) & = epsilon_0 ee^(k t). \
 $
 
 #remark[
-  $(dif f)/(dif y)(c)$ is a constant since we are evaluating at some #ponder("ode.equilibrium-point")[fixed point].
+  $dv(f, y)(c)$ is a constant since we are evaluating at some #ponder("ode.equilibrium-point")[fixed point].
 ]
 
 Hence, if
@@ -299,7 +299,7 @@ Hence, if
   $
   since one of $A$ and $B$ is consumed to produce one of $C$ and $D$. Assume that the rate of reaction is proportional to the product of the numbers of $A$ and $B$ molecules (_e.g._ we considering dilute gases):
   $
-    (dif c)/(dif t) = lambda a(t) b(t) = underbracket(lambda (a_0 - c)(b_0 - c), f(c)). \
+    dv(c, t) = lambda a(t) b(t) = underbracket(lambda (a_0 - c)(b_0 - c), f(c)). \
   $
   Therefore, we have an example of an #ponder("ode.autonomous-system")[autonomous] non-linear #ponder("ode.order")[first-order] #ponder("ode.ordinary-differential-equation")[ODE].
 
@@ -310,7 +310,7 @@ Hence, if
   Now assume $a_0 < b_0$. Then, $c = b_0$ is unphysical. We shall now carry out perturbation analysis to determine the #ponder("ode.equilibrium-stability")[stability] of the #ponder("ode.equilibrium-point")[fixed points].
 
   $
-    (dif f)/(dif c) = lambda(2 c - a_0 - b_0) = cases(
+    dv(f, c) = lambda(2 c - a_0 - b_0) = cases(
       lambda (a_0 - b_0) & "at" c = a_0,
       lambda (b_0 - a_0) & "at" c = b_0
     )
@@ -335,14 +335,14 @@ Hence, if
     - $gamma y^2$ models deaths due to overcrowding.
 
   Thus we have the #ponder("ode.ordinary-differential-equation")[ODE]
-  $ (dif y)/(dif t) = alpha y - beta y - gamma y^2 = underbracket((alpha - beta) y - gamma y^2, f(y)). $
+  $ dv(y, t) = alpha y - beta y - gamma y^2 = underbracket((alpha - beta) y - gamma y^2, f(y)). $
   To make things simpler, let $lambda = alpha - beta$ and $gamma = (lambda)/(Y)$. Then,
-  $ (dif y)/(dif t) = lambda y (1 - (y)/(Y)) = f(y). $
+  $ dv(y, t) = lambda y (1 - (y)/(Y)) = f(y). $
 
   This is called a #ponder("ode.logistic-equation")[differential logistic equation]. It is an example of an #ponder("ode.autonomous-system")[autonomous system]. The #ponder("ode.equilibrium-point")[fixed points] are $y = 0$ and $y = Y$. We can carry out perturbation analysis to determine their #ponder("ode.equilibrium-stability")[stability].
 
   $
-    (dif f)/(dif y) = lambda (1 - (2 y)/(Y)) = cases(
+    dv(f, y) = lambda (1 - (2 y)/(Y)) = cases(
       lambda & "at" y = 0,
       -lambda & "at" y = Y
     )
@@ -383,7 +383,7 @@ Then,
 $
         x_(n+1) & = x_f + epsilon_(n+1) \
          f(x_n) & = f(x_f + epsilon_n) \
-                & = underbracket(f(x_f), = x_f "at F.P.") + epsilon_n f'(x_f) + O(epsilon_n^2) \
+                & = underbracket(f(x_f), = x_f "at F.P.") + epsilon_n f'(x_f) + Order(epsilon_n^2) \
   epsilon_(n+1) & approx epsilon_n f'(x_f). \
 $
 

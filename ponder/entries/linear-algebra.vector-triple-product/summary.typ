@@ -1,1 +1,1 @@
-$bold(a) times (bold(b) times bold(c)) = (bold(a) dot bold(c)) bold(b) - (bold(a) dot bold(b)) bold(c)$; the operation is not associative.
+$vb(a) times (vb(b) times vb(c)) = (vb(a) dot vb(c)) vb(b) - (vb(a) dot vb(b)) vb(c)$; the operation is not associative.

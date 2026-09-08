@@ -78,7 +78,7 @@ $
 $
 and so $gamma_v = gamma_(-v)$.
 
-Another argument for $gamma_v = gamma_(-v)$ is that in 3D there is no preferred direction, so $gamma_v$ can only depend on $abs(bold(v))$.
+Another argument for $gamma_v = gamma_(-v)$ is that in 3D there is no preferred direction, so $gamma_v$ can only depend on $abs(vb(v))$.
 
 #remarklike[Step 2][
   We can assume that if we boost by $v$ and then by $-v$, we should get back to the original frame, _i.e._
@@ -352,7 +352,7 @@ $
 _i.e._ #ponder("relativity.lorentz-group")[Lorentz transformations] preserve the #ponder("relativity.minkowski-space")[Minkowski metric].
 
 #remark[
-  Compare this to how #ponder("geometry.rotation")[rotations] preserve the Euclidean metric, $bold(R)^tp mat(1, 0; 0, 1) bold(R) = mat(1, 0; 0, 1)$.
+  Compare this to how #ponder("geometry.rotation")[rotations] preserve the Euclidean metric, $vb(R)^TT imat(2, fill: 0) vb(R) = imat(2, fill: 0)$.
 ]
 
 The #ponder("relativity.minkowski-space")[Minkowski metric] is not #ponder("linear-algebra.matrix-definiteness")[positive definite]. So, we have points with
@@ -402,7 +402,7 @@ $
 
 An event in spacetime is given by a *4-vector*
 $
-  bold(X) = (c t, x, y, z)
+  vb(X) = vecrow(c t, x, y, z)
 $
 we write this with indices as
 $
@@ -412,29 +412,29 @@ $
   It will be important to distinguish between lower and upper indices in Part IB.
 ]
 
-The invariant distance between $bold(0)$ and an event $bold(X)$ is given by the #ponder("linear-algebra.inner-product")[inner product]
+The invariant distance between $vb(0)$ and an event $vb(X)$ is given by the #ponder("linear-algebra.inner-product")[inner product]
 $
-  bold(X) dot bold(X) equiv bold(X)^tp matbold(eta) bold(X) = X^mu eta_(mu nu) X^nu
+  vb(X) dot vb(X) equiv vb(X)^TT matbold(eta) vb(X) = X^mu eta_(mu nu) X^nu
   = c^2 t^2 - x^2 - y^2 - z^2. #<eq-431>
 $
 
 #lecture-separator(lecture: 19, date: "2026-03-07")
 
-The #ponder("linear-algebra.inner-product")[inner product] of $bold(X)$  is not #ponder("linear-algebra.matrix-definiteness")[positive definite]. We call each of the cases
+The #ponder("linear-algebra.inner-product")[inner product] of $vb(X)$  is not #ponder("linear-algebra.matrix-definiteness")[positive definite]. We call each of the cases
 $
-  bold(X) dot bold(X) & > 0 quad "timelike" \
-  bold(X) dot bold(X) & < 0 quad "spacelike" \
-  bold(X) dot bold(X) & = 0 quad "lightlike or null"
+  vb(X) dot vb(X) & > 0 quad "timelike" \
+  vb(X) dot vb(X) & < 0 quad "spacelike" \
+  vb(X) dot vb(X) & = 0 quad "lightlike or null"
 $
 The 4D #ponder("relativity.lorentz-group")[Lorentz transformations] are $4times 4$ matrices $matbold(Lambda)$ such that
 $
-  bold(X') = matbold(Lambda) bold(X).
+  vb(X') = matbold(Lambda) vb(X).
 $
 #fade[[In indices, this is $X'^mu = tensor(Lambda, +mu, -nu) X^nu.$]]
 
 The defining feature of #ponder("relativity.lorentz-group")[Lorentz transformations] is that they have the #ponder("linear-algebra.inner-product")[inner product] invariant,
 $
-  bold(X') dot bold(X') = bold(X) dot bold(X) quad <=> quad matbold(Lambda)^tp matbold(eta) matbold(Lambda) = matbold(eta).
+  vb(X') dot vb(X') = vb(X) dot vb(X) quad <=> quad matbold(Lambda)^TT matbold(eta) matbold(Lambda) = matbold(eta).
 $
 
 Consider the number of $matbold(Lambda)$. There are 16 entries, and since both sides of the above are symmetric, we have 10 constraints. Hence, we expect to find 6 families of #ponder("relativity.lorentz-group")[Lorentz transformations].
@@ -443,7 +443,7 @@ Consider the number of $matbold(Lambda)$. There are 16 entries, and since both s
   $
     matbold(Lambda) = mat(1, 0, 0, 0; 0, R_11, R_12, R_13; 0, R_21, R_22, R_23; 0, R_31, R_32, R_33)
   $
-  which satisfy $matbold(R)^tp matbold(R) = matbold(I)$.
+  which satisfy $matbold(R)^TT matbold(R) = matbold(I)$.
 
   These give 3 independent #ponder("geometry.rotation")[rotations] about different axes. Composition of them also includes #ponder("geometry.reflection")[reflections].
 
@@ -469,7 +469,7 @@ is in $"SO"(1, 3)$ but not in $"SO"^(+)(1, 3)$.
 
 We want to define a velocity that is a 4-vector. We need to find a time $tau$ that is invariant under #ponder("relativity.lorentz-group")[Lorentz transformations], and define the 4-velocity as
 $
-  bold(U) := (dif bold(X))/(dif tau).
+  vb(U) := dv(vb(X), tau).
 $
 Given two points along a worldline, the invariant interval $(Delta s)^2$ is the same in all inertial frames. Hence, the *proper time* between these points is defined as
 
@@ -483,34 +483,34 @@ Note that worldlines are always timelike, so $Delta tau$ is real.
 
 All frames agree on $Delta tau$, and they can parameterise the worldline by
 $
-  bold(x)(tau) quad "and" quad t(tau).
+  vb(x)(tau) quad "and" quad t(tau).
 $
 #fade[[This is a Lorentzian version of the arc length.]]
 
 Along a small segment of the worldline,
 $
-  dif tau = sqrt((dif t)^2 - (dif bold(x)^2)/(c^2)) = dif t sqrt(1 - (1)/(c^2) ((dif bold(x))/(dif t))^2)
+  dif tau = sqrt((dif t)^2 - (dif vb(x)^2)/(c^2)) = dif t sqrt(1 - (1)/(c^2) (dv(vb(x), t))^2)
 $
 
 We can define the 3-velocity as
 $
-  bold(u) := (dif bold(x))/(dif t)
+  vb(u) := dv(vb(x), t)
 $
 hence
 $
-  dif tau = dif t sqrt(1-bold(u)^2/c^2) = (1)/(gamma) dif t.
+  dif tau = dif t sqrt(1-vb(u)^2/c^2) = (1)/(gamma) dif t.
 $
-where here $gamma$ is a function of the instantaneous 3-velocity $bold(u)$. Hence by above,
+where here $gamma$ is a function of the instantaneous 3-velocity $vb(u)$. Hence by above,
 
 #boxed[
   $
-    (dif t)/(dif tau) = gamma.
+    dv(t, tau) = gamma.
   $
 ]
 
 A clock following the worldline has
 $
-  dif bold(x)' = bold(0) => dif tau = dif t'.
+  dif vb(x)' = vb(0) => dif tau = dif t'.
 $
 
 _i.e._ the proper time is the time measured by an observer following the worldline.
@@ -519,34 +519,34 @@ _i.e._ the proper time is the time measured by an observer following the worldli
 
 Because $tau$ is invariant and
 $
-  bold(X)(tau) = vec(c t(tau), bold(x)(tau))
+  vb(X)(tau) = vec(c t(tau), vb(x)(tau))
 $
-transforms by Lorentz: $bold(X') = matbold(Lambda) bold(X)$, then
+transforms by Lorentz: $vb(X') = matbold(Lambda) vb(X)$, then
 
 #boxed[
   $
-    bold(U) := (dif bold(X))/(dif tau) = vec(c (dif t)/(dif tau), (dif bold(x))/(dif tau)) = (dif t)/(dif tau) vec(c, (dif bold(x))/(dif t)) = gamma vec(c, bold(u)).
+    vb(U) := dv(vb(X), tau) = vec(c dv(t, tau), dv(vb(x), tau)) = dv(t, tau) vec(c, dv(vb(x), t)) = gamma vec(c, vb(u)).
   $
 ]
 
 This also transforms as
 
 #boxed[
-  $ bold(U)' = matbold(Lambda) bold(U). #<eq-450> $
+  $ vb(U)' = matbold(Lambda) vb(U). #<eq-450> $
 ]
 
 The definition of a 4-vector implies that it transforms this way.
 
 In particular, because of @eq-450,
 $
-  bold(U') dot bold(U') = bold(U) dot bold(U).
+  vb(U') dot vb(U') = vb(U) dot vb(U).
 $
 In fact,
 $
-  bold(U) dot bold(U) = gamma^2 c^2 - gamma^2 bold(u)^2 = (c^2-bold(u)^2)gamma^2 = c^2.
+  vb(U) dot vb(U) = gamma^2 c^2 - gamma^2 vb(u)^2 = (c^2-vb(u)^2)gamma^2 = c^2.
 $
 
-The relativistic 4-vector incorporates the familiar 3-velocity $bold(u)$ into a nice Lorentzian object.
+The relativistic 4-vector incorporates the familiar 3-velocity $vb(u)$ into a nice Lorentzian object.
 
 #lecture-separator(lecture: 20, date: "2026-03-10")
 
@@ -556,53 +556,53 @@ The *4-momentum* is defined as
 
 #boxed[
   $
-    bold(P) := m bold(U) = vec(m gamma c, m gamma bold(u)).
+    vb(P) := m vb(U) = vec(m gamma c, m gamma vb(u)).
   $
 ]
 
 where $m$ is the property of the particle called *rest mass*.
 
-The *relativistic energy* $E$ and the *relativistic 3-momentum* $bold(p)$ are defined by
+The *relativistic energy* $E$ and the *relativistic 3-momentum* $vb(p)$ are defined by
 
 #boxed[
   $
-    E := m gamma c^2, quad bold(p) := m gamma bold(u). #<eq-454>
+    E := m gamma c^2, quad vb(p) := m gamma vb(u). #<eq-454>
   $
 ]
 
 So the 4-momentum can be written as
 
 $
-  bold(P) = vec(E/c, bold(p)).
+  vb(P) = vec(E/c, vb(p)).
 $
 
 Note that
 $
-  bold(P') = matbold(Lambda) bold(P).
+  vb(P') = matbold(Lambda) vb(P).
 $
 
-_i.e._ the 4-momentum combines energy and momentum, analogously to how $bold(X)$ combines time and space.
+_i.e._ the 4-momentum combines energy and momentum, analogously to how $vb(X)$ combines time and space.
 
-In the absense of forces, $bold(P)$ is conserved,
+In the absense of forces, $vb(P)$ is conserved,
 $
-  (dif bold(P))/(dif tau) = bold(0). #<eq-457>
+  dv(vb(P), tau) = vb(0). #<eq-457>
 $
 
 @eq-457 is a Lorentz-invariant generalisation of Newton's First Law. It also combines conservation of energy and momentum.
 
-From $bold(U) dot bold(U) = c^2$, we get
+From $vb(U) dot vb(U) = c^2$, we get
 
 #boxed[
   $
-       & bold(P) dot bold(P) = m^2 c^2 \
-    => & (E^2)/(c^2) - bold(p)^2 = m^2c^2 \
-    => & E^2 = bold(p)^2 c^2 + m^2 c^4. #<eq-460>
+       & vb(P) dot vb(P) = m^2 c^2 \
+    => & (E^2)/(c^2) - vb(p)^2 = m^2c^2 \
+    => & E^2 = vb(p)^2 c^2 + m^2 c^4. #<eq-460>
   $
 ]
 
-In the non-relativistic limit, $abs(bold(u))/(c) << 1$, we get
+In the non-relativistic limit, $abs(vb(u))/(c) << 1$, we get
 $
-  bold(p) & approx m bold(u) \
+  vb(p) & approx m vb(u) \
   E & =m gamma c^2 \
   & = (m c^2)/(sqrt(1-(u^2)/(c^2)) ) \
   & = m c^2 (1 + (1)/(2) (u^2)/(c^2) + ... ) \
@@ -613,7 +613,7 @@ The rest mass energy term is a new consequence fo relativity, where we can predi
 
 Now consider the high velocity limit
 $
-  bold(p) = underbracket(gamma m, "relativistic"\ "mass") bold(u)
+  vb(p) = underbracket(gamma m, "relativistic"\ "mass") vb(u)
 $
 where as $u -> c$, $gamma -> oo$. So $gamma m -> oo$.
 
@@ -625,11 +625,11 @@ Hence, a particle with $m != 0$ (called a massive particle) has $u < c$.
 
 In Galilean physics, the notion of a massless particle does not make sense. Our relativistic expression
 $
-  bold(P) dot bold(P) = m^2 c^2
+  vb(P) dot vb(P) = m^2 c^2
 $
 suggests that massless particles should have
 $
-  bold(P) dot bold(P) = 0. #<eq-468>
+  vb(P) dot vb(P) = 0. #<eq-468>
 $
 This imply that the 4-momentum of a massless particle lies along a light ray.
 
@@ -637,18 +637,18 @@ This imply that the 4-momentum of a massless particle lies along a light ray.
 
 Using @eq-431 and @eq-468, we have
 $
-  bold(P) = (E)/(c) vec(1, bold(hat(n)))
+  vb(P) = (E)/(c) vec(1, vu(n))
 $
-where $bold(hat(n))$ satisfies $bold(hat(n))^2 = 1$. We can interpret this as
+where $vu(n)$ satisfies $vu(n)^2 = 1$. We can interpret this as
 $
-  bold(hat(n)) := bold(u)/c
+  vu(n) := vb(u)/c
 $
-where $bold(u)$ is the 3-velocity, so that $bold(u)^2= c^2$, hence massless particles moves at the speed of light.
+where $vb(u)$ is the 3-velocity, so that $vb(u)^2= c^2$, hence massless particles moves at the speed of light.
 
 _i.e._
 $
-  m != 0 quad & => quad abs(bold(u)) < c \
-   m = 0 quad & => quad abs(bold(u)) = c.
+  m != 0 quad & => quad abs(vb(u)) < c \
+   m = 0 quad & => quad abs(vb(u)) = c.
 $
 along a light ray $dif tau = 0$, since any points on the trajectory are lightline separated.
 
@@ -668,10 +668,10 @@ Lorentz-transforming the photon's 4-momentum means that different observers see 
 
 Particle accelerators like CERN work by colliding particles at relativistic speeds. The proper framework for this is quantum field theory, but nonetheless we can learn some things from
 $
-  bold(P) = "constant".
+  vb(P) = "constant".
 $
 
-_i.e._ the 4-momentum $bold(P)$ must be the same before and after the collision.
+_i.e._ the 4-momentum $vb(P)$ must be the same before and after the collision.
 
 Basic processes include particle decay and particle collisions.
 
@@ -693,7 +693,7 @@ which is about $~10^5$ times heavier than an electron.
 
 By conservation of 4-momentum,
 $
-  bold(P_h) = bold(P_gamma) + bold(P_gamma').
+  vb(P_h) = vb(P_gamma) + vb(P_gamma').
 $
 
 Before solving this, we need to choose a frame to work in. The two canonical options are
@@ -708,17 +708,17 @@ Before solving this, we need to choose a frame to work in. The two canonical opt
 
 In the CoM frame, we have
 $
-  bold(P_h) = vec(m_h c, bold(0)), quad bold(P_gamma) = (E_gamma)/(c) vec(1, bold(hat(n))), quad bold(P_gamma') = (E_gamma')/(c) vec(1, bold(hat(n)')).
+  vb(P_h) = vec(m_h c, vb(0)), quad vb(P_gamma) = (E_gamma)/(c) vec(1, vu(n)), quad vb(P_gamma') = (E_gamma')/(c) vec(1, vu(n)').
 $
 By conservation of 4-momentum, we have
 $
-  m_h c = (E_gamma)/(c) + (E_gamma')/(c), quad (E_gamma)/(c) bold(hat(n)) + (E_gamma')/(c) bold(hat(n)') = bold(0).
+  m_h c = (E_gamma)/(c) + (E_gamma')/(c), quad (E_gamma)/(c) vu(n) + (E_gamma')/(c) vu(n)' = vb(0).
 $
 Hence,
 $
   cases(
     E_gamma = E_gamma',
-    bold(hat(n)) = -bold(hat(n)').
+    vu(n) = -vu(n)'.
   )
 $
 _i.e._ the two photons emerge with opposite 3-momenta and equal energies. Also,
@@ -733,17 +733,17 @@ In the lab frame,
   #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e61.svg", width: 20em)
 ]
 
-consider the angle $theta$. The idea is to use conservation $bold(P_h) = bold(P_gamma) + bold(P_gamma')$ and invariants #fade[[quantities that do not change under #ponder("relativity.lorentz-group")[Lorentz tranformations], such as the #ponder("linear-algebra.inner-product")[inner product] of 4-vectors]]. Since $bold(P) dot bold(P) = 0$ for photons, we have
+consider the angle $theta$. The idea is to use conservation $vb(P_h) = vb(P_gamma) + vb(P_gamma')$ and invariants #fade[[quantities that do not change under #ponder("relativity.lorentz-group")[Lorentz tranformations], such as the #ponder("linear-algebra.inner-product")[inner product] of 4-vectors]]. Since $vb(P) dot vb(P) = 0$ for photons, we have
 $
-  bold(P_h) - bold(P_gamma) = bold(P_gamma') => bold(P_gamma') dot bold(P_gamma') &= (bold(P_h) - bold(P_gamma)) dot (bold(P_h) - bold(P_gamma))\
-  bold(0) &= bold(P_h^2) - 2 bold(P_h) dot bold(P_gamma) + bold(P_gamma^2)\
-  & = m_h^2 c^2 - 2 bold(P_h) dot bold(P_gamma)\
-  2 bold(P_h) dot bold(P_gamma) & = m_h^2 c^2.
+  vb(P_h) - vb(P_gamma) = vb(P_gamma') => vb(P_gamma') dot vb(P_gamma') &= (vb(P_h) - vb(P_gamma)) dot (vb(P_h) - vb(P_gamma))\
+  vb(0) &= vb(P_h)^2 - 2 vb(P_h) dot vb(P_gamma) + vb(P_gamma)^2\
+  & = m_h^2 c^2 - 2 vb(P_h) dot vb(P_gamma)\
+  2 vb(P_h) dot vb(P_gamma) & = m_h^2 c^2.
 $
 
-Now, since $bold(P_h) = vec((E_h)/(c), bold(p_h))$ and $bold(P_gamma) = (E_gamma)/(c) vec(1, bold(hat(n)))$ in the lab frame, we have
+Now, since $vb(P_h) = vec((E_h)/(c), vb(p_h))$ and $vb(P_gamma) = (E_gamma)/(c) vec(1, vu(n))$ in the lab frame, we have
 $
-  m_h^2 c^2 = 2 ((E_h E_gamma)/(c^2) - (E_gamma)/(c) abs(bold(p_h)) cos theta)
+  m_h^2 c^2 = 2 ((E_h E_gamma)/(c^2) - (E_gamma)/(c) abs(vb(p_h)) cos theta)
 $
 
 Using this alongside @eq-460, we can solve for $theta$ given $E_h$ and $E_gamma$.
@@ -758,26 +758,26 @@ Consider the process of two particles of mass $m$ colliding, in the centre of ma
 
 By conservation of 4-momentum, we have
 $
-  bold(P_1) + bold(P_2) = bold(P_3) + bold(P_4). #<eq-487>
+  vb(P_1) + vb(P_2) = vb(P_3) + vb(P_4). #<eq-487>
 $
 
 In the CoM frame, we have
 $
-  bold(p_1) + bold(p_2) = bold(0) = bold(p_3) + bold(p_4).
+  vb(p_1) + vb(p_2) = vb(0) = vb(p_3) + vb(p_4).
 $
-Hence $abs(bold(p_1)) = abs(bold(p_2))$ and $abs(bold(p_3)) = abs(bold(p_4))$. Therefore,
+Hence $abs(vb(p_1)) = abs(vb(p_2))$ and $abs(vb(p_3)) = abs(vb(p_4))$. Therefore,
 $
   E_1 = E_2, quad E_3 = E_4.
 $
 Considering the time component of @eq-487, we have
 $
           & E_1 = E_2 = E_3 = E_4 \
-  => quad & abs(bold(p_1)) = abs(bold(p_2)) = abs(bold(p_3)) = abs(bold(p_4))
+  => quad & abs(vb(p_1)) = abs(vb(p_2)) = abs(vb(p_3)) = abs(vb(p_4))
 $
 _i.e._ any angle $theta$ is allowed, but momenta and energy afterwards equal the initial momenta and energy. All momenta are in the same plane, so we can pick, for example,
 $
-  bold(p_1) & = abs(bold(p_1)) vec(1, 0, 0) = - bold(p_2) \
-  bold(p_3) & = abs(bold(p_3)) vec(cos theta, sin theta, 0) = - bold(p_4).
+  vb(p_1) & = abs(vb(p_1)) vec(1, 0, 0) = - vb(p_2) \
+  vb(p_3) & = abs(vb(p_3)) vec(cos theta, sin theta, 0) = - vb(p_4).
 $
 
 In the lab frame,
@@ -790,22 +790,22 @@ where $P_2$ is at rest, hit by $P_1$. Our objective is to find the angle $phi$.
 
 The important step is to use invariants. We firstly have
 $
-  bold(P_1) + bold(P_2) = bold(P_3) + bold(P_4).
+  vb(P_1) + vb(P_2) = vb(P_3) + vb(P_4).
 $
-Since we are looking for information related to $bold(P_3)$, the best way to eliminate $bold(P_4)$ is to take the inner product with itself, so that
+Since we are looking for information related to $vb(P_3)$, the best way to eliminate $vb(P_4)$ is to take the inner product with itself, so that
 $
-  (bold(P_1) + bold(P_2) - bold(P_3))^2 = bold(P_4)^2 = m^2 c^2\
-  m^2c^2 = underbracket(bold(P_1)^2 + bold(P_2)^2 + bold(P_3)^2, 3 m^2 c^2) + 2 bold(P_1) dot bold(P_2) - 2 bold(P_1) dot bold(P_3) - 2 bold(P_2) dot bold(P_3).
+  (vb(P_1) + vb(P_2) - vb(P_3))^2 = vb(P_4)^2 = m^2 c^2\
+  m^2c^2 = underbracket(vb(P_1)^2 + vb(P_2)^2 + vb(P_3)^2, 3 m^2 c^2) + 2 vb(P_1) dot vb(P_2) - 2 vb(P_1) dot vb(P_3) - 2 vb(P_2) dot vb(P_3).
 $
-Since $bold(P_2)$ is at rest,
+Since $vb(P_2)$ is at rest,
 $
-  bold(P_2) = vec(m c, bold(0)), quad bold(P_1) = vec((E_1)/(c), bold(p_1)), quad bold(P_3) = vec((E_3)/(c), bold(p_3)).
+  vb(P_2) = vec(m c, vb(0)), quad vb(P_1) = vec((E_1)/(c), vb(p_1)), quad vb(P_3) = vec((E_3)/(c), vb(p_3)).
 $
 Hence,
 $
-  2 m^2c^2 + 2 m(E_(1)-E_3) - (2 E_1 E_3)/(c^2) = -2 abs(bold(p_1)) abs(bold(p_3)) cos phi.
+  2 m^2c^2 + 2 m(E_(1)-E_3) - (2 E_1 E_3)/(c^2) = -2 abs(vb(p_1)) abs(vb(p_3)) cos phi.
 $
-We have obtained $cos phi$ in terms of $E_1, E_3$ and $bold(p_1), bold(p_3)$. Using @eq-460 eliminates the $bold(p_i)$ terms.
+We have obtained $cos phi$ in terms of $E_1, E_3$ and $vb(p_1), vb(p_3)$. Using @eq-460 eliminates the $vb(p_i)$ terms.
 
 See Example Sheet 4 for Compton scattering, which describes a massless particle scattering off a massive one.
 
@@ -823,48 +823,48 @@ In the CoM frame,
 
 Let $P_1$ and $P_2$ be of mass $m$, and the created particle be of mass $M$. We have
 $
-  bold(P_1) + bold(P_2) = bold(P'_1) + bold(P'_2) + bold(P_M). #<eq-499>
+  vb(P_1) + vb(P_2) = vb(P'_1) + vb(P'_2) + vb(P_M). #<eq-499>
 $
 Since we are in the CoM frame,
 $
-  bold(p_1) = -bold(p_2) => E_1 = E_2.
+  vb(p_1) = -vb(p_2) => E_1 = E_2.
 $
 
 Squaring @eq-499 gives
 $
-  (bold(P_1) + bold(P_2))^2 &= (4 E_1^2)/(c^2) quad "by" bold(P_1) = vec((E_1)/(c), bold(p_1)), bold(P_2) = vec((E_2)/(c), bold(p_2)) #<eq-501>\
-  (bold(P'_1) + bold(P'_2)+bold(P_M))^2 &= bold(P'_1)^2 + bold(P'_2)^2 + bold(P_M)^2 + 2 bold(P'_1) dot bold(P'_2) + 2 bold(P'_1) dot bold(P_M) + 2 bold(P'_2) dot bold(P_M). #<eq-502>
+  (vb(P_1) + vb(P_2))^2 &= (4 E_1^2)/(c^2) quad "by" vb(P_1) = vec((E_1)/(c), vb(p_1)), vb(P_2) = vec((E_2)/(c), vb(p_2)) #<eq-501>\
+  (vb(P'_1) + vb(P'_2)+vb(P_M))^2 &= vb(P'_1)^2 + vb(P'_2)^2 + vb(P_M)^2 + 2 vb(P'_1) dot vb(P'_2) + 2 vb(P'_1) dot vb(P_M) + 2 vb(P'_2) dot vb(P_M). #<eq-502>
 $
 
 Note that
 $
-  bold(P'_1)^2 + bold(P'_2)^2 + bold(P_M)^2 = 2 m^2 c^2 + M^2 c^2.
+  vb(P'_1)^2 + vb(P'_2)^2 + vb(P_M)^2 = 2 m^2 c^2 + M^2 c^2.
 $
 
 #lemma[
   With variables as defined above,
   $
-    bold(P_1) dot bold(P_2) >= m_1 m_2 c^2.
+    vb(P_1) dot vb(P_2) >= m_1 m_2 c^2.
   $
 ] <lemma-four-momentum-inner-product>
 #proof[
-  $bold(P_1) dot bold(P_2)$ is invariant, so we can work in any frame. In the rest frame of $bold(P_2)$,
+  $vb(P_1) dot vb(P_2)$ is invariant, so we can work in any frame. In the rest frame of $vb(P_2)$,
   $
-    bold(P_1) = vec((E_1)/(c), bold(p_1)), quad bold(P_2) = vec(m_2 c, bold(0)).
+    vb(P_1) = vec((E_1)/(c), vb(p_1)), quad vb(P_2) = vec(m_2 c, vb(0)).
   $
   Hence
   $
-    bold(P_1) dot bold(P_2) = m_2 E_1.
+    vb(P_1) dot vb(P_2) = m_2 E_1.
   $
   Since $E_1 = sqrt(p_1^2 c^2 + m_1^2 c^4) >= m_1c^2$, we get
   $
-    bold(P_1) dot bold(P_2) >= m_1 m_2 c^2.
+    vb(P_1) dot vb(P_2) >= m_1 m_2 c^2.
   $
   Note that we chose the $+$ sign for the square root. The other sign leads to wrong non-relativistic limit, _i.e._ the kinetic energy would be negative. Recall that proper orthochronous Lorentz transformation will preserve positivity of $E_1$.
 ]
 Now, applying the lemma to @eq-502, we have
 $
-  (bold(P'_1) + bold(P'_2)+bold(P_M))^2 >= 2m^2c^2 + M^2c^2 + 2(m^2c^2 + 2m M c^2) = 4 (m + (1)/(2) M)^2 c^2.
+  (vb(P'_1) + vb(P'_2)+vb(P_M))^2 >= 2m^2c^2 + M^2c^2 + 2(m^2c^2 + 2m M c^2) = 4 (m + (1)/(2) M)^2 c^2.
 $
 Using @eq-501, we have
 $
@@ -882,39 +882,39 @@ must be greater than the rest mass energy of the created particle, $M c^2$.
 
 We may define the acceleration 4-vector, for a massive particle,
 $
-  bold(A) := (dif bold(U))/(dif tau).
+  vb(A) := dv(vb(U), tau).
 $
-Since $bold(U) dot bold(U) = c^2$, we have
+Since $vb(U) dot vb(U) = c^2$, we have
 $
-  bold(U) dot bold(A) = 0. #<eq-511>
+  vb(U) dot vb(A) = 0. #<eq-511>
 $
-Since $bold(U) = gamma vec(c, bold(u))$, using chain rule $(dif)/(dif tau) = (dif t)/(dif tau) (dif)/(dif t) = gamma (dif)/(dif t)$, we have
+Since $vb(U) = gamma vec(c, vb(u))$, using chain rule $dv(, tau) = dv(t, tau) dv(, t) = gamma dv(, t)$, we have
 $
-  bold(A) = gamma vec(dot(gamma) c, dot(gamma) bold(u) + gamma bold(a)) quad "where" quad dot(gamma) = (dif gamma)/(dif t), quad bold(a) = (dif bold(u))/(dif t).
+  vb(A) = gamma vec(dot(gamma) c, dot(gamma) vb(u) + gamma vb(a)) quad "where" quad dot(gamma) = dv(gamma, t), quad vb(a) = dv(vb(u), t).
 $
 
 We would like to consider motion for a constant acceleration, but we need to define a frame in which the acceleration is constant.
 
-We will take an #ponder("dynamics.inertial-frame")[inertial frame] $S'$ that, at some moment in time, is instantaneously travelling at the same speed as the particle, _i.e._ $bold(u') = bold(0)$. Hence $gamma = 1$ and $dot(gamma) = 0$ in that frame.
+We will take an #ponder("dynamics.inertial-frame")[inertial frame] $S'$ that, at some moment in time, is instantaneously travelling at the same speed as the particle, _i.e._ $vb(u') = vb(0)$. Hence $gamma = 1$ and $dot(gamma) = 0$ in that frame.
 
 #fade[[More precisely,
   $
-    dot(gamma) = (+bold(u) dot bold(dot(u)))/(c^2(1-bold(u)^2/c^2)^(3/2)) = 0
+    dot(gamma) = (+vb(u) dot vb(dot(u)))/(c^2(1-vb(u)^2/c^2)^(3/2)) = 0
   $
-  given that $bold(u) = bold(0)$ in that frame.]]
+  given that $vb(u) = vb(0)$ in that frame.]]
 
 To make calculation easier, we will consider motion in one spatial dimension, so that in $S'$ we have
 $
-  bold(A') = vec(0, a').
+  vb(A') = vec(0, a').
 $
 
 We say the acceleration is constant if $a'$ is constant. #fade[[Later we will see that this follows from a constant force.]]
 
-We can get $bold(A)$ from $bold(A')$ by using inverse #ponder("relativity.lorentz-group")[Lorentz transformation] @eq-395 and @eq-396, by speed $u$,
+We can get $vb(A)$ from $vb(A')$ by using inverse #ponder("relativity.lorentz-group")[Lorentz transformation] @eq-395 and @eq-396, by speed $u$,
 $
-  bold(A) = vec((gamma u a')/c, gamma a').
+  vb(A) = vec((gamma u a')/c, gamma a').
 $
-Matching with the general expression for $bold(A)$,
+Matching with the general expression for $vb(A)$,
 $
               cancel(gamma) dot(gamma) c & = (cancel(gamma) u a')/c \
   cancel(gamma) (dot(gamma) u + gamma a) & = cancel(gamma) a'
@@ -949,40 +949,40 @@ This is the equation of an hyperbola. An accelerated particle follows a hyperbol
 
 The Rindler horizon separates the accessible and inaccessible regoins of sapce time. #fade[[Black holes work in a similar way: one need to accelerate not to fall in.]]
 
-Let the force 4-vector $bold(F)$ obey
+Let the force 4-vector $vb(F)$ obey
 $
-  bold(F) := (dif bold(P))/(dif tau) = m bold(A). #<eq-525>
-$
-
-Let us parameterise $bold(F)$ as
-$
-  bold(F) := vec(F^0, gamma bold(f)).
+  vb(F) := dv(vb(P), tau) = m vb(A). #<eq-525>
 $
 
-Recall that $bold(P) = vec(E/c, bold(p))$. For the spatial component of @eq-525,
+Let us parameterise $vb(F)$ as
+$
+  vb(F) := vec(F^0, gamma vb(f)).
+$
+
+Recall that $vb(P) = vec(E/c, vb(p))$. For the spatial component of @eq-525,
 
 $
-  (dif bold(p))/(dif t) = 1/gamma (dif bold(p))/(dif tau) = bold(f).
+  dv(vb(p), t) = 1/gamma dv(vb(p), tau) = vb(f).
 $
-Hence $bold(f)$ is the force appearing in #ponder("dynamics.newtons-second-law")[Newton's law], but note that $bold(p) = gamma m bold(u)$ is the relativistic 3-momentum. This connects to previous discussion that particles get heavier as they speed up.
+Hence $vb(f)$ is the force appearing in #ponder("dynamics.newtons-second-law")[Newton's law], but note that $vb(p) = gamma m vb(u)$ is the relativistic 3-momentum. This connects to previous discussion that particles get heavier as they speed up.
 
-Also, if $bold(f)$ is constant #fade[[_i.e._ a constant force]], then $bold(a')$ is constant in $bold(A)$, _i.e._ indeed a constant $bold(f)$ produces a constant acceleration in the instantaenous rest frame.
+Also, if $vb(f)$ is constant #fade[[_i.e._ a constant force]], then $vb(a')$ is constant in $vb(A)$, _i.e._ indeed a constant $vb(f)$ produces a constant acceleration in the instantaenous rest frame.
 
 Consider the time component of @eq-525,
 $
-  F^0 = 1/c (dif E)/(dif tau) = (gamma)/(c) (dif E)/(dif t).
+  F^0 = 1/c dv(E, tau) = (gamma)/(c) dv(E, t).
 $
 So $F^0$ is proportional to change of energy with time.
 
 To recover a familiar equation, using @eq-454,
 $
-  0 = (dif)/(dif tau) (bold(P) dot bold(P)) & = 2 bold(P) dot (dif bold(P))/(dif tau) \
-                                            & = 2 ((E)/(c^2) (dif E)/(dif tau) - bold(p) dot (dif bold(p))/(dif tau) ) \
-                                            & = 2 gamma^2 m ((dif E)/(dif t) - bold(u) dot (dif bold(p))/(dif t))
+  0 = dv(, tau) (vb(P) dot vb(P)) & = 2 vb(P) dot dv(vb(P), tau) \
+                                            & = 2 ((E)/(c^2) dv(E, tau) - vb(p) dot dv(vb(p), tau) ) \
+                                            & = 2 gamma^2 m (dv(E, t) - vb(u) dot dv(vb(p), t))
 $
 Hence,
 $
-  (dif E)/(dif t) = bold(u) dot (dif bold(p))/(dif t) = bold(u) dot bold(f).
+  dv(E, t) = vb(u) dot dv(vb(p), t) = vb(u) dot vb(f).
 $
 which essentially says that the change in energy is the rate of work done.
 
@@ -990,7 +990,7 @@ which essentially says that the change in energy is the rate of work done.
 
 Lorentz force can be written in the form
 $
-  (dif bold(P))/(dif tau) = (q)/(c) matbold(G) dot bold(U) #<eq-533>
+  dv(vb(P), tau) = (q)/(c) matbold(G) dot vb(U) #<eq-533>
 $
 where $matbold(G)$ is the electromagnetic 4-tensor,
 $
@@ -999,23 +999,23 @@ $
 
 The time component of @eq-533 is
 $
-  gamma (dif E)/(dif t) & = (q)/(c) bold(E) dot gamma bold(u) \
-        (dif E)/(dif t) & = (q)/(c) bold(E) dot bold(u)
+  gamma dv(E, t) & = (q)/(c) vb(E) dot gamma vb(u) \
+        dv(E, t) & = (q)/(c) vb(E) dot vb(u)
 $
 _i.e._ the electric field does work, but magnetic field does not.
 
 The spatial component of @eq-533 is
 $
-  gamma (dif bold(P))/(dif t) & = (q)/(c) (tensor(matbold(G), +i, +0) bold(u)_0 - tensor(matbold(G), +i, +j) bold(u)_j) \
-                              & = (q)/(c) (bold(E)^i gamma c + epsilon^(i j k) bold(B)^k c gamma bold(u)_j).
+  gamma dv(vb(P), t) & = (q)/(c) (tensor(matbold(G), +i, +0) vb(u)_0 - tensor(matbold(G), +i, +j) vb(u)_j) \
+                              & = (q)/(c) (vb(E)^i gamma c + epsilon^(i j k) vb(B)^k c gamma vb(u)_j).
 $
 Therefore
 $
-  (dif bold(p))/(dif t) = (q)/(c) (bold(E) + bold(u) times bold(B)).
+  dv(vb(p), t) = (q)/(c) (vb(E) + vb(u) times vb(B)).
 $
-_i.e._ the Lorentz force is relativistically invariant, but we need to account for the mixing of $bold(E)$ and $bold(B)$ under Lorentz transformations, where
+_i.e._ the Lorentz force is relativistically invariant, but we need to account for the mixing of $vb(E)$ and $vb(B)$ under Lorentz transformations, where
 $
-  bold(u') = matbold(Lambda) bold(u) quad "and" quad matbold(G') = matbold(Lambda) matbold(G) matbold(Lambda)^(-1).
+  vb(u') = matbold(Lambda) vb(u) quad "and" quad matbold(G') = matbold(Lambda) matbold(G) matbold(Lambda)^(-1).
 $
 
 

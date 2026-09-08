@@ -69,8 +69,8 @@ $
  ] <matrix-change-of-basis>
 
 #proof[
-  A basis ${bold(v_1), ..., bold(v_n)}$ for $V$ defines an #ponder("algebra.isomorphism")[isomorphism] of vector spaces
-  $ phi: RR^n -> V quad "with" quad vec(lambda_1, ..., lambda_n) |-> sum_(i=1)^n lambda_i bold(v_i). $
+  A basis ${vb(v_1), ..., vb(v_n)}$ for $V$ defines an #ponder("algebra.isomorphism")[isomorphism] of vector spaces
+  $ phi: RR^n -> V quad "with" quad vec(lambda_1, ..., lambda_n) |-> sum_(i=1)^n lambda_i vb(v_i). $
   The claim that $matbold(A)$ represents $alpha$ in this basis means that
 
   #fletcher-diagram(
@@ -83,7 +83,7 @@ $
 
   #lecture-separator(lecture: 21, date: "2025-11-26")
 
-  Likewise, another basis ${bold(u_1), ..., bold(u_n)}$ for $V$ corresponds to another #ponder("algebra.isomorphism")[isomorphism]
+  Likewise, another basis ${vb(u_1), ..., vb(u_n)}$ for $V$ corresponds to another #ponder("algebra.isomorphism")[isomorphism]
   $
     psi: RR^n -> V,
   $
@@ -105,7 +105,7 @@ $
   $ psi = phi matbold(P)^(-1): RR^n -> V $
   we get a basis
   $
-    {matbold(u_1) = psi(bold(e_i))}
+    {matbold(u_1) = psi(vb(e_i))}
   $
   for $V$. In this basis, $matbold(B)$ represents $alpha$.
 ]
@@ -152,35 +152,35 @@ Recall that multiplication in $cal(M)$ looked similar to multiplication of $2 ti
 
 Let us write $norm(dot)$ for the normal notion of length on $RR^n$, _i.e._
 $
-  norm(bold(u)) = sqrt(sum_(i=1)^n u_i^2).
+  norm(vb(u)) = sqrt(sum_(i=1)^n u_i^2).
 $
 
 #definition[#ponder("algebra.orthogonal-group")[Orthogonal Group]][
   The *$n$-dimensional #ponder("algebra.orthogonal-group")[orthogonal group]* is the #ponder("algebra.subgroup")[subgroup] of $GL_n (RR)$ that preserves distance in $RR^n$:
   $
-    O(n) = { matbold(A) in GL_n (RR) : forall bold(v) in RR^n, norm(matbold(A) bold(v)) = norm(bold(v)) }.
+    O(n) = { matbold(A) in GL_n (RR) : forall vb(v) in RR^n, norm(matbold(A) vb(v)) = norm(vb(v)) }.
   $
 ] <orthogonal-group>
 
 In fact, the *dot product*
 $
-  bold(u) dot bold(v) = sum_(i=1)^n u_i v_i
+  vb(u) dot vb(v) = sum_(i=1)^n u_i v_i
 $
 is often more convenient to work with.
 
 #lemma[#ponder("algebra.polarisation-identity")[Polarisation Identity]][
-  For any $bold(u), bold(v) in RR^n$,
+  For any $vb(u), vb(v) in RR^n$,
   $
-    2 bold(u) dot bold(v) = norm(bold(u))^2 + norm(bold(v))^2 - norm(bold(u) - bold(v))^2.
+    2 vb(u) dot vb(v) = norm(vb(u))^2 + norm(vb(v))^2 - norm(vb(u) - vb(v))^2.
   $
 ]
  <polarisation-identity>
 
 #proof[
   $
-    norm(bold(u)-bold(v))^2 & = (bold(u)-bold(v)) dot (bold(u) - bold(v)) \
-                            & = bold(u) dot bold(u) - 2 bold(u) dot bold(v) + bold(v) dot bold(v) \
-                            & = norm(bold(u))^2 - 2 bold(u) dot bold(v) + norm(bold(v))^2.
+    norm(vb(u)-vb(v))^2 & = (vb(u)-vb(v)) dot (vb(u) - vb(v)) \
+                            & = vb(u) dot vb(u) - 2 vb(u) dot vb(v) + vb(v) dot vb(v) \
+                            & = norm(vb(u))^2 - 2 vb(u) dot vb(v) + norm(vb(v))^2.
   $
 ]
 
@@ -188,29 +188,29 @@ It follows that we can characterise $O(n)$ using the dot product.
 
 #lemma[$O(n)$ and the Dot Product][
   $
-    O(n) = { matbold(A) in GL_n (RR) : forall bold(x), bold(y) in RR^n, (matbold(A) bold(x)) dot (matbold(A) bold(y)) = bold(x) dot bold(y) }.
+    O(n) = { matbold(A) in GL_n (RR) : forall vb(x), vb(y) in RR^n, (matbold(A) vb(x)) dot (matbold(A) vb(y)) = vb(x) dot vb(y) }.
   $
 ] <on-and-the-dot-product>
 
 #proof[
-  If $(matbold(A) bold(x)) dot (matbold(A) bold(y)) = bold(x) dot bold(y)$ for all $bold(x), bold(y) in RR^n$, then for any $bold(v) in RR^n$,
+  If $(matbold(A) vb(x)) dot (matbold(A) vb(y)) = vb(x) dot vb(y)$ for all $vb(x), vb(y) in RR^n$, then for any $vb(v) in RR^n$,
   $
-    norm(matbold(A) bold(v))^2 & = (matbold(A) bold(v)) dot (matbold(A) bold(v)) \
-                               & = bold(v) dot bold(v) \
-                               & = norm(bold(v))^2. \
-      norm(matbold(A) bold(v)) & = norm(bold(v)).
+    norm(matbold(A) vb(v))^2 & = (matbold(A) vb(v)) dot (matbold(A) vb(v)) \
+                               & = vb(v) dot vb(v) \
+                               & = norm(vb(v))^2. \
+      norm(matbold(A) vb(v)) & = norm(vb(v)).
   $
   Therefore $matbold(A) in O(n)$.
 
-  Conversely, if $matbold(A) in O(n)$ , then $forall bold(x), bold(y) in RR^n$,
+  Conversely, if $matbold(A) in O(n)$ , then $forall vb(x), vb(y) in RR^n$,
   $
-    2 (matbold(A) bold(x) ) dot (matbold(A) bold(y)) & = norm(matbold(A) bold(x))^2 + norm(matbold(A) bold(y))^2 - norm(matbold(A) bold(x) - matbold(A) bold(y))^2 \
-    & = norm(matbold(A) bold(x))^2 + norm(matbold(A) bold(y))^2 - norm(matbold(A) (bold(x) - bold(y)))^2 \
-    & = norm(bold(x))^2 + norm(bold(y))^2 - norm(bold(x) - bold(y))^2 \
-    & = 2 bold(x) dot bold(y).
+    2 (matbold(A) vb(x) ) dot (matbold(A) vb(y)) & = norm(matbold(A) vb(x))^2 + norm(matbold(A) vb(y))^2 - norm(matbold(A) vb(x) - matbold(A) vb(y))^2 \
+    & = norm(matbold(A) vb(x))^2 + norm(matbold(A) vb(y))^2 - norm(matbold(A) (vb(x) - vb(y)))^2 \
+    & = norm(vb(x))^2 + norm(vb(y))^2 - norm(vb(x) - vb(y))^2 \
+    & = 2 vb(x) dot vb(y).
   $
 
-  Hence $(matbold(A) bold(x)) dot (matbold(A) bold(y)) = bold(x) dot bold(y)$ for all $bold(x), bold(y) in RR^n$ as required.
+  Hence $(matbold(A) vb(x)) dot (matbold(A) vb(y)) = vb(x) dot vb(y)$ for all $vb(x), vb(y) in RR^n$ as required.
 ]
 
 This quickly leads to a nice characterisations of matrices in $O(n)$.
@@ -222,7 +222,7 @@ This quickly leads to a nice characterisations of matrices in $O(n)$.
 
   2. The columns of $matbold(A)$ form an orthonormal basis of $RR^n$.
 
-  3. $matbold(A)^tp matbold(A) = matbold(I)_n$.
+  3. $matbold(A)^TT matbold(A) = matbold(I)_n$.
 
 ]
  <orthogonal-matrix-characterisation>
@@ -230,40 +230,40 @@ This quickly leads to a nice characterisations of matrices in $O(n)$.
 #proof[
   Let $matbold(A) = (a_(i j))$.
 
-  #fade[[(1) $=>$ (2).]] Let ${bold(e_1), ..., bold(e_n)}$ be the standard basis for $RR^n$. The $i$th column of $matbold(A)$ is $matbold(A) bold(e_i)$. since
+  #fade[[(1) $=>$ (2).]] Let ${vb(e_1), ..., vb(e_n)}$ be the standard basis for $RR^n$. The $i$th column of $matbold(A)$ is $matbold(A) vb(e_i)$. since
   $
-    (matbold(A) bold(e_i)) dot (matbold(A) bold(e_j)) & = bold(e_i) dot bold(e_j) \
+    (matbold(A) vb(e_i)) dot (matbold(A) vb(e_j)) & = vb(e_i) dot vb(e_j) \
                                                       & = delta_(i j),
   $
   The columns of $matbold(A)$ form an orthonormal basis.
 
   #fade[[(2) $=>$ (3).]] As explained above, (2) means that
   $
-    matbold(A) bold(e_i) dot matbold(A) bold(e_j) = delta_(i j).
+    matbold(A) vb(e_i) dot matbold(A) vb(e_j) = delta_(i j).
   $
-  Since $bold(u) dot bold(v) = bold(u)^tp bold(v)$, this means that
+  Since $vb(u) dot vb(v) = vb(u)^TT vb(v)$, this means that
   $
-    (matbold(A) bold(e_i))^tp (matbold(A) bold(e_j)) & = delta_(i j) \
-     bold(e_i^tp) matbold(A)^tp matbold(A) bold(e_j) & = delta_(i j).
+    (matbold(A) vb(e_i))^TT (matbold(A) vb(e_j)) & = delta_(i j) \
+     vb(e_i)^TT matbold(A)^TT matbold(A) vb(e_j) & = delta_(i j).
   $
-  But $bold(e_i^tp) matbold(M) bold(e_j)$ is the $(i, j)$th entry of the matrix $matbold(M)$, so this shows that the $(i, j)$th entry of $matbold(A)^tp matbold(A)$ is $delta_(i j)$ for all $i, j$. Therefore $matbold(A)^tp matbold(A) = matbold(I_n)$.
+  But $vb(e_i)^TT matbold(M) vb(e_j)$ is the $(i, j)$th entry of the matrix $matbold(M)$, so this shows that the $(i, j)$th entry of $matbold(A)^TT matbold(A)$ is $delta_(i j)$ for all $i, j$. Therefore $matbold(A)^TT matbold(A) = matbold(I_n)$.
 
   #fade[[(3) $=>$ (1).]]
 
-  Suppose $bold(u), bold(v) in RR^n$. then
+  Suppose $vb(u), vb(v) in RR^n$. then
   $
-    (matbold(A) bold(u)) dot (matbold(A) bold(v)) & = (matbold(A) bold(u))^tp (matbold(A) bold(v)) \
-                                                  & = bold(u)^tp matbold(A)^tp matbold(A) bold(v) \
-                                                  & = bold(u)^tp matbold(I_n) bold(v) \
-                                                  & = bold(u) dot bold(v).
+    (matbold(A) vb(u)) dot (matbold(A) vb(v)) & = (matbold(A) vb(u))^TT (matbold(A) vb(v)) \
+                                                  & = vb(u)^TT matbold(A)^TT matbold(A) vb(v) \
+                                                  & = vb(u)^TT matbold(I_n) vb(v) \
+                                                  & = vb(u) dot vb(v).
   $
 
   Hence $matbold(A) in O(n)$ as required.
 ]
 
-Recall that $det matbold(A^tp) = det matbold(A)$. Therefore,
+Recall that $det matbold(A)^TT = det matbold(A)$. Therefore,
 $
-  1 = det(matbold(I_n)) = det(matbold(A)^tp matbold(A)) = det(matbold(A)^tp) dot det(matbold(A)) = (det matbold(A))^2.
+  1 = det(matbold(I_n)) = det(matbold(A)^TT matbold(A)) = det(matbold(A)^TT) dot det(matbold(A)) = (det matbold(A))^2.
 $
 So $det matbold(A) = plus.minus 1$ for any $matbold(A) in O(n)$.
 
@@ -290,11 +290,11 @@ $
 Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflection")[reflections].
 
 #definition[#ponder("geometry.reflection")[Reflection]][
-  Any $bold(v) in RR^n \\ {0}$ defines an orthogonal plane $bold(v)^perp = P_bold(v) = {bold(x) in RR^n: bold(x) dot bold(v) = 0}$.
+  Any $vb(v) in RR^n \\ {0}$ defines an orthogonal plane $vb(v)^perp = P_vb(v) = {vb(x) in RR^n: vb(x) dot vb(v) = 0}$.
 
-  The *#ponder("geometry.reflection")[reflection]* in $P_bold(v)$ is defined to be
+  The *#ponder("geometry.reflection")[reflection]* in $P_vb(v)$ is defined to be
   $
-    S_bold(v) (bold(x)) = bold(x) - (2 (bold(x) dot bold(v))) / norm(bold(v))^2 bold(v).
+    S_vb(v) (vb(x)) = vb(x) - (2 (vb(x) dot vb(v))) / norm(vb(v))^2 vb(v).
   $
 
 ]
@@ -304,53 +304,53 @@ Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflec
 
   1. We will sometimes write $S_P$ for the #ponder("geometry.reflection")[reflection] in the plane $P$.
 
-  2. We may replace $bold(v)$ by $bold(v)/norm(bold(v))$ and assume that $norm(bold(v)) = 1$. then
+  2. We may replace $vb(v)$ by $vb(v)/norm(vb(v))$ and assume that $norm(vb(v)) = 1$. then
 
     $
-      S_bold(v) (bold(x)) = bold(x) - 2 (bold(x) dot bold(v)) bold(v).
+      S_vb(v) (vb(x)) = vb(x) - 2 (vb(x) dot vb(v)) vb(v).
     $
 ]
 
 #lemma[#ponder("geometry.reflection-properties")[Properties of a reflection]][
-  1. $S_bold(v)^2 = id$
+  1. $S_vb(v)^2 = id$
 
-  2. $S_bold(v) in O(n)$
+  2. $S_vb(v) in O(n)$
 ]
  <reflection-properties>
 
 #proof[
-  We may assume that $norm(bold(v)) = 1$. From the definition, $S_bold(v)$ is linear in $bold(x)$. So we can think of $S_bold(v)$ as a matrix $matbold(S)_bold(v) in M_n (RR)$. Now,
+  We may assume that $norm(vb(v)) = 1$. From the definition, $S_vb(v)$ is linear in $vb(x)$. So we can think of $S_vb(v)$ as a matrix $matbold(S)_vb(v) in M_n (RR)$. Now,
   $
-    (S_bold(v)(bold(x)) dot bold(v)) & = (bold(x) dot bold(v)) - 2 (bold(x) dot bold(v))( bold(v) dot bold(v)) \
-                                     & = (bold(x) dot bold(v)) - 2 (bold(x) dot bold(v)) \
-                                     & = - (bold(x) dot bold(v)).
+    (S_vb(v)(vb(x)) dot vb(v)) & = (vb(x) dot vb(v)) - 2 (vb(x) dot vb(v))( vb(v) dot vb(v)) \
+                                     & = (vb(x) dot vb(v)) - 2 (vb(x) dot vb(v)) \
+                                     & = - (vb(x) dot vb(v)).
   $
   So,
   $
-    S_bold(v)^2(bold(x)) & = S_bold(v)(bold(x)) - 2 (S_bold(v)(bold(x)) dot bold(v)) bold(v) \
-                         & = bold(x) - 2 (bold(x) dot bold(v)) bold(v) - 2 (- (bold(x) dot bold(v))) bold(v) \
-                         & = bold(x).
+    S_vb(v)^2(vb(x)) & = S_vb(v)(vb(x)) - 2 (S_vb(v)(vb(x)) dot vb(v)) vb(v) \
+                         & = vb(x) - 2 (vb(x) dot vb(v)) vb(v) - 2 (- (vb(x) dot vb(v))) vb(v) \
+                         & = vb(x).
   $
-  So indeed $S_bold(v)^2 = id$. In particular, $S_bold(v)$ is invertible with #ponder("algebra.inverse-element")[inverse] $S_bold(v)$, So
+  So indeed $S_vb(v)^2 = id$. In particular, $S_vb(v)$ is invertible with #ponder("algebra.inverse-element")[inverse] $S_vb(v)$, So
   $
-    matbold(S)_bold(v) in GL_n (RR).
+    matbold(S)_vb(v) in GL_n (RR).
   $
-  Finally, for any $bold(x) in RR^n$,
+  Finally, for any $vb(x) in RR^n$,
   $
-    norm(S_bold(v)(bold(x)))^2 & = (S_bold(v)(bold(x))) dot (S_bold(v)(bold(x))) \
-    & = (bold(x) - 2 (bold(x) dot bold(v)) bold(v)) dot (bold(x) - 2 (bold(x) dot bold(v)) bold(v)) \
-    & = bold(x) dot bold(x) - 4 (bold(x) dot bold(v)) (bold(x) dot bold(v)) + 4 (bold(x) dot bold(v))^2 (bold(v) dot bold(v)) \
-    & = norm(bold(x))^2.
+    norm(S_vb(v)(vb(x)))^2 & = (S_vb(v)(vb(x))) dot (S_vb(v)(vb(x))) \
+    & = (vb(x) - 2 (vb(x) dot vb(v)) vb(v)) dot (vb(x) - 2 (vb(x) dot vb(v)) vb(v)) \
+    & = vb(x) dot vb(x) - 4 (vb(x) dot vb(v)) (vb(x) dot vb(v)) + 4 (vb(x) dot vb(v))^2 (vb(v) dot vb(v)) \
+    & = norm(vb(x))^2.
   $
-  Hence $S_bold(v) in O(n)$ as required.
+  Hence $S_vb(v) in O(n)$ as required.
 ]
 
 #remark[
-  Let $norm(bold(v)) =1$, and pick an orthonormal basis ${bold(v_1), ..., bold(v)_(n-1)}$ for $P_bold(v)$. In the basis ${bold(v_1), ..., bold(v)_(n-1), bold(v)}$ for $RR^n$, $S_bold(v)$ has matrix
+  Let $norm(vb(v)) =1$, and pick an orthonormal basis ${vb(v_1), ..., vb(v)_(n-1)}$ for $P_vb(v)$. In the basis ${vb(v_1), ..., vb(v)_(n-1), vb(v)}$ for $RR^n$, $S_vb(v)$ has matrix
   $
-    matbold(S)_bold(v) = mat(1, 0, ..., 0, 0; 0, 1, ..., 0, 0; dots.v, dots.v, dots.down, dots.v, dots.v; 0, 0, ..., 1, 0; 0, 0, ..., 0, -1)
+    matbold(S)_vb(v) = mat(1, 0, ..., 0, 0; 0, 1, ..., 0, 0; dots.v, dots.v, dots.down, dots.v, dots.v; 0, 0, ..., 1, 0; 0, 0, ..., 0, -1)
   $
-  so $det matbold(S)_bold(v) = -1$ and hence $S_bold(v) in O(n) \\ SO(n)$.
+  so $det matbold(S)_vb(v) = -1$ and hence $S_vb(v) in O(n) \\ SO(n)$.
 ]
 
 #theorem[#ponder("algebra.reflections-generate")[Reflections Generate $O(n)$]][
@@ -360,19 +360,19 @@ Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflec
 #proof[
   We will prove this by induction on $n$.
 
-  *Base case.* When $n = 1$, $O(1) = {plus.minus 1} = lr(chevron.l S_bold(1) chevron.r) teq C_2$. The matrix $mat(-1)$ is the #ponder("geometry.reflection")[reflection] in the origin, so the result holds.
+  *Base case.* When $n = 1$, $O(1) = {plus.minus 1} = lr(chevron.l S_vb(1) chevron.r) teq C_2$. The matrix $mat(-1)$ is the #ponder("geometry.reflection")[reflection] in the origin, so the result holds.
 
-  *Inductive step.* Let ${bold(e_1), ..., bold(e_n)}$ be the standard basis for $RR^n$. Let $bold(v) = bold(e_n) - matbold(A) bold(e_n)$. #fade[[If $matbold(A) bold(e_n) = bold(e_n)$ then $bold(v) = bold(0)$ and $matbold(S)_bold(v)$ is undefined; but in that case $matbold(A)$ already preserves $P_(bold(e_n))$, and the induction below applied to $matbold(A)$ itself writes $matbold(A)$ as a product of at most $n-1$ #ponder("geometry.reflection")[reflections]. So we may assume $bold(v) != bold(0)$.]]
+  *Inductive step.* Let ${vb(e_1), ..., vb(e_n)}$ be the standard basis for $RR^n$. Let $vb(v) = vb(e_n) - matbold(A) vb(e_n)$. #fade[[If $matbold(A) vb(e_n) = vb(e_n)$ then $vb(v) = vb(0)$ and $matbold(S)_vb(v)$ is undefined; but in that case $matbold(A)$ already preserves $P_(vb(e_n))$, and the induction below applied to $matbold(A)$ itself writes $matbold(A)$ as a product of at most $n-1$ #ponder("geometry.reflection")[reflections]. So we may assume $vb(v) != vb(0)$.]]
 
-  Then $matbold(S)_bold(v) (matbold(A) bold(e_n)) = bold(e_n)$, #fade[[and since $matbold(S)_bold(v) matbold(A)$ is an #ponder("algebra.orthogonal-group")[orthogonal transformation], by @on-and-the-dot-product, dot products are preserved, and hence vectors that are orthogonal to $bold(e_n)$ are sent to some vector that is still orthogonal to $bold(e_n)$,]] so $matbold(S)_bold(v) matbold(A)$ preserves $P_(bold(e_n)) = RR^(n-1)times {0}$.
+  Then $matbold(S)_vb(v) (matbold(A) vb(e_n)) = vb(e_n)$, #fade[[and since $matbold(S)_vb(v) matbold(A)$ is an #ponder("algebra.orthogonal-group")[orthogonal transformation], by @on-and-the-dot-product, dot products are preserved, and hence vectors that are orthogonal to $vb(e_n)$ are sent to some vector that is still orthogonal to $vb(e_n)$,]] so $matbold(S)_vb(v) matbold(A)$ preserves $P_(vb(e_n)) = RR^(n-1)times {0}$.
 
-  By induction, there are $bold(v_1), ..., bold(v_(n-1)) in RR^(n-1)$ such that
+  By induction, there are $vb(v_1), ..., vb(v_(n-1)) in RR^(n-1)$ such that
   $
-    matbold(S)_bold(v) matbold(A) = matbold(S)_bold(v_1) ... matbold(S)_bold(v_(n-1)) quad "on" RR^(n-1).
+    matbold(S)_vb(v) matbold(A) = matbold(S)_vb(v_1) ... matbold(S)_vb(v_(n-1)) quad "on" RR^(n-1).
   $
-  Since both sides also fix $bold(e_n)$, they also agree on $RR^n$. Therefore,
+  Since both sides also fix $vb(e_n)$, they also agree on $RR^n$. Therefore,
   $
-    matbold(A) = matbold(S)_bold(v) matbold(S)_bold(v_1) ... matbold(S)_bold(v)_(n-1).
+    matbold(A) = matbold(S)_vb(v) matbold(S)_vb(v_1) ... matbold(S)_vb(v)_(n-1).
   $
 ]
 
@@ -386,18 +386,18 @@ Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflec
 ]  <elements-of-o2>
 
 #proof[
-  Recall that $det matbold(S)_bold(v) = -1$, so
-  $det(matbold(S)_bold(v_1) matbold(S)_bold(v_2) ... matbold(S)_bold(v_k)) = (-1)^k$. By @reflections-generate-on, we may take $k <= 2$.
+  Recall that $det matbold(S)_vb(v) = -1$, so
+  $det(matbold(S)_vb(v_1) matbold(S)_vb(v_2) ... matbold(S)_vb(v_k)) = (-1)^k$. By @reflections-generate-on, we may take $k <= 2$.
 
-  1. If $matbold(A) in.not SO(2)$, then $k$ is odd and hence $k = 1$. So $matbold(A) = matbold(S)_bold(v_1)$ is a #ponder("geometry.reflection")[reflection].
+  1. If $matbold(A) in.not SO(2)$, then $k$ is odd and hence $k = 1$. So $matbold(A) = matbold(S)_vb(v_1)$ is a #ponder("geometry.reflection")[reflection].
 
-  2. If $matbold(A) in SO(2)$, then $k$ is even, so unless $matbold(A) = matbold(I)$, we can write $matbold(A) = matbold(S)_bold(u) matbold(S)_bold(v)$ for some $bold(u), bold(v) in RR^2$ that are not parallel.
+  2. If $matbold(A) in SO(2)$, then $k$ is even, so unless $matbold(A) = matbold(I)$, we can write $matbold(A) = matbold(S)_vb(u) matbold(S)_vb(v)$ for some $vb(u), vb(v) in RR^2$ that are not parallel.
 
-    We claim that $matbold(A) = matbold(S)_bold(u) matbold(S)_bold(v)$ only fixes the origin. #fade[[Here, we define a #ponder("geometry.rotation")[rotation] to be an #ponder("algebra.orthogonal-group")[orthogonal transformation] that only fixes the origin.]] Indeed, for $bold(x) !=0$, suppose
+    We claim that $matbold(A) = matbold(S)_vb(u) matbold(S)_vb(v)$ only fixes the origin. #fade[[Here, we define a #ponder("geometry.rotation")[rotation] to be an #ponder("algebra.orthogonal-group")[orthogonal transformation] that only fixes the origin.]] Indeed, for $vb(x) !=0$, suppose
     $
-      matbold(S)_bold(u) matbold(S)_bold(v) (bold(x)) = bold(x) <=> matbold(S)_bold(v) bold(x) = matbold(S)_bold(u) bold(x).
+      matbold(S)_vb(u) matbold(S)_vb(v) (vb(x)) = vb(x) <=> matbold(S)_vb(v) vb(x) = matbold(S)_vb(u) vb(x).
     $
-    If $bold(x) - matbold(S)_bold(v) bold(x) != bold(0)$, then $bold(v)$ is parallel to $bold(x) - matbold(S)_bold(v) bold(x)$ and $bold(u)$ is parallel to $bold(x) - matbold(S)_bold(u) bold(x)$, so this implies that $bold(u)$ is parallel to $bold(v)$. #fade[[Otherwise $bold(x) - matbold(S)_bold(v) bold(x) = bold(0)$, so $bold(x) != bold(0)$ is fixed by $matbold(S)_bold(v)$ and hence also by $matbold(S)_bold(u)$; then the lines $P_bold(v)$ and $P_bold(u)$ in $RR^2$ both contain $bold(x)$ and so coincide, and again $bold(u)$ is parallel to $bold(v)$.]] $smash$
+    If $vb(x) - matbold(S)_vb(v) vb(x) != vb(0)$, then $vb(v)$ is parallel to $vb(x) - matbold(S)_vb(v) vb(x)$ and $vb(u)$ is parallel to $vb(x) - matbold(S)_vb(u) vb(x)$, so this implies that $vb(u)$ is parallel to $vb(v)$. #fade[[Otherwise $vb(x) - matbold(S)_vb(v) vb(x) = vb(0)$, so $vb(x) != vb(0)$ is fixed by $matbold(S)_vb(v)$ and hence also by $matbold(S)_vb(u)$; then the lines $P_vb(v)$ and $P_vb(u)$ in $RR^2$ both contain $vb(x)$ and so coincide, and again $vb(u)$ is parallel to $vb(v)$.]] $smash$
 
     Hence $matbold(A)$ only fixes the origin, and is therefore a #ponder("geometry.rotation")[rotation] about $O$.
 
@@ -416,13 +416,13 @@ Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflec
   If $matbold(A) in SO(3)$, the $matbold(A)$ is a #ponder("geometry.rotation")[rotation].
 ] <orthogonal-group-so3>
 #proof[
-  By @reflections-generate-on, $matbold(A)$ is a product of at most $3$ #ponder("geometry.reflection")[reflections]. Since $det matbold(A) = 1$, either $matbold(A) = matbold(I)$ or $matbold(A) = matbold(S)_bold(u) matbold(S)_bold(v)$ for some $bold(u), bold(v) in RR^3$ that are not parallel. Since $n=3$, $ P_bold(u) inter P_bold(v) = l $
-  where $l$ is a line through the origin. Since $P_bold(u)$ fixes $l$ pointwise and $P_bold(v)$ also fixes $l$ pointwise, their composition $matbold(A)$ also fixes $l$ pointwise. #fade[[We shall define a #ponder("geometry.rotation")[rotation] in $RR^3$ to be an #ponder("algebra.orthogonal-group")[orthogonal transformation] that fixes a line pointwise.]]
+  By @reflections-generate-on, $matbold(A)$ is a product of at most $3$ #ponder("geometry.reflection")[reflections]. Since $det matbold(A) = 1$, either $matbold(A) = matbold(I)$ or $matbold(A) = matbold(S)_vb(u) matbold(S)_vb(v)$ for some $vb(u), vb(v) in RR^3$ that are not parallel. Since $n=3$, $ P_vb(u) inter P_vb(v) = l $
+  where $l$ is a line through the origin. Since $P_vb(u)$ fixes $l$ pointwise and $P_vb(v)$ also fixes $l$ pointwise, their composition $matbold(A)$ also fixes $l$ pointwise. #fade[[We shall define a #ponder("geometry.rotation")[rotation] in $RR^3$ to be an #ponder("algebra.orthogonal-group")[orthogonal transformation] that fixes a line pointwise.]]
 
-  Also $matbold(S)_bold(u) matbold(S)_bold(v) bold(x) = bold(x) => matbold(S)_bold(u) bold(x)= matbold(S)_bold(v) bold(x)$, similar to @elements-of-o2, either
+  Also $matbold(S)_vb(u) matbold(S)_vb(v) vb(x) = vb(x) => matbold(S)_vb(u) vb(x)= matbold(S)_vb(v) vb(x)$, similar to @elements-of-o2, either
 
-  1. $bold(x) in l$, in which case $bold(x)$ is fixed by $matbold(A)$, or
-  2. $bold(u)$ is parallel to $bold(v)$. $smash$
+  1. $vb(x) in l$, in which case $vb(x)$ is fixed by $matbold(A)$, or
+  2. $vb(u)$ is parallel to $vb(v)$. $smash$
 
   Thus, $matbold(A)$ only fixes the line $l$ pointwise, and is therefore a #ponder("geometry.rotation")[rotation].
 ]

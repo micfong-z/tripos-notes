@@ -4,27 +4,27 @@
 = Legendre Transform
 
 #definition[Legendre Transform][
-  The Legendre transform of $f: D(f) subset.eq RR^n -> RR$ is
+  The *Legendre transform* of a function $f: dom f subset.eq RR^n -> RR$ is
   $
     f^*(vb(p)) := sup_(vb(x)) [vb(p) dot vb(x) - f(vb(x))]
   $
-  with $D(f^*) = {vb(p) in RR^n: "RHS" < oo}$.
+  with $dom f^* = {vb(p) in RR^n: "RHS" < oo}$.
 ]
 
 #proposition[
-  $f^*$ is convex.
+  $f^*$ is always convex.
 ]
 
 #proof[
-  Let $vb(p), vb(q) in D(f^*)$, and $t in (0, 1)$. Then
+  Let $vb(p), vb(q) in dom f^*$, and $t in (0, 1)$. Then
   $
     sup_(vb(x)) {[(1-t) vb(p) + t vb(q)] dot vb(x) - f(vb(x))} &= sup_vb(x) {(1-t) [vb(p) dot vb(x) - f(vb(x))] + t [vb(q) dot vb(x) - f(vb(x))]} \
     &<= (1-t) sup_vb(x) [vb(p) dot vb(x) - f(vb(x))] + t sup_vb(x) [vb(q) dot vb(x) - f(vb(x))]. \
   $
 
-  Note that RHS is finite, so LHS is also finite. Thus $(1-t) vb(p) + t vb(q) in D(f^*)$.
+  Note that RHS is finite, so LHS is also finite. Thus $(1-t) vb(p) + t vb(q) in dom f^*$.
 
-  Hence $D(f^*)$ is convex and
+  Hence $dom f^*$ is convex and
   $
     f^*((1-t) vb(p) + t vb(q)) <= (1-t) f^*(vb(p)) + t f^*(vb(q)).
   $
@@ -32,11 +32,11 @@
 ]
 
 #proposition[
-  If $f$ is convex, then so is $F_(vb(p))(x): f(vb(x)) - vb(p) dot vb(x)$.
+  If $f$ is convex, then so is $F_(vb(p))(vb(x)):= f(vb(x)) - vb(p) dot vb(x)$.
 ]
 
 #proof[
-  We have $D(F_vb(p)) = D(f)$. Moreover,
+  We have $dom F_vb(p) = dom f$. Moreover,
   $
     F_vb(p)((1-t) vb(x) + t vb(y)) & = f((1-t) vb(x) + t vb(y)) - vb(p) dot [(1-t) vb(x) + t vb(y)] \
                                    & <= (1-t) f(vb(x)) + t f(vb(y)) - vb(p) dot [(1-t) vb(x) + t vb(y)] \
@@ -46,7 +46,7 @@
 ]
 
 #corollary[
-  If $f$ is convex and differentiable at any stationary point, then $vb(p) dot vb(x) - f(vb(x))$ is a global maximum occuring at $vb(x)(vb(p))$ given by solving
+  If $f$ is convex and differentiable, then any stationary point of $vb(p) dot vb(x) - f(vb(x))$ is a global maximum occurring at $vb(x)(vb(p))$ given by solving
   $
     grad f(vb(x)) = vb(p).
   $
@@ -58,7 +58,7 @@
 
 ] <cor-legendre-transform-eq-3-1>
 
-#lecture-separator(lecture: 4, date: "2026-05-06")
+#lecture-separator(lecture: 3, date: "2026-05-06")
 
 #proposition[
   If $f$ is strictly convex then the solution of @cor-legendre-transform-eq-3-1 is unique.
@@ -69,17 +69,17 @@
 
   1. $f(x) = (1)/(2) a x^2$ with $a > 0$ is strictly convex. @cor-legendre-transform-eq-3-1 has a unique solution $x(p) = p/a$, and
     $
-      f^*(p) = p x(p) - f(x(p)) = p^2/(2a) quad "with" quad D(f^*) = RR.
+      f^*(p) = p x(p) - f(x(p)) = p^2/(2a) quad "with" quad dom f^* = RR.
     $
 
-  2. $f(v) = -sqrt(1-v^2)$ with $D(f) = (-1, 1)$ is strictly convex. @cor-legendre-transform-eq-3-1 has a unique solution $v(p) = p/sqrt(1+p^2)$, and
+  2. $f(v) = -sqrt(1-v^2)$ with $dom f = (-1, 1)$ is strictly convex. @cor-legendre-transform-eq-3-1 has a unique solution $v(p) = p/sqrt(1+p^2)$, and
     $
-      f^*(p) = p v(p) - f(v(p)) = sqrt(1+p^2) quad "with" quad D(f^*) = RR.
+      f^*(p) = p v(p) - f(v(p)) = sqrt(1+p^2) quad "with" quad dom f^* = RR.
     $
 
   3. $f = c x$ with $c > 0$ is convex but not strictly convex. @cor-legendre-transform-eq-3-1 has no solution for $p < c$, and infinitely many solutions for $p = c$. Thus
     $
-      f^*(p) = 0 quad "with" D(f^*) = {c}.
+      f^*(p) = 0 quad "with" dom f^* = {c}.
     $
 ]
 
@@ -91,8 +91,8 @@
   To determine $f^(* *)$, we need to find $f(vb(x))$ obeying $grad f^*(f(vb(x)))=vb(x)$. With $vb(x)(vb(p))$ given by @cor-legendre-transform-eq-3-1, we have
   $
     grad f^*(vb(p)) & = vb(p) dot vb(x)(vb(p)) - f(vb(x)(vb(p))) \
-    (∂ f^*)/(∂ p_i) & = x_i + p_j (∂ x_j)/(∂ p_i) - eval((∂f)/(∂ x_j))_(vb(x) = vb(x)(vb(p))) (∂ x_j)/(∂ p_i) \
-                    & = x_i + (p_j - eval(nabla_j f)_(vb(x) = vb(x)(vb(p)))) (∂ x_j)/(∂ p_i) \
+    pdv(f^*, p_i) & = x_i + p_j pdv(x_j, p_i) - eval(pdv(f, x_j))_(vb(x) = vb(x)(vb(p))) pdv(x_j, p_i) \
+                    & = x_i + (p_j - eval(nabla_j f)_(vb(x) = vb(x)(vb(p)))) pdv(x_j, p_i) \
                     & = x_i.
   $
   Therefore $grad f^*(vb(p)) = vb(x)(vb(p))$. Hence $vb(x)(vb(p)(vb(x))) = vb(x)$ #fade[[$f(vb(x))$ is the inverse of $vb(x)(vb(p))$]]. Thus,
@@ -135,9 +135,9 @@ where $k_B$ is the Boltzmann constant. The entropy is a measure of the number of
 If $E$ increases at a given $V$, then $S$ increases, since there are more ways to partition $E$ among the molecules. Therefore, $S$ is strictly increasing as a function of $E$. Hence, we can invert $S(E, V)$ to get $E(S, V)$.
 
 The *temperature* of a system is defined as
-$ T(S, V) = ((∂ E)/(∂ S))_V > 0. $ <eq-3-4a>
+$ T(S, V) = (pdv(E, S))_V > 0. $ <eq-3-4a>
 The *pressure* of a system is defined as
-$ P(S, V) = -((∂ E)/(∂ V))_S. $ <eq-3-4b>
+$ P(S, V) = -(pdv(E, V))_S. $ <eq-3-4b>
 
 Hence, the fundamental thermodynamic relation is
 $
@@ -153,7 +153,7 @@ $
 
 One can show that the stability of equilibrium state implies that $E$ is convex w.r.t. $S$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
 $
-  T = ((∂ E)/(∂ S))_V.
+  T = (pdv(E, S))_V.
 $
 
 Moreover,
@@ -166,7 +166,7 @@ $
 $
 Therefore,
 $
-  S = -((∂ F)/(∂ T))_V, quad P = -((∂ F)/(∂ V))_T.
+  S = -(pdv(F, T))_V, quad P = -(pdv(F, V))_T.
 $
 
 #fade[[$F$ is useful when considering a non-isolated system in thermal equilibrium with an environment at a fixed temperature $T$, _e.g._ gas in an uninsulated box.]]
@@ -176,22 +176,22 @@ $
   -H(S, P) = sup_V (-P V - E(S, V)).
 $
 One can use stability to argue that $E$ is convex w.r.t. $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
-$ P = -((∂ E)/(∂ V))_S. $
+$ P = -(pdv(E, V))_S. $
 Moreover,
 $ H(S, P) = E + P V $
 is called the *enthalpy* of the system. @eq-3-5 gives
 $ dif H = T dif S + V dif P. $ Therefore,
-$ T = ((∂ H)/(∂ S))_P, quad V = ((∂ H)/(∂ P))_S. $
+$ T = (pdv(H, S))_P, quad V = (pdv(H, P))_S. $
 Finally, take the Legendre transform of $E(S, V)$ with respect to both $S$ and $V$ with parameters $T$ and $-P$. Call this $-G(T, P)$. Then
 $
   -G(T, P) = sup_(S, V) {T S - P V - E(S, V)}.
 $
 By stability, $E$ is convex w.r.t. both $S$ and $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
-$ T = ((∂ E)/(∂ S))_V, quad P = -((∂ E)/(∂ V))_S. $
+$ T = (pdv(E, S))_V, quad P = -(pdv(E, V))_S. $
 Moreover,
 $ G(T, P) = E - T S + P V $
 is called the *Gibbs free energy* of the system. @eq-3-5 gives
 $ dif G = -S dif T + V dif P. $ Therefore,
-$ S = -((∂ G)/(∂ T))_P, quad V = ((∂ G)/(∂ P))_T. $
+$ S = -(pdv(G, T))_P, quad V = (pdv(G, P))_T. $
 
 $E, F, G, H$ are called the *thermodynamic potentials* of the system.

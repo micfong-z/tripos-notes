@@ -1,1 +1,1 @@
-The *directional derivative* of $f$ in the direction of the unit vector $bold(hat(s))$ is $(dif f)/(dif s) = bold(hat(s)) dot bold(nabla) f = cos theta abs(bold(nabla) f)$, where $theta$ is the angle between $bold(hat(s))$ and $bold(nabla) f$: the rate of change of $f(x, y)$ in the direction of $bold(hat(s))$.
+The *directional derivative* of $f$ in the direction of the unit vector $vu(s)$ is $dv(f, s) = vu(s) dot grad f = cos theta abs(grad f)$, where $theta$ is the angle between $vu(s)$ and $grad f$: the rate of change of $f(x, y)$ in the direction of $vu(s)$.

@@ -5,7 +5,7 @@
 In this course, we try to solve problems of the form
 
 $
-  "minimise functions" markul(f(vb(x)), #<obj-fn>) "subject to contraints" markul(vb(h)(vb(x))=bold(b), #<func-constraint>) "and" markul(vb(x) in cal(X), #<region-constraint>),
+  "minimise functions" markul(f(vb(x)), #<obj-fn>) "subject to contraints" markul(vb(h)(vb(x))=vb(b), #<func-constraint>) "and" markul(vb(x) in cal(X), #<region-constraint>),
   #annot(<obj-fn>, "objective function", pos: bottom + left, dy: 0.5em)
   #annot(<func-constraint>, "functional constraint", pos: bottom + left, dy: 0.5em, dx: -2em)
   #annot(<region-constraint>, "regional constraint", pos: bottom + left, dy: 0.5em)
@@ -15,15 +15,15 @@ $
   vb(h)(vb(x)) = vec(y_1, y_2, dots.v, y_m).
 $
 
-We can also have inequality constraints $vb(h)(vb(x)) <= bold(b)$ #fade[[which means $y_i <= b_i$ for all $i$]].
+We can also have inequality constraints $vb(h)(vb(x)) <= vb(b)$ #fade[[which means $y_i <= b_i$ for all $i$]].
 
 $vb(x)^*$ which solves the problem is called the *optimal solution*, and $f(vb(x)^*)$ is the *optimal value*.
 $
-  cal(X)(bold(b)) = {vb(x): vb(h)(vb(x)) = bold(b), vb(x) in cal(X)}
+  cal(X)(vb(b)) = {vb(x): vb(h)(vb(x)) = vb(b), vb(x) in cal(X)}
 $
 is called the *feasible set*.
 
-We can always convert an inequality constraint to an equality constraint. Note that $vb(h)(vb(x)) <= bold(b)$ is the same as $vb(h)(vb(x)) + vb(s) = bold(b)$, subject to $s_i >= 0$. The extra variables $vb(s)$ are called *slack variables*.
+We can always convert an inequality constraint to an equality constraint. Note that $vb(h)(vb(x)) <= vb(b)$ is the same as $vb(h)(vb(x)) + vb(s) = vb(b)$, subject to $s_i >= 0$. The extra variables $vb(s)$ are called *slack variables*.
 
 = Convex Optimisation
 
@@ -64,7 +64,7 @@ Intuitively, a function is convex iff the tangent line at any point is below the
 #theorem[First-Order Condition for Convexity][
   A differentiable function $f: RR^n -> RR$ is convex iff for all $vb(x), vb(y) in RR^n$,
   $
-    f(vb(y)) >= f(vb(x)) + (vb(y)-vb(x))^tp grad f(vb(x))
+    f(vb(y)) >= f(vb(x)) + (vb(y)-vb(x))^TT grad f(vb(x))
   $
 ] <thm-first-order-condition-for-convexity>
 
@@ -90,17 +90,17 @@ Intuitively, a function is convex iff the tangent line at any point is below the
   To resolve the general case, set $g(t) = f((1-t) vb(x) + t vb(y))$. $g$ is convex, and $g: [0, 1] -> RR$. Using the 1D case, we have
   $
         g(1) & >= g(0) + (1-0) g'(0) \
-    f(vb(y)) & >= f(vb(x)) + (vb(y)-vb(x))^tp grad f(vb(x)).
+    f(vb(y)) & >= f(vb(x)) + (vb(y)-vb(x))^TT grad f(vb(x)).
   $
 
   #fade[[$arrow.double.l$]] Set $vb(x)_t = (1-t) vb(x) + t vb(y)$. First-order conditions imply
   $
-    f(vb(x)) & >= f(vb(x)_t) + (vb(x) - vb(x)_t)^tp grad f(vb(x)_t) \
-    f(vb(y)) & >= f(vb(x)_t) + (vb(y) - vb(x)_t)^tp grad f(vb(x)_t).
+    f(vb(x)) & >= f(vb(x)_t) + (vb(x) - vb(x)_t)^TT grad f(vb(x)_t) \
+    f(vb(y)) & >= f(vb(x)_t) + (vb(y) - vb(x)_t)^TT grad f(vb(x)_t).
   $
   Multiplying the first inequality by $(1-t)$ and the second by $t$ and adding them gives
   $
-    (1-t) f(vb(x)) + t f(vb(y)) & >= f(vb(x)_t) + ((1-t)(vb(x) - vb(x)_t) + t (vb(y) - vb(x)_t))^tp grad f(vb(x)_t) \
+    (1-t) f(vb(x)) + t f(vb(y)) & >= f(vb(x)_t) + ((1-t)(vb(x) - vb(x)_t) + t (vb(y) - vb(x)_t))^TT grad f(vb(x)_t) \
                                 & = f(vb(x)_t).
   $
 ]
@@ -123,7 +123,7 @@ $
 
 where $z$ is some point between $x$ and $y$. In $n$ dimensions, we have
 $
-  f(vb(y)) = f(vb(x)) + (vb(y)-vb(x))^tp grad f(vb(x)) + ((vb(y)-vb(x))^tp hess f(vb(z)) (vb(y)-vb(x)))/2
+  f(vb(y)) = f(vb(x)) + (vb(y)-vb(x))^TT grad f(vb(x)) + ((vb(y)-vb(x))^TT hess f(vb(z)) (vb(y)-vb(x)))/2
 $
 where $vb(z)$ is some point on the line segment between $vb(x)$ and $vb(y)$.
 
@@ -134,14 +134,14 @@ where $vb(z)$ is some point on the line segment between $vb(x)$ and $vb(y)$.
 ]
 
 #remark[
-  We say a symmetric matrix $matbold(A)$ is positive semidefinite, _i.e._ $matbold(A) succ.eq 0$, if $vb(x)^tp matbold(A) vb(x) >= 0$ for all $vb(x)$. Equivalently, all eigenvalues of $matbold(A)$ are non-negative.
+  We say a symmetric matrix $matbold(A)$ is positive semidefinite, _i.e._ $matbold(A) succ.eq 0$, if $vb(x)^TT matbold(A) vb(x) >= 0$ for all $vb(x)$. Equivalently, all eigenvalues of $matbold(A)$ are non-negative.
 ]
 
 #proof[
   We will only prove one side. For any $vb(x)$ and $vb(y)$ we have, by intermediate value theorem, a point $vb(z)$ such that
   $
-    f(vb(y)) &= f(vb(x)) + grad f(vb(x))^tp (vb(y)-vb(x)) + underbracket(((vb(y)-vb(x))^tp hess f(vb(z)) (vb(y)-vb(x)))/2, >=0 "since" hess f(vb(z)) succ.eq 0)\
-    &>= f(vb(x)) + grad f(vb(x))^tp (vb(y)-vb(x)).
+    f(vb(y)) &= f(vb(x)) + grad f(vb(x))^TT (vb(y)-vb(x)) + underbracket(((vb(y)-vb(x))^TT hess f(vb(z)) (vb(y)-vb(x)))/2, >=0 "since" hess f(vb(z)) succ.eq 0)\
+    &>= f(vb(x)) + grad f(vb(x))^TT (vb(y)-vb(x)).
   $
 
   This means the first-order condition for convexity is satisfied, so $f$ is convex.
@@ -154,7 +154,7 @@ where $vb(z)$ is some point on the line segment between $vb(x)$ and $vb(y)$.
 
 Observe that
 $
-  f(vb(y)) approx f(vb(x)) + grad f(vb(x))^tp (vb(y)-vb(x)) .
+  f(vb(y)) approx f(vb(x)) + grad f(vb(x))^TT (vb(y)-vb(x)) .
 $
 If we have $vb(y) - vb(x) = -grad f(vb(x)) times epsilon$, where $epsilon > 0$ is a small step size, then this gives us an update rule
 $
@@ -206,12 +206,12 @@ Therefore, we have the *gradient descent* algorithm as follows:
 #theorem[
   If $f$ is $beta$-smooth, then
   $
-    f(vb(y)) <= f(vb(x)) + grad f(vb(x))^tp (vb(y) - vb(x)) + (beta)/(2) norm(vb(y) - vb(x))^2.
+    f(vb(y)) <= f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (beta)/(2) norm(vb(y) - vb(x))^2.
   $
 
   If $f$ is $alpha$-strongly convex, then
   $
-    f(vb(y)) >= f(vb(x)) + grad f(vb(x))^tp (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2.
+    f(vb(y)) >= f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2.
   $
 ] <thm-beta-smoothness-strong-convexity>
 
@@ -224,16 +224,16 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
 #proof[
   Using Taylor series expansion,
   $
-    f(vb(y)) = f(vb(x)) + grad f(vb(x))^tp (vb(y) - vb(x)) + (1)/(2) (vb(y) - vb(x))^tp hess f(vb(z)) (vb(y) - vb(x)),
+    f(vb(y)) = f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (1)/(2) (vb(y) - vb(x))^TT hess f(vb(z)) (vb(y) - vb(x)),
   $
   where $vb(z)$ is some point on the line segment between $vb(x)$ and $vb(y)$. Observe that
 
   $
-    (1)/(2) (vb(y) - vb(x))^tp alpha matbold(I) (vb(y) - vb(x)) <=
-    (1)/(2) (vb(y) - vb(x))^tp hess f(vb(z)) (vb(y) - vb(x)) <=
-    (1)/(2) (vb(y) - vb(x))^tp beta matbold(I) (vb(y) - vb(x))\
+    (1)/(2) (vb(y) - vb(x))^TT alpha matbold(I) (vb(y) - vb(x)) <=
+    (1)/(2) (vb(y) - vb(x))^TT hess f(vb(z)) (vb(y) - vb(x)) <=
+    (1)/(2) (vb(y) - vb(x))^TT beta matbold(I) (vb(y) - vb(x))\
     (alpha)/(2) norm(vb(y) - vb(x))^2 <=
-    (1)/(2) (vb(y) - vb(x))^tp hess f(vb(z)) (vb(y) - vb(x)) <=
+    (1)/(2) (vb(y) - vb(x))^TT hess f(vb(z)) (vb(y) - vb(x)) <=
     (beta)/(2) norm(vb(y) - vb(x))^2.
   $
   Hence the result follows.
@@ -278,12 +278,12 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
 #proof[
   By @thm-beta-smoothness-strong-convexity,
   $
-    min_vb(y) f(vb(y)) & >= min_vb(y) (f(vb(x)) + grad f(vb(x))^tp (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2) \
-            f(vb(x^*)) & >= min_vb(y) (f(vb(x)) + grad f(vb(x))^tp (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2).
+    min_vb(y) f(vb(y)) & >= min_vb(y) (f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2) \
+            f(vb(x^*)) & >= min_vb(y) (f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2).
   $
   To find the minimum on the RHS, differentiating w.r.t. $vb(y)$ gives,
   $
-    grad_y (f(vb(x)) + grad f(vb(x))^tp (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2) = grad f(vb(x)) + alpha (vb(y) - vb(x)).
+    grad_y (f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2) = grad f(vb(x)) + alpha (vb(y) - vb(x)).
   $
   Setting this to zero gives $vb(y) = vb(x) - (1)/(alpha) grad f(vb(x))$. Substituting this back gives the result.
 ]
@@ -299,7 +299,7 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
 ]
 
 #remark[
-  Taking $T >= (beta)/(alpha) log((f(vb(x_0)) - f(vb(x^*)))/(epsilon))$ gives us $f(vb(x)_T) - f(vb(x^*)) <= epsilon$, so the relationship between the number of iterations and the error is logarithmic, _i.e._ we need $O(log (1/epsilon))$ iterations to get an error of at most $epsilon$.
+  Taking $T >= (beta)/(alpha) log((f(vb(x_0)) - f(vb(x^*)))/(epsilon))$ gives us $f(vb(x)_T) - f(vb(x^*)) <= epsilon$, so the relationship between the number of iterations and the error is logarithmic, _i.e._ we need $Order(log (1/epsilon))$ iterations to get an error of at most $epsilon$.
 ]
 
 #proof[
@@ -325,7 +325,7 @@ Nonetheless, this algorithm can be too conservative, as illustrated in the follo
   $
   Then since
   $
-    mat(1, 0; 0, 1) prec.eq mat(1, 0; 0, 100) prec.eq mat(100, 0; 0, 100),
+    imat(2, fill: 0) prec.eq mat(1, 0; 0, 100) prec.eq mat(100, 0; 0, 100),
   $
   we have $alpha = 1$ and $beta = 100$, so the convergence rate is $1 - (alpha)/(beta) = 0.99$, which is quite slow.
 ]
@@ -342,11 +342,11 @@ Therefore, for the two reasons above, we may consider approximating $f$ directly
 
 The second-order Taylor expansion of $f$ at $vb(x)$ is
 $
-  f(vb(y)) approx f(vb(x)) + grad f(vb(x))^tp (vb(y) - vb(x)) + ((vb(y) - vb(x))^tp hess f(vb(x)) (vb(y) - vb(x)))/2.
+  f(vb(y)) approx f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + ((vb(y) - vb(x))^TT hess f(vb(x)) (vb(y) - vb(x)))/2.
 $
 Suppose that we change the update rule to
 $
-  vb(x)_(t+1) = argmin_vb(y) [f(vb(x)_t) + grad f(vb(x)_t)^tp (vb(y) - vb(x)_t) + ((vb(y) - vb(x)_t)^tp hess f(vb(x)_t) (vb(y) - vb(x)_t))/2].
+  vb(x)_(t+1) = argmin_vb(y) [f(vb(x)_t) + grad f(vb(x)_t)^TT (vb(y) - vb(x)_t) + ((vb(y) - vb(x)_t)^TT hess f(vb(x)_t) (vb(y) - vb(x)_t))/2].
 $
 Differentiating the expression inside the brackets w.r.t. $vb(y)$ gives
 $
@@ -388,7 +388,7 @@ $
 
 #remark[
 
-  1. If $norm(grad f(vb(x_0)))_2 < (2 alpha^2)/(ell)$, then the error decreases doubly-exponentially, so we only need $O(log log (1/epsilon))$ iterations to get an error of at most $epsilon$.
+  1. If $norm(grad f(vb(x_0)))_2 < (2 alpha^2)/(ell)$, then the error decreases doubly-exponentially, so we only need $Order(log log (1/epsilon))$ iterations to get an error of at most $epsilon$.
 
   2. For this method, we will need to compute the inverse of the Hessian, which can be computationally expensive for many parameters.
 
@@ -400,7 +400,7 @@ $
 
 Suppose we want to solve the following problem:
 $
-  "minimise" f(vb(x)) "subject to" vb(a_i)^tp vb(x) <= b_i "for all" 1<=i<=m.
+  "minimise" f(vb(x)) "subject to" vb(a_i)^TT vb(x) <= b_i "for all" 1<=i<=m.
 $
 
 #align(center)[
@@ -410,7 +410,7 @@ $
 This can be re-worded as an unconstrained optimisation problem as follows:
 
 $
-  & "minimise"   && f(vb(x)) + sum_(i=1)^m phi(vb(a_i)^tp vb(x) - b_i) \
+  & "minimise"   && f(vb(x)) + sum_(i=1)^m phi(vb(a_i)^TT vb(x) - b_i) \
   & "subject to" && vb(x) in RR^n \
   & "where"      && phi(x) = cases(
                       0 & "if" x <= 0,
@@ -428,18 +428,18 @@ However, this function is badly behaved at the boundaries, so we can approximate
 
 However, since we wish to minimise $f(vb(x))$ without the extra term, we can consider a parameter $t > 0$ and the following problem instead:
 $
-  & "minimise"   && t f(vb(x)) - sum_(i=1)^m log(-vb(a_i)^tp vb(x) + b_i) \
+  & "minimise"   && t f(vb(x)) - sum_(i=1)^m log(-vb(a_i)^TT vb(x) + b_i) \
   & "subject to" && vb(x) in RR^n.
 $
 
 #listing[Barrier Method][
-  1. Find a strictly feasible point $vb(x)$ such that $vb(a_i)^tp vb(x) < b_i$ for all $i$ and set $t>0, alpha > 1$.
+  1. Find a strictly feasible point $vb(x)$ such that $vb(a_i)^TT vb(x) < b_i$ for all $i$ and set $t>0, alpha > 1$.
 
   2. Repeat the following:
 
     1. Compute $vb(x^*)(t)$ by minimising
       $
-        t f(x) - sum_(i=1)^m log(-(vb(a_i)^tp vb(x) - b_i))
+        t f(x) - sum_(i=1)^m log(-(vb(a_i)^TT vb(x) - b_i))
       $
       using Newton's method with initial point $vb(x)$.
     2. Update $vb(x) := vb(x^*)(t)$ and $t := alpha t$.

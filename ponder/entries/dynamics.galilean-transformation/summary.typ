@@ -1,1 +1,1 @@
-$ bold(x)' = matbold(R) bold(x) + bold(k) + bold(w) t $ with $matbold(R) in O(3)$ a rotation and/or a reflection, $bold(k) in RR^3$ a constant translation, and $bold(w) in RR^3$ a constant velocity called a boost.
+$ vb(x)' = matbold(R) vb(x) + vb(k) + vb(w) t $ with $matbold(R) in O(3)$ a rotation and/or a reflection, $vb(k) in RR^3$ a constant translation, and $vb(w) in RR^3$ a constant velocity called a boost.

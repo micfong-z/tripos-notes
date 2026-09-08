@@ -8,9 +8,9 @@ Independence factorises the transform, $EE[ee^(theta S_n \/ sqrt(n))] = (m(theta
 $
   m(theta \/ sqrt(n)) = 1 + theta^2/(2 n) + EE[sum_(k >= 3) (theta X_1)^k/((sqrt(n))^k k!)].
 $
-The tail satisfies $abs(EE[sum_(k >= 3) (theta X_1)^k/(k!)]) = o(abs(theta)^2)$ as $theta -> 0$: for $abs(theta) < delta \/ 2$ it is bounded using $abs(theta X_1)^3 <= C abs(theta)^3 ee^(delta abs(X_1) \/ 2)$ by a constant multiple of $abs(theta)^3 EE[ee^(delta abs(X_1))] < oo$. Hence
+The tail satisfies $abs(EE[sum_(k >= 3) (theta X_1)^k/(k!)]) = order(abs(theta)^2)$ as $theta -> 0$: for $abs(theta) < delta \/ 2$ it is bounded using $abs(theta X_1)^3 <= C abs(theta)^3 ee^(delta abs(X_1) \/ 2)$ by a constant multiple of $abs(theta)^3 EE[ee^(delta abs(X_1))] < oo$. Hence
 $
-  m(theta \/ sqrt(n)) = 1 + theta^2/(2 n) + o(theta^2 \/ n)
+  m(theta \/ sqrt(n)) = 1 + theta^2/(2 n) + order(theta^2 \/ n)
   quad "and" quad
   (m(theta \/ sqrt(n)))^n -> exp(theta^2/2),
 $

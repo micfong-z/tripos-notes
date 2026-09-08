@@ -1,2 +1,2 @@
-$abs(bold(x)+bold(y))^2 = (bold(x)+bold(y)) dot (bold(x)+bold(y)) = abs(bold(x))^2 + abs(bold(y))^2 + 2 bold(x) dot bold(y) <= abs(bold(x))^2 + abs(bold(y))^2 + 2 abs(bold(x)) abs(bold(y)) = (abs(bold(x)) + abs(bold(y)))^2,$
+$abs(vb(x)+vb(y))^2 = (vb(x)+vb(y)) dot (vb(x)+vb(y)) = abs(vb(x))^2 + abs(vb(y))^2 + 2 vb(x) dot vb(y) <= abs(vb(x))^2 + abs(vb(y))^2 + 2 abs(vb(x)) abs(vb(y)) = (abs(vb(x)) + abs(vb(y)))^2,$
 where the inequality is Cauchy-Schwarz. Taking square roots gives the result.

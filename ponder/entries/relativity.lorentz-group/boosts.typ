@@ -1,4 +1,4 @@
-Fixing $(bold(x), bold(x)) = k$, a Lorentz transformation maps $bold(x)$ along the same branch of the hyperbola. Writing $matbold(M)(theta) = (1)/(sqrt(1 - (tanh theta)^2)) mat(1, tanh theta; tanh theta, 1)$ and setting $v := tanh theta in (-1, 1)$, renaming $x_0 -> t$ and $x_1 -> x$ gives
+Fixing $iprod(vb(x), vb(x)) = k$, a Lorentz transformation maps $vb(x)$ along the same branch of the hyperbola. Writing $matbold(M)(theta) = (1)/(sqrt(1 - (tanh theta)^2)) mat(1, tanh theta; tanh theta, 1)$ and setting $v := tanh theta in (-1, 1)$, renaming $x_0 -> t$ and $x_1 -> x$ gives
 
 $ t' = (1)/(sqrt(1 - v^2)) (t + v x), quad x' = (1)/(sqrt(1 - v^2)) (x + v t): $
 

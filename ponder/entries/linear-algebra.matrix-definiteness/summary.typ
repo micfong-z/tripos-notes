@@ -1,1 +1,1 @@
-A real symmetric matrix $matbold(H)$ is *positive definite* when $bold(x)^tp matbold(H) bold(x) > 0 quad forall bold(x) != bold(0)$, *negative definite* when $bold(x)^tp matbold(H) bold(x) < 0 quad forall bold(x) != bold(0)$, and *indefinite* otherwise.
+A real symmetric matrix $matbold(H)$ is *positive definite* when $vb(x)^TT matbold(H) vb(x) > 0 quad forall vb(x) != vb(0)$, *negative definite* when $vb(x)^TT matbold(H) vb(x) < 0 quad forall vb(x) != vb(0)$, and *indefinite* otherwise.

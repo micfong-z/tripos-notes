@@ -1,1 +1,1 @@
-The *Wronskian* of ${y_i (x)}$ is $W(x) = det[bold(Y)_1 dots.v bold(Y)_n]$, the determinant of the fundamental matrix.
+The *Wronskian* of ${y_i (x)}$ is $W(x) = det[vb(Y)_1 dots.v vb(Y)_n]$, the determinant of the fundamental matrix.

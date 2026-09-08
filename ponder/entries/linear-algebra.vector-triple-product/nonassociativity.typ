@@ -1,2 +1,2 @@
 The vector triple product is not associative:
-$ bold(a) times (bold(b) times bold(c)) = (bold(a) dot bold(c)) bold(b) - (bold(a) dot bold(b)) bold(c), quad quad (bold(a) times bold(b)) times bold(c) = (bold(a) dot bold(c)) bold(b) - (bold(b) dot bold(c)) bold(a). $
+$ vb(a) times (vb(b) times vb(c)) = (vb(a) dot vb(c)) vb(b) - (vb(a) dot vb(b)) vb(c), quad quad (vb(a) times vb(b)) times vb(c) = (vb(a) dot vb(c)) vb(b) - (vb(b) dot vb(c)) vb(a). $

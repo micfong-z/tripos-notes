@@ -18,7 +18,7 @@ $ <problem-a>
 
 Consider the Lagrangian function
 $
-  lagr(vb(x), vb(lambda)) = f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(b)).
+  lagr(vb(x), vb(lambda)) = f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b)).
 $
 We can then consider the problem
 $
@@ -40,8 +40,8 @@ $
 
   We are left to show the reverse inequality. We have
   $
-    min_(vb(x) in cal(X)(vb(b))) f(vb(x)) &= min_(vb(x) in cal(X)(vb(b)))f(vb(x)) - vb(lambda)^*^tp (vb(h)(vb(x)) - vb(b)) quad &"since" vb(h)(vb(x)) = vb(b) "for all" vb(x) in cal(X)(vb(b))\
-    &>= min_(vb(x) in cal(X)) underbracket(f(vb(x)) - vb(lambda)^*^tp (vb(h)(vb(x)) - vb(b)), lagr(vb(x), vb(lambda)^*)) quad &"since" cal(X) supset.eq cal(X)(vb(b))\
+    min_(vb(x) in cal(X)(vb(b))) f(vb(x)) &= min_(vb(x) in cal(X)(vb(b)))f(vb(x)) - vb(lambda)^*^TT (vb(h)(vb(x)) - vb(b)) quad &"since" vb(h)(vb(x)) = vb(b) "for all" vb(x) in cal(X)(vb(b))\
+    &>= min_(vb(x) in cal(X)) underbracket(f(vb(x)) - vb(lambda)^*^TT (vb(h)(vb(x)) - vb(b)), lagr(vb(x), vb(lambda)^*)) quad &"since" cal(X) supset.eq cal(X)(vb(b))\
     &= lagr(vb(x)^*, vb(lambda)^*) quad &"since" (vb(x)^*, vb(lambda)^*) "is a minimiser of" lagr "over" cal(X) times RR^m\
     &= f(vb(x)^*) quad &"since" vb(h)(vb(x)^*) = vb(b).
   $
@@ -86,7 +86,7 @@ $
   $
   So we have $lambda_1 = -1/sqrt(2)$ and $x_3 = 1 - 2sqrt(2)$. Hence, we have found a solution:
   $
-    vb(x)^* = (sqrt(2), sqrt(2), 1 - 2sqrt(2)) quad "and" vb(lambda)^* = (-1/sqrt(2), 1).
+    vb(x)^* = vecrow(sqrt(2), sqrt(2), 1 - 2sqrt(2)) quad "and" vb(lambda)^* = vecrow(-1/sqrt(2), 1).
   $
   By @theorem-lagrange-sufficiency[Lagrange Sufficiency Theorem],  $vb(x)^*$ is a solution to the original problem.
 ]
@@ -111,7 +111,7 @@ We can now generalise this method to problems of the form
 
   2. Construct the Lagrangian
     $
-      lagr(vb(x), vb(s), vb(lambda)) = f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) + vb(s) - vb(b)).
+      lagr(vb(x), vb(s), vb(lambda)) = f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) + vb(s) - vb(b)).
     $
   3. Let
     $
@@ -130,9 +130,9 @@ We can now generalise this method to problems of the form
 
 
     #remark[
-      We can simplify the search by noting *complementary slackness.* With $ lagr(vb(x), vb(s), vb(lambda)) = f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x))- vb(b)) - vb(lambda)^tp vb(s), $ we must have $lambda_i <= 0$ or else we can choose components of $vb(s)$ to be arbitrarily large and hence $lagr(vb(x), vb(s), vb(lambda)) -> -oo$. Moreover, if $lambda_i < 0$, then we must have $s_i = 0$.
+      We can simplify the search by noting *complementary slackness.* With $ lagr(vb(x), vb(s), vb(lambda)) = f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x))- vb(b)) - vb(lambda)^TT vb(s), $ we must have $lambda_i <= 0$ or else we can choose components of $vb(s)$ to be arbitrarily large and hence $lagr(vb(x), vb(s), vb(lambda)) -> -oo$. Moreover, if $lambda_i < 0$, then we must have $s_i = 0$.
 
-      As a result, we must have $vb(lambda)^*^tp vb(s)^* = 0$, which is the complementary slackness condition. _i.e._ given conditions $h(vb(x))_i <= b_i$ and $lambda_i <= 0$, at most one of the two inequalities can be strict; they may also both be tight.
+      As a result, we must have $vb(lambda)^*^TT vb(s)^* = 0$, which is the complementary slackness condition. _i.e._ given conditions $h(vb(x))_i <= b_i$ and $lambda_i <= 0$, at most one of the two inequalities can be strict; they may also both be tight.
     ]
 
     The usual method to do this is as follows:
@@ -223,7 +223,7 @@ $ <problem-b>
 #remark[
   For every fixed $vb(x)$, the Lagrangian is linear in $vb(lambda)$:
   $
-    lagr(vb(x), lambda) = f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(b)).
+    lagr(vb(x), lambda) = f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b)).
   $
 
   #exercise[
@@ -244,8 +244,8 @@ $ <problem-b>
   For any $vb(lambda) in Lambda$ and $vb(x) in cal(X)(vb(b))$,
   $
     f(vb(x)) &>= min_(vb(x) in cal(X)(vb(b))) f(vb(x))\
-    &= min_(vb(x) in cal(X)(vb(b))) f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(b)) quad &"since" vb(h)(vb(x)) = vb(b) "for all" vb(x) in cal(X)(vb(b))\
-    &>= min_(vb(x) in cal(X)) f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(b)) quad &"since" cal(X) supset.eq cal(X)(vb(b))\
+    &= min_(vb(x) in cal(X)(vb(b))) f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b)) quad &"since" vb(h)(vb(x)) = vb(b) "for all" vb(x) in cal(X)(vb(b))\
+    &>= min_(vb(x) in cal(X)) f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b)) quad &"since" cal(X) supset.eq cal(X)(vb(b))\
     &= min_(vb(x) in cal(X)) lagr(vb(x), vb(lambda))\
     &= g(vb(lambda)).
   $
@@ -262,8 +262,8 @@ $ <problem-b>
 
   Note that
   $
-    g(vb(lambda)^*) &= min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^*^tp (vb(h)(vb(x)) - vb(b)))\
-    &= f(vb(x)^*) - vb(lambda)^*^tp (vb(h)(vb(x)^*) - vb(b)) quad &"since" vb(x)^* = argmin_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)^*)\
+    g(vb(lambda)^*) &= min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^*^TT (vb(h)(vb(x)) - vb(b)))\
+    &= f(vb(x)^*) - vb(lambda)^*^TT (vb(h)(vb(x)^*) - vb(b)) quad &"since" vb(x)^* = argmin_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)^*)\
     &= f(vb(x)^*) quad &"since" vb(h)(vb(x)^*) = vb(b).
   $
 ]
@@ -278,7 +278,7 @@ $ <problem-b>
 #definition[Supporting hyperplane][
   A function $phi: RR^m -> RR$ is said to have a *supporting hyperplane* at a point $vb(b) in RR^m$ if there exists $vb(lambda) in RR^m$ such that for all $vb(c) in RR^m$,
   $
-    phi(vb(c)) >= phi(vb(b)) + vb(lambda)^tp (vb(c) - vb(b)).
+    phi(vb(c)) >= phi(vb(b)) + vb(lambda)^TT (vb(c) - vb(b)).
   $
 
   #fade[[This is analogous to @thm-first-order-condition-for-convexity[First Order Condition for Convexity]. We are effectively saying that the function $phi$ has a tangent that is below the function at the point $vb(b)$.]]
@@ -321,36 +321,36 @@ $ <problem-b>
 
   #fade[[$arrow.double.l$]] Suppose $phi$ has a supporting hyperplane $vb(lambda)$ at $vb(b)$. This means
   $
-    phi(vb(c)) >= phi(vb(b)) + vb(lambda)^tp (vb(c) - vb(b)) quad "for all" vb(c) in RR^m.
+    phi(vb(c)) >= phi(vb(b)) + vb(lambda)^TT (vb(c) - vb(b)) quad "for all" vb(c) in RR^m.
   $
   Then we have
   $
     g(vb(lambda)) & =min_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)) \
-    & = min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(b))) \
-    & = min_(vb(c) in RR^m) (min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))- vb(lambda)^tp (vb(c) - vb(b)))).
+    & = min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b))) \
+    & = min_(vb(c) in RR^m) (min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(c))- vb(lambda)^TT (vb(c) - vb(b)))).
   $
   Note that
   $
-    min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))) = min_(vb(x) in cal(X)(vb(c))) f(vb(x)) = phi(vb(c)).
+    min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(c))) = min_(vb(x) in cal(X)(vb(c))) f(vb(x)) = phi(vb(c)).
   $
   So
   $
-    g(vb(lambda)) = min_(vb(c) in RR^m) (phi(vb(c)) - vb(lambda)^tp (vb(c) - vb(b))) >= phi(vb(b)).
+    g(vb(lambda)) = min_(vb(c) in RR^m) (phi(vb(c)) - vb(lambda)^TT (vb(c) - vb(b))) >= phi(vb(b)).
   $
   By @theorem-weak-duality[Weak Duality Theorem], we have $phi(vb(b)) = g(vb(lambda))$. Hence, strong duality holds.
 
   #fade[[$=>$]] Suppose $g(vb(lambda)) = phi(vb(b))$ for some $vb(lambda)$. Then
   $
     phi(vb(b)) &= g(vb(lambda))\
-    &= min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(b)))\
-    & = min_(vb(c) in RR^m) (min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))- vb(lambda)^tp (vb(c) - vb(b)))).
+    &= min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b)))\
+    & = min_(vb(c) in RR^m) (min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(c))- vb(lambda)^TT (vb(c) - vb(b)))).
   $
   Note that
   $
-    min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^tp (vb(h)(vb(x)) - vb(c))) = min_(vb(x) in cal(X)(vb(c))) f(vb(x)) = phi(vb(c)).
+    min_(vb(x) in cal(X)(vb(c))) (f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(c))) = min_(vb(x) in cal(X)(vb(c))) f(vb(x)) = phi(vb(c)).
   $
   Hence we have
   $
-    phi(vb(b)) <= phi(vb(c)) - vb(lambda)^tp (vb(c) - vb(b)) quad "for all" vb(c) in RR^m.
+    phi(vb(b)) <= phi(vb(c)) - vb(lambda)^TT (vb(c) - vb(b)) quad "for all" vb(c) in RR^m.
   $
 ]

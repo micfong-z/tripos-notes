@@ -276,7 +276,7 @@ The #ponder("probability.normal-distribution")[normal distribution] is universal
 
   #claim[
     $
-      abs(EE[sum_(k>=3) (theta X_1)^k/ (k!)]) = o(abs(theta)^(2)) quad "as" theta -> 0.
+      abs(EE[sum_(k>=3) (theta X_1)^k/ (k!)]) = order(abs(theta)^(2)) quad "as" theta -> 0.
     $
 
   ]
@@ -300,14 +300,14 @@ The #ponder("probability.normal-distribution")[normal distribution] is universal
     $
     So
     $
-      abs(EE[sum_(k>=3) (theta X_1)^k/ (k!)]) <= C' dot abs(theta)^3 = o(abs(theta)^2) quad "as" theta -> 0
+      abs(EE[sum_(k>=3) (theta X_1)^k/ (k!)]) <= C' dot abs(theta)^3 = order(abs(theta)^2) quad "as" theta -> 0
     $
     where $C' = C (EE[ee^(delta X_1)] + EE[ee^(-delta X_1)])$.
   ]
 
   Then we can conclude, because
   $
-    m((theta)/(sqrt(n) )) = 1 + (theta^2)/(2n) + o((theta^2)/(n)) quad "as" n->oo,
+    m((theta)/(sqrt(n) )) = 1 + (theta^2)/(2n) + order((theta^2)/(n)) quad "as" n->oo,
   $
   and hence
   $
@@ -454,27 +454,27 @@ $
 
 Suppose we have a #ponder("probability.random-variable")[random variable] $X$ with #ponder("probability.probability-density-function")[density]
 $
-  f(bold(x)) = (bb(1)(bold(x) in A))/(abs(A))
+  f(vb(x)) = (bb(1)(vb(x) in A))/(abs(A))
 $
 where $abs(A)$ is the volume of $A subset.eq [0, 1]^d$.
 
 Let $(U_(k, n))_(k = 1, ..., d, n in NN)$ be i.i.d. with $U_(k, n) ~ U[0, 1]$.
 
-Set $bold(U_n) = (U_(1, n), ..., U_(d, n)) ~ U([0, 1]^d)$. Let
+Set $vb(U_n) = vecrow(U_(1, n), ..., U_(d, n)) ~ U([0, 1]^d)$. Let
 $
-  N = min{n : bold(U_n) in A}, quad bold(X) = bold(U_N).
+  N = min{n : vb(U_n) in A}, quad vb(X) = vb(U_N).
 $
 
 We want to show that $forall B subset.eq [0, 1]^d$,
 $
-  integral_B f(bold(x)) dif bold(x) = PP(bold(X) in B) = abs(B inter A)/(abs(A)).
+  integral_B f(vb(x)) dif vb(x) = PP(vb(X) in B) = abs(B inter A)/(abs(A)).
 $
 
 Note that
 $
-  PP(bold(X) in B) = PP(bold(U_N) in B) &= sum_(n=1)^oo PP(bold(U_n) in B, N = n)\
-  &= sum_(n=1)^oo PP(bold(U_n) in B, bold(U_n) in A, bold(U_(n-1)) in.not A, ..., bold(U_1) in.not A) \
-  &= sum_(n=1)^oo PP(bold(U_n) in B inter A) PP(bold(U_1) in.not A)^(n-1) \
+  PP(vb(X) in B) = PP(vb(U_N) in B) &= sum_(n=1)^oo PP(vb(U_n) in B, N = n)\
+  &= sum_(n=1)^oo PP(vb(U_n) in B, vb(U_n) in A, vb(U_(n-1)) in.not A, ..., vb(U_1) in.not A) \
+  &= sum_(n=1)^oo PP(vb(U_n) in B inter A) PP(vb(U_1) in.not A)^(n-1) \
   &= sum_(n=1)^oo abs(B inter A) (1 - abs(A))^(n-1) = abs(B inter A)/(abs(A)).
 $
 

@@ -11,7 +11,7 @@
   $
   exists. #fade[[We require $a + h in X$.]]
 
-  This #ponder("analysis.limit-of-function")[limit] is called the *#ponder("calculus.derivative")[derivative]* of $f$ at $a$, and is denoted by $f'(a)$ or $(dif f)/(dif x) (a)$.
+  This #ponder("analysis.limit-of-function")[limit] is called the *#ponder("calculus.derivative")[derivative]* of $f$ at $a$, and is denoted by $f'(a)$ or $dv(f, x) (a)$.
 ]
 
 #remark[
@@ -110,7 +110,7 @@ It will be convenient to have an alternative #ponder("calculus.characterization-
 #remark[
   This means $f(a+h) approx f(a) + A h$ for small $h$, and the function $epsilon(h)$ is to quantify the error of this approximation. We can equivalently write
   $
-    f(a+h) = f(a) + A h + o(abs(h) ).
+    f(a+h) = f(a) + A h + order(abs(h) ).
   $
 
   Moreover, if $f$ is #ponder("calculus.derivative")[differentiable] at $a$, then we must have $A = f'(a)$.
@@ -466,7 +466,7 @@ We want to state a general version of this apprixmation, under appropriate condi
   $
     abs(R_(n, f, a)(h)) = abs(h^n/(n!) f^((n))(a + theta h)) <= M_n h^n/(n!).
   $
-  Therefore $R_(n, f, a)(h)$ is #ponder("calculus.big-o")[$O(h^n)$] as $h -> 0$. Note that this does not tell use that $R_(n, f, a) (h) -> 0$ as $n->oo$, since even if $f in C^(oo)$, we do not know how $M_n$ behaves with $n$.
+  Therefore $R_(n, f, a)(h)$ is #ponder("calculus.big-o")[$Order(h^n)$] as $h -> 0$. Note that this does not tell use that $R_(n, f, a) (h) -> 0$ as $n->oo$, since even if $f in C^(oo)$, we do not know how $M_n$ behaves with $n$.
 ]
 
 #proof[

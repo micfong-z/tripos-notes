@@ -221,7 +221,7 @@ $
 $
 And if so, whether
 $
-   (dif)/(dif x) f(x) & =^? sum_(n=0)^oo c_n (dif)/(dif x) (x-a)^k \
+   dv(, x) f(x) & =^? sum_(n=0)^oo c_n dv(, x) (x-a)^k \
   integral f(x) dif x & =^? sum_(n=0)^oo c_n integral (x-a)^n dif x
 $
 
@@ -229,7 +229,7 @@ $
   - $sum_(n=0)^oo x^(n)/(n!)$ #ponder("analysis.series")[converges] on all of $CC$.
 
     $
-      sum_(n=0)^oo (1)/(n!) (dif)/(dif x) (x^n) = sum_(n=1)^oo x^(n-1)/(n-1)! = sum_(n=0)^oo x^(n)/(n!)
+      sum_(n=0)^oo (1)/(n!) dv(, x) (x^n) = sum_(n=1)^oo x^(n-1)/(n-1)! = sum_(n=0)^oo x^(n)/(n!)
     $
 
     which again converges on all of $CC$. This seems to be consistent.
@@ -237,7 +237,7 @@ $
   - $sum_(n=1)^oo x^(n)/(n^2)$ #ponder("analysis.series")[converges] on $D = {x in CC: abs(x) <= 1}.$
 
     $
-      sum_(n=0)^oo (1)/(n^2) (dif)/(dif x)(x^n) = sum_(n=1)^oo x^(n)/(n)
+      sum_(n=0)^oo (1)/(n^2) dv(, x)(x^n) = sum_(n=1)^oo x^(n)/(n)
     $
     which does not #ponder("analysis.series")[converge] on all of $D$, but it #ponder("analysis.series")[converge] on ${x in CC: abs(x) < 1}.$ This hints that the argument above is not totally correct.
 ]
@@ -327,7 +327,7 @@ We need to be careful that term-by-term operations will not hold on the entire s
 #proposition[Differentiation of Power Series][
   Let $sum c_n (x-a)^n$ and $f$ as in the previous proposition. Then $f$ is #ponder("calculus.derivative")[differentiable] on $(a-R, a+R)$, and
   $
-    f'(x) = sum_(n=0)^oo c_n (dif)/(dif x) (x-a)^n = sum_(n=1)^oo n c_n (x-a)^(n-1).
+    f'(x) = sum_(n=0)^oo c_n dv(, x) (x-a)^n = sum_(n=1)^oo n c_n (x-a)^(n-1).
   $
 ] <proposition-differentiation-of-power-series>
 #proof[
@@ -366,7 +366,7 @@ We need to be careful that term-by-term operations will not hold on the entire s
   - $sum_(n=0)^oo x^(n)/(n!)$  has $R = oo$. So
 
     $
-           (dif)/(dif x) sum_(n=0)^oo x^(n)/(n!) & = sum_(n=1)^oo x^(n-1)/(n-1)! = sum_(n=0)^oo x^(n)/(n!) \
+           dv(, x) sum_(n=0)^oo x^(n)/(n!) & = sum_(n=1)^oo x^(n-1)/(n-1)! = sum_(n=0)^oo x^(n)/(n!) \
       integral_0^x sum_(n=0)^oo x^(n)/(n!) dif t & = sum_(n=0)^oo (x^(n+1))/((n+1)(n!)) = sum_(n=1)^oo (x^(n))/(n!) \
                                                  & = sum_(n=0)^oo x^(n)/(n!) - 1.
     $
@@ -386,7 +386,7 @@ We need to be careful that term-by-term operations will not hold on the entire s
 == Exponential and Logarithms
 
 #exercise[
-  Using familiar properties of $exp$, namely $(dif)/(dif x) ee^x = ee^x$, to show that they #ponder("calculus.taylor-series")[Taylor series] of $ee^x$ at $x=0$ is, with #ponder("analysis.radius-of-convergence")[radius of convergence] $R= oo$,
+  Using familiar properties of $exp$, namely $dv(, x) ee^x = ee^x$, to show that they #ponder("calculus.taylor-series")[Taylor series] of $ee^x$ at $x=0$ is, with #ponder("analysis.radius-of-convergence")[radius of convergence] $R= oo$,
   $
     sum_(n=0)^oo x^(n)/(n!).
   $

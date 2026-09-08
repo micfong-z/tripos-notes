@@ -1,1 +1,1 @@
-For $f(x) = u(x)v(x)$, $(dif f)/(dif x) = v (dif u)/(dif x) + u (dif v)/(dif x)$.
+For $f(x) = u(x)v(x)$, $dv(f, x) = v dv(u, x) + u dv(v, x)$.

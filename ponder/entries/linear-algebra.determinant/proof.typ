@@ -1,4 +1,4 @@
-*Property (5).* Suppose $bold(C_i)(matbold(M)) + lambda bold(C_j)(matbold(M)) = 0$ for some $i != j$ and scalar $lambda$. Define $matbold(N)$ by
+*Property (5).* Suppose $vb(C_i)(matbold(M)) + lambda vb(C_j)(matbold(M)) = 0$ for some $i != j$ and scalar $lambda$. Define $matbold(N)$ by
 $
   N_(i s) = cases(
     M_(i s) & "if" s != i,
@@ -16,7 +16,7 @@ $
 for every permutation $sigma$. Taking $rho = sigma^(-1)$, and using $epsilon(rho) = epsilon(sigma)$,
 $
   det matbold(M) &= sum_(sigma in S_n) epsilon(sigma) M_(1 sigma(1)), ..., M_(n sigma(n)) \
-                 &= det(matbold(M)^tp).
+                 &= det(matbold(M)^TT).
 $
 
 #separator
@@ -35,6 +35,6 @@ In particular, if $matbold(M)$ is invertible, then $det(matbold(M^(-1))) = (det(
 
 #separator
 
-*Property (9).* If $matbold(M)$ is orthogonal, then $matbold(M)^tp matbold(M) = matbold(I)$, and thus $det(matbold(M)^tp) det(matbold(M)) = det(matbold(I)) = 1$, giving $det(matbold(M)) = plus.minus 1$.
+*Property (9).* If $matbold(M)$ is orthogonal, then $matbold(M)^TT matbold(M) = matbold(I)$, and thus $det(matbold(M)^TT) det(matbold(M)) = det(matbold(I)) = 1$, giving $det(matbold(M)) = plus.minus 1$.
 
 *Property (10).* If $matbold(M)$ is unitary, then $matbold(M)^dagger matbold(M) = matbold(I)$, and thus $det(matbold(M)^dagger) det(matbold(M)) = det(matbold(I)) = 1$, giving $abs(det(matbold(M))) = 1$.

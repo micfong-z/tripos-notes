@@ -11,10 +11,10 @@ where $a$, $b$, $c$ are constants.
 #example[
   This may arise when #ponder("calculus.finite-difference")[discretising] a #ponder("ode.order")[2nd order] #ponder("ode.ordinary-differential-equation")[ODE]:
   $
-    eval((dif^(2) y)/(dif x^(2)))_(x_n) & approx (y(x_n + h) - 2 y(x_n) + y(x_n - h))/(h^(2))
+    eval(dv(y, x, 2))_(x_n) & approx (y(x_n + h) - 2 y(x_n) + y(x_n - h))/(h^(2))
   $
   which we can correspond to
-  $ eval((dif^(2) y)/(dif x^(2)))_(x_n) & approx (y_(n+1) - 2 y_n + y_(n-1))/(h^(2)). $
+  $ eval(dv(y, x, 2))_(x_n) & approx (y_(n+1) - 2 y_n + y_(n-1))/(h^(2)). $
 ] <ex-finite-difference>
 
 We can solve this using similar methods to solving #ponder("ode.order")[2nd order] #ponder("ode.ordinary-differential-equation")[ODEs], with general solution

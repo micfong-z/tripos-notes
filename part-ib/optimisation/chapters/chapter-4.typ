@@ -97,19 +97,19 @@ $
 We can express P1's optimisation problem as
 $
   & "maximise"   && v \
-  & "subject to" && matbold(A)^tp vb(p) >= v vb(e)_n \
-  &              && vb(e)_m^tp vb(p) = 1 \
+  & "subject to" && matbold(A)^TT vb(p) >= v vb(e)_n \
+  &              && vb(e)_m^TT vb(p) = 1 \
   &              && vb(p) >= vb(0) \
-  & "where"      && vb(e)_k = (1, dots.c, 1)^tp in RR^k.
+  & "where"      && vb(e)_k = vecrow(1, dots.c, 1)^TT in RR^k.
 $
 
 We can also express P2's optimisation problem as
 $
   & "minimise"   && w \
   & "subject to" && matbold(A) vb(q) <= w vb(e)_m \
-  &              && vb(e)_n^tp vb(q) = 1 \
+  &              && vb(e)_n^TT vb(q) = 1 \
   &              && vb(q) >= vb(0) \
-  & "where"      && vb(e)_k = (1, dots.c, 1)^tp in RR^k, "as above".
+  & "where"      && vb(e)_k = vecrow(1, dots.c, 1)^TT in RR^k, "as above".
 $
 
 Rather surprisingly, these two linear programmes are dual to each other. Hence, we can solve either one of them to find the optimal strategies for both players, and we have a saddle point $(vb(p)^*, vb(q)^*)$ in the sense of mixed strategies.
@@ -121,24 +121,24 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 #proof[
   The dual of P2's problem is
   $
-    lagr(w, vb(q), vb(s), vb(lambda_1), lambda_2) &= w + vb(lambda_1)^tp (matbold(A) vb(q) + vb(s) - w vb(e)_m) - lambda_2 (vb(e)_n^tp vb(q) - 1) \
-    &= w(1-vb(lambda_1)^tp vb(e)_m) + (vb(lambda_1)^tp matbold(A) - lambda_2 vb(e)_n^tp) vb(q) + vb(lambda_1)^tp vb(s) + lambda_2.
+    lagr(w, vb(q), vb(s), vb(lambda_1), lambda_2) &= w + vb(lambda_1)^TT (matbold(A) vb(q) + vb(s) - w vb(e)_m) - lambda_2 (vb(e)_n^TT vb(q) - 1) \
+    &= w(1-vb(lambda_1)^TT vb(e)_m) + (vb(lambda_1)^TT matbold(A) - lambda_2 vb(e)_n^TT) vb(q) + vb(lambda_1)^TT vb(s) + lambda_2.
   $
 
   Note that $Lambda$ satisfies
 
-  1. $vb(lambda_1)^tp vb(e)_m = 1$,
+  1. $vb(lambda_1)^TT vb(e)_m = 1$,
 
-  2. $vb(lambda_1)^tp matbold(A) >= lambda_2 vb(e)_n^tp$,
+  2. $vb(lambda_1)^TT matbold(A) >= lambda_2 vb(e)_n^TT$,
 
   3. $vb(lambda_1) >= vb(0)$.
 
   When $lambda in Lambda$, $min lagr = lambda_2$. Hence, the dual of P2's problem is
   $
     & "maximise"   && lambda_2 \
-    & "subject to" && vb(lambda_1)^tp vb(e)_m = 1 \
+    & "subject to" && vb(lambda_1)^TT vb(e)_m = 1 \
     &              && vb(lambda_1) >= vb(0) \
-    &              && matbold(A)^tp vb(lambda_1) >= lambda_2 vb(e)_n. \
+    &              && matbold(A)^TT vb(lambda_1) >= lambda_2 vb(e)_n. \
   $
   Replacing $vb(lambda_1)$ with $vb(p)$ and $lambda_2$ with $v$, we see that this is exactly P1's problem.
 ]
@@ -146,11 +146,11 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 #theorem[Optimal Strategies in Two Person Zero-Sum Games][
   A strategy $vb(p)$ is optimal for P1 if and only if there exists a strategy $vb(q)$ and $v$ such that
 
-  1. $matbold(A)^tp vb(p) >= v vb(e)_n, vb(e)_m^tp vb(p) = 1, vb(p) >= 0$ #fade[[primal feasibility]],
+  1. $matbold(A)^TT vb(p) >= v vb(e)_n, vb(e)_m^TT vb(p) = 1, vb(p) >= 0$ #fade[[primal feasibility]],
 
-  2. $matbold(A) vb(q) <= v vb(e)_m, vb(e)_n^tp vb(q) = 1, vb(q) >= 0$ #fade[[dual feasibility]],
+  2. $matbold(A) vb(q) <= v vb(e)_m, vb(e)_n^TT vb(q) = 1, vb(q) >= 0$ #fade[[dual feasibility]],
 
-  3. $vb(p)^tp matbold(A) vb(q) = v$ #fade[[complementary slackness]].
+  3. $vb(p)^TT matbold(A) vb(q) = v$ #fade[[complementary slackness]].
 ]
 
 #proof[
@@ -158,13 +158,13 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 
   If $(vb(p), v)$ and $(vb(q), w)$ are primal/dual optimal, then
 
-  1. $(matbold(A) vb(q) - w vb(e)_m)^tp vb(p) = 0$
+  1. $(matbold(A) vb(q) - w vb(e)_m)^TT vb(p) = 0$
 
-  2. $vb(q)^tp (matbold(A)^tp vb(p) - v vb(e)_n) = 0$
+  2. $vb(q)^TT (matbold(A)^TT vb(p) - v vb(e)_n) = 0$
 
   Hence, we must have
   $
-    vb(p)^tp matbold(A) vb(q) = v = w.
+    vb(p)^TT matbold(A) vb(q) = v = w.
   $
 
 ]
@@ -193,7 +193,7 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
     matbold(A) = mat(2, 3, 4; 3, 1, (1)/(2)).
   $
 
-  Then, we need to find $vb(p) = (p, 1-p)^tp$ and $vb(q) = (q_1, q_2, q_3)^tp$ in the following problem:
+  Then, we need to find $vb(p) = vecrow(p, 1-p)^TT$ and $vb(q) = vecrow(q_1, q_2, q_3)^TT$ in the following problem:
   $
     & "maximise"   && v \
     & "subject to" && 2p + 3(1-p) >= v \
@@ -418,7 +418,7 @@ In order to run the transportation simplex algorithm, we need to form a transpor
 #example[Transportation Simplex Algorithm][
   Consider the following transport problem with $n = 3$ and $m = 4$ with demand and supply
   $
-    vb(s) = (14, 10, 9)^tp quad vb(d) = (12, 5, 8, 8)^tp,
+    vb(s) = vecrow(14, 10, 9)^TT quad vb(d) = vecrow(12, 5, 8, 8)^TT,
   $
   and a cost matrix
   $

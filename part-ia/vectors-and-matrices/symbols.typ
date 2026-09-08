@@ -5,8 +5,9 @@
 // import only the prelude.
 
 #import "/template/lib.typ": *
+#import "@preview/physica:0.9.8": *
 
-#let rank = math.op("rank")
+// `rank` comes from physica.
 #let null = math.op("null")
 #let span = math.op("span")
 #let adj = math.op("adj")

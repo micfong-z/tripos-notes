@@ -388,14 +388,14 @@ $
     $
                       PP(g(X) <= x) & = PP(X <= g^(-1)(x)) \
                                     & = F(g^(-1)(x)) \
-      (dif)/(dif x) (PP(g(X) <= x)) & = f(g^(-1)(x)) dot (g^(-1))'(x) \
+      dv(, x) (PP(g(X) <= x)) & = f(g^(-1)(x)) dot (g^(-1))'(x) \
     $
 
   - Suppose that $g$ is strictly decreasing. Then
     $
                       PP(g(X) <= x) & = PP(X >= g^(-1)(x)) \
                                     & = 1 - PP(X < g^(-1)(x)) \
-      (dif)/(dif x) (PP(g(X) <= x)) & = - f(g^(-1)(x)) dot (g^(-1))'(x) \
+      dv(, x) (PP(g(X) <= x)) & = - f(g^(-1)(x)) dot (g^(-1))'(x) \
     $
 
   Hence the result follows in either case.
@@ -476,12 +476,12 @@ $
 === Introduction
 
 #definition[Multivariate Density Function][
-  Let $bold(X) = (X_1, ..., X_n)^tp$ be a #ponder("probability.multidimensional-random-variable")[random vector]. We say that $bold(X)$ has a #ponder("probability.multivariate-density-function")[*multivariate density function*] if there exists a non-negative function $f: RR^n -> RR$ such that for all $x_1, ..., x_n in RR$,
+  Let $vb(X) = vecrow(X_1, ..., X_n)^TT$ be a #ponder("probability.multidimensional-random-variable")[random vector]. We say that $vb(X)$ has a #ponder("probability.multivariate-density-function")[*multivariate density function*] if there exists a non-negative function $f: RR^n -> RR$ such that for all $x_1, ..., x_n in RR$,
   $
     PP(X_1 <= x_1, ..., X_n <= x_n) = integral_(-oo)^(x_1) ... integral_(-oo)^(x_n) f(y_1, ..., y_n) dif y_n ... dif y_1.
   $
 
-  The #ponder("probability.distribution-function")[*probability distribution function*] $F$ of $bold(X)$ is defined as
+  The #ponder("probability.distribution-function")[*probability distribution function*] $F$ of $vb(X)$ is defined as
   $ F(x_1, ..., x_n) = PP(X_1 <= x_1, ..., X_n <= x_n). $
 
 ] <def-multivariate-density-function>
@@ -491,7 +491,7 @@ $
 $
 More generally, for $B subset.eq RR^n$,
 $
-  PP((X_1, ..., X_n)^tp in B) = integral_B f(y_1, ..., y_n) dif y_1 ... dif y_n.
+  PP(vecrow(X_1, ..., X_n)^TT in B) = integral_B f(y_1, ..., y_n) dif y_1 ... dif y_n.
 $
 
 #definition[#ponder("probability.independence-of-random-variables")[Independence] of #ponder("probability.continuous-random-variable")[Continuous Random Variables]][
@@ -502,7 +502,7 @@ $
 ]
 
 #theorem[
-  Let $bold(X) = (X_1, ..., X_n)^tp$ be a #ponder("probability.multidimensional-random-variable")[random vector] with #ponder("probability.probability-density-function")[density] $f$.
+  Let $vb(X) = vecrow(X_1, ..., X_n)^TT$ be a #ponder("probability.multidimensional-random-variable")[random vector] with #ponder("probability.probability-density-function")[density] $f$.
 
   1. Suppose $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent] with #ponder("probability.probability-density-function")[densities] $f_1, ..., f_n$, then for all $x_1, ..., x_n in RR$,
     $
@@ -544,13 +544,13 @@ $
 === #ponder("probability.marginal-density-function")[Marginal Density Functions]
 
 #definition[Marginal Density Function][
-  Let $bold(X) = (X_1, ..., X_n)^tp$ be a #ponder("probability.multidimensional-random-variable")[random vector] with #ponder("probability.probability-density-function")[density] $f$. The #ponder("probability.marginal-density-function")[*marginal density function*] of $X_1$ is defined as
+  Let $vb(X) = vecrow(X_1, ..., X_n)^TT$ be a #ponder("probability.multidimensional-random-variable")[random vector] with #ponder("probability.probability-density-function")[density] $f$. The #ponder("probability.marginal-density-function")[*marginal density function*] of $X_1$ is defined as
   $
     f_(X_1)(x) = integral_(-oo)^(oo) ... integral_(-oo)^(oo) f(x, x_2, ..., x_n) dif x_n ... dif x_2.
   $
 ] <def-marginal-density-function>
 #proof[
-  Suppose $bold(X) = (X_1, ..., X_n)^tp$ has #ponder("probability.probability-density-function")[density] $f$. Then consider
+  Suppose $vb(X) = vecrow(X_1, ..., X_n)^TT$ has #ponder("probability.probability-density-function")[density] $f$. Then consider
   $
     PP(X_1 <= x) & = PP(X_1 <= x, X_2 in RR, ..., X_n in RR) \
     & = integral_(-oo)^x (integral_(-oo)^(oo) ... integral_(-oo)^(oo) f(x_1, ..., x_n) dif x_n ... dif x_2) dif x_1. \
@@ -621,15 +621,15 @@ Similarly, we can define the #ponder("probability.conditional-expectation")[*con
 === #ponder("probability.change-of-variables")[Transformation of Random Variables]
 
 #theorem[
-  Let $bold(X)$ be a #ponder("probability.random-variable")[random variable] with values in $D subset.eq RR^n$ and #ponder("probability.probability-density-function")[density] $f$. Let $g: D -> g(D)$ be a bijection with a continuous derivative on $D$, and
+  Let $vb(X)$ be a #ponder("probability.random-variable")[random variable] with values in $D subset.eq RR^n$ and #ponder("probability.probability-density-function")[density] $f$. Let $g: D -> g(D)$ be a bijection with a continuous derivative on $D$, and
   $
-    det g'(bold(x)) != 0 quad "for all" bold(x) in D.
+    det g'(vb(x)) != 0 quad "for all" vb(x) in D.
   $
-  Then, the #ponder("probability.random-variable")[random variable] $Y = g(bold(X))$ has #ponder("probability.probability-density-function")[density]
+  Then, the #ponder("probability.random-variable")[random variable] $Y = g(vb(X))$ has #ponder("probability.probability-density-function")[density]
   $
-    f_Y (bold(y)) = f_X (g^(-1) (bold(y))) dot abs(J)
+    f_Y (vb(y)) = f_X (g^(-1) (vb(y))) dot abs(J)
   $
-  where $J = det (((∂ x_i)/(∂ y_j))_(i, j = 1)^n)$ is the Jacobian determinant of $g^(-1)$.
+  where $J = det ((pdv(x_i, y_j))_(i, j = 1)^n)$ is the Jacobian determinant of $g^(-1)$.
 ] <thm-change-of-variables-jacobian>
 
 #lecture-separator(lecture: 18, date: "2026-03-04")
@@ -674,18 +674,18 @@ $
   PP(Y_1 <= x) & = 1- PP(Y_1 > x) \
                & = 1 - PP(X_1 > x, ..., X_n > x) \
                & = 1 - (1 - F(x))^n \
-   f_(Y_1) (x) & = (dif)/(dif x) PP(Y_1 <= x) = n (1 - F(x))^(n-1) f(x).
+   f_(Y_1) (x) & = dv(, x) PP(Y_1 <= x) = n (1 - F(x))^(n-1) f(x).
 $
 For the maximum $Y_n$, we have
 $
   PP(Y_n <= x) & = PP(X_1 <= x)^n = (F(x))^n \
-   f_(Y_n) (x) & = (dif)/(dif x) PP(Y_n <= x) = n (F(x))^(n-1) f(x).
+   f_(Y_n) (x) & = dv(, x) PP(Y_n <= x) = n (F(x))^(n-1) f(x).
 $
 
 In order to find $f_(Y_1, ..., Y_n) (x_1, ..., x_n)$ with $x_1 < x_2< ... < x_n$, we have
 $
   PP(Y_1 <= x_1, ..., Y_n <= x_n) & = n! PP(X_1 <= x_1, ..., X_n <= x_n, X_1 <= X_2 <= ... <= X_n)\
-  &= n! integral ... integral f_(X_1, ..., X_n)^tp (u_1, ..., u_n) bb(1)(u_1 <= x_1, ..., u_n <= x_n, u_1 <= u_2 <= ... <= u_n) dif u_n ... dif u_1 \
+  &= n! integral ... integral f_(X_1, ..., X_n)^TT (u_1, ..., u_n) bb(1)(u_1 <= x_1, ..., u_n <= x_n, u_1 <= u_2 <= ... <= u_n) dif u_n ... dif u_1 \
   &= n! integral_(-oo)^(x_1) integral_(u_1)^(x_2) ... integral_(u_(n-1))^(x_n) f(u_1) f(u_2) ... f(u_n) dif u_n ... dif u_1. \
 $
 Hence,
@@ -707,7 +707,7 @@ $
 $
 Hence, $Z ~ "Exp"(lambda + mu)$.
 
-If $(X_i)$ are #ponder("probability.independence-of-random-variables")[independent] #ponder("probability.random-variable")[random variables] with $X_i ~ "Exp"(lambda_i)$, then $min(X_1, ..., X_n)^tp ~ "Exp"(sum_(i=1)^n lambda_i)$.
+If $(X_i)$ are #ponder("probability.independence-of-random-variables")[independent] #ponder("probability.random-variable")[random variables] with $X_i ~ "Exp"(lambda_i)$, then $min(X_1, ..., X_n)^TT ~ "Exp"(sum_(i=1)^n lambda_i)$.
 
 Now, consider $X_1, X_2, ..., X_n$ be i.i.d. random variables with $X_i ~ "Exp"(lambda)$. Let $Y_i = X_((i))$ be the #ponder("probability.order-statistics")[order statistics] of $X_1, ..., X_n$.
 
@@ -715,7 +715,7 @@ Let $Z_1 = Y_1, Z_2 = Y_2 - Y_1, ..., Z_n = Y_n - Y_(n-1)$. Note that we have fo
 
 Consider the #ponder("probability.multivariate-density-function")[joint density] of $(Z_1, ..., Z_n)$. We have
 $
-  bold(Z) = vec(Z_1, dots.v, Z_n) = matbold(A) vec(Y_1, dots.v, Y_n) quad "where" matbold(A) = mat(1, 0, ..., 0, 0, 0; -1, 1, 0, ..., 0, 0; 0, -1, 1, 0, ..., 0; dots.v, dots.v, dots.down, dots.down, dots.v, dots.v; 0, ..., 0, 0, -1, 1).
+  vb(Z) = vec(Z_1, dots.v, Z_n) = matbold(A) vec(Y_1, dots.v, Y_n) quad "where" matbold(A) = mat(1, 0, ..., 0, 0, 0; -1, 1, 0, ..., 0, 0; 0, -1, 1, 0, ..., 0; dots.v, dots.v, dots.down, dots.down, dots.v, dots.v; 0, ..., 0, 0, -1, 1).
 $
 Hence, with the transformation of $z = matbold(A) y$ and $y_j = sum_(i=1)^j z_i$, we have
 $
@@ -743,7 +743,7 @@ Hence, $Z_i ~ "Exp"((n - i + 1) lambda)$ and they are #ponder("probability.indep
 #theorem[
   Suppose that the MGF is defined for an interval of values of $theta$, then
   $
-    m^((r))(0) = eval((dif^r m(theta))/(dif theta^r))_(theta = 0) = EE[X^r].
+    m^((r))(0) = eval(dv(m(theta), theta, r))_(theta = 0) = EE[X^r].
   $
 
 ]
@@ -853,26 +853,26 @@ Hence $X + Y ~ N(mu + nu, sigma^2 + tau^2)$.
 === Multivariate #ponder("probability.moment-generating-function")[Moment Generating Functions]
 
 #definition[Multivariate #ponder("probability.moment-generating-function")[Moment Generating Function]][
-  Let $bold(X) = (X_1, ..., X_n)^tp in RR^n$ be a #ponder("probability.random-variable")[random variable]. The MGF of $X$ is defined to be
+  Let $vb(X) = vecrow(X_1, ..., X_n)^TT in RR^n$ be a #ponder("probability.random-variable")[random variable]. The MGF of $X$ is defined to be
   $
-    m(theta) = EE[ee^(bold(theta)^tp dot bold(X))] = EE[ee^(sum_(i=1)^n theta_i X_i)],
+    m(theta) = EE[ee^(vb(theta)^TT dot vb(X))] = EE[ee^(sum_(i=1)^n theta_i X_i)],
   $
-  where $bold(theta) = (theta_1, ..., theta_n)^tp$.
+  where $vb(theta) = vecrow(theta_1, ..., theta_n)^TT$.
 ]
 
 #theorem[
-  For a multivariate #ponder("probability.random-variable")[random variable], if the MGF is finite for an open set of values of $bold(theta)$, then it uniquely determines the distribution of the #ponder("probability.random-variable")[random variable].
+  For a multivariate #ponder("probability.random-variable")[random variable], if the MGF is finite for an open set of values of $vb(theta)$, then it uniquely determines the distribution of the #ponder("probability.random-variable")[random variable].
 
   In this case,
   $
-    eval((∂^r m)/(∂theta_i^r))_(bold(theta) = bold(0)) = EE[X_i^r] quad "and" quad eval((∂^(r+s)m)/(∂theta_i^r ∂theta_j^s))_(bold(theta) = bold(0)) = EE[X_i^r X_j^s].
+    eval(pdv(m, theta_i, [r]))_(vb(theta) = vb(0)) = EE[X_i^r] quad "and" quad eval(pdv(m, theta_i, theta_j, [r, s]))_(vb(theta) = vb(0)) = EE[X_i^r X_j^s].
   $
 ]
 
 #proposition[
-  Let $bold(X) = (X_1, ..., X_n)^tp$ be a #ponder("probability.random-variable")[random variable] in $RR^(n)$. Then
+  Let $vb(X) = vecrow(X_1, ..., X_n)^TT$ be a #ponder("probability.random-variable")[random variable] in $RR^(n)$. Then
   $
-    m(theta) = EE[ee^(bold(theta)^tp bold(X))] = product_(i=1)^n EE[ee^(theta_i X_i)]
+    m(theta) = EE[ee^(vb(theta)^TT vb(X))] = product_(i=1)^n EE[ee^(theta_i X_i)]
   $
   iff $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent].
 ]
@@ -903,105 +903,105 @@ Hence $X + Y ~ N(mu + nu, sigma^2 + tau^2)$.
 ]
 
 #definition[Gaussian Vector][
-  Let $bold(X) = (X_1, ..., X_n)^tp in RR^n$  be a #ponder("probability.random-variable")[random variable]. We say that $bold(X)$ is a #ponder("probability.gaussian-vector")[*Gaussian vector*] (or *Gaussian in $RR^n$*) if for all $bold(u) in RR^n$,
+  Let $vb(X) = vecrow(X_1, ..., X_n)^TT in RR^n$  be a #ponder("probability.random-variable")[random variable]. We say that $vb(X)$ is a #ponder("probability.gaussian-vector")[*Gaussian vector*] (or *Gaussian in $RR^n$*) if for all $vb(u) in RR^n$,
   $
-    bold(u)^tp bold(X) = sum_(i=1)^n u_i X_i
+    vb(u)^TT vb(X) = sum_(i=1)^n u_i X_i
   $
   is a #ponder("probability.normal-distribution")[Gaussian random variable] in $RR$.
 ] <def-gaussian-vector>
 
 #proposition[
-  Let $bold(X) = (X_1, ..., X_n)^tp$ be a #ponder("probability.gaussian-vector")[Gaussian vector]. Let $matbold(A)$ be an $m times n$ matrix and $b in RR^m$. Then $matbold(A) bold(X) + bold(b)$ is also a #ponder("probability.gaussian-vector")[Gaussian vector].
+  Let $vb(X) = vecrow(X_1, ..., X_n)^TT$ be a #ponder("probability.gaussian-vector")[Gaussian vector]. Let $matbold(A)$ be an $m times n$ matrix and $b in RR^m$. Then $matbold(A) vb(X) + vb(b)$ is also a #ponder("probability.gaussian-vector")[Gaussian vector].
 
 ]
 #proof[
-  Let $bold(u) = (u_1, ..., u_n)^tp in RR^n$. We need to show that $bold(u)^tp (matbold(A) bold(X) + bold(b))$ is a #ponder("probability.normal-distribution")[Gaussian random variable] in $RR$. Note that
+  Let $vb(u) = vecrow(u_1, ..., u_n)^TT in RR^n$. We need to show that $vb(u)^TT (matbold(A) vb(X) + vb(b))$ is a #ponder("probability.normal-distribution")[Gaussian random variable] in $RR$. Note that
   $
-    bold(u)^tp (matbold(A) bold(X) + bold(b)) & = bold(u)^tp matbold(A) bold(X) + bold(u)^tp bold(b)
+    vb(u)^TT (matbold(A) vb(X) + vb(b)) & = vb(u)^TT matbold(A) vb(X) + vb(u)^TT vb(b)
   $
-  Letting $bold(v) = matbold(A)^tp bold(u)$, we have
+  Letting $vb(v) = matbold(A)^TT vb(u)$, we have
   $
-    bold(u)^tp (matbold(A) bold(X) + bold(b)) & = bold(v)^tp bold(X) + bold(u)^tp bold(b) \
-                                              & = bold(v)^tp bold(X) + sum_(i=1)^n u_i b_i.
+    vb(u)^TT (matbold(A) vb(X) + vb(b)) & = vb(v)^TT vb(X) + vb(u)^TT vb(b) \
+                                              & = vb(v)^TT vb(X) + sum_(i=1)^n u_i b_i.
   $
-  Since $bold(X)$ is a #ponder("probability.gaussian-vector")[Gaussian vector], $bold(v)^tp bold(X)$ is a #ponder("probability.normal-distribution")[Gaussian random variable] in $RR$. Note that $sum_(i=1)^n u_i b_i$ is a constant. Hence, $bold(u)^tp (matbold(A) bold(X) + bold(b))$ is also a #ponder("probability.normal-distribution")[Gaussian random variable] in $RR$.
+  Since $vb(X)$ is a #ponder("probability.gaussian-vector")[Gaussian vector], $vb(v)^TT vb(X)$ is a #ponder("probability.normal-distribution")[Gaussian random variable] in $RR$. Note that $sum_(i=1)^n u_i b_i$ is a constant. Hence, $vb(u)^TT (matbold(A) vb(X) + vb(b))$ is also a #ponder("probability.normal-distribution")[Gaussian random variable] in $RR$.
 ]
 
 #definition[
   Define
   $
-                       bold(mu) & = EE[bold(X)] = vec(EE[X_1], dots.v, EE[X_n]) \
-    matbold(V) = "Var"(bold(X)) & = EE[(bold(X) - bold(mu)) (bold(X) - bold(mu))^tp].
+                       vb(mu) & = EE[vb(X)] = vec(EE[X_1], dots.v, EE[X_n]) \
+    matbold(V) = "Var"(vb(X)) & = EE[(vb(X) - vb(mu)) (vb(X) - vb(mu))^TT].
   $
   Note that
   $
-    ((bold(X) - bold(mu)) (bold(X) - bold(mu))^tp)_(i j) = (X_i - mu_i) (X_j - mu_j).\
-    "Var"(bold(X))_(i j) = "Cov"(X_i, X_j).
+    ((vb(X) - vb(mu)) (vb(X) - vb(mu))^TT)_(i j) = (X_i - mu_i) (X_j - mu_j).\
+    "Var"(vb(X))_(i j) = "Cov"(X_i, X_j).
   $
 
-  Hence, $"Var"(bold(X))$ is a #ponder("linear-algebra.symmetric-matrix")[symmetric matrix].
+  Hence, $"Var"(vb(X))$ is a #ponder("linear-algebra.symmetric-matrix")[symmetric matrix].
 ]
 
 #lecture-separator(lecture: 20, date: "2026-03-09")
 
-Consider the random variable $bold(u)^tp bold(X)$ for some $bold(u) in RR^n$. We have
+Consider the random variable $vb(u)^TT vb(X)$ for some $vb(u) in RR^n$. We have
 $
-     EE[bold(u)^tp bold(X)] & = EE[sum_(i=1)^n u_i X_i] = sum_(i=1)^n u_i EE[X_i] = bold(u)^tp bold(mu) \
-  "Var"(bold(u)^tp bold(X)) & = "Var"(sum_(i=1)^n u_i X_i) \
+     EE[vb(u)^TT vb(X)] & = EE[sum_(i=1)^n u_i X_i] = sum_(i=1)^n u_i EE[X_i] = vb(u)^TT vb(mu) \
+  "Var"(vb(u)^TT vb(X)) & = "Var"(sum_(i=1)^n u_i X_i) \
                             & = sum_(i, j = 1)^n u_i u_j "Cov"(X_i, X_j) \
-                            & = bold(u)^tp matbold(V) bold(u).
+                            & = vb(u)^TT matbold(V) vb(u).
 $
 
 #proposition[
-  $matbold(V)$ is a #ponder("linear-algebra.matrix-definiteness")[non-negative definite matrix], _i.e._ for any $bold(u) in RR^n$,
+  $matbold(V)$ is a #ponder("linear-algebra.matrix-definiteness")[non-negative definite matrix], _i.e._ for any $vb(u) in RR^n$,
   $
-    bold(u)^tp matbold(V) bold(u) >= 0.
+    vb(u)^TT matbold(V) vb(u) >= 0.
   $
 ]
 #proof[
-  Note that $"Var"(bold(u)^tp bold(X)) = bold(u)^tp matbold(V) bold(u)$. Since $"Var"(bold(u)^tp bold(X)) >= 0$, we have $bold(u)^tp matbold(V) bold(u) >= 0$.
+  Note that $"Var"(vb(u)^TT vb(X)) = vb(u)^TT matbold(V) vb(u)$. Since $"Var"(vb(u)^TT vb(X)) >= 0$, we have $vb(u)^TT matbold(V) vb(u) >= 0$.
 ]
 
-Consider the MGF of $bold(X)$. We have
+Consider the MGF of $vb(X)$. We have
 $
-  m(lambda) & = EE[ee^(bold(lambda)^tp bold(X))] quad forall bold(lambda) in RR^n \
+  m(lambda) & = EE[ee^(vb(lambda)^TT vb(X))] quad forall vb(lambda) in RR^n \
 $
-Note that $bold(lambda)^tp bold(X)$ is $N(bold(lambda)^tp bold(mu), bold(lambda)^tp matbold(V) bold(lambda))$. So
+Note that $vb(lambda)^TT vb(X)$ is $N(vb(lambda)^TT vb(mu), vb(lambda)^TT matbold(V) vb(lambda))$. So
 $
-  m(lambda) = exp(bold(lambda)^tp bold(mu) + (1)/(2) bold(lambda)^tp matbold(V) bold(lambda)).
+  m(lambda) = exp(vb(lambda)^TT vb(mu) + (1)/(2) vb(lambda)^TT matbold(V) vb(lambda)).
 $
 #fade[[Recall that if $Z ~ N(mu, sigma^2)$, $EE[ee^(theta Z)] = exp(theta mu + (1)/(2) theta^2 sigma^2).$]]
 
-We have seen that the MGF uniquely characterises the distribution if defined for an open set of values. Hence, to characterise a #ponder("probability.gaussian-vector")[Gaussian vector], we only need the mean $bold(mu)$ and the covariance matrix $matbold(V)$.
+We have seen that the MGF uniquely characterises the distribution if defined for an open set of values. Hence, to characterise a #ponder("probability.gaussian-vector")[Gaussian vector], we only need the mean $vb(mu)$ and the covariance matrix $matbold(V)$.
 
 We have determined the MGF of a #ponder("probability.gaussian-vector")[Gaussian vector] purely from the definition of a #ponder("probability.gaussian-vector")[Gaussian vector], and we will consider its #ponder("probability.probability-density-function")[density function] later.
 
 === Construction of a #ponder("probability.gaussian-vector")[Gaussian Random Vector]
 
 #lemma[
-  Let $Z_1, Z_2, ..., Z_n$ be i.i.d. with $Z_i ~ N(0, 1)$. Let $bold(Z) = (Z_1, ..., Z_n)^tp$. Then, $bold(Z)$ is a #ponder("probability.gaussian-vector")[Gaussian vector].
+  Let $Z_1, Z_2, ..., Z_n$ be i.i.d. with $Z_i ~ N(0, 1)$. Let $vb(Z) = vecrow(Z_1, ..., Z_n)^TT$. Then, $vb(Z)$ is a #ponder("probability.gaussian-vector")[Gaussian vector].
 ]
 
 #proof[
-  We need to show that $forall bold(u) in RR^n$, $bold(u)^tp bold(Z)$ is normal in $RR$.
+  We need to show that $forall vb(u) in RR^n$, $vb(u)^TT vb(Z)$ is normal in $RR$.
 
-  The MGF of $bold(u)^tp bold(Z)$ is
+  The MGF of $vb(u)^TT vb(Z)$ is
   $
-    m(lambda) = EE[ee^(lambda bold(u)^tp bold(Z))] = EE[ee^(sum_(i=1)^n lambda u_i Z_i)] = product_(i=1)^n EE[ee^(lambda u_i Z_i)] = exp((lambda^2)/(2) sum_(i=1)^n u_i^2) = exp((lambda^2)/(2) abs(bold(u))^2).
+    m(lambda) = EE[ee^(lambda vb(u)^TT vb(Z))] = EE[ee^(sum_(i=1)^n lambda u_i Z_i)] = product_(i=1)^n EE[ee^(lambda u_i Z_i)] = exp((lambda^2)/(2) sum_(i=1)^n u_i^2) = exp((lambda^2)/(2) abs(vb(u))^2).
   $
 
-  So $bold(u)^tp bold(Z) ~ N(0, abs(bold(u))^2)$, and hence $bold(Z)$ is a #ponder("probability.gaussian-vector")[Gaussian vector].
+  So $vb(u)^TT vb(Z) ~ N(0, abs(vb(u))^2)$, and hence $vb(Z)$ is a #ponder("probability.gaussian-vector")[Gaussian vector].
 ]
 
 #remark[
   We have
   $
-    EE[bold(Z)] = bold(0) quad "and" quad "Var"(bold(Z)) = matbold(I)_n.
+    EE[vb(Z)] = vb(0) quad "and" quad "Var"(vb(Z)) = matbold(I)_n.
   $
-  We write that $bold(Z) ~ N(bold(0), matbold(I)_n)$
+  We write that $vb(Z) ~ N(vb(0), matbold(I)_n)$
 ]
 
-Let $bold(mu) in RR^n$ and let $matbold(V)$ be a non-negative definite matrix. We want to construct a #ponder("probability.gaussian-vector")[Gaussian vector] with mean $bold(mu)$ and (co)variance matrix $matbold(V)$, using the standard #ponder("probability.gaussian-vector")[Gaussian vector] $bold(Z) ~ N(bold(0), matbold(I)_n)$.
+Let $vb(mu) in RR^n$ and let $matbold(V)$ be a non-negative definite matrix. We want to construct a #ponder("probability.gaussian-vector")[Gaussian vector] with mean $vb(mu)$ and (co)variance matrix $matbold(V)$, using the standard #ponder("probability.gaussian-vector")[Gaussian vector] $vb(Z) ~ N(vb(0), matbold(I)_n)$.
 
 #fade[[Note that in the $n=1$ case, we can construct $X ~ N(mu, sigma^2)$ by letting $X = mu + sigma Z$.]]
 
@@ -1010,7 +1010,7 @@ Note that we will need some form of "square root" of $matbold(V)$.
 #definition[
   Let $matbold(V)$ be a #ponder("linear-algebra.matrix-definiteness")[non-negative definite matrix]. Consider
   $
-    matbold(V) = matbold(U)^tp matbold(D) matbold(U) quad "where" matbold(U)^tp = matbold(U)^(-1)
+    matbold(V) = matbold(U)^TT matbold(D) matbold(U) quad "where" matbold(U)^TT = matbold(U)^(-1)
   $
   and $matbold(D)$ is a diagonal matrix with
   $
@@ -1018,31 +1018,31 @@ Note that we will need some form of "square root" of $matbold(V)$.
   $
   Then, the *square root* of $matbold(V)$ is defined as
   $
-    matbold(sigma) = matbold(U)^tp sqrt(matbold(D)) matbold(U) quad "where" sqrt(matbold(D)) = mat(sqrt(lambda_1), 0, ..., 0; 0, sqrt(lambda_2), ..., 0; dots.v, dots.v, dots.down, dots.v; 0, ..., 0, sqrt(lambda_n)).
+    matbold(sigma) = matbold(U)^TT sqrt(matbold(D)) matbold(U) quad "where" sqrt(matbold(D)) = mat(sqrt(lambda_1), 0, ..., 0; 0, sqrt(lambda_2), ..., 0; dots.v, dots.v, dots.down, dots.v; 0, ..., 0, sqrt(lambda_n)).
   $
   Note that $matbold(sigma)^2 = matbold(V)$.
 ]
 
 #lemma[
-  Let $bold(mu) in RR^n$, $matbold(V)$ be a #ponder("linear-algebra.matrix-definiteness")[non-negative definite matrix]. Let $Z_1, Z_2, ..., Z_n$ be i.i.d. with $Z_i ~ N(0, 1)$, and let $bold(Z) = (Z_1, ..., Z_n)^tp$.
+  Let $vb(mu) in RR^n$, $matbold(V)$ be a #ponder("linear-algebra.matrix-definiteness")[non-negative definite matrix]. Let $Z_1, Z_2, ..., Z_n$ be i.i.d. with $Z_i ~ N(0, 1)$, and let $vb(Z) = vecrow(Z_1, ..., Z_n)^TT$.
 
-  Let $matbold(sigma)$ be the square root of $matbold(V)$. Then, $bold(X) = bold(mu) + matbold(sigma) bold(Z)$ is a #ponder("probability.gaussian-vector")[Gaussian vector] with mean $bold(mu)$ and covariance matrix $matbold(V)$. _i.e._, $bold(X) ~ N(bold(mu), matbold(V))$.
+  Let $matbold(sigma)$ be the square root of $matbold(V)$. Then, $vb(X) = vb(mu) + matbold(sigma) vb(Z)$ is a #ponder("probability.gaussian-vector")[Gaussian vector] with mean $vb(mu)$ and covariance matrix $matbold(V)$. _i.e._, $vb(X) ~ N(vb(mu), matbold(V))$.
 ]
 
 #proof[
-  $bold(X)$ is a #ponder("probability.gaussian-vector")[Gaussian vector] as a linear transformation of a #ponder("probability.gaussian-vector")[Gaussian vector]. We have
+  $vb(X)$ is a #ponder("probability.gaussian-vector")[Gaussian vector] as a linear transformation of a #ponder("probability.gaussian-vector")[Gaussian vector]. We have
   $
-    EE[bold(X)] = bold(mu) \
-            "Var"(bold(X)) & = EE[(bold(X) - bold(mu)) (bold(X) - bold(mu))^tp] \
-                           & = EE[(matbold(sigma) bold(Z)) (matbold(sigma) bold(Z))^tp] \
-                           & = matbold(sigma) EE[bold(Z) bold(Z)^tp] matbold(sigma)^tp \
-                           & = matbold(sigma) matbold(I)_n matbold(sigma)^tp = matbold(sigma)^2 = matbold(V).
+    EE[vb(X)] = vb(mu) \
+            "Var"(vb(X)) & = EE[(vb(X) - vb(mu)) (vb(X) - vb(mu))^TT] \
+                           & = EE[(matbold(sigma) vb(Z)) (matbold(sigma) vb(Z))^TT] \
+                           & = matbold(sigma) EE[vb(Z) vb(Z)^TT] matbold(sigma)^TT \
+                           & = matbold(sigma) matbold(I)_n matbold(sigma)^TT = matbold(sigma)^2 = matbold(V).
   $
 ]
 
 === Density of a #ponder("probability.gaussian-vector")[Gaussian Vector]
 
-Let $bold(X) ~ N(bold(mu), matbold(V))$. We want to find the #ponder("probability.probability-density-function")[density] of $bold(X)$.
+Let $vb(X) ~ N(vb(mu), matbold(V))$. We want to find the #ponder("probability.probability-density-function")[density] of $vb(X)$.
 
 #fade[[In the $n=1$ case, we have $f(x) = (1)/(sqrt(2 ppi sigma^2)) exp(- (x - mu)^(2)/(2 sigma^2)).$]]
 
@@ -1050,15 +1050,15 @@ We shall consider two cases
 
 - $matbold(V)$ is #ponder("linear-algebra.matrix-definiteness")[positive definite], _i.e._ $lambda_1, ..., lambda_n > 0$. We can write
   $
-    bold(X) = bold(mu) + matbold(sigma) bold(Z) quad "where" bold(Z) ~ N(bold(0), matbold(I)_n).
+    vb(X) = vb(mu) + matbold(sigma) vb(Z) quad "where" vb(Z) ~ N(vb(0), matbold(I)_n).
   $
-  Note that $bold(x) = bold(mu) + matbold(sigma) bold(z)$ gives $bold(z) = matbold(sigma)^(-1) (bold(x) - bold(mu))$. Hence,
+  Note that $vb(x) = vb(mu) + matbold(sigma) vb(z)$ gives $vb(z) = matbold(sigma)^(-1) (vb(x) - vb(mu))$. Hence,
   $
-    f_bold(X)(bold(x)) & = f_bold(Z) (matbold(sigma)^(-1) (bold(x) - bold(mu))) dot abs(det matbold(sigma)^(-1)) \
-    & =f_bold(Z) (z_1, ..., z_n) dot det matbold(sigma)^(-1) \
-    & =(1)/ ((2 ppi)^(n/2)) exp(-abs(bold(z))^(2)/(2)) dot det matbold(sigma)^(-1) \
-    & = (1)/((2 ppi)^(n/2) det matbold(sigma)) exp(- ((bold(x) - bold(mu))^tp dot (matbold(sigma)^(-1))^tp dot matbold(sigma)^(-1) dot (bold(x) - bold(mu)))/(2))\
-    &= (1)/sqrt((2 ppi)^(n) det matbold(V)) exp(- ((bold(x) - bold(mu))^tp dot matbold(V)^(-1) dot (bold(x) - bold(mu)))/(2)).
+    f_vb(X)(vb(x)) & = f_vb(Z) (matbold(sigma)^(-1) (vb(x) - vb(mu))) dot abs(det matbold(sigma)^(-1)) \
+    & =f_vb(Z) (z_1, ..., z_n) dot det matbold(sigma)^(-1) \
+    & =(1)/ ((2 ppi)^(n/2)) exp(-abs(vb(z))^(2)/(2)) dot det matbold(sigma)^(-1) \
+    & = (1)/((2 ppi)^(n/2) det matbold(sigma)) exp(- ((vb(x) - vb(mu))^TT dot (matbold(sigma)^(-1))^TT dot matbold(sigma)^(-1) dot (vb(x) - vb(mu)))/(2))\
+    &= (1)/sqrt((2 ppi)^(n) det matbold(V)) exp(- ((vb(x) - vb(mu))^TT dot matbold(V)^(-1) dot (vb(x) - vb(mu)))/(2)).
   $
 
 #lecture-separator(lecture: 21, date: "2026-03-11")
@@ -1072,16 +1072,16 @@ We shall consider two cases
 
   Let
   $
-    bold(mu) = vec(bold(lambda), bold(nu)) quad "where" bold(lambda) in RR^m "and" bold(nu) in RR^(n-m).
+    vb(mu) = vec(vb(lambda), vb(nu)) quad "where" vb(lambda) in RR^m "and" vb(nu) in RR^(n-m).
   $
   We can then write
   $
-    bold(X) = vec(bold(Y), bold(nu)) "where" bold(Y) ~ N(bold(lambda), matbold(U))\
-    f_bold(Y) (y) = (1)/(sqrt((2ppi)^m det matbold(U)) ) exp(- ((bold(y) - bold(lambda))^tp dot matbold(U)^(-1) dot (bold(y) - bold(lambda)))/(2)).
+    vb(X) = vec(vb(Y), vb(nu)) "where" vb(Y) ~ N(vb(lambda), matbold(U))\
+    f_vb(Y) (y) = (1)/(sqrt((2ppi)^m det matbold(U)) ) exp(- ((vb(y) - vb(lambda))^TT dot matbold(U)^(-1) dot (vb(y) - vb(lambda)))/(2)).
   $
 
 #proposition[
-  Let $bold(X) = (X_1, ..., X_n)$ be a #ponder("probability.gaussian-vector")[Gaussian vector]. Let $bold(mu) = EE[bold(X)]$ and $matbold(V) = "Var"(bold(X))$.
+  Let $vb(X) = vecrow(X_1, ..., X_n)$ be a #ponder("probability.gaussian-vector")[Gaussian vector]. Let $vb(mu) = EE[vb(X)]$ and $matbold(V) = "Var"(vb(X))$.
 
   If $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent], then $matbold(V)$ is a diagonal matrix.
 ]
@@ -1091,7 +1091,7 @@ We shall consider two cases
 ]
 
 #proposition[
-  Let $bold(X) = (X_1, ..., X_n)$ be a #ponder("probability.gaussian-vector")[Gaussian vector]. If $matbold(V)$  is a diagonal matrix and strictly #ponder("linear-algebra.matrix-definiteness")[positive definite], then $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent].
+  Let $vb(X) = vecrow(X_1, ..., X_n)$ be a #ponder("probability.gaussian-vector")[Gaussian vector]. If $matbold(V)$  is a diagonal matrix and strictly #ponder("linear-algebra.matrix-definiteness")[positive definite], then $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent].
 ]
 
 #prooflike[Proof 1][
@@ -1099,22 +1099,22 @@ We shall consider two cases
   $
     matbold(V) = mat(lambda_1, 0, ..., 0; 0, lambda_2, ..., 0; dots.v, dots.v, dots.down, dots.v; 0, ..., 0, lambda_n) quad "where" lambda_1, ..., lambda_n > 0.
   $
-  Let $bold(mu) = (mu_1, ..., mu_n)$. We have
+  Let $vb(mu) = vecrow(mu_1, ..., mu_n)$. We have
   $
-    f_bold(X) (bold(x)) &= (1)/sqrt((2 ppi)^n det matbold(V)) exp(- ((bold(x) - bold(mu))^tp dot matbold(V)^(-1) dot (bold(x) - bold(mu)))/(2)) \
+    f_vb(X) (vb(x)) &= (1)/sqrt((2 ppi)^n det matbold(V)) exp(- ((vb(x) - vb(mu))^TT dot matbold(V)^(-1) dot (vb(x) - vb(mu)))/(2)) \
     &= (1)/(sqrt((2 ppi)^n det matbold(V))) exp(-sum_(i=1)^n ((x_i - mu_i)^2)/(2 lambda_i)). \
   $
-  Since $f_bold(X)$ factorises, by @thm-independence-multivariate-density (2), $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent], and $X_i ~ N(mu_i, lambda_i)$.
+  Since $f_vb(X)$ factorises, by @thm-independence-multivariate-density (2), $X_1, ..., X_n$ are #ponder("probability.independence-of-random-variables")[independent], and $X_i ~ N(mu_i, lambda_i)$.
 ]
 
 #prooflike[Proof 2][
-  Consider the MGF of $bold(X)$. We have
+  Consider the MGF of $vb(X)$. We have
   $
-    m(theta) = EE[ee^(bold(theta)^tp bold(X))] = exp(bold(theta)^tp bold(mu) + (1)/(2) bold(theta)^tp matbold(V) bold(theta)).
+    m(theta) = EE[ee^(vb(theta)^TT vb(X))] = exp(vb(theta)^TT vb(mu) + (1)/(2) vb(theta)^TT matbold(V) vb(theta)).
   $
   since we have
   $
-    bold(theta)^tp bold(X) ~ N(bold(theta)^tp bold(mu), bold(theta)^tp matbold(V) bold(theta)).
+    vb(theta)^TT vb(X) ~ N(vb(theta)^TT vb(mu), vb(theta)^TT matbold(V) vb(theta)).
   $
   Hence
   $
@@ -1129,13 +1129,13 @@ Therefore, we can conclude that if $(X_1, ..., X_n)$ is a #ponder("probability.g
 === #ponder("probability.bivariate-gaussian")[Bivariate Gaussian Distribution]
 
 #definition[
-  Let $bold(X) = (X_1, X_2)$ be a #ponder("probability.gaussian-vector")[Gaussian vector] in $RR^2$. Let $mu_k = EE[X_k]$, $sigma_k^2 = "Var"(X_k)$ and
+  Let $vb(X) = vecrow(X_1, X_2)$ be a #ponder("probability.gaussian-vector")[Gaussian vector] in $RR^2$. Let $mu_k = EE[X_k]$, $sigma_k^2 = "Var"(X_k)$ and
 
   $
     rho = "Corr"(X_1, X_2) = ("Cov"(X_1, X_2))/sqrt("Var"(X_1) "Var"(X_2)).
   $
 
-  Then $bold(X)$ is called a #ponder("probability.bivariate-gaussian")[*bivariate Gaussian vector*] with parameters $mu_1, mu_2, sigma_1^2$ and $sigma_2^2$.
+  Then $vb(X)$ is called a #ponder("probability.bivariate-gaussian")[*bivariate Gaussian vector*] with parameters $mu_1, mu_2, sigma_1^2$ and $sigma_2^2$.
 ] <def-bivariate-gaussian>
 
 #proposition[
@@ -1146,7 +1146,7 @@ Therefore, we can conclude that if $(X_1, ..., X_n)$ is a #ponder("probability.g
   By #ponder("linear-algebra.cauchy-schwarz-inequality")[Cauchy-Schwarz inequality], the result follows.
 ]
 
-Note that we can write the covariance matrix of $bold(X)$ as
+Note that we can write the covariance matrix of $vb(X)$ as
 $
   matbold(V) = mat(sigma_1^2, rho sigma_1 sigma_2; rho sigma_1 sigma_2, sigma_2^2).
 $
@@ -1159,15 +1159,15 @@ $
   is #ponder("linear-algebra.matrix-definiteness")[non-negative definite].
 ]
 #proof[
-  Consider any $bold(u) = (u_1,u_2)^tp in RR^2$. Then
+  Consider any $vb(u) = vecrow(u_1,u_2)^TT in RR^2$. Then
   $
-    bold(u)^tp matbold(V) bold(u) & = (1-rho) (sigma_1^2 u_1^2 + sigma_2^2 u_2^2) + rho (sigma_1 u_1 + sigma_2 u_2)^2 \
+    vb(u)^TT matbold(V) vb(u) & = (1-rho) (sigma_1^2 u_1^2 + sigma_2^2 u_2^2) + rho (sigma_1 u_1 + sigma_2 u_2)^2 \
                                   & = (1+rho) (sigma_1^2 u_1^2 + sigma_2^2 u_2^2) - rho (sigma_1 u_1 - sigma_2 u_2)^2 \
   $
 
-  - If $rho in [-1, 0]$, the second line gives $bold(u)^tp matbold(V) bold(u) >= 0$.
+  - If $rho in [-1, 0]$, the second line gives $vb(u)^TT matbold(V) vb(u) >= 0$.
 
-  - If $rho in [0, 1]$, the first line gives $bold(u)^tp matbold(V) bold(u) >= 0$.
+  - If $rho in [0, 1]$, the first line gives $vb(u)^TT matbold(V) vb(u) >= 0$.
 ]
 
 Now, consider $EE[X_2 mid(|) X_1]$. We can write

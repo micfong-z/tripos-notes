@@ -1,1 +1,1 @@
-Conservative forces have a conserved energy $E = (1)/(2) m abs(bold(dot(x)))^2 + V(bold(x))$: $(dif E)/(dif t) = 0$ along the motion.
+Conservative forces have a conserved energy $E = (1)/(2) m abs(vb(dot(x)))^2 + V(vb(x))$: $dv(E, t) = 0$ along the motion.

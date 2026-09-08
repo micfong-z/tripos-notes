@@ -8,12 +8,12 @@ To set up the arena we are going to work in, we require
 
 - a three dimensional *space* that can be endowed with a _Cartesian reference frame_ #fade[[_i.e._ an origin and some axes]], such that points in space are labelled as
   $
-    bold(x) = (x_1, x_2, x_3).
+    vb(x) = vecrow(x_1, x_2, x_3).
   $
 
 - a *time* parameter that can be labelled, in an arbitrary reference frame, by a real number $t$.
 
-- a *point particle* which is an idealised object that is completely determined by its position at a given time as $bold(x)(t)$.
+- a *point particle* which is an idealised object that is completely determined by its position at a given time as $vb(x)(t)$.
 
   #align(center)[
     #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e1.svg", width: 14em)
@@ -23,7 +23,7 @@ To set up the arena we are going to work in, we require
 
 - the *velocity* which is the vector
   $
-    bold(v)(t) = (dif bold(x))/(dif t) = bold(dot(x)).
+    vb(v)(t) = dv(vb(x), t) = vb(dot(x)).
   $
 
   From results in IA Vector Calculus, the velocity vector is tangent to the trajectory of the particle.
@@ -34,18 +34,18 @@ To set up the arena we are going to work in, we require
 
   Recall that in Cartesian coordinates,
   $
-    (dif bold(x))/(dif t) = ((dif x_1)/(dif t), (dif x_2)/(dif t), (dif x_3)/(dif t)).
+    dv(vb(x), t) = vecrow(dv(x_1, t), dv(x_2, t), dv(x_3, t)).
   $
   #fade[[We will discuss other coordinate systems later in the course.]]
 
 - the *acceleration* which is the vector
   $
-    bold(a) = bold(dot.double(x)) = bold(dot(v)) = (dif^2 bold(x))/(dif t^2).
+    vb(a) = vb(dot.double(x)) = vb(dot(v)) = dv(vb(x), t, 2).
   $
 
 The above structure is not enough to write down Newton's equations.
 
-Consider a "free" particle that does not experience any forces. #fade[[_e.g._ the particle is alone in deep space far away from any other matter]] The position of this particle is $bold(x)(t)$, we need to consider which reference frame we are using.
+Consider a "free" particle that does not experience any forces. #fade[[_e.g._ the particle is alone in deep space far away from any other matter]] The position of this particle is $vb(x)(t)$, we need to consider which reference frame we are using.
 
 
 #align(center)[
@@ -60,7 +60,7 @@ The particle may be at rest in a frame $S$, but moving in a complicated way with
 
 In an #ponder("dynamics.inertial-frame")[inertial frame], we may write for a free particle,
 $
-  bold(dot(v)) = bold(dot.double(x)) = bold(0).
+  vb(dot(v)) = vb(dot.double(x)) = vb(0).
 $
 
 The #ponder("dynamics.inertial-frame")[law of inertia] is an improved version of Newton's 1st law.
@@ -74,12 +74,12 @@ This is a true statement about the world, but not an obvious one. #fade[[In anti
 #definition[Galilean transformation][
   A #ponder("dynamics.galilean-transformation")[*Galilean transformation*] between two reference frames $S$ and $S'$ is given by
   $
-    bold(x)' = matbold(R) bold(x) + bold(k) + bold(w) t
+    vb(x)' = matbold(R) vb(x) + vb(k) + vb(w) t
   $
-  where #ponder("algebra.orthogonal-group")[$matbold(R) in O(3)$] is a rotation and/or a reflection, $bold(k) in RR^3$ is a constant translation, and $bold(w) in RR^3$ is a constant velocity, called a boost.
+  where #ponder("algebra.orthogonal-group")[$matbold(R) in O(3)$] is a rotation and/or a reflection, $vb(k) in RR^3$ is a constant translation, and $vb(w) in RR^3$ is a constant velocity, called a boost.
 ] <def-galilean-transformation>
 
-It is easy to see that $bold(dot.double(x)) = bold(0) <=> bold(dot.double(x')) = bold(0)$ under a #ponder("dynamics.galilean-transformation")[Galilean transformation].
+It is easy to see that $vb(dot.double(x)) = vb(0) <=> vb(dot.double(x')) = vb(0)$ under a #ponder("dynamics.galilean-transformation")[Galilean transformation].
 
 #example[
   Consider a frame relative to a boat moving at constant velocity. A mass dropped from the mast of the boat lands at the same place on this boat as if the boat were not moving.

@@ -1,1 +1,1 @@
-If ${bold(e_1), ..., bold(e_n)}$ and ${bold(f_1), ..., bold(f_m)}$ are both bases of $V$, then $n = m$; this common size is the dimension of $V$.
+If ${vb(e_1), ..., vb(e_n)}$ and ${vb(f_1), ..., vb(f_m)}$ are both bases of $V$, then $n = m$; this common size is the dimension of $V$.

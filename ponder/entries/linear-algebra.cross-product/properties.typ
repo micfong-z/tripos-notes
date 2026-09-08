@@ -1,8 +1,8 @@
-For $bold(a), bold(b), bold(c) in RR^3$ and $lambda in RR$:
+For $vb(a), vb(b), vb(c) in RR^3$ and $lambda in RR$:
 
-+ $bold(a) times bold(b) = -bold(b) times bold(a)$
-+ $bold(a) times bold(a) = bold(0)$
-+ $bold(a) times bold(b) = bold(0)$ iff $bold(a) = lambda bold(b)$ for some $lambda in RR$, or either vector is zero
-+ $(lambda bold(a)) times bold(b) = lambda (bold(a) times bold(b)) = bold(a) times (lambda bold(b))$
-+ $bold(a) times (bold(b) + bold(c)) = bold(a) times bold(b) + bold(a) times bold(c)$
-+ $bold(a) dot (bold(a) times bold(b)) = bold(b) dot (bold(a) times bold(b)) = 0$
++ $vb(a) times vb(b) = -vb(b) times vb(a)$
++ $vb(a) times vb(a) = vb(0)$
++ $vb(a) times vb(b) = vb(0)$ iff $vb(a) = lambda vb(b)$ for some $lambda in RR$, or either vector is zero
++ $(lambda vb(a)) times vb(b) = lambda (vb(a) times vb(b)) = vb(a) times (lambda vb(b))$
++ $vb(a) times (vb(b) + vb(c)) = vb(a) times vb(b) + vb(a) times vb(c)$
++ $vb(a) dot (vb(a) times vb(b)) = vb(b) dot (vb(a) times vb(b)) = 0$

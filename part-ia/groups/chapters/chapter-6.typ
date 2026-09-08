@@ -164,7 +164,7 @@ We also have $D_8$ as a #ponder("algebra.abelian-group")[non-abelian] #ponder("a
   $
   It is easy to check that these form a #ponder("algebra.group")[group]. We usually use Hamilton's notation:
   $
-    1 & = mat(1, 0; 0, 1),    & quad & -1 & = & mat(-1, 0; 0, -1), \
+    1 & = imat(2, fill: 0),    & quad & -1 & = & mat(-1, 0; 0, -1), \
     i & = mat(ii, 0; 0, -ii), & quad & -i & = & mat(-ii, 0; 0, ii), \
     j & = mat(0, 1; -1, 0),   & quad & -j & = & mat(0, -1; 1, 0), \
     k & = mat(0, ii; ii, 0),  & quad & -k & = & mat(0, -ii; -ii, 0).

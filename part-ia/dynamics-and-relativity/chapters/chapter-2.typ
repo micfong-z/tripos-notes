@@ -9,22 +9,22 @@ Once there is more than one particle in the universe, there will be interactions
 #law[Newton's 2nd law][
   In an #ponder("dynamics.inertial-frame")[inertial frame],
   $
-    bold(dot(p)) = bold(F), #<eq-8>
+    vb(dot(p)) = vb(F), #<eq-8>
   $
-  where $bold(p)$ is the momentum of the particle and $bold(F)$ is the net force acting on the particle.
+  where $vb(p)$ is the momentum of the particle and $vb(F)$ is the net force acting on the particle.
 
-  The *momentum* $bold(p)$ is defined to be $bold(p) equiv m bold(dot(x))$, where $m$ is the inertial mass.
+  The *momentum* $vb(p)$ is defined to be $vb(p) equiv m vb(dot(x))$, where $m$ is the inertial mass.
 
   The mass is an additional property of particles. It could change with time, but we generally assume it is constant unless otherwise specified.
 
-  The force $bold(F)$ depends on the interaction, but can only depend on $bold(x)$ and $bold(dot(x))$ at the current time.
+  The force $vb(F)$ depends on the interaction, but can only depend on $vb(x)$ and $vb(dot(x))$ at the current time.
 ] <law-newtons-second-law>
 
 The above implies that
 
-- #ponder("dynamics.newtons-second-law")[Newton's second law] can be written as a second order ODE for $bold(x)(t)$.
+- #ponder("dynamics.newtons-second-law")[Newton's second law] can be written as a second order ODE for $vb(x)(t)$.
 
-- given $bold(x)$ and $bold(dot(x))$ at $t = 0$ for all particles, Newton's equations uniquely determine $bold(x)(t)$ for all future times.
+- given $vb(x)$ and $vb(dot(x))$ at $t = 0$ for all particles, Newton's equations uniquely determine $vb(x)(t)$ for all future times.
 
 #important[
   Newton mechanics has been superceded by both quantum mechanics (small scale) and relativity (high speed), but remains an excellent approximation much of the universe.
@@ -37,54 +37,54 @@ The above implies that
 #definition[Conservative Force][
   #ponder("dynamics.conservative-force")[*Conservative *forces] form an important class of forces that can be written as
   $
-    bold(F) = - bold(nabla) V(bold(x))
+    vb(F) = - grad V(vb(x))
   $
   for some *potential* (also called *potential energy*) $V$.
 ] <def-conservative-force>
 
 #remark[
-  Recall from IA Vector Calculus that $bold(nabla) V = ((∂V)/(∂x), (∂V)/(∂y), (∂V)/(∂z)).$
+  Recall from IA Vector Calculus that $grad V = vecrow(pdv(V, x), pdv(V, y), pdv(V, z)).$
 ]
 
 #example[Gravitational Force][
-  The gravitational potential energy of a particle of mass $m$ at $bold(x)$ due to a particle of mass $M$ at $bold(x_0)$ is
+  The gravitational potential energy of a particle of mass $m$ at $vb(x)$ due to a particle of mass $M$ at $vb(x_0)$ is
   $
-    V = -(G M m)/(abs(bold(x) - bold(x_0)) )
+    V = -(G M m)/(abs(vb(x) - vb(x_0)) )
   $
   where $G approx qty("6.67e-11", "m^3 kg^-1 s^-2")$.
 
   To take the #ponder("calculus.gradient")[gradient],
   $
-    ∂_i (abs(bold(x)- bold(x_0))^2 ) = 2 abs(bold(x) - bold(x_0)) ∂_i abs(bold(x) - bold(x_0))
+    ∂_i (abs(vb(x)- vb(x_0))^2 ) = 2 abs(vb(x) - vb(x_0)) ∂_i abs(vb(x) - vb(x_0))
   $
   and
   $
-    ∂_i (abs(bold(x)- bold(x_0))^2 ) & = ∂_i ( (bold(x) - bold(x_0))_j (bold(x) - bold(x_0))_j ) \
-                                     & = 2 ( (bold(x) - bold(x_0))_j ∂_i (bold(x) - bold(x_0))_j ) \
-                                     & = 2 ( (bold(x) - bold(x_0))_j delta_(i j) ) \
-                                     & = 2 ( (bold(x) - bold(x_0))_i ). \
+    ∂_i (abs(vb(x)- vb(x_0))^2 ) & = ∂_i ( (vb(x) - vb(x_0))_j (vb(x) - vb(x_0))_j ) \
+                                     & = 2 ( (vb(x) - vb(x_0))_j ∂_i (vb(x) - vb(x_0))_j ) \
+                                     & = 2 ( (vb(x) - vb(x_0))_j delta_(i j) ) \
+                                     & = 2 ( (vb(x) - vb(x_0))_i ). \
   $
   Hence
   $
-    bold(nabla) abs(bold(x) - bold(x_0)) = (bold(x) - bold(x_0)) / abs(bold(x) - bold(x_0)).
+    grad abs(vb(x) - vb(x_0)) = (vb(x) - vb(x_0)) / abs(vb(x) - vb(x_0)).
   $
   This gives
   $
-    bold(F) = - bold(nabla) V = - (G M m)/(abs(bold(x) - bold(x_0))^3) (bold(x) - bold(x_0)).
+    vb(F) = - grad V = - (G M m)/(abs(vb(x) - vb(x_0))^3) (vb(x) - vb(x_0)).
   $
 
-  If we let $bold(r) = bold(x) - bold(x_0)$, this is the familiar #ponder("dynamics.gravitational-force")[inverse square law]
+  If we let $vb(r) = vb(x) - vb(x_0)$, this is the familiar #ponder("dynamics.gravitational-force")[inverse square law]
   $
-    bold(F) = - (G M m)/(r^2) hat(bold(r)).
+    vb(F) = - (G M m)/(r^2) vu(r).
   $
   Sometimes we write $V = m Phi$, where $Phi$ is the gravitational potential
   $
-    Phi = - (G M)/(abs(bold(x) - bold(x_0))).
+    Phi = - (G M)/(abs(vb(x) - vb(x_0))).
   $
 
   #separator
 
-  Near the surface of the Earth, take $bold(x_0) = bold(0)$ the centre of the Earth, and $abs(bold(x)) = R + z$, where $R$ is the radius of the Earth and $z << R$ is the height above the surface. Then
+  Near the surface of the Earth, take $vb(x_0) = vb(0)$ the centre of the Earth, and $abs(vb(x)) = R + z$, where $R$ is the radius of the Earth and $z << R$ is the height above the surface. Then
 
   $
     Phi(R+z) & = - (G M)/(R + z) \
@@ -93,7 +93,7 @@ The above implies that
   $
   Thus, near the surface of the Earth, we approximate the gravitational potential as
   $ Phi(z) approx underbracket("constant", "drops out at gradient") + g z. $ The force is then
-  $ bold(F) = - m g hat(bold(z)), $
+  $ vb(F) = - m g vu(z), $
   which is a constant force near the surface of the Earth.
 
   This force leads to the simplest example of motion due to a force.
@@ -102,9 +102,9 @@ The above implies that
 
   #ponder("dynamics.newtons-second-law")[Newton's 2nd law] gives
   $
-    m bold(dot.double(x)) = m bold(g)
+    m vb(dot.double(x)) = m vb(g)
   $
-  where $bold(g) = (0, 0, -g)$. Consider the $z$-component,
+  where $vb(g) = vecrow(0, 0, -g)$. Consider the $z$-component,
   $
     cancel(m) dot.double(z) = -cancel(m) g
   $
@@ -121,16 +121,16 @@ The above implies that
 #proposition[Conserved Energy of Conservative Forces][
   #ponder("dynamics.conservative-force")[Conservative forces] have a #ponder("dynamics.conservation-of-energy")[*conserved energy*]
   $
-    E = (1)/(2) m abs(bold(dot(x)))^2 + V(bold(x)).
+    E = (1)/(2) m abs(vb(dot(x)))^2 + V(vb(x)).
   $
 
 ] <prop-conserved-energy>
 
 We can check that this is conserved:
 $
-  (dif E)/(dif t) & = m dot(x)_i dot.double(x)_i + (∂ V)/(∂ x_i) dot(x)_i \
-                  & = dot(x)_i (m dot.double(x)_i + (∂ V)/(∂ x_i) ) \
-                  & = 0. quad "by Newton" m bold(dot.double(x)) = - bold(nabla) V \
+  dv(E, t) & = m dot(x)_i dot.double(x)_i + pdv(V, x_i) dot(x)_i \
+                  & = dot(x)_i (m dot.double(x)_i + pdv(V, x_i) ) \
+                  & = 0. quad "by Newton" m vb(dot.double(x)) = - grad V \
 $
 
 #example[
@@ -157,27 +157,27 @@ $
   The mass $m$ is cancelled out, since the gravitational mass (that appears in the #ponder("dynamics.gravitational-force")[inverse square law]) is the same as the inertial mass (that appears in #ponder("dynamics.newtons-second-law")[Newton's 2nd law]).
 ] <ex-escape-velocity>
 
-It is useful to write $E = T + V$, where $T = (1)/(2) m abs(bold(dot(x)))^2$ is the *kinetic energy* and $V$ is the *potential energy*.
+It is useful to write $E = T + V$, where $T = (1)/(2) m abs(vb(dot(x)))^2$ is the *kinetic energy* and $V$ is the *potential energy*.
 
 #proposition[
   #ponder("dynamics.conservative-force")[Conservative forces] have the property that the work done by the force as a particle moves along a trajectory $C$, where the work done is defined as
   $
-    W = integral_C bold(F) dot dif bold(x),
+    W = integral_C vb(F) dot dif vb(x),
   $
   only depends on the endpoints of the trajectory, not on the path itself.
 ] <prop-work-endpoints>
 
 #proof[
-  Let the trajectory $C$ go from $bold(x)_1$ at $t_1$ to $bold(x)_2$ at $t_2$. Then
+  Let the trajectory $C$ go from $vb(x)_1$ at $t_1$ to $vb(x)_2$ at $t_2$. Then
   $
-    W & = integral_C bold(F) dot dif bold(x) \
-      & = integral_(t_1)^(t_2) underbracket(bold(F) dot (dif x)/(dif t), "power") dif t \
-      & = m integral_(t_1)^(t_2) bold(dot.double(x)) dot bold(dot(x))dif t quad         &       ("Newton's 2nd law") \
-      & = (1)/(2) m integral_(t_1)^(t_2) (dif)/(dif t) (abs(bold(dot(x)))^2) dif t \
+    W & = integral_C vb(F) dot dif vb(x) \
+      & = integral_(t_1)^(t_2) underbracket(vb(F) dot dv(x, t), "power") dif t \
+      & = m integral_(t_1)^(t_2) vb(dot.double(x)) dot vb(dot(x))dif t quad         &       ("Newton's 2nd law") \
+      & = (1)/(2) m integral_(t_1)^(t_2) dv(, t) (abs(vb(dot(x)))^2) dif t \
       & = T(t_2) - T(t_1) \
       & = V(t_1) - V(t_2) quad                                                          & ("Conservation of energy") \
-      & = V(bold(x)(t_1)) - V(bold(x)(t_2)) \
-      & = V(bold(x)_1) - V(bold(x)_2). \
+      & = V(vb(x)(t_1)) - V(vb(x)(t_2)) \
+      & = V(vb(x)_1) - V(vb(x)_2). \
   $
 ]
 
@@ -186,10 +186,10 @@ It is useful to write $E = T + V$, where $T = (1)/(2) m abs(bold(dot(x)))^2$ is 
 #prooflike[Proof (Direct)][
   Using results from IA Vector Calculus, we have
   $
-    W & = integral_C bold(F) dif bold(x) \
-      & = - integral_C bold(nabla) V dif bold(x) \
-      & = - integral_(bold(x)_1)^(bold(x)_2) d V \
-      & = V(bold(x)_1) - V(bold(x)_2). \
+    W & = integral_C vb(F) dif vb(x) \
+      & = - integral_C grad V dif vb(x) \
+      & = - integral_(vb(x)_1)^(vb(x)_2) d V \
+      & = V(vb(x)_1) - V(vb(x)_2). \
   $
 ]
 
@@ -197,50 +197,50 @@ It is useful to write $E = T + V$, where $T = (1)/(2) m abs(bold(dot(x)))^2$ is 
 
 Forces that depend on the velocity typically don't have a #ponder("dynamics.conservation-of-energy")[conserved energy], such as #ponder("dynamics.friction")[friction]. However, the *Lorentz force* is an exception.
 
-Electromagnetic fields $bold(E)$ and $bold(B)$ exert the following force on a particle with charge $q$
+Electromagnetic fields $vb(E)$ and $vb(B)$ exert the following force on a particle with charge $q$
 
 $
-  bold(F) = q [bold(E)(bold(x)) + bold(dot(x)) times bold(B)(bold(x)) ].
+  vb(F) = q [vb(E)(vb(x)) + vb(dot(x)) times vb(B)(vb(x)) ].
 $
 
-In this section, we shall restrict to static electromagnetic fields, i.e., $bold(E)$ and $bold(B)$ do not depend on time. Then
+In this section, we shall restrict to static electromagnetic fields, i.e., $vb(E)$ and $vb(B)$ do not depend on time. Then
 $
-  bold(E) = - bold(nabla) Phi,
+  vb(E) = - grad Phi,
 $
-where $Phi(bold(x))$ is the electric potential.
+where $Phi(vb(x))$ is the electric potential.
 
 We claim that the #ponder("dynamics.conservation-of-energy")[conserved energy] is
 $
-  E = (1)/(2) m abs(bold(dot(x)))^2 + q Phi(bold(x)).
+  E = (1)/(2) m abs(vb(dot(x)))^2 + q Phi(vb(x)).
 $
 
 To check this,
 $
-  (dif E)/(dif t) & = m bold(dot.double(x)) dot bold(dot(x)) + q bold(nabla) Phi dot bold(dot(x)) \
-                  & = (bold(F) + q bold(nabla) Phi) dot bold(dot(x)) \
-                  & = q (bold(dot(x)) times bold(B)) dot bold(dot(x)) quad                        & ("by Lorentz") \
+  dv(E, t) & = m vb(dot.double(x)) dot vb(dot(x)) + q grad Phi dot vb(dot(x)) \
+                  & = (vb(F) + q grad Phi) dot vb(dot(x)) \
+                  & = q (vb(dot(x)) times vb(B)) dot vb(dot(x)) quad                        & ("by Lorentz") \
                   & = 0. \
 $
 
 The velocity-dependent force is #ponder("linear-algebra.orthogonality")[orthogonal] to the trajectory of the particle, so it does no work.
 
-Electric forces are similar to gravitational ones. The potential $Phi$ at $bold(x)$ due to another particle of charge $Q$ at $bold(x_0)$ is
+Electric forces are similar to gravitational ones. The potential $Phi$ at $vb(x)$ due to another particle of charge $Q$ at $vb(x_0)$ is
 $
-  Phi = (Q)/(4 ppi epsilon_0 ) (1)/(abs(bold(x) - bold(x_0))),
+  Phi = (Q)/(4 ppi epsilon_0 ) (1)/(abs(vb(x) - vb(x_0))),
 $
 where $epsilon_0$ is the permittivity of free space, approximately $qty("8.85e-12", "m^-3 kg^-1 s^2 C^2")$.
 
 Like gravity, this leads to an inverse square law for the electric force, called *Coulomb's law*. However, charges can be positive or negative, but mass is always positive. Hence, gravity dominates for large objects while electric foces tend to cancel out overall.
 
-For magnetic forces, a charged particle in a magnetic field $bold(B)$ obeys
+For magnetic forces, a charged particle in a magnetic field $vb(B)$ obeys
 
 $
-  m bold(dot.double(x)) = q bold(dot(x)) times bold(B).
+  m vb(dot.double(x)) = q vb(dot(x)) times vb(B).
 $
 
 This is a vector differential equation. The most direct way to solve it is to write out components.
 
-Suppose $bold(B)$ is constant and WLOG along the $z$-axis, i.e., $bold(B) = (0, 0, B) = B bold(hat(z))$. The equations become
+Suppose $vb(B)$ is constant and WLOG along the $z$-axis, i.e., $vb(B) = vecrow(0, 0, B) = B vu(z)$. The equations become
 $
   cases(
     "(1)"quad & m dot.double(x) = q B dot(y),
@@ -250,12 +250,12 @@ $
 $
 
 #prooflike[Solution 1][
-  Using $(dif )/(dif t) "(1)"$ and $"(2)"$,
+  Using $dv(, t) "(1)"$ and $"(2)"$,
   $
     m dot.triple(x) = q B dot.double(y) = - (q^2 dot(x) B^2)/m
   $
 
-  which is a 2nd order equation for $bold(dot(x))$. This gives
+  which is a 2nd order equation for $vb(dot(x))$. This gives
   $
     dot(x) = tilde(A) sin(omega t + phi)
   $
@@ -324,7 +324,7 @@ $
 $
 where $x_0$ is an arbitrary reference point. This gives
 $
-  F_x (x) = - (dif V)/(dif x).
+  F_x (x) = - dv(V, x).
 $
 
 The following energy is then conserved:
@@ -411,7 +411,7 @@ $
 #example[
   We will derive this equation for a pendulum later:
   $
-    (dif^(2) theta)/(dif t^(2)) = - (g)/(l) sin theta.
+    dv(theta, t, 2) = - (g)/(l) sin theta.
   $
 
   #align(center)[
@@ -428,7 +428,7 @@ $
   $
   We are effectively writing $theta(t(tau)) = F(tau)$ and by chain rule,
   $
-    (dif^2 F)/(dif tau^2) = -sin F.
+    dv(F, tau, 2) = -sin F.
   $
   This equation does not depend on $g, l$, and so the solution is some function $F(tau)$. Therefore, the period $Delta tau$ of $F(tau)$ may depend on the initial angle $theta_0$ but can't depend on $g, l$. Hence,
   $
@@ -512,11 +512,11 @@ There are two important properties:
 
 1. #ponder("dynamics.friction")[Friction] does not conserve energy, since momentum is lost to the medium, in the form of heat.
 
-2. #ponder("dynamics.friction")[Friction] is irreversible. Energy is lost by the object, and energy is lost by the object but not regained. #fade[[If one every doubts about the sign of a #ponder("dynamics.friction")[friction] force, it should slow the object down.]] Moreover, #ponder("dynamics.friction")[friction] forces must change signs under $bold(v) -> -bold(v)$, hence #ponder("dynamics.friction")[friction] forces must depend on velocity.
+2. #ponder("dynamics.friction")[Friction] is irreversible. Energy is lost by the object, and energy is lost by the object but not regained. #fade[[If one every doubts about the sign of a #ponder("dynamics.friction")[friction] force, it should slow the object down.]] Moreover, #ponder("dynamics.friction")[friction] forces must change signs under $vb(v) -> -vb(v)$, hence #ponder("dynamics.friction")[friction] forces must depend on velocity.
 
 There are two common cases of #ponder("dynamics.friction")[friction] forces:
 
-1. *Linear drag.* $bold(F) = -k_1 bold(v)$.
+1. *Linear drag.* $vb(F) = -k_1 vb(v)$.
 
   Linear drag depends on viscous effects #fade[[see IB Fluid Dynamics]], such as a spoon in honey. In this case, objects move the medium with them.
 
@@ -533,11 +533,11 @@ There are two common cases of #ponder("dynamics.friction")[friction] forces:
   ] <ex-stokes-law>
 
 
-2. *Quadratic drag.* $bold(F) = -k_2 |bold(v)| bold(v)$.
+2. *Quadratic drag.* $vb(F) = -k_2 |vb(v)| vb(v)$.
 
   Quadratic drag is the more intuitive case.
 
-  As an object bumps into molecules, the rate of collisions is proportional to the speed $|bold(v)|$, and each collision imparts a momentum change proportional to $|bold(v)|$. Hence the force is proportional to $|bold(v)|^2$.
+  As an object bumps into molecules, the rate of collisions is proportional to the speed $|vb(v)|$, and each collision imparts a momentum change proportional to $|vb(v)|$. Hence the force is proportional to $|vb(v)|^2$.
 
   The number of collisions depends on the density of the medium $rho$ and the cross-sectional area $A$ of the object, so $k_2 prop rho A$. We can also see this by #ponder("dynamics.dimensional-analysis")[dimensional analysis]:
 
@@ -558,7 +558,7 @@ $
 
 Consider a particle falling with quadratic #ponder("dynamics.friction")[friction] under gravity. Consider the $z$-component of the motion. We have
 $
-  m (dif v)/(dif t)= - m g + k v^2.
+  m dv(v, t)= - m g + k v^2.
 $
 
 The velocity starts at $0$, then decreases. Initially, $"RHS"$ is dominated by $-m g$. Eventually, the two forces balance, giving a *terminal velocity*.
@@ -590,7 +590,7 @@ Note that, solving the equations gives the following graph.
 
 We can also have motion in different directions to gravity, so that
 $
-  m bold(dot(v)) = m bold(g) - k abs(bold(v)) bold(v).
+  m vb(dot(v)) = m vb(g) - k abs(vb(v)) vb(v).
 $
 
 === Damping

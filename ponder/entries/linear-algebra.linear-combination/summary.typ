@@ -1,1 +1,1 @@
-For scalars $alpha, beta in RR$, $ alpha bold(a) + beta bold(b) $ is a linear combination of $bold(a)$ and $bold(b)$.
+For scalars $alpha, beta in RR$, $ alpha vb(a) + beta vb(b) $ is a linear combination of $vb(a)$ and $vb(b)$.

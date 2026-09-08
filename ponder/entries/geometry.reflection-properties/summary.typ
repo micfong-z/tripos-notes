@@ -1,1 +1,1 @@
-The reflection $S_bold(v)$ satisfies $S_bold(v)^2 = id$ and belongs to $O(n)$.
+The reflection $S_vb(v)$ satisfies $S_vb(v)^2 = id$ and belongs to $O(n)$.

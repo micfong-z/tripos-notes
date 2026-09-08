@@ -40,18 +40,18 @@ We will need to borrow this following idea from IA Analysis I for now:
 
 Hence, if $f(x)$ is differentiable, then by #ponder("calculus.taylors-theorem")[Taylor's theorem]
 $
-  f(c_n) & = f(x_n) + O(c_n - x_n) quad "as" c_n - x_n -> 0 \
-         & = f(x_n) + O(Delta x) quad "since" Delta x >= c_n - x_n. \
+  f(c_n) & = f(x_n) + Order(c_n - x_n) quad "as" c_n - x_n -> 0 \
+         & = f(x_n) + Order(Delta x) quad "since" Delta x >= c_n - x_n. \
 $
 
 Hence,
-$ A_n = Delta x f(x_n) + O((Delta x)^2). $
+$ A_n = Delta x f(x_n) + Order((Delta x)^2). $
 
 Therefore, the total area under curve from $x=a$ to $x=b$ is
 
 $
   A & = lim_(N->oo) sum_(n=0)^(N-1) A_n \
-  & = underbracket(lim_(N->oo) sum_(n=0)^(N-1) f(x_n), "definition of integral") Delta x + lim_(N->oo) underbracket(N dot O(((b-a)/(N))^2), O((1)/(N))) \
+  & = underbracket(lim_(N->oo) sum_(n=0)^(N-1) f(x_n), "definition of integral") Delta x + lim_(N->oo) underbracket(N dot Order(((b-a)/(N))^2), Order((1)/(N))) \
   & = integral_(a)^(b) f(x) dif x. \
 $
 
@@ -61,30 +61,30 @@ This section talks about the _inverse of differentiation_ idea.
 
 #theorem("Fundamental Theorem of Calculus")[
   Let $F(x)=integral_(a)^(x) f(t) dif t$ for some #ponder("calculus.riemann-integrable-function")[Riemann integrable] function $f(t).$ Then
-  $ (dif F)/(dif x) =(dif )/(dif x) [integral_(a)^(x) f(t) dif t ] = f(x), $
+  $ dv(F, x) =dv(, x) [integral_(a)^(x) f(t) dif t ] = f(x), $
 ] <fundamental-theorem-of-calculus>
 
 #proof[
   By definition,
   $
-    (dif F)/(dif x) & = lim_(h->0) (1)/(h) [integral_(a)^(x+h) f(t) dif t - integral_(a)^(x) f(t) dif t ] \
+    dv(F, x) & = lim_(h->0) (1)/(h) [integral_(a)^(x+h) f(t) dif t - integral_(a)^(x) f(t) dif t ] \
                     & = lim_(h->0) (1)/(h) [integral_(x)^(x+h) f(t) dif t ] quad "by considering the integral as a sum" \
-                    & = lim_(h->0) (1)/(h) [f(x) h + O(h^2)] quad "from MVT and Taylor's theorem" \
-                    & = lim_(h->0) [f(x)+O(h)] \
+                    & = lim_(h->0) (1)/(h) [f(x) h + Order(h^2)] quad "from MVT and Taylor's theorem" \
+                    & = lim_(h->0) [f(x)+Order(h)] \
                     & = f(x). \
   $
 ]
 
 #remark[
-  $F(x)$ is a solution to the differential equation $ (dif F)/(dif x) =f(x) $ with $F(a)=0$.
+  $F(x)$ is a solution to the differential equation $ dv(F, x) =f(x) $ with $F(a)=0$.
 ]
 
 #corollary[
   Let $F(x)=integral_(a)^(x) f(t) dif t$ for some #ponder("calculus.riemann-integrable-function")[Riemann integrable] function $f(t)$. Then we have
 
   $
-    (dif )/(dif x) integral_(x)^(b) f(t) dif t &= -f(x) \
-    (dif )/(dif x) integral_(a)^(g(x)) f(t) dif t &= (dif )/(dif x) F(g(x)) = (dif F)/(dif g) (dif g)/(dif x) =f(g(x)) (dif g)/(dif x).
+    dv(, x) integral_(x)^(b) f(t) dif t &= -f(x) \
+    dv(, x) integral_(a)^(g(x)) f(t) dif t &= dv(, x) F(g(x)) = dv(F, g) dv(g, x) =f(g(x)) dv(g, x).
   $
 ]
 
@@ -103,7 +103,7 @@ If the integrand contains a function of a function, it _might_ help to substitut
 
 #example[
   Consider $I = integral (1-2x)/(sqrt(x-x^2) ) dif x$. Then let
-  $ u = x-x^2 quad => quad (dif u)/(dif x) =1 - 2x. $
+  $ u = x-x^2 quad => quad dv(u, x) =1 - 2x. $
   and
   $ I = integral (dif u )/(sqrt(u) ) = 2 sqrt(u) + C = 2 sqrt(x -x^2) + C. $
 ]
