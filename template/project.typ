@@ -145,11 +145,16 @@
         h(1fr)
         text(size: 11pt, fill: colors.text-secondary, font: mono, [*#doc-id*])
       } else {
-        let elements = query(heading.where(level: 2).before(here()))
-        if elements.len() >= 1 {
-          let loc = elements.last().location()
-          let section = numbering(elements.last().numbering, ..counter(heading).at(loc))
-          text(fill: colors.text-secondary, section + elements.last().body)
+        // Consider level-1 headings too, so that a new section clears the
+        // leftover subsection until its first subsection is declared.
+        let elements = query(
+          heading.where(level: 1).or(heading.where(level: 2)).before(here()),
+        )
+        let current = elements.at(-1, default: none)
+        if current != none and current.level == 2 {
+          let loc = current.location()
+          let section = numbering(current.numbering, ..counter(heading).at(loc))
+          text(fill: colors.text-secondary, section + current.body)
         }
         h(1fr)
         counter(page).display("1")

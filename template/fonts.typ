@@ -7,7 +7,7 @@
 #let mono = "JetBrains Mono"
 
 #let font-suites = (
-  // Inter v4.1 + Lete Sans Math v0.61
+  // Inter v4.1 + Lete Sans Math v0.63
   sans: (
     body: "Inter",
     body-features: (
@@ -21,7 +21,7 @@
       "cv01": 1, // horizontal bar on reduced Planck's constant
       "cv03": 1, // alternate epsilon shape
       "cv11": 1, // single storey g
-      // "cv12": 1, // disambiguation on l
+      "cv12": 1, // disambiguation on l
       // "cv14": 1, // slashed zero
     ),
   ),
