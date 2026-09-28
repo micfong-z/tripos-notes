@@ -568,7 +568,7 @@ Now, use the following ansatz for $y_p$ depending on the form of $f(x)$:
 
 #table(
   columns: (1fr, 1fr),
-  [*$f(x)$*], [*Try $y_p$ of the form*],
+  table.header([*$f(x)$*], [*Try $y_p$ of the form*]),
   $ee^(m x)$, $A ee^(m x)$,
   [$cos(m x)$ or $sin(m x)$], $A cos(m x) + B sin(m x)$,
   [Polynomial of degree $n$], [$a_n x^n + a_(n-1) x^(n-1) + ... + a_1 x + a_0$],

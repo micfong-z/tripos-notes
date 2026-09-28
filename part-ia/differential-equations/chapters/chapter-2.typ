@@ -121,7 +121,7 @@ We can use the following table as a substitution reference.
 
 #align(center)[#table(
   columns: 2,
-  [*Integrand contains*], [*Substitution*],
+  table.header([*Integrand contains*], [*Substitution*]),
   [$sqrt(1-x^2)$], [$x = sin theta$],
   $1 + x^2$, $x = tan theta$,
   $sqrt(x^2 + 1)$, $x = sinh u$,

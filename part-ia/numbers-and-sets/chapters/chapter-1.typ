@@ -159,7 +159,7 @@ The truth of these #ponder("set-theory.statement")[assertions] depends on the tr
 #align(center)[
   #table(
     columns: 6,
-    $A$, $B$, $A and B$, $A or B$, $not A$, $A=>B$,
+    table.header($A$, $B$, $A and B$, $A or B$, $not A$, $A=>B$),
     [F], [F], [F], [F], [T], [T],
     [F], [T], [F], [T], [T], [T],
     [T], [F], [F], [T], [F], [F],

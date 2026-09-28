@@ -6,6 +6,9 @@
 
 #import "/template/lib.typ": *
 #import "@preview/physica:0.9.8": *
+#import "@preview/unify:0.7.1": qty
 
 #let hess = matbold(laplacian)
+#let jacob = grad
 #let dom = math.op("dom")
+#let dimrm(content) = math.upright(math.sans(content))

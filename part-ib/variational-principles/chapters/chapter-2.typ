@@ -27,7 +27,7 @@
 
   $f$ is *strictly convex* if the inequality is strict for $vb(x) != vb(y)$ and $t in (0, 1)$, so that @convexity-inequality becomes
   $
-    f((1-t)vb(x) + t vb(y)) < (1-t) f(vb(x)) + t f(vb(y)) quad forall vb(x), vb(y) in dom f, forall t in (0, 1).
+    f((1-t)vb(x) + t vb(y)) < (1-t) f(vb(x)) + t f(vb(y)) quad forall vb(x), vb(y) in dom f "with" vb(x) != vb(y), forall t in (0, 1).
   $ <strict-convexity-inequality>
 
   $f$ is (strictly) *concave* iff $-f$ is (strictly) convex.
@@ -84,8 +84,8 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
   #fade[[$arrow.l.double$]] @first-order-condition-eq-2-3 implies that for all $vb(x), vb(y), vb(z) in dom f$,
   $
     cases(
-      f(vb(x)) & >= f(vb(x)) + (vb(x)-vb(z)) dot grad f(vb(z)),
-      f(vb(y)) & >= f(vb(x)) + (vb(y)-vb(z)) dot grad f(vb(z))
+      f(vb(x)) & >= f(vb(z)) + (vb(x)-vb(z)) dot grad f(vb(z)),
+      f(vb(y)) & >= f(vb(z)) + (vb(y)-vb(z)) dot grad f(vb(z))
     )
   $
   Therefore
@@ -150,7 +150,7 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
 #proof[
   #fade[[$=>$]] Since @def-convexity-eq-2-1 implies @monotonicity-condition-eq-2-4, we can write $vb(y) = vb(x) + vb(h)$ in @monotonicity-condition-eq-2-4,
   $
-    vb(h) dot [grad f(vb(x) + vb(h)) - grad f(vb(x))] >= 0 quad forall vb(x), vb(h) in dom f.
+    vb(h) dot [grad f(vb(x) + vb(h)) - grad f(vb(x))] >= 0 quad forall vb(x) in dom f, forall vb(h) "with" vb(x) + vb(h) in dom f.
   $
   Taylor's expansion gives
   $
@@ -158,7 +158,7 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
   $
   Hence
   $
-    h_i h_j (hess f)_(i j)(vb(x)) + Order(h^3) >= 0 quad forall vb(x), vb(h) in dom f.
+    h_i h_j (hess f)_(i j)(vb(x)) + Order(h^3) >= 0 quad forall vb(x) in dom f, forall vb(h) "with" vb(x) + vb(h) in dom f.
   $
   If $hess f$ had negative eigenvalue $lambda$ with eigenvector $vb(e)$, set $vb(h) = h vb(e)$. Then the above inequality becomes
   $

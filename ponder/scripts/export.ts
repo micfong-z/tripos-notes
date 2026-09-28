@@ -145,14 +145,29 @@ function nativeSourceBlocks(text: string, document: string): NativeSourceBlock[]
   return blocks.map(({ document: sourceDocument, label }) => ({ document: sourceDocument, label }));
 }
 
-async function restoreNativeSourceLabels(root: string, sourceDocument: string, index: DocumentIndex) {
-  const main = await readFile(path.join(root, sourceDocument), "utf8");
-  const includes = [...main.matchAll(/#include\s+"([^"]+)"/g)].map((match) => path.normalize(path.join(path.dirname(sourceDocument), match[1])));
-  const sourceBlocks: NativeSourceBlock[] = [];
-  for (const included of includes) {
-    const text = await readFile(path.join(root, included), "utf8");
-    sourceBlocks.push(...nativeSourceBlocks(text, included));
+/// The native source blocks of `document` and of everything it includes, in the
+/// order they are typeset. A course's main.typ includes its content.typ, which
+/// includes the chapters, so includes are followed to any depth.
+export async function includedSourceBlocks(root: string, document: string, ancestors: string[] = []): Promise<NativeSourceBlock[]> {
+  if (ancestors.includes(document)) throw new Error(`${document} includes itself via ${ancestors.join(" -> ")}`);
+  const text = await readFile(path.join(root, document), "utf8");
+  const blocks: NativeSourceBlock[] = [];
+  let from = 0;
+  for (const match of text.matchAll(/#include\s+"([^"]+)"/g)) {
+    blocks.push(...nativeSourceBlocks(text.slice(from, match.index), document));
+    // Typst resolves a leading "/" against the project root, not the includer.
+    const target = match[1].startsWith("/")
+      ? path.normalize(match[1].slice(1))
+      : path.normalize(path.join(path.dirname(document), match[1]));
+    blocks.push(...(await includedSourceBlocks(root, target, [...ancestors, document])));
+    from = match.index + match[0].length;
   }
+  blocks.push(...nativeSourceBlocks(text.slice(from), document));
+  return blocks;
+}
+
+async function restoreNativeSourceLabels(root: string, sourceDocument: string, index: DocumentIndex) {
+  const sourceBlocks = await includedSourceBlocks(root, sourceDocument);
 
   const htmlBlocks = index.sourceBlocks;
   if (sourceBlocks.length !== htmlBlocks.length) {

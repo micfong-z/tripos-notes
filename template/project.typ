@@ -1,55 +1,32 @@
-// The document wrapper. One definition serves all four PDF variants and the
-// HTML export; the target-specific show rules are installed in separate
-// branches so that `html.*` is only ever evaluated under `--features html`.
+// The document wrappers. `project` is one course as a standalone book; `series`
+// and `volume` collect several courses under one cover.
+//
+// In PDF these are the design system's `book`, `series` and `volume` layouts.
+// The HTML export for Ponder keeps its own body rules below, installed in a
+// separate branch so that `html.*` is only ever evaluated under
+// `--features html`.
 
-#import "@preview/tiaoma:0.3.0"
-#import "@preview/ctheorems:1.1.3": *
-#import "@preview/hydra:0.6.2": hydra
 // equate 0.3.3 calls html.frame unconditionally, which is undefined without
 // --features html; 0.3.2 is the paged-safe release. Both are imported and the
-// target picks one, matching what the two old template families each used.
+// target picks one.
 #import "@preview/equate:0.3.2": equate as equate-paged
 #import "@preview/equate:0.3.3": equate as equate-html
+#import "micfong/src/layouts.typ": book, series as ds-series, volume as ds-volume
 #import "config.typ": apply-fonts, colors, is-html
-#import "fonts.typ": mono
+#import "theorems.typ": html-theorem-rules
 
-/// `D/ACD/UND/NTE/5-000A` -- the doc id plus the zero-padded hex page number.
-/// Call from inside a `context` block; it needs the resolved page counter.
-#let _hex-id(doc-id, page-number) = {
-  let hex-page = upper(str(page-number, base: 16))
-  doc-id + "-" + ("0" * calc.max(0, 4 - hex-page.len())) + hex-page
-}
-
-#let _data-matrix(payload) = box(
-  tiaoma.data-matrix(
-    payload,
-    options: (fg-color: colors.text, bg-color: colors.page, show-hrt: false, scale: 0.5),
-  ),
+/// A course's identity in the design system's fields. The cover's metadata
+/// column is the lecturer (in bold), the term and the version, as the notes
+/// have always printed it; the authors go to the PDF metadata only.
+#let _identity(title, authors, lecturer, lectured-in, updated, doc-id) = (
+  title: title,
+  authors: authors,
+  meta: (lecturer, lectured-in, updated).filter(x => x not in (none, "")).map(x => [#x]),
+  doc-id: doc-id,
 )
 
-/// The default cover: an empty frame crossed by a diagonal rule.
-#let _default-cover = [
-  #block(height: 100% - 6em, width: 100%, stroke: colors.border-light + 0.75pt)[
-    #line(start: (1em, 100% - 1em), end: (100% - 1em, 1em), stroke: colors.border-light + 0.75pt)
-  ]
-]
-
-#let _outline-rules(body) = {
-  set outline(indent: auto)
-  show outline.entry.where(level: 1): it => {
-    v(12pt, weak: true)
-    strong(it)
-  }
-  set outline.entry(fill: pad(bottom: 0.3em, x: 0.25em, line(
-    length: 100%,
-    stroke: (paint: colors.border-light, thickness: 0.75pt, dash: "densely-dashed"),
-  )))
-  show outline.entry.where(level: 1): set outline.entry(fill: pad(bottom: 0.3em, x: 0.25em, line(
-    length: 100%,
-    stroke: colors.border-dark + 0.75pt,
-  )))
-  body
-}
+/// A course title, with its Part on the line above: "Part IA\nGroups".
+#let _full-title(part, title) = if part == none { title } else { part + "\n" + title }
 
 /// Per-line numbering for multi-line aligned equations. Only courses that
 /// actually reference equations turn this on.
@@ -65,6 +42,21 @@
     ),
     supplement: it => text("Eq", fill: colors.text-secondary),
   )
+  body
+}
+
+/// A reference to a missing label reads as a red "(?)" while drafting. One to a
+/// label defined twice is an error instead: a series holds several courses,
+/// and two courses sharing a label would otherwise print "(?)" without notice.
+#let _ref-rules(body) = {
+  show ref: it => {
+    if it.element != none { return it }
+    context {
+      let found = query(it.target).len()
+      assert(found < 2, message: "label " + repr(it.target) + " is defined " + str(found) + " times, so this reference is ambiguous")
+      text(fill: colors.red.shade500)[(?)]
+    }
+  }
   body
 }
 
@@ -108,127 +100,69 @@
   }
 }
 
-#let _paged-body(body, title: "", lecturer: "", lectured-in: "", updated: "", doc-id: "", cover-design: auto) = {
-  show: _outline-rules
-  show link: it => underline(stroke: 0.75pt + colors.border-dark, it)
-
-  set footnote.entry(separator: line(length: 30% + 0pt, stroke: 0.5pt + colors.border-light))
-  set page(
-    paper: "a4",
-    margin: (top: 2.5cm, bottom: 2.5cm, left: 1.5cm, right: 1.5cm),
-    fill: colors.page,
-    header: context {
-      let cur-page = counter(page).get().first()
-      _data-matrix(_hex-id(doc-id, cur-page))
-      h(1fr)
-      if cur-page == 1 {
-        text(size: 11pt, weight: "bold", "MICFONG ▲")
-      } else {
-        text(weight: 700, fill: colors.text-secondary, hydra(1, skip-starting: false))
-      }
-    }
-      + line(length: 100%, stroke: colors.border-light + 0.75pt),
-    footer: context {
-      if counter(page).get().first() == 1 {
-        box(
-          tiaoma.code128(
-            doc-id,
-            options: (
-              fg-color: colors.text,
-              bg-color: colors.page,
-              show-hrt: false,
-              height: 10.0,
-              scale: 0.5,
-            ),
-          ),
-        )
-        h(1fr)
-        text(size: 11pt, fill: colors.text-secondary, font: mono, [*#doc-id*])
-      } else {
-        // Consider level-1 headings too, so that a new section clears the
-        // leftover subsection until its first subsection is declared.
-        let elements = query(
-          heading.where(level: 1).or(heading.where(level: 2)).before(here()),
-        )
-        let current = elements.at(-1, default: none)
-        if current != none and current.level == 2 {
-          let loc = current.location()
-          let section = numbering(current.numbering, ..counter(heading).at(loc))
-          text(fill: colors.text-secondary, section + current.body)
-        }
-        h(1fr)
-        counter(page).display("1")
-      }
-    },
-  )
-
-  show heading: it => [
-    #context {
-      if counter(heading).get().first() != 0 {
-        text(fill: colors.text-secondary, counter(heading).display())
-      }
-    }
-    #it.body
-  ]
-
-  [
-    #box(text(1.75em, weight: 700, title))
-    #h(1fr)
-    #box(align(right)[
-      *#lecturer*\
-      #lectured-in\
-      #updated
-    ])
-
-    #if cover-design == auto { _default-cover } else { cover-design }
-
-    #pagebreak()
-
-    #body
-  ]
-}
-
+/// One course as a standalone document.
+///
+///     #show: project.with(..meta)
 #let project(
+  part: none,
   title: "New Document",
-  authors: (),
-  lecturer: "Dr Zoe Wyatt",
-  lectured-in: "Michaelmas 2025",
-  doc-id: "MET/TEM#1",
+  authors: ("Zixuan Zhang",),
+  lecturer: "",
+  lectured-in: "",
   updated: "",
-  cover-design: auto,
+  doc-id: none,
+  cover: auto,
   numbered-equations: false,
   body,
 ) = {
-  show: thmrules
-  show: apply-fonts
-
-  set document(author: authors, title: title.replace("\n", " "))
-  set heading(numbering: "1.1 ")
-  set table(stroke: 0.75pt + colors.border-dark)
-
-  show ref: it => {
-    if it.element == none {
-      text(fill: colors.red.shade500)[(?)]
-    } else {
-      it
-    }
-  }
-
-  let inner = if is-html {
-    _html-body(body, numbered-equations)
+  let title = _full-title(part, title)
+  if is-html {
+    show: html-theorem-rules
+    show: apply-fonts
+    set document(author: authors, title: title.replace("\n", " "))
+    set heading(numbering: "1.1 ")
+    set table(stroke: 0.75pt + colors.border-dark)
+    show: _ref-rules
+    // A `show:` inside an `if` would only style that branch, so the equation
+    // rules wrap the assembled body instead.
+    let inner = _html-body(body, numbered-equations)
+    if numbered-equations { _equation-numbering(inner) } else { inner }
   } else {
-    _paged-body(
-      body,
-      title: title,
-      lecturer: lecturer,
-      lectured-in: lectured-in,
-      updated: updated,
-      doc-id: doc-id,
-      cover-design: cover-design,
-    )
+    show: book.with(.._identity(title, authors, lecturer, lectured-in, updated, doc-id), cover: cover)
+    show: _ref-rules
+    if numbered-equations { _equation-numbering(body) } else { body }
   }
-
-  // A `show:` inside an `if` would only style that branch, so the equation
-  // rules wrap the assembled document instead.
-  if numbered-equations { _equation-numbering(inner) } else { inner }
 }
+
+/// Several courses under one cover. Takes the design system's `series`
+/// arguments; add each course with `volume`.
+///
+///     #show: series.with(title: "Tripos Notes", doc-id: "S/ACD/UND/NTE/1", cover-style: "drafting")
+#let series(..args, body) = {
+  assert(not is-html, message: "a series is PDF-only")
+  show: ds-series.with(..args)
+  show: _ref-rules
+  body
+}
+
+/// One course inside a series: its own cover, doc id, page numbers and
+/// counters. Takes the same fields as `project`, so a course's `meta.typ` serves
+/// both. The Part is left off the title, since the series names it.
+///
+///     #volume(..groups)[#include "groups/content.typ"]
+#let volume(
+  part: none,
+  title: "New Document",
+  authors: ("Zixuan Zhang",),
+  lecturer: "",
+  lectured-in: "",
+  updated: "",
+  doc-id: none,
+  cover: auto,
+  numbered-equations: false,
+  body,
+) = ds-volume(
+  .._identity(title, authors, lecturer, lectured-in, updated, doc-id),
+  cover: cover,
+  if numbered-equations { _equation-numbering(body) } else { body },
+)

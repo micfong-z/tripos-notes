@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="65.896896mm"
+   height="78.627243mm"
+   viewBox="0 0 65.896896 78.627243"
+   version="2.0"
+   id="svg1"
+   standalone="no"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ns4="http://www.iki.fi/pav/software/textext/">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+    <view
+       viewBox="0 0 210 297"
+       id="page1" />
+    <view
+       viewBox="220 0 210 297"
+       id="page2" />
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-4"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-4-5"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-2-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-4-5-3"
+       refX="5"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-2-8-9" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-29.433019,-152.94744)">
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#3584e4;stroke-width:0.264583;stroke-dasharray:none"
+       d="m 30.173839,184.95546 c 1.509966,8.86755 16.732872,2.5785 25.65636,8.30058 4.959952,3.18051 59.631211,-4.91098 31.231671,-12.01086 -10.413508,-2.60338 -58.397997,-5.15727 -56.888031,3.71028 z"
+       id="path9" />
+    <path
+       style="fill:#3584e4;fill-opacity:0.2;stroke:#3584e4;stroke-width:0.264583;stroke-dasharray:none"
+       d="m 30.173838,216.61503 c 1.509966,8.86755 16.732872,2.5785 25.65636,8.30058 4.959952,3.18051 59.631212,-4.91098 31.231671,-12.01086 -10.413508,-2.60338 -58.397997,-5.15727 -56.888031,3.71028 z"
+       id="path9-0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1"
+       d="m 30.17384,184.95546 c -0.166783,-16.32199 13.233526,-32.22855 31.415844,-31.86976 18.182317,0.35879 33.339645,22.11564 33.539932,32.1071"
+       id="path10" />
+  </g>
+  <g
+     id="g5360-4-5"
+     transform="matrix(0.352778,0,0,0.352778,6.6754802,38.764824)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$D$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#3584e4;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g2527"
+       style="fill:#3584e4;stroke-width:0">
+      <g
+         id="g7202"
+         style="fill:#3584e4;stroke-width:0">
+        <path
+           d="M 0,0 M 6.237,7.513 H 2.585 c -0.253,0 -0.374,-0.011 -0.374,-0.253 0,-0.121 0.121,-0.176 0.363,-0.176 0.22,0 0.66,0.033 0.66,-0.143 C 3.234,6.919 3.223,6.853 3.19,6.743 L 1.738,0.902 C 1.683,0.66 1.573,0.517 1.408,0.462 1.331,0.44 1.133,0.429 0.792,0.429 0.55,0.429 0.44,0.407 0.44,0.176 0.44,0.055 0.561,0 0.792,0 h 3.597 c 0.748,0 1.463,0.22 2.156,0.671 1.177,0.759 2.299,2.244 2.299,4.048 0,1.628 -1.001,2.794 -2.607,2.794 z M 7.81,5.126 C 7.81,3.883 7.249,2.376 6.677,1.639 6.05,0.836 5.225,0.429 4.191,0.429 H 2.97 c -0.121,0 -0.198,0 -0.242,0.011 -0.066,0 -0.099,0.022 -0.099,0.055 0,0.022 0.022,0.099 0.055,0.242 L 4.169,6.71 c 0.099,0.363 0.088,0.374 0.55,0.374 h 1.166 c 1.232,0 1.925,-0.726 1.925,-1.958 z"
+           id="path540"
+           style="fill:#3584e4;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs8330"
+       style="fill:#3584e4;stroke-width:0" />
+  </g>
+  <g
+     id="g5360-4-5-6"
+     transform="matrix(0.352778,0,0,0.352778,36.302801,13.417314)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$C$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#3584e4;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g3283"
+       style="fill:#3584e4;stroke-width:0">
+      <g
+         id="g4259"
+         style="fill:#3584e4;stroke-width:0">
+        <path
+           d="m 0,0 m 1.628,2.398 c 0,1.408 0.616,2.838 1.309,3.63 0.561,0.649 1.529,1.298 2.618,1.298 1.144,0 1.705,-0.869 1.705,-2.057 0,-0.099 -0.033,-0.451 -0.033,-0.55 0,-0.099 0.066,-0.154 0.209,-0.154 0.055,0 0.099,0.011 0.132,0.022 0.055,0.077 0.088,0.154 0.11,0.231 L 8.36,7.601 C 8.36,7.7 8.305,7.755 8.195,7.755 8.151,7.755 8.085,7.711 7.997,7.612 L 7.282,6.809 C 6.853,7.436 6.248,7.755 5.467,7.755 4.862,7.755 4.268,7.612 3.663,7.337 2.442,6.765 1.551,5.863 0.979,4.631 0.693,4.026 0.55,3.41 0.55,2.783 c 0,-0.88 0.275,-1.595 0.836,-2.167 0.561,-0.572 1.276,-0.858 2.156,-0.858 0.869,0 1.661,0.319 2.376,0.946 0.297,0.253 0.55,0.561 0.759,0.902 0.297,0.495 0.451,0.836 0.451,1.045 0,0.099 -0.055,0.154 -0.176,0.154 C 6.853,2.805 6.798,2.761 6.776,2.662 6.545,1.947 6.182,1.375 5.687,0.968 5.06,0.451 4.4,0.187 3.718,0.187 c -1.32,0 -2.09,0.891 -2.09,2.211 z"
+           id="path8049"
+           style="fill:#3584e4;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs1549"
+       style="fill:#3584e4;stroke-width:0" />
+  </g>
+  <g
+     id="g5360-4-5-9"
+     transform="matrix(0.352778,0,0,0.352778,16.769391,50.891444)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$\u2202D$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#3584e4;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g1378"
+       style="fill:#3584e4;stroke-width:0">
+      <g
+         id="g9737"
+         style="fill:#3584e4;stroke-width:0">
+        <path
+           d="m 0,0 m 2.816,6.314 c 0,0.253 -0.165,0.396 -0.484,0.418 0.341,0.517 0.836,0.781 1.485,0.781 1.012,0 1.507,-0.847 1.507,-1.925 C 5.324,5.137 5.236,4.587 5.071,3.916 4.884,4.675 4.411,5.06 3.674,5.06 2.827,5.06 2.09,4.708 1.43,4.026 0.77,3.344 0.44,2.585 0.44,1.738 0.44,1.331 0.583,0.913 0.869,0.495 1.21,0 1.738,-0.242 2.475,-0.242 c 0.99,0 1.815,0.462 2.464,1.397 0.616,0.902 1.287,2.464 1.287,3.861 0,0.781 -0.198,1.441 -0.594,1.969 C 5.203,7.579 4.598,7.876 3.839,7.876 3.102,7.876 2.552,7.623 2.178,7.106 1.881,6.699 1.727,6.369 1.727,6.116 c 0,-0.286 0.154,-0.429 0.462,-0.429 0.33,0 0.627,0.297 0.627,0.627 z M 4.829,3.333 C 4.829,2.64 4.62,1.958 4.191,1.287 3.718,0.528 3.157,0.154 2.508,0.154 c -0.726,0 -1.144,0.473 -1.144,1.177 0,0.308 0.077,0.737 0.231,1.287 0.154,0.55 0.308,0.935 0.473,1.166 0.44,0.627 0.979,0.946 1.606,0.946 0.803,0 1.155,-0.594 1.155,-1.397 z"
+           id="path74"
+           style="fill:#3584e4;stroke-width:0" />
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,-1,77.4001,78.3791)"
+       id="g2685"
+       style="fill:#3584e4;stroke-width:0">
+      <g
+         id="g3543"
+         style="fill:#3584e4;stroke-width:0">
+        <path
+           d="M 0,0 M 6.237,7.513 H 2.585 c -0.253,0 -0.374,-0.011 -0.374,-0.253 0,-0.121 0.121,-0.176 0.363,-0.176 0.22,0 0.66,0.033 0.66,-0.143 C 3.234,6.919 3.223,6.853 3.19,6.743 L 1.738,0.902 C 1.683,0.66 1.573,0.517 1.408,0.462 1.331,0.44 1.133,0.429 0.792,0.429 0.55,0.429 0.44,0.407 0.44,0.176 0.44,0.055 0.561,0 0.792,0 h 3.597 c 0.748,0 1.463,0.22 2.156,0.671 1.177,0.759 2.299,2.244 2.299,4.048 0,1.628 -1.001,2.794 -2.607,2.794 z M 7.81,5.126 C 7.81,3.883 7.249,2.376 6.677,1.639 6.05,0.836 5.225,0.429 4.191,0.429 H 2.97 c -0.121,0 -0.198,0 -0.242,0.011 -0.066,0 -0.099,0.022 -0.099,0.055 0,0.022 0.022,0.099 0.055,0.242 L 4.169,6.71 c 0.099,0.363 0.088,0.374 0.55,0.374 h 1.166 c 1.232,0 1.925,-0.726 1.925,-1.958 z"
+           id="path9824"
+           style="fill:#3584e4;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs1348"
+       style="fill:#3584e4;stroke-width:0" />
+  </g>
+  <g
+     id="g5360-4-5-9-1"
+     transform="matrix(0.352778,0,0,0.352778,-21.902699,21.340604)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$h$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#e01b24;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g6814"
+       style="fill:#e01b24;stroke-width:0">
+      <g
+         id="g3459"
+         style="fill:#e01b24;stroke-width:0">
+        <path
+           d="M 0,0 M 5.632,1.518 C 5.379,0.649 5.027,0.209 4.565,0.209 c -0.143,0 -0.22,0.099 -0.22,0.308 0,0.165 0.066,0.418 0.198,0.759 0.44,1.177 0.66,1.98 0.66,2.409 0,0.781 -0.506,1.21 -1.287,1.21 C 3.333,4.895 2.827,4.653 2.398,4.18 L 3.201,7.469 C 3.179,7.568 3.157,7.634 3.014,7.634 2.651,7.634 1.848,7.535 1.705,7.524 1.54,7.502 1.452,7.425 1.452,7.26 c 0,-0.11 0.099,-0.165 0.297,-0.165 0.231,0 0.484,0.011 0.506,-0.143 L 0.649,0.473 C 0.616,0.352 0.605,0.275 0.605,0.231 0.605,0 0.726,-0.121 0.957,-0.121 c 0.22,0 0.374,0.11 0.451,0.319 l 0.44,1.804 C 1.98,2.541 2.079,2.948 2.156,3.223 2.189,3.3 2.277,3.454 2.42,3.674 2.816,4.268 3.3,4.565 3.883,4.565 4.246,4.565 4.422,4.323 4.422,3.85 4.422,3.399 4.202,2.596 3.762,1.43 3.663,1.177 3.619,0.979 3.619,0.814 c 0,-0.528 0.396,-0.935 0.924,-0.935 0.484,0 0.869,0.275 1.144,0.836 0.209,0.44 0.319,0.737 0.319,0.88 0,0.099 -0.055,0.154 -0.176,0.154 -0.033,0 -0.198,-0.099 -0.198,-0.231 z"
+           id="path9067"
+           style="fill:#e01b24;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs468"
+       style="fill:#e01b24;stroke-width:0" />
+  </g>
+  <g
+     id="g5360-4-5-9-1-5"
+     transform="matrix(0.352778,0,0,0.352778,6.1166802,23.572414)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$h$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#e01b24;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g6814-6"
+       style="fill:#e01b24;stroke-width:0">
+      <g
+         id="g3459-3"
+         style="fill:#e01b24;stroke-width:0">
+        <path
+           d="M 0,0 M 5.632,1.518 C 5.379,0.649 5.027,0.209 4.565,0.209 c -0.143,0 -0.22,0.099 -0.22,0.308 0,0.165 0.066,0.418 0.198,0.759 0.44,1.177 0.66,1.98 0.66,2.409 0,0.781 -0.506,1.21 -1.287,1.21 C 3.333,4.895 2.827,4.653 2.398,4.18 L 3.201,7.469 C 3.179,7.568 3.157,7.634 3.014,7.634 2.651,7.634 1.848,7.535 1.705,7.524 1.54,7.502 1.452,7.425 1.452,7.26 c 0,-0.11 0.099,-0.165 0.297,-0.165 0.231,0 0.484,0.011 0.506,-0.143 L 0.649,0.473 C 0.616,0.352 0.605,0.275 0.605,0.231 0.605,0 0.726,-0.121 0.957,-0.121 c 0.22,0 0.374,0.11 0.451,0.319 l 0.44,1.804 C 1.98,2.541 2.079,2.948 2.156,3.223 2.189,3.3 2.277,3.454 2.42,3.674 2.816,4.268 3.3,4.565 3.883,4.565 4.246,4.565 4.422,4.323 4.422,3.85 4.422,3.399 4.202,2.596 3.762,1.43 3.663,1.177 3.619,0.979 3.619,0.814 c 0,-0.528 0.396,-0.935 0.924,-0.935 0.484,0 0.869,0.275 1.144,0.836 0.209,0.44 0.319,0.737 0.319,0.88 0,0.099 -0.055,0.154 -0.176,0.154 -0.033,0 -0.198,-0.099 -0.198,-0.231 z"
+           id="path9067-2"
+           style="fill:#e01b24;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs468-6"
+       style="fill:#e01b24;stroke-width:0" />
+  </g>
+  <g
+     id="g5360-4-5-9-1-5-8"
+     transform="matrix(0.352778,0,0,0.352778,18.965791,8.4731532)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$h$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#e01b24;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g6814-6-7"
+       style="fill:#e01b24;stroke-width:0">
+      <g
+         id="g3459-3-1"
+         style="fill:#e01b24;stroke-width:0">
+        <path
+           d="M 0,0 M 5.632,1.518 C 5.379,0.649 5.027,0.209 4.565,0.209 c -0.143,0 -0.22,0.099 -0.22,0.308 0,0.165 0.066,0.418 0.198,0.759 0.44,1.177 0.66,1.98 0.66,2.409 0,0.781 -0.506,1.21 -1.287,1.21 C 3.333,4.895 2.827,4.653 2.398,4.18 L 3.201,7.469 C 3.179,7.568 3.157,7.634 3.014,7.634 2.651,7.634 1.848,7.535 1.705,7.524 1.54,7.502 1.452,7.425 1.452,7.26 c 0,-0.11 0.099,-0.165 0.297,-0.165 0.231,0 0.484,0.011 0.506,-0.143 L 0.649,0.473 C 0.616,0.352 0.605,0.275 0.605,0.231 0.605,0 0.726,-0.121 0.957,-0.121 c 0.22,0 0.374,0.11 0.451,0.319 l 0.44,1.804 C 1.98,2.541 2.079,2.948 2.156,3.223 2.189,3.3 2.277,3.454 2.42,3.674 2.816,4.268 3.3,4.565 3.883,4.565 4.246,4.565 4.422,4.323 4.422,3.85 4.422,3.399 4.202,2.596 3.762,1.43 3.663,1.177 3.619,0.979 3.619,0.814 c 0,-0.528 0.396,-0.935 0.924,-0.935 0.484,0 0.869,0.275 1.144,0.836 0.209,0.44 0.319,0.737 0.319,0.88 0,0.099 -0.055,0.154 -0.176,0.154 -0.033,0 -0.198,-0.099 -0.198,-0.231 z"
+           id="path9067-2-9"
+           style="fill:#e01b24;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs468-6-3"
+       style="fill:#e01b24;stroke-width:0" />
+  </g>
+  <g
+     id="g5360-4-5-9-1-5-8-9"
+     transform="matrix(0.352778,0,0,0.352778,34.184021,18.604814)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$h$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#e01b24;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g6814-6-7-0"
+       style="fill:#e01b24;stroke-width:0">
+      <g
+         id="g3459-3-1-9"
+         style="fill:#e01b24;stroke-width:0">
+        <path
+           d="M 0,0 M 5.632,1.518 C 5.379,0.649 5.027,0.209 4.565,0.209 c -0.143,0 -0.22,0.099 -0.22,0.308 0,0.165 0.066,0.418 0.198,0.759 0.44,1.177 0.66,1.98 0.66,2.409 0,0.781 -0.506,1.21 -1.287,1.21 C 3.333,4.895 2.827,4.653 2.398,4.18 L 3.201,7.469 C 3.179,7.568 3.157,7.634 3.014,7.634 2.651,7.634 1.848,7.535 1.705,7.524 1.54,7.502 1.452,7.425 1.452,7.26 c 0,-0.11 0.099,-0.165 0.297,-0.165 0.231,0 0.484,0.011 0.506,-0.143 L 0.649,0.473 C 0.616,0.352 0.605,0.275 0.605,0.231 0.605,0 0.726,-0.121 0.957,-0.121 c 0.22,0 0.374,0.11 0.451,0.319 l 0.44,1.804 C 1.98,2.541 2.079,2.948 2.156,3.223 2.189,3.3 2.277,3.454 2.42,3.674 2.816,4.268 3.3,4.565 3.883,4.565 4.246,4.565 4.422,4.323 4.422,3.85 4.422,3.399 4.202,2.596 3.762,1.43 3.663,1.177 3.619,0.979 3.619,0.814 c 0,-0.528 0.396,-0.935 0.924,-0.935 0.484,0 0.869,0.275 1.144,0.836 0.209,0.44 0.319,0.737 0.319,0.88 0,0.099 -0.055,0.154 -0.176,0.154 -0.033,0 -0.198,-0.099 -0.198,-0.231 z"
+           id="path9067-2-9-3"
+           style="fill:#e01b24;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs468-6-3-4"
+       style="fill:#e01b24;stroke-width:0" />
+  </g>
+  <path
+     style="opacity:1;fill:none;fill-opacity:0.2;stroke:#e01b24;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ConcaveTriangle)"
+     d="M 0.74082022,63.667584 V 32.008014"
+     id="path18" />
+  <path
+     style="fill:none;fill-opacity:0.2;stroke:#e01b24;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ConcaveTriangle-4)"
+     d="M 29.592861,72.812684 V 41.153114"
+     id="path18-9" />
+  <path
+     style="fill:none;fill-opacity:0.2;stroke:#e01b24;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ConcaveTriangle-4-5)"
+     d="M 57.628851,59.957304 V 28.297734"
+     id="path18-9-2" />
+  <path
+     style="fill:none;fill-opacity:0.2;stroke:#e01b24;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ConcaveTriangle-4-5-3)"
+     d="M 41.769391,63.667584 V 10.841344"
+     id="path18-9-2-3" />
+</svg>

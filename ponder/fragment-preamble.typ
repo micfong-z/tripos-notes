@@ -24,7 +24,7 @@
 #let SL = math.upright("SL")
 #let SO = math.upright("SO")
 #let teq = math.tilde.equiv
-#let nsub = math.lt.tri
+#let nsub = math.lt.closed
 #let matbold(content) = math.upright(math.bold(content))
 
 // Vectors and Matrices

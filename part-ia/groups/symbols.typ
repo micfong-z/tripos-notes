@@ -22,7 +22,7 @@
 #let SL = math.upright("SL")
 #let SO = math.upright("SO")
 #let teq = math.tilde.equiv
-#let nsub = math.lt.tri
+#let nsub = math.lt.closed
 
 #let edge = fletcher.edge
 

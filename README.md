@@ -29,14 +29,18 @@ pick the one you like:
 
 |  | Sans | Serif |
 | --- | --- | --- |
-| **Light** | Inter + Lete Sans Math | IBM Plex Serif + IBM Plex Math |
-| **Dark** | Inter + Lete Sans Math | IBM Plex Serif + IBM Plex Math |
+| **Light** | IBM Plex Sans + Lete Sans Math | IBM Plex Serif + IBM Plex Math |
+| **Dark** | IBM Plex Sans + Lete Sans Math | IBM Plex Serif + IBM Plex Math |
+
+The Part IA courses are also collected into one document, *Tripos Notes: Part
+IA* (`S/ACD/UND/NTE/1`): a cover indexing every course, then each course as a
+volume with its own cover, doc id and page numbers.
 
 [release]: https://github.com/micfong-z/tripos-notes/releases
 
 ## Building them yourself
 
-You need [Typst](https://typst.app) 0.14.2 (the version in `.typst-version`)
+You need [Typst](https://typst.app) 0.15.1 (the version in `.typst-version`)
 and [just](https://github.com/casey/just). The fonts are vendored in `fonts/`,
 and builds ignore system fonts, so a compile here matches CI exactly.
 
@@ -44,6 +48,8 @@ and builds ignore system fonts, so a compile here matches CI exactly.
 just build part-ia/groups              # light, sans
 just build part-ia/groups dark serif   # any of the four variants
 just build-all                         # every course, all variants -> build/
+just series                            # every Part IA course in one PDF
+just series dark serif                 # any of the four variants
 just watch part-ia/groups              # recompile on save
 ```
 
@@ -58,15 +64,20 @@ typst compile --root . --font-path fonts --ignore-system-fonts \
 ## Layout
 
 ```
-template/          one shared template, theme- and font-aware
-part-ia/<course>/  main.typ, prelude.typ, symbols.typ, chapters/, media/
+template/          the notes' template, theme- and font-aware
+template/micfong/  the Micfong design system it is built on, vendored
+part-ia/<course>/  main.typ, meta.typ, content.typ, prelude.typ, symbols.typ,
+                   chapters/, media/
+part-ia/series.typ every Part IA course as one series
 part-ib/<course>/  same shape
 fonts/             vendored OFL faces and their licences
 ponder/            the concept layer behind the web edition
 ```
 
-A course's chapters import only `../prelude.typ`, which re-exports the shared
-template plus that course's own notation from `symbols.typ`.
+A course's identity (title, lecturer, doc id) lives in `meta.typ` and its body
+in `content.typ`, so the standalone book (`main.typ`) and the series volume
+share both. The chapters import only `../prelude.typ`, which re-exports the
+shared template plus that course's own notation from `symbols.typ`.
 
 ## Ponder
 
@@ -90,8 +101,10 @@ are created by a human being.
 
 The notes, including the figures, are licensed under
 [CC BY-NC-SA 4.0](LICENSE). The code, meaning `template/` and `ponder/`, is
-licensed under the [MIT licence](LICENSE-CODE).
+licensed under the [MIT licence](LICENSE-CODE), except the Material Design
+Icons in `template/micfong/assets/mdi.json`, which are by Pictogrammers under
+the Apache 2.0 licence.
 
 The fonts in `fonts/` are redistributed under the SIL Open Font Licence; each
-family's licence is in `fonts/LICENSES/`. Inter 4.1, Lete Sans Math 0.62,
+family's licence is in `fonts/LICENSES/`. IBM Plex Sans 3, Lete Sans Math 0.62,
 IBM Plex Serif 3.006, IBM Plex Math 1.000 and JetBrains Mono.

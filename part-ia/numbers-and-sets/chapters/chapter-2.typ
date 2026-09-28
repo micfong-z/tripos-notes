@@ -387,7 +387,7 @@ There are three properties of a #ponder("set-theory.relation")[relation] that ar
   #align(center)[
     #table(
       columns: 6,
-      [*Example \#*], [1], [2], [3], [4], [5],
+      table.header([*Example \#*], [1], [2], [3], [4], [5]),
       [*Reflexive*], [$checkmark$], [$crossmark$], [$crossmark$], [$crossmark$], [$checkmark$],
       [*Symmetric*], [$checkmark$], [$crossmark$], [$checkmark$], [$checkmark$], [$checkmark$],
       [*Transitive*], [$checkmark$], [$checkmark$], [$crossmark$], [$checkmark$], [$crossmark$],

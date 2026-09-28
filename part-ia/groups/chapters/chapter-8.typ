@@ -381,7 +381,7 @@ Therefore, it is also easy to count the sizes of #ponder("algebra.centraliser")[
   We can write out a table:
   #table(
     columns: (1fr, 1fr, 1fr),
-    [*Typical element* $gamma$], $abs(ccl_(S_4)(gamma))$, $abs(C_(S_4) (gamma))$,
+    table.header([*Typical element* $gamma$], $abs(ccl_(S_4)(gamma))$, $abs(C_(S_4) (gamma))$),
     $e$, $1$, $24$,
     $mat(1, 2)$, $binom(4, 2)=6$, $4$,
     $mat(1, 2)mat(3, 4)$, $(1)/(2) binom(4, 2) = 3$, $8$,
@@ -483,7 +483,7 @@ This makes it possible to determine the #ponder("algebra.conjugacy-class")[conju
   and the #ponder("algebra.conjugacy-class")[conjugacy class] of $sigma$ splits into two in $A_4$. In summary,
   #table(
     columns: (1fr, 1fr),
-    [*Typical element* $gamma$], $abs(ccl_(A_4)(gamma))$,
+    table.header([*Typical element* $gamma$], $abs(ccl_(A_4)(gamma))$),
     $e$, $1$,
     $mat(1, 2) mat(3, 4)$, $3$,
     $mat(1, 2, 3)$, $4$,
@@ -499,7 +499,7 @@ Finally, let us look at #ponder("algebra.conjugation")[conjugacy] in $S_5$ and $
   We can write out the #ponder("algebra.conjugacy-class")[conjugacy classes] in $S_5$ as follows:
   #table(
     columns: (auto, 1fr, 1fr, 1fr),
-    [*Even*], [*Typical element* $gamma$], $abs(ccl_(S_5)(gamma))$, $abs(C_(S_5) (gamma))$,
+    table.header([*Even*], [*Typical element* $gamma$], $abs(ccl_(S_5)(gamma))$, $abs(C_(S_5) (gamma))$),
     $checkmark$, $e$, $1$, $120$,
     $crossmark$, $mat(1, 2)$, $binom(5, 2) = 10$, $12$,
 
@@ -527,7 +527,7 @@ Finally, let us look at #ponder("algebra.conjugation")[conjugacy] in $S_5$ and $
 
   #table(
     columns: (1fr, 1fr),
-    [*Typical element* $gamma$], $abs(ccl_(A_5)(gamma))$,
+    table.header([*Typical element* $gamma$], $abs(ccl_(A_5)(gamma))$),
     $e$, $1$,
     $mat(1, 2, 3)$, $20$,
     $mat(1, 2) mat(3, 4)$, $15$,

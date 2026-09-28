@@ -402,7 +402,7 @@ This formula is the basis of Bayesian statistics; if we know the probabilities o
   #table(
     align: horizon,
     columns: (1.5fr, 1fr, 1fr, 1fr, 1.2fr),
-    table.cell(colspan: 2)[], [*Admitted*], [*Rejected*], [*Admission Rate*],
+    table.header(table.cell(colspan: 2)[], [*Admitted*], [*Rejected*], [*Admission Rate*]),
     table.cell(rowspan: 2)[*All Applicants*], [*State*], [25], [25], [50%],
     [*Independent*], [28], [22], [56%],
     table.cell(rowspan: 2)[*London Schools*], [*State*], [15], [22], [41%],

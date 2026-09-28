@@ -16,7 +16,7 @@ jobs:
 
       - uses: typst-community/setup-typst@v4
         with:
-          typst-version: "0.14.2"
+          typst-version: "0.15.1"
 
       - uses: extractions/setup-just@v2
 
@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/typst/packages
-          key: typst-packages-${{ hashFiles('template/*.typ', '*/*/symbols.typ') }}
+          key: typst-packages-${{ hashFiles('template/**/*.typ', '*/*/symbols.typ') }}
           restore-keys: typst-packages-
 
       # The vendored faces are the only ones a build may use, so a missing or

@@ -535,7 +535,7 @@ We can generalise this to non-prime moduli.
 
 #theorem[Fermat-Euler Theorem][
   Let $gcd(a, m) = 1$. Then $a^(phi(m)) equiv 1 mod m$.
-] <fermat-euler-theorem>
+] <thm-fermat-euler>
 
 #proof[
   Let $cal(U) = {x in ZZ: 0 < x < m, gcd(x, m) = 1}$ be the set of #ponder("number-theory.unit-modulo-n")[units modulo] $m$. Note that $|cal(U)| = phi(m)$. Label them $u_1, u_2, ..., u_phi(m)$. Then $a u_1, a u_2, ..., a u_phi(m)$ are all distinct and #ponder("number-theory.unit-modulo-n")[invertible modulo] $m$ #fade[[since $a$ is a #ponder("number-theory.unit-modulo-n")[unit]]], and hence they are $u_1, ..., u_phi(m)$ up to reordering. Thus,
@@ -670,7 +670,7 @@ We are going to use the RSA (Rivest-Shamir-Adleman) algorithm, which is based on
 
   - $A$ computes the *decoding exponent* $d$ such that $e d equiv 1 mod phi(n)$ (this can be done using the #ponder("number-theory.euclids-algorithm")[Euclidean algorithm]). This step requires knowledge of $phi(n)$, which in turn requires knowledge of $p$ and $q$ for computation within reasonable time.
 
-  - $A$ computes $(m^e)^d = m^(k phi(n) + 1)$ for some $k in ZZ$. By #ponder("algebra.fermat-euler-theorem")[Fermat-Euler theorem] (@fermat-euler-theorem), we have $m^(k phi(n)) equiv 1 mod n$ provided $gcd(m, n) = 1$, which we assume. #fade[[A block $m < n$ with $gcd(m, n) != 1$ would reveal a factor of $n$, and such blocks are vanishingly rare.]] Thus, $m^(k phi(n) + 1) equiv m mod n$.
+  - $A$ computes $(m^e)^d = m^(k phi(n) + 1)$ for some $k in ZZ$. By #ponder("algebra.fermat-euler-theorem")[Fermat-Euler theorem] (@thm-fermat-euler), we have $m^(k phi(n)) equiv 1 mod n$ provided $gcd(m, n) = 1$, which we assume. #fade[[A block $m < n$ with $gcd(m, n) != 1$ would reveal a factor of $n$, and such blocks are vanishingly rare.]] Thus, $m^(k phi(n) + 1) equiv m mod n$.
 
 #remark[
   Finding $phi(n)$ without knowing $p$ and $q$ is equivalent to factoring $n$ into $p$ and $q$, which is believed to be hard for classical computers on large $n$. This is what makes RSA secure.

@@ -615,7 +615,7 @@ $
     $
     where $n, c in ZZ$ and $0 <= c < q$.
 
-    By @fermat-euler-theorem[Fermat-Euler Theorem], since $gcd(q, 10) = 1$, we have
+    By @thm-fermat-euler[Fermat-Euler Theorem], since $gcd(q, 10) = 1$, we have
     $
           10^phi(q) & equiv 1 mod q \
       10^phi(q) - 1 & = k q quad "for some" k in NN.

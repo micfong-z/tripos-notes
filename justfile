@@ -3,7 +3,10 @@
 #   just build part-ia/groups dark serif   one course, one variant
 #   just build-all                         every course, all four variants
 #   just watch part-ia/groups              live preview while writing
+#   just series                            every Part IA course in one document
+#   just series-all                        the series, all four variants
 #   just publish                           build, then push the PDFs to R2
+#   just sync-template                     re-vendor the design system
 #
 # courses.tsv is the single source of truth: build slug, display name, and the
 # slug the website and the R2 object keys use.
@@ -18,6 +21,10 @@ fontargs := "--font-path fonts --ignore-system-fonts"
 themes := "light dark"
 bucket := "micfong-space"
 suites := "sans serif"
+# The slug the Part IA series is published under, as courses.tsv gives courses.
+series-site := "ia-series"
+# The Micfong design system, vendored into template/micfong by `sync-template`.
+design := env("MICFONG_TYPST", env("HOME") / "Hub/Documents/Design and Art/Design System/typst")
 
 _default:
     @just --list
@@ -29,6 +36,21 @@ build course theme="light" font="sans":
         --input theme={{theme}} --input font={{font}} \
         "{{course}}/main.typ" "build/$(tr / - <<< '{{course}}').{{theme}}.{{font}}.pdf"
     @echo "build/$(tr / - <<< '{{course}}').{{theme}}.{{font}}.pdf"
+
+# A drafting cover indexing every course, then each course as a volume with
+# its own cover, doc id and page numbers.
+#
+# Compile every Part IA course into one series document.
+series theme="light" font="sans":
+    @mkdir -p build
+    @{{typst}} compile --root . {{fontargs}} \
+        --input theme={{theme}} --input font={{font}} \
+        part-ia/series.typ "build/part-ia-series.{{theme}}.{{font}}.pdf"
+    @echo "build/part-ia-series.{{theme}}.{{font}}.pdf"
+
+# Compile the Part IA series in all four variants.
+series-all:
+    @for t in {{themes}}; do for f in {{suites}}; do just series "$t" "$f"; done; done
 
 # Compile every course in all four variants.
 build-all:
@@ -58,8 +80,10 @@ pretty: build-all
 # Locally this uses your `wrangler login` session; in CI the release workflow
 # sets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID instead.
 #
-# Push every built PDF to the R2 bucket the website links to.
-publish-r2: build-all
+# The Part IA series follows the same scheme under the `series-site` slug.
+#
+# Push every built PDF, courses and series, to the R2 bucket the website links to.
+publish-r2: build-all series-all
     @while IFS=$'\t' read -r slug name site; do \
         for t in {{themes}}; do for f in {{suites}}; do \
             src="build/$(tr / - <<< "$slug").$t.$f.pdf"; \
@@ -68,6 +92,11 @@ publish-r2: build-all
         just _put "build/$(tr / - <<< "$slug").light.sans.pdf" "notes/$site.pdf"; \
         echo "uploaded $name"; \
     done < courses.tsv
+    @for t in {{themes}}; do for f in {{suites}}; do \
+        just _put "build/part-ia-series.$t.$f.pdf" "notes/{{series-site}}.$t.$f.pdf"; \
+    done; done
+    @just _put build/part-ia-series.light.sans.pdf "notes/{{series-site}}.pdf"
+    @echo "uploaded the Part IA series"
 
 _put src key:
     @npx --yes wrangler@4 r2 object put "{{bucket}}/{{key}}" \
@@ -86,11 +115,21 @@ watch course theme="light" font="sans":
 
 # Fail unless all five vendored families are the ones we expect.
 fonts-check:
-    @found=$({{typst}} fonts {{fontargs}} | grep -cxE 'Inter|Lete Sans Math|IBM Plex Serif|IBM Plex Math|JetBrains Mono'); \
+    @found=$({{typst}} fonts {{fontargs}} | grep -cxE 'IBM Plex Sans|IBM Plex Serif|IBM Plex Math|Lete Sans Math|JetBrains Mono'); \
     if [ "$found" -ne 5 ]; then \
         echo "expected 5 vendored families, found $found:"; {{typst}} fonts {{fontargs}}; exit 1; \
     fi
-    @echo "fonts OK: Inter, Lete Sans Math, IBM Plex Serif, IBM Plex Math, JetBrains Mono"
+    @echo "fonts OK: IBM Plex Sans, IBM Plex Serif, IBM Plex Math, Lete Sans Math, JetBrains Mono"
+
+# Copies its package files; its fonts are vendored in fonts/ instead. Set
+# MICFONG_TYPST if the design system lives elsewhere.
+#
+# Re-vendor the design system into template/micfong.
+sync-template:
+    @test -f "{{design}}/lib.typ" || { echo "no design system at {{design}}"; exit 1; }
+    @rm -rf template/micfong && mkdir -p template/micfong
+    @cp -R "{{design}}/lib.typ" "{{design}}/typst.toml" "{{design}}/README.md" "{{design}}/src" "{{design}}/assets" template/micfong/
+    @echo "template/micfong <- {{design}}"
 
 # Validate the Ponder registry and run its tests.
 ponder-check:

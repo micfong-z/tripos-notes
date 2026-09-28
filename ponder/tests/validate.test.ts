@@ -112,3 +112,9 @@ test("one source label may not map to two entries", async () => {
   });
   await assert.rejects(() => validate(root, "ponder/courses/groups.yml"), /maps to both/);
 });
+
+test("a profile must pin the Typst version in .typst-version", async () => {
+  const root = await createWorkspace();
+  await writeFile(path.join(root, ".typst-version"), "0.15.1\n");
+  await assert.rejects(() => validate(root, "ponder/courses/groups.yml"), /must pin Typst 0\.15\.1, as \.typst-version does/);
+});

@@ -86,7 +86,11 @@ export async function validate(
 
   // Configuration problems always belong to the selected course.
   const configErrors: string[] = [];
-  if (config.typstVersion !== "0.14.2") configErrors.push(`${configFile} must pin Typst 0.14.2`);
+  // The repository pins one Typst version in .typst-version, which CI installs.
+  const pinned = (await read(".typst-version"))?.trim();
+  if (pinned && config.typstVersion !== pinned) {
+    configErrors.push(`${configFile} must pin Typst ${pinned}, as .typst-version does`);
+  }
   if (typeof config.sourceBase !== "string" || config.sourceBase.trim() === "") {
     configErrors.push(`${configFile} sourceBase must be a non-empty string`);
   }

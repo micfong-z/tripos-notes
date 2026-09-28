@@ -1,0 +1,12 @@
+[package]
+name = "micfong"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Micfong"]
+description = "Micfong personal document system."
+compiler = "0.14.0"
+exclude = ["examples", "build", "justfile"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"

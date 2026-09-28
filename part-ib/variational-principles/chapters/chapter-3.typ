@@ -64,7 +64,7 @@
   If $f$ is strictly convex then the solution of @cor-legendre-transform-eq-3-1 is unique.
 ]
 
-#example[
+#example[Examples of Legendre Transform][
   For $n=1$,
 
   1. $f(x) = (1)/(2) a x^2$ with $a > 0$ is strictly convex. @cor-legendre-transform-eq-3-1 has a unique solution $x(p) = p/a$, and
@@ -72,32 +72,32 @@
       f^*(p) = p x(p) - f(x(p)) = p^2/(2a) quad "with" quad dom f^* = RR.
     $
 
-  2. $f(v) = -sqrt(1-v^2)$ with $dom f = (-1, 1)$ is strictly convex. @cor-legendre-transform-eq-3-1 has a unique solution $v(p) = p/sqrt(1+p^2)$, and
+  2. $f(v) = -sqrt(1-v^2)$ with $dom f = (-1, 1)$ is strictly convex. #fade[[This is a semicircle in the lower half-plane.]] @cor-legendre-transform-eq-3-1 has a unique solution $v(p) = p/sqrt(1+p^2)$, and
     $
       f^*(p) = p v(p) - f(v(p)) = sqrt(1+p^2) quad "with" quad dom f^* = RR.
     $
 
-  3. $f = c x$ with $c > 0$ is convex but not strictly convex. @cor-legendre-transform-eq-3-1 has no solution for $p < c$, and infinitely many solutions for $p = c$. Thus
+  3. $f = c x$ with $c > 0$ is convex but not strictly convex. Note that $f^* (p) = sup_x ((p - c)x)$, which is finite only if $p = c$. Hence
     $
       f^*(p) = 0 quad "with" dom f^* = {c}.
     $
+] <ex-legendre-transform>
+
+#theorem[Legendre Transform is Involutive][
+  If $f: RR^n -> RR$ is strictly convex and $C^2$ with everywhere positive-definite Hessian, and $grad f$ is bijective onto $dom f^*$, then $f^(* *) = f$. #fade[[In general, without closedness, $f^(* *)$ is the closed (lower semicontinuous) convex envelope of $f$.]]
 ]
 
-#theorem[
-  If $f$ is convex and $C^2$ then $f^(* *) = f$.
-]
-
-#proof[
-  To determine $f^(* *)$, we need to find $f(vb(x))$ obeying $grad f^*(f(vb(x)))=vb(x)$. With $vb(x)(vb(p))$ given by @cor-legendre-transform-eq-3-1, we have
+#prooflike[Sketch Proof][
+  To determine $f^(* *)$, we need to find $vb(p)(vb(x))$ obeying $grad f^*(vb(p)(vb(x)))=vb(x)$. With $vb(x)(vb(p))$ given by @cor-legendre-transform-eq-3-1, we have
   $
-    grad f^*(vb(p)) & = vb(p) dot vb(x)(vb(p)) - f(vb(x)(vb(p))) \
+    f^*(vb(p)) & = vb(p) dot vb(x)(vb(p)) - f(vb(x)(vb(p))) \
     pdv(f^*, p_i) & = x_i + p_j pdv(x_j, p_i) - eval(pdv(f, x_j))_(vb(x) = vb(x)(vb(p))) pdv(x_j, p_i) \
-                    & = x_i + (p_j - eval(nabla_j f)_(vb(x) = vb(x)(vb(p)))) pdv(x_j, p_i) \
-                    & = x_i.
+    & = x_i + underbracket((p_j - eval(nabla_j f)_(vb(x) = vb(x)(vb(p)))), "=0 by" #ref(<cor-legendre-transform-eq-3-1>)) pdv(x_j, p_i) \
+    & = x_i.
   $
-  Therefore $grad f^*(vb(p)) = vb(x)(vb(p))$. Hence $vb(x)(vb(p)(vb(x))) = vb(x)$ #fade[[$f(vb(x))$ is the inverse of $vb(x)(vb(p))$]]. Thus,
+  Therefore $grad f^*(vb(p)) = vb(x)(vb(p))$. Hence $vb(x)(vb(p)(vb(x))) = vb(x)$ #fade[[$vb(p)(vb(x))$ is the inverse of $vb(x)(vb(p))$]]. Thus,
   $
-    f^(* *)(vb(x)) & = vb(x) dot vb(p) (vb(x)) - f^* (f(vb(x))) \
+    f^(* *)(vb(x)) & = vb(x) dot vb(p) (vb(x)) - f^* (vb(p)(vb(x))) \
                    & = vb(x) dot vb(p) (vb(x)) - [vb(p)(vb(x)) dot vb(x) - f(vb(x(vb(p)(vb(x)))))] \
                    & = f(vb(x)).
   $
@@ -105,11 +105,11 @@
 ]
 
 #remark[
-  Convexity of $f$ is necessary as $f^(* *)$ is the Legendre transform of $f^*$. Hence, convex $C^2$ functions can be weakened significantly.
+  Convexity of $f$ is necessary as $f^(* *)$ is the Legendre transform of $f^*$. However, the $C^2$ convexity assumption can be weakened significantly.
 ]
 
 #example[
-  With $f(x) = c x$ above, we have
+  With $f(x) = c x$ in @ex-legendre-transform (3), we have
   $
     f^(* *)(x) = sup_(p in {c}) (x p - f^* (p)) = c x = f(x).
   $
@@ -117,20 +117,19 @@
 
 == Legendre Transform in Thermodynamics
 
+Legendre transforms are used extensively in physics. We will illustrate this in the context of thermodynamics.
+
 #set math.equation(numbering: "(1)")
 
-Consider a system made of many molecules, say $10^23$. In *thermal equilibrium*, the macroscopic properties #fade[[involving only length scales $>>$ separation of molecules]] are described by just a few quantities: total energy $E$, volume $V$, temperature $T$, pressure $P$, _etc._
+Consider a system made of many molecules, say $10^23$. In *thermal equilibrium*, the macroscopic properties #fade[[involving only length scales $>>$ separation of molecules]] can be described by just a few quantities: total energy $E$, volume $V$, temperature $T$, pressure $P$, _etc._
 
-
-An *isolated system* is one that is not interacting with any other system, _e.g._ a gas in a vacuum flas.
-
-In equilibrium, macroscopic physics of such a system is fully specified by $E, V$, but there exists an enormous number of configurations $Omega(E, V)$ of microscopic configurations that looks identical macroscopically (_e.g._ on the order of $10^10^23$.).
+An *isolated system* is one that is not interacting with any other system, _e.g._ a gas in a vacuum flask. In thermal equilibrium, macroscopic physics of such a system is fully specified by $E, V$, but there exists an enormous number of configurations $Omega(E, V)$ of microscopic configurations that look identical macroscopically #fade[[$Omega ~ 10^10^23$.]]
 
 The *entropy* of the system is defined as
 $
   S(E, V) = k_B log Omega(E, V)
 $
-where $k_B$ is the Boltzmann constant. The entropy is a measure of the number of microstates corresponding to a given macrostate.
+where $k_B$ is the Boltzmann constant #fade[[$~ qty("1.38e-23", "J/K")$]]. The entropy is a measure of the number of microstates corresponding to a given macrostate.
 
 If $E$ increases at a given $V$, then $S$ increases, since there are more ways to partition $E$ among the molecules. Therefore, $S$ is strictly increasing as a function of $E$. Hence, we can invert $S(E, V)$ to get $E(S, V)$.
 
@@ -146,7 +145,7 @@ $ <eq-3-5>
 
 #set math.equation(numbering: none)
 
-Suppose we do not know @eq-3-4a. Consider the Legendre transform of $E(S, V)$ with respect to $S$ with parameter $T$. Call this $-F$. Then
+Suppose we do not know @eq-3-4a. Consider the Legendre transform of $E(S, V)$ with respect to $S$ #fade[[with fixed $V$]] with parameter $T$. Call this Legendre transform $-F$. Then
 $
   -F(T, V) := sup_S {T S - E(S, V)}.
 $
@@ -155,6 +154,7 @@ One can show that the stability of equilibrium state implies that $E$ is convex 
 $
   T = (pdv(E, S))_V.
 $
+Note that now we recover @eq-3-4a.
 
 Moreover,
 $
@@ -171,27 +171,43 @@ $
 
 #fade[[$F$ is useful when considering a non-isolated system in thermal equilibrium with an environment at a fixed temperature $T$, _e.g._ gas in an uninsulated box.]]
 
-Similarly, if we do not know @eq-3-4b, we can consider the Legendre transform of $E(S, V)$ with respect to $V$ with parameter $-P$. Call this $-H(S, P)$. Then
+Similarly, if we do not know @eq-3-4b, we can consider the Legendre transform of $E(S, V)$ with respect to $V$ #fade[[with fixed $S$]] with parameter $-P$. Call this $-H(S, P)$. Then
 $
   -H(S, P) = sup_V (-P V - E(S, V)).
 $
 One can use stability to argue that $E$ is convex w.r.t. $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
 $ P = -(pdv(E, V))_S. $
+Note that now we recover @eq-3-4b.
+
 Moreover,
 $ H(S, P) = E + P V $
 is called the *enthalpy* of the system. @eq-3-5 gives
 $ dif H = T dif S + V dif P. $ Therefore,
 $ T = (pdv(H, S))_P, quad V = (pdv(H, P))_S. $
-Finally, take the Legendre transform of $E(S, V)$ with respect to both $S$ and $V$ with parameters $T$ and $-P$. Call this $-G(T, P)$. Then
+#fade[[$H$ is useful particularly in chemistry.]]
+
+Finally, take the Legendre transform of $E(S, V)$ with respect to both $S$ and $V$ with parameters $T$ and $-P$. #fade[[This is equivalent to taking the Legendre transform of $F$ w.r.t. $V$, or the Legendre transform of $H$ w.r.t. $S$.]] Call this $-G(T, P)$. Then
 $
   -G(T, P) = sup_(S, V) {T S - P V - E(S, V)}.
 $
 By stability, $E$ is convex w.r.t. both $S$ and $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
 $ T = (pdv(E, S))_V, quad P = -(pdv(E, V))_S. $
+Hence we recover @eq-3-4a and @eq-3-4b simultaneously.
+
 Moreover,
 $ G(T, P) = E - T S + P V $
 is called the *Gibbs free energy* of the system. @eq-3-5 gives
 $ dif G = -S dif T + V dif P. $ Therefore,
 $ S = -(pdv(G, T))_P, quad V = (pdv(G, P))_T. $
 
-$E, F, G, H$ are called the *thermodynamic potentials* of the system.
+$E$ #fade[[(internal) energy]], $F$ #fade[[Helmholtz free energy]], $G$ #fade[[Gibbs free energy]], $H$ #fade[[enthalpy]] are called the *thermodynamic potentials* of the system.
+
+#lecture-separator(lecture: 4, date: "2026-05-08")
+
+Note that
+$
+                pdv(E, S, V) & = pdv(E, V, S) \
+  (pdv(, S) (pdv(E, V))_S)_V & = (pdv(, V) (pdv(E, S))_V)_S \
+              -(pdv(P, S))_V & = (pdv(T, V))_S.
+$
+Hence we reach at a non-trivial relation between the thermodynamic potentials. We can reach 3 similar equations that follow from $F, H, G$ similarly. Those equations are called the *Maxwell relations*.
