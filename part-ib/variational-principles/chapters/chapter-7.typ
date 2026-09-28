@@ -47,7 +47,7 @@ $
   Another example is to find the closed curve of given length $L$ that encloses the maximum area. This is known as the *isoperimetric problem*.
 ]
 
-== Sturm-Liouville Problem
+== Sturm-Liouville Problem <sec-sturm-liouville>
 
 
 Let

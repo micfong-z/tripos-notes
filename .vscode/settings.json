@@ -35,6 +35,7 @@
         "polytope",
         "ponder",
         "prelude",
+        "prooflike",
         "rowspan",
         "showybox",
         "succ",
@@ -57,7 +58,7 @@
         "--input",
         "theme=dark",
         "--input",
-        "font=serif"
+        "font=sans"
     ],
     "files.exclude": {
         "**/.DS_Store": true,

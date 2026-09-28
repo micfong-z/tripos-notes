@@ -59,4 +59,12 @@ This document is typeset using #link("https://typst.app/")[Typst]. All figures a
 
 #include "chapters/chapter-10.typ"
 
+#pagebreak()
+
+#include "chapters/chapter-11.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-12.typ"
+
 #end-of-document()

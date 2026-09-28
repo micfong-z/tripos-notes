@@ -163,5 +163,3 @@ $
 $
 #set math.equation(numbering: none)
 which are the other two Maxwell's equations. Therefore, Maxwell's equations can be derived from the action principle.
-
-#lecture-separator(lecture: 11, date: "2026-05-25")

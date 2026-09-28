@@ -100,6 +100,11 @@
   }
 }
 
+/// content.typ breaks the page between chapters itself, and many chapters open
+/// with a lecture divider above their heading. The layouts' own break before
+/// each chapter heading would strand that divider alone on the page before.
+#let _chapter-pagebreak = false
+
 /// One course as a standalone document.
 ///
 ///     #show: project.with(..meta)
@@ -128,7 +133,11 @@
     let inner = _html-body(body, numbered-equations)
     if numbered-equations { _equation-numbering(inner) } else { inner }
   } else {
-    show: book.with(.._identity(title, authors, lecturer, lectured-in, updated, doc-id), cover: cover)
+    show: book.with(
+      .._identity(title, authors, lecturer, lectured-in, updated, doc-id),
+      cover: cover,
+      chapter-pagebreak: _chapter-pagebreak,
+    )
     show: _ref-rules
     if numbered-equations { _equation-numbering(body) } else { body }
   }
@@ -140,7 +149,7 @@
 ///     #show: series.with(title: "Tripos Notes", doc-id: "S/ACD/UND/NTE/1", cover-style: "drafting")
 #let series(..args, body) = {
   assert(not is-html, message: "a series is PDF-only")
-  show: ds-series.with(..args)
+  show: ds-series.with(chapter-pagebreak: _chapter-pagebreak, ..args)
   show: _ref-rules
   body
 }

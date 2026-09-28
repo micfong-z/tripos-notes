@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="52.394882mm"
+   height="52.39489mm"
+   viewBox="0 0 52.394882 52.39489"
+   version="2.0"
+   id="svg1"
+   standalone="no"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ns4="http://www.iki.fi/pav/software/textext/">
+  <defs
+     id="defs1">
+    <view
+       viewBox="0 0 210 297"
+       id="page1" />
+    <view
+       viewBox="220 0 210 297"
+       id="page2" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-120.41907,-68.754178)">
+    <circle
+       style="fill:none;fill-opacity:0.2;stroke:#000000;stroke-width:0.264583"
+       id="path11"
+       cx="146.61649"
+       cy="94.951622"
+       r="26.065151" />
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#e01b24;stroke-width:0.265;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path12"
+       transform="rotate(-35.421309)"
+       d="M 59.943159,165.55359 A 25.866714,3.2101586 0 0 1 38.568153,162.3922" />
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#e01b24;stroke-width:0.265;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path12-67"
+       transform="rotate(-35.421309)"
+       d="m 90.315041,162.35263 a 25.866714,3.2101586 0 0 1 -6.051662,2.06345" />
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#e01b24;stroke-width:0.265;stroke-dasharray:0.795, 0.795;stroke-dashoffset:0"
+       id="path12-6"
+       transform="rotate(-35.421309)"
+       d="m 38.568153,162.3922 a 25.866714,3.2101586 0 0 1 25.866715,-3.21016 25.866714,3.2101586 0 0 1 25.866714,3.21016" />
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#3584e4;stroke-width:0.264583;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path12-3"
+       transform="rotate(-35.421309)"
+       d="m 84.184415,164.41115 a 25.866714,3.2101586 0 0 1 -24.306762,1.09794" />
+    <circle
+       style="fill:#3584e4;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path13"
+       cx="144.6472"
+       cy="100.2807"
+       r="0.52916664" />
+    <circle
+       style="fill:#3584e4;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path13-0"
+       cx="163.98466"
+       cy="85.093277"
+       r="0.52916664" />
+  </g>
+  <g
+     id="g5360-4-5-9-6"
+     transform="matrix(0.352778,0,0,0.352778,-1.5884986,9.2467435)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$A$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#3584e4;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g6541"
+       style="fill:#3584e4;stroke-width:0">
+      <g
+         id="g5874"
+         style="fill:#3584e4;stroke-width:0">
+        <path
+           d="M 0,0 M 1.507,0.033 C 1.705,0.033 2.387,0 2.596,0 2.761,0 2.838,0.088 2.838,0.253 2.838,0.352 2.772,0.418 2.629,0.429 2.31,0.44 2.156,0.55 2.156,0.759 c 0,0.099 0.099,0.319 0.308,0.649 0.297,0.495 0.506,0.858 0.649,1.1 H 5.786 C 5.786,2.431 5.797,2.277 5.83,2.035 5.907,1.232 5.951,0.792 5.951,0.737 5.951,0.528 5.709,0.429 5.214,0.429 5.005,0.429 4.906,0.341 4.906,0.165 4.906,0.055 4.972,0 5.104,0 5.368,0 6.204,0.033 6.468,0.033 6.688,0.033 7.469,0 7.689,0 c 0.165,0 0.242,0.088 0.242,0.264 0,0.11 -0.099,0.165 -0.297,0.165 -0.308,0 -0.495,0.022 -0.55,0.055 C 7.029,0.517 6.985,0.616 6.974,0.781 L 6.314,7.579 C 6.281,7.788 6.292,7.876 6.061,7.876 5.929,7.876 5.819,7.81 5.742,7.667 L 1.958,1.32 C 1.628,0.77 1.188,0.473 0.649,0.429 0.473,0.418 0.385,0.33 0.385,0.165 0.385,0.055 0.451,0 0.572,0 0.748,0 1.331,0.033 1.507,0.033 Z m 3.905,6.314 0.33,-3.41 H 3.377 Z"
+           id="path7091"
+           style="fill:#3584e4;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs6809"
+       style="fill:#3584e4;stroke-width:0" />
+  </g>
+  <g
+     id="g5360-4-5-9-6-5"
+     transform="matrix(0.352778,0,0,0.352778,19.026941,-7.4032785)"
+     ns4:version="1.12.0"
+     ns4:texconverter="typst"
+     ns4:pdfconverter="inkscape"
+     ns4:text="$B$"
+     ns4:preamble="/Users/micfong/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/textext/default_preamble_typst.typ"
+     ns4:scale="1.0"
+     ns4:alignment="middle center"
+     ns4:inkscapeversion="1.4.2"
+     ns4:jacobian_sqrt="0.352778"
+     style="fill:#3584e4;stroke-width:0">
+    <g
+       transform="matrix(1,0,0,-1,70.8661,78.3791)"
+       id="g2553"
+       style="fill:#3584e4;stroke-width:0">
+      <g
+         id="g93"
+         style="fill:#3584e4;stroke-width:0">
+        <path
+           d="m 0,0 m 8.316,5.973 c 0,1.001 -0.99,1.54 -2.068,1.54 H 2.596 C 2.343,7.513 2.233,7.502 2.233,7.249 2.233,7.073 2.453,7.084 2.585,7.084 2.915,7.073 3.113,7.051 3.168,7.04 3.223,7.029 3.245,6.996 3.245,6.941 3.245,6.919 3.234,6.853 3.201,6.743 L 1.749,0.902 C 1.694,0.66 1.584,0.517 1.419,0.462 1.342,0.44 1.144,0.429 0.803,0.429 0.572,0.429 0.462,0.341 0.462,0.165 0.462,0.055 0.572,0 0.803,0 h 3.883 c 0.715,0 1.375,0.22 2.002,0.649 0.693,0.473 1.045,1.056 1.045,1.738 0,0.869 -0.715,1.397 -1.496,1.551 0.968,0.231 2.079,0.968 2.079,2.035 z M 6.094,7.084 C 6.853,7.084 7.238,6.732 7.238,6.017 7.238,5.456 7.018,4.994 6.556,4.62 6.094,4.246 5.577,4.07 5.016,4.07 H 3.487 l 0.66,2.64 c 0.088,0.374 0.088,0.374 0.55,0.374 z M 6.402,3.289 C 6.556,3.036 6.633,2.783 6.633,2.508 6.633,1.936 6.413,1.441 5.962,1.034 5.511,0.627 5.005,0.429 4.422,0.429 H 2.937 c -0.11,0 -0.187,0 -0.231,0.011 -0.066,0 -0.099,0.022 -0.099,0.055 0,0.011 0,0.044 0.011,0.088 0.341,1.397 0.605,2.453 0.781,3.157 h 2.024 c 0.473,0 0.792,-0.154 0.979,-0.451 z"
+           id="path9629"
+           style="fill:#3584e4;stroke-width:0" />
+      </g>
+    </g>
+    <defs
+       id="defs5927"
+       style="fill:#3584e4;stroke-width:0" />
+  </g>
+</svg>
