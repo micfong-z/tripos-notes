@@ -6,6 +6,8 @@
 #   just series                            every Part IA course in one document
 #   just series-all                        the series, all four variants
 #   just publish                           build, then push the PDFs to R2
+#   just push part-ia/groups               register one course with MDS
+#   just push-all                          register every course, then the series
 #   just sync-template                     re-vendor the design system
 #
 # courses.tsv is the single source of truth: build slug, display name, and the
@@ -25,6 +27,8 @@ suites := "sans serif"
 series-site := "ia-series"
 # The Micfong design system, vendored into template/micfong by `sync-template`.
 design := env("MICFONG_TYPST", env("HOME") / "Hub/Documents/Design and Art/Design System/typst")
+# The MDS CLI; mds.toml lists what it registers.
+mds := env("MDS", "mds")
 
 _default:
     @just --list
@@ -130,6 +134,16 @@ sync-template:
     @rm -rf template/micfong && mkdir -p template/micfong
     @cp -R "{{design}}/lib.typ" "{{design}}/typst.toml" "{{design}}/README.md" "{{design}}/src" "{{design}}/assets" template/micfong/
     @echo "template/micfong <- {{design}}"
+
+# Every variant is compiled with its own build token; light/sans is stored.
+#
+# Register one course with MDS.
+push course:
+    @{{mds}} push "{{course}}/main.typ" --out build
+
+# Register every course, then the Part IA series pinned to them.
+push-all:
+    @{{mds}} push --all --out build
 
 # Validate the Ponder registry and run its tests.
 ponder-check:

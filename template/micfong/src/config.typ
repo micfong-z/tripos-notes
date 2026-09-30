@@ -15,6 +15,13 @@
 #assert(theme in ("light", "dark"), message: "theme must be light or dark, got " + theme)
 #assert(font in ("sans", "serif"), message: "font must be sans or serif, got " + font)
 
+#let mds-token = sys.inputs.at("mds-token", default: none)
+#assert(
+  mds-token == none or mds-token.match(regex("^[0-9A-HJKMNP-TV-Z]{4}$")) != none,
+  message: "mds-token must be 4 Crockford base32 characters, got " + repr(mds-token),
+)
+#let mds-rendition = theme + "-" + font
+
 #let colors = color-tokens(theme)
 #let fonts = font-suites.at(font)
 #let is-dark = theme == "dark"

@@ -22,6 +22,10 @@
   title: title,
   authors: authors,
   meta: (lecturer, lectured-in, updated).filter(x => x not in (none, "")).map(x => [#x]),
+  version: {
+    let m = if type(updated) == str { updated.match(regex("\d{8}")) }
+    if m != none { m.text }
+  },
   doc-id: doc-id,
 )
 

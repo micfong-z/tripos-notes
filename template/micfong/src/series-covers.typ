@@ -19,7 +19,7 @@
 #import "palette.typ": palette
 #import "fonts.typ": mono
 #import "elements.typ": plain-link, rule
-#import "identity.typ": barcode, data-matrix, doc-id-label, hex-id, wordmark
+#import "identity.typ": barcode, data-matrix, doc-id-label, page-payload, wordmark
 #import "covers.typ": diagonal, frame, lines, plain, title-block
 
 #let volume-label = <micfong-volume>
@@ -246,7 +246,7 @@
 #let cover-header(info) = {
   let c = cover-tokens(info.cover-style, info.cover-accent)
   let code = if info.codes and info.doc-id != none {
-    data-matrix(hex-id(info.doc-id, 1), fg: c.text, bg: c.page)
+    data-matrix(page-payload(info.doc-id, 1), fg: c.text, bg: c.page)
   }
   let mark = if info.wordmark == auto { wordmark(fill: c.text) } else { info.wordmark }
   grid(columns: (auto, 1fr), align: (left + horizon, right + horizon), code, mark)

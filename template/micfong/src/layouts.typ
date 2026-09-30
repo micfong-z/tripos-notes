@@ -12,7 +12,7 @@
 // equate 0.3.3 calls html.frame unconditionally, which is undefined without
 // --features html; 0.3.2 is the paged-safe release.
 #import "@preview/equate:0.3.2": equate
-#import "config.typ": colors, fonts
+#import "config.typ": colors, fonts, mds-rendition, mds-token
 #import "fonts.typ": cjk, mono, reset
 #import "icons.typ": use-icons
 #import "code.typ": code-rules
@@ -22,6 +22,7 @@
 #import "covers.typ": format-date, frame, lines, plain, title-block
 #import "series-covers.typ": cover-body, default-accent, volume-label
 #import "structure.typ": chapter-number, volume-heading-label, volume-numbering
+#import "mds.typ": mds-map, plain-text
 
 #let _chapter-summary = state("micfong-chapter-summary", none)
 
@@ -332,10 +333,19 @@
 
 /// Arguments for `set document`. A set rule inside a helper would only style
 /// the helper's own (empty) output, so each layout applies it itself.
+#let _mds-keywords(id) = {
+  if id.doc-id == none { return () }
+  let out = ("mds:" + id.doc-id, "mds-rendition:" + mds-rendition)
+  if id.version-text != none { out.push("mds-version:" + plain-text(id.version-text)) }
+  if mds-token != none { out.push("mds-token:" + mds-token) }
+  out
+}
+
 #let _document-args(id, keywords) = (
   title: plain(id.title),
   author: id.authors.filter(a => type(a) == str),
-  keywords: keywords,
+  keywords: (if type(keywords) == str { (keywords,) } else { keywords }) + _mds-keywords(id),
+  description: if id.doc-id == none { none } else { "MDS " + id.doc-id + " · " + plain-text(id.title) },
   date: if type(id.date) == datetime { id.date } else { none },
 )
 
@@ -376,6 +386,7 @@
   frame(cover)
   pagebreak()
   body
+  mds-map()
 }
 
 /// A document without a cover: the title block heads the first page and the
@@ -418,6 +429,7 @@
   }
   v(0.8em)
   body
+  mds-map()
 }
 
 /// A collection of volumes under one cover, which indexes every `volume` in
@@ -462,6 +474,7 @@
   cover-body(id, style: cover-style, accent: accent, corner: cover-corner, cover: cover)
   pagebreak()
   body
+  mds-map()
 }
 
 /// One volume of a series: its own cover, doc id, page numbers and counters.

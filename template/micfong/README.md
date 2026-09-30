@@ -29,6 +29,10 @@ typst compile --font-path "<this folder>/fonts" --input theme=dark --input font=
 | --- | --- | --- |
 | `theme` | `light`, `dark` | `light` |
 | `font` | `sans`, `serif` | `sans` |
+| `mds-token` | 4 Crockford base32 characters (`0-9`, `A-Z` without `I L O U`) | unset |
+
+`mds-token` is the MDS build token. `mds push` sets it; leave it unset for ordinary builds (see
+[MDS integration](#mds-integration)).
 
 Set `TYPST_FONT_PATHS` to the fonts folder to drop the flag. Tinymist takes the same path in its
 `fontPaths` setting.
@@ -81,7 +85,7 @@ standalone build and the series share them:
 #include "content.typ"
 
 // series.typ
-#show: series.with(title: "Design System", doc-id: "D/DSN/SYS")
+#show: series.with(title: "Design System", doc-id: "X/DSN/SYS/TYP/2")
 #volume(..handbook)[#include "handbook/content.typ"]
 #volume(..colour)[#include "palette/content.typ"]
 ```
@@ -113,6 +117,44 @@ corners, and the title block and the parts list (`#`, title, doc id, page) hold 
 `cover-corner` alone places the two tables: `"top-left"` (the default) puts the parts list under the title
 block, `"bottom-right"` puts it above, as on an engineering drawing. Either way a long list grows towards the
 middle of the page.
+
+## MDS integration
+
+MDS (the Micfong Document System) registers every build, and resolves a scanned page code back to the exact
+version and page. None of the template's support for it changes what a tokenless build prints.
+
+**Page payloads.** Every page header encodes `page-payload(doc-id, n)` in its Data Matrix: `<doc-id>-<n in hex,
+at least 4 digits>` (payload v1, `D/ACD/UND/NTE/5-000A`), plus `+<token>` when the build has an `mds-token`
+(payload v2, `D/ACD/UND/NTE/5-000A+K7Q2`). `n` is the physical page within the document or volume. A series
+cover encodes `S/…/1-0001+<token>`, and every volume page carries the series build's token.
+
+**Symbol size.** Tokenless symbols keep Zint's automatic size, so they are byte for byte what earlier builds
+printed. A tokened symbol would otherwise grow into a square (`20×20` for `D/ACD/UND/NTE/5-000A+K7Q2`), so it
+uses the smallest rectangular ECC200 size that holds the payload: Zint's own automatic choice gives the data's
+capacity class, and the first of `8×18`, `8×32`, `12×26`, `12×36`, `16×36`, `16×48` with at least that capacity is
+used. A `KIND/DOM/AREA/TYPE/n` ID with a serial up to 9999 and a page up to `FFFF` always fits `12×36` (3.2 × 9.5
+mm, the height of today's `12×26`); longer payloads, such as five- or six-digit serials, get `16×36`. The symbol
+sits in a box as tall as the tokenless symbol for the same page would be, so the wordmark, the running title and
+the rule below never move: a tokened build differs from a tokenless one only inside the symbol. `tests/payloads.typ` prints the boundary payloads and
+the legacy forms, one per page; compile it with and without `--input mds-token=…` and scan it with `mds scan`.
+
+**Page records.** Each header also emits a zero-size `metadata((p, code_id, code_page, label)) <mds-page>`:
+the physical page, the code it prints (`none` without a doc id or with `codes: false`) and its printed page
+label. `typst eval 'query(<mds-page>).map(it => it.value)' --in doc.typ` lists them.
+
+**`mds.json`.** `book`, `article` and `series` end with `mds-map()`, which attaches `mds.json` (schema
+`mds-pages/1`) to the PDF: the build (`token`, `rendition` = `theme-font`, `theme`, `font`), the page count,
+one segment per start marker that prints a code (`role` `document`, or `front` for the series cover and
+`volume` with its 1-based `ordinal` for each volume; `title`, `version_text`, `draft`), one record per page
+(`p`, `code_id`, `code_page`, `label`, `kind` = `cover`, `front`, `chapter-cover` or `body`) and the outlined
+headings (`p`, `level` counted from the document or volume, `numbering`, `title`, `label`, `ordinal`). `volume`
+does not attach one, since the series maps the whole PDF. The map is attached only for paged output and only when
+some marker has a doc id; `pdfdetach -list` shows it. `mds push` reads the document ID, segments and version from
+it, so a document never needs to be decoded to be registered.
+
+**PDF metadata.** A document with a doc id adds the keywords `mds:<doc-id>`, `mds-rendition:<theme-font>`,
+`mds-version:<version>` (when there is one) and `mds-token:<token>` (tokened builds), and the description
+`MDS <doc-id> · <title>`, so `pdfinfo` identifies any copy.
 
 ## Elements
 
@@ -194,15 +236,17 @@ is not vendored (it is large), so that fallback needs the system install.
 lib.typ          public API (the package entrypoint)
 src/             palette, tokens, fonts, identity, icons, code, elements, theorems, maths,
                  furniture (header, footer, contents), covers (title block, frame),
-                 series-covers (the cover styles), layouts
+                 series-covers (the cover styles), layouts, mds (the mds.json page map)
 assets/mdi.json  Material Design Icons as an Iconify collection (@iconify-json/mdi 1.2.3)
 fonts/           vendored faces and their licences
 template/        the `typst init` starter
+tests/           payloads.typ: every boundary and legacy page payload, for `mds scan`
 examples/        article (element showcase), handbook (book + chapter covers),
                  palette (custom cover art), series (both, as volumes),
                  cover-gallery (every series cover style, via `just covers`)
 ```
 
+The examples use `X/DSN/SYS/…` doc ids: MDS never allocates kind `X`, so their codes resolve as placeholders.
 `just examples` builds every example in all four variants into `build/`; `just covers` builds the series cover
 gallery.
 

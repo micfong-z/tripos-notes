@@ -10,7 +10,7 @@
 // derived from the marker's page, not read from the page counter.
 
 #import "config.typ": colors
-#import "identity.typ": barcode, data-matrix, doc-id-label, hex-id, wordmark
+#import "identity.typ": barcode, data-matrix, doc-id-label, page-payload, wordmark
 #import "elements.typ": badge
 #import "series-covers.typ": cover-background, cover-footer, cover-header
 #import "structure.typ": is-volume-heading
@@ -55,17 +55,29 @@
   if start.value.at("is-series", default: false) { start.value }
 }
 
+#let page-record-label = <mds-page>
+
+#let _page-record(pg, info, local) = {
+  let coded = info.codes and info.doc-id != none
+  [#metadata((
+    p: pg,
+    code_id: if coded { info.doc-id },
+    code_page: if coded { local },
+    label: if local == 1 { "1" } else { counter(page).display("1") },
+  ))#page-record-label]
+}
+
 #let header = context {
   let pg = here().page()
   let (start, _) = bounds(pg)
   if start == none { return }
   let series = _series-cover(start, pg)
-  if series != none { return cover-header(series) }
+  if series != none { return _page-record(pg, series, 1) + cover-header(series) }
   let info = start.value
   let local = pg - start.location().page() + 1
   let on-chapter-cover = query(chapter-cover-label).any(m => m.location().page() == pg)
 
-  let code = if info.codes and info.doc-id != none { data-matrix(hex-id(info.doc-id, local)) }
+  let code = if info.codes and info.doc-id != none { data-matrix(page-payload(info.doc-id, local)) }
   let mark = if local == 1 {
     if info.wordmark == auto { wordmark() } else { info.wordmark }
   } else {
@@ -74,6 +86,7 @@
   }
   if info.draft { mark = [#badge("Draft", accent: "red")#h(0.8em)#mark] }
 
+  _page-record(pg, info, local)
   grid(columns: (auto, 1fr), align: (left + horizon, right + horizon), code, mark)
   line(length: 100%, stroke: colors.border-light + 0.75pt)
 }
