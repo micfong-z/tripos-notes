@@ -1,4 +1,4 @@
-#import "config.typ": font, mds-rendition, mds-token, theme
+#import "config.typ": mds-token, rendition, resolve-fonts, theme
 #import "furniture.typ": chapter-cover-label, page-record-label, start-label
 #import "structure.typ": is-volume-heading
 
@@ -22,8 +22,11 @@
 
 #let _is-coded(m) = m.value.doc-id != none and m.value.codes
 
-#let mds-map() = context {
+/// `fonts` is the document's resolved `(body: ..., meta: ...)`; the build's
+/// rendition and fonts are recorded from it, not from the `--input` flags.
+#let mds-map(fonts: auto) = context {
   if target() != "paged" { return }
+  let fonts = if fonts == auto { resolve-fonts() } else { fonts }
   let starts = query(start-label)
   let last = here().page()
   let in-series = starts.any(_is-series)
@@ -96,7 +99,7 @@
       (
         spec: "mds-pages/1",
         generator: (typst: str(sys.version), template: _package.name + " " + _package.version),
-        build: (token: mds-token, rendition: mds-rendition, theme: theme, font: font),
+        build: (token: mds-token, rendition: rendition(fonts), theme: theme, font: fonts.body, meta_font: fonts.meta),
         page_count: last,
         segments: segments,
         pages: pages,

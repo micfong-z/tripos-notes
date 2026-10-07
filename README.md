@@ -112,4 +112,5 @@ the Apache 2.0 licence.
 
 The fonts in `fonts/` are redistributed under the SIL Open Font Licence; each
 family's licence is in `fonts/LICENSES/`. IBM Plex Sans 3, Lete Sans Math 0.62,
-IBM Plex Serif 3.006, IBM Plex Math 1.000 and JetBrains Mono.
+IBM Plex Serif 3.006, IBM Plex Math 1.000, IBM Plex Sans SC 1.000 (Regular and
+Bold, the CJK fallback) and Iosevka Micfong (code).

@@ -10,9 +10,9 @@
 // See README.md for the full reference.
 
 // Tokens
-#import "src/config.typ": colors, font, fonts, is-dark, theme
+#import "src/config.typ": colors, font, fonts, is-dark, resolve-fonts, theme
 #import "src/palette.typ": hues, palette
-#import "src/fonts.typ": brand, mono
+#import "src/fonts.typ": brand, font-suites, in-suite, mono
 
 // Identity
 #import "src/identity.typ": barcode, data-matrix, hex-id, wordmark

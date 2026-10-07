@@ -118,13 +118,13 @@ watch course theme="light" font="sans":
         --input theme={{theme}} --input font={{font}} \
         "{{course}}/main.typ" "build/$(tr / - <<< '{{course}}').{{theme}}.{{font}}.pdf"
 
-# Fail unless all five vendored families are the ones we expect.
+# Fail unless all six vendored families are the ones we expect.
 fonts-check:
-    @found=$({{typst}} fonts {{fontargs}} | grep -cxE 'IBM Plex Sans|IBM Plex Serif|IBM Plex Math|Lete Sans Math|JetBrains Mono'); \
-    if [ "$found" -ne 5 ]; then \
-        echo "expected 5 vendored families, found $found:"; {{typst}} fonts {{fontargs}}; exit 1; \
+    @found=$({{typst}} fonts {{fontargs}} | grep -cxE 'IBM Plex Sans|IBM Plex Sans SC|IBM Plex Serif|IBM Plex Math|Lete Sans Math|Iosevka Micfong'); \
+    if [ "$found" -ne 6 ]; then \
+        echo "expected 6 vendored families, found $found:"; {{typst}} fonts {{fontargs}}; exit 1; \
     fi
-    @echo "fonts OK: IBM Plex Sans, IBM Plex Serif, IBM Plex Math, Lete Sans Math, JetBrains Mono"
+    @echo "fonts OK: IBM Plex Sans, IBM Plex Sans SC, IBM Plex Serif, IBM Plex Math, Lete Sans Math, Iosevka Micfong"
 
 # Copies its package files; its fonts are vendored in fonts/ instead. Set
 # MICFONG_TYPST if the design system lives elsewhere.

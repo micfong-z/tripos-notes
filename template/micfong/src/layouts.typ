@@ -12,8 +12,8 @@
 // equate 0.3.3 calls html.frame unconditionally, which is undefined without
 // --features html; 0.3.2 is the paged-safe release.
 #import "@preview/equate:0.3.2": equate
-#import "config.typ": colors, fonts, mds-rendition, mds-token
-#import "fonts.typ": cjk, mono, reset
+#import "config.typ": colors, mds-token, rendition, resolve-fonts
+#import "fonts.typ": in-suite
 #import "icons.typ": use-icons
 #import "code.typ": code-rules
 #import "elements.typ": callout, plain-link-label, quote-rules, rule, separator
@@ -25,6 +25,10 @@
 #import "mds.typ": mds-map, plain-text
 
 #let _chapter-summary = state("micfong-chapter-summary", none)
+
+/// The document's resolved suites, `(body: ..., meta: ...)`, for volume covers,
+/// which are drawn far from the layout call that chose them.
+#let _fonts = state("micfong-fonts", none)
 
 /// A paragraph shown on the next chapter cover. Place it just before the
 /// chapter's heading.
@@ -193,13 +197,15 @@
 }
 
 /// The cover page for one top-level heading: its title and facts on top, the
-/// chapter's sections inside the frame, a large numeral in the corner.
-#let _chapter-cover(it) = {
+/// chapter's sections inside the frame, a large numeral in the corner. Set in
+/// the document's meta suite.
+#let _chapter-cover(it, meta-font) = {
   pagebreak(weak: true)
   [#metadata(none)#chapter-cover-label]
   // The cover is the heading's own realisation, so undo the heading text style.
   set text(size: 11pt, weight: "regular")
   set par(justify: false)
+  show: in-suite.with(meta-font)
   context {
     let loc = it.location()
     let number = numbering(it.numbering, ..counter(heading).at(loc))
@@ -246,6 +252,7 @@
 }
 
 #let _base(
+  fonts: (body: "sans", meta: "sans"),
   paper: "a4",
   lang: "en",
   region: "gb",
@@ -257,22 +264,17 @@
   chapter-supplement: none,
   body,
 ) = {
-  set text(
-    size: 11pt,
-    font: (fonts.body, cjk),
-    lang: lang,
-    region: region,
-    features: fonts.body-features,
-    fill: colors.text,
-  )
-  show math.equation: set text(font: fonts.math, features: reset(fonts.body-features) + fonts.math-features)
+  set text(size: 11pt, lang: lang, region: region, fill: colors.text)
+  // The main content is set in the body suite; headers, footers and covers in
+  // the meta suite.
+  show: in-suite.with(fonts.body)
 
   set page(
     paper: paper,
     margin: (top: 2.5cm, bottom: 2.5cm, x: 1.5cm),
     fill: colors.page,
-    header: header,
-    footer: footer,
+    header: in-suite(fonts.meta, header),
+    footer: in-suite(fonts.meta, footer),
     background: background,
   )
 
@@ -296,7 +298,7 @@
     let chapter = it.numbering != none and it.outlined
     _chapter-resets(chapter-figures)
     if chapter and chapter-covers {
-      _chapter-cover(it)
+      _chapter-cover(it, fonts.meta)
     } else {
       if chapter and chapter-pagebreak { pagebreak(weak: true) }
       it
@@ -333,29 +335,36 @@
 
 /// Arguments for `set document`. A set rule inside a helper would only style
 /// the helper's own (empty) output, so each layout applies it itself.
-#let _mds-keywords(id) = {
+#let _mds-keywords(id, fonts) = {
   if id.doc-id == none { return () }
-  let out = ("mds:" + id.doc-id, "mds-rendition:" + mds-rendition)
+  let out = ("mds:" + id.doc-id, "mds-rendition:" + rendition(fonts))
   if id.version-text != none { out.push("mds-version:" + plain-text(id.version-text)) }
   if mds-token != none { out.push("mds-token:" + mds-token) }
   out
 }
 
-#let _document-args(id, keywords) = (
+#let _document-args(id, keywords, fonts) = (
   title: plain(id.title),
   author: id.authors.filter(a => type(a) == str),
-  keywords: (if type(keywords) == str { (keywords,) } else { keywords }) + _mds-keywords(id),
+  keywords: (if type(keywords) == str { (keywords,) } else { keywords }) + _mds-keywords(id, fonts),
   description: if id.doc-id == none { none } else { "MDS " + id.doc-id + " · " + plain-text(id.title) },
   date: if type(id.date) == datetime { id.date } else { none },
 )
 
 // --------------------------------------------------------------------- layouts
+//
+// Every layout takes `font` (main content) and `meta-font` (covers, chapter
+// covers, the article title block, headers and footers), each `"sans"` or
+// `"serif"`. Left out, they fall back to `--input font` and `--input meta-font`,
+// and the meta suite finally to the body suite.
 
 /// A document with a full cover page.
 ///
 ///     #show: book.with(title: "Groups", subtitle: "Part IA", doc-id: "D/ACD/UND/NTE/5")
 #let book(
   cover: auto,
+  font: auto,
+  meta-font: auto,
   keywords: (),
   paper: "a4",
   lang: "en",
@@ -369,8 +378,10 @@
   body,
 ) = {
   let id = _identity(..identity)
-  set document(.._document-args(id, keywords))
+  let fonts = resolve-fonts(font: font, meta-font: meta-font)
+  set document(.._document-args(id, keywords, fonts))
   show: _base.with(
+    fonts: fonts,
     paper: paper,
     lang: lang,
     region: region,
@@ -381,12 +392,15 @@
     line-numbers: line-numbers,
     chapter-supplement: [Chapter],
   )
+  _fonts.update(fonts)
   mark-start(id)
-  title-block(id)
-  frame(cover)
+  in-suite(fonts.meta, {
+    title-block(id)
+    frame(cover)
+  })
   pagebreak()
   body
-  mds-map()
+  mds-map(fonts: fonts)
 }
 
 /// A document without a cover: the title block heads the first page and the
@@ -395,6 +409,8 @@
 ///     #show: article.with(title: "Design Notes", authors: "Micfong", abstract: [...])
 #let article(
   abstract: none,
+  font: auto,
+  meta-font: auto,
   keywords: (),
   paper: "a4",
   lang: "en",
@@ -408,8 +424,10 @@
   body,
 ) = {
   let id = _identity(..identity)
-  set document(.._document-args(id, keywords))
+  let fonts = resolve-fonts(font: font, meta-font: meta-font)
+  set document(.._document-args(id, keywords, fonts))
   show: _base.with(
+    fonts: fonts,
     paper: paper,
     lang: lang,
     region: region,
@@ -419,8 +437,9 @@
     numbered-equations: numbered-equations,
     line-numbers: line-numbers,
   )
+  _fonts.update(fonts)
   mark-start(id)
-  title-block(id)
+  in-suite(fonts.meta, title-block(id))
   v(0.4em)
   separator
   if abstract != none {
@@ -429,7 +448,7 @@
   }
   v(0.8em)
   body
-  mds-map()
+  mds-map(fonts: fonts)
 }
 
 /// A collection of volumes under one cover, which indexes every `volume` in
@@ -444,6 +463,8 @@
   cover-style: "frame",
   cover-accent: auto,
   cover-corner: "top-left",
+  font: auto,
+  meta-font: auto,
   keywords: (),
   paper: "a4",
   lang: "en",
@@ -458,8 +479,10 @@
 ) = {
   let id = _identity(..identity)
   let accent = if cover-accent == auto { default-accent(cover-style) } else { cover-accent }
-  set document(.._document-args(id, keywords))
+  let fonts = resolve-fonts(font: font, meta-font: meta-font)
+  set document(.._document-args(id, keywords, fonts))
   show: _base.with(
+    fonts: fonts,
     paper: paper,
     lang: lang,
     region: region,
@@ -470,11 +493,12 @@
     line-numbers: line-numbers,
     chapter-supplement: [Chapter],
   )
+  _fonts.update(fonts)
   mark-start(id + (is-series: true, cover-style: cover-style, cover-accent: accent, cover-corner: cover-corner))
-  cover-body(id, style: cover-style, accent: accent, corner: cover-corner, cover: cover)
+  in-suite(fonts.meta, cover-body(id, style: cover-style, accent: accent, corner: cover-corner, cover: cover))
   pagebreak()
   body
-  mds-map()
+  mds-map(fonts: fonts)
 }
 
 /// One volume of a series: its own cover, doc id, page numbers and counters.
@@ -504,9 +528,12 @@
     if series != none {
       meta.push(text(fill: colors.text-secondary)[Volume #number of #series.value.short-title])
     }
-    title-block(id + (meta: meta))
+    let fonts = _fonts.get()
+    in-suite(if fonts == none { "sans" } else { fonts.meta }, {
+      title-block(id + (meta: meta))
+      frame(cover)
+    })
   }
-  frame(cover)
   pagebreak()
   body
 }

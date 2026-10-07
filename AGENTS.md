@@ -82,10 +82,11 @@ Two inputs select the variant, both read in `template/config.typ`:
 The sans suite is IBM Plex Sans with Lete Sans Math; the serif suite is IBM Plex
 Serif with IBM Plex Math. Feature tags per suite are the design system's, in
 `template/micfong/src/fonts.typ`. Typst silently ignores an unknown feature tag,
-so `just fonts-check` is what catches a wrong font version. The design system
-lists IBM Plex Sans SC as a CJK fallback, which is not vendored, so every build
-warns `unknown font family: ibm plex sans sc`; it is harmless while the notes
-contain no Han characters.
+so `just fonts-check` is what catches a wrong font version. Code is set in
+Iosevka Micfong, and Han characters fall back to IBM Plex Sans SC; only its
+Regular and Bold are vendored, because its other weights carry family names of
+their own (`IBM Plex Sans SC Medm`, `IBM Plex Sans SC SmBld`) that the design
+system never asks for.
 
 `target` is a plain `sys.inputs` value rather than Typst's `target()`, because
 `target()` is undefined unless `--features html` is passed, and `set` rules need

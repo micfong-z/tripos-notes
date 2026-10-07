@@ -3,8 +3,8 @@
 // The syntax theme is generated from the palette as a TextMate theme, so it
 // follows `--input theme` without a second file to keep in sync.
 
-#import "config.typ": colors, fonts
-#import "fonts.typ": mono, reset
+#import "config.typ": colors
+#import "fonts.typ": mono, mono-scale, reset-all
 #import "icons.typ": icon
 
 #let _rule = 0.75pt
@@ -120,34 +120,40 @@
   })
 }
 
-// JetBrains Mono's regular `[` and `]`, traced from the vendored font: points
+// Iosevka Micfong's regular `[` and `]`, traced from the vendored font: points
 // in em, x from the left of the 0.6em cell, y up from the baseline. Drawing the
 // outlines, rather than typing the characters, keeps the brackets out of text
 // selection and copying in every viewer, as `user-select: none` does on the
-// website. Retrace them if the mono face changes.
+// website. Retrace them if the mono face changes (export `[]` to SVG and read
+// the glyph paths).
+#let _bracket-top = 0.823
+#let _bracket-bottom = -0.143
 #let _bracket-points = (
-  open: ((0.205, -0.11), (0.205, 0.83), (0.45, 0.83), (0.45, 0.75), (0.295, 0.75), (0.295, -0.03), (0.45, -0.03), (0.45, -0.11)),
-  close: ((0.15, -0.11), (0.15, -0.03), (0.305, -0.03), (0.305, 0.75), (0.15, 0.75), (0.15, 0.83), (0.395, 0.83), (0.395, -0.11)),
+  open: ((0.239, -0.069), (0.47, -0.069), (0.47, -0.143), (0.156, -0.143), (0.156, 0.823), (0.47, 0.823), (0.47, 0.75), (0.239, 0.75)),
+  close: ((0.13, -0.069), (0.361, -0.069), (0.361, 0.75), (0.13, 0.75), (0.13, 0.823), (0.444, 0.823), (0.444, -0.143), (0.13, -0.143)),
 )
 
 #let _bracket(kind) = pdf.artifact(box(
   width: 0.6em,
-  height: 0.94em,
-  baseline: 0.11em,
+  height: (_bracket-top - _bracket-bottom) * 1em,
+  baseline: -_bracket-bottom * 1em,
   place(polygon(
     fill: colors.border-dark,
-    ..(_bracket-points.at(kind).map(((x, y)) => (x * 1em, (0.83 - y) * 1em))),
+    ..(_bracket-points.at(kind).map(((x, y)) => (x * 1em, (_bracket-top - y) * 1em))),
   )),
 ))
 
+// Typst sets raw text at 0.8em by default; this undoes that, then scales.
+#let _code-size = mono-scale * 1em / 0.8
+
 /// Inline code between brackets, as on micfong.space.
-#let render-inline-code(it) = text(size: 0.9em / 0.8)[#_bracket("open")#sym.wj#it#sym.wj#_bracket("close")]
+#let render-inline-code(it) = text(size: _code-size)[#_bracket("open")#sym.wj#it#sym.wj#_bracket("close")]
 
 /// Code rules, applied once by the layouts.
 #let code-rules(line-numbers: true, body) = {
   set raw(theme: syntax-theme)
-  show raw: set text(font: mono, features: reset(fonts.body-features))
-  show raw.where(block: true): set text(size: 0.9em / 0.8)
+  show raw: set text(font: mono, features: reset-all)
+  show raw.where(block: true): set text(size: _code-size)
   show raw.where(block: true): it => render-code(it, numbers: line-numbers)
   show raw.where(block: false): render-inline-code
   body

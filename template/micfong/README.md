@@ -19,7 +19,7 @@ The folder is a Typst package, symlinked as `@local/micfong` (`just link` recrea
 
 Or scaffold a new document with `typst init @local/micfong:0.1.0 my-doc`.
 
-Compile with the vendored fonts. Two inputs select the variant:
+Compile with the vendored fonts. Inputs select the variant:
 
 ```sh
 typst compile --font-path "<this folder>/fonts" --input theme=dark --input font=serif doc.typ
@@ -28,8 +28,21 @@ typst compile --font-path "<this folder>/fonts" --input theme=dark --input font=
 | Input | Values | Default |
 | --- | --- | --- |
 | `theme` | `light`, `dark` | `light` |
-| `font` | `sans`, `serif` | `sans` |
+| `font` | `sans`, `serif`: the main content | `sans` |
+| `meta-font` | `sans`, `serif`: covers, headers and footers | as `font` |
 | `mds-token` | 4 Crockford base32 characters (`0-9`, `A-Z` without `I L O U`) | unset |
+
+A document can fix its fonts instead, with the layout parameters `font` and `meta-font`. A parameter always
+wins over its input, so the inputs only apply where a document leaves the parameter out:
+
+```typst
+// Sans covers, chapter covers, headers and footers; serif text, whatever the build asks for.
+#show: book.with(title: "…", font: "serif", meta-font: "sans")
+```
+
+The meta parts are the cover (book, series and volume covers), chapter covers, an article's title block, and
+every header and footer. Everything else, including the article's abstract, is main content.
+`#in-suite("sans")[…]` sets any other passage in a given suite.
 
 `mds-token` is the MDS build token. `mds push` sets it; leave it unset for ordinary builds (see
 [MDS integration](#mds-integration)).
@@ -143,7 +156,7 @@ the physical page, the code it prints (`none` without a doc id or with `codes: f
 label. `typst eval 'query(<mds-page>).map(it => it.value)' --in doc.typ` lists them.
 
 **`mds.json`.** `book`, `article` and `series` end with `mds-map()`, which attaches `mds.json` (schema
-`mds-pages/1`) to the PDF: the build (`token`, `rendition` = `theme-font`, `theme`, `font`), the page count,
+`mds-pages/1`) to the PDF: the build (`token`, `rendition`, `theme`, `font`, `meta_font`), the page count,
 one segment per start marker that prints a code (`role` `document`, or `front` for the series cover and
 `volume` with its 1-based `ordinal` for each volume; `title`, `version_text`, `draft`), one record per page
 (`p`, `code_id`, `code_page`, `label`, `kind` = `cover`, `front`, `chapter-cover` or `body`) and the outlined
@@ -152,9 +165,14 @@ does not attach one, since the series maps the whole PDF. The map is attached on
 some marker has a doc id; `pdfdetach -list` shows it. `mds push` reads the document ID, segments and version from
 it, so a document never needs to be decoded to be registered.
 
-**PDF metadata.** A document with a doc id adds the keywords `mds:<doc-id>`, `mds-rendition:<theme-font>`,
+**PDF metadata.** A document with a doc id adds the keywords `mds:<doc-id>`, `mds-rendition:<rendition>`,
 `mds-version:<version>` (when there is one) and `mds-token:<token>` (tokened builds), and the description
 `MDS <doc-id> · <title>`, so `pdfinfo` identifies any copy.
+
+**Renditions.** A rendition names the fonts a build actually used, whether they came from the inputs or from
+the document's own `font`/`meta-font` parameters: `theme-font` (`light-serif`) when the main content and the
+meta parts share a suite, and `theme-font-metafont` (`light-serif-sans`) when they differ. A document that
+fixes its fonts therefore yields the same rendition whatever `--input font` says.
 
 ## Elements
 
@@ -172,7 +190,7 @@ it, so a document never needs to be decoded to be registered.
 | `wordmark()`, `data-matrix`, `barcode`, `hex-id` | The identity marks, for use outside the layouts. |
 
 Plain Typst is styled too. Code is bracketed, as on micfong.space, rather than filled: inline code sits between
-grey JetBrains Mono brackets, and a block between top and bottom rules whose ends turn inwards. The inline
+grey Iosevka Micfong brackets, and a block between top and bottom rules whose ends turn inwards. The inline
 brackets are the font's outlines drawn as shapes, so, like `user-select: none` on the web, they are never
 selected or copied with the code. Blocks also get line numbers, a language label in the top rule, and a syntax
 theme generated from the palette.
@@ -225,7 +243,10 @@ The notes' `shade700`, `shade500`, `shade100` and `shade50` remain as aliases.
 | `sans` | IBM Plex Sans | Lete Sans Math | `ss01` single-storey a, `ss02` single-storey g, `tnum`. Zeros stay plain, so they cannot be mistaken for ∅. |
 | `serif` | IBM Plex Serif | IBM Plex Math | Defaults, as in the notes |
 
-Code is JetBrains Mono in both suites, with the body's feature tags switched off so they don't leak into it.
+Code is Iosevka Micfong, Micfong's own Iosevka build (ss14 base, slashed zero, normal width), in both suites,
+set at 0.95em so its 0.52em x-height sits just under the body's, with every suite's feature tags switched off so
+they don't leak into it. The inline-code brackets are its `[` and `]` outlines; retrace them in `src/code.typ`
+if the face changes.
 The wordmark stays in Plex Sans Bold under either suite. Han characters fall back to IBM Plex Sans SC, which
 is not vendored (it is large), so that fallback needs the system install.
 `just fonts-check` confirms the five vendored families are present.
@@ -265,6 +286,7 @@ gallery.
 
 ## Attribution
 
-IBM Plex, Lete Sans Math and JetBrains Mono are under the SIL Open Font Licence (`fonts/LICENSES/`). Material
+IBM Plex, Lete Sans Math and Iosevka (of which Iosevka Micfong is a build) are under the SIL Open Font Licence
+(`fonts/LICENSES/`). Material
 Design Icons are by Pictogrammers under the Apache 2.0 licence
 (<https://github.com/Templarian/MaterialDesign/blob/master/LICENSE>).
