@@ -6,6 +6,7 @@
 #   just series                            every Part IA course in one document
 #   just series-all                        the series, all four variants
 #   just publish                           build, then push the PDFs to R2
+#   just new-course                        create a course (asks a few questions)
 #   just push part-ia/groups               register one course with MDS
 #   just push-all                          register every course, then the series
 #   just sync-template                     re-vendor the design system
@@ -134,6 +135,15 @@ sync-template:
     @rm -rf template/micfong && mkdir -p template/micfong
     @cp -R "{{design}}/lib.typ" "{{design}}/typst.toml" "{{design}}/README.md" "{{design}}/src" "{{design}}/assets" template/micfong/
     @echo "template/micfong <- {{design}}"
+
+# Asks for the part, title, lecturer and term, then allocates the MDS ID (or
+# takes one you hold), writes the course folder with an empty first chapter,
+# adds it to courses.tsv and the README table, and checks that it compiles.
+# mds.toml picks it up through its entries glob.
+#
+# Create a course, asking a few questions.
+new-course:
+    @MDS="{{mds}}" TYPST="{{typst}}" scripts/new-course.sh
 
 # Every variant is compiled with its own build token; light/sans is stored.
 #

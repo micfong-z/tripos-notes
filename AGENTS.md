@@ -40,6 +40,7 @@ just series-all                        # the Part IA series, all four variants
 just watch part-ia/groups              # live preview
 just fonts-check                       # verify the vendored faces
 just sync-template                     # re-vendor the design system
+just new-course                        # asks, then: MDS ID, folder, courses.tsv, README row
 just publish                           # build everything, then push to R2
 ```
 
