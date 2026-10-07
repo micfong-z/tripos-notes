@@ -18,7 +18,12 @@ The web edition, with hover-and-click concept explanations, is at
 | Part IA – Numbers and Sets | Dr Zoe Wyatt | Michaelmas 2025 | Version 20260608 |
 | Part IA – Probability | Prof Perla Sousi | Lent 2026 | Version 20260523 |
 | Part IA – Vectors and Matrices | Dr Ángela Capel Cuevas | Michaelmas 2025 | Version 20251217 |
+| Part IB – Analysis II | Prof Neshan Wickramasekera | Michaelmas 2026 | Work in Progress |
+| Part IB – Linear Algebra | Dr Henry Bradford | Michaelmas 2026 | Work in Progress |
+| Part IB – Markov Chains | Prof Ioannis Kontoyiannis | Michaelmas 2026 | Work in Progress |
+| Part IB – Methods | Prof Anthony Ashton | Michaelmas 2026 | Work in Progress |
 | Part IB – Optimisation | Prof Varun Jog | Easter 2026 | Work in Progress |
+| Part IB – Quantum Mechanics | Dr Henry Bradford | Michaelmas 2026 | Work in Progress |
 | Part IB – Variational Principles | Prof Harvey Reall | Easter 2026 | Work in Progress |
 
 ## Reading the notes

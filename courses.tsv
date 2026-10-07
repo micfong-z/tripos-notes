@@ -5,5 +5,10 @@ part-ia/groups	Part IA – Groups	ia-groups
 part-ia/numbers-and-sets	Part IA – Numbers and Sets	ia-ns
 part-ia/probability	Part IA – Probability	ia-prob
 part-ia/vectors-and-matrices	Part IA – Vectors and Matrices	ia-vm
+part-ib/analysis-ii	Part IB – Analysis II	ib-analysis-ii
+part-ib/linear-algebra	Part IB – Linear Algebra	ib-linear-algebra
+part-ib/markov-chains	Part IB – Markov Chains	ib-markov-chains
+part-ib/methods	Part IB – Methods	ib-methods
 part-ib/optimisation	Part IB – Optimisation	ib-optimisation
+part-ib/quantum-mechanics	Part IB – Quantum Mechanics	ib-quantum-mechanics
 part-ib/variational-principles	Part IB – Variational Principles	ib-vp
