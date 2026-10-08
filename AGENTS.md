@@ -116,6 +116,14 @@ a non-contextual value.
   imports it, as does `ponder/fragment-preamble.typ`. physica shadows the
   built-in `div` (the division sign) with the divergence operator, which is why
   Numbers and Sets, which writes `÷`, stays out.
+- State diagrams come from `template/automata.typ`, which draws with the finite
+  package: `automaton` takes finite's transition tables, and `markov-chain` a
+  table or the transition matrix (the `mat` itself will do), dropping zero
+  entries. It places the states, bends, loops and labels itself, so a diagram
+  needs no positions, curves or loop anchors, and its ink and fills follow the
+  theme. It stays out of `lib.typ` because finite loads cetz and a Graphviz
+  plugin; a course that draws them imports it from its `symbols.typ`, as Markov
+  Chains does.
 - `project()` applies the theorem rules and the fonts once. Chapters must not
   reapply them.
 - Tables are plain unless a row is marked with `table.header(...)`, which the

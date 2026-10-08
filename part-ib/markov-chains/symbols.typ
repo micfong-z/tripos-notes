@@ -6,3 +6,4 @@
 
 #import "/template/lib.typ": *
 #import "@preview/physica:0.9.8": *
+#import "/template/automata.typ": automaton, markov-chain
