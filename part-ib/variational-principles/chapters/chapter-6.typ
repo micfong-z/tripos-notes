@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(6)
 
 = First Integrals and Fermat's Principle
 
@@ -78,7 +78,7 @@ This is a first order ODE, which is easier to solve than the second order Euler-
   $
   which can be solved with initial conditions, $x=0$ at $y=theta=0$, and $x = x_B$ at $y = y_B$.
 
-  These equations describe an inverted *cycloid*. #fade[[A cyclic is the path traced out by a fixed point on the rim of a disc that rolls along a straight line.]] A good illustration can be found #link("https://commons.wikimedia.org/wiki/File:Brachistochrone_curve.gif")[online].
+  These equations describe an inverted *cycloid*. #fade[[A cycloid is the path traced out by a fixed point on the rim of a disc that rolls along a straight line.]] A good illustration can be found #link("https://commons.wikimedia.org/wiki/File:Brachistochrone_curve.gif")[online].
 ]
 
 == Fermat's Principle

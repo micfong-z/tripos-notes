@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(1)
 
 #lecture-separator(lecture: 1, date: "2026-01-22")
 
@@ -16,7 +17,7 @@ To set up the arena we are going to work in, we require
 - a *point particle* which is an idealised object that is completely determined by its position at a given time as $vb(x)(t)$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e1.svg", width: 14em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e1.svg", width: 14em)
   ]
 
   Examples include electron, tennis ball, planet depending on the context.
@@ -29,7 +30,7 @@ To set up the arena we are going to work in, we require
   From results in IA Vector Calculus, the velocity vector is tangent to the trajectory of the particle.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e2.svg", width: 14em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e2.svg", width: 14em)
   ]
 
   Recall that in Cartesian coordinates,
@@ -49,7 +50,7 @@ Consider a "free" particle that does not experience any forces. #fade[[_e.g._ th
 
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e3.svg", width: 36em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e3.svg", width: 36em)
 ]
 
 The particle may be at rest in a frame $S$, but moving in a complicated way with respect to another frame $S'$.

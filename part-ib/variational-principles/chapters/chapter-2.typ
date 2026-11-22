@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(2)
 
 = Convex Functions
 
@@ -22,7 +22,7 @@
 
   2. the graph of $f$ lies on or below all chords of $f$, _i.e._
     $
-      underbracket(f((1-t)vb(x) + t vb(y)), "(1) ensures this"\ "is well-defined") <= (1-t) f(vb(x)) + t f(vb(y)) quad forall vb(x), vb(y) in dom f, forall t in [0, 1].
+      underbracket(f((1-t)vb(x) + t vb(y)), "condition 1 ensures this"\ "is well-defined") <= (1-t) f(vb(x)) + t f(vb(y)) quad forall vb(x), vb(y) in dom f, forall t in [0, 1].
     $ <convexity-inequality>
 
   $f$ is *strictly convex* if the inequality is strict for $vb(x) != vb(y)$ and $t in (0, 1)$, so that @convexity-inequality becomes
@@ -41,14 +41,14 @@ For the definitions above, refer to IB Optimisation for further details.
   1. $f(x) = x^2$ is strictly convex, since the graph of $f$ is a parabola and any chord lies above it.
 
     #proof[
-      For $x != y$,
+      For $x != y$ and $t in (0, 1)$,
       $
-        [(1-t)x + t y)]^2 - (1-t) x^2 - t y^2 = -t(1-t)(x-y)^2 < 0.
+        [(1-t)x + t y]^2 - (1-t) x^2 - t y^2 = -t(1-t)(x-y)^2 < 0.
       $
 
     ]
 
-  2. $f(x) = ee^x$ if strictly convex, and $f(x)=ee^(-x)$ is also strictly convex.
+  2. $f(x) = ee^x$ is strictly convex, and $f(x)=ee^(-x)$ is also strictly convex.
 
   3. $f(x) = abs(x)$ is convex but not strictly convex.
 ]
@@ -58,7 +58,7 @@ For the definitions above, refer to IB Optimisation for further details.
 == First Order Condition for Convexity
 
 #theorem[First Order Condition for Convexity][
-  If $f$ is differentiable, then the definition of convexity in @def-convexity-eq-2-1 is equivalent to
+  If $dom f$ is open and convex and $f$ is differentiable, then the definition of convexity in @def-convexity-eq-2-1 is equivalent to
   $
     f(vb(y)) >= f(vb(x)) + (vb(y)-vb(x)) dot grad f(vb(x)) quad forall vb(x), vb(y) in dom f.
   $
@@ -74,7 +74,7 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
      h(t) & = (1-t) f(vb(x)) + t f(vb(y)) - f((1-t)vb(x) + t vb(y)) \
     h'(0) & = f(vb(y)) - f(vb(x)) - (vb(y)-vb(x)) dot grad f(vb(x)).
   $
-  Note that the RHS is the difference between the RHS and LHS of @first-order-condition-eq-2-3. So we just need to show that $h'(0) >= 0$.
+  Note that the RHS is the difference between the LHS and RHS of the inequality in @first-order-condition-eq-2-3. So we just need to show that $h'(0) >= 0$.
   $
     h'(0) & = lim_(t->0^+) (h(t) - h(0)) / t \
           & = lim_(t->0^+) h(t)/(t).
@@ -100,7 +100,7 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
 ]
 
 #proof[
-  If $vb(a)$ is a stationary point, then $grad f(vb(a)) = 0$. So @first-order-condition-eq-2-3 becomes
+  If $vb(a)$ is a stationary point, then $grad f(vb(a)) = vb(0)$. So @first-order-condition-eq-2-3 becomes
   $
     f(vb(y)) >= f(vb(a)) quad forall vb(y) in dom f,
   $
@@ -136,7 +136,7 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
   Replacing $vb(y)$ by $vb(z)$ in @monotonicity-condition-eq-2-4 gives
   $
      (vb(z) - vb(x)) dot (grad f(vb(z)) - grad f(vb(x))) & >= 0 quad forall vb(x), vb(z) in dom f \
-    t(vb(y) - vb(x)) dot (grad f(vb(z)) - grad f(vb(x))) & >= 0 quad forall vb(x), vb(z) in dom f, forall t in [0, 1].
+    t(vb(y) - vb(x)) dot (grad f(vb(z)) - grad f(vb(x))) & >= 0 quad forall vb(x), vb(y) in dom f, forall t in [0, 1].
   $
   Therefore the integrand is non-negative, so the integral is non-negative, and hence @first-order-condition-eq-2-3 holds.
 ]
@@ -144,7 +144,7 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
 == Second Order Condition for Convexity
 
 #theorem[Second Order Condition for Convexity][
-  If $f$ is $C^2$, then @def-convexity-eq-2-1 is equivalent to the condition that $hess f succ.eq 0$. #fade[[Recall that $hess f succ.eq 0$ means that $hess f$ is positive semidefinite, _i.e._ all eigenvalues of $hess f$ are non-negative.]]
+  If $dom f$ is open and convex and $f$ is $C^2$, then @def-convexity-eq-2-1 is equivalent to the condition that $hess f succ.eq 0$ everywhere in $dom f$. #fade[[Recall that $hess f succ.eq 0$ means that $hess f$ is positive semidefinite, _i.e._ all eigenvalues of $hess f$ are non-negative.]]
 ] <second-order-condition>
 
 #proof[
@@ -154,15 +154,15 @@ Intuitively, the first-order condition says that the tangent plane to the graph 
   $
   Taylor's expansion gives
   $
-    grad_i f(vb(x) + vb(h)) = grad_i f(vb(x)) + h_j (hess f)_(i j)(vb(x)) + Order(h^2).
+    nabla_i f(vb(x) + vb(h)) = nabla_i f(vb(x)) + h_j (hess f)_(i j)(vb(x)) + Order(abs(vb(h))^2).
   $
   Hence
   $
-    h_i h_j (hess f)_(i j)(vb(x)) + Order(h^3) >= 0 quad forall vb(x) in dom f, forall vb(h) "with" vb(x) + vb(h) in dom f.
+    h_i h_j (hess f)_(i j)(vb(x)) + Order(abs(vb(h))^3) >= 0 quad forall vb(x) in dom f, forall vb(h) "with" vb(x) + vb(h) in dom f.
   $
   If $hess f$ had negative eigenvalue $lambda$ with eigenvector $vb(e)$, set $vb(h) = h vb(e)$. Then the above inequality becomes
   $
-    lambda h^2 vb(e)^2 + Order(h^3) >= 0 quad forall h in RR.
+    lambda h^2 abs(vb(e))^2 + Order(h^3) >= 0 quad forall h "with" vb(x) + h vb(e) in dom f.
   $
   This cannot hold for small enough $h$ since $lambda < 0$ $smash$, so $hess f succ.eq 0$.
 

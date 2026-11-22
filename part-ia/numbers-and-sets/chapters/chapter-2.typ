@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 = Sets, Functions and Relations
 
@@ -432,7 +433,7 @@ In @ex-relations, only (1) is an #ponder("set-theory.equivalence-relation")[equi
   It remains to #ponder("set-theory.proof")[prove] that $forall x, y in X$, either $[x] inter [y] = emptyset$ or $[x] = [y]$
 
   #align(center)[
-    #dynamic-svg("/part-ia/numbers-and-sets/media/d1e1.svg", width: 20em)
+    #dynamic-svg2("/part-ia/numbers-and-sets/media/d1e1.svg", width: 20em)
   ]
 
   Suppose that $[x] inter [y] != emptyset$, and let $z in [x] inter [y]$. Then $z ~ x$, and so by #ponder("set-theory.reflexivity-symmetry-transitivity")[symmetry], $x ~ z$, and $z ~ y$. By #ponder("set-theory.reflexivity-symmetry-transitivity")[transitivity], $x ~ y$.
@@ -445,7 +446,7 @@ In @ex-relations, only (1) is an #ponder("set-theory.equivalence-relation")[equi
 Conversely, given any #ponder("set-theory.partition")[partition] of $X$, there is an #ponder("set-theory.equivalence-relation")[equivalence relation] $R$ whose #ponder("set-theory.equivalence-class")[equivalence classes] are precisely the parts of the #ponder("set-theory.partition")[partition]: just define $a R b$ if $a$ and $b$ lie in the same part.
 
 #align(center)[
-  #dynamic-svg("/part-ia/numbers-and-sets/media/d1e2.svg", width: 20em)
+  #dynamic-svg2("/part-ia/numbers-and-sets/media/d1e2.svg", width: 20em)
 ]
 
 #definition[
@@ -459,7 +460,7 @@ Conversely, given any #ponder("set-theory.partition")[partition] of $X$, there i
   The map $q: X->X\/R$ with $x|->[x]$ is the *#ponder("set-theory.quotient-map")[quotient map]* or the *#ponder("set-theory.quotient-map")[projection map]*.
 
   #align(center)[
-    #dynamic-svg("/part-ia/numbers-and-sets/media/d1e3.svg", width: 16em)
+    #dynamic-svg2("/part-ia/numbers-and-sets/media/d1e3.svg", width: 16em)
   ]
 ] <def-quotient-map>
 

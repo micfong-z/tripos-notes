@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(7)
 
 = #ponder("algebra.quotient-group")[Quotient Groups]
 

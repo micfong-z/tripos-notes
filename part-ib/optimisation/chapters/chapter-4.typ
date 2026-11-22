@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 = Applications of Linear Programming
 
@@ -6,7 +7,7 @@ Linear programming is widely used in various fields such as game theory and netw
 
 == Two Person Zero-Sum Games
 
-A two person zero-sum game can be described as a $m times n$ *payoff matrix* $matbold(A)$, where
+A two person zero-sum game can be described as an $m times n$ *payoff matrix* $matbold(A)$, where
 $
   matbold(A) = #h(1.25em) labelmat(
     mat(
@@ -112,14 +113,14 @@ $
   & "where"      && vb(e)_k = vecrow(1, dots.c, 1)^TT in RR^k, "as above".
 $
 
-Rather surprisingly, these two linear programmes are dual to each other. Hence, we can solve either one of them to find the optimal strategies for both players, and we have a saddle point $(vb(p)^*, vb(q)^*)$ in the sense of mixed strategies.
+Rather surprisingly, these two linear programs are dual to each other. Hence, we can solve either one of them to find the optimal strategies for both players, and we have a saddle point $(vb(p)^*, vb(q)^*)$ in the sense of mixed strategies.
 
 #lemma[
-  The two linear programmes in a two person zero-sum game are dual to each other.
+  The two linear programs in a two person zero-sum game are dual to each other.
 ]
 
 #proof[
-  The dual of P2's problem is
+  With a slack variable $vb(s) >= vb(0)$ such that $matbold(A) vb(q) + vb(s) = w vb(e)_m$, the Lagrangian of P2's problem is
   $
     lagr(w, vb(q), vb(s), vb(lambda_1), lambda_2) &= w + vb(lambda_1)^TT (matbold(A) vb(q) + vb(s) - w vb(e)_m) - lambda_2 (vb(e)_n^TT vb(q) - 1) \
     &= w(1-vb(lambda_1)^TT vb(e)_m) + (vb(lambda_1)^TT matbold(A) - lambda_2 vb(e)_n^TT) vb(q) + vb(lambda_1)^TT vb(s) + lambda_2.
@@ -133,7 +134,7 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 
   3. $vb(lambda_1) >= vb(0)$.
 
-  When $lambda in Lambda$, $min lagr = lambda_2$. Hence, the dual of P2's problem is
+  When $(vb(lambda_1), lambda_2) in Lambda$, $min lagr = lambda_2$. Hence, the dual of P2's problem is
   $
     & "maximise"   && lambda_2 \
     & "subject to" && vb(lambda_1)^TT vb(e)_m = 1 \
@@ -146,9 +147,9 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 #theorem[Optimal Strategies in Two Person Zero-Sum Games][
   A strategy $vb(p)$ is optimal for P1 if and only if there exists a strategy $vb(q)$ and $v$ such that
 
-  1. $matbold(A)^TT vb(p) >= v vb(e)_n, vb(e)_m^TT vb(p) = 1, vb(p) >= 0$ #fade[[primal feasibility]],
+  1. $matbold(A)^TT vb(p) >= v vb(e)_n, vb(e)_m^TT vb(p) = 1, vb(p) >= vb(0)$ #fade[[primal feasibility]],
 
-  2. $matbold(A) vb(q) <= v vb(e)_m, vb(e)_n^TT vb(q) = 1, vb(q) >= 0$ #fade[[dual feasibility]],
+  2. $matbold(A) vb(q) <= v vb(e)_m, vb(e)_n^TT vb(q) = 1, vb(q) >= vb(0)$ #fade[[dual feasibility]],
 
   3. $vb(p)^TT matbold(A) vb(q) = v$ #fade[[complementary slackness]].
 ]
@@ -180,7 +181,7 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
 
   2. Look for dominating actions, _i.e._ actions that are always better than some other action. For example, for P1, if there exists $i_1$ and $i_2$ such that $a_(i_1 j) >= a_(i_2 j)$ for all $j$, then P1 will never play action $i_2$.
 
-  3. Solve the linear programme, either graphically or using the simplex method.
+  3. Solve the linear program, either graphically or using the simplex method.
 ]
 
 #example[
@@ -188,7 +189,7 @@ Rather surprisingly, these two linear programmes are dual to each other. Hence, 
   $
     matbold(A) = mat(2, 3, 4; 3, 1, (1)/(2); 1, 3, 2).
   $
-  First of all, note that action 3 is always worse than action 1 for P1, so P1 will never play action 3. Hence, we can reduce the payoff matrix to
+  First of all, note that action 3 is never better than action 1 for P1, so P1 will never play action 3. Hence, we can reduce the payoff matrix to
   $
     matbold(A) = mat(2, 3, 4; 3, 1, (1)/(2)).
   $
@@ -246,7 +247,7 @@ We will, however, focus primarily on the transport problem, which is a special c
   - $n$ suppliers $i in {1, ..., n}$
   - $m$ consumers $j in {1, ..., m}$
 
-  and supplier $i$ produces $s_i$ units of goods; consumer $j$ demand $d_j$ units of goods. We have
+  and supplier $i$ produces $s_i$ units of goods; consumer $j$ demands $d_j$ units of goods. We have
   $
     sum_(i=1)^n s_i = sum_(j=1)^m d_j.
   $
@@ -260,7 +261,7 @@ We will, however, focus primarily on the transport problem, which is a special c
   $
 ]
 
-Note that this is a linear programme in standard form, and we might be able to solve it using the simplex algorithm as mentioned in @sec-simplex-algorithm. However, note that the first and the second constraints are linearly dependent, so we need to remove at least one of the equations.
+Note that this is a linear program in standard form, and we might be able to solve it using the simplex algorithm as mentioned in @sec-simplex-algorithm. However, note that the first and the second constraints are linearly dependent, so we need to remove at least one of the equations.
 
 In this course, we will use another version of the simplex algorithm called the *transportation simplex algorithm*, which is more efficient for this problem. We will see this in the following sections.
 
@@ -269,9 +270,9 @@ In this course, we will use another version of the simplex algorithm called the 
 ]
 
 #remark[
-  If $C_(i j) > 0$ for all $(i, j) in E$, then we can assume $overline(M)_(i j) < oo$ WLOG. In fact, we could set
+  If $underline(matbold(M)) = matbold(0)$ (which the proof below shows we may assume) and $C_(i j) > 0$ for all $(i, j) in E$, then we can assume $overline(M)_(i j) < oo$ WLOG. In fact, we could set
   $
-    overline(M)_(i j) = sum_(i in V) abs(b_i)
+    overline(M)_(i j) = sum_(k in V) abs(b_k)
   $
   for those $(i, j)$ where $overline(M)_(i j) = oo$.
 
@@ -287,7 +288,7 @@ In this course, we will use another version of the simplex algorithm called the 
                       0 & <= tilde(x)_(i j) <= overline(M)_(i j) - underline(M)_(i j) \
     sum C_(i j) x_(i j) & = sum C_(i j) tilde(x)_(i j) + sum C_(i j) underline(M)_(i j).
   $
-  We can rewrite the flow condition by substituting $b_i$ by $tilde(b)_i$ by $tilde(b)_i = b_i + sum_(j: (j, i) in E) underline(M)_(j i) - sum_(j: (i, j) in E) underline(M)_(i j)$.
+  We can rewrite the flow condition by substituting $b_i$ by $tilde(b)_i$, where $tilde(b)_i = b_i + sum_(j: (j, i) in E) underline(M)_(j i) - sum_(j: (i, j) in E) underline(M)_(i j)$.
 
   Hence WLOG, assume $underline(matbold(M)) = matbold(0)$.
 
@@ -772,20 +773,20 @@ In order to run the transportation simplex algorithm, we need to form a transpor
 == Max-Flow Min-Cut Theorem
 
 #definition[Max-Flow Problem][
-  Given a graph $G = (V, E)$ with source vertex $1$ and sink vertex $n$ (where $abs(V) = n$), the *max-flow problem* is:
+  Given a graph $G = (V, E)$ with source vertex $1$, sink vertex $n$ (where $abs(V) = n$) and a capacity $c_(i j) >= 0$ on each edge $(i, j) in E$, the *max-flow problem* is:
   $
     & "maximise"   && delta \
-    & "subject to" && sum_({j: (1, j) in E}) x_(1 j) = delta \
-    &              && sum_({i: (i, n) in E}) x_(i n) = delta \
+    & "subject to" && sum_({j: (1, j) in E}) x_(1 j) - sum_({j: (j, 1) in E}) x_(j 1) = delta \
+    &              && sum_({i: (i, n) in E}) x_(i n) - sum_({j: (n, j) in E}) x_(n j) = delta \
     &              && sum_({j: (i, j) in E}) x_(i j) - sum_({j: (j, i) in E}) x_(j i) = 0 quad && "for" 2 <= i <= n-1. \
     &              && 0 <= x_(i j) <= c_(i j) quad                                             && "for" (i, j) in E. \
   $
-  Alternatively, let $phi_i (x) = sum_({j: (i, j) in E}) x_(i j) - sum_({j: (j, i) in E}) x_(j i)$, the max-flow problem can be written as
+  Alternatively, let $phi_i (matbold(x)) = sum_({j: (i, j) in E}) x_(i j) - sum_({j: (j, i) in E}) x_(j i)$, the max-flow problem can be written as
   $
     & "maximise"   && delta \
-    & "subject to" && phi_1 (x) = delta \
-    &              && phi_n (x) = -delta \
-    &              && phi_i (x) = 0 quad           && "for" 2 <= i <= n-1. \
+    & "subject to" && phi_1 (matbold(x)) = delta \
+    &              && phi_n (matbold(x)) = -delta \
+    &              && phi_i (matbold(x)) = 0 quad   && "for" 2 <= i <= n-1. \
     &              && 0 <= x_(i j) <= c_(i j) quad && "for" (i, j) in E. \
   $
   Furthermore, by defining
@@ -799,7 +800,7 @@ In order to run the transportation simplex algorithm, we need to form a transpor
   we can write
   $
     & "maximise"   && delta \
-    & "subject to" && phi_i (x) - b_i delta = 0 quad && "for" 1 <= i <= n. \
+    & "subject to" && phi_i (matbold(x)) - b_i delta = 0 quad && "for" 1 <= i <= n. \
     &              && 0 <= x_(i j) <= c_(i j) quad   && "for" (i, j) in E. \
   $
 
@@ -863,18 +864,18 @@ In order to run the transportation simplex algorithm, we need to form a transpor
   ]
 
   #proof[
-    If an augmenting path exists, then we can increase the flow from $1$ to $n$. For each forward edge $(i, j)$, we can increase the flow by $epsilon = min{c_(i j) - x_(i j)}$ and for each reverse edge $(j, i)$, we can decrease the flow by $epsilon = min{x_(j i)}$. This will increase the total flow from $1$ to $n$ by $epsilon > 0$, contradicting optimality.
+    If an augmenting path exists, then we can increase the flow from $1$ to $n$. For each forward edge $(i, j)$, we can increase the flow by $epsilon$ and for each reverse edge $(j, i)$, we can decrease the flow by $epsilon$, where $epsilon = min(min{c_(i j) - x_(i j)}, min{x_(j i)}) > 0$, the minima being over the forward and reverse edges of the path respectively. This will increase the total flow from $1$ to $n$ by $epsilon > 0$, contradicting optimality.
   ]
 
-  Set
+  Let $matbold(x)$ be an optimal flow, and set
   $
     S = {1} union {i: "there is an augmenting path from" 1 "to" i}
   $
-  Observe that $1 in S$ but $n in.not S$. For this set $S$, summing up the flow constraints of $S$ as before:
+  Observe that $1 in S$, and $n in.not S$ by the lemma. For this set $S$, summing up the flow constraints of $S$ as before:
   $
     delta^* = f_matbold(x)(S, V \\S) - f_matbold(x)(V \\S, S).
   $
-  Consider $f_matbold(x)(S, V\\S)$. Note that every forward edge $i, j$ from $S$ to $V\\S$ must be saturated, or otherwise there would be an augmenting path from $1$ to $j$, contradicting the definition of $S$. Similarly, every reverse edge $j, i$ from $V\\S$ to $S$ must have $x_(j i) = 0$. Hence
+  Consider $f_matbold(x)(S, V\\S)$. Note that every forward edge $(i, j)$ from $S$ to $V\\S$ must be saturated, or otherwise there would be an augmenting path from $1$ to $j$, contradicting the definition of $S$. Similarly, every reverse edge $(j, i)$ from $V\\S$ to $S$ must have $x_(j i) = 0$. Hence
   $
     f_matbold(x)(S, V\\S) & = c(S) \
     f_matbold(x)(V\\S, S) & = 0.
@@ -887,11 +888,11 @@ In order to run the transportation simplex algorithm, we need to form a transpor
 
   1. Start with an initial flow $matbold(x) = matbold(0)$.
 
-  2. While there exists an augmenting path from $1$ to $n$, increase the flow along the path by $epsilon = min{c_(i j) - x_(i j)}$ for forward edges and $epsilon = min{x_(j i)}$ for reverse edges.
+  2. While there exists an augmenting path from $1$ to $n$, increase the flow along the path by $epsilon = min(min{c_(i j) - x_(i j)}, min{x_(j i)})$, where the minima are over the forward edges $(i, j)$ and the reverse edges $(j, i)$ of the path.
 
   3. Repeat until no augmenting path exists. The resulting flow is optimal, and the set $S$ defined in the proof of @thm-max-flow-min-cut-theorem[Max-Flow Min-Cut Theorem] gives a minimum cut.
 
   #remark[
-    If one can find a cut such that $c(S) = delta^*$, then the flow must be optimal.
+    If one can find a cut such that $c(S) = delta$, where $delta$ is the value of the current flow, then the flow must be optimal.
   ]
 ]

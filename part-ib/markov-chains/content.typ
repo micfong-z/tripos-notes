@@ -7,7 +7,7 @@ These are Zixuan's notes for *Part IB – Markov Chains* at the University of Ca
 
 The latest version of this document is available at #link("https://academic.micfong.space")[academic.micfong.space]. Please direct any comments to my CRSid email or use the contact details listed on the site.
 
-This document is typeset using #link("https://typst.app/")[Typst]. All figures are created using #link("https://inkscape.org/")[Inkscape].
+This document is typeset using #link("https://typst.app/")[Typst]. All figures are drawn in Typst.
 
 #contents()
 
@@ -20,5 +20,17 @@ This document is typeset using #link("https://typst.app/")[Typst]. All figures a
 #pagebreak()
 
 #include "chapters/chapter-1.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-2.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-3.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-4.typ"
 
 #end-of-document()

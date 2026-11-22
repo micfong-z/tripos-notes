@@ -11,7 +11,7 @@
 // target picks one.
 #import "@preview/equate:0.3.2": equate as equate-paged
 #import "@preview/equate:0.3.3": equate as equate-html
-#import "micfong/src/layouts.typ": book, series as ds-series, volume as ds-volume
+#import "micfong/src/layouts.typ": article, book, series as ds-series, volume as ds-volume
 #import "config.typ": apply-fonts, colors, is-html
 #import "theorems.typ": html-theorem-rules
 
@@ -52,13 +52,13 @@
 /// A reference to a missing label reads as a red "(?)" while drafting. One to a
 /// label defined twice is an error instead: a series holds several courses,
 /// and two courses sharing a label would otherwise print "(?)" without notice.
-#let _ref-rules(body) = {
+#let _ref-rules(missing: _ => text(fill: colors.red.shade500)[(?)], body) = {
   show ref: it => {
     if it.element != none { return it }
     context {
       let found = query(it.target).len()
       assert(found < 2, message: "label " + repr(it.target) + " is defined " + str(found) + " times, so this reference is ambiguous")
-      text(fill: colors.red.shade500)[(?)]
+      missing(it.target)
     }
   }
   body
@@ -144,6 +144,33 @@
     )
     show: _ref-rules
     if numbered-equations { _equation-numbering(body) } else { body }
+  }
+}
+
+/// Lets a chapter compile on its own, so opening it in Tinymist previews just
+/// that chapter. Included from a course or a series it does nothing, because
+/// `project` or `series` has already styled the page; the page's fill is what
+/// tells, as `_base` always sets it and nothing else does.
+///
+/// Compiled alone, the chapter gets the book's styling without its cover, and
+/// keeps its real number so "Theorem 4.2" reads as it will in the book.
+/// Equations do not keep theirs, since they count across chapters. A label in
+/// another chapter cannot resolve here, so a reference to one shows the label's
+/// name rather than the book's red "(?)". A course's prelude supplies `meta`:
+///
+///     #show: chapter.with(4)
+#let chapter(meta, number, body) = {
+  if is-html { return body }
+  context if page.fill != auto { body } else {
+    show: article.with(
+      title: _full-title(meta.at("part", default: none), meta.title),
+      meta: ([Chapter #number preview],),
+      chapter-figures: true,
+    )
+    show heading.where(depth: 1): set heading(supplement: [Chapter])
+    show: _ref-rules.with(missing: target => text(fill: colors.text-secondary, "‹" + str(target) + "›"))
+    counter(heading).update(number - 1)
+    if meta.at("numbered-equations", default: false) { _equation-numbering(body) } else { body }
   }
 }
 

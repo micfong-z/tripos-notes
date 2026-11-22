@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(10)
 
 #lecture-separator(lecture: 23, date: "2025-12-01")
 
@@ -37,7 +38,7 @@ Two solids $X, Y$ are *dual* if $Y$ can be constructed from $X$ by putting verti
   The cube and the octahedron are dual.
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d8e1.svg", width: 8em)
+    #dynamic-svg2("/part-ia/groups/media/d8e1.svg", width: 8em)
   ]
 
 ]
@@ -54,7 +55,7 @@ In particular, if $X$ and $Y$ are dual, then $isom(X) teq isom(Y)$, so we only h
 
 #example[Tetrahedron][
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d8e2.svg", width: 6em)
+    #dynamic-svg2("/part-ia/groups/media/d8e2.svg", width: 6em)
   ]
   Let $G = isom("tetrahedron")$. By definition, $G$ acts #ponder("algebra.action-properties")[transitively] on the four faces, and the $stab_G (x) teq D_6$ so by the #ponder("algebra.orbit-stabiliser")[orbit-stabilizer theorem],
   $ |G| = 4 dot 6 = 24, $
@@ -80,7 +81,7 @@ In particular, if $X$ and $Y$ are dual, then $isom(X) teq isom(Y)$, so we only h
 
     Since #ponder("algebra.transposition-generation")[transpositions generate] $S_n$, there is a #ponder("algebra.transposition")[transposition] $tau_0 in S_n$ with $theta(tau_0) = -1$. Because all #ponder("algebra.transposition")[transpositions] are #ponder("algebra.conjugation")[conjugate] #fade[[they have the same #ponder("algebra.cycle-type")[cycle type]]], so $tau = sigma tau_0 sigma^(-1)$ for any other #ponder("algebra.transposition")[transposition] $tau$ and some $sigma in S_n$. Thus
     $
-      theta(tau) = theta(sigma) theta(tau_0) theta(sigma)^(-1) = -1. quad ("since" C_2 "is abelian")
+      theta(tau) = theta(sigma) theta(tau_0) theta(sigma)^(-1) = -1. #eq-note[(since $C_2$ is abelian)]
     $
     Therefore $theta = sign$, so
     $
@@ -111,7 +112,7 @@ In particular, if $X$ and $Y$ are dual, then $isom(X) teq isom(Y)$, so we only h
   #proof[
     Since @transpositions-generate[Transpositions Generate], it suffices to show that all transpositions are contained in $im theta$. Indeed,
     #align(center)[
-      #dynamic-svg("/part-ia/groups/media/d8e3.svg", width: 12em)
+      #dynamic-svg2("/part-ia/groups/media/d8e3.svg", width: 12em)
     ]
     #ponder("geometry.rotation")[rotation] about the axis through the midpoints of an edge maps to a #ponder("algebra.transposition")[transposition] under $theta$.
 
@@ -148,7 +149,7 @@ Now, for the final two #ponder("geometry.platonic-solid")[Platonic solids].
   By drawing diagonals on faces, we may inscribe 5 cubes into the dodecahedron.
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d8e4.svg", width: 28em)
+    #dynamic-svg2("/part-ia/groups/media/d8e4.svg", width: 28em)
   ]
 
   Since the 5 cubes are built symmetrically from the geometry of the dodecahedron, $G_0$ #ponder("algebra.group-action")[acts] on the set of these 5 cubes, giving a #ponder("algebra.homomorphism")[homomorphism]

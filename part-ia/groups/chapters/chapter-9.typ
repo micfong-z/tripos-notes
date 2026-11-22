@@ -1,24 +1,25 @@
 #import "../prelude.typ": *
+#show: chapter.with(9)
 
 
 = Matrix Groups
 
-Let $M_n (RR)$ be the set of all $n times n$ matrices with real entries.
+Let $MM_n (RR)$ be the set of all $n times n$ matrices with real entries.
 
 From IA Vectors and Matrices, we know that #ponder("algebra.binary-operation")[matrix multiplication] is #ponder("algebra.group")[associative] and has an #ponder("algebra.group")[identity element], the identity matrix $matbold(I)_n$, though not all matrices have #ponder("algebra.inverse-element")[inverses] under multiplication.
 
 #lemma[
-  $matbold(A) in M_n (RR)$ has an inverse iff $det matbold(A) != 0$.
+  $matbold(A) in MM_n (RR)$ has an inverse iff $det matbold(A) != 0$.
 ] <matrix-invertibility>
 
 #definition[#ponder("algebra.general-linear-group")[General linear group]][
-  Let $GL_n (RR) = { matbold(A) in M_n (RR) : det matbold(A) != 0 }$. This is a #ponder("algebra.group")[group] under #ponder("algebra.binary-operation")[matrix multiplication].
+  Let $GL_n (RR) = { matbold(A) in MM_n (RR) : det matbold(A) != 0 }$. This is a #ponder("algebra.group")[group] under #ponder("algebra.binary-operation")[matrix multiplication].
 ] <general-linear-group>
 
 Here is another result from IA Vectors and Matrices.
 
 #lemma[
-  For $matbold(A), matbold(B) in M_n (RR)$, $det (matbold(A) matbold(B)) = det matbold(A) dot det matbold(B)$.
+  For $matbold(A), matbold(B) in MM_n (RR)$, $det (matbold(A) matbold(B)) = det matbold(A) dot det matbold(B)$.
 ] <determinant-multiplicativity>
 
 This implies that $det$ is a #ponder("algebra.homomorphism")[homomorphism]
@@ -27,7 +28,7 @@ $
 $
 
 #definition[#ponder("algebra.special-linear-group")[Special linear group]][
-  Let $SL_n (RR) = ker det = { matbold(A) in M_n (RR) : det matbold(A) = 1 }$. This is a #ponder("algebra.subgroup")[subgroup] of $GL_n (RR)$ called the #ponder("algebra.special-linear-group")[special linear group].
+  Let $SL_n (RR) = ker det = { matbold(A) in MM_n (RR) : det matbold(A) = 1 }$. This is a #ponder("algebra.subgroup")[subgroup] of $GL_n (RR)$ called the #ponder("algebra.special-linear-group")[special linear group].
 ] <special-linear-group>
 
 By the @isomorphism-theorem[Isomorphism Theorem],
@@ -56,12 +57,12 @@ $
 
 This is a familiar concept from IA Vectors and Matrices. There is a natural #ponder("algebra.group-action")[action] by #ponder("algebra.conjugation")[conjugation]:
 $
-  GL_n (RR) arrow.cw.half M_n (RR)\
+  GL_n (RR) arrow.cw.half MM_n (RR)\
   matbold(P) (matbold(A)) := matbold(P) matbold(A) matbold(P)^(-1).
 $
 
 #proposition[#ponder("algebra.matrix-change-of-basis")[Change of Basis]][
-  Let $V$ be an $n$-dimensional vector space over $RR$, and $alpha: V->V$ a linear map. If $matbold(A) in M_n (RR)$ that represents $alpha$ in some basis, then the #ponder("algebra.orbit-stabiliser-definitions")[orbit]
+  Let $V$ be an $n$-dimensional vector space over $RR$, and $alpha: V->V$ a linear map. If $matbold(A) in MM_n (RR)$ that represents $alpha$ in some basis, then the #ponder("algebra.orbit-stabiliser-definitions")[orbit]
   $
     GL_n (RR) matbold(A) = {matbold(P) matbold(A) matbold(P)^(-1) : matbold(P) in GL_n (RR)}
   $
@@ -216,7 +217,7 @@ It follows that we can characterise $O(n)$ using the dot product.
 This quickly leads to a nice characterisations of matrices in $O(n)$.
 
 #lemma[Matrices in $O(n)$][
-  Let $matbold(A) in M_n (RR)$. The following are equivalent:
+  Let $matbold(A) in MM_n (RR)$. The following are equivalent:
 
   1. $matbold(A) in O(n)$.
 
@@ -319,7 +320,7 @@ Examples of elements of $O(n) \\ SO(n)$ are provided by #ponder("geometry.reflec
  <reflection-properties>
 
 #proof[
-  We may assume that $norm(vb(v)) = 1$. From the definition, $S_vb(v)$ is linear in $vb(x)$. So we can think of $S_vb(v)$ as a matrix $matbold(S)_vb(v) in M_n (RR)$. Now,
+  We may assume that $norm(vb(v)) = 1$. From the definition, $S_vb(v)$ is linear in $vb(x)$. So we can think of $S_vb(v)$ as a matrix $matbold(S)_vb(v) in MM_n (RR)$. Now,
   $
     (S_vb(v)(vb(x)) dot vb(v)) & = (vb(x) dot vb(v)) - 2 (vb(x) dot vb(v))( vb(v) dot vb(v)) \
                                      & = (vb(x) dot vb(v)) - 2 (vb(x) dot vb(v)) \

@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(1)
 
 #lecture-separator(lecture: 1, date: "2026-01-22")
 
@@ -570,7 +571,7 @@ The next two tests are about asymptotic comparisons to the geometric series.
 
 #proof[
   #align(center)[
-    #dynamic-svg("/part-ia/analysis-i/media/d1e1.svg", width: 16em)
+    #dynamic-svg2("/part-ia/analysis-i/media/d1e1.svg", width: 16em)
   ]
   We have
   $

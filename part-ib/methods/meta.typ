@@ -8,4 +8,5 @@
   lectured-in: "Michaelmas 2026",
   updated: "Version 20261007",
   doc-id: "D/ACD/UND/NTE/15",
+  numbered-equations: true,
 )

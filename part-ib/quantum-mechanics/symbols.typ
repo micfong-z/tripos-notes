@@ -6,3 +6,11 @@
 
 #import "/template/lib.typ": *
 #import "@preview/physica:0.9.8": *
+
+#let electron = $ee^(-)$
+#let positron = $ee^(+)$
+#let proton = $upright(p)^(+)$
+#let photon = $upright(gamma)$
+#let hilb = $cal(H)$
+
+#let expt(content) = $lr(chevron.l #content chevron.r)$

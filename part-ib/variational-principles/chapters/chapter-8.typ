@@ -1,11 +1,11 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(8)
 
 = Principle of Least Action (Hamilton's Principle)
 
 Consider a system of $N$ particles in 3D. The positions $vb(x)_1, ..., vb(x)_N$ of the particles correspond to a single point $vecrow(vb(x)_1, ..., vb(x)_N)$ in a $3N$-dimensional *configuration space*. It is sometimes useful to use non-Cartesian coordinates, such that
 $
-  vb(q) = (vb(q)_1, ..., vb(q)_N) "for this space".
+  vb(q) = (q_1, ..., q_(3N)) "for this space".
 $
 There is a simple way to determine the equations of motion if we know kinetic energy $T$ and the potential energy $V$ in terms of $vb(q)(t)$ and $dot(vb(q))(t)$, as follows.
 
@@ -21,7 +21,7 @@ There is a simple way to determine the equations of motion if we know kinetic en
   $
     I[vb(q)] := integral_(t_A)^(t_B) L(vb(q)(t), dot(vb(q))(t), t) dif t.
   $
-  #fade[[The dimensions of $I$ is $dimrm(M) dimrm(L)^2 dimrm(T)^(-1)$, same as for $hbar$ in quantum mechanics.]]
+  #fade[[The dimensions of $I$ are $dimrm(M) dimrm(L)^2 dimrm(T)^(-1)$, same as for $hbar$ in quantum mechanics.]]
 ] <def-action>
 
 #law[Principle of Least Action (Hamilton's Principle)][
@@ -42,7 +42,7 @@ $
   $
     - pdv(V, x_i) - dv(, t) (m dot(x)_i) = 0 quad <=> quad m dot.double(vb(x)) = - grad V.
   $
-  This is Newton's second law for a conservative force $vb(F) = - grad V$.
+  This is Newton's second law for the force $vb(F) = - grad V$.
 ]
 
 #proposition[
@@ -102,7 +102,7 @@ We can eliminate $dot(phi)$ to get
 $
   1/2 m dot(r)^2 + V_"eff" (r) = E
 $
-where $V_"eff" (r) = V(r) + (m h^2)/(2 r^2) + V(r)$ is the *effective potential*.
+where $V_"eff" (r) = V(r) + (m h^2)/(2 r^2)$ is the *effective potential*.
 
 == The Hamiltonian and Hamilton's equations
 
@@ -116,7 +116,7 @@ Assume that $L(vb(q), dot(vb(q)), t)$ is convex as a function of $dot(vb(q))$. H
   which is the Legendre transform of $L$ w.r.t. $dot(vb(q))$.
 ] <def-hamiltonian>
 
-Since $L$ is convex is $dot(vb(q))$, the supremum is attained at $dot(vb(q)) = dot(vb(q))(vb(q), vb(p), t)$ such that
+Since $L$ is convex in $dot(vb(q))$, the supremum is attained at $dot(vb(q)) = dot(vb(q))(vb(q), vb(p), t)$ such that
 
 #set math.equation(numbering: "(1)")
 $
@@ -169,7 +169,7 @@ $
   &= - dot(p)_i quad &"by" #ref(<eq-8-3>)
 $
 
-Hence the Euler-Lagrange equations imply the *Hamilton's equations*
+Hence the Euler-Lagrange equations imply *Hamilton's equations*.
 
 #theorem[Hamilton's Equations][
   The equations of motion of a system can be written as
@@ -192,7 +192,7 @@ for fixed $vb(q)(t_A)$ and $vb(q)(t_B)$.
   Note that
   $
     dv(H, t) & = dv(, t) (H(vb(q)(t), vb(p)(t), t)) = sum_i (pdv(H, q_i) dot(q)_i + pdv(H, p_i) dot(p)_i)+pdv(H, t) \
-             & = pdv(H, t) quad "by" #ref(<thm-hamiltons-equations>).
+             & = pdv(H, t). #eq-note[by @thm-hamiltons-equations]
   $
   Hence if $H$ has no explicit $t$-dependence, then $H$ is constant for any solution of Hamilton's equations.
 ]

@@ -9,7 +9,7 @@
 #let re = math.op("Re")
 #let im = math.op("Im")
 #let img = math.op("im")
-#let ii = math.upright("i")
+#let ii = math.upright($i$)
 #let ppi = math.upright(sym.pi)
 #let ee = math.upright("e")
 #let eval(expr, size: 100%) = $lr(#expr|, size: #size)$

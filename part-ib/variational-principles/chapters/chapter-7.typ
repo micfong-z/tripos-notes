@@ -1,9 +1,9 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(7)
 
 = Constrained Variation of Functionals
 
-To extremise a functional $F[y]$ subject to a functional constraint $P[y] = c$, we can use the method of Lagrange multipliers. We can use a Lagrange multiplier:
+To extremise a functional $F[y]$ subject to a functional constraint $P[y] = c$, we can use the method of Lagrange multipliers. We introduce a Lagrange multiplier $lambda$ and consider
 $
   Phi_lambda [y] = F[y] - lambda (P[y] - c).
 $
@@ -71,7 +71,7 @@ $
 #notation[
   Recall that
   $
-    dv(F[y], y(x), d: delta) = pdv(F, y(x)) - dv(, x) pdv(F, y'(x)).
+    dv(F[y], y(x), d: delta) = pdv(f, y) - dv(, x) pdv(f, y') quad "where" quad F[y] = integral_alpha^beta f(y, y', x) dif x.
   $
 ]
 
@@ -80,7 +80,7 @@ $
   Phi_lambda [y] = F[y] - lambda (G[y] - 1).
 $
 
-The boundary conditions in $cal(C)$ ensures that the boundary term in $delta Phi_lambda$ vanishes. Hence we have the Euler-Lagrange equation
+The boundary conditions in $cal(C)$ ensure that the boundary term in $delta Phi_lambda$ vanishes. Hence we have the Euler-Lagrange equation
 $
   dv(F[y], y(x), d: delta) - lambda dv(G[y], y(x), d: delta) = 0
 $
@@ -107,11 +107,11 @@ Note that this problem is linear, so if $y(x)$ is a solution, then $C y(x)$ is a
 
 Then
 $
-  F[y] & = integral_alpha^beta y cal(L) y dif x - underbracket([rho y y']_alpha^beta, = 0) quad "by integration by parts" \
+  F[y] & = integral_alpha^beta y cal(L) y dif x + underbracket([rho y y']_alpha^beta, = 0) #eq-note[by integration by parts] \
        & = lambda integral_alpha^beta w y^2 dif x \
        & = lambda G[y] = lambda.
 $
-Hence the solution of our problem is the lowest eigenvalue $lambda$.
+Hence the minimum value of $F[y]$ is the lowest eigenvalue $lambda$, and the minimiser $y$ is the corresponding eigenfunction.
 
 #exercise[
   Check that this also works if we change the boundary conditions to $y'(alpha) = y'(beta) = 0$ or $y(alpha) = y'(beta) = 0$ or $y'(alpha) = y(beta) = 0$.
@@ -147,7 +147,7 @@ $
 Extremising $Phi$,
 $
   "w.r.t." lambda & quad & 0 &= dv(Phi, lambda(t), d: delta) = - g(vb(x)(t)) &quad &(*)\
-  "w.r.t." x_i (t) & quad & 0 &= dv(Phi, x_i (t), d: delta) = -lambda grad_i g(vb(x)(t)) - dv(, t) (dot(x)_i / sqrt(dot(vb(x))^2)) &quad &(dagger)
+  "w.r.t." x_i (t) & quad & 0 &= dv(Phi, x_i (t), d: delta) = -lambda ∂_i g(vb(x)(t)) - dv(, t) (dot(x)_i / sqrt(dot(vb(x))^2)) &quad &(dagger)
 $
 We can eliminate $lambda$ from $(*)$ and $(dagger)$ by
 $
@@ -156,15 +156,15 @@ $
 Taking derivatives w.r.t. $t$ again gives
 $
   & => dv(, t) (dot(x)_i/(sqrt(dot(vb(x))^2))) ∂_i g + (dot(x)_i dot(x)_j)/(sqrt(dot(vb(x))^2)) ∂_i ∂_j g = 0 \
-  & = -lambda (grad g)^2 quad "by" (dagger) \
+  & => -lambda (grad g)^2 + (dot(x)_i dot(x)_j)/(sqrt(dot(vb(x))^2)) ∂_i ∂_j g = 0 #eq-note[by $(dagger)$] \
 $
 Therefore,
 $
-  lambda(t) = - (dot(x)_i dot(x)_j)/(sqrt(dot(vb(x))^2) (grad g)^2) ∂_i ∂_j g.
+  lambda(t) = (dot(x)_i dot(x)_j)/(sqrt(dot(vb(x))^2) (grad g)^2) ∂_i ∂_j g.
 $
 Thus,
 $
-  ((dagger))/(sqrt(vb(dot(x))^2)) "gives" (1)/(sqrt(dot(vb(x))^2) ) dv(, t) (dot(x)_i / sqrt(dot(vb(x))^2)) + (dot(x)_i dot(x)_j)/(sqrt(dot(vb(x))^2) (grad g)^2) ∂_j ∂_k g grad_i g = 0.
+  ((dagger))/(sqrt(vb(dot(x))^2)) "gives" (1)/(sqrt(dot(vb(x))^2) ) dv(, t) (dot(x)_i / sqrt(dot(vb(x))^2)) + (dot(x)_j dot(x)_k)/(dot(vb(x))^2 (grad g)^2) ∂_j ∂_k g ∂_i g = 0.
 $
 This is the equation for geodesics on a surface. We need to solve this along with $(*)$. This equation looks nicer if we convert it to use arc length as a parameter (discussed in @sec-5-1), where
 $
@@ -172,7 +172,7 @@ $
 $
 So our equation becomes
 $
-  dv(x_i, l, 2) + (1)/(grad g)^2 dv(x_j, l) dv(x_k, l) ∂_j ∂_k g grad_i g = 0.
+  dv(x_i, l, 2) + (1)/(grad g)^2 dv(x_j, l) dv(x_k, l) ∂_j ∂_k g ∂_i g = 0.
 $
 
 #example[

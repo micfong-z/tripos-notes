@@ -6,6 +6,6 @@
   title: "Markov Chains",
   lecturer: "Prof Ioannis Kontoyiannis",
   lectured-in: "Michaelmas 2026",
-  updated: "Version 20261007",
+  updated: "Version 20261117",
   doc-id: "D/ACD/UND/NTE/12",
 )

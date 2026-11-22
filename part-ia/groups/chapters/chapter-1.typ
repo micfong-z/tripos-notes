@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(1)
 
 #lecture-separator(lecture: 1, date: "2025-10-10")
 
@@ -15,14 +16,14 @@ One can think about #ponder("algebra.group")[groups] in two ways:
 An equilateral triangle has rotational symmetry, reflective symmetry, and the identity symmetry.
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d1e3.svg", width: 16em)
+  #dynamic-svg2("/part-ia/groups/media/d1e3.svg", width: 16em)
 ]
 
 
 Let us list these symmetries:
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d1e4.svg", width: 10em)
+  #dynamic-svg2("/part-ia/groups/media/d1e4.svg", width: 10em)
 ]
 
 So an equilateral triangle has exactly 6 symmetries.
@@ -34,7 +35,7 @@ So an equilateral triangle has exactly 6 symmetries.
 Things get more interesting when we start to #ponder("algebra.function-composition")[compose] (or multiply) symmetries. Note that, after #ponder("algebra.function-composition")[composition] of symmetries, our result must also be a symmetry. To find out exactly which one is the end result, we can label the vertices on the triangle.
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d1e5.svg", width: 28em)
+  #dynamic-svg2("/part-ia/groups/media/d1e5.svg", width: 28em)
 ]
 
 
@@ -99,17 +100,17 @@ The definition has some important consequences.
   1. Using @def-group, we have
 
     $
-      b & = b dot e         &      quad "by identity" \
-        & = b dot (a dot b) &    quad "by assumption" \
-        & = (b dot a) dot b & quad "by associativity"
+      b & = b dot e #eq-note[by identity] \
+        & = b dot (a dot b) #eq-note[by assumption] \
+        & = (b dot a) dot b #eq-note[by associativity]
     $
 
     By the #ponder("algebra.inverse-element")[inverse] axiom, there is a $c in G$  such that $b dot c = e$. Multiplying both sides on the right by $c$, we get
     $
       b dot c & = ((b dot a) dot b) dot c \
-              & = (b dot a) dot (b dot c) & quad "by associativity" \
-              & = (b dot a) dot e         &  quad "by construction" \
-              & = b dot a.                &      quad "by identity" \
+              & = (b dot a) dot (b dot c) #eq-note[by associativity] \
+              & = (b dot a) dot e #eq-note[by construction] \
+              & = b dot a. #eq-note[by identity] \
     $
 
   2. Using @def-group, and the previous part, there exists $b in G$ such that $a dot b = e = b dot a$.
@@ -118,19 +119,19 @@ The definition has some important consequences.
 
     $
       e dot a & = (a dot b) dot a \
-              & = a dot (b dot a) & quad "by associativity" \
-              & = a dot e         &  quad "by construction" \
-              & = a.              &      quad "by identity" \
+              & = a dot (b dot a) #eq-note[by associativity] \
+              & = a dot e #eq-note[by construction] \
+              & = a. #eq-note[by identity] \
     $
 
   3. We have
 
     $
-      b' & = e dot b'         &      quad "by part (2)" \
-         & = (b dot a) dot b' &      quad "by part (1)" \
-         & = b dot (a dot b') & quad "by associativity" \
-         & = b dot e          &    quad "by assumption" \
-         & = b.               &      quad "by identity" \
+      b' & = e dot b' #eq-note[by part (2)] \
+         & = (b dot a) dot b' #eq-note[by part (1)] \
+         & = b dot (a dot b') #eq-note[by associativity] \
+         & = b dot e #eq-note[by assumption] \
+         & = b. #eq-note[by identity] \
     $
 
   4. Using the #ponder("algebra.inverse-element")[inverse] axiom from @def-group, and part (1), there is a $b in G$ such that $b dot a = e$.
@@ -139,9 +140,9 @@ The definition has some important consequences.
 
     $
       b dot a & = b dot (a dot e') \
-              & = (b dot a) dot e' & quad "by associativity" \
-              & = e dot e'         &  quad "by construction" \
-              & = e'.              &      quad "by part (2)" \
+              & = (b dot a) dot e' #eq-note[by associativity] \
+              & = e dot e' #eq-note[by construction] \
+              & = e'. #eq-note[by part (2)] \
     $
 
     Since $b dot a = e$, we have $e = e'$.
@@ -403,7 +404,7 @@ for some $n >= 0$, where all $x_i in X$. #fade[[Note that $x_(i)$ and $x_(j)$ ca
 Let $CC$ be the plane, equipped with the usual notion of distance.
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d2e2.svg", width: 30em)
+  #dynamic-svg2("/part-ia/groups/media/d2e2.svg", width: 30em)
 ]
 
 #definition("Isometry")[
@@ -446,7 +447,7 @@ Let $CC$ be the plane, equipped with the usual notion of distance.
 
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d2e3.svg", width: 16em)
+    #dynamic-svg2("/part-ia/groups/media/d2e3.svg", width: 16em)
   ]
 
   Define the *$n$th #ponder("algebra.dihedral-group")[dihedral group]* to be
@@ -472,7 +473,7 @@ The proof will also give us a good desciption of all the elements. But first, we
   then $(x_2-x_1)$ is perpendicular to $(y_2-y_1)$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d2e4.svg", width: 22em)
+    #dynamic-svg2("/part-ia/groups/media/d2e4.svg", width: 22em)
   ]
 ] <kite-lemma>
 
@@ -526,7 +527,7 @@ $
   In particular, ${r, s}$ #ponder("algebra.generated-subgroup")[generates] $D_(2n)$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d2e5.svg", width: 18em)
+    #dynamic-svg2("/part-ia/groups/media/d2e5.svg", width: 18em)
   ]
 ] <order-of-dihedral-group>
 

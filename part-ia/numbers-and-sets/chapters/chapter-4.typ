@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 = Elementary Number Theory
 
@@ -397,7 +398,7 @@ We shall now consider equations of the form $a x equiv b mod n$ with $gcd(a, n) 
       This might be helpful in tackling problems:
       $
         &     &        7x & equiv 4 mod 30 \
-        & <=> & 13 dot 7x & equiv 13 dot 4 mod 30 quad "backwards implication since" 13 "is a unit" mod 30 \
+        & <=> & 13 dot 7x & equiv 13 dot 4 mod 30 #eq-note[backwards implication since $13$ is a unit $mod 30$] \
         & <=> &         x & equiv 22 mod 30
       $
     ]

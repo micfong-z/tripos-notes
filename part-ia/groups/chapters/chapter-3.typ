@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 #lecture-separator(lecture: 8, date: "2025-10-27")
 
@@ -55,7 +56,7 @@ The idea of this theorem is to somehow #ponder("algebra.coset-partition")[partit
 A schematic picture of the lemma above is shown below.
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d4e1.svg", width: 22em)
+  #dynamic-svg2("/part-ia/groups/media/d4e1.svg", width: 22em)
 ]
 
 However, we can say more about the #ponder("algebra.coset-cardinality")[sizes of the cosets].
@@ -73,7 +74,7 @@ However, we can say more about the #ponder("algebra.coset-cardinality")[sizes of
 So the schematic picture above can be redrawn, where each #ponder("algebra.coset")[coset] has the #ponder("algebra.coset-cardinality")[same size as] $H$.
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d4e2.svg", width: 22em)
+  #dynamic-svg2("/part-ia/groups/media/d4e2.svg", width: 22em)
 ]
 
 

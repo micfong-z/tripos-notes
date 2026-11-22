@@ -140,6 +140,10 @@ cat > "$dir/prelude.typ" <<EOF
 
 #import "/template/lib.typ": *
 #import "symbols.typ": *
+#import "meta.typ": meta
+
+// Lets a chapter compile alone; see \`chapter\` in the shared template.
+#let chapter = chapter.with(meta)
 EOF
 
 cat > "$dir/symbols.typ" <<EOF
@@ -192,6 +196,7 @@ EOF
 
 cat > "$dir/chapters/chapter-1.typ" <<'EOF'
 #import "../prelude.typ": *
+#show: chapter.with(1)
 
 = Introduction
 EOF

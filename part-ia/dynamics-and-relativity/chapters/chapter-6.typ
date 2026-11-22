@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(6)
 
 = Rotating Reference Frames
 
@@ -84,7 +85,7 @@ $
 It points away from the axis of rotation, as shown in the following diagram.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e40.svg", width: 9em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e40.svg", width: 9em)
 ]
 
 For the size of the force,
@@ -102,7 +103,7 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
   Consider a hanging string on the Earth.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e41.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e41.svg", width: 12em)
   ]
 
   Rather than hanging vertically downwards, the pendulum hangs at an angle $phi$ to the vertical. We wish to find $phi$.
@@ -117,7 +118,7 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
                    & = m omega^2 r cos theta (cos theta vu(r) - sin theta vu(theta)). \
   $
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e42.svg", width: 7em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e42.svg", width: 7em)
   ]
 
   To hold the string together, there must be a force exerted by the molecules on the string that balances the other forces, which is the tension.
@@ -126,7 +127,7 @@ Hence, potential energy is lowered by moving away from the axis of rotation.
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e43.svg", width: 8em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e43.svg", width: 8em)
   ]
 
   The net force on the particle is zero, so
@@ -158,13 +159,13 @@ Note that this is similar to Lorentz force with $vb(B) -> vb(omega)$, so moving 
   When a low pressure region forms, air particles move in, and the #ponder("dynamics.coriolis-force")[Coriolis force] bends them:
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e44.svg", width: 10em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e44.svg", width: 10em)
   ]
 
   Each molecule of air in bent clockwise in the northern hemisphere #fade[[by the right hand rule with $-vb(omega)$ going into the plane]], which leads to an anticlockwise swirling motion.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e45.svg", width: 6em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e45.svg", width: 6em)
   ]
 
   In the southern hemisphere, the #ponder("dynamics.coriolis-force")[Coriolis force] bends particles anticlockwise, leading to a clockwise swirling motion.
@@ -179,7 +180,7 @@ Note that this is similar to Lorentz force with $vb(B) -> vb(omega)$, so moving 
   Consider dropping a ball from a tower on the euqator. We will consider where the ball lands.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e46.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e46.svg", width: 12em)
   ]
 
   Initially,
@@ -212,7 +213,7 @@ Note that this is similar to Lorentz force with $vb(B) -> vb(omega)$, so moving 
   Consider the following right-handed set of #ponder("linear-algebra.basis")[basis]:
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e47.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e47.svg", width: 12em)
   ]
 
   $
@@ -236,13 +237,13 @@ Foucault's pendulum demonstrates the rotation of the Earth.
 As the Earth rotates under the pendulum, from the point of view of someone on the Earth, it will look like the pendulum rotates.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e48.svg", width: 8em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e48.svg", width: 8em)
 ]
 
 At a general latitude,
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e49.svg", width: 18em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e49.svg", width: 18em)
 ]
 
 In the #ponder("linear-algebra.basis")[basis] on the Earth's surface, we have
@@ -253,7 +254,7 @@ $
 $
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e50.svg", width: 14em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e50.svg", width: 14em)
 ]
 
 The tension in the string is

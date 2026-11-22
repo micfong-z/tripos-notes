@@ -15,7 +15,7 @@
 #import "elements.typ": *
 #import "theorems.typ": *
 #import "ponder.typ": ponder
-#import "project.typ": project, series, volume
+#import "project.typ": chapter, project, series, volume
 
 // Design-system elements the notes use as they are.
-#import "micfong/lib.typ": badge, caution, divider, figure-required, icon, kbd, note, palette, panel, tip, warning
+#import "micfong/lib.typ": badge, divider, figure-required, icon, kbd, palette, panel

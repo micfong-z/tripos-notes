@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(5)
 
 = Functionals and Euler-Lagrange Equations
 
@@ -35,7 +35,7 @@ $
   &= integral_alpha^beta (pdv(f, y) var(y) + pdv(f, y') var(y)') dif x + ("higher order terms")\
   &= integral_alpha^beta (var(y)(x) (pdv(f, y) - dv(, x) pdv(f, y'))) dif x + [pdv(f, y') var(y)]_alpha^beta + ...\
 $
-Assume that the definition of $cal(C)$ includes suitable boundary conditions that ensures $[pdv(f, y') var(y)]_alpha^beta = 0$. For example, we can
+Assume that the definition of $cal(C)$ includes suitable boundary conditions that ensure $[pdv(f, y') var(y)]_alpha^beta = 0$. For example, we can
 
 - assume $y(alpha) =a$, $y(beta) = b$ for all $y in cal(C)$, so that $var(y)(alpha) = var(y)(beta) = 0$; or
 
@@ -66,7 +66,7 @@ $
   F[vb(y)] & = integral_alpha^beta f(vb(y)(x), vb(y)'(x), x) dif x, \
   var(F[vb(y)]) & = integral_alpha^beta sum_(i=1)^n var(y_i)(x) (pdv(f, y_i) - dv(, x) pdv(f, y'_i)) dif x + [sum_(i=1)^n pdv(f, y'_i) var(y_i)]_alpha^beta + ...\
 $
-So assuming suitable boundary conditions such that $[sum_(i=1)^n pdv(f, y'_i) var(y_i)]_alpha^beta = 0$, then $y(x)$ extremises $F$ iff
+So assuming suitable boundary conditions such that $[sum_(i=1)^n pdv(f, y'_i) var(y_i)]_alpha^beta = 0$, then $vb(y)(x)$ extremises $F$ iff
 $
   pdv(f, y_i) - dv(, x) pdv(f, y'_i) = 0 quad forall i = 1, ..., n. quad ("Euler-Lagrange equations")
 $

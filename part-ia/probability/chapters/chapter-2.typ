@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 #lecture-separator(lecture: 3, date: "2026-01-28")
 
@@ -249,7 +250,7 @@ There are several important properties of the #ponder("probability.probability-s
 #proof[
   $
     PP(A inter B^cp) & = PP(A) - PP(A inter B) \
-                     & = PP(A) - PP(A) PP(B) quad "since" A indep B \
+                     & = PP(A) - PP(A) PP(B) #eq-note[since $A indep B$] \
                      & = PP(A) (1 - PP(B)) \
                      & = PP(A) PP(B^cp).
   $
@@ -276,7 +277,7 @@ There are several important properties of the #ponder("probability.probability-s
   $
     PP(union.big_n A_n mid(|) B) & = PP((union.big_n A_n) inter B) / PP(B) \
                                  & = PP(union.big_n (A_n inter B)) / PP(B) \
-                                 & = (sum_n PP(A_n inter B)) / PP(B) quad "by countable additivity" \
+                                 & = (sum_n PP(A_n inter B)) / PP(B) #eq-note[by countable additivity] \
                                  & = sum_n (PP(A_n inter B) / PP(B)) \
                                  & = sum_n PP(A_n mid(|) B).
   $
@@ -294,7 +295,7 @@ There are several important properties of the #ponder("probability.probability-s
   $
     PP(A) & = PP(A inter (union.big_n B_n)) \
           & = PP(union.big_n (A inter B_n)) \
-          & = sum_n PP(A inter B_n) quad "since" B_n "are disjoint" \
+          & = sum_n PP(A inter B_n) #eq-note[since $B_n$ are disjoint] \
           & = sum_n PP(A mid(|) B_n) PP(B_n).
   $
 ]

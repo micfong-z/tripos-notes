@@ -35,14 +35,8 @@
       "ss02": 1, // single-storey g
       "tnum": 1, // tabular figures
     ),
-    math: "Lete Sans Math",
-    math-features: (
-      "ss04": 1, // slanted weak inequalities
-      "cv01": 1, // horizontal bar on reduced Planck's constant
-      "cv03": 1, // alternate epsilon shape
-      "cv11": 1, // single-storey g
-      "cv12": 1, // disambiguated l
-    ),
+    math: "Micfong Sans Math",
+    math-features: (:),
   ),
   // IBM Plex Serif 3.006 + IBM Plex Math 1.000
   serif: (

@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 #lecture-separator(lecture: 6, date: "2026-05-13")
 
@@ -9,20 +10,20 @@
   A *linear program* is a problem of the form
   $
     & "minimise"   && vb(c)^TT vb(x) \
-    & "subject to" && vb(a_i)^TT vb(x) >= b_i quad &  "for" i in M_1 \
-    &              && vb(a_i)^TT vb(x) <= b_i quad &  "for" i in M_2 \
-    &              && vb(a_i)^TT vb(x) = b_i quad  &  "for" i in M_3 \
+    & "subject to" && vb(a)_i^TT vb(x) >= b_i quad &  "for" i in M_1 \
+    &              && vb(a)_i^TT vb(x) <= b_i quad &  "for" i in M_2 \
+    &              && vb(a)_i^TT vb(x) = b_i quad  &  "for" i in M_3 \
     &              && x_j >= 0 quad                    &  "for" j in N_1 \
     &              && x_j <= 0 quad                    &  "for" j in N_2 \
     &              && x_j "is not constrained" quad    & "for" j in N_3.
   $ <problem-linear-program>
-  we will denote $m = abs(M_1) + abs(M_2) + abs(M_3)$ and $n = abs(N_1) + abs(N_2) + abs(N_3)$.
+  We will denote $m = abs(M_1) + abs(M_2) + abs(M_3)$ and $n = abs(N_1) + abs(N_2) + abs(N_3)$.
 ]
 #set math.equation(numbering: none)
 
 Note that we can write
 $
-  matbold(A) = mat(—, vb(a_1)^TT, —; —, vb(a_2)^TT, —; , dots.v, ; —, vb(a_m)^TT, —) .
+  matbold(A) = mat(—, vb(a)_1^TT, —; —, vb(a)_2^TT, —; , dots.v, ; —, vb(a)_m^TT, —) .
 $
 
 #theorem[
@@ -32,27 +33,27 @@ $
     & "subject to" && lambda_i >= 0                & "for" i in M_1, \
     &              && lambda_i <= 0                & "for" i in M_2, \
     &              && lambda_i in RR               & "for" i in M_3, \
-    &              && vb(lambda)^TT vb(A_j) <= c_j & "for" j in N_1, \
-    &              && vb(lambda)^TT vb(A_j) >= c_j & "for" j in N_2, \
-    &              && vb(lambda)^TT vb(A_j) = c_j  & "for" j in N_3.
+    &              && vb(lambda)^TT vb(A)_j <= c_j & "for" j in N_1, \
+    &              && vb(lambda)^TT vb(A)_j >= c_j & "for" j in N_2, \
+    &              && vb(lambda)^TT vb(A)_j = c_j  & "for" j in N_3.
   $
 ]
 
 #proof[
-  Adding slack variables, the lagrangian is given by
+  Adding slack variables, the Lagrangian is given by
   $
-    lagr(vb(x), vb(s), vb(lambda)) &= vb(c)^TT vb(x) - sum_(i in M_1) lambda_i (vb(a_i)^TT vb(x) - b_i - s_i) - sum_(i in M_2) lambda_i (vb(a_i)^TT vb(x) - b_i + s_i) - sum_(i in M_3) lambda_i (vb(a_i)^TT vb(x) - b_i)\
-    &=sum_(j in N_1) (c_j - vb(lambda)^TT vb(A_j)) x_j + sum_(j in N_2) (c_j - vb(lambda)^TT vb(A_j)) x_j + sum_(j in N_3) (c_j - vb(lambda)^TT vb(A_j)) x_j + sum_(i in M_1) lambda_i s_i- sum_(i in M_2) lambda_i s_i + sum_(i) lambda_i b_i
+    lagr(vb(x), vb(s), vb(lambda)) &= vb(c)^TT vb(x) - sum_(i in M_1) lambda_i (vb(a)_i^TT vb(x) - b_i - s_i) - sum_(i in M_2) lambda_i (vb(a)_i^TT vb(x) - b_i + s_i) - sum_(i in M_3) lambda_i (vb(a)_i^TT vb(x) - b_i)\
+    &=sum_(j in N_1) (c_j - vb(lambda)^TT vb(A)_j) x_j + sum_(j in N_2) (c_j - vb(lambda)^TT vb(A)_j) x_j + sum_(j in N_3) (c_j - vb(lambda)^TT vb(A)_j) x_j + sum_(i in M_1) lambda_i s_i- sum_(i in M_2) lambda_i s_i + sum_(i) lambda_i b_i
   $
-  where $vb(A_j)$ is the $j$-th column of $matbold(A)$. For the lagrangian to be bounded below, we must have
+  where $vb(A)_j$ is the $j$-th column of $matbold(A)$. For the Lagrangian to be bounded below, we must have
   $
     Lambda = {vb(lambda) in RR^m:
     lambda_i >= 0                & "for" i in M_1, \
                    lambda_i <= 0 & "for" i in M_2, \
                   lambda_i in RR & "for" i in M_3, \
-    vb(lambda)^TT vb(A_j) <= c_j & "for" j in N_1, \
-    vb(lambda)^TT vb(A_j) >= c_j & "for" j in N_2, \
-     vb(lambda)^TT vb(A_j) = c_j & "for" j in N_3
+    vb(lambda)^TT vb(A)_j <= c_j & "for" j in N_1, \
+    vb(lambda)^TT vb(A)_j >= c_j & "for" j in N_2, \
+     vb(lambda)^TT vb(A)_j = c_j & "for" j in N_3
                                    }
   $
   Note that if $vb(lambda) in Lambda$, then
@@ -67,14 +68,14 @@ $
 #theorem[Optimality Conditions for Linear Programming][
   Let $vb(x)$ and $vb(lambda)$ be feasible solutions to @problem-linear-program[Problem] and its dual. Then these are optimal iff
   $
-    lambda_i (vb(a_i)^TT vb(x) - b_i) & = 0 quad "for all" i, \
-    (c_j - vb(lambda)^TT vb(A_j)) x_j & = 0 quad "for all" j.
+    lambda_i (vb(a)_i^TT vb(x) - b_i) & = 0 quad "for all" i, \
+    (c_j - vb(lambda)^TT vb(A)_j) x_j & = 0 quad "for all" j.
   $
 
 ] <thm-optimality-conditions-for-linear-programming>
 
 #proof[
-  Define $u_i = lambda_i (vb(a_i)^TT vb(x) - b_i)$ and $v_j = (c_j - vb(lambda)^TT vb(A_j)) x_j$. Since $vb(x)$ and $vb(lambda)$ are primal and dual feasible respectively, we have $u_i >= 0$ and $v_j >= 0$. Adding up,
+  Define $u_i = lambda_i (vb(a)_i^TT vb(x) - b_i)$ and $v_j = (c_j - vb(lambda)^TT vb(A)_j) x_j$. Since $vb(x)$ and $vb(lambda)$ are primal and dual feasible respectively, we have $u_i >= 0$ and $v_j >= 0$. Adding up,
   $
     sum_i u_i & = vb(lambda)^TT matbold(A) vb(x) - vb(lambda)^TT vb(b), \
     sum_j v_j & = vb(c)^TT vb(x) - vb(lambda)^TT matbold(A) vb(x).
@@ -83,7 +84,7 @@ $
   $
     sum_i u_i + sum_j v_j = vb(c)^TT vb(x) - vb(lambda)^TT vb(b).
   $
-  By @theorem-weak-duality[Weak Duality Theorem], we have $vb(c)^TT vb(x) >= vb(lambda)^TT vb(b)$. Since $vb(c)^TT vb(x) = vb(lambda)^TT vb(b)$ if and only if $vb(x)$ and $vb(lambda)$ are optimal, we have the desired result:
+  By @theorem-weak-duality[Weak Duality Theorem], we have $vb(c)^TT vb(x) >= vb(lambda)^TT vb(b)$. Since linear programs that are feasible and bounded satisfy strong duality, $vb(c)^TT vb(x) = vb(lambda)^TT vb(b)$ if and only if $vb(x)$ and $vb(lambda)$ are optimal, and we have the desired result:
 
   #fade[[$=>$]] If $vb(c)^TT vb(x) = vb(lambda)^TT vb(b)$, then $sum_i u_i + sum_j v_j = 0$. Since $u_i, v_j >= 0$, we must have $u_i = v_j = 0$ for all $i, j$.
 
@@ -130,18 +131,18 @@ Note that minimising $vb(c)^TT vb(x)$ is the same as maximising $-vb(c)^TT vb(x)
 ]
 
 #proposition[
-  The maximum of a convex function $f$ on a convex set $C$ occurs at an extreme point of $C$.
+  Let $C$ be a polytope, so that every point of $C$ is a convex combination of the finitely many extreme points $vb(v)_1, ..., vb(v)_k$ of $C$. Then the maximum of a convex function $f$ on $C$ occurs at an extreme point of $C$.
 ]
 
 #proof[
-  Suppose $vb(x)$ is not an extreme point of $C$. Then there exist $vb(y), vb(z) in C$ and $delta in (0, 1)$ such that $vb(x) = delta vb(y) + (1 - delta) vb(z)$. Since $f$ is convex, we have
+  Let $vb(x) in C$ and write $vb(x) = delta_1 vb(v)_1 + dots.c + delta_k vb(v)_k$ with $delta_i >= 0$ and $delta_1 + dots.c + delta_k = 1$. Since $f$ is convex, we have
   $
-    f(vb(x)) = f(delta vb(y) + (1 - delta) vb(z)) <= delta f(vb(y)) + (1 - delta) f(vb(z)) <= max(f(vb(y)), f(vb(z))).
+    f(vb(x)) = f(delta_1 vb(v)_1 + dots.c + delta_k vb(v)_k) <= delta_1 f(vb(v)_1) + dots.c + delta_k f(vb(v)_k) <= max_i f(vb(v)_i).
   $
-  So $f(vb(x))$ is not the maximum of $f$ on $C$.
+  So no point of $C$ gives a larger value of $f$ than the best extreme point.
 ]
 
-In linear programs, the constraint set is always a polytope. Hence, all we need to do is check the extreme points of the polytope to find the maximum of a convex function over it.
+In linear programs, the constraint set is always a polyhedron, which is a polytope when it is bounded. Hence, for a bounded constraint set, all we need to do is check the extreme points of the polytope to find the maximum of a convex function over it.
 
 #lecture-separator(lecture: 7, date: "2026-05-15")
 
@@ -223,17 +224,17 @@ If $matbold(B)^(-1)vb(b) >= 0$, then that basis gives a basic feasible solution.
   $
     x_i = (1-delta) y_i + delta z_i,
   $
-  we must have $y_i = z_i = 0$ since $vb(y), vb(z) >= 0$. Hence, $vb(y)$ and $vb(z)$ also have at most $m$ non-zero entries. Since $vb(x)$ is a basic feasible solution, we must have $vb(x) = vb(y) = vb(z)$. #fade[[Basic feasible solutions are unique, since the basis matrix is invertible.]] Hence, $vb(x)$ is an extreme point.
+  we must have $y_i = z_i = 0$ since $vb(y), vb(z) >= 0$. Hence, $vb(y)$ and $vb(z)$ also have at most $m$ non-zero entries. Since $vb(x)$ is a basic feasible solution, we must have $vb(x) = vb(y) = vb(z)$. #fade[[The basic solution for a given basis is unique, since the basis matrix is invertible.]] Hence, $vb(x)$ is an extreme point.
 
-  #fade[[$arrow.double.l$]] We will prove the contrapositive. Suppose $vb(x)$ is not a basic feasible solution. If $vb(x) in.not cal(X)vb(b)$, then $vb(x)$ is not an extreme point. Hence instead assume $vb(x) in cal(X)(vb(b))$.
+  #fade[[$arrow.double.l$]] We will prove the contrapositive. Suppose $vb(x)$ is not a basic feasible solution. If $vb(x) in.not cal(X)(vb(b))$, then $vb(x)$ is not an extreme point. Hence instead assume $vb(x) in cal(X)(vb(b))$.
 
   Because $vb(x)$ is not a basic feasible solution, it must have $r > m$ positive entries. Suppose $x_(i_1), ..., x_(i_r) > 0$. The columns $vb(A)_(i_1), ..., vb(A)_(i_r)$ are linearly dependent, since $r > m$.
 
-  Hence, there exists $w_(i_1), ..., w_(i_r)$ such that
+  Hence, there exist $w_(i_1), ..., w_(i_r)$, not all zero, such that
   $
-    sum_(i=1)^r w_(i) vb(A)_(i) = 0.
+    sum_(k=1)^r w_(i_k) vb(A)_(i_k) = vb(0).
   $
-  Construct a vector $vb(w)$ such that $vb(w)$ is 0 everywhere except at locations $i_1, ..., i_r$, where $w(i_1) = w_(i_1), ... w(i_r) = w_(i_r)$. Now observe that $matbold(A)vb(w) = vb(0)$.
+  Construct a vector $vb(w)$ whose $i_k$-th entry is $w_(i_k)$ for $k = 1, ..., r$ and whose other entries are $0$. Now observe that $matbold(A)vb(w) = vb(0)$.
 
   Consider two new points
   $
@@ -288,7 +289,7 @@ Thus, if $matbold(A)^TT ((matbold(B)^TT)^(-1) vb(c)_B) <= vb(c)$, then $vb(lambd
 #definition[Reduced Cost][
   The vector of *reduced costs* $overline(vb(c))$ is defined as
   $
-    overline(vb(c))^TT = vb(c)^TT - vb(c_B)^TT matbold(B)^(-1) matbold(A).
+    overline(vb(c))^TT = vb(c)^TT - vb(c)_B^TT matbold(B)^(-1) matbold(A).
   $
 ]
 
@@ -298,7 +299,7 @@ If for a basic feasible solution $vb(x)$, we have $overline(vb(c)) >= vb(0)$, th
 
 Now, suppose $vb(x) = vecrow(x_B(1), x_B(2), ..., x_B(m), 0, ..., 0)^TT$ is a basic feasible solution. Suppose there is some $j^*$ such that $overline(c_(j^*)) < 0$. We want to now choose a direction to perturb our $vb(x)$.
 
-Suppose we choose some $j in.not {B(1), ..., B(m)}$ and we make $x_j > 0$, while keeping all non-basic $x_i = 0$, _i.e._ consider
+Suppose we choose some $j in.not {B(1), ..., B(m)}$ and we make $x_j > 0$, while keeping all other non-basic $x_i = 0$, _i.e._ consider
 $
   (x_B(1), dots.c, x_B(m), 0, dots.c, underbracket(0, j), 0, dots.c, 0) + t (d_B(1), dots.c, d_B(m), 0, dots.c, underbracket(1, j), 0, dots.c, 0).
 $
@@ -317,22 +318,22 @@ $
 
 Now, consider the cost $vb(c)^TT vb(x)$ at $vb(x) + t (vb(d)_B, dots.c, 1, dots.c, 0)$.
 $
-  vb(c)^TT (vb(x) + t vec(vb(d_B), dots.v, 1, dots.v, 0)) &= underbracket(vb(c)^TT vb(x), "old cost") + underbracket(t (vb(c)_B^TT vb(d)_B + c_j), "change of cost")\
+  vb(c)^TT (vb(x) + t vec(vb(d)_B, dots.v, 1, dots.v, 0)) &= underbracket(vb(c)^TT vb(x), "old cost") + underbracket(t (vb(c)_B^TT vb(d)_B + c_j), "change of cost")\
   &= vb(c)^TT vb(x) + t(c_j - vb(c)_B^TT matbold(B)^(-1) vb(A)_j)\
   &= vb(c)^TT vb(x) + t overline(c_j).
 $
 
-Note that since our $vb(x)$ is suboptimal, we have some $vb(j)^*$ such that $overline(c_(j^*)) < 0$. Hence we can choose $j = j^*$ and use that direction to reduce our cost.
+Note that since our $vb(x)$ is suboptimal, we have some $j^*$ such that $overline(c_(j^*)) < 0$. Hence we can choose $j = j^*$ and use that direction to reduce our cost.
 
 The only problem left is to determine a largest $t$ that we do not leave the feasible set.  We require
 $
-  x_B(i) + t d_B(i) >= 0 <=> t <= -x_B(i)/(d_B(i)),
+  x_B(i) + t d_B(i) >= 0 <=> t <= -x_B(i)/(d_B(i)) quad "when" d_B(i) < 0,
 $
 and noting that only those $B(i)$ where $d_B(i)<0$ can cause problems. Therefore, we can find the smallest positive number among
 $
   - (x_B(1))/(d_B(1)), dots.c, -x_B(m)/(d_B(m))
 $
-to be our $t$. Let it be $t^*$. Let $vb(d) = vecrow(vb(d_B), dots.c, 1, dots.c, 0)^TT$. Then
+to be our $t$. Let it be $t^*$. Let $vb(d) = vecrow(vb(d)_B, dots.c, 1, dots.c, 0)^TT$. Then
 $
   vb(y) = vb(x) + t^* vb(d).
 $
@@ -344,7 +345,7 @@ $
 #proof[
   Note that we already have $matbold(A) vb(y) = vb(b)$ and $vb(y) >= vb(0)$.
 
-  In the $j^*$-th entry, we introduce an additional non-zero entry. However, since we chose $t^*$ to be maximum possible, exactly one among $y_B(1), ..., y_B(m)$ has become zero. Thus, $vb(y)$ has exactly $m$ non-zero entries, so $vb(y)$ is also a basic feasible solution.
+  In the $j^*$-th entry, we introduce an additional non-zero entry. However, since we chose $t^*$ to be maximum possible, at least one among $y_B(1), ..., y_B(m)$ has become zero. Thus, $vb(y)$ has at most $m$ non-zero entries, so $vb(y)$ is also a basic feasible solution #fade[[and by non-degeneracy exactly one has become zero]].
 ]
 
 The actual algorithm of the simplex method is based on a tableau representation of the linear program, called the *simplex tableau*, given by
@@ -352,7 +353,7 @@ $
   mat(
     delim: "[",
     augment: #(hline: 1, vline: 1),
-    -vb(c)_B^TT vb(x)_B, overline(c_1), overline(c_2), dots.c, overline(vb(c)_n);
+    -vb(c)_B^TT vb(x)_B, overline(c_1), overline(c_2), dots.c, overline(c_n);
     x_B(1), bar, bar, dots.c, bar;
     dots.v, matbold(B)^(-1)vb(A)_1, matbold(B)^(-1)vb(A)_2, dots.c, matbold(B)^(-1)vb(A)_n;
     x_B(m), bar, bar, dots.c, bar;
@@ -401,9 +402,9 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
       ).
     $
 
-  3. Calculate the reduced costs with $vb(c_B) = vecrow(0, 0, 0)^TT$:
+  3. Calculate the reduced costs with $vb(c)_B = vecrow(0, 0, 0)^TT$:
     $
-      overline(vb(c)) = vb(c) - (matbold(B)^(-1) matbold(A))^TT vb(c_B) = vecrow(-1, -1, -1, 0, 0, 0).
+      overline(vb(c)) = vb(c) - (matbold(B)^(-1) matbold(A))^TT vb(c)_B = vecrow(-1, -1, -1, 0, 0, 0)^TT.
     $
 
   4. Calculate the initial cost $vb(c)^TT vb(x) = 0$.
@@ -509,7 +510,7 @@ Recall that $matbold(B)^(-1) vb(A)_j = -vb(d)_B$ for the entering column $j$, if
       mat(
         delim: "[",
         augment: #(hline: 1, vline: 1),
-        20 slash 3, 0, 0, 1 slash 3, 1 slash 3, 1 slash 3, 1;
+        20 slash 3, 0, 0, 1 slash 3, 1 slash 3, 1 slash 3, 0;
         fade(x_2) thick 10 slash 3, 0, 1, 2 slash 3, 2 slash 3, -1 slash 3, 0;
         fade(x_1) thick 10 slash 3, 1, 0, 2 slash 3, -1 slash 3, 2 slash 3, 0;
         fade(x_6) thick 20 slash 3, 0, 0, -5 slash 3, -2 slash 3, -2 slash 3, 1

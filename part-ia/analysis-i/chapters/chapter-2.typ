@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 = Continuity of Functions
 

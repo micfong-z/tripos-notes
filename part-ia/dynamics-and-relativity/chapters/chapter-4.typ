@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 = Systems of Particles
 
@@ -165,7 +166,7 @@ Note that
 $
   mu vb(dot.double(r)) & = mu (vb(dot.double(x)_1) - vb(dot.double(x)_2)) \
                          & = mu (vb(F_(12))/m_1 - vb(F_(21))/m_2) \
-                         & = mu ((1)/(m_1) + (1)/(m_2)) vb(F_(12)) quad "since" vb(F_(12)) = -vb(F_(21)) \
+                         & = mu ((1)/(m_1) + (1)/(m_2)) vb(F_(12)) #eq-note[since $vb(F_(12)) = -vb(F_(21))$] \
                          & = vb(F_(12)) \
 $
 
@@ -180,7 +181,7 @@ In general, for $N > 2$, we cannot solve the problem analytically. However, if $
 The relation $vb(dot(P)) = vb(F)^"ext"$ is useful when the internal forces are complicated. For example, consider a rocket that ejects fuel with speed $u$ relative to the rocket.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e23.svg", width: 24em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e23.svg", width: 24em)
 ]
 
 We shall work in the $z$-axis, since the rocket moves in a straight line.

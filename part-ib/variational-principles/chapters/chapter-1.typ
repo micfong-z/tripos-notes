@@ -1,9 +1,9 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(1)
 
 #lecture-separator(lecture: 1, date: "2026-05-01")
 
-A motivational problem for this course is: how do we find the shortest point between two points,
+A motivational problem for this course is: how do we find the shortest path between two points,
 
 1. in Euclidean space?
 2. on the surface of a sphere?
@@ -19,17 +19,17 @@ We will develop the tools to determine minima and maxima of functionals in this 
 
 = Calculus on $RR^n$
 
-Consider $f: RR^n -> RR$. Write $(x_1, ..., x_n) in RR^n$ as $vb(x)$. Assuming that $f$ is sufficiently differentiable (at least $C^2$, #fade[_i.e._ twice continuously differentiable]), then a point $vb(a) in RR^n$ is a *stationary point* of $f$ iff $(grad f) (vb(a)) = vb(0)$.
+Consider $f: RR^n -> RR$. Write $(x_1, ..., x_n) in RR^n$ as $vb(x)$. Assuming that $f$ is sufficiently differentiable (at least $C^3$, #fade[_i.e._ three times continuously differentiable]), then a point $vb(a) in RR^n$ is a *stationary point* of $f$ iff $(grad f) (vb(a)) = vb(0)$.
 
 The Taylor expansion of $f$ around such $vb(a)$ is
 $
-  f(vb(x)) = f(vb(a)) + 1/2 (vb(x) - vb(a))^T hess f(vb(a)) (vb(x) - vb(a)) + Order(abs(vb(x) - vb(a))^3),
+  f(vb(x)) = f(vb(a)) + 1/2 (vb(x) - vb(a))^TT hess f(vb(a)) (vb(x) - vb(a)) + Order(abs(vb(x) - vb(a))^3),
 $
 where the Hessian matrix $hess f$ is the matrix of second derivatives of $f$:
 $
   H_(i j) = (hess f)_(i j) = pdv(f, x_i, x_j).
 $
-WLOG assume that $vb(a) = vb(0)$. Then
+WLOG assume that $vb(a) = vb(0)$. Then, using the summation convention (a repeated index is summed over),
 $
   f(vb(x)) - f(vb(0)) = (1)/(2) x_i H_(i j) x_j + Order(|vb(x)|^3).
 $
@@ -45,13 +45,13 @@ $
   f(vb(x)) - f(vb(0)) = (1)/(2) lambda_i x'^2_i + Order(|vb(x)|^3).
 $
 
-- If $lambda_i > 0$ for all $i$, then $f(vb(x)) > f(vb(0))$ for small enough $vb(x)$, so $vb(x) = vb(0)$ is a *local minimum*.
+- If $lambda_i > 0$ for all $i$, then $f(vb(x)) > f(vb(0))$ for small enough $vb(x) != vb(0)$, so $vb(x) = vb(0)$ is a *local minimum*.
 
 - If $lambda_i < 0$ for all $i$, then $vb(x) = vb(0)$ is a *local maximum*.
 
 - If $lambda_i$ have different signs, then $vb(x) = vb(0)$ is a *saddle point*.
 
-The remaining case (*degenerate* stationary point) is when some $lambda_i$ are zero. In this case, the second order term in the expansion does not give us any information, so the nature depends on $Order(|vb(x)|^3)$ terms.
+The remaining case (*degenerate* stationary point) is when some $lambda_i$ are zero. In this case, the second order term alone may not decide the nature of the stationary point, and we need to look at the $Order(|vb(x)|^3)$ terms.
 
 In the $n=2$ case, we have $det matbold(H) = lambda_1 lambda_2$ and $tr matbold(H) = lambda_1 + lambda_2$. So
 
@@ -85,8 +85,8 @@ In the $n=2$ case, we have $det matbold(H) = lambda_1 lambda_2$ and $tr matbold(
 
   At $(0, 0)$, $det matbold(H) < 0$, so it is a saddle point. The eigenvalues and eigenvectors are
 
-  - $lambda_1 = -3, vb(e_1) = vecrow(1, 1)$
-  - $lambda_2 = 3, vb(e_2) = vecrow(1, -1)$
+  - $lambda_1 = -3, vb(e)_1 = vec(1, 1)$
+  - $lambda_2 = 3, vb(e)_2 = vec(1, -1)$
 
   Therefore $(0, 0)$ is a local maximum along $y=x$ and a local minimum along $y=-x$.
 

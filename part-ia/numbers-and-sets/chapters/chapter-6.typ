@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(6)
 
 = #ponder("set-theory.countable-set")[Countability]
 

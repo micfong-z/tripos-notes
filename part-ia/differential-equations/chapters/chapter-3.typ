@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 = Partial Differentiation
 
@@ -15,7 +16,7 @@ We shall now generalize to functions of more than one independent variables, whi
 A way of representing these functions is using a *contour plot*.
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/dxe1.svg", width: 20em)
+  #dynamic-svg2("/part-ia/differential-equations/media/dxe1.svg", width: 20em)
 ]
 
 The slope of a point $A$ on the plot depends on the direction. Firstly, let us consider what happens along the coodinate directions.
@@ -88,7 +89,7 @@ Give path $x(t), y(t)$ and a function $f(x, y)$, consider $dv(f, t)$ along the p
   Consider the two brackets separately. Then, as $delta x, delta y -> 0$,
 
   $
-                        f(x + delta x, y) - f(x, y) & = f_x (x, y) delta x + order(delta x), quad "by Taylor's theorem" \
+                        f(x + delta x, y) - f(x, y) & = f_x (x, y) delta x + order(delta x), #eq-note[by Taylor's theorem] \
     f(x + delta x, y + delta y) - f(x + delta x, y) & = f_y (x + delta x, y) delta y + order(delta y). \
   $
 
@@ -187,7 +188,7 @@ However, we can still evaluate #ponder("calculus.derivative")[derivatives] like 
   Therefore, we can't vary $x, y, z$ independently and stay on the surface.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d3e1.svg", width: 28em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d3e1.svg", width: 28em)
   ]
 
   Thus (be aware that $z$ is not fixed),

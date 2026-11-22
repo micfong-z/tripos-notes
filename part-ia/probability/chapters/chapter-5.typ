@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(5)
 
 = Convergence Results and Limit Theorems
 
@@ -37,7 +38,7 @@
   We have
   $
     PP(abs(S_(n)/(n) - mu) > epsilon) & = PP(abs(S_n - n mu) > n epsilon) \
-                                      & <= EE[abs(S_n - n mu)^2]/(n^2 epsilon^2) quad "by Chebyshev's" \
+                                      & <= EE[abs(S_n - n mu)^2]/(n^2 epsilon^2) #eq-note[by Chebyshev's] \
                                       & = "Var"(S_n)/(n^2 epsilon^2) \.
   $
   By definition, we have $"Var"(S_n) = n sigma^2$. So

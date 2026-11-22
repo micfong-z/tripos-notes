@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(11)
 
 #lecture-separator(lecture: 11, date: "2026-05-25")
 
@@ -7,7 +7,7 @@
 
 For a function $f$,
 $
-  f(vb(x) + epsilon vb(xi)) &= epsilon vb(xi) dot grad f(vb(x)) + (epsilon^2)/(2) xi_i xi_j (hess f(vb(x)))_(i j) + Order(epsilon^3). \
+  f(vb(x) + epsilon vb(xi)) &= f(vb(x)) + epsilon vb(xi) dot grad f(vb(x)) + (epsilon^2)/(2) xi_i xi_j (hess f(vb(x)))_(i j) + Order(epsilon^3). \
 $
 
 So a stationary point $vb(x) = vb(a)$ is a local minimum if $hess f(vb(a))$ is positive definite, _i.e._ $xi_i xi_j (hess f(vb(a)))_(i j) > 0$ for all $vb(xi) != vb(0)$. Equivalently, all eigenvalues of $hess f(vb(a))$ are positive.
@@ -25,26 +25,26 @@ $
 $ <eq-11-1>
 #set math.equation(numbering: none)
 
-For small $epsilon$, taylor expansion gives
+For small $epsilon$, Taylor expansion gives
 $
   f(y + epsilon xi, y' + epsilon xi', x) &= f(y, y', x) + epsilon xi (pdv(f, y) - dv(, x) pdv(f, y')) + epsilon dv(, x) (xi pdv(f, y')) + (1)/(2) epsilon^2 (xi^2 pdv(f, y, 2) + 2 xi xi' pdv(f, y, y') + (xi')^2 pdv(f, y', 2)) + Order(epsilon^3) \
 $
 Hence, plugging this into $F[y + epsilon xi]$ gives #fade[[boundary terms vanish by @eq-11-1]]
 $
-  F[y + epsilon xi] - F[y] = epsilon integral_(alpha)^(beta) xi(x) pdv(F[y], y(x), d: delta) dif x + epsilon delta^2 F[y, xi] + Order(epsilon^3)
+  F[y + epsilon xi] - F[y] = epsilon integral_(alpha)^(beta) xi(x) pdv(F[y], y(x), d: delta) dif x + epsilon^2 delta^2 F[y, xi] + Order(epsilon^3)
 $
 where
 #set math.equation(numbering: "(1)")
 $
   delta^2 F[y, xi] &:= (1)/(2) integral_(alpha)^(beta) (xi^2 pdv(f, y, 2) + underbracket(2 xi xi', = (xi^2)') pdv(f, y, y') + (xi')^2 pdv(f, y', 2)) dif x\
-  &= (1)/(2) integral_(alpha)^(beta) (xi^2 (pdv(f, y, 2) - dv(, x) pdv(f, y, y')) + (xi')^2 pdv(f, y', 2)) dif x quad "integration by parts"
+  &= (1)/(2) integral_(alpha)^(beta) (xi^2 (pdv(f, y, 2) - dv(, x) pdv(f, y, y')) + (xi')^2 pdv(f, y', 2)) dif x #eq-note[integration by parts]
 $ <eq-11-2>
 #set math.equation(numbering: none)
 
 Recall that if $hess f(vb(x))$ is positive definite for all $vb(x)$, then $f(vb(x))$ is convex, so any stationary point is guaranteed to be a local minimum. We have a similar result for functionals.
 
 #proposition[
-  If $delta^2 F[y, xi] > 0$ for all $y in cal(C)$ and all _allowed_ $xi$, then $y = y_0$ is a global minimum of $F$ in $cal(C)$ if $y_0 in cal(C)$ satisfies the Euler-Lagrange equation.
+  If $delta^2 F[y, xi] >= 0$ for all $y in cal(C)$ and all _allowed_ $xi$, then $y = y_0$ is a global minimum of $F$ in $cal(C)$ if $y_0 in cal(C)$ satisfies the Euler-Lagrange equation.
 
   #fade[[$xi(x)$ is _allowed_ if $xi$ is $C^2$ and obeys the boundary conditions in @eq-11-1. Note that $cal(C)$ is indeed convex (as required by the definition of convexity), since if $y_1, y_2 in cal(C)$, then $y = t y_1 + (1 - t) y_2 in cal(C)$ for all $t in [0, 1]$.]]
 ]
@@ -66,9 +66,9 @@ Recall that if $hess f(vb(x))$ is positive definite for all $vb(x)$, then $f(vb(
 ]
 
 #proposition[
-  If $y_0 in cal(C)$ satisfies the Euler-Lagrange equation, then $y_0$ is a local minimum of $F$ if $delta^2 F[y, xi] > 0$ for all non-trivial allowed $xi(x)$.
+  If $y_0 in cal(C)$ satisfies the Euler-Lagrange equation, then $y_0$ is a local minimum of $F$ if $delta^2 F[y_0, xi] > 0$ for all non-trivial allowed $xi(x)$.
 
-  Conversely, we can say that $y_0$ is not a local minimum if there exists some allowed $xi(x)$ such that $delta^2 F[y, xi] < 0$. #fade[[This is analogous to the case of functions, where a stationary point is not a local minimum if there exists a negative eigenvalue of the Hessian.]]
+  Conversely, we can say that $y_0$ is not a local minimum if there exists some allowed $xi(x)$ such that $delta^2 F[y_0, xi] < 0$. #fade[[This is analogous to the case of functions, where a stationary point is not a local minimum if there exists a negative eigenvalue of the Hessian.]]
 ]
 
 #example[Geodesics on a Sphere][
@@ -87,7 +87,7 @@ Recall that if $hess f(vb(x))$ is positive definite for all $vb(x)$, then $f(vb(
 ]
 
 #proposition[Legendre Condition][
-  If $y in cal(C)$ satisfies the Euler-Lagrange equation, then a necessary condition for it to be a local minimum is that
+  If $y_0 in cal(C)$ satisfies the Euler-Lagrange equation, then a necessary condition for it to be a local minimum is that
   #set math.equation(numbering: "(1)")
   $
     eval(pdv(f, y', 2))_(y = y_0)>= 0 quad forall x in [alpha, beta].
@@ -140,7 +140,7 @@ Recall that if $hess f(vb(x))$ is positive definite for all $vb(x)$, then $f(vb(
 #example[Brachistochrone Problem][
   Consider the time functional
   $
-    T = integral_0^(x_b) f dif x, quad "where" f = sqrt((1 + (y')^2)/(- y)).
+    T = integral_0^(x_B) f dif x, quad "where" f = sqrt((1 + (y')^2)/(- y)).
   $
 
   #fade[[Adding condition $y < 0$ to the definition of $cal(C)$ here.]]
@@ -159,10 +159,10 @@ Recall that if $hess f(vb(x))$ is positive definite for all $vb(x)$, then $f(vb(
   $
   Then
   $
-    sigma & = pdv(f, y^2) - dv(, x) ((1)/(-2y) pdv(f, y')) \
-          & = pdv(f, y, 2)- y'/(2y^2) pdv(f, y') + (1)/(2y) + underbracket((1)/(2y) pdv(f, y), "By E-L eqn.") \
+    sigma & = pdv(f, y, 2) - dv(, x) ((1)/(-2y) pdv(f, y')) \
+          & = pdv(f, y, 2)- y'/(2y^2) pdv(f, y') + underbracket((1)/(2y) pdv(f, y), "by Euler-Lagrange") \
           & = (3f)/(4y^2) - (y')^2/(2y^2 sqrt((-y)(1+(y')^2))) - (f)/(4y^2) \
-          & =(1)/(2 sqrt((-y)(1+(y')^2))) >0.
+          & =(1)/(2 y^2 sqrt((-y)(1+(y')^2))) >0.
   $
   Therefore, the cycloid is indeed a local minimum of the time functional $T$.
 ]
@@ -175,7 +175,7 @@ $
 $ <eq-11-5>
 #set math.equation(numbering: none)
 
-where $cal(L) xi := - dv(, x)(rho dv(, x)) + sigma xi$ is a linear differential operator.
+where $cal(L) := - dv(, x)(rho dv(, x)) + sigma$ is the linear differential operator of @sec-sturm-liouville.
 
 #proposition[
   Consider the Sturm-Liouville problem
@@ -207,29 +207,29 @@ We may wonder if we can say something about the converse.
   If all the eigenvalues of the Sturm-Liouville problem in @eq-11-6 are positive, then $y_0$ is a local minimum of $F$.
 ]
 #proof[
-  #fade[[Non-examinable.]] Let $lambda_n$ be the $n$-th eigenvalue, and $y_n$ the $n$-th eigenfunction of @eq-11-6.
+  #fade[[Non-examinable.]] Let $lambda_n$ be the $n$-th eigenvalue, and $eta_n$ the $n$-th eigenfunction of @eq-11-6.
 
-  By IB Methods, the set of eigenfunctions $Set(y_n)$ for a complete set for the space of allowed $eta$. Thus, for any allowed $eta$,
+  By IB Methods, the set of eigenfunctions $Set(eta_n)$ forms a complete set for the space of allowed $xi$. Thus, for any allowed $xi$,
   $
-    eta(x) = sum_(i=1)^n a_i y_i (x) quad "for some" {a_i}.
+    xi(x) = sum_(n=1)^oo a_n eta_n (x) quad "for some" {a_n}.
   $
-  We can also choose ${y_n}$ to be orthogonal:
+  We can also choose ${eta_n}$ to be orthogonal:
   $
-    integral_(alpha)^(beta) w y_m y_n dif x = 0 quad "for" m != n.
+    integral_(alpha)^(beta) w eta_m eta_n dif x = 0 quad "for" m != n.
   $
   Hence,
   $
-    delta^2F[y_0, eta] &= sum_(m, n) a_m a_n lambda_n integral_(alpha)^(beta) w y_m y_n dif x\
-    &= (1)/(2) sum_m underbracket(lambda_m, >0) underbracket(a_m^2, >=0) underbracket(integral_(alpha)^(beta) w y_m^2 dif x, >0) >=0.
+    delta^2F[y_0, xi] &= (1)/(2) sum_(m, n) a_m a_n lambda_n integral_(alpha)^(beta) w eta_m eta_n dif x\
+    &= (1)/(2) sum_m underbracket(lambda_m, >0) underbracket(a_m^2, >=0) underbracket(integral_(alpha)^(beta) w eta_m^2 dif x, >0) >=0.
   $
 
-  Note that $delta^2 F[y_0, eta] = 0$ iff $a_m = 0$ for all $m$, which implies $eta equiv 0$. Hence $y_0$ is a local minimum of $F$.
+  Note that $delta^2 F[y_0, xi] = 0$ iff $a_m = 0$ for all $m$, which implies $xi equiv 0$. Hence $y_0$ is a local minimum of $F$.
 ]
 
 #example[
   Consider
   $
-    F[y] = (1)/(2)integral_0^a ((y')^2 -y^2) dif x, quad y(0) =y_0, y(a) = y_1.
+    F[y] = (1)/(2)integral_0^a ((y')^2 -y^2) dif x, quad y(0) = c_0, y(a) = c_1.
   $
   The Euler-Lagrange equation gives
   $

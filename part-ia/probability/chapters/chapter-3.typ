@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 = #ponder("probability.discrete-random-variable")[Discrete Random Variables]
 
@@ -215,7 +216,7 @@ Recall that two #ponder("probability.outcomes-and-events")[events] $A$ and $B$ a
   For (6), we have
   $
     EE[sum_n X_n] & = sum_(omega in Omega) (sum_n X_n (omega)) dot PP({omega}) \
-                  & = sum_n sum_(omega in Omega) X_n (omega) PP({omega}) quad "since all terms are non-negative" \
+                  & = sum_n sum_(omega in Omega) X_n (omega) PP({omega}) #eq-note[since all terms are non-negative] \
                   & = sum_n EE[X_n].
   $
 ]
@@ -572,7 +573,7 @@ $ PP(X_1 = x_1, ..., X_n = x_n) = PP(X_1 = x_1) dot ... dot PP(X_n = x_n). $
   Note that
   $
     PP(abs(X-EE[X]) >= a) & = PP(abs(X - EE[X])^2 >= a^2) \
-                          & <= (EE[(X - EE[X])^2]) / (a^2) quad "by Markov's" \
+                          & <= (EE[(X - EE[X])^2]) / (a^2) #eq-note[by Markov's] \
                           & = ("Var"(X)) / (a^2).
   $
 ]
@@ -878,7 +879,7 @@ We will define $EE[X mid(|) Y]$ as a #ponder("probability.random-variable")[rand
   Taking #ponder("probability.expectation")[expectation] on both sides gives
   $
     EE[EE[X mid(|) Y]] & = sum_y EE[X mid(|) Y=y] PP(Y=y) \
-                       & = EE[X] quad "by the law of total expectation".
+                       & = EE[X]. #eq-note[by the law of total expectation]
   $
 ]
 
@@ -894,7 +895,7 @@ We will define $EE[X mid(|) Y]$ as a #ponder("probability.random-variable")[rand
   $
     EE[X mid(|) Y] & = sum_y EE[X mid(|) Y=y] bb(1)(Y=y) \
                    & = sum_y bb(1)(Y=y) sum_x x PP(X=x| Y=y) \
-                   & = sum_y bb(1)(Y=y) sum_x x PP(X=x) quad "by independence" \
+                   & = sum_y bb(1)(Y=y) sum_x x PP(X=x) #eq-note[by independence] \
                    & = sum_y bb(1)(Y=y) EE[X] \
                    & = EE[X].
   $
@@ -924,7 +925,7 @@ We will define $EE[X mid(|) Y]$ as a #ponder("probability.random-variable")[rand
     We have
     $
       PP(g(Y)=w, Z=z) & = sum_(y in g^(-1)({w})) PP(Y=y, Z=z) \
-                      & = sum_(y in g^(-1)({w})) PP(Y=y) PP(Z=z) quad "by independence" \
+                      & = sum_(y in g^(-1)({w})) PP(Y=y) PP(Z=z) #eq-note[by independence] \
                       & = PP(g(Y)=w) PP(Z=z).
     $
   ]
@@ -1277,7 +1278,7 @@ $
                          & = sum_(n=0)^oo EE[z^(X_1) z^(X_2) ... z^(X_n)] dot PP(N=n) \
                          & = sum_(n=0)^oo (EE[z^(X_1)])^n dot PP(N=n) \
                          & = sum_(n=0)^oo (p(z))^n dot PP(N=n) \
-                         & = q(p(z)) quad "by definition of PGF".
+                         & = q(p(z)). #eq-note[by definition of PGF]
     $
 
   / Proof 2: We have
@@ -1288,7 +1289,7 @@ $
     $
       EE[z^(S_N) mid(|) N](n) & = EE[z^(S_N) mid(|) N=n] \
                               & = EE[z^(S_n) mid(|) N=n] \
-                              & = EE[z^(S_n)] quad "by independence" \
+                              & = EE[z^(S_n)] #eq-note[by independence] \
                               & = (p(z))^n. \
     $
     Hence, we can write $EE[z^(S_N) mid(|) N] = (p(z))^N$. Taking expectation on both sides gives
@@ -1340,7 +1341,7 @@ We are interested in the probability of extinction.
   Note that
   $
     EE[X_(n+1) mid(|)X_n = m] & = EE[Y_(1, n) + ... + Y_(m, n) mid(|) X_n = m] \
-                              & = EE[Y_(1, n) + ... + Y_(m, n)] quad "by independence" \
+                              & = EE[Y_(1, n) + ... + Y_(m, n)] #eq-note[by independence] \
                               & = m EE[X_1].
   $
   Thus,
@@ -1370,7 +1371,7 @@ We are interested in the probability of extinction.
   Note that,
   $
     EE[z^(Y_(1, n) + ... + Y_(X_n, n)) mid(|) X_n = m] & = EE[z^(Y_(1, n) + ... + Y_(m, n)) ] \
-                                                       & = EE[z^(Y_(1, n))] ... EE[z^(Y_(m, n))] quad "by independence" \
+                                                       & = EE[z^(Y_(1, n))] ... EE[z^(Y_(m, n))] #eq-note[by independence] \
                                                        & = (G(z))^m. \
   $
   Hence,
@@ -1441,7 +1442,7 @@ So, in order to evaluate $q$, consider the following cases:
 Note that the relation $q=G(q)$ always has a solution at $q=1$, as shown in the following graphs:
 
 #align(center)[
-  #dynamic-svg("/part-ia/probability/media/d1e1.svg", width: 28em)
+  #dynamic-svg2("/part-ia/probability/media/d1e1.svg", width: 28em)
 ]
 
 Note that the gradient of the tangent at $x=1$ is $G'(1) = EE[X_1]$. Hence, the first two cases can be justified.

@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(1)
 
 #lecture-separator(lecture: 1, date: "2025-10-09")
 
@@ -83,20 +84,20 @@ We can also reach the following theorem, though we will not prove it here.
 For $z = x+ ii y in CC$, we can plot $z$ in a 2-dimensional plot.
 
 #align(center)[
-  #dynamic-svg("/part-ia/vectors-and-matrices/media/d1e1.svg", width: 18em)
+  #dynamic-svg2("/part-ia/vectors-and-matrices/media/d1e1.svg", width: 18em)
 ]
 
 We can therefore demonstrate some operations on the diagram.
 
 1. Addition and subtraction
 #align(center)[
-  #dynamic-svg("/part-ia/vectors-and-matrices/media/d1e2.svg", width: 22em)
+  #dynamic-svg2("/part-ia/vectors-and-matrices/media/d1e2.svg", width: 22em)
 ]
 
 
 2. Complex conjugates
 #align(center)[
-  #dynamic-svg("/part-ia/vectors-and-matrices/media/d1e3.svg", width: 14em)
+  #dynamic-svg2("/part-ia/vectors-and-matrices/media/d1e3.svg", width: 14em)
 ]
 
 This method immediately leads to some properties:

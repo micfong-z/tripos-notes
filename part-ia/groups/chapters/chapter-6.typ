@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(6)
 
 = #ponder("algebra.group-order")[Finite Groups]
 
@@ -51,9 +52,9 @@ Now, if $abs(G)=4$, we know that $C_4$ is always an option. But is there another
   For any $h_1, h'_1 in H_1$, $h_2, h'_2 in H_2$, by definition,
   $
     Phi(h_1, h_2) Phi(h'_1, h'_2) & = (h_1 h_2)(h'_1 h'_2) \
-                                  & = h_1 h'_1 h_2 h'_2 quad "by (2)" \
+                                  & = h_1 h'_1 h_2 h'_2 #eq-note[by (2)] \
                                   & = Phi(h_1 h'_1, h_2 h'_2) \
-                                  & = Phi((h_1, h_2)(h'_1, h'_2)) quad "as required."
+                                  & = Phi((h_1, h_2)(h'_1, h'_2)) #eq-note[as required.]
   $
 
   #boxed-header[$Phi$ is #ponder("algebra.homomorphism-bijectivity")[surjective]]

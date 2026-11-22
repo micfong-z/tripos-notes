@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(5)
 
 #lecture-separator(lecture: 21, date: "2026-03-12")
 

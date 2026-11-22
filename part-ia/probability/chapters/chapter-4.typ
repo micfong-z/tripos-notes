@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 = #ponder("probability.continuous-random-variable")[Continuous Random Variables]
 
@@ -37,8 +38,8 @@ Recall @def-probability-distribution-function[Definition of Probability Distribu
   For (2), we have
   $
     PP(a < X <= b) & = PP(X <= b, X > a) \
-                   & = PP(X <= b) - PP(X<=b, X<=a) & quad "by the law of total probability" \
-                   & = F(b) - PP(X<=a)             &                     quad "since" a < b \
+                   & = PP(X <= b) - PP(X<=b, X<=a) #eq-note[by the law of total probability] \
+                   & = F(b) - PP(X<=a) #eq-note[since $a < b$] \
                    & = F(b) - F(a).
   $
 
@@ -362,7 +363,7 @@ $
     EE[X] & = integral_(-oo)^(oo) x f(x) dif x \
     & = integral_(-oo)^(oo) (x-mu) 1/sqrt(2 ppi sigma^2) exp(- (x-mu)^(2)/(2sigma^2)) dif x + underbracket(integral_(-oo)^(oo) mu 1/sqrt(2 ppi sigma^2) exp(- (x-mu)^(2)/(2sigma^2)) dif x, mu integral_(-oo)^oo f(x) dif x = mu) \
     &= integral_(-oo)^(oo) u/sqrt(2 ppi sigma^2) exp(- u^(2)/(2sigma^2)) dif u + mu & quad "with" u = x - mu \
-    & = mu. &quad "the integrand is odd"
+    & = mu. #eq-note[the integrand is odd]
   $
   Hence, $EE[X] = mu$. Moreover,
   $
@@ -760,7 +761,7 @@ Hence, $Z_i ~ "Exp"((n - i + 1) lambda)$ and they are #ponder("probability.indep
     We have
     $
       I_n & = integral_0^oo f(x) dif x = integral_0^oo lambda ee^(-lambda x) (lambda^(n-1) x^(n-1))/((n-1)!) dif x \
-          & = [- ee^(-lambda x) (lambda^(n-1) x^(n-1))/((n-1)!)]_0^oo + integral_0^oo ee^(-lambda x) (lambda^(n-1) (n-1) x^(n-2))/((n-1)!) dif x & quad "integrating by parts" \
+          & = [- ee^(-lambda x) (lambda^(n-1) x^(n-1))/((n-1)!)]_0^oo + integral_0^oo ee^(-lambda x) (lambda^(n-1) (n-1) x^(n-2))/((n-1)!) dif x #eq-note[integrating by parts] \
           & = integral_0^oo lambda ee^(-lambda x) (lambda^(n-2) x^(n-2))/((n-2)!) dif x \
           & = I_(n-1) = ... = I_1 = integral_0^oo lambda ee^(-lambda x) dif x = 1.
     $

@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(4)
 
 = Constraints and Lagrange Multipliers
 
@@ -19,7 +19,7 @@ $
   & "subject to" && g = 0.
 $
 
-Recall from IA Vector Calculus that $grad g$ is normal to the surface $g(vb(x)) = 0$. It follows that
+Recall from IA Vector Calculus that $grad g$ is normal to the surface $g(vb(x)) = 0$ wherever $grad g != vb(0)$. Assuming $grad g(vb(x)_0) != vb(0)$, it follows that
 $
   grad f(vb(x)_0) = lambda grad g(vb(x)_0) quad "for some" lambda in RR.
 $
@@ -36,7 +36,7 @@ $
 $lambda$ is called a *Lagrange multiplier*.
 
 #example[
-  Consider an open cuboid box (with no top face) with base dimensions $x$ and $y$, and height $z$. We want determine $(x, y, z)$ that minimizes surface area $A$ for a fixed volume $V = (L^3)/(2)$. This can be written as
+  Consider an open cuboid box (with no top face) with base dimensions $x$ and $y$, and height $z$. We want to determine $(x, y, z)$ that minimises surface area $A$ for a fixed volume $V = (L^3)/(2)$. This can be written as
   $
     & "minimise"   && A = x y + 2x z + 2y z \
     & "subject to" && x y z = L^3/2.
@@ -54,15 +54,15 @@ $lambda$ is called a *Lagrange multiplier*.
     0 & = pdv(phi, z) = 2(x+y) - lambda x y                                              & => & lambda = (2(x+y))/(x y), \
     0 & = pdv(phi, x) = y + 2 z - lambda y z = 2 z +y - (2(x+y)z)/(x) = (y)/(x) (x - 2z) & => & x = 2z, \
     0 & = pdv(phi, y) = x + 2 z - lambda x z = 2 z +x - (2(x+y)z)/(y) = (x)/(y) (y - 2z) & => & y = 2z, \
-    0 & = pdv(phi, lambda) = x y z - L^3/2=4 z^3 - L^3/2                                 & => & z = L/2, x=y=L.
+    0 & = pdv(phi, lambda) = -(x y z - L^3/2) = -(4 z^3 - L^3/2)                                 & => & z = L/2, x=y=L.
   $
 ]
-The disadvantage of the Lagrange multiplier method is that we have no simple method of checking the nature of this stationary point. #fade[[This is because the Hessian of $phi$ w.r.t. $(x, y, z, lambda)$ is always a saddle point, since $pdv(phi, lambda, 2) = 0$.]]
+The disadvantage of the Lagrange multiplier method is that we have no simple method of checking the nature of this stationary point. #fade[[This is because a stationary point of $phi$ w.r.t. $(x, y, z, lambda)$ is always a saddle point of $phi$, since $pdv(phi, lambda, 2) = 0$ and $grad g != vb(0)$.]]
 
 Nevertheless, the Lagrange multiplier method is useful when the constraint is too complicated to solve explicitly. It is often still simpler even when the constraint can be solved explicitly.
 
 #example[
-  Consider the minimum of the quadratic form on $RR^n$ given by
+  Let $matbold(A)$ be a real symmetric $n times n$ matrix. Consider the minimum of the quadratic form on $RR^n$ given by
   $
     f(vb(x)) = x_i A_(i j) x_j
   $
@@ -77,7 +77,7 @@ Nevertheless, the Lagrange multiplier method is useful when the constraint is to
     0 & = pdv(phi, x_i)    & = & 2 A_(i j) x_j - 2 lambda x_i, \
     0 & = pdv(phi, lambda) & = & abs(vb(x))^2 - 1.
   $
-  Note that the first equation is equivalent to $matbold(A) vb(x) = lambda vb(x)$, _i.e._, $vb(x)$ is an eigenvector of $matbold(A)$ with eigenvalue $lambda$. Hence the stationary points of $f$ on the surface are the normalised eigenvectors of $matbold(A)$, and the value of $lambda$ are the eigenvalues of $matbold(A)$.
+  Note that the first equation is equivalent to $matbold(A) vb(x) = lambda vb(x)$, _i.e._, $vb(x)$ is an eigenvector of $matbold(A)$ with eigenvalue $lambda$. Hence the stationary points of $f$ on the surface are the normalised eigenvectors of $matbold(A)$, and the values of $lambda$ are the eigenvalues of $matbold(A)$.
 
   At a stationary point,
   $
@@ -122,8 +122,8 @@ Nevertheless, the Lagrange multiplier method is useful when the constraint is to
 
 #lecture-separator(lecture: 5, date: "2026-05-11")
 
-We can generalise this method to $m$ constraints $g_k (vb(x)) = 0$ for $k = 1, ..., m$. Then we just need to extremise
+We can generalise this method to $m$ constraints $g_k (vb(x)) = 0$ for $k = 1, ..., m$. Assuming $grad g_1, ..., grad g_m$ are linearly independent at the stationary point, we just need to extremise
 $
-  phi(vb(x), lambda_1, ..., lambda_m) = f(vb(x)) - sum_(k=1)^(m) lambda_k g_k(vb(x)).
+  phi(vb(x), lambda_1, ..., lambda_m) = f(vb(x)) - sum_(k=1)^(m) lambda_k g_k (vb(x))
 $
 w.r.t. $vb(x)$ and $lambda_1, ..., lambda_m$.

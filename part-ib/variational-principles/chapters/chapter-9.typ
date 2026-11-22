@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(9)
 
 = Symmetries and Noether's Theorem
 
@@ -41,7 +41,7 @@ $ <eq-9-3>
 #set math.equation(numbering: none)
 
 #theorem[Noether's Theorem, Version 1][
-  If there exists a one-parameter family of symmetry of symmetries of the action $vb(Q)(vb(q), dot(vb(q)), t; s)$, then any solution of the Euler-Lagrange equations has a conserved quantity (_i.e._ a first integral)
+  If there exists a one-parameter family of symmetries of the action $vb(Q)(vb(q), dot(vb(q)), t; s)$, then any solution of the Euler-Lagrange equations has a conserved quantity (_i.e._ a first integral)
   $
     sum_(i=1)^(3N) pdv(L, dot(q)_i) (eval(pdv(Q_i, s))_(s=0)) = "constant".
   $
@@ -52,8 +52,8 @@ $ <eq-9-3>
   For small $s$, substitute @eq-9-3 into @def-symmetry-of-action-v1:
   $
     0 &= integral_(t_A)^(t_B) [L(vb(q)(t) + s eval(pdv(vb(Q), s))_(s=0) + Order(s^2), dot(vb(q))(t) + s dv(, t) eval(pdv(vb(Q), s))_(s=0) + Order(s^2), t) - L(vb(q)(t), dot(vb(q))(t), t)] dif t\
-    &= integral_(t_A)^(t_B) [s eval(pdv(Q_i, s))_(s=0) pdv(L, q_i) + s dv(, t) (eval(pdv(Q_i, s))_(s=0) pdv(L, dot(q)_i)) + Order(s^2)] dif t quad ("with summation convention")\
-    &= integral_(t_A)^(t_B) [s eval(pdv(Q_i, s))_(s=0) underbracket((pdv(L, q_i) - dv(, t) pdv(L, dot(q)_i)), =0 "by Euler-Lagrange") + s dv(, t) (eval(pdv(Q_i, s))_(s=0) pdv(L, dot(q)_i)) + Order(s^2)] dif t quad ("by integration by parts")\
+    &= integral_(t_A)^(t_B) [s eval(pdv(Q_i, s))_(s=0) pdv(L, q_i) + s dv(, t) (eval(pdv(Q_i, s))_(s=0)) pdv(L, dot(q)_i) + Order(s^2)] dif t quad ("with summation convention")\
+    &= integral_(t_A)^(t_B) [s eval(pdv(Q_i, s))_(s=0) underbracket((pdv(L, q_i) - dv(, t) pdv(L, dot(q)_i)), =0 "by Euler-Lagrange") + s dv(, t) (eval(pdv(Q_i, s))_(s=0) pdv(L, dot(q)_i)) + Order(s^2)] dif t #eq-note[(by integration by parts)]\
     &= [s eval(pdv(Q_i, s))_(s=0) pdv(L, dot(q)_i)]_(t_A)^(t_B) + Order(s^2).
   $
   Hence $eval(pdv(Q_i, s))_(s=0) pdv(L, dot(q)_i)$ takes the same value at $t_A$ and $t_B$. Since $t_A$ and $t_B$ are arbitrary, this quantity is constant in time.
@@ -65,7 +65,7 @@ $ <eq-9-3>
   $
     vb(Q) = (q_1 + s, q_2, ..., q_(3N)).
   $
-  Hence $q^*_1 = q_1 + s, q^*_i = q_i$ for $i = 2, ..., 3N$, and $dot(q)^*_i = dot(q)_i$ for $i = 2, ..., 3N$. Thus this is a symmetry of the action since $L$ is independent of $q_1$.
+  Hence $q^*_1 = q_1 + s, q^*_i = q_i$ for $i = 2, ..., 3N$, and $dot(q)^*_i = dot(q)_i$ for $i = 1, ..., 3N$. Thus this is a symmetry of the action since $L$ is independent of $q_1$.
 
   The conserved quantity is
   $
@@ -78,7 +78,7 @@ $ <eq-9-3>
 #lecture-separator(lecture: 9, date: "2026-05-20")
 
 #example[
-  Consider Cartesian coordinates $vb(q) = (vb(x)_1, ..., vb(x)_N)$. Assume $L$ depends on $vb(x)_i$ only via $vb(x)_i - vb(x)_j$ #fade[[the lagrangian is only dependent on the separation between particles]].
+  Consider Cartesian coordinates $vb(q) = (vb(x)_1, ..., vb(x)_N)$. Assume $L$ depends on $vb(x)_i$ only via $vb(x)_i - vb(x)_j$ #fade[[the Lagrangian is only dependent on the separation between particles]].
 
   Let $vb(Q) = vecrow(vb(x)_1 + s vb(a), ..., vb(x)_N + s vb(a))$ for some constant $vb(a)$, _i.e._ $vb(Q)$ is a spatial translation by $s vb(a)$.
 
@@ -96,13 +96,13 @@ $ <eq-9-3>
 ]
 
 #example[
-  Consider Cartesian coordinates $vb(q) = (vb(x)_1, ..., vb(x)_N)$. Consider a rotation $matbold(R)$ maps
+  Consider Cartesian coordinates $vb(q) = (vb(x)_1, ..., vb(x)_N)$. Consider a rotation $matbold(R)$ that maps
   $
     vb(q) |-> vb(q)_matbold(R) = vecrow(matbold(R) vb(x)_1, ..., matbold(R) vb(x)_N).
   $
   Assume that $L$ is invariant under rotations, _i.e._ $L(vb(q)_matbold(R), dot(vb(q))_matbold(R), t) = L(vb(q), dot(vb(q)), t)$ for all $matbold(R) in "SO"(3)$.
 
-  Take $vb(Q) = vb(q)_(matbold(R)(s))$ where $matbold(R)(s)$ is a rotation through angle $s$ about some axes $vu(n)$.
+  Take $vb(Q) = vb(q)_(matbold(R)(s))$ where $matbold(R)(s)$ is a rotation through angle $s$ about some axis $vu(n)$.
 
   For infinitesimal $s$, $matbold(R)(s) vb(x) = vb(x) + s vu(n)times vb(x)$. Thus,
   $
@@ -110,7 +110,7 @@ $ <eq-9-3>
   $
   Since $vb(Q)$ is a symmetry of the action, we have a conserved quantity given by @thm-noether-v1:
   $
-    sum_(i, a) pdv(L, (dot(x)_i)_a) (vu(n)times vb(x)_i)_a = sum_i vb(p)_i dot (vu(n)times vb(x)_i) = vu(n) dot sum_i vb(x)_i times vb(p)_i = vu(n) dot vb(L)
+    sum_(i, a) pdv(L, (dot(vb(x))_i)_a) (vu(n)times vb(x)_i)_a = sum_i vb(p)_i dot (vu(n)times vb(x)_i) = vu(n) dot sum_i vb(x)_i times vb(p)_i = vu(n) dot vb(L)
   $
   where $vb(L)$ is the total angular momentum of the system. Since $vu(n)$ is arbitrary, we conclude that $vb(L)$ is conserved.
 
@@ -137,7 +137,7 @@ $ <eq-9-3>
 #example[
   Consider
   $
-    L = sum_(i=1)^N (1)/(2) m_i (dot(x)_i)^2 -V(vb(x)_1, ..., vb(x)_N)
+    L = sum_(i=1)^N (1)/(2) m_i (dot(vb(x))_i)^2 -V(vb(x)_1, ..., vb(x)_N)
   $
   where $V$ depends only on separations $vb(x)_i - vb(x)_j$.
 
@@ -149,10 +149,10 @@ $ <eq-9-3>
   Hence the Lagrangian is
   $
     L(vb(q)^*, dot(vb(q))^*, t)&= sum_i (1)/(2) m_i (dot(vb(x))_i - vu(n) s)^2 - V(vb(x)_1^*, ..., vb(x)_N^*)\
-    & = sum_i (1)/(2) m_i (dot(vb(x))_i)^2 - V(vb(x)_1, ..., vb(x)_N) + s vu(n) dot sum_i m_i dot(vb(x))_i + Order(s^2)\
+    & = sum_i (1)/(2) m_i (dot(vb(x))_i)^2 - V(vb(x)_1, ..., vb(x)_N) - s vu(n) dot sum_i m_i dot(vb(x))_i + Order(s^2)\
     &= L(vb(x), dot(vb(x)), t) - dv(, t) (s vu(n) dot sum_i m_i vb(x)_i)
   $
-  Hence @eq-9-4 is satisfied with $K = - vu(n) dot sum_i m_i vb(x)_i = vu(n) dot (M vb(R))$, where $M$ is the total mass and $vb(R)$ is the centre of mass. Therefore, the conserved quantity is
+  Hence @eq-9-4 is satisfied with $K = - vu(n) dot sum_i m_i vb(x)_i = - vu(n) dot (M vb(R))$, where $M$ is the total mass and $vb(R)$ is the centre of mass. Therefore, the conserved quantity is
   $
     sum_i pdv(L, dot(vb(x))_i) (eval(pdv(Q_i, s))_(s=0)) - K & = sum_i vb(p)_i dot (-vu(n) t) + M vu(n) dot vb(R) \
                                                              & = vu(n) dot (M vb(R) - vb(P) t)
@@ -177,7 +177,7 @@ $
 $
 
 #theorem[Noether's Theorem, Version 2][
-  If there exists a one-parameter family of symmetry of symmetries of the action $T(t; s)$, then any solution of the Euler-Lagrange equations has a conserved quantity (_i.e._ a first integral)
+  If there exists a one-parameter family of symmetries of the action $T(t; s)$, then any solution of the Euler-Lagrange equations has a conserved quantity (_i.e._ a first integral)
   $
     (L - sum_(i) dot(q)_i pdv(L, dot(q)_i)) eval(pdv(T, s))_(s=0) = "constant".
   $
@@ -189,9 +189,9 @@ $
   $
     dv(t^*, t) = 1 + s dv(, t) eval(pdv(T, s))_(s=0) + Order(s^2).
   $
-  Let $I, I^*$ be the LHS and RHS of @def-symmetry-of-action-v2 respectively. Then changing variable of integration from $t^*$ to $t$ in $I^*$ gives
+  Let $I^*, I$ be the LHS and RHS of @def-symmetry-of-action-v2 respectively. Then changing variable of integration from $t^*$ to $t$ in $I^*$ gives
   $
-    I^* & = integral_(t_A)^(t_B) L(vb(q)(t), dv(t, t^*), dv(, t) vb(q)(t), T(t)) dv(t^*, t) dif t \
+    I^* & = integral_(t_A)^(t_B) L(vb(q)(t), dv(t, t^*) dv(, t) vb(q)(t), T(t)) dv(t^*, t) dif t \
   $
   By binomial theorem we have
   $
@@ -200,9 +200,9 @@ $
   Therefore,
   $
     I^* &= integral_(t_A)^(t_B) L(vb(q)(t), dot(vb(q))(t) - s dv(, t) eval(pdv(T, s))_(s=0) dot(vb(q))(t) + Order(s^2), t + s eval(pdv(T, s))_(s=0) + Order(s^2)) (1 + s dv(, t) eval(pdv(T, s))_(s=0) + Order(s^2)) dif t\
-    &= integral_(t_A)^(t_B) [L(vb(q)(t), dot(vb(q))(t), t) - s dv(, t) eval(pdv(T, s))_(s=0) dot(q)_i pdv(L, dot(q)_i) + s eval(pdv(T, s))_(s=0) dv(L, t) + s L dv(, t) eval(pdv(T, s))_(s=0) + Order(s^2)] dif t\
-    &= I + integral_(t_A)^(t_B) [underbracket(dv(, t) eval(pdv(T, s))_(s=0) (-s dot(q)_i pdv(L, dot(q)_i) + s L), "integrate by parts") + s eval(pdv(T, s))_(s=0) pdv(L, t)] dif t\
-    &= I + [s eval(pdv(T, s))_(s=0) (L - sum_i dot(q)_i pdv(L, dot(q)_i))]_(t_A)^(t_B) + integral_(t_A)^(t_B) s eval(pdv(T, s))_(s=0) underbracket([- dv(, t) (L - dot(q)_i pdv(L, dot(q)_i)) + pdv(L, t)], = 0 "by E-L") dif t\
+    &= integral_(t_A)^(t_B) [L(vb(q)(t), dot(vb(q))(t), t) - s dv(, t) eval(pdv(T, s))_(s=0) sum_i dot(q)_i pdv(L, dot(q)_i) + s eval(pdv(T, s))_(s=0) pdv(L, t) + s L dv(, t) eval(pdv(T, s))_(s=0) + Order(s^2)] dif t\
+    &= I + integral_(t_A)^(t_B) [underbracket(dv(, t) eval(pdv(T, s))_(s=0) (-s sum_i dot(q)_i pdv(L, dot(q)_i) + s L), "integrate by parts") + s eval(pdv(T, s))_(s=0) pdv(L, t)] dif t\
+    &= I + [s eval(pdv(T, s))_(s=0) (L - sum_i dot(q)_i pdv(L, dot(q)_i))]_(t_A)^(t_B) + integral_(t_A)^(t_B) s eval(pdv(T, s))_(s=0) underbracket([- dv(, t) (L - sum_i dot(q)_i pdv(L, dot(q)_i)) + pdv(L, t)], = 0 "by Euler-Lagrange") dif t\
   $
   So $I^* = I$ implies $[s eval(pdv(T, s))_(s=0) (L - sum_i dot(q)_i pdv(L, dot(q)_i))]_(t_A)^(t_B) = 0$ for all $t_A, t_B$. Hence $eval(pdv(T, s))_(s=0) (L - sum_i dot(q)_i pdv(L, dot(q)_i))$ is constant in time.
 

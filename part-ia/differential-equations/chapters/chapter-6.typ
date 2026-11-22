@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(6)
 
 #lecture-separator(lecture: 11, date: "2025-11-03")
 
@@ -330,7 +331,7 @@ $
   In this case we have a 2D phase space.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d7e1.svg", width: 20em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d7e1.svg", width: 20em)
   ]
 
   Note that $vb(Y)_1 (x)$ and $vb(Y)_2 (x)$ are #ponder("linear-algebra.linearly-independent-functions")[linearly independent] vectors, so we can use them as a basis for the phase space.
@@ -501,7 +502,7 @@ These #ponder("ode.ordinary-differential-equation")[ODEs] are related to #ponder
   $
     a x^2 dv(y, x, 2) + b x dv(y, x) + c y & = a (alpha x)^2 g''(alpha x) + b (alpha x) g'(alpha x) + c g(alpha x) \
     & = a u^2 g''(u) + b u g'(u) + c g(u).\
-    &= 0 quad "(since" g "is a solution of the homogeneous equation)" \
+    &= 0 #eq-note[(since $g$ is a solution of the homogeneous equation)] \
   $
 ]
 
@@ -791,7 +792,7 @@ Note that changing the lower limits of the integrals only adds multiples of #pon
 == Forced #ponder("ode.ordinary-differential-equation")[ODEs], Transients and Damping
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d8e1.svg", width: 22em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d8e1.svg", width: 22em)
 ]
 
 In the diagram above, by Newton's 2nd Law we have
@@ -842,7 +843,7 @@ Depending on the value of $kappa$, we have three cases:
   where $A, B$ are constants.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d8e2.svg", width: 18em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d8e2.svg", width: 18em)
   ]
 
   This is a oscillation at $omega_"free" = sqrt(1-kappa^2) omega_0$, which tends to $omega_0$ as $kappa -> 0$, with an exponentially decaying amplitude.
@@ -863,7 +864,7 @@ Depending on the value of $kappa$, we have three cases:
   where $A, B$ are constants.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d8e3.svg", width: 18em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d8e3.svg", width: 18em)
   ]
 
 3. *Heavy damping* when $kappa > 1$.
@@ -877,7 +878,7 @@ Depending on the value of $kappa$, we have three cases:
   where $A, B$ are constants. #fade[[$-abs(lambda)$ indicates that the exponentials decay to zero as $tau -> oo$.]] Note that $abs(lambda_1) < abs(lambda_2)$, so the first term dominates the long-term behavior if present.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d8e4.svg", width: 18em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d8e4.svg", width: 18em)
   ]
 
 Unforced response decays eventually in all cases.
@@ -925,7 +926,7 @@ Over time, $"C.F."$ decays, and the behavior is dominated by the $"P.I."$, calle
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d8e5.svg", width: 18em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d8e5.svg", width: 18em)
   ]
 ]
 
@@ -936,7 +937,7 @@ Over time, $"C.F."$ decays, and the behavior is dominated by the $"P.I."$, calle
 Consider a system that experiences a sudden force between time $t = T-epsilon$ and $T+epsilon$.
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d8e6.svg", width: 22em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d8e6.svg", width: 22em)
 ]
 
 _e.g._ striking a mass on a spring, or a car going over a curb.
@@ -965,7 +966,7 @@ As $epsilon ->0$ only impulse $I$ matters for subsequent motion.
 
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d8e7.svg", width: 22em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d8e7.svg", width: 22em)
 ]
 
 === #ponder("analysis.dirac-delta-function")[Dirac Delta Function]
@@ -996,7 +997,7 @@ $
 #fade[[See Example Sheet 1, Q14 for normalisation.]]
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d8e8.svg", width: 20em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d8e8.svg", width: 20em)
 ]
 
 Note that the family of such functions is not unique, but for any family, $lim_epsilon->0$ yields the #ponder("analysis.dirac-delta-function")[Dirac delta function].
@@ -1096,7 +1097,7 @@ The general rule for higher order #ponder("ode.ordinary-differential-equation")[
 
     $
       lim_(epsilon -> 0^+) [y']^((ppi)/(2)+epsilon)_((ppi)/(2)-epsilon) & = 3 \
-      -A cosh ((ppi)/(2)) - A cosh((ppi)/(2)) & = 3 quad ("by using our two solutions on either side") \
+      -A cosh ((ppi)/(2)) - A cosh((ppi)/(2)) & = 3 #eq-note[(by using our two solutions on either side)] \
       -2 A cosh((ppi)/(2)) & = 3 \
       A & = - (3)/(2 cosh((ppi)/(2))). \
     $
@@ -1124,7 +1125,7 @@ The general rule for higher order #ponder("ode.ordinary-differential-equation")[
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d9e1.svg", width: 20em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d9e1.svg", width: 20em)
   ]
 ] <heaviside-step-function>
 
@@ -1147,7 +1148,7 @@ $
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d9e2.svg", width: 20em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d9e2.svg", width: 20em)
   ]
 ]
 

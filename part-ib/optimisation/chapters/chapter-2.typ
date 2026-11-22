@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 #lecture-separator(lecture: 4, date: "2026-05-08")
 
@@ -40,9 +41,9 @@ $
 
   We are left to show the reverse inequality. We have
   $
-    min_(vb(x) in cal(X)(vb(b))) f(vb(x)) &= min_(vb(x) in cal(X)(vb(b)))f(vb(x)) - vb(lambda)^*^TT (vb(h)(vb(x)) - vb(b)) quad &"since" vb(h)(vb(x)) = vb(b) "for all" vb(x) in cal(X)(vb(b))\
-    &>= min_(vb(x) in cal(X)) underbracket(f(vb(x)) - vb(lambda)^*^TT (vb(h)(vb(x)) - vb(b)), lagr(vb(x), vb(lambda)^*)) quad &"since" cal(X) supset.eq cal(X)(vb(b))\
-    &= lagr(vb(x)^*, vb(lambda)^*) quad &"since" (vb(x)^*, vb(lambda)^*) "is a minimiser of" lagr "over" cal(X) times RR^m\
+    min_(vb(x) in cal(X)(vb(b))) f(vb(x)) &= min_(vb(x) in cal(X)(vb(b)))f(vb(x)) - vb(lambda)^(* TT) (vb(h)(vb(x)) - vb(b)) quad &"since" vb(h)(vb(x)) = vb(b) "for all" vb(x) in cal(X)(vb(b))\
+    &>= min_(vb(x) in cal(X)) underbracket(f(vb(x)) - vb(lambda)^(* TT) (vb(h)(vb(x)) - vb(b)), lagr(vb(x), vb(lambda)^*)) quad &"since" cal(X) supset.eq cal(X)(vb(b))\
+    &= lagr(vb(x)^*, vb(lambda)^*) quad &"since" vb(x)^* "minimises" lagr(dot, vb(lambda)^*) "over" cal(X)\
     &= f(vb(x)^*) quad &"since" vb(h)(vb(x)^*) = vb(b).
   $
 
@@ -86,7 +87,7 @@ $
   $
   So we have $lambda_1 = -1/sqrt(2)$ and $x_3 = 1 - 2sqrt(2)$. Hence, we have found a solution:
   $
-    vb(x)^* = vecrow(sqrt(2), sqrt(2), 1 - 2sqrt(2)) quad "and" vb(lambda)^* = vecrow(-1/sqrt(2), 1).
+    vb(x)^* = vecrow(sqrt(2), sqrt(2), 1 - 2sqrt(2))^TT quad "and" vb(lambda)^* = vecrow(-1/sqrt(2), 1)^TT.
   $
   By @theorem-lagrange-sufficiency[Lagrange Sufficiency Theorem],  $vb(x)^*$ is a solution to the original problem.
 ]
@@ -115,12 +116,12 @@ We can now generalise this method to problems of the form
     $
   3. Let
     $
-      Lambda = {vb(lambda) in RR^m: min_(x in cal(X)\ s >=0) lagr(vb(x), vb(s), vb(lambda)) > -oo}.
+      Lambda = {vb(lambda) in RR^m: min_(vb(x) in cal(X)\ vb(s) >= 0) lagr(vb(x), vb(s), vb(lambda)) > -oo}.
     $
 
   4. For each $vb(lambda) in Lambda$, find $vb(x)^*(vb(lambda))$ and $vb(s)^*(vb(lambda))$ such that
     $
-      lagr(vb(x)^*(vb(lambda)), vb(s)^*(vb(lambda)), vb(lambda)) = min_(x in cal(X)\ s >=0) lagr(vb(x), vb(s), vb(lambda)).
+      lagr(vb(x)^*(vb(lambda)), vb(s)^*(vb(lambda)), vb(lambda)) = min_(vb(x) in cal(X)\ vb(s) >= 0) lagr(vb(x), vb(s), vb(lambda)).
     $
 
   5. Find $vb(lambda)^* in Lambda$ such that $(vb(x)^*(vb(lambda)^*), vb(s)^*(vb(lambda)^*))$ satisfies the constraints of the original problem, _i.e._
@@ -132,7 +133,7 @@ We can now generalise this method to problems of the form
     #remark[
       We can simplify the search by noting *complementary slackness.* With $ lagr(vb(x), vb(s), vb(lambda)) = f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x))- vb(b)) - vb(lambda)^TT vb(s), $ we must have $lambda_i <= 0$ or else we can choose components of $vb(s)$ to be arbitrarily large and hence $lagr(vb(x), vb(s), vb(lambda)) -> -oo$. Moreover, if $lambda_i < 0$, then we must have $s_i = 0$.
 
-      As a result, we must have $vb(lambda)^*^TT vb(s)^* = 0$, which is the complementary slackness condition. _i.e._ given conditions $h(vb(x))_i <= b_i$ and $lambda_i <= 0$, at most one of the two inequalities can be strict; they may also both be tight.
+      As a result, we must have $vb(lambda)^(* TT) vb(s)^* = 0$, which is the complementary slackness condition. _i.e._ given conditions $h_i (vb(x)) <= b_i$ and $lambda_i <= 0$, at most one of the two inequalities can be strict; they may also both be tight.
     ]
 
     The usual method to do this is as follows:
@@ -140,7 +141,7 @@ We can now generalise this method to problems of the form
     1. Consider the equations
       $
                 pdv(lagr, x_i) = 0 quad & (n "equations") \
-        h(vb(x))_j + s_j - b_j = 0 quad & (m "equations") \
+        h_j (vb(x)) + s_j - b_j = 0 quad & (m "equations") \
                   lambda_j s_j = 0 quad & (m "equations").
       $
 
@@ -161,7 +162,7 @@ We can now generalise this method to problems of the form
 
   Construct the Lagrangian
   $
-    lagr(vb(x), vb(lambda)) &= x_1 - 3 x_2 - lambda_1 (x_1^2 + x_2^2 + s_1 - 4) - lambda_2 (x_1 + x_2 + s_2 - 2)\
+    lagr(vb(x), vb(s), vb(lambda)) &= x_1 - 3 x_2 - lambda_1 (x_1^2 + x_2^2 + s_1 - 4) - lambda_2 (x_1 + x_2 + s_2 - 2)\
     &= (-lambda_1 x_1^2 + (1 - lambda_2)x_1) + (-lambda_1 x_2^2 + (-3 - lambda_2)x_2) + (-lambda_1 s_1) + (- lambda_2 s_2) + (4 lambda_1 + 2 lambda_2).
   $
   Note that $lambda_1, lambda_2 <= 0$. We have four cases to check:
@@ -170,14 +171,14 @@ We can now generalise this method to problems of the form
   $
   Note that by complementary slackness, if $lambda_i < 0$, then $s_i = 0$.
 
-  We will check, for example, the case $lambda_1 < 0, lambda_2 < 0$. Then we have $s_1 = s_2 = 0$. We can then find the minimum of $lagr(vb(x), vb(lambda))$ by taking derivatives and setting them to zero. We have
+  We will check, for example, the case $lambda_1 < 0, lambda_2 < 0$. Then we have $s_1 = s_2 = 0$. We can then find the minimum of $lagr(vb(x), vb(0), vb(lambda))$ by taking derivatives and setting them to zero. We have
   $
-    (partial lagr)/(partial x_1) = -2 lambda_1 x_1 + 1 - lambda_2 & = 0 \
-    (partial lagr)/(partial x_2) = -2 lambda_1 x_2 - 3 - lambda_2 & = 0 \
+    pdv(lagr, x_1) = -2 lambda_1 x_1 + 1 - lambda_2 & = 0 \
+    pdv(lagr, x_2) = -2 lambda_1 x_2 - 3 - lambda_2 & = 0 \
                                                     x_1^2 + x_2^2 & = 4 \
                                                         x_1 + x_2 & = 2.
   $
-  The latter two equations gives $(x_1, x_2) = (0, 2)$ or $(x_1, x_2) = (2, 0)$.
+  The latter two equations give $(x_1, x_2) = (0, 2)$ or $(x_1, x_2) = (2, 0)$.
 
   For $(0, 2)$, we have $lambda_2 = 1$ and $lambda_1 = -1$.
 
@@ -223,7 +224,7 @@ $ <problem-b>
 #remark[
   For every fixed $vb(x)$, the Lagrangian is linear in $vb(lambda)$:
   $
-    lagr(vb(x), lambda) = f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b)).
+    lagr(vb(x), vb(lambda)) = f(vb(x)) - vb(lambda)^TT (vb(h)(vb(x)) - vb(b)).
   $
 
   #exercise[
@@ -234,7 +235,7 @@ $ <problem-b>
 ]
 
 #theorem[Weak Duality Theorem][
-  If $vb(x) in cal(X)(vb(b))$ and $lambda in Lambda$, then $f(vb(x)) >= g(vb(lambda))$. In particular,
+  If $vb(x) in cal(X)(vb(b))$ and $vb(lambda) in Lambda$, then $f(vb(x)) >= g(vb(lambda))$. In particular,
   $
     min_(vb(x) in cal(X)(vb(b))) f(vb(x)) >= max_(vb(lambda) in Lambda) g(vb(lambda)).
   $
@@ -262,8 +263,8 @@ $ <problem-b>
 
   Note that
   $
-    g(vb(lambda)^*) &= min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^*^TT (vb(h)(vb(x)) - vb(b)))\
-    &= f(vb(x)^*) - vb(lambda)^*^TT (vb(h)(vb(x)^*) - vb(b)) quad &"since" vb(x)^* = argmin_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)^*)\
+    g(vb(lambda)^*) &= min_(vb(x) in cal(X)) (f(vb(x)) - vb(lambda)^(* TT) (vb(h)(vb(x)) - vb(b)))\
+    &= f(vb(x)^*) - vb(lambda)^(* TT) (vb(h)(vb(x)^*) - vb(b)) quad &"since" vb(x)^* = argmin_(vb(x) in cal(X)) lagr(vb(x), vb(lambda)^*)\
     &= f(vb(x)^*) quad &"since" vb(h)(vb(x)^*) = vb(b).
   $
 ]
@@ -272,7 +273,7 @@ $ <problem-b>
 
   #fade[[$=>$]] This follows from @theorem-lagrange-sufficiency[Lagrange Sufficiency Theorem].
 
-  #fade[[$arrow.l.double$]] Suppose $exists vb(x) in cal(X)(vb(b)), vb(lambda) in Lambda$ such that $f(vb(x)) = g(vb(lambda))$. Then using this $vb(lambda)$, we can find $vb(x)^* in cal(X)$ such that $vb(x)^* = argmin_(vb(x) in cal(X)) lagr(vb(x), vb(lambda))$. Then by @theorem-lagrange-sufficiency[Lagrange Sufficiency Theorem], $vb(x)^*$ is a solution to the original problem.
+  #fade[[$arrow.l.double$]] Suppose $exists vb(x) in cal(X)(vb(b)), vb(lambda) in Lambda$ such that $f(vb(x)) = g(vb(lambda))$. Since $vb(h)(vb(x)) = vb(b)$, we have $lagr(vb(x), vb(lambda)) = f(vb(x)) = g(vb(lambda)) = min_(vb(y) in cal(X)) lagr(vb(y), vb(lambda))$, so $vb(x)$ itself minimises $lagr(dot, vb(lambda))$ over $cal(X)$ and satisfies $vb(h)(vb(x)) = vb(b)$. Then by @theorem-lagrange-sufficiency[Lagrange Sufficiency Theorem], $vb(x)$ is a solution to the original problem, and the Lagrange multiplier method with this $vb(lambda)$ finds it.
 ]
 
 #definition[Supporting hyperplane][
@@ -281,7 +282,7 @@ $ <problem-b>
     phi(vb(c)) >= phi(vb(b)) + vb(lambda)^TT (vb(c) - vb(b)).
   $
 
-  #fade[[This is analogous to @thm-first-order-condition-for-convexity[First Order Condition for Convexity]. We are effectively saying that the function $phi$ has a tangent that is below the function at the point $vb(b)$.]]
+  #fade[[This is analogous to @thm-first-order-condition-for-convexity[First-Order Condition for Convexity]. We are effectively saying that there is a hyperplane through $(vb(b), phi(vb(b)))$ that lies below $phi$ everywhere; when $phi$ is differentiable at $vb(b)$, it is the tangent plane.]]
 ]
 
 #definition[Value function][

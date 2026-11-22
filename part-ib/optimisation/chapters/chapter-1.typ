@@ -1,11 +1,12 @@
 #import "../prelude.typ": *
+#show: chapter.with(1)
 
 #lecture-separator(lecture: 1, date: "2026-05-01")
 
 In this course, we try to solve problems of the form
 
 $
-  "minimise functions" markul(f(vb(x)), #<obj-fn>) "subject to contraints" markul(vb(h)(vb(x))=vb(b), #<func-constraint>) "and" markul(vb(x) in cal(X), #<region-constraint>),
+  "minimise functions" markul(f(vb(x)), #<obj-fn>) "subject to constraints" markul(vb(h)(vb(x))=vb(b), #<func-constraint>) "and" markul(vb(x) in cal(X), #<region-constraint>),
   #annot(<obj-fn>, "objective function", pos: bottom + left, dy: 0.5em)
   #annot(<func-constraint>, "functional constraint", pos: bottom + left, dy: 0.5em, dx: -2em)
   #annot(<region-constraint>, "regional constraint", pos: bottom + left, dy: 0.5em)
@@ -46,7 +47,7 @@ Intuitively, a set is convex if for any two points in the set, the line segment 
 ]
 
 #remark[
-  If $-f$ if convex, then $f$ is said to be *concave*.
+  If $-f$ is convex, then $f$ is said to be *concave*.
 ]
 
 #example[
@@ -69,7 +70,7 @@ Intuitively, a function is convex iff the tangent line at any point is below the
 ] <thm-first-order-condition-for-convexity>
 
 #remark[
-  If at $vb(x)$, $grad f(vb(x)) = 0$, then $vb(x)$ is the minimiser of $f$.
+  If at $vb(x)$, $grad f(vb(x)) = 0$, then $vb(x)$ is a global minimiser of $f$.
 ]
 
 #proof[
@@ -138,7 +139,7 @@ where $vb(z)$ is some point on the line segment between $vb(x)$ and $vb(y)$.
 ]
 
 #proof[
-  We will only prove one side. For any $vb(x)$ and $vb(y)$ we have, by intermediate value theorem, a point $vb(z)$ such that
+  We will only prove one side. For any $vb(x)$ and $vb(y)$ we have, by Taylor's theorem, a point $vb(z)$ such that
   $
     f(vb(y)) &= f(vb(x)) + grad f(vb(x))^TT (vb(y)-vb(x)) + underbracket(((vb(y)-vb(x))^TT hess f(vb(z)) (vb(y)-vb(x)))/2, >=0 "since" hess f(vb(z)) succ.eq 0)\
     &>= f(vb(x)) + grad f(vb(x))^TT (vb(y)-vb(x)).
@@ -164,15 +165,15 @@ $
 Therefore, we have the *gradient descent* algorithm as follows:
 
 #listing[Gradient Descent Algorithm][
-  1. Start from some $vb(x_0)$, set $t=0$.
+  1. Start from some $vb(x)_0$, set $t=0$.
 
   2. Repeat:
 
-    1. Find a descent direction $vb(v_t)$, such as $-grad f(vb(x)_t)$
+    1. Find a descent direction $vb(v)_t$, such as $-grad f(vb(x)_t)$
     2. Choose a step size $eta_t > 0$.
-    3. Update $vb(x)_(t+1) = vb(x)_t + eta_t vb(v_t)$.
+    3. Update $vb(x)_(t+1) = vb(x)_t + eta_t vb(v)_t$.
 
-  3. Stop when some stopping critera are satisfied.
+  3. Stop when some stopping criteria are satisfied.
 ]
 
 #remark[
@@ -194,9 +195,9 @@ Therefore, we have the *gradient descent* algorithm as follows:
 === Smoothness and Strong Convexity
 
 #definition[$beta$-smoothness, $alpha$-strong convexity][
-  A twice-differentiable function $f: RR^n -> RR$ is $beta$-smooth if $hess f(x) prec.eq beta matbold(I)$ for all $x in RR^n$. It is $alpha$-strongly convex if $hess f(x) succ.eq alpha matbold(I)$ for all $x in RR^n$, where $alpha, beta > 0$.
+  A twice-differentiable function $f: RR^n -> RR$ is $beta$-smooth if $hess f(vb(x)) prec.eq beta matbold(I)$ for all $vb(x) in RR^n$. It is $alpha$-strongly convex if $hess f(vb(x)) succ.eq alpha matbold(I)$ for all $vb(x) in RR^n$, where $alpha, beta > 0$.
 
-  #fade[[This is saying that the eigenvalues of $hess f(x)$ are bounded above by $beta$ and below by $alpha$.]]
+  #fade[[This is saying that the eigenvalues of $hess f(vb(x))$ are bounded above by $beta$ and below by $alpha$.]]
 ]
 
 #remark[
@@ -261,7 +262,7 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
 ]
 
 #corollary[
-  Let $f(vb(x^*))$ be the minimum value of $f$, where $f$ is $alpha$-strongly convex . Then for any $vb(x)$, we have
+  Let $f(vb(x^*))$ be the minimum value of $f$, where $f$ is $alpha$-strongly convex. Then for any $vb(x)$, we have
   $
     f(vb(x^*)) >= f(vb(x)) - (1)/(2 alpha) norm(grad f(vb(x)))^2.
   $
@@ -283,7 +284,7 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
   $
   To find the minimum on the RHS, differentiating w.r.t. $vb(y)$ gives,
   $
-    grad_y (f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2) = grad f(vb(x)) + alpha (vb(y) - vb(x)).
+    grad_(vb(y)) (f(vb(x)) + grad f(vb(x))^TT (vb(y) - vb(x)) + (alpha)/(2) norm(vb(y) - vb(x))^2) = grad f(vb(x)) + alpha (vb(y) - vb(x)).
   $
   Setting this to zero gives $vb(y) = vb(x) - (1)/(alpha) grad f(vb(x))$. Substituting this back gives the result.
 ]
@@ -294,12 +295,12 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
   Let $f$ be $alpha$-strongly convex and $beta$-smooth, and let $vb(x^*)$ be the optimal solution. Then gradient descent with step size $eta_t =(1)/(beta)$ satisfies
 
   $
-    f(vb(x)_T) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x_0)) - f(vb(x^*))) <= ee^(-(alpha T)/(beta)) (f(vb(x_0)) - f(vb(x^*))).
+    f(vb(x)_T) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x)_0) - f(vb(x^*))) <= ee^(-(alpha T)/(beta)) (f(vb(x)_0) - f(vb(x^*))).
   $
 ]
 
 #remark[
-  Taking $T >= (beta)/(alpha) log((f(vb(x_0)) - f(vb(x^*)))/(epsilon))$ gives us $f(vb(x)_T) - f(vb(x^*)) <= epsilon$, so the relationship between the number of iterations and the error is logarithmic, _i.e._ we need $Order(log (1/epsilon))$ iterations to get an error of at most $epsilon$.
+  Taking $T >= (beta)/(alpha) log((f(vb(x)_0) - f(vb(x^*)))/(epsilon))$ gives us $f(vb(x)_T) - f(vb(x^*)) <= epsilon$, so the relationship between the number of iterations and the error is logarithmic, _i.e._ we need $Order(log (1/epsilon))$ iterations to get an error of at most $epsilon$.
 ]
 
 #proof[
@@ -311,7 +312,7 @@ Intuitively, this means that $f$ is upper-bounded and lower-bounded by a quadrat
   $
   By telescoping, we have
   $
-    f(vb(x)_T) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x_0)) - f(vb(x^*))).
+    f(vb(x)_T) - f(vb(x^*)) <= (1 - (alpha)/(beta))^T (f(vb(x)_0) - f(vb(x^*))).
   $
 
 ]
@@ -382,13 +383,13 @@ $
   If $f$ is a twice-differentiable $alpha$-strongly convex function that has an $ell$-Lipschitz Hessian, _i.e._
   $ norm(hess f(vb(x)) - hess f(vb(y))) <= ell norm(vb(x) - vb(y))_2 $ for all $vb(x), vb(y) in RR^n$ #fade[[_i.e._ if two points are close, then the Hessian doesn't change too rapidly]], then Newton's method satisfies
   $
-    f(vb(x_k)) - f(vb(x^*)) <= (2 alpha^3)/(ell^2)((ell)/(2alpha^2) norm(grad f(vb(x_0)))_2)^(2^(k+1)).
+    f(vb(x)_k) - f(vb(x^*)) <= (2 alpha^3)/(ell^2)((ell)/(2alpha^2) norm(grad f(vb(x)_0))_2)^(2^(k+1)).
   $
 ]
 
 #remark[
 
-  1. If $norm(grad f(vb(x_0)))_2 < (2 alpha^2)/(ell)$, then the error decreases doubly-exponentially, so we only need $Order(log log (1/epsilon))$ iterations to get an error of at most $epsilon$.
+  1. If $norm(grad f(vb(x)_0))_2 < (2 alpha^2)/(ell)$, then the error decreases doubly-exponentially, so we only need $Order(log log (1/epsilon))$ iterations to get an error of at most $epsilon$.
 
   2. For this method, we will need to compute the inverse of the Hessian, which can be computationally expensive for many parameters.
 
@@ -400,7 +401,7 @@ $
 
 Suppose we want to solve the following problem:
 $
-  "minimise" f(vb(x)) "subject to" vb(a_i)^TT vb(x) <= b_i "for all" 1<=i<=m.
+  "minimise" f(vb(x)) "subject to" vb(a)_i^TT vb(x) <= b_i "for all" 1<=i<=m.
 $
 
 #align(center)[
@@ -410,7 +411,7 @@ $
 This can be re-worded as an unconstrained optimisation problem as follows:
 
 $
-  & "minimise"   && f(vb(x)) + sum_(i=1)^m phi(vb(a_i)^TT vb(x) - b_i) \
+  & "minimise"   && f(vb(x)) + sum_(i=1)^m phi(vb(a)_i^TT vb(x) - b_i) \
   & "subject to" && vb(x) in RR^n \
   & "where"      && phi(x) = cases(
                       0 & "if" x <= 0,
@@ -428,18 +429,18 @@ However, this function is badly behaved at the boundaries, so we can approximate
 
 However, since we wish to minimise $f(vb(x))$ without the extra term, we can consider a parameter $t > 0$ and the following problem instead:
 $
-  & "minimise"   && t f(vb(x)) - sum_(i=1)^m log(-vb(a_i)^TT vb(x) + b_i) \
+  & "minimise"   && t f(vb(x)) - sum_(i=1)^m log(-vb(a)_i^TT vb(x) + b_i) \
   & "subject to" && vb(x) in RR^n.
 $
 
 #listing[Barrier Method][
-  1. Find a strictly feasible point $vb(x)$ such that $vb(a_i)^TT vb(x) < b_i$ for all $i$ and set $t>0, alpha > 1$.
+  1. Find a strictly feasible point $vb(x)$ such that $vb(a)_i^TT vb(x) < b_i$ for all $i$ and set $t>0, alpha > 1$.
 
   2. Repeat the following:
 
     1. Compute $vb(x^*)(t)$ by minimising
       $
-        t f(x) - sum_(i=1)^m log(-(vb(a_i)^TT vb(x) - b_i))
+        t f(vb(x)) - sum_(i=1)^m log(-(vb(a)_i^TT vb(x) - b_i))
       $
       using Newton's method with initial point $vb(x)$.
     2. Update $vb(x) := vb(x^*)(t)$ and $t := alpha t$.

@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(8)
 
 = Series Solutions
 

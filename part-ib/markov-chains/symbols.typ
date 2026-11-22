@@ -7,3 +7,6 @@
 #import "/template/lib.typ": *
 #import "@preview/physica:0.9.8": *
 #import "/template/automata.typ": automaton, markov-chain
+#import "/template/illustrate.typ": *
+
+#let indep = sym.perp

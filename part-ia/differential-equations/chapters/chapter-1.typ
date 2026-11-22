@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(1)
 
 #lecture-separator(lecture: 1, date: "2025-10-10")
 
@@ -18,7 +19,7 @@ The main purpose of this course is to solve such equations.
   The *#ponder("calculus.derivative")[derivative]* of a function $f(x)$ w.r.t. its argument $x$ is the function
   $ dv(f, x) = lim_(h->0) (f(x+h)-f(x))/(h). $
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d1e1.svg", width: 24em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d1e1.svg", width: 24em)
   ]
 ] <derivative>
 
@@ -54,7 +55,7 @@ If we wish to compare the behavior of functions close to a limiting point $x_0$,
       _e.g._ if $x_0=0$, then $x!=Order(x^2), x^2=Order(x)$ and $x=Order(sqrt(x) )$.
 
     #align(center)[
-      #dynamic-svg("/part-ia/differential-equations/media/d1e2.svg", width: 18em)
+      #dynamic-svg2("/part-ia/differential-equations/media/d1e2.svg", width: 18em)
     ]
 
     _e.g._ $sin 2x = Order(x)$ as $x->0$ since $|sin 2x| <=2|x|$.
@@ -225,8 +226,8 @@ Therefore, for a given target accuracy at $x=h$, this can be used to specify how
   $
     lim_(x->x_0) f(x)/(g(x)) &= lim_(x->x_0)(f'(x_0) + (order(x-x_0))/(x-x_0))/(underbracket(g'(x_0), !=0) + (order(x-x_0))/(x-x_0)) \
     &= (lim_(x->x_0)(f'(x_0) + (order(x-x_0))/(x-x_0)))/(lim_(x->x_0)(g'(x_0) + (order(x-x_0))/(x-x_0))) \
-    &= (f'(x_0))/(g'(x_0)) quad "by definition of the little O" \
-    &= lim_(x->x_0) (f'(x))/(g'(x)) quad "from the continuity of 1st derivatives." \
+    &= (f'(x_0))/(g'(x_0)) #eq-note[by definition of the little O] \
+    &= lim_(x->x_0) (f'(x))/(g'(x)) #eq-note[from the continuity of 1st derivatives] \
   $
 ]
 

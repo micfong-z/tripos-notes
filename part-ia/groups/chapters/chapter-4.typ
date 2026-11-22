@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 = #ponder("algebra.group-action")[Group Actions]
 
@@ -191,7 +192,7 @@ A lot of important results in #ponder("algebra.group")[group] theory come from s
   Consider $D_(2n) arrow.cw.half X_n$, where $X_n$ is the set of the regular $n$-gon.
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d2e5.svg", width: 15em)
+    #dynamic-svg2("/part-ia/groups/media/d2e5.svg", width: 15em)
   ]
 
   For any $j$,
@@ -218,7 +219,7 @@ A lot of important results in #ponder("algebra.group")[group] theory come from s
 #proof[
   @orbit-stabiliser gives
 
-  $ abs(G x) = abs(G \/ stab_G (x)) = abs(G) / abs(stab_G (x)). quad "by Lagrange's theorem" $
+  $ abs(G x) = abs(G \/ stab_G (x)) = abs(G) / abs(stab_G (x)). #eq-note[by Lagrange's theorem] $
 ]
 
 #example[
@@ -241,7 +242,7 @@ A lot of important results in #ponder("algebra.group")[group] theory come from s
     $
       g_1 x & = (g_2 s) x \
             & = g_2 (s x) \
-            & = g_2 x quad "since" s x=x. \
+            & = g_2 x. #eq-note[since $s x=x$] \
     $
     Thus, $Phi$ is well-defined.
 
@@ -368,7 +369,7 @@ The next theorem is a different kind of application of the #ponder("algebra.orbi
   In Example Sheet 2 Q6, it is proven that $D_(2n)$ has 1 #ponder("algebra.conjugacy-class")[conjugacy class] of reflections if $n$ is odd, and 2 #ponder("algebra.conjugacy-class")[conjugacy classes] if $n$ is even.
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d6e1.svg", width: 28em)
+    #dynamic-svg2("/part-ia/groups/media/d6e1.svg", width: 28em)
   ]
 
   Note that the red reflections cannot be obtained by #ponder("algebra.conjugation")[conjugating] the blue reflections, and vice versa.

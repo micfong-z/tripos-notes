@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 = Forces
 
@@ -130,7 +131,7 @@ We can check that this is conserved:
 $
   dv(E, t) & = m dot(x)_i dot.double(x)_i + pdv(V, x_i) dot(x)_i \
                   & = dot(x)_i (m dot.double(x)_i + pdv(V, x_i) ) \
-                  & = 0. quad "by Newton" m vb(dot.double(x)) = - grad V \
+                  & = 0. #eq-note[by Newton $m vb(dot.double(x)) = - grad V$] \
 $
 
 #example[
@@ -278,7 +279,7 @@ $
   where $A$ and $phi$ are arbitrary.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e4.svg", width: 11em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e4.svg", width: 11em)
   ]
 
   The period $T$ is the time to complete one cycle,
@@ -345,7 +346,7 @@ More often than not the integral is not analytically solvable, but it is still u
 From $E = (1)/(2) m dot(x)^2 + V(x)$, we get $E >= V(x)$. This restricts the range of $x$ where the particle can be.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e6.svg", width: 32em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e6.svg", width: 32em)
 ]
 
 The points where $E = V(x) => dot(x) = 0$ are called turning points. Typically, particles bounces off the potential at turning points and turn around.
@@ -357,7 +358,7 @@ The points where $E = V(x) => dot(x) = 0$ are called turning points. Typically, 
 - A special case occurs when $E = V(x)$ and $V'(x) = 0$. These are #ponder("ode.equilibrium-point")[equilibrium points], where the particle can remain at rest if placed there.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e7.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e7.svg", width: 12em)
   ]
 
   We have $m dot.double(x) = -V'(x) = 0$ and $E = (1)/(2) m dot(x)^2 + V(x)$, giving $dot(x) = dot.double(x) = 0$.
@@ -399,7 +400,7 @@ $
   The case $tilde(A) = 0$ corresponds to rolling the particle up the potential with just enough energy to reach the top as $t->oo$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e8.svg", width: 11em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e8.svg", width: 11em)
   ]
 
   If $V''(x_0) = 0$, we need to include higher order terms in the #ponder("calculus.taylor-series")[Taylor expansion].
@@ -415,7 +416,7 @@ $
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e9.svg", width: 4em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e9.svg", width: 4em)
   ]
 
   Suppose we release the pendulum from rest at some angle $theta_0$. We want to find the period $T$ of oscillation where
@@ -521,7 +522,7 @@ There are two common cases of #ponder("dynamics.friction")[friction] forces:
   Linear drag depends on viscous effects #fade[[see IB Fluid Dynamics]], such as a spoon in honey. In this case, objects move the medium with them.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e10.svg", width: 24em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e10.svg", width: 24em)
   ]
 
   #example[
@@ -585,7 +586,7 @@ $
 Note that, solving the equations gives the following graph.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e11.svg", width: 20em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e11.svg", width: 20em)
 ]
 
 We can also have motion in different directions to gravity, so that

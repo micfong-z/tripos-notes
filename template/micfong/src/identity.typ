@@ -30,7 +30,6 @@
 
 #let page-payload(doc-id, page-number) = hex-id(doc-id, page-number) + if mds-token == none { "" } else { "+" + mds-token }
 
-#let _dm-module = 0.75pt
 #let _dm-squares = (
   "10": 3, "12": 5, "14": 8, "16": 12, "18": 18, "20": 22, "22": 30, "24": 36, "26": 44, "32": 62, "36": 86, "40": 114,
   "44": 144, "48": 174, "52": 204, "64": 280, "72": 368, "80": 456, "88": 576, "96": 696, "104": 816, "120": 1050,
@@ -58,8 +57,18 @@
   _dm-rectangles.find(r => r.rows == size.rows and r.cols == size.cols).capacity
 }
 
+/// The longest payload of the same document: `D/ACD/UND/NTE/5-000A` gives
+/// `D/ACD/UND/NTE/5-FFFF+ZZZZ`, the page as many `F`s and a token of `Z`s. In
+/// every encodation `F` costs as much as any hex digit and `Z` as much as any
+/// token character, so this holds every page, with a token or without. A
+/// payload that is not a page payload is its own worst case.
+#let _dm-worst-case(payload) = {
+  let m = payload.match(regex("^(.+)-([0-9A-F]{4,})(\+[0-9A-Z]{4})?$"))
+  if m == none { payload } else { m.captures.at(0) + "-" + "F" * m.captures.at(1).len() + "+ZZZZ" }
+}
+
 #let _dm-rectangle(payload) = {
-  let needed = _dm-capacity(_dm-auto-size(payload))
+  let needed = _dm-capacity(_dm-auto-size(_dm-worst-case(payload)))
   _dm-rectangles.find(r => r.capacity >= needed)
 }
 
@@ -72,12 +81,8 @@
     show-hrt: false,
     scale: 0.5,
   )
-  let suffix = if mds-token == none { none } else { "+" + mds-token }
-  if suffix == none or not payload.ends-with(suffix) { return box(tiaoma.data-matrix(payload, options: options)) }
   let size = _dm-rectangle(payload)
-  let symbol = tiaoma.data-matrix(payload, options: options + if size == none { (:) } else { (option-2: size.option) })
-  let tokenless = _dm-auto-size(payload.slice(0, payload.len() - suffix.len()))
-  box(height: tokenless.rows * _dm-module, align(horizon, symbol))
+  box(tiaoma.data-matrix(payload, options: options + if size == none { (:) } else { (option-2: size.option) }))
 }
 
 #let barcode(payload, fg: auto, bg: auto) = box(tiaoma.code128(

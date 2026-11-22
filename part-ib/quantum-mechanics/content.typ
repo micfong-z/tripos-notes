@@ -21,4 +21,16 @@ This document is typeset using #link("https://typst.app/")[Typst]. All figures a
 
 #include "chapters/chapter-1.typ"
 
+#pagebreak()
+
+#include "chapters/chapter-2.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-3.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-4.typ"
+
 #end-of-document()

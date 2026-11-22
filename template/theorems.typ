@@ -12,7 +12,10 @@
 #import "@preview/ctheorems:1.1.3": thmenv, thmrules
 #import "@preview/titleize:0.1.1": titlecase
 #import "micfong/src/theorems.typ" as ds
-#import "micfong/src/elements.typ": callout as ds-callout, important as ds-important
+#import "micfong/src/elements.typ": (
+  callout as ds-callout, caution as ds-caution, important as ds-important, note as ds-note, rule as ds-rule,
+  tip as ds-tip, warning as ds-warning,
+)
 #import "config.typ": colors, is-html
 
 // ------------------------------------------------------------------------- HTML
@@ -110,3 +113,38 @@
 #let notation(content) = callout("Notation", colors.blue, content)
 #let claim(content) = callout("Claim", colors.orange, content)
 #let exercise(content) = callout("Exercise", colors.purple, content)
+
+// The design system's alerts draw an MDI icon, which needs the collection only
+// its PDF layouts provide; in HTML they are plain callouts, as `important` is.
+#let note(content) = if is-html { callout("Note", colors.blue, content) } else { ds-note(content) }
+#let tip(content) = if is-html { callout("Tip", colors.green, content) } else { ds-tip(content) }
+#let warning(content) = if is-html { callout("Warning", colors.orange, content) } else { ds-warning(content) }
+#let caution(content) = if is-html { callout("Caution", colors.red, content) } else { ds-caution(content) }
+
+// ---------------------------------------------------------------------- intuition
+
+/// An aside for intuition rather than proof: a picture, a worked case, the
+/// idea behind a statement. Every one carries the label `<intuition>`, so a
+/// document drops them all with one rule before its content, as in
+///
+///     #show <intuition>: none
+///     #include "content.typ"
+///
+/// They are unnumbered and hold no labels, so dropping them renumbers nothing
+/// and breaks no reference. In PDF each is a box ruled all round with a dashed
+/// purple line, with no heading; in HTML it is a simple callout without its
+/// marker, so the exporter still treats it as a source block.
+#let intuition(content) = {
+  let aside = if is-html {
+    html.div(class: "typst-intuition typst-simple-callout", block(width: 100%, content))
+  } else {
+    block(
+      width: 100%,
+      stroke: (paint: colors.purple.base, thickness: ds-rule, dash: "dashed"),
+      inset: (x: 1em, y: 0.75em),
+      breakable: true,
+      content,
+    )
+  }
+  [#aside<intuition>]
+}

@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(5)
 
 = Rigid Bodies
 
@@ -24,7 +25,7 @@ $
 $
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e24.svg", width: 20em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e24.svg", width: 20em)
 ]
 
 We have
@@ -129,7 +130,7 @@ where $x_perp$ is the perpendicular distance from $vb(x)$ to the axis of rotatio
   1. Consider a rotating hoop of radius $a$. We have
 
     #align(center)[
-      #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e25.svg", width: 8em)
+      #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e25.svg", width: 8em)
     ]
 
     $
@@ -141,7 +142,7 @@ where $x_perp$ is the perpendicular distance from $vb(x)$ to the axis of rotatio
   2. Consider a rotating rod of length $ell$ about an axis through an endpoint.
 
     #align(center)[
-      #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e26.svg", width: 8em)
+      #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e26.svg", width: 8em)
     ]
 
     Then
@@ -155,7 +156,7 @@ where $x_perp$ is the perpendicular distance from $vb(x)$ to the axis of rotatio
   3. Consider a rotating disc of radius $a$ about an axis through its centre.
 
     #align(center)[
-      #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e27.svg", width: 8em)
+      #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e27.svg", width: 8em)
     ]
 
     Then
@@ -169,7 +170,7 @@ where $x_perp$ is the perpendicular distance from $vb(x)$ to the axis of rotatio
   4. Consider a rotating sphere of radius $a$ about an axis through its centre.
 
     #align(center)[
-      #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e28.svg", width: 4em)
+      #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e28.svg", width: 4em)
     ]
 
     Then
@@ -195,7 +196,7 @@ We will now consider less symmetric axes.
   Consider any 2D body.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e29.svg", width: 16em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e29.svg", width: 16em)
   ]
 
   Then
@@ -212,7 +213,7 @@ We will now consider less symmetric axes.
 #theorem[Parallel Axis Theorem][
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e30.svg", width: 22em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e30.svg", width: 22em)
   ]
 
 
@@ -260,7 +261,7 @@ We will now consider less symmetric axes.
   Consider a rotating disc about an axis through its edge.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e31.svg", width: 8em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e31.svg", width: 8em)
   ]
 
   We have
@@ -317,7 +318,7 @@ where $R_z$ is the $z$-component of the #ponder("dynamics.centre-of-mass")[centr
   Consider a rigid rod pendulum of mass $M$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e32.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e32.svg", width: 12em)
   ]
 
   We will carry out calculation in two ways:
@@ -339,7 +340,7 @@ where $R_z$ is the $z$-component of the #ponder("dynamics.centre-of-mass")[centr
     To check that the angular velocity about #ponder("dynamics.centre-of-mass")[CoM] is the same as that about the pivot, we have
 
     #align(center)[
-      #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e33.svg", width: 6em)
+      #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e33.svg", width: 6em)
     ]
 
 
@@ -364,7 +365,7 @@ where $R_z$ is the $z$-component of the #ponder("dynamics.centre-of-mass")[centr
   No-slip rolling occurs when the #ponder("dynamics.friction")[friction] between the ball and the ground is so strong that the relative velocity between the point of contact and the ground is zero. Compare:
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e34.svg", width: 22em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e34.svg", width: 22em)
   ]
 
   The kinetic energy is given by, with $omega = dot(theta)$ and noting that $dot(theta) = (v)/(a)$,
@@ -382,7 +383,7 @@ where $R_z$ is the $z$-component of the #ponder("dynamics.centre-of-mass")[centr
   In the case where the ball rolls down a slope,
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e35.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e35.svg", width: 12em)
   ]
 
   The #ponder("dynamics.conservation-of-energy")[conserved energy] is
@@ -402,7 +403,7 @@ where $R_z$ is the $z$-component of the #ponder("dynamics.centre-of-mass")[centr
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e36.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e36.svg", width: 12em)
   ]
 
   Then
@@ -420,13 +421,13 @@ where $R_z$ is the $z$-component of the #ponder("dynamics.centre-of-mass")[centr
 Objects on a table does not fall through the table, because the table exerts a *normal force* on the object that pushes it away. #fade[[Microscopic origin of normal forces is electrostatic repulsion and the Pauli exclusion principle.]]
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e37.svg", width: 18em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e37.svg", width: 18em)
 ]
 
 At an angle,
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e38.svg", width: 18em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e38.svg", width: 18em)
 ]
 
 
@@ -443,7 +444,7 @@ where $mu$ is the #ponder("dynamics.friction")[coefficient of friction].
 Normal forces also product elastic bounces:
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e39.svg", width: 16em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e39.svg", width: 16em)
 ]
 
 Normal force on impact is in the direction normal to the surface at point of impact.

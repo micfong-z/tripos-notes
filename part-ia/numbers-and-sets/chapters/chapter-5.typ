@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(5)
 
 = The #ponder("analysis.real-numbers")[Reals]
 
@@ -313,7 +314,7 @@ $
   1. $0, (1)/(2), (2)/(3), (3)/(4), (4)/(5), ...$, _i.e._ $a_n = 1-(1)/(n)$ tends to $1$ as $n$ tends to $oo$.
 
     #align(center)[
-      #dynamic-svg("/part-ia/numbers-and-sets/media/d3e1.svg", width: 20em)
+      #dynamic-svg2("/part-ia/numbers-and-sets/media/d3e1.svg", width: 20em)
     ]
 
     Given $epsilon > 0$, choose $N > (1)/(epsilon)$ (using @axiom-of-archimedes[Axiom of Archimedes]). Then if $n >= N$,

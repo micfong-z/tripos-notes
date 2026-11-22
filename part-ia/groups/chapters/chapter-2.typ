@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 #lecture-separator(lecture: 6, date: "2025-10-22")
 
@@ -139,7 +140,7 @@ We have seen that every #ponder("algebra.subgroup")[subgroup] leads to an inclus
   2. The *#ponder("algebra.image-kernel")[kernel]* of $phi$ is $ker phi = { g in G: phi(g) = e_H }.$
 
   #align(center)[
-    #dynamic-svg("/part-ia/groups/media/d3e1.svg", width: 16em)
+    #dynamic-svg2("/part-ia/groups/media/d3e1.svg", width: 16em)
   ]
 ] <image-kernel>
 

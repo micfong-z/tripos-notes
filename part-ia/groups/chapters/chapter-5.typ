@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(5)
 
 #lecture-separator(lecture: 12, date: "2025-11-05")
 
@@ -16,7 +17,7 @@ This chapter is about an interesting #ponder("algebra.group")[group]. It is almo
 This set is called a #ponder("geometry.riemann-sphere")[sphere] because we can visualize it as follows.
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d7e1.svg", width: 28em)
+  #dynamic-svg2("/part-ia/groups/media/d7e1.svg", width: 28em)
 ]
 
 We can define a map $pi: CC->S^2$ called the *stereographic projection*. It identifies $CC$ with all the points on the #ponder("geometry.riemann-sphere")[sphere] except the north pole at $oo$.
@@ -234,7 +235,7 @@ Just like for dihedral groups, we can use the #ponder("algebra.mobius-three-poin
   - $l union {oo}$ where $l$ is a Euclidean straight line in $CC$.
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d7e2.svg", width: 16em)
+  #dynamic-svg2("/part-ia/groups/media/d7e2.svg", width: 16em)
 ]
 ]<circle-in-riemann-sphere>
 
@@ -245,7 +246,7 @@ $
 for some $a in CC$ and $r > 0$,
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d7e3.svg", width: 5em)
+  #dynamic-svg2("/part-ia/groups/media/d7e3.svg", width: 5em)
 ]
 
 while lines are described by
@@ -255,7 +256,7 @@ $
 $
 
 #align(center)[
-  #dynamic-svg("/part-ia/groups/media/d7e4.svg", width: 10em)
+  #dynamic-svg2("/part-ia/groups/media/d7e4.svg", width: 10em)
 ]
 
 #theorem[#ponder("algebra.mobius-circle-preservation")[Circles and Möbius Transformations]][

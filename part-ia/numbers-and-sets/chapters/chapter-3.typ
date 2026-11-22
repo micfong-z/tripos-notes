@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 = How to Count
 
@@ -268,7 +269,7 @@ What can we say about the relationship between #ponder("set-theory.cardinality")
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/numbers-and-sets/media/d2e1.svg", width: 28em)
+    #dynamic-svg2("/part-ia/numbers-and-sets/media/d2e1.svg", width: 28em)
   ]
 ]
 

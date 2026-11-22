@@ -2,12 +2,13 @@
 // (main.typ) and a series volume can both include it.
 
 #import "prelude.typ": *
+#show <intuition>: none
 
 These are Zixuan's notes for *Part IB – Methods* at the University of Cambridge in 2026. The notes are not endorsed by the lecturers or the University, and all errors are my own.
 
 The latest version of this document is available at #link("https://academic.micfong.space")[academic.micfong.space]. Please direct any comments to my CRSid email or use the contact details listed on the site.
 
-This document is typeset using #link("https://typst.app/")[Typst]. All figures are created using #link("https://inkscape.org/")[Inkscape].
+This document is typeset using #link("https://typst.app/")[Typst]. Almost all figures are created using #link("https://inkscape.org/")[Inkscape] and #link("https://uk.mathworks.com/products/matlab.html")[MATLAB].
 
 #contents()
 
@@ -20,5 +21,17 @@ This document is typeset using #link("https://typst.app/")[Typst]. All figures a
 #pagebreak()
 
 #include "chapters/chapter-1.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-2.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-3.typ"
+
+#pagebreak()
+
+#include "chapters/chapter-4.typ"
 
 #end-of-document()

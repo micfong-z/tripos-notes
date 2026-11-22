@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 = Integration
 
@@ -7,7 +8,7 @@
 We want to define $integral_a^b f(x) dif x$ as the signed area under the graph of $f$. If the region enclosed by the graph if a simple shape, then we can define the area using geometry. However, in general, the region may be very complicated, and we need to try to approximate.
 
 #align(center)[
-  #dynamic-svg("/part-ia/analysis-i/media/d1e3.svg", width: 36em)
+  #dynamic-svg2("/part-ia/analysis-i/media/d1e3.svg", width: 36em)
 ]
 
 #definition[Upper/Lower Riemann Sums][

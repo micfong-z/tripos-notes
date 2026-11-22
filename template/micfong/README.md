@@ -134,22 +134,22 @@ middle of the page.
 ## MDS integration
 
 MDS (the Micfong Document System) registers every build, and resolves a scanned page code back to the exact
-version and page. None of the template's support for it changes what a tokenless build prints.
+version and page. A tokened build prints exactly what a tokenless build prints, except inside its codes.
 
 **Page payloads.** Every page header encodes `page-payload(doc-id, n)` in its Data Matrix: `<doc-id>-<n in hex,
 at least 4 digits>` (payload v1, `D/ACD/UND/NTE/5-000A`), plus `+<token>` when the build has an `mds-token`
 (payload v2, `D/ACD/UND/NTE/5-000A+K7Q2`). `n` is the physical page within the document or volume. A series
 cover encodes `S/…/1-0001+<token>`, and every volume page carries the series build's token.
 
-**Symbol size.** Tokenless symbols keep Zint's automatic size, so they are byte for byte what earlier builds
-printed. A tokened symbol would otherwise grow into a square (`20×20` for `D/ACD/UND/NTE/5-000A+K7Q2`), so it
-uses the smallest rectangular ECC200 size that holds the payload: Zint's own automatic choice gives the data's
-capacity class, and the first of `8×18`, `8×32`, `12×26`, `12×36`, `16×36`, `16×48` with at least that capacity is
-used. A `KIND/DOM/AREA/TYPE/n` ID with a serial up to 9999 and a page up to `FFFF` always fits `12×36` (3.2 × 9.5
-mm, the height of today's `12×26`); longer payloads, such as five- or six-digit serials, get `16×36`. The symbol
-sits in a box as tall as the tokenless symbol for the same page would be, so the wordmark, the running title and
-the rule below never move: a tokened build differs from a tokenless one only inside the symbol. `tests/payloads.typ` prints the boundary payloads and
-the legacy forms, one per page; compile it with and without `--input mds-token=…` and scan it with `mds scan`.
+**Symbol size.** Every page of a document prints the same rectangular ECC200 size, with a token or without.
+Zint's automatic size would change from page to page: `D/ACD/UND/NTE/10-0009` fits `12×26`, `-000A` needs the
+`18×18` square, and a token turns `12×26` into `20×20`. So the size comes from the document's longest payload, its
+doc id with every page digit `F` and the token `ZZZZ` (`D/ACD/UND/NTE/10-FFFF+ZZZZ`): Zint's automatic choice for
+that payload gives its capacity class, and the first of `8×18`, `8×32`, `12×26`, `12×36`, `16×36`, `16×48` with at
+least that capacity is used. A `KIND/DOM/AREA/TYPE/n` ID with a serial up to 9999 prints `12×36` on every page
+(3.2 × 9.5 mm, as tall as `12×26`); five- and six-digit serials print `16×36`. A payload that is not a page
+payload is sized by itself. `tests/payloads.typ` prints the boundary payloads and the legacy forms, one per page;
+compile it with and without `--input mds-token=…` and scan it with `mds scan`.
 
 **Page records.** Each header also emits a zero-size `metadata((p, code_id, code_page, label)) <mds-page>`:
 the physical page, the code it prints (`none` without a doc id or with `codes: false`) and its printed page

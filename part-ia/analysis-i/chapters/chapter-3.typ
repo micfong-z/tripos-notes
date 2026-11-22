@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 = Differentiation
 
@@ -226,7 +227,7 @@ We shall consider an easier case first.
 #proof[ #fade[[of @mean-value-theorem[Mean Value Theorem]]]
 
   #align(center)[
-    #dynamic-svg("/part-ia/analysis-i/media/d1e2.svg", width: 28em)
+    #dynamic-svg2("/part-ia/analysis-i/media/d1e2.svg", width: 28em)
   ]
 
   Let $phi(x) = f(x) - ell(x)$. Then $phi(a) = phi(b) = 0$ but also $phi'(x) = f'(x) - (f(b)-f(a))/(b-a)$.

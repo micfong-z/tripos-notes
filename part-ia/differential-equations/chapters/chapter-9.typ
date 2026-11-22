@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(9)
 
 #lecture-separator(lecture: 20, date: "2025-11-24")
 
@@ -16,7 +17,7 @@ In this section we will discuss
 Consider $f(x, y)$ and a vector displacement $dif vb(s) = vecrow(dif x, dif y)$.
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d10e1.svg", width: 18em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d10e1.svg", width: 18em)
 ]
 
 The infinitesimal change in $f$ along $dif vb(s)$ is given by
@@ -79,11 +80,11 @@ $
 === Types of Stationary Points
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d10e2.svg", width: 40em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d10e2.svg", width: 40em)
 
-  #dynamic-svg("/part-ia/differential-equations/media/d10e3.svg", width: 40em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d10e3.svg", width: 40em)
 
-  #dynamic-svg("/part-ia/differential-equations/media/d10e4.svg", width: 40em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d10e4.svg", width: 40em)
 ]
 
 
@@ -101,7 +102,7 @@ $
 $
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d10e5.svg", width: 20em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d10e5.svg", width: 20em)
 ]
 Along the line, $f(x(s), y(s))$ is a function of $s$, and we can use the usual #ponder("calculus.taylor-series")[Taylor series] for single variable functions:
 $
@@ -470,20 +471,20 @@ For $lambda_1 != 0, lambda_2 != 0$ and $lambda_1 != lambda_2$, we have the follo
 1. $lambda_1$ and $lambda_2$ are real and of opposite signs. WLOG suppose $lambda_1 > 0 > lambda_2$. In this case, $vb(v_1), vb(v_2)$ can be chosen to be real. The #ponder("ode.equilibrium-point")[fixed point] is a saddle point.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d11e1.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d11e1.svg", width: 16em)
   ]
 
 2. $lambda_1$ and $lambda_2$ are real and have the same sign. WLOG suppose $abs(lambda_1) > abs(lambda_2)$.
 
   - If both are positive, then the #ponder("ode.equilibrium-point")[fixed point] is an unstable node.
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d11e2.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d11e2.svg", width: 16em)
   ]
 
   - If both are negative, then the #ponder("ode.equilibrium-point")[fixed point] is a stable node.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d11e3.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d11e3.svg", width: 16em)
   ]
 3. $lambda_1$ and $lambda_2$ are complex conjugates, then $lambda_2 = overline(lambda_1)$ and $vb(v_2) = overline(vb(v_1))$. Then,
 
@@ -496,16 +497,16 @@ For $lambda_1 != 0, lambda_2 != 0$ and $lambda_1 != lambda_2$, we have the follo
   - If $re(lambda_1) > 0$, then we have a unstable spiral.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d11e4.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d11e4.svg", width: 16em)
   ]
   - If $re(lambda_1) < 0$, then we have a stable spiral.
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d11e5.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d11e5.svg", width: 16em)
   ]
 
   - If $re(lambda_1) = 0$, then we have a centre, with closed elliptical trajectories.
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d11e6.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d11e6.svg", width: 16em)
   ]
 
 #lecture-separator(lecture: 23, date: "2025-12-01")
@@ -581,7 +582,7 @@ This is a linear system of #ponder("ode.homogeneous-differential-equation")[homo
     Thus, it is a saddle point.
 
     #align(center)[
-      #dynamic-svg("/part-ia/differential-equations/media/d11e7.svg", width: 8em)
+      #dynamic-svg2("/part-ia/differential-equations/media/d11e7.svg", width: 8em)
     ]
 
   - At $(4, 0)$, we have
@@ -594,7 +595,7 @@ This is a linear system of #ponder("ode.homogeneous-differential-equation")[homo
     Thus, it is a saddle point.
 
     #align(center)[
-      #dynamic-svg("/part-ia/differential-equations/media/d11e8.svg", width: 8em)
+      #dynamic-svg2("/part-ia/differential-equations/media/d11e8.svg", width: 8em)
     ]
 
   - At $(1, 3)$, we have
@@ -612,7 +613,7 @@ This is a linear system of #ponder("ode.homogeneous-differential-equation")[homo
     At $(xi, eta) = (1, 0)$, we have $(dot(xi), dot(eta)) = (-2, 3)$, so the motion is counter-clockwise.
 
     #align(center)[
-      #dynamic-svg("/part-ia/differential-equations/media/d11e9.svg", width: 8em)
+      #dynamic-svg2("/part-ia/differential-equations/media/d11e9.svg", width: 8em)
     ]
 
   Now, we can sketch the overall #ponder("ode.phase-portrait")[phase portrait].

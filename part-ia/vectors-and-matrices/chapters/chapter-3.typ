@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 #lecture-separator(lecture: 9, date: "2025-10-28")
 
@@ -243,7 +244,7 @@ Consider $vb(R_i) in RR^n$ the rows, and $vb(C_i) in RR^n$ the columns of $matbo
   Note that $det matbold("Rot")(theta) = cos^2(theta) + sin^2(theta) = 1$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d5e1.svg", width: 14em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d5e1.svg", width: 14em)
   ]
 
 2. #ponder("geometry.reflection")[*Reflections.*]
@@ -254,7 +255,7 @@ Consider $vb(R_i) in RR^n$ the rows, and $vb(C_i) in RR^n$ the columns of $matbo
   Note that $det matbold("Ref")(theta) = - (cos^2(theta) + sin^2(theta)) = -1$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d5e2.svg", width: 14em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d5e2.svg", width: 14em)
   ]
 
 #proposition[Properties of rotations and reflections][
@@ -294,7 +295,7 @@ Consider $vb(R_i) in RR^n$ the rows, and $vb(C_i) in RR^n$ the columns of $matbo
     $
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d5e3.svg", width: 14em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d5e3.svg", width: 14em)
   ]
 
   This can be derived by decomposing $vb(x)$ into components #ponder("linear-algebra.parallel-vectors")[parallel] and #ponder("linear-algebra.orthogonality")[perpendicular] to $vb(n)$, and then rotating the #ponder("linear-algebra.orthogonality")[perpendicular] component in the plane #ponder("linear-algebra.orthogonality")[orthogonal] to $vb(n)$.
@@ -317,7 +318,7 @@ Consider $vb(R_i) in RR^n$ the rows, and $vb(C_i) in RR^n$ the columns of $matbo
 
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d5e4.svg", width: 14em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d5e4.svg", width: 14em)
   ]
 
 2. #ponder("geometry.reflection")[*Reflections.*]
@@ -410,7 +411,7 @@ Consider $vb(R_i) in RR^n$ the rows, and $vb(C_i) in RR^n$ the columns of $matbo
 ]
 
 #example[
-  Consider $V = M_(2 times 2)(RR)$ and $W = RR^3$. Hence $dim V = 4$ and $dim W = 3$. Consider the map
+  Consider $V = MM_(2 times 2)(RR)$ and $W = RR^3$. Hence $dim V = 4$ and $dim W = 3$. Consider the map
   $
     T: V-> W quad "with" quad mat(a, b; c, d) |-> vec(a + b, c, d).
   $
@@ -1385,13 +1386,13 @@ The possible scenarios are as follows:
   - if $rank matbold(A) = 2$, then the planes may intersect in a line as in the homogeneous case, or there is no solution.
 
     #align(center)[
-      #dynamic-svg("/part-ia/vectors-and-matrices/media/d6e1.svg", width: 18em)
+      #dynamic-svg2("/part-ia/vectors-and-matrices/media/d6e1.svg", width: 18em)
     ]
 
   - if $rank matbold(A) = 1$, then either all three planes coincide as in the homogeneous case, or there is no solution.
 
     #align(center)[
-      #dynamic-svg("/part-ia/vectors-and-matrices/media/d6e2.svg", width: 18em)
+      #dynamic-svg2("/part-ia/vectors-and-matrices/media/d6e2.svg", width: 18em)
     ]
 
 === Gaussian Elimination

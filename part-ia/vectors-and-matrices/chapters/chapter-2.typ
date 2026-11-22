@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 #lecture-separator(lecture: 3, date: "2025-10-14")
 
@@ -48,14 +49,14 @@ If we choose $O$ as the origin, then point $A$ has position vector $vb(a)=arrow(
 
 
     #align(center)[
-      #dynamic-svg("/part-ia/vectors-and-matrices/media/d2e1.svg", width: 12em)
+      #dynamic-svg2("/part-ia/vectors-and-matrices/media/d2e1.svg", width: 12em)
     ]
 
   - *Scalar multiplication.* Given $vb(a)$ the position vector of a point $A$, and $lambda in RR$, $lambda vb(a)$ is a position vector of a point on line $O A$, with length $abs(lambda vb(a))=abs(lambda) abs(vb(a))$, in the direction as shown follows.
 
 
     #align(center)[
-      #dynamic-svg("/part-ia/vectors-and-matrices/media/d2e2.svg", width: 24em)
+      #dynamic-svg2("/part-ia/vectors-and-matrices/media/d2e2.svg", width: 24em)
     ]
 
 ]
@@ -131,10 +132,10 @@ We can actually derive @rn-scalar-product.
 #proof[
   #set math.equation(numbering: "«1")
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/dxe1.svg", width: 10em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/dxe1.svg", width: 10em)
   ]
   For any $x, y in RR^3$, we have
-  $ |vb(x)-vb(y)|^2 = |vb(x)|^2+|vb(y)|^2-2|vb(x)| |vb(y)| cos theta quad "by cosine rule." $ <eq1>
+  $ |vb(x)-vb(y)|^2 = |vb(x)|^2+|vb(y)|^2-2|vb(x)| |vb(y)| cos theta. #eq-note[by cosine rule] $ <eq1>
   But from the definition of #ponder("linear-algebra.dot-product")[scalar product],
   $
     |vb(x) - vb(y)|^2 & = (vb(x) - vb(y)) dot (vb(x) - vb(y)) \
@@ -173,8 +174,8 @@ We can now form an inequality that we will encounter various times in various fo
     abs(vb(x)-lambda vb(y))^2 &>= 0 \
     (vb(x)-lambda vb(y)) dot (vb(x)-lambda vb(y)) &>=0\
     abs(vb(x))^2 + lambda^2 abs(vb(y))^2 - 2 lambda vb(x) dot vb(y) &>= 0 \
-    lambda^2 abs(vb(y))^2- 2 lambda vb(x) dot vb(y) + abs(vb(x))^2 &>= 0 & quad "by rearranging as a quadratic of" lambda\
-    4 (vb(x) dot vb(y))^2 - 4 abs(vb(x))^2 abs(vb(y))^2 &<= 0 & quad "by taking discriminant"\
+    lambda^2 abs(vb(y))^2- 2 lambda vb(x) dot vb(y) + abs(vb(x))^2 &>= 0 #eq-note[by rearranging as a quadratic of $lambda$]\
+    4 (vb(x) dot vb(y))^2 - 4 abs(vb(x))^2 abs(vb(y))^2 &<= 0 #eq-note[by taking discriminant]\
     abs(vb(x) dot vb(y)) &<= abs(vb(x)) abs(vb(y)) .
   $
 ]
@@ -303,7 +304,7 @@ respectively.
   Fix a vector $vb(a)$ and consider $vb(x) perp vb(a)$. Then, computing $vb(a) times vb(x)$ gives a vector that scales $vb(x)$ by $abs(vb(a))$ and rotates it by $(pi)/(2)$ in a plane that is #ponder("linear-algebra.orthogonality")[orthogonal] to $vb(a)$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d3e1.svg", width: 24em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d3e1.svg", width: 24em)
   ]
 ]
 
@@ -356,7 +357,7 @@ $
 We can interpret @prop-triple-product using a parallelepiped.
 
 #align(center)[
-  #dynamic-svg("/part-ia/vectors-and-matrices/media/d3e2.svg", width: 42em)
+  #dynamic-svg2("/part-ia/vectors-and-matrices/media/d3e2.svg", width: 42em)
 ]
 
 Note that $vb(c) dot (vb(a) times vb(b)) = vb(a) dot (vb(b) times vb(c))$ is a signed volume:
@@ -402,7 +403,7 @@ $ (vb(a) times vb(b)) times vb(c) = (vb(a) dot vb(c)) vb(b) - (vb(b) dot vb(c)) 
   $ vb(r) = vb(a) + lambda vb(u). quad (lambda in RR) $
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d3e3.svg", width: 20em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d3e3.svg", width: 20em)
   ]
 
   This form is equivalent to
@@ -419,7 +420,7 @@ $ (vb(a) times vb(b)) times vb(c) = (vb(a) dot vb(c)) vb(b) - (vb(b) dot vb(c)) 
   $ vb(r) = vb(a) + lambda vb(u) + mu vb(v). quad (lambda, mu in RR) $
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d3e4.svg", width: 28em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d3e4.svg", width: 28em)
   ]
 ] <parametric-plane>
 
@@ -484,7 +485,7 @@ and $(k)/(|vb(n)|)$ is the perpendicular distance from the origin to the plane.
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/dxe2.svg", width: 20em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/dxe2.svg", width: 20em)
   ]
 
   Then, the shortest distance between $L_1$ and $L_2$ is attained at a line #ponder("linear-algebra.orthogonality")[perpendicular] to both lines, with direction $vb(u_1) times vb(u_2).$
@@ -672,7 +673,7 @@ We can now use index notation to prove the #ponder("linear-algebra.vector-triple
       & = epsilon_(i j k) a_j epsilon_(k p q) b_p c_q \
       & = (epsilon_(i j k) epsilon_(k p q)) a_j b_p c_q \
       & = (epsilon_(i j k) epsilon_(p q k)) a_j b_p c_q \
-      & = (delta_(i p) delta_(j q) - delta_(i q) delta_(j p)) a_j b_p c_q quad "so" i = p "in the first term, and" j = q "in the second"\
+      & = (delta_(i p) delta_(j q) - delta_(i q) delta_(j p)) a_j b_p c_q #eq-note[so $i = p$ in the first term, and $j = q$ in the second]\
       & = a_j c_j b_i - a_j b_j c_i \
       & = (vb(a) dot vb(c)) b_i - (vb(a) dot vb(b)) c_i. \
     $
@@ -710,13 +711,13 @@ With index notation, we can also consider *spherical trigonometry*.
 Now consider a unit sphere in $RR^3$ with centre $vb(O)$, and points $A, B, C$ on the surface of the sphere with position vectors $vb(a), vb(b), vb(c)$ respectively.
 
 #align(center)[
-  #dynamic-svg("/part-ia/vectors-and-matrices/media/d4e1.svg", width: 16em)
+  #dynamic-svg2("/part-ia/vectors-and-matrices/media/d4e1.svg", width: 16em)
 ]
 
 The distance from $A$ to $B$, $delta(A, B)$, is an arc length on the sphere.
 
 #align(center)[
-  #dynamic-svg("/part-ia/vectors-and-matrices/media/d4e2.svg", width: 22em)
+  #dynamic-svg2("/part-ia/vectors-and-matrices/media/d4e2.svg", width: 22em)
 ]
 
 In the same way, $abs(vb(a) times vb(b)) = sin delta(A, B)$.
@@ -970,8 +971,8 @@ In particular, for any $vb(v_1), vb(v_2), ..., vb(v_r) in V$, $ span{vb(v_1), ..
   Then
 
   $
-    0 = iprod(vb(v_j), sum_i alpha_i vb(v_i)) & = sum_i alpha_i iprod(vb(v_j), vb(v_i)) quad "by linearity" \
-                                             & = alpha_j iprod(vb(v_j), vb(v_j)) quad "by orthogonality" \
+    0 = iprod(vb(v_j), sum_i alpha_i vb(v_i)) & = sum_i alpha_i iprod(vb(v_j), vb(v_i)) #eq-note[by linearity] \
+                                             & = alpha_j iprod(vb(v_j), vb(v_j)) #eq-note[by orthogonality] \
                                              & = alpha_j abs(vb(v_j))^2.
   $
 

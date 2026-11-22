@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(2)
 
 = Integration
 
@@ -14,7 +15,7 @@ This section talks about the _area under a curve_ idea.
   where $Delta x =(b-a)/(N)$ and $x_(n)=a + n Delta x$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d2e1.svg", width: 22em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d2e1.svg", width: 22em)
   ]
 ] <def-int-riemann>
 
@@ -27,7 +28,7 @@ This section talks about the _area under a curve_ idea.
 How are we sure this limit evaluates to the _area under a curve_ idea? We shall consider one rectangle at first.
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d2e2.svg", width: 22em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d2e2.svg", width: 22em)
 ]
 
 We will need to borrow this following idea from IA Analysis I for now:
@@ -41,7 +42,7 @@ We will need to borrow this following idea from IA Analysis I for now:
 Hence, if $f(x)$ is differentiable, then by #ponder("calculus.taylors-theorem")[Taylor's theorem]
 $
   f(c_n) & = f(x_n) + Order(c_n - x_n) quad "as" c_n - x_n -> 0 \
-         & = f(x_n) + Order(Delta x) quad "since" Delta x >= c_n - x_n. \
+         & = f(x_n) + Order(Delta x). #eq-note[since $Delta x >= c_n - x_n$] \
 $
 
 Hence,
@@ -68,8 +69,8 @@ This section talks about the _inverse of differentiation_ idea.
   By definition,
   $
     dv(F, x) & = lim_(h->0) (1)/(h) [integral_(a)^(x+h) f(t) dif t - integral_(a)^(x) f(t) dif t ] \
-                    & = lim_(h->0) (1)/(h) [integral_(x)^(x+h) f(t) dif t ] quad "by considering the integral as a sum" \
-                    & = lim_(h->0) (1)/(h) [f(x) h + Order(h^2)] quad "from MVT and Taylor's theorem" \
+                    & = lim_(h->0) (1)/(h) [integral_(x)^(x+h) f(t) dif t ] #eq-note[by considering the integral as a sum] \
+                    & = lim_(h->0) (1)/(h) [f(x) h + Order(h^2)] #eq-note[from MVT and Taylor's theorem] \
                     & = lim_(h->0) [f(x)+Order(h)] \
                     & = f(x). \
   $

@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(3)
 
 #lecture-separator(lecture: 6, date: "2026-02-03")
 
@@ -36,7 +37,7 @@ $
 where $vb(L)$ is the angular momentum, and $vb(p) = m vb(dot(x))$ is the linear momentum. Note that $vb(L)$ is #ponder("linear-algebra.orthogonality")[orthogonal] to both position and velocity/momentum.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e12.svg", width: 18em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e12.svg", width: 18em)
 ]
 
 $vb(L)$ is defined relative to an origin, here we are setting the origin at $vb(x)=vb(0)$, which will be generalised later.
@@ -76,7 +77,7 @@ $
 $
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e13.svg", width: 14em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e13.svg", width: 14em)
 ]
 
 In cartesian coordinates, #fade[[see IA Vector Calculus for more details]]
@@ -120,7 +121,7 @@ $
   Note that #ponder("dynamics.circular-motion")[circular motion] requires a centripetal force towards the origin.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e14.svg", width: 12em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e14.svg", width: 12em)
   ]
 ] <ex-circular-motion>
 
@@ -170,7 +171,7 @@ $
 $
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e15.svg", width: 22em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e15.svg", width: 22em)
 ]
 
 We have a centrifugal barrier at small $r$ due to the angular momentum term. The angular momentum prevents the particle from getting too close to the origin.
@@ -189,14 +190,14 @@ Different cases arise depending on the energy $E$.
 #lecture-separator(lecture: 7, date: "2026-02-05")
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e16.svg", width: 22em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e16.svg", width: 22em)
 ]
 
 Now, suppose instead that $V = -(k)/(r^n)$ where $n > 2$. Then
 
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e17.svg", width: 22em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e17.svg", width: 22em)
 ]
 
 Note that in $V = -(k)/(r^n)$ there are no stable bound orbits, and the particle can fall to the origin.
@@ -270,7 +271,7 @@ $
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e18.svg", width: 16em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e18.svg", width: 16em)
   ]
 
   where $a, b, x_c$ are given in terms of $e$ and $r_0$. For example,
@@ -302,14 +303,14 @@ $
   Note that $r->oo$ at $cos theta = - (1)/(e)$. Hence, the asymptotes satisfy $theta > pi / 2$. Hence,
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e19.svg", width: 10em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e19.svg", width: 10em)
   ]
 ]
 
 We can evaluate the energy on the solution,
 $
   E & = (1)/(2) m dot(r)^2 + (m l^2)/(2 r^2) - (k m)/(r) \
-    & = (m k^2)/(2 l^2) (e^2 - 1) quad "by algebra". \
+    & = (m k^2)/(2 l^2) (e^2 - 1). #eq-note[by algebra] \
 $
 Hence the energy is negative for bounded orbits, zero for parabolic orbits, and positive for hyperbolic orbits. In particular, for a #ponder("dynamics.circular-motion")[circular orbit],
 $
@@ -335,7 +336,7 @@ A consequence of the above are #ponder("dynamics.keplers-laws")[Kepler's laws] o
 
   / K2: We have
     #align(center)[
-      #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e20.svg", width: 16em)
+      #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e20.svg", width: 16em)
     ]
 
     where
@@ -369,7 +370,7 @@ A consequence of the above are #ponder("dynamics.keplers-laws")[Kepler's laws] o
         & = (2)/(l) A \
         & = (2)/(l) ppi a b \
         & = (2 ppi)/(l) (r_0^2)/((1-e^2)^((3)/(2))) \
-        & = (2 ppi)/(sqrt(G M) ) ((r_0)/(1-e^2))^((3)/(2)) quad "by" l^2=k r_0 \
+        & = (2 ppi)/(sqrt(G M) ) ((r_0)/(1-e^2))^((3)/(2)) #eq-note[by $l^2=k r_0$] \
         & = (2 ppi)/(sqrt(G M) ) a^(3 slash 2) \
     $
     where $a = (r_0)/(1-e^2)$ is the semi-major axis of the ellipse.
@@ -384,7 +385,7 @@ Given a central potential $V(r)$ such that $V->0$ as $r->oo$, one can perform sc
   The #ponder("dynamics.impact-parameter")[*impact parameter*] $b$ is the distance of closest approach if there were no forces.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e21.svg", width: 21em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e21.svg", width: 21em)
   ]
 ] <def-impact-parameter>
 
@@ -424,7 +425,7 @@ with $r_0 = (l^2 m)/(kappa)$.
 We want to find the angle $phi$ through which the particle is scattered.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e22.svg", width: 22em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e22.svg", width: 22em)
 ]
 
 Note that incoming and outgoing #ponder("dynamics.impact-parameter")[impact parameters] are equal by conservation of $l$ and $E$. #fade[[And hence $v$ at infinity.]]

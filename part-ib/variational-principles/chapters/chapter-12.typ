@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(12)
 
 = The Jacobi Equation
 
@@ -58,7 +58,7 @@ Note that this is linear, so it can always be solved #fade[[but not necessarily 
   $
     -u'' -u=0 => u = A sin(x- x_0).
   $
-  So solutions oscillate with period $2 ppi$. Therefore we can find a solution with $u = 0$ on $[0, a]$ iff $a < ppi$. Therefore, we learn that a solution $y_0$ of the Euler-Lagrange equation is a local minimum of $F$ if $a < ppi$.
+  So solutions oscillate with period $2 ppi$. Therefore we can find a solution with $u != 0$ on $[0, a]$ iff $a < ppi$. Therefore, we learn that a solution $y_0$ of the Euler-Lagrange equation is a local minimum of $F$ if $a < ppi$.
 
   #fade[[We arrive at the same result as @ex-sl-example, but this is a weaker result since we did not prove that $y_0$ is not a local minimum if $a > ppi$.]]
 ]

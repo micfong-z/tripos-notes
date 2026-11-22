@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(3)
 
 = Legendre Transform
 
@@ -123,7 +123,7 @@ Legendre transforms are used extensively in physics. We will illustrate this in 
 
 Consider a system made of many molecules, say $10^23$. In *thermal equilibrium*, the macroscopic properties #fade[[involving only length scales $>>$ separation of molecules]] can be described by just a few quantities: total energy $E$, volume $V$, temperature $T$, pressure $P$, _etc._
 
-An *isolated system* is one that is not interacting with any other system, _e.g._ a gas in a vacuum flask. In thermal equilibrium, macroscopic physics of such a system is fully specified by $E, V$, but there exists an enormous number of configurations $Omega(E, V)$ of microscopic configurations that look identical macroscopically #fade[[$Omega ~ 10^10^23$.]]
+An *isolated system* is one that is not interacting with any other system, _e.g._ a gas in a vacuum flask. In thermal equilibrium, macroscopic physics of such a system is fully specified by $E, V$, but there exists an enormous number $Omega(E, V)$ of microscopic configurations that look identical macroscopically #fade[[$Omega ~ 10^10^23$.]]
 
 The *entropy* of the system is defined as
 $
@@ -150,7 +150,7 @@ $
   -F(T, V) := sup_S {T S - E(S, V)}.
 $
 
-One can show that the stability of equilibrium state implies that $E$ is convex w.r.t. $S$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
+One can show that the stability of equilibrium state implies that $E$ is strictly convex w.r.t. $S$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
 $
   T = (pdv(E, S))_V.
 $
@@ -175,7 +175,7 @@ Similarly, if we do not know @eq-3-4b, we can consider the Legendre transform of
 $
   -H(S, P) = sup_V (-P V - E(S, V)).
 $
-One can use stability to argue that $E$ is convex w.r.t. $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
+One can use stability to argue that $E$ is strictly convex w.r.t. $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
 $ P = -(pdv(E, V))_S. $
 Note that now we recover @eq-3-4b.
 
@@ -190,7 +190,7 @@ Finally, take the Legendre transform of $E(S, V)$ with respect to both $S$ and $
 $
   -G(T, P) = sup_(S, V) {T S - P V - E(S, V)}.
 $
-By stability, $E$ is convex w.r.t. both $S$ and $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
+By stability, $E$ is strictly convex w.r.t. both $S$ and $V$. Hence by @cor-legendre-transform-eq-3-1, the supremum is attained at the unique solution of
 $ T = (pdv(E, S))_V, quad P = -(pdv(E, V))_S. $
 Hence we recover @eq-3-4a and @eq-3-4b simultaneously.
 
@@ -210,4 +210,4 @@ $
   (pdv(, S) (pdv(E, V))_S)_V & = (pdv(, V) (pdv(E, S))_V)_S \
               -(pdv(P, S))_V & = (pdv(T, V))_S.
 $
-Hence we reach at a non-trivial relation between the thermodynamic potentials. We can reach 3 similar equations that follow from $F, H, G$ similarly. Those equations are called the *Maxwell relations*.
+Hence we arrive at a non-trivial relation between the thermodynamic variables. We can reach 3 similar equations that follow from $F, H, G$ similarly. Those equations are called the *Maxwell relations*.

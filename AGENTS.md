@@ -20,7 +20,8 @@ build/             compiled PDFs, not tracked
 A course's identity (part, title, lecturer, term, version, doc id, and any
 cover art or `numbered-equations`) is the `meta` dictionary in `meta.typ`. Its
 body, from the introduction through the chapter includes to
-`#end-of-document()`, is `content.typ`, which has no layout of its own.
+`#end-of-document()`, is `content.typ`, which has no layout of its own; only its
+chapters can also compile alone (see the template conventions).
 `main.typ` is only `#show: project.with(..meta)` and `#include "content.typ"`,
 and `part-ia/series.typ` wraps the same two files in `#volume(..meta)[...]`. A
 new chapter is therefore included from `content.typ`, and the table of contents
@@ -104,10 +105,19 @@ a non-contextual value.
   are its series layouts. Theorem environments in PDF are its numbered figures,
   so `@label` still reads "Theorem 3.2". In HTML they remain ctheorems
   environments, because the exporter depends on their markup.
-- A course's chapters import only `../prelude.typ`. The prelude is two lines:
-  the shared `/template/lib.typ` and the course's `symbols.typ`, which it
-  re-exports. Course notation therefore lives in one greppable file per course,
-  and may shadow a shared name (Groups redefines `im` as the image operator).
+- A course's chapters import only `../prelude.typ`. The prelude re-exports the
+  shared `/template/lib.typ` and the course's `symbols.typ`, and binds `chapter`
+  to the course's `meta`. Course notation therefore lives in one greppable file
+  per course, and may shadow a shared name (Groups redefines `im` as the image
+  operator).
+- Every chapter opens with its import and `#show: chapter.with(N)`, where `N` is
+  its number in the course, so it can be compiled on its own: opening one in
+  Tinymist and starting the preview shows only that chapter, with no `main.typ`
+  involved. The rule does nothing inside a course or series. Alone, a chapter
+  has the book's styling and numbering without the cover, equations count from
+  1, and a reference to another chapter's label shows the label's name, because
+  a typo and a label elsewhere look the same from inside one chapter. The full
+  build's red "(?)" is what catches a label that exists nowhere.
 - Notation packages a course needs (physica, mannot, fletcher, unify) are
   imported by its `symbols.typ`, so they reach chapters through the prelude.
   Vector notation is physica's throughout: `vb`/`vu` for bold and unit vectors,
@@ -124,18 +134,86 @@ a non-contextual value.
   theme. It stays out of `lib.typ` because finite loads cetz and a Graphviz
   plugin; a course that draws them imports it from its `symbols.typ`, as Markov
   Chains does.
+- Proof illustrations come from `template/illustrate.typ`: coloured, highlighted
+  and boxed terms in maths (`cblue`, `hblue`, `bblue`, and the same for red,
+  green, orange, purple and gray), `annot` for a few words under a tagged term,
+  `blocks`/`blk` for a matrix drawn as tinted blocks, and `canvas` (cetz) and
+  `fletcher-diagram` for drawings, all in the theme's colours. Under the HTML
+  target the markers fall back to plain coloured ink and `annot` draws nothing,
+  because mannot cannot lay them out there. Like `automata.typ` it stays out of
+  `lib.typ`; Linear Algebra and Markov Chains import it from `symbols.typ`. The
+  pictures go in `#intuition[...]` asides, leave the statements and proofs
+  uncoloured, and use a colour only where it means something.
 - `project()` applies the theorem rules and the fonts once. Chapters must not
   reapply them.
 - Tables are plain unless a row is marked with `table.header(...)`, which the
   design system sets in bold on a tint. Mark a table's header row that way;
   a table's own `stroke` or `fill` replaces the default styling.
+- Asides written for intuition rather than proof (pictures, worked cases) go in
+  `#intuition[...]`, a box ruled with a dashed purple line and no heading. Each
+  carries the label `<intuition>`, so `#show <intuition>: none` before a
+  course's content drops them all. They are unnumbered and hold no labels, so
+  dropping them renumbers nothing.
 - Anything that renders differently in HTML branches on `is-html` inside one
   definition. The `typst-*` class names are a contract with the Ponder exporter
   and the website CSS: do not rename them.
 - Figure paths are root-absolute (`/part-ia/groups/media/x.svg`) because the
   shared template resolves `read()` against its own file, not the caller.
-- `dynamic-svg` recolours black-on-white Inkscape figures for the dark theme, so
-  figures need only one asset.
+- Figures are included with `dynamic-svg2`, which inverts them for the dark
+  theme, so a figure needs only one asset; see Figures below. `dynamic-svg`, the
+  older black-to-white swap, is no longer used by any figure.
+
+## Figures
+
+Figures are hand-written SVGs in a course's `media/`, included as
+`#dynamic-svg2("/part-ib/methods/media/p9.svg", width: 20em)`. They all share
+one drawing style, and a new or redrawn figure follows it.
+
+- The dark theme passes every figure through `invert-svg`: it inverts each
+  colour, then rotates the hue back by 185°, over the gray 900 page. A figure
+  therefore has no background and nothing white or opaque gray in it: white
+  turns into a black patch and a light gray all but vanishes.
+- The viewBox is 13.9 units wide per em of the call's `width` (a `20em` figure
+  is 278 wide), so 13-unit labels print at about the body size. Labels are 13,
+  secondary text 12, tick labels 11, and sub- and superscripts about 68%.
+- Text is `font-family="Micfong Sans Math, IBM Plex Sans"`. Maths uses Unicode
+  math italic (𝑥, 𝜃, and bold italic 𝒂 for vectors); digits, operators, the
+  d of d𝑥, function names and words stay upright, and minus is U+2212. Keep
+  every word of a figure's text: a sentence inside a figure is part of the
+  notes.
+- Ink is black. Accent colours come only from the palette's 500 level: blue
+  `#007AF5`, red `#E43748`, orange `#EC6F27`, green `#14AE52`, purple
+  `#9154FF`, and gray `#808080` for secondary annotations.
+- Lines are 1.5 for the outline of a solid, 1 for ordinary lines and axes, 1.3
+  for function graphs, and 0.8 dashed `3 2.5` for hidden or construction
+  lines. Arrowheads are the filled triangle marker (`viewBox="0 0 10 10"`,
+  `markerWidth="7"`, `orient="auto-start-reverse"`).
+- Fills have three jobs and no others:
+  - Hatching marks the subject: blue 1-unit lines at a 6-unit pitch, at −45°,
+    with no background. A second set is red at +45°, so overlaps cross-hatch. A
+    2D region is hatched, never tinted.
+  - Tone says which way a flat face of a solid points: black at
+    `fill-opacity` 0.10 for a face towards the viewer and 0.22 for one turned
+    away, with top faces unfilled. It is translucent black rather than gray so
+    the dark theme makes it translucent white over the page. A tone stops only
+    at an edge, and never goes on a curved surface or a plane.
+  - Faint gridlines show curved surfaces and planes: 0.5 wide at
+    `stroke-opacity` 0.32, on the visible side only. Spheres get parallels and
+    meridians every 30°, cones their generators, and planes in space a thin
+    gray outline with a grid parallel to their edges. A computed surface keeps
+    its plotted mesh, at 0.55 wide and 0.6 opacity in its own colour.
+- 3D is a true orthographic projection with hidden edges dashed. Anything lying
+  in a plane is drawn foreshortened in that plane. A rotation arrow is a circle
+  around its axis, in the plane perpendicular to it, broken where it passes
+  behind the axis and turning by the right-hand rule when the axis has a
+  direction.
+- No label touches a line, an arrowhead, hatching, gridlines or another label.
+  Labels go in clear space; one that must sit inside hatching or a grid gets
+  that layer cut away under it with a mask, never a white halo, which the dark
+  theme would turn into a dark patch.
+- Function plots have boxed axes, a light gray grid (0.5 wide, 45% opacity),
+  curves 1.3 wide in their accent colour, and the same functions and ranges as
+  their source.
 
 ## Ponder
 

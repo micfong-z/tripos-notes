@@ -1,5 +1,5 @@
 #import "../prelude.typ": *
-#import "@preview/physica:0.9.8": *
+#show: chapter.with(10)
 
 #lecture-separator(lecture: 10, date: "2026-05-22")
 = Partial Differential Equations from Variational Principles
@@ -8,7 +8,7 @@ We will consider functionals of functions $vb(y): RR^m -> RR^n$ where $m > 1$, o
 $
   F[vb(y)] = integral_V f(vb(y), jacob vb(y), x_1, ..., x_m) dif x_1 ... dif x_m
 $
-where $V subset.eq RR^m$, and $jacob vb(y) = mat(bar, bar, dots.c, bar; pdv(vb(y), x_1), pdv(vb(y), x_2), ..., pdv(vb(y), x_m); bar, bar, dots.c, bar)$ #fade[[$m times n$ matrix, also known as the Jacobian matrix]].
+where $V subset.eq RR^m$, and $jacob vb(y) = mat(bar, bar, dots.c, bar; pdv(vb(y), x_1), pdv(vb(y), x_2), ..., pdv(vb(y), x_m); bar, bar, dots.c, bar)$ #fade[[$n times m$ matrix, also known as the Jacobian matrix]].
 
 Varying $vb(y)$ gives
 $
@@ -52,7 +52,7 @@ $ <eq-10-1>
 Therefore we can vary $h$ to $h + var(h)$ to get
 $
   var(A) & = integral_D (h_x (var(h))_x + h_y (var(h))_y) / sqrt(1+h_x^2 + h_y^2) dif x dif y \
-  & = integral_D (underbracket(((h_x var(x))/(sqrt(1 + h_x^2 + h_y^2) ))_x + ((h_y var(y))/(sqrt(1 + h_x^2 + h_y^2) ))_y, = 0 "with Green's theorem, since" var(h) = 0 "on" ∂D) - [((h_x)/(sqrt(1 + h_x^2 + h_y^2) ))_x + ((h_y)/(sqrt(1 + h_x^2 + h_y^2) ))_y] var(h)) dif x dif y\
+  & = integral_D (underbracket(((h_x var(h))/(sqrt(1 + h_x^2 + h_y^2) ))_x + ((h_y var(h))/(sqrt(1 + h_x^2 + h_y^2) ))_y, = 0 "with Green's theorem, since" var(h) = 0 "on" ∂D) - [((h_x)/(sqrt(1 + h_x^2 + h_y^2) ))_x + ((h_y)/(sqrt(1 + h_x^2 + h_y^2) ))_y] var(h)) dif x dif y\
   &= integral_D -[((h_x)/(sqrt(1 + h_x^2 + h_y^2) ))_x + ((h_y)/(sqrt(1 + h_x^2 + h_y^2) ))_y] var(h) dif x dif y.
 $
 
@@ -74,9 +74,9 @@ $
   ]
 ]
 
-Notice that one solution is $h = A x + B y + C$, _i.e._ a plane. However, this only satisfies the boundary conditions if the boundary curve $C$ is planar.
+Notice that one solution is $h = a x + b y + c$, _i.e._ a plane. However, this only satisfies the boundary conditions if the boundary curve $C$ is planar.
 
-One can also look for solutions that are surfaces of revolution #fade[[about $z$-axis]], _i.e._ $h(x, y) = z(r)$ where $r = sqrt(x^2 + y^2)$. Then the area functional becomes
+One can also look for solutions that are surfaces of revolution #fade[[about $z$-axis]], _i.e._ $h(x, y) = z(r)$ where $r = sqrt(x^2 + y^2)$. Then the minimal surface equation becomes
 $
   r z'' + z' + (z')^3 = 0,
 $
@@ -84,7 +84,7 @@ which is an ODE but still nonlinear. Instead, we can plug into @eq-10-1 #fade[[i
 $
   A[z] = 2 ppi integral r sqrt(1 + (z')^2) dif r.
 $
-Now extremising $A$ gives the Euler-Lagrange equation, and there is a first integral. #fade[[See Example Sheet 1, Question 10.]]
+Now extremising $A$ gives the Euler-Lagrange equation, and there is a first integral. #fade[[See Example Sheet 1, Question 8.]]
 
 == Vibrating String
 
@@ -111,7 +111,7 @@ $
   &= integral_(t_0)^(t_1) integral_0^a (underbracket(pdv(, t) (rho dot(y) var(y)) - pdv(, x) (T y' (var(y))), =0 "if" var(y) = 0 "on boundary") + (-rho dot.double(y) + T y'') var(y)) dif x dif t. quad
   & "similar to previous examples, IBP"
 $
-So $var(I)$ for arbitrary $var(y)$ iff
+So $var(I) = 0$ for arbitrary $var(y)$ iff
 $
   dot.double(y) - v^2 y'' = 0 quad "where" v^2 = T / rho
 $
@@ -149,7 +149,7 @@ $
 $
 where $vb(j)(t, vb(x))$ is the current density and $rho(t, vb(x))$ is the charge density. Varying $vb(A)$ and $phi$,
 $
-  var(I) &= integral_(t_0)^(t_1) integral_(RR^3) (epsilon_0 vb(E) dot (-grad var(phi) - pdv(var(vb(A)), t)) - (1)/(mu_0) underbracket(vb(B) dot (curl delta vb(A)), epsilon_(i j k) B_j ∂_j var(A_k)) + delta vb(A) dot vb(j) - var(phi) rho) dif^3 vb(x) dif t\
+  var(I) &= integral_(t_0)^(t_1) integral_(RR^3) (epsilon_0 vb(E) dot (-grad var(phi) - pdv(var(vb(A)), t)) - (1)/(mu_0) underbracket(vb(B) dot (curl delta vb(A)), epsilon_(i j k) B_i ∂_j var(A_k)) + delta vb(A) dot vb(j) - var(phi) rho) dif^3 vb(x) dif t\
   &= integral_(t_0)^(t_1) integral_(RR^3) (( epsilon_0 [- div (vb(E) var(phi)) + div vb(E) var(phi) - ∂_t (vb(E) dot var(vb(A))) + (∂_t vb(E)) dot var(vb(A))])\
     &quad quad quad quad -(1)/(mu_0) [∂_j (epsilon_(i j k) B_i var(A_k)) - (epsilon_(i j k) ∂_j B_i) var(A_k)] + var(vb(A)) dot vb(j) - var(phi) rho) dif^3 vb(x) dif t\
   &= "boundary terms" + integral_(t_0)^(t_1) integral_(RR^3) ((epsilon_0 div vb(E) - rho) var(phi) + (-(curl vb(B))/(mu_0) + epsilon_0 ∂_t vb(E) + vb(j)) dot var(vb(A))) dif^3 vb(x) dif t.

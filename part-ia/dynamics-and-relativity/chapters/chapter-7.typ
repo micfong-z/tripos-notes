@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(7)
 
 = Special Relativity
 
@@ -92,8 +93,8 @@ We have
 $
   x'' & = gamma_(-v) (x' + v t') \
       & = gamma_(-v) (gamma_v (x - v t) + v t') \
-      & = gamma^2 (x - v t) + gamma v t'      & quad "by" gamma_v = gamma_(-v) \
-      & = x                                   &           quad "by assumption" \
+      & = gamma^2 (x - v t) + gamma v t' #eq-note[by $gamma_v = gamma_(-v)$] \
+      & = x #eq-note[by assumption] \
 $
 So
 $
@@ -181,7 +182,7 @@ It is easy to check that if $abs(u')$ and $abs(v)$ are both less than $c$, then 
 Consider the following type of diagram
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e51.svg", width: 20em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e51.svg", width: 20em)
 ]
 
 We may put the axes for a frame $S'$ on the spacetime diagram of $S$:
@@ -191,7 +192,7 @@ We may put the axes for a frame $S'$ on the spacetime diagram of $S$:
 - $x'$ axis is at $t' = 0$, which gives $c t = (v)/(c) x$.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e52.svg", width: 12em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e52.svg", width: 12em)
 ]
 
 where the axes are symmetrical about the light ray $x = c t$.
@@ -201,7 +202,7 @@ where the axes are symmetrical about the light ray $x = c t$.
 We can draw lines at constant $t$ and $t'$ to get
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e53.svg", width: 24em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e53.svg", width: 24em)
 ]
 
 So $P_1$ and $P_2$ are simultaneous in $S$ but not in $S'$. This is the relativity of simultaneity.
@@ -209,7 +210,7 @@ So $P_1$ and $P_2$ are simultaneous in $S$ but not in $S'$. This is the relativi
 There is a direct consequence of the speed of light being the same, which is demonstrated by a famous illustration due to Einstein. Consider a train.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e54.svg", width: 18em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e54.svg", width: 18em)
 ]
 
 A light is emitted from the centre of the train. The light reaches the front and back of the train at the same time in the frame of the train. However, for an observer on the platform, the light reaches the back of the train before it reaches the front. Hence, events that are simultaneous in one frame may not be simultaneous in another frame.
@@ -219,7 +220,7 @@ A light is emitted from the centre of the train. The light reaches the front and
 One may concern that if different frames see things at different times, we might be able to reverse cause and effect. We will see that this is not the case.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e55.svg", width: 20em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e55.svg", width: 20em)
 ]
 
 The future light cone of $P$ consists of all points that can be influenced by $P$, and the past light cone of $P$ consists of all points that can influence $P$.
@@ -254,13 +255,13 @@ Each twin sees the other one moving while themselves staying at rest, so each on
 The key asymmetry is that twin $B$ needs to turn around to come back.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e56.svg", width: 9em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e56.svg", width: 9em)
 ]
 
 From the perspective of $A$, time $2T$ passes, while $2T' = (2T)/(gamma)$ has passed on $B$'s clock, so $B$ is younger.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e57.svg", width: 17em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e57.svg", width: 17em)
 ]
 
 From the perspective of $B$, while travelling out and back, indeed $A$'s clock runs more slowly, and $2hat(T) = 2T'/gamma$ passes in total.
@@ -276,13 +277,13 @@ However, the jump in the lines of simultaneity at the turnaround means that $B$ 
 A rod has length $L'$ at rest in frame $S'$, where the length is defined as the distance between endpoints at a fixed time.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e58.svg", width: 10em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e58.svg", width: 10em)
 ]
 
 Now consider frame $S$.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e59.svg", width: 10em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e59.svg", width: 10em)
 ]
 
 #lecture-separator(lecture: 18, date: "2026-03-05")
@@ -311,7 +312,7 @@ Therefore, moving objects appear shorter. This is called *Lorentz contraction*.
   Due to lorentz contraction, if the ladder moves fast enough, an external observer would see the ladder fit in the barn. However, the observer on the ladder would see the barn even shorter, so the ladder cannot fit in the barn.
 
   #align(center)[
-    #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e60.svg", width: 20em)
+    #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e60.svg", width: 20em)
   ]
 ]
 
@@ -730,7 +731,7 @@ Hence, each photon carries half of the rest mass energy of the Higgs boson. _i.e
 In the lab frame,
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e61.svg", width: 20em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e61.svg", width: 20em)
 ]
 
 consider the angle $theta$. The idea is to use conservation $vb(P_h) = vb(P_gamma) + vb(P_gamma')$ and invariants #fade[[quantities that do not change under #ponder("relativity.lorentz-group")[Lorentz tranformations], such as the #ponder("linear-algebra.inner-product")[inner product] of 4-vectors]]. Since $vb(P) dot vb(P) = 0$ for photons, we have
@@ -753,7 +754,7 @@ Using this alongside @eq-460, we can solve for $theta$ given $E_h$ and $E_gamma$
 Consider the process of two particles of mass $m$ colliding, in the centre of mass frame, scattering at an angle $theta$,
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e62.svg", width: 16em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e62.svg", width: 16em)
 ]
 
 By conservation of 4-momentum, we have
@@ -783,7 +784,7 @@ $
 In the lab frame,
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e63.svg", width: 12em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e63.svg", width: 12em)
 ]
 
 where $P_2$ is at rest, hit by $P_1$. Our objective is to find the angle $phi$.
@@ -818,7 +819,7 @@ If two particles collide with enough energy, some of that energy can be used to 
 In the CoM frame,
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e64.svg", width: 26em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e64.svg", width: 26em)
 ]
 
 Let $P_1$ and $P_2$ be of mass $m$, and the created particle be of mass $M$. We have
@@ -832,7 +833,7 @@ $
 
 Squaring @eq-499 gives
 $
-  (vb(P_1) + vb(P_2))^2 &= (4 E_1^2)/(c^2) quad "by" vb(P_1) = vec((E_1)/(c), vb(p_1)), vb(P_2) = vec((E_2)/(c), vb(p_2)) #<eq-501>\
+  (vb(P_1) + vb(P_2))^2 &= (4 E_1^2)/(c^2) #eq-note[by $vb(P_1) = vec((E_1)/(c), vb(p_1)), vb(P_2) = vec((E_2)/(c), vb(p_2))$] #<eq-501>\
   (vb(P'_1) + vb(P'_2)+vb(P_M))^2 &= vb(P'_1)^2 + vb(P'_2)^2 + vb(P_M)^2 + 2 vb(P'_1) dot vb(P'_2) + 2 vb(P'_1) dot vb(P_M) + 2 vb(P'_2) dot vb(P_M). #<eq-502>
 $
 
@@ -944,7 +945,7 @@ $
 This is the equation of an hyperbola. An accelerated particle follows a hyperbola in spacetime.
 
 #align(center)[
-  #dynamic-svg("/part-ia/dynamics-and-relativity/media/d1e65.svg", width: 24em)
+  #dynamic-svg2("/part-ia/dynamics-and-relativity/media/d1e65.svg", width: 24em)
 ]
 
 The Rindler horizon separates the accessible and inaccessible regoins of sapce time. #fade[[Black holes work in a similar way: one need to accelerate not to fall in.]]

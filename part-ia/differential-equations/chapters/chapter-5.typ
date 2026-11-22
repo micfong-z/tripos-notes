@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(5)
 
 #lecture-separator(lecture: 8, date: "2025-10-27")
 
@@ -80,7 +81,7 @@ $ pdv(P, y) = pdv(Q, x). $
   A domain $cal(D)$ is *#ponder("analysis.path-connectedness")[path connected]* if every pair of points in $cal(D)$ can be connected by a path in $cal(D)$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d5e1.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d5e1.svg", width: 16em)
   ]
 ] <path-connectedness>
 
@@ -119,7 +120,7 @@ Consider $ dv(y, t) = f(t, y). quad (y=y(t)) $
 Then, each initial condition (_e.g._ $y(0)=y_0$) generates a distinct solution curve (trajectory).
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d5e2.svg", width: 22em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d5e2.svg", width: 22em)
 ]
 
 We can still sketch these solution curves without actually solving the #ponder("ode.ordinary-differential-equation")[ODE].
@@ -144,7 +145,7 @@ We can still sketch these solution curves without actually solving the #ponder("
   If $y(0)=y_0$, then $A = (1+y_0)/(1-y_0)$. Now, we can sketch the solution curves for various $y_0$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d5e3.svg", width: 32em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d5e3.svg", width: 32em)
   ]
 
   Note that, some general behavior follows directly from the #ponder("ode.ordinary-differential-equation")[ODE]:
@@ -320,7 +321,7 @@ Hence, if
   We can sketch a 1D phase portrait to visualise the behaviour of solutions.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d6e1.svg", width: 14em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d6e1.svg", width: 14em)
   ]
 
 ] <ex-chemical-kinetics>
@@ -353,7 +354,7 @@ Hence, if
   We can sketch a 1D phase portrait to visualise the behaviour of solutions.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d6e2.svg", width: 14em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d6e2.svg", width: 14em)
   ]
 
   This equation can be solved exactly and sketched.
@@ -404,7 +405,7 @@ Therefore, $x_f$ is
   We are only interested in $x_n >= 0$. We can sketch the graph of $f(x)$ against $x$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d6e3.svg", width: 16em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d6e3.svg", width: 16em)
   ]
 
   From the graph, if $0<= r <= 4$, then ${x_n}$ stay within $[0, 1]$.

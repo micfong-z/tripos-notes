@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 #lecture-separator(lecture: 6, date: "2025-10-22")
 
@@ -31,7 +32,7 @@ In order to introduce #ponder("ode.order")[first-order] #ponder("ode.linear-diff
   This can also be written as
   $
     exp(x) & = lim_(k->oo) (1+(x)/(k))^k \
-           & = lim_(k->oo) [1+k (x)/(k) + (k (k-1))/(2!) ((x)/(k))^2 + ...] quad "using the binomial theorem".
+           & = lim_(k->oo) [1+k (x)/(k) + (k (k-1))/(2!) ((x)/(k))^2 + ...]. #eq-note[using the binomial theorem]
   $
 ] <exponential-function>
 
@@ -108,7 +109,7 @@ $ f(x) = C ee^(lambda x) $
   We should try $y = A ee^(lambda x)$. Then
   $ 5 lambda A ee^(lambda x) - 3 A ee^(lambda x) = 0. $
   Which leads to (given that $A != 0$)
-  $ 5 lambda -3=0 quad "(characteristic equation)" $
+  $ 5 lambda -3=0 #eq-note[(characteristic equation)] $
   So $lambda = (3)/(5) => y = A ee^((3x)/(5))$.
 
   This is the general solution, as it contains an arbitrary constant $A$.
@@ -131,7 +132,7 @@ $ eval(dv(y, x))_x_n approx (y_(n+1)-y_(n))/(h). $
 #fade[[This is called the Forward Euler scheme, which is not a great approximation numerically.]]
 
 #align(center)[
-  #dynamic-svg("/part-ia/differential-equations/media/d4e1.svg", width: 18em)
+  #dynamic-svg2("/part-ia/differential-equations/media/d4e1.svg", width: 18em)
 ]
 
 Substituting this approximation into the original equation gives
@@ -148,7 +149,7 @@ $
         & = (1+(3)/(5) h)^2 y_(n-2) \
         & = ... \
         & = (1+(3)/(5) h)^n y_0 \
-        & = (1+(3 x)/(5 n))^n y_0 quad "by taking" h = (x)/(n). \
+        & = (1+(3 x)/(5 n))^n y_0. #eq-note[by taking $h = (x)/(n)$] \
 $
 
 Now take $x_(n) = x$ #fade[[this represents $n$ steps from $x=0$ to $x$]] as $n->oo$. Then
@@ -285,7 +286,7 @@ The forcing term may also be an #ponder("ode.eigenfunction")[eigenfunction] of t
   $ b(t) = (k_a a_0)/(k_b - k_a) [exp(-k_a t) - exp(-k_b t)]. $
 
   #align(center)[
-    #dynamic-svg("/part-ia/differential-equations/media/d4e2.svg", width: 22em)
+    #dynamic-svg2("/part-ia/differential-equations/media/d4e2.svg", width: 22em)
   ]
 
 ] <ex-radioactive-decay>

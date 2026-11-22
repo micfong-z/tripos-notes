@@ -1,4 +1,5 @@
 #import "../prelude.typ": *
+#show: chapter.with(4)
 
 = Eigenvalues and Eigenvectors
 
@@ -742,7 +743,7 @@ Note that $vb(x')$ is the representation of $vb(x)$ in the #ponder("linear-algeb
 $
   vb(x') & = x'_1 vb(e_1) + ... + x'_n vb(e_n) \
    vb(x) & = x_1 vb(e_1) + ... + x_n vb(e_n) \
-           & = x'_1 vb(u_1) + ... + x'_n vb(u_n) quad ("since" vb(x) = matbold(P) vb(x')) \
+           & = x'_1 vb(u_1) + ... + x'_n vb(u_n) #eq-note[(since $vb(x) = matbold(P) vb(x')$)] \
 $
 and
 $
@@ -992,7 +993,7 @@ We have the following cases.
 
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d7e1.svg", width: 20em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d7e1.svg", width: 20em)
   ]
 
   In this case, the semi-major axis is $a$ and the semi-minor axis is $b$. Additionally, if $e = 0$, the ellipse is a circle of radius $a$.
@@ -1010,7 +1011,7 @@ We have the following cases.
   where $b = a sqrt(e^2 - 1)$.
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d7e2.svg", width: 20em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d7e2.svg", width: 20em)
   ]
 
 3. If $e = 1$, the #ponder("geometry.conic")[conic] is a parabola.
@@ -1025,7 +1026,7 @@ We have the following cases.
   $
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d7e3.svg", width: 20em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d7e3.svg", width: 20em)
   ]
 
 === Polar Coordinates
@@ -1188,7 +1189,7 @@ We can view this in two ways:
 - transformation of vectors (active point of view)
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d8e1.svg", width: 12em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d8e1.svg", width: 12em)
   ]
 
   We have $abs(vb(x')) = abs(vb(x))$ where $x'_i$ are components of the new vector $vb(x')$ after $vb(x') = matbold(R) vb(x)$ with respect to the #ponder("linear-algebra.basis")[standard basis].
@@ -1196,7 +1197,7 @@ We can view this in two ways:
 - #ponder("algebra.matrix-change-of-basis")[change of basis] (passive point of view)
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d8e2.svg", width: 12em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d8e2.svg", width: 12em)
   ]
 
   Now $x'_i$ are components of the same vector $vb(x)$ but with respect to a new #ponder("linear-algebra.orthonormal")[orthonormal] #ponder("linear-algebra.basis")[basis] ${vb(u_1), vb(u_2)}$ where
@@ -1297,7 +1298,7 @@ using hyperbolic trigonometric identities.
 ==== Physical Interpretation of Lorentz Transformations
 
   #align(center)[
-    #dynamic-svg("/part-ia/vectors-and-matrices/media/d8e3.svg", width: 22em)
+    #dynamic-svg2("/part-ia/vectors-and-matrices/media/d8e3.svg", width: 22em)
   ]
 
 Fix $iprod(vb(x), vb(x)) = k$ to be constant. Any #ponder("relativity.lorentz-group")[Lorentz transformation] over $vb(x)$ maps it to other vector $vb(x')$ on a same curve.
